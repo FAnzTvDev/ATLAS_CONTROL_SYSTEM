@@ -34,9 +34,9 @@ from pathlib import Path
 OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
 
 AGENT_MODELS = {
-    "director": os.environ.get("ATLAS_DIRECTOR_MODEL", "gemma3:12b"),
+    "director": os.environ.get("ATLAS_DIRECTOR_MODEL", "gemma4:e4b"),
     "builder":  os.environ.get("ATLAS_BUILDER_MODEL", "deepseek-r1:7b"),
-    "qa":       os.environ.get("ATLAS_QA_MODEL", "gemma3:4b"),
+    "qa":       os.environ.get("ATLAS_QA_MODEL", "gemma4:e4b"),
 }
 
 MAX_BUILDER_RETRIES = 2

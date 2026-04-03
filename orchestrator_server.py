@@ -2008,6 +2008,17 @@ try:
 except Exception as _training_err:
     print(f"[V37] Training pipeline route registration failed: {_training_err}")
 
+# V37: Mobile Chat UI — app-like dispatch interface
+@app.get("/atlas/chat", response_class=HTMLResponse)
+async def atlas_chat_ui():
+    """Serve the ATLAS Command mobile chat UI."""
+    import pathlib as _pl
+    _chat_path = _pl.Path(__file__).parent / "templates" / "atlas_chat.html"
+    if _chat_path.exists():
+        return HTMLResponse(_chat_path.read_text())
+    return HTMLResponse("<h1>Chat UI not found</h1>", status_code=404)
+print("[V37] Chat UI registered: /atlas/chat")
+
 # =============================================================================
 # V17.3: AAA INDUSTRIAL ERROR HANDLING
 # Every error returns JSON with trace_id — NO uncaught exceptions, NO HTML errors
