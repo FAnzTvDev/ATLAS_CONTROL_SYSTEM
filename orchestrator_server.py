@@ -1992,6 +1992,22 @@ try:
 except Exception as _v26_err:
     print(f"[V26] Controller route registration failed: {_v26_err}")
 
+# V37: Register agent dispatch routes (Director → Builder → QA pipeline)
+try:
+    from tools.agent_dispatch import register_dispatch_routes
+    register_dispatch_routes(app)
+    print("[V37] Agent dispatch routes registered: /atlas/dispatch, /atlas/agents/status")
+except Exception as _dispatch_err:
+    print(f"[V37] Agent dispatch route registration failed: {_dispatch_err}")
+
+# V37: Register training pipeline routes (Production serves, Training learns, Promotion decides)
+try:
+    from tools.training_pipeline import register_training_routes
+    register_training_routes(app)
+    print("[V37] Training pipeline routes registered: /atlas/training/*")
+except Exception as _training_err:
+    print(f"[V37] Training pipeline route registration failed: {_training_err}")
+
 # =============================================================================
 # V17.3: AAA INDUSTRIAL ERROR HANDLING
 # Every error returns JSON with trace_id — NO uncaught exceptions, NO HTML errors
