@@ -1,0 +1,2202 @@
+KORD S1E1: ENCOUNTERS
+V6 SCRIPT UPLOAD FORMAT
+========================
+
+## 1) Story Bible - Episode Overview
+
+- **Series Title:** KORD
+- **Episode:** Season 1, Episode 1 - "Encounters" (Pilot)
+- **Written By:** Frank MacCrory
+- **Genre:** low_fantasy_action_adventure
+- **Logline:** When ogres attack humans for the first time, three races - humans, elves, and dwarves - must overcome centuries of distrust to form an expedition investigating why their ancient enemies have suddenly begun working together, leading to a cliffhanger confrontation with the very threat they seek to understand.
+- **Tone:** Epic fantasy adventure with culture clash comedy, action sequences, and political intrigue. Grounded prehistoric technology (no bows, no steel). Multiple parallel storylines across three civilizations.
+- **Runtime Target:** 52 minutes (hour-long drama format)
+- **Setting:** Upper Paleolithic Age fantasy world called Kord. Three allied races (humans, elves, dwarves) face three enemy races (bugbears, gremlins, ogres).
+
+## 2) Act Outline / Beat Summary
+
+**ACT ONE (Pages 1-13)**
+- VALLEY: Bugbear attack on sheep flock; young shepherd Felan fights alongside his dog
+- VALLEY: Ogres appear for first time attacking humans; Seath the Beastmaster nearly killed
+- COASTAL VILLAGE: Defeated Warriors return; Priest-King Keene learns of the threat
+- PRIEST-KING'S HOUSE: Taggart the Wise discusses defense options with Keene
+- COASTAL VILLAGE: Dwarves and elves arrive simultaneously, both also attacked by new enemies
+- PRIEST-KING'S HOUSE: Tense diplomatic meeting; agreement to form joint expedition
+
+**ACT TWO (Pages 14-26)**
+- OUTSIDE PRIEST-KING'S HOUSE: Cret (dwarf) and Addahsurri (elf) awkward guard duty
+- ELVEN FOREST: Delegates return; Matron Ithazanna secretly observes
+- DWARVEN MEETING HALL: Council of Grand Masters selects expedition members
+- DWARVEN SMITHY: Sef the apprentice meets Cret; expedition preparations
+- ELVEN FOREST: Addahsurri and Emmigina investigate sabotage; discover Aurantalla
+- ELVEN FOREST: Track down adolescent elf Onnodathi; discover fresh gremlin tracks
+
+**ACT THREE (Pages 27-39)**
+- DWARVEN SMITHY: Irn Farmer gets armor fitted; shares fruits with smiths
+- ELVEN FOREST: Emmigina chases gremlin through trees; bridge destroyed
+- DWARVEN MINING TUNNEL: Sib's mining team fights bugbear; uses fire/alcohol
+- DWARVEN SMITHY: Sib gets armor; Sef receives "pet rock" from Sib
+- ELVEN FOREST: Addahsurri and Emmigina catch gremlin; coordinate attack
+- ELVEN FOREST CLEARING: Ithazanna executes gremlin; warns gremlin god
+- Aurantalla admonished; Addahsurri and Emmigina dispatched to join Oowalvia
+
+**ACT FOUR (Pages 40-52)**
+- VALLEY: Katell watches sheep; Greer announces her dogs are in heat (coming-of-age trial)
+- PRIEST-KING'S HOUSE: Expedition team assembles; introductions and tension
+- VALLEY: Seath visits Katell; encouragement before expedition
+- VALLEY/UPPER VALLEY: Expedition travels; culture clash moments; river crossing incident
+- UPPER VALLEY: Dragon attack; expedition runs for cover; Cret wounds dragon
+- UPPER VALLEY: Ogre throws boulder at dragon, saving expedition - CLIFFHANGER
+
+## 3) Scene Cards
+
+**Scene 1 - EXT. VALLEY - DAY**
+Purpose: Establish world, introduce bugbear threat and first ogre attack
+Characters: FELAN, SEATH, DONAGH, Warriors, Bugbears, Ogres
+
+**Scene 2 - EXT. COASTAL VILLAGE - DAY**
+Purpose: Show aftermath of attack; establish human settlement
+Characters: FELAN, SEATH, DONAGH, Warriors, Villagers, Sentry
+
+**Scene 3 - INT. PRIEST-KING'S HOUSE - DAY**
+Purpose: Introduce leadership; discuss threat
+Characters: KEENE, TAGGART, DONAGH, SEATH, Warriors
+
+**Scene 4 - EXT. COASTAL VILLAGE - DAY**
+Purpose: Elves and dwarves arrive; establish inter-species tension
+Characters: LAN, Dwarves, OOWALVIA, EMMIGINA, Elves, TAGGART
+
+**Scene 5 - INT. PRIEST-KING'S HOUSE - DAY**
+Purpose: Diplomatic negotiation; expedition agreed
+Characters: KEENE, LAN, OOWALVIA, EMMIGINA, TAGGART, DONAGH, SEATH, GREER
+
+**Scene 6 - EXT. OUTSIDE PRIEST-KING'S HOUSE - DAY**
+Purpose: Culture clash comedy; Cret and Addahsurri guard duty
+Characters: CRET, ADDAHSURRI, EMMIGINA, OOWALVIA, TAGGART
+
+**Scene 7 - EXT. ELVEN FOREST CANOPY - DAY (ESTABLISHING)**
+Purpose: Establish elven habitat
+
+**Scene 8 - EXT. ELVEN FOREST - DAY**
+Purpose: Delegates return home; Ithazanna secretly observes
+Characters: EMMIGINA, ADDAHSURRI, OOWALVIA, ITHAZANNA
+
+**Scene 9 - EXT. DWARVEN MOUNTAINHOME - DAY (ESTABLISHING)**
+Purpose: Establish dwarven habitat
+
+**Scene 10 - INT. DWARVEN MEETING HALL - DAY**
+Purpose: Council selects expedition members
+Characters: LAN, GRAND MASTER SMITH, GRAND MASTER FARMER, GRAND MASTER WARDEN, CRET
+
+**Scene 11 - INT. DWARVEN SMITHY - DAY**
+Purpose: Expedition preparation; Sef meets Cret
+Characters: SEF, TRO, CRET
+
+**Scene 12 - EXT. ELVEN FOREST CLEARING - DAY**
+Purpose: Ithazanna debriefs delegates; assigns repair work
+Characters: ITHAZANNA, OOWALVIA, ADDAHSURRI, EMMIGINA
+
+**Scene 13 - EXT. ELVEN FOREST - FIXING UP MONTAGE**
+Purpose: Show gremlin damage being repaired
+Characters: ADDAHSURRI, EMMIGINA, various elves
+
+**Scene 14 - EXT. ELVEN FOREST - DAY**
+Purpose: Discover sabotage is ongoing
+Characters: ADDAHSURRI, EMMIGINA
+
+**Scene 15 - EXT. ELVEN FOREST - DAY**
+Purpose: Visit Aurantalla; suspect investigation
+Characters: EMMIGINA, ADDAHSURRI, AURANTALLA
+
+**Scene 16 - EXT. ELVEN FOREST - DAY**
+Purpose: Catch Onnodathi; discover fresh gremlin tracks
+Characters: ADDAHSURRI, EMMIGINA, HERBALIST, ONNODATHI
+
+**Scene 17 - EXT. ELVEN FOREST CLEARING - DAY**
+Purpose: Onnodathi sentenced; gremlin still loose
+Characters: ITHAZANNA, ONNODATHI, ADDAHSURRI, EMMIGINA
+
+**Scene 18 - INT. DWARVEN SMITHY - DAY**
+Purpose: Irn gets armor fitted
+Characters: SEF, TRO, IRN
+
+**Scene 19 - EXT. ELVEN FOREST - DAY**
+Purpose: Chase gremlin; bridge destroyed
+Characters: EMMIGINA, ADDAHSURRI, GREMLIN
+
+**Scene 20 - INT. DWARVEN MINING TUNNEL - DAY**
+Purpose: Bugbear fight; Sib uses fire
+Characters: SIB, Miners, BLUE BUGBEAR
+
+**Scene 21 - INT. DWARVEN SMITHY - DAY**
+Purpose: Sib gets armor; pet rock joke
+Characters: TRO, SIB, SEF
+
+**Scene 22 - EXT. ELVEN FOREST - DAY**
+Purpose: Catch gremlin
+Characters: ADDAHSURRI, EMMIGINA, GREMLIN
+
+**Scene 23 - EXT. ELVEN FOREST CLEARING - DAY**
+Purpose: Gremlin executed; Ithazanna threatens gremlin god
+Characters: ITHAZANNA, AURANTALLA, ADDAHSURRI, EMMIGINA, GREMLIN
+
+**Scene 24 - EXT. VALLEY - DAY**
+Purpose: Introduce Katell; coming-of-age setup
+Characters: KATELL, FELAN, GREER
+
+**Scene 25 - INT. PRIEST-KING'S HOUSE - DAY**
+Purpose: Full expedition team assembles
+Characters: KEENE, OOWALVIA, EMMIGINA, ADDAHSURRI, SEATH, DONAGH, TAGGART, CRET, IRN, SIB
+
+**Scene 26 - EXT. VALLEY - DAY**
+Purpose: Seath encourages Katell before departure
+Characters: SEATH, KATELL
+
+**Scene 27 - EXT. VALLEY - DAY**
+Purpose: Expedition begins; formation established
+Characters: DONAGH, EMMIGINA, CRET, SEATH, ADDAHSURRI, TAGGART, IRN, SIB, OOWALVIA
+
+**Scene 28 - EXT. UPPER VALLEY - DAY**
+Purpose: River crossing incident; culture clash
+Characters: DONAGH, SIB, IRN, ADDAHSURRI, EMMIGINA, OOWALVIA, CRET, TAGGART, SEATH
+
+**Scene 29 - EXT. UPPER VALLEY - DAY**
+Purpose: Dragon attack; combat; CLIFFHANGER ogre encounter
+Characters: All expedition members, DRAGONS, OGRE
+
+## 4) Characters
+
+### HUMANS (Brown eyes, black hair, medium skin tone, ~5'10" men / ~5'6" women)
+
+**FELAN** - 15-year-old male shepherd apprentice. Dark unkept hair. Carries walking staff, horn, and rawhide sack. Young but brave. Has new small albino marks on leg from bugbear attack.
+
+**SEATH** - 41-year-old female Beastmaster. Long dark hair. Stoic, hides emotions well. Wears leather cord necklace with four wolf fangs. Has two albino-white splotches on forearm and multiple dog-bite scars. Commands pack of wolf-dogs.
+
+**DONAGH** - 25-year-old male Warrior. Heavily muscled. Missing fourth and fifth fingers from left hand. Relishes combat, competitive about martial prowess. Eager for glory against ogres.
+
+**TAGGART** - 43-year-old male Sage (one of "The Wise"). Stands more erect than other humans, combs his hair. Knowledgeable about history and mythology. Wears fur-trimmed collar (thinner than Priest-King's). Least physically fit of expedition members.
+
+**KEENE** - 64-year-old male Priest-King. Wears fur-collared rawhide robe. Sits on wooden chair. Wise leader, seeks alliances.
+
+**GREER** - 50-year-old male chief Beastmaster. Leather necklace with five wolf claws. Sits tall to look intimidating.
+
+**KATELL** - 18-year-old female apprentice Beastmaster. Carries walking staff and horn. About to undergo coming-of-age trial. Nervous but determined. Has one minor dog-bite scar. Handles dogs differently than others - gentle approach.
+
+### ELVES (Slender, pointed ears, ~5'2" men / ~4'9" women, pale skin, blond hair, green eyes)
+*Body paint: white = adolescent, colored = adult*
+
+**OOWALVIA** - 370-year-old adult female healer/cook/plant expert. Light green and dark green body paint. Know-it-all attitude. Stained fingers from herbal preparations. Better hygiene than others.
+
+**EMMIGINA** - 395-year-old adult female warrior. Tall at 4'11". Brown and black body paint. Nervous demeanor despite being clever warrior. Easily startled. Carries atlatl.
+
+**ADDAHSURRI** - 441-year-old adult male hunter/scout. Muscular for an elf. Blue and yellow body paint. Wise-cracking humor, flirty. Modified atlatl with rope adjustment. Strong arm for an elf.
+
+**MATRON ITHAZANNA** - 904-year-old adult female leader of Havenglade. Red and purple body paint. Cunning, experienced, politically savvy. Autarchic ruler.
+
+**AURANTALLA** - 139-year-old adolescent female. White body paint only. Waist-length straight hair with bangs covering eyes. Moody, snarky "teen." Sulks alone in treetops.
+
+**ONNODATHI** - 119-year-old adolescent male. White smears on arms and legs. About Emmigina's height, bare-chested. Caught stealing nutmeg.
+
+**HERBALIST** - 510-year-old adult male. Pink and black body paint.
+
+### DWARVES (Stocky, ~4' tall, both sexes have full beards with braids/knots denoting status, ruddy skin, brown hair, gray eyes)
+
+**CRET** - 61-year-old young adult Warden (warrior guild). Copper axe. Barely an adult. Expedition knot below lip. Has two small burn marks under chin (juvenile punishment brands). Baritone voice. REVEALED IN EPISODE 2: Female.
+
+**IRN** - 85-year-old adult Farmer. Copper sickle. Hooded loose leathers. "Most careful preparer in Throntesh." On the spectrum - complains about others' preparation. Callouses and scars on hands.
+
+**SIB** - 88-year-old adult Miner. Copper pick. Dwarven jokester. Mining team leader. Problem-solver. Discovers fire kills bugbears.
+
+**SEF** - 59-year-old adolescent apprentice Smith. Short beard with only couple braids. Dreams of expeditions. Believes in Living Stone and conspiracy theories. Given "pet rock" by Sib.
+
+**TRO** - 129-year-old middle-aged Master-Smith. Sef's mentor.
+
+**LAN** - 121-year-old middle-aged Master-Warden. Delegation leader. Booming bass voice. Delegated by Council of Grand Masters.
+
+**GRAND MASTER SMITH** - 179-year-old senior adult. Half brown/half gray beard. Irritable and inflexible.
+
+**GRAND MASTER FARMER** - 148-year-old senior adult. Youngest Grand Master, few streaks of gray.
+
+**GRAND MASTER WARDEN** - 204-year-old old dwarf. Pure white beard.
+
+### ENEMIES
+
+**BUGBEARS** - 3-foot-tall humanoid masses of wormy tendrils. Various colors (brown-and-red, black-and-green, blue). Can speak. Vulnerable to dogs ripping tendrils, fire. Touch causes albino marks on skin.
+
+**GREMLINS** - 1-foot-tall green humanoids with claws. Saboteurs. Swim well. Black blood. Speak. Serve a "dark god."
+
+**OGRES** - 10+ feet tall, blotchy gray skin. Armed with two-handed stone hammers. Slow but incredibly strong and tough. Can throw boulders. Human weapons barely scratch them.
+
+**DRAGONS** - Winged reptiles. Dog-sized "young" dragons travel in groups of 5. Green ones in valley. Gray in mountains, brown/black in forests, blue at sea. Tough scales deflect most weapons. Copper axes can wound them.
+
+## Aliases
+
+SEATH = SEATH THE BEASTMASTER
+DONAGH = DONAGH THE WARRIOR
+TAGGART = TAGGART THE WISE
+KEENE = KEENE THE PRIEST-KING = PRIEST-KING KEENE
+ITHAZANNA = MATRON ITHAZANNA
+LAN = LAN WARDEN = LAN MASTER-WARDEN
+TRO = TRO SMITH = TRO MASTER-SMITH
+GRAND MASTER SMITH = GM SMITH
+GRAND MASTER FARMER = GM FARMER
+GRAND MASTER WARDEN = GM WARDEN
+FAT OGRE = FATTER OGRE
+THIN OGRE = THINNER OGRE
+
+## Casting Stopwords
+
+NIGHT, MORNING, EVENING, DAY, CONTINUOUS, O.S., V.O., PRE-LAP, INTO VIEW, ESTABLISHING, CUT TO, FADE TO, MONTAGE, END OF ACT ONE, END OF ACT TWO, END OF ACT THREE, END OF ACT FOUR, ACT ONE, ACT TWO, ACT THREE, ACT FOUR
+
+---SCREENPLAY---
+
+"Encounters"
+
+ACT ONE
+
+EXT. VALLEY - DAY
+
+A broad grassy valley stretches into the morning mist. A large flock of sheep wander into view.
+
+Darting around the flock's edges is a dog only a few generations removed from a wolf.
+
+FELAN (15) walks behind the flock wearing paleolithic hides. He holds a walking staff in one hand and a rawhide sack in the other. His dark, unkept hair blows in the breeze.
+
+Felan WHISTLES. The sheep more or less halt, start grazing. Felan and the dog sit on a very slight rise.
+
+FELAN
+Now, nobody wander off, you hear me? I got a dog here, and she likes mutton.
+
+Felan rests against his sack, closes his eyes. The dog sniffs, heads O.S.
+
+A brief flurry of movement occurs behind the sack.
+
+A moment later, the dog BARKS furiously and the sheep BLEAT. Felan springs to his feet with the walking staff, sees twenty or so three-foot-tall humanoids swarming the flock.
+
+FELAN
+Bugbears! Get 'em, dog!
+
+He tries to open his sack, but it's sewn shut.
+
+FELAN
+A-a-a-and gremlins.
+
+Felan takes a sharp rock from his belt, then rips repeatedly at the sack.
+
+The dog jumps on one of the bugbears - a vaguely humanoid mound of wormy tendrils. She scatters the tendrils, but several of them cling to her hide.
+
+Felan's desperation mounts until a few of the sack's threads start to give way.
+
+Three other bugbears grab onto the dog, her fur turning stark white at their touch.
+
+Felan rips the sack open, pulls out a horn, and blows three long BLASTS while running to help his dog. On the way he throws his rock at one of the bugbears... it passes through shifting the tendrils aside but does no lasting harm.
+
+Felan arrives at the dog, swings his horn straight through a bugbear. Surprise turns to rage as he rips tendrils attached to the dog. The dog bites another bugbear that lets out a gurgling scream.
+
+A bugbear grabs Felan's leg. He kicks, scattering some of it, but many of the tendrils hold on tight. Felan grunts in pain, starts ripping at those tendrils.
+
+Felan is too distracted to see SEVEN HUMANS sprinting from the village in the distance. The new humans - six men and a woman in hides like Felan's - fan out as they approach.
+
+The men hold spears and small shields. They drop the spears just before engaging.
+
+The woman holds a walking staff like Felan's. She leaps, lets loose a PRIMAL YELL, and lands in a crouch with her staff flat against the ground.
+
+The eight wolf-dogs following her leap over her and crash into the bugbears like a deadly wave.
+
+FELAN
+Beastmasters!
+
+Felan pumps his fist in triumph, and gets pulled down by a charging dog chomping the tendrils on his leg.
+
+Felan rips off a final bugbear tendril and scrambles out of the fight as it turns into a bugbear slaughter.
+
+Above the bugbears' gurgling cries of pain, the occasional gurgling words.
+
+BROWN-AND-RED BUGBEAR
+Filthy dogs!
+
+The Beastmaster, SEATH (41), wearing a leather cord necklace threaded through four wolf fangs, tosses back long dark hair and watches her animals. She has two albino-white splotches on her forearm from a previous run-in with bugbears.
+
+Felan gathers up his rock, horn, and walking staff then steps up next to her. He winces while inspecting the new small albino marks on his leg.
+
+BLACK-AND-GREEN BUGBEAR
+Die, dog!
+
+Most of the Warriors grab a handful of tendrils from some bugbear engaged with a dog or sheep, then rip the tendrils in half with the other hand.
+
+The more experienced Warriors, with shocks of stark white hair, pin a bugbear down with their shield and rip apart the tendrils two or three at a time.
+
+BROWN-AND-RED BUGBEAR
+Dog, get off!
+
+Warriors back away after killing two bugbears each, pick up their spears, and leave the mop-up to the dogs. Each has a straggling tendril or two that they rip off.
+
+The most muscular Warrior, DONAGH (25), musses Felan's hair with a left hand that's missing its fourth and fifth fingers.
+
+DONAGH
+Way to get in there, show no fear.
+
+FELAN
+Thanks, Donagh.
+
+Seath - stoically watching her dogs fight - scoffs.
+
+SEATH
+Just part of being a Beastmaster.
+
+Warriors start gathering their spears.
+
+BLACK-AND-GREEN BUGBEAR
+Where are they?
+
+Heavy FOOTFALLS sound within the mist.
+
+BROWN-AND-RED BUGBEAR
+Slow, but now here.
+
+Huge shadowy forms approach in the mist. The Warriors ready their spears.
+
+Suddenly two OGRES emerge - each one over ten feet tall with blotchy gray skin and armed with a two-handed stone hammer.
+
+FELAN
+What?
+
+The six Warriors gather close, hold their shields up high, and step toward the new enemies.
+
+DONAGH
+Ogres.
+
+FELAN
+I've never seen --
+
+SEATH
+No human has.
+
+DONAGH
+(to Warriors)
+This is it! We've all heard the dwarves tell their tales. After today, we'll have tales for them!
+
+The Warriors show their confidence with a sustained YELL.
+
+The ogres ignore the Warriors, simply drop their hammers, and pick up sheep as if gathering fruit.
+
+The Brown-and-Red Bugbear pushes away from an attacking dog, turns toward the ogres, and even without a face manages to look flabbergasted.
+
+BROWN-AND-RED BUGBEAR
+Idiot! Kill the Beastmaster!
+
+The fatter ogre of the pair drops his sheep.
+
+FATTER OGRE
+What one?
+
+The Warriors charge their bone-tipped spears headlong into the ogres. All of their blows glance off with nothing more serious than a scratch.
+
+BROWN-AND-RED BUGBEAR
+The long hair!
+
+The Fat Ogre looks around, ROARS, then wades through sheep and dogs and Warriors directly toward Seath.
+
+Donagh stabs the back of the Fat Ogre's knee but fails to slow him down.
+
+DONAGH
+Run!
+
+Felan, terrified, levels his staff in a blocking stance, glances back at Seath.
+
+FELAN
+Run!
+
+Seath backs away, transfers her staff to her left hand, and pulls out her sharp rock.
+
+SEATH
+Felan, don't --
+
+The ogre shoves Felan aside and snaps Seath's staff while grabbing her left arm.
+
+A Warrior stabs the Fat Ogre's Achilles tendon, but the spear tip glances off.
+
+Seath smashes her sharp rock furiously at the ogre's hand.
+
+FELAN (O.S.)
+(fearful)
+Dogs!
+
+The dogs continue fighting the bugbears.
+
+Donagh lunges his spear directly into the Fat Ogre's crotch.
+
+FATTER OGRE
+Oof!
+
+He swings Seath like a club and bats Donagh in the air to land a dozen feet away.
+
+FELAN (O.S.)
+(forceful)
+DOGS!
+
+The ogre swings Seath up to thrash her into the ground.
+
+O.S. PRIMAL YELL, and nine dogs leap onto the ogre.
+
+FATTER OGRE
+Sheep... bite...
+
+THINNER OGRE
+That not sheep.
+(holds one up)
+This sheep.
+
+SEATH
+(barely conscious)
+Hyah...
+
+Felan gets up from his crouch and waves his arms.
+
+FELAN
+Hyah! Hyah! Get out of here!
+
+The sheep - which were surprisingly calm around the fighting dogs - scatter away from Felan. The Thin Ogre and the few surviving bugbears pursue the fleeing sheep.
+
+The Fat Ogre pulls dogs off of him one at a time, but they jump back on.
+
+FATTER OGRE
+Hey! Want sheep too.
+
+The ogre heads after his allies, pulls dogs off as he goes, and drops Seath to pull a dog off his left arm.
+
+Once the ogre steps past Seath, Felan CLAPS overhead until the dogs gather near him. The Fat Ogre continues on his way toward the fleeing sheep.
+
+Warriors regroup and head back to the village. One pair carries Seath, another pair carries the Warrior Donagh, and the final Warrior hobbles along dragging spears.
+
+Felan carries an injured dog. The eight other dogs follow.
+
+EXT. COASTAL VILLAGE - DAY
+
+A stream empties into the sea through a sandy beach with several outrigger canoes. Dozens of dug-out houses stand just inland from the sand.
+
+Several VILLAGERS stop their work and look on as the defeated Warriors and Beastmasters shuffle their way past an empty sheep pen to the largest house.
+
+The Warrior posted as SENTRY (20) at that house's entrance flap opens his mouth, but no words come out. One of Warriors carrying Donagh breaks the silence.
+
+WARRIOR
+I need to see the Priest-King. Now.
+
+The dumfounded Sentry pulls at the flap, but loses his grip.
+
+WARRIOR
+Get Ardal, Greer, and Bryna.
+
+The Sentry nods, finally opens the entrance.
+
+INT. PRIEST-KING'S HOUSE - DAY
+
+KEENE THE PRIEST-KING (64) sits on a wooden chair in his fur-collared rawhide robe and listens intently to the Warrior.
+
+Several people attend to Seath and Donagh off to one side. One of these is the sage TAGGART THE WISE (43), his hair neatly pushed back and his posture more erect than the other humans'. His collar has a thinner trim of fur than Keene's.
+
+WARRIOR
+They could have just taken the sheep, but instead tried to kill our Beastmaster.
+
+He glances over toward Seath and shudders.
+
+KEENE
+Very disturbing.
+
+TAGGART
+Bugbears know who control the dogs.
+
+The Warrior pulls Felan up to his side.
+
+WARRIOR
+Seath is alive because of this lad.
+
+Felan beams for a moment, then the gravity of the situation brings out his humility.
+
+FELAN
+I-- I just did as I was told, sire. Seath told me to scatter the flock. Sh-she knew they would follow.
+
+KEENE
+You kept your wits about you in terrifying chaos. That, dear boy, is no small thing.
+(to Warrior)
+Ardal and Bryna are outside the village. Go get them. You must tell them and Greer everything about these ogres.
+
+WARRIOR
+Right away.
+
+He turns and taps two other Warriors. All three leave.
+
+KEENE
+Taggart, they could attack the village next.
+
+Donagh coughs up some blood. Taggart pauses a moment, but the Warrior does not wake up.
+
+TAGGART
+Elves have their way of fighting ogres. Dwarves have theirs. I'm not sure we have anything to trade them to get their secrets.
+
+Keene takes a long breath in and out. He looks weary but his words are tinged with frustration.
+
+KEENE
+Dwarves use their metal. I've tried for years, but they won't sell it. I have no idea what magic those little elves use.
+
+Loud, steady DRUMBEATS from O.S.
+
+EXT. COASTAL VILLAGE - DAY
+
+Five stout DWARVES in copper scale armor approach from the mountains to the north. Each is four feet tall give or take an inch, has a long brown beard tied into various braids and knots, and has a copper axe strapped across the back.
+
+One of the dwarves beats a drum. Another carries an over-the-shoulder sack. Other than what they carry, the five are virtually indistinguishable from one another.
+
+Across from them, a group of seven slender pointy-eared ELVES approach from the forest to the south. The four males stand about 5'2", two females about 4'9", and a third at 4'11".
+
+Five of the elves have atlatls slung across their backs.
+
+Each elf has a different pair of colors smeared onto their rough-cloth clothes, parts of their pale skin and blond hair.
+
+The male elf decorated in lavender and yellow carries a flint-tipped three-foot dart impaled through a dead green humanoid about one foot long.
+
+The center dwarf, LAN WARDEN (121, middle aged), sees the impaled creature and calls out in a booming bass voice.
+
+LAN
+What is this? The elves having trouble with a little... bitty... gremlin?
+
+The dwarf laughs, and the other four join in. The snickering drummer puts the instrument away.
+
+The female elf decorated in light green and dark green, OOWALVIA (370 year old adult, any adult elf looks adolescent to a human), flushes bright red with anger and steps forward.
+
+OOWALVIA
+There was more than one. And just what brings YOU here, hmmm?
+
+Lan glances toward the dwarf hauling the sack. That dwarf shakes the sack until gurgling noises start, plunges a gloved hand in, and pulls out a fistful of wormy tendrils.
+
+Oowalvia's flush drains as her face curls into a broad grin.
+
+OOWALVIA
+Oh! What is THIS? The dwarves having trouble with a silly shrilly bugbear?
+
+INTO VIEW: Taggart stands off to the side. He interjects at the tiniest lull in this exchange.
+
+TAGGART
+Honored guests from Throntesh and Havenglade, welcome to Arwom. Please come with me. We have much to discuss.
+
+LAN
+Yes, lead the way.
+(to Oowalvia)
+There was more than one.
+
+INT. PRIEST-KING'S HOUSE - DAY
+
+Four of the dwarves and six of the elves sit in a circle of wooden stools alongside Taggart, Donagh, Seath, and GREER (50). His leather necklace threads through five wolf claws.
+
+Priest-King Keene presides from his wooden chair.
+
+Seath cradles her left arm. Donagh winces every time he moves his neck. Greer sits as tall as he can to look intimidating.
+
+The dwarves lean against their stools, only comfortable with their feet firmly on the ground. The elves perch on theirs, yet to fully embrace coming down from the trees.
+
+KEENE
+The one thing I need to know is this: can ogres swim?
+
+EMMIGINA (395, adult), the tall female elf with an atlatl and decorated in brown and black, shakes her head.
+
+EMMIGINA
+No, but they can hold their breath a long time.
+
+LAN
+They sink in water, float in magma. Either one makes them mad.
+
+Keene seems relieved, nods toward Taggart.
+
+KEENE
+Your plan should work.
+
+Taggart, for his part, looks shocked.
+
+TAGGART
+Wait. They can survive in --
+
+LAN
+Yes, they're tough, but not as weird as these bugbears. I've chopped this one to pieces with my axe, and it just won't die!
+
+The elves share knowing glances and snicker at Lan's expense.
+
+GREER
+That won't work. You have to take advantage of how it feeds --
+
+KEENE
+Enough. We can trade secrets of how to fight bugbears, how to fight gremlins, how to fight ogres.
+
+OOWALVIA
+That IS what we came to do.
+
+KEENE
+But remember this: YOU came to ME for help.
+
+The elves look grumpy. The dwarves - who already looked grumpy anyway - huff.
+
+KEENE
+All of Kord is in danger. The problem is NOT that we each need to learn a new way to fight.
+
+LAN
+That's great news because I thought it was a HUGE problem, myself.
+
+KEENE
+I wish that was all because I want more trade with each of you anyway. The problem is that for some reason, the bugbears and the gremlins and the ogres are now working together.
+
+Eyebrows raise slowly all around the circle.
+
+The dwarves exchange grave glances amongst themselves. They come to some sort of silent agreement.
+
+LAN
+We need information. We will reconvene in fifteen --
+(glances at neighbor)
+no, twenty days. At that time I will report what our expedition discovers.
+
+All of the elves startle at the proposal.
+
+EMMIGINA
+Who put YOU in charge, Lan Master-Warden? I mean, seriously, you're not a Grand Master or anything. You can't even speak for the dwarves, let alone all of us.
+
+Taggart motions for everyone to settle down.
+
+TAGGART
+Please, don't --
+
+Lan thunders with rage.
+
+LAN
+"Seriously?" I don't know what authority your plant-witch here carries.
+
+OOWALVIA
+Now --
+
+LAN
+I have been delegated to negotiate by the Council of Grand Masters on the PERSONAL recommendations of Grand Master Farmer and Grand Master Warden.
+
+Lan holds up an elaborately-knotted bit of beard for emphasis. Taggart sighs and waits for Lan to finish.
+
+LAN
+We take this threat "seriously."
+
+OOWALVIA
+But --
+
+LAN
+The humans bring their Priest-King, their chief Sage, their chief Beastmaster, and -- sorry, I don't know who those two are, but they look scary.
+
+Donagh chuckles, then winces.
+
+LAN
+They take this threat "seriously." You? Maybe you do, maybe you don't. But you "seriously" will not presume to tell me what I am or what I can do!
+
+KEENE
+It doesn't do us any good to fight amongst ourselves.
+(turns to Lan)
+I, also, thought it a good idea to send an expedition.
+
+Lan harrumphs toward the elves.
+
+KEENE
+I have every confidence in my people, but given the mysteries involved I find it wise to formally request the assistance of Throntesh on this important mission.
+
+Lan bows slightly. Oowalvia opens her mouth to speak, but Keene and Taggart both motion her to wait.
+
+LAN
+You honor us, Priest-King Keene. It would give us great pleasure to assist.
+
+KEENE
+And Havenglade as well.
+
+OOWALVIA
+Absolutely. Pooling ALL of our talents seems the best path.
+
+KEENE
+Excellent. Since our village is between your lands, I humbly suggest that the assisting elves and dwarves meet us here.
+
+LAN
+(with OOWALVIA)
+Agreed.
+
+Lan and Oowalvia exchange annoyed looks.
+
+END OF ACT ONE
+
+ACT TWO
+
+EXT. OUTSIDE PRIEST-KING'S HOUSE - DAY
+
+An elf and a dwarf stand guard outside the entrance, exchanging occasional annoyed glances.
+
+The dwarf, CRET WARDEN (61, young adult), holds an axe and stands motionless except when the elf glances.
+
+The elf, ADDAHSURRI (441, adult) is a muscular (for an elf) male decorated in yellow and blue, and armed with an atlatl. He finally works up the courage to speak.
+
+ADDAHSURRI
+So, have you been here before?
+
+Cret faces Addahsurri long enough to give a baritone reply, then goes back to facing front.
+
+CRET
+The valley? Yes. The village? No.
+
+ADDAHSURRI
+Well, it's my third time here.
+
+Addahsurri's pause for a reply turns into an awkward silence.
+
+ADDAHSURRI
+Last time I was here there was some conjunction of stars or something. It was QUITE a party.
+
+Addahsurri grins at the memory. Cret isn't even looking.
+
+CRET
+What makes you think I care?
+
+ADDAHSURRI
+I just thought you looked bored. My name's Addahsurri, by the way.
+
+CRET
+Cret Warden.
+
+Taggart opens the house entrance from the inside.
+
+Lan and the other dwarves march out. Cret gives Addahsurri a curt nod then joins the end of the line.
+
+The elves - less Oowalvia - exit and gather just outside.
+
+EMMIGINA
+Hey, how'd it go out here?
+
+ADDAHSURRI
+Not a big talker, but no blood spilled. What happened in there?
+
+EMMIGINA
+The Matron is not gonna like it.
+
+ADDAHSURRI
+Like what?
+
+OOWALVIA (O.S.)
+It's a poultice of willow bark.
+
+Oowalvia appears at the entrance but looks back inside.
+
+OOWALVIA
+Numbs pain, relieves swelling.
+
+TAGGART
+Thank you, your aid is most appreciated.
+
+OOWALVIA
+My pleasure. We'll speak with Matron Ithazanna and be back in a few days.
+(to elves)
+Okay, everybody, let's go.
+
+EXT. ELVEN FOREST CANOPY - DAY - ESTABLISHING
+
+A semi-tropical paradise undisturbed by roads or structures.
+
+EXT. ELVEN FOREST - DAY
+
+The seven elven Delegates proceed under a thick canopy of leaves where there is no obvious path. They effortlessly scamper among the low-hanging branches.
+
+Emmigina notices movement in the branches above the group. She watches warily for a moment, then lets it go.
+
+A berry drops onto Emmigina's head. She looks up and sees MATRON ITHAZANNA (904, adult) decorated in her customary red and purple. Ithazanna shushes the warrior.
+
+Emmigina cocks an eyebrow at her monarch, who gestures and mouths the word "talk."
+
+EMMIGINA
+(sigh)
+Oowalvia, what did you think of the Priest-King's proposal?
+
+OOWALVIA
+You were there.
+
+It's Ithazanna's turn to cock an eyebrow at Emmigina.
+
+EMMIGINA
+Ummm... Addahsurri wasn't there.
+
+OOWALVIA
+Right, you should hear this before we meet the Matron. We're going to be sending three elves on this expedition...
+
+EXT. DWARVEN MOUNTAINHOME - DAY - ESTABLISHING
+
+A well-used dirt road leads between foothills to the side of a craggy mountain that anchors a chain of mighty peaks. The road ends at a twelve-foot by twelve-foot tunnel carved directly into the mountainside.
+
+LAN (PRE-LAP)
+We are to send three dwarves on this expedition.
+
+INT. DWARVEN MEETING HALL - DAY
+
+A large natural grotto with a smoothed floor. Eight dwarven GRAND MASTERS sit upon stone thrones arranged in a semi-circle. Their elaborately-braided beards range from partially gray to solid white.
+
+The thrones are marked with guild symbols for Brewer (flame), Crafter (awl), Farmer (sickle), Healer (knife), Mason (chisel), Miner (pick), Smith (hammer), and Warden (axe).
+
+Lan speaks in the center of the semi-circle, with the remaining Delegates standing behind.
+
+The scene is visible in shadowless clarity with no apparent source of illumination - dwarves can see in the dark.
+
+GRAND MASTER SMITH (179, senior adult), with a beard half brown and half gray, stares directly through Lan. The Grand Master is irritable and inflexible even for a dwarf.
+
+GRAND MASTER SMITH
+Who else is going, Master-Warden?
+
+LAN
+Three humans and three elves.
+
+The Council of Grand Masters murmur in mild displeasure.
+
+GRAND MASTER SMITH
+Probably the humans who insisted on parity.
+
+GRAND MASTER FARMER (148, senior adult), the youngest Grand Master whose beard has only a few streaks of gray, addresses the other Grand Masters.
+
+GRAND MASTER FARMER
+There will be fighting, but we cannot simply send three Wardens.
+
+GRAND MASTER WARDEN (204, old), whose beard is pure white, leans forward slightly and speaks.
+
+GRAND MASTER WARDEN
+Quite right. We will send... rather, we will ASK... young, clever dwarves to measure this new threat.
+
+The other Grand Masters murmur again - except this time it indicates agreement.
+
+GRAND MASTER WARDEN
+Those will be Irn Farmer, Sib Miner, and Cret Warden.
+
+Every other Grand Master glares at Grand Master Warden. Grand Master Warden glares back at them.
+
+GRAND MASTER WARDEN
+As I figure it, Irn is the most careful preparer in Throntesh. Sib is an excellent problem solver. Cret adapted admirably during the bugbear attack.
+
+Cret looks around, smiles, and stands a tiny bit taller.
+
+INT. DWARVEN SMITHY - DAY
+
+A stone block anvil stands between a smoldering fire and a stone tub of water.
+
+SEF SMITH (59, adolescent) pounds a hunk of heated copper with a hammer. Sef's beard has only a couple braids and reaches only down to the belly.
+
+Sef's mentor, TRO SMITH (129, middle aged) turns at a sound.
+
+CRET
+Excuse me, Master-Smith.
+
+TRO
+Yes, Warden?
+
+SEF
+Wow, is that an expedition knot?
+
+The knot just below Cret's lip is different than before, and it's given Cret a prideful smile and a bouncy step.
+
+CRET
+Yes, it is.
+
+TRO
+Get back to your work, Sef.
+
+Sef sullenly turns back to hammering.
+
+TRO
+Will you need anything for your expedition, Warden?
+
+CRET
+Me? No, my gear's in great shape. But I'll be traveling with a Farmer and a Miner, and they need armor and helmets.
+
+Tro raises a bushy eyebrow. Sef turns around completely.
+
+SEF
+What kind of expedition needs a Warden, a Farmer, and a Miner?
+
+Tro points at the anvil without turning. Sef returns to work.
+
+CRET
+We're to scout out the bugbears' homeland.
+
+SEF
+(still hammering)
+If a Farmer can get sent on an expedition, anybody could.
+
+CRET
+But not anybody would want to. We have to go with humans and elves.
+
+EXT. ELVEN FOREST CLEARING - DAY
+
+A gap in the canopy bathes a patch of wildflowers in sunlight. Matron Ithazanna paces through the flowers, listens closely to the seven Delegates who stand uneasily at one end of the patch.
+
+A few dozen elven ONLOOKERS sit perched in nearby trees.
+
+OOWALVIA
+The humans were reasonable like I said they'd be. I mean, they wanted things. They always want things.
+
+Ithazanna picks a flower and sniffs it.
+
+OOWALVIA
+We have what they need for their fight. They have what we need for ours. The trade almost makes itself.
+
+ITHAZANNA
+But?
+
+OOWALVIA
+There were dwarves there, too.
+
+Astonished chatter ripples through the Onlookers. The Delegates glare at them until the noise subsides.
+
+ADDAHSURRI
+Bugbears attacked their mountain, and they won't admit it but THEY'RE scared. The trade might have gone between humans and dwarves.
+
+ITHAZANNA
+I trust you didn't let that happen.
+
+Emmigina rolls her eyes at the Matron for pretending to hear all of this for the first time.
+
+OOWALVIA
+It got really complicated, but I saved our trade.
+
+ITHAZANNA
+How?
+
+OOWALVIA
+We will all work together. Elves, humans... and dwarves.
+
+Chatter erupts among the Onlookers again. Ithazanna gestures for calm, and speaks when the noise subsides.
+
+ITHAZANNA
+I'm sure that was the best Oowalvia could do when dealing with scheming humans and stubborn dwarves.
+
+Ithazanna places the flower in Oowalvia's hand, lays a hand on her shoulder.
+
+OOWALVIA
+Yes, I think so.
+
+Ithazanna's expression grows stern.
+
+ITHAZANNA
+But it creates a great danger.
+
+She pulls a petal off of the flower with each sentence.
+
+ITHAZANNA
+We're still finding broken things days after the attack. The humans only need to trade with us OR the dwarves. If it looks like we can't offer help, humans will pick the dwarves. If we look weak, humans will pick the dwarves.
+
+O.S. CRACKING WOOD as something big and heavy collapses.
+
+Ithazanna plucks the last petal, Oowalvia leans back.
+
+ITHAZANNA
+We need to be FULLY recovered before we go "work together."
+
+Addahsurri and Emmigina exchange glances.
+
+ADDAHSURRI
+(with EMMIGINA)
+We'll handle it.
+
+EXT. ELVEN FOREST - FIXING UP MONTAGE
+
+Addahsurri and Emmigina lend a hand as repairs are under way in several parts of the forest.
+
+- Emmigina checks burlap sacks for damage as Addahsurri strains to lift them back into place on shelves.
+
+- An elf tosses a rock tied to a vine from high in one tree to Addahsurri high in another tree across a stream. He tosses another rock back with its own vine.
+
+- Emmigina picks up a sachet from the middle of herb storage jars and ties it onto the ground nearby. A large number of rodents follow the bait.
+
+- With four vines now strung between the two high trees, Addahsurri weaves branches between the lower pair of vines as a bridge starts to take shape.
+
+- Emmigina checks quivers of darts, laying aside darts with broken shafts.
+
+EXT. ELVEN FOREST - DAY
+
+Addahsurri and Emmigina stand on the stream bed. Addahsurri looks up at the finished vine bridge while Emmigina lifts a gourd-bucket tied to a post. She scoops up water, but scowls as it all leaks out through a jagged hole in the bottom.
+
+EMMIGINA
+This was fine when we left.
+
+ADDAHSURRI
+Wait, things are STILL breaking?
+
+EMMIGINA
+It'd have to be an elf, but why?
+
+ADDAHSURRI
+You know how frustrating it is that last thirty or forty years before becoming an adult.
+
+Emmigina looks thoughtfully at a distant treetop and nods.
+
+EXT. ELVEN FOREST - DAY
+
+Emmigina and Addahsurri perch on the low branches of a tree far from any path. Emmigina knocks on the tree trunk.
+
+EMMIGINA
+Aurantalla? We're coming up.
+
+No response. The pair scale the branches until they reach a female elf near the top sitting in a fetal position. There is still no response.
+
+AURANTALLA (139, adolescent) has waist-length straight hair with bangs that cover her eyes. She's only distinguishable from an adult because her smears of color are all white.
+
+Emmigina speaks in what she hopes is a soothing tone, which comes off as condescending.
+
+Addahsurri's friendly grin is just as off-putting.
+
+EMMIGINA
+Hey. You okay up here?
+
+AURANTALLA
+(without moving)
+I'm fine.
+
+EMMIGINA
+You don't look fine --
+
+Aurantalla grunts, shifts to face away from Emmigina. Addahsurri swings to a branch on that side of the tree.
+
+ADDAHSURRI
+Oh, come on now. You were such a happy kid...
+
+Emmigina sighs, and Addahsurri look at her with a "what did I do?" expression.
+
+AURANTALLA
+Everyone treats me like a "kid" who can't do anything.
+
+EMMIGINA
+I think you can do a lot.
+
+This prompts an angsty eye-roll.
+
+EMMIGINA
+Seriously. We came up here 'cause we need to check your hands.
+
+Aurantalla's pale green eyes roll back to stare at Emmigina.
+
+ADDAHSURRI
+Someone's been breaking things all over the forest. The gremlins are gone, so it's gotta be an elf. An unhappy one.
+
+AURANTALLA
+I am weirdly honored.
+
+Aurantalla opens her hands. They show small crescent-shaped cuts where nails dug into her palms, but don't look like they've done any heavy work or sabotage.
+
+EMMIGINA
+Could have been you, but it wasn't.
+
+Addahsurri hops back over to the branch next to Emmigina.
+
+ADDAHSURRI
+Well, that's settled. So, when are you coming down?
+
+Aurantalla makes a show of measuring how many hand-lengths above the horizon the sun is.
+
+AURANTALLA
+About eleven years.
+
+EMMIGINA
+You don't have to wait until you're one-fifty to --
+
+Addahsurri tries to shush Emmigina, but to no avail.
+
+EMMIGINA
+-- get your colors. If --
+
+ADDAHSURRI
+She has to help on her own initiative.
+
+Addahsurri slaps a hand over his mouth.
+
+AURANTALLA
+You guys are so bad at this, it's adorable. No elf wants to break things all over the forest. But they might want to hide breaking one thing.
+
+She stands on her branch, Addahsurri looks her up and down.
+
+AURANTALLA
+He's probably at the herbalists' right now.
+
+ADDAHSURRI
+Thanks. Hey, you really grew up since I last saw you. If you wanted to help out with the hunting --
+
+Emmigina pushes the distracted Addahsurri off his branch.
+
+EMMIGINA
+Nice work, Aurantalla. We'll check it out.
+
+ADDAHSURRI (O.S.)
+I'm fine. Thanks for asking.
+
+EXT. ELVEN FOREST - DAY
+
+Addahsurri and Emmigina look over a collection of hollowed-out gourds sitting on a wooden log at ground level. A male elven HERBALIST (510, adult) decorated in pink and black shakes his head at the sight.
+
+A small bit of leaf or seeds is glued to the outside of each gourd. Each gourd-jar holds contents different than the sample glued on its outside.
+
+EMMIGINA
+I have to ask: How did that even happen?
+
+HERBALIST
+Saw him do it, and still don't know how. After that, got himself killed breaking into the poison.
+
+Addahsurri laughs at the thought.
+
+O.S. wood CREAKS then CRACKS. Addahsurri moves aside. Emmigina starts to, but brings the Herbalist aside with her.
+
+A few gourd bottles and bits of wood fall from the branches above, clatter on the ground. O.S. the sound of something heavier falling through the branches, accompanied by YELPS.
+
+INTO VIEW: An elf with white smears on his arms and legs - ONNODATHI (119, adolescent) - dangles from a branch. He's about Emmigina's height, but bare-chested so obviously male.
+
+Within moments, Addahsurri and Emmigina are perched in the branches on either side of Onnodathi.
+
+ADDAHSURRI
+So, you thought you'd use the gremlins to cover your own pranks?
+
+Onnodathi gets his footing on another branch, hangs his head.
+
+ONNODATHI
+I was just... going to take some of the nutmeg.
+
+Emmigina pinches the adolescent's ear.
+
+ONNODATHI
+Ow! Okay, a lot of the nutmeg.
+
+She keeps a firm grip on the his ear, nudges him down until they reach the ground. She finally lets go, with one final painful pull downward.
+
+EMMIGINA
+We already have things broken all over the forest, and you break MORE so... so you can sniff nutmeg?
+
+Addahsurri doesn't give Onnodathi a chance to respond, grabs the same ear, pulls him along. The Herbalist chuckles.
+
+ADDAHSURRI
+Breaking stuff all over the forest. I bet the Matron will --
+
+Onnodathi's eyes go wide. He struggles but can't escape.
+
+ONNODATHI
+I only broke the one -- Ow! Stop!
+
+EXT. ELVEN FOREST CLEARING - DAY
+
+Onnodathi stands, head bowed, before Matron Ithazanna. Addahsurri and Emmigina rest among the flowers.
+
+ADDAHSURRI
+The gremlins ruined about two hundred dart points. Should take him a while to replace those.
+
+ONNODATHI
+But --
+
+ITHAZANNA
+You don't have anything else to do.
+
+ONNODATHI
+Actually, I --
+
+ITHAZANNA
+That wasn't a question.
+
+Onnodathi slumps in resignation.
+
+EMMIGINA
+With that problem solved, we should be ready to head off with Oowalvia.
+
+ADDAHSURRI
+I'm going to take a nap first.
+
+Emmigina and Ithazanna give him identical sighs.
+
+EMMIGINA
+You are such an embarrassment.
+
+ADDAHSURRI
+(yawns)
+It's fine. I'm friends with the Matron's favorite Warrior.
+
+He smiles through Emmigina's shove, but something he's now facing catches his eye.
+
+He crawls, then walks up to a tree. He sniffs and touches small claw marks in the bark.
+
+ADDAHSURRI
+These are fresh gremlin tracks.
+
+EMMIGINA
+Well, my friend, that means they aren't all dead.
+
+END OF ACT TWO
+
+ACT THREE
+
+INT. DWARVEN SMITHY - DAY
+
+Sef uses a bit of leather cord to measure around the head of IRN FARMER (85, adult) who stands in the traditional hooded loose leathers of a dwarf who works outside.
+
+SEF
+Is Cret Warden a friend of yours?
+
+TRO (O.S.)
+Stop bothering the good Farmer.
+
+Sef uses the cord to measure out a wide leather strap, but can't help glancing at the expedition knot under Irn's chin.
+
+IRN
+It's okay, Master-Smith. I was a curious apprentice once, myself.
+
+Irn turns slightly toward Sef, but not nearly enough to face eye to eye.
+
+IRN
+And no, I don't think I've ever met the young Warden before.
+
+Sef ties the strap into a copper helmet as its liner, proudly holds out the finished helmet on the side Irn is facing.
+
+SEF
+Here you go. I'd like to go on an expedition like yours.
+
+Tro steps into view as Irn turns to face Sef fully.
+
+SEF
+I know, working outside with humans and elves is trying.
+
+IRN
+Trying? It's exhausting. Have you ever met a human? They never say what they mean, make you think it all out for yourself.
+
+TRO
+That's no way to treat an ally.
+
+Sef and Tro team up to layer copper scale mail over Irn's leather clothes.
+
+IRN
+It's how they treat EACH OTHER, so we can't really expect better.
+
+Sef fastens a belt around Irn to secure the scale armor.
+
+IRN
+Hmmm... I thought the armor would be heavier.
+
+TRO
+It doesn't really get to you until the end of the day.
+
+Irn twists and hops a little to get a feel for the armor.
+
+IRN
+That's another trying thing. I go outside at night. Walking around in daylight will ruin your eyes.
+
+Sef looks up thoughtfully for a moment, tries a couple times to say something, but can't find the right words.
+
+TRO
+Don't worry, no Miner is going to ask a Smith about dealing with daylight.
+
+Sef exhales in relief.
+
+IRN
+Daylight has its uses. It helped make these so I could show my appreciation for all of your work on the armor.
+
+Sef's and Tro's eyes open wide as Irn opens a sack of fruits.
+
+EXT. ELVEN FOREST - DAY
+
+A wide-eyed Emmigina practically flies through the branches, leaping any gaps between the trees.
+
+O.S. SNICKERING. The clawed green hand of a GREMLIN grasps one of the branches in Emmigina's path, pulls it away just as she reaches it.
+
+EMMIGINA
+Whoa!
+
+Emmigina tumbles through foliage but arrests her fall before running out of canopy. She launches a dart at where the Gremlin was, hears chittering laughter.
+
+She launches a second dart toward that sound, grunts in frustration when she hears it raspberry at her.
+
+EMMIGINA
+You little coward!
+
+She loads a new dart into her atlatl.
+
+GREMLIN (O.S.)
+Says the elf who flings darts so very far away.
+
+Emmigina frantically searches in all directions, freezes when she hears O.S. branches rustling, fires her dart that way.
+
+The Gremlin swings aside just in time, leaving itself in full view for a moment. The dart whizzes deep into the trees.
+
+ADDAHSURRI (O.S.)
+Hey!
+
+Addahsurri falls backward from the dart striking his quiver, catches himself on a lower branch. His quiver falls to the ground, spilling several darts.
+
+Addahsurri would claim his eyes were wide with surprise, but it was fear.
+
+O.S. chittering laughter fades into the distance.
+
+Emmigina rushes toward Addahsurri, slows when he rights himself and drops to ground level.
+
+EMMIGINA
+Are you okay?
+
+ADDAHSURRI
+Yeah, I'm fine.
+
+He picks up the quiver, looks down at the darts within.
+
+ADDAHSURRI
+Did you know that darts look much scarier when they're heading right at you?
+
+Emmigina chuckles, helps pick up the fallen darts and get Addahsurri's quiver back in place.
+
+EMMIGINA
+That was an amazing pace for tracking.
+
+ADDAHSURRI
+Not amazing enough, and I think you were right that it's going after the bridge.
+
+EXT. ELVEN FOREST - DAY
+
+Moving rapidly through the trees, Addahsurri and Emmigina come within sight of the vine bridge.
+
+One of the lines snaps.
+
+Emmigina gasps but keeps up her pace. Addahsurri fumbles for a step or two.
+
+ADDAHSURRI
+Oh, no!
+
+Fortunately no one is on the bridge at the moment. Addahsurri and Emmigina draw close as two more lines snap.
+
+The Gremlin runs across the last remaining line, cuts it at the midpoint and swings to the far side.
+
+GREMLIN
+Whee!
+
+Emmigina launches a dart that nicks the Gremlin's leg. Addahsurri's dart severs the vine.
+
+The Gremlin comically tries to climb the falling vine, panics when it reaches the end, and splashes into the stream.
+
+Emmigina, Addahsurri, and few other elves turn over stones and stab the mud in the streambed, but there's no sign of the elusive Gremlin.
+
+ADDAHSURRI
+Of course it can swim.
+
+He skips a stone across the water in frustration.
+
+ADDAHSURRI
+So, where do you think it'll go next?
+
+Emmigina looks under one last log then gives up.
+
+EMMIGINA
+We hurt it. Spiteful little thing that it is, I bet it'll hide for a bit, then try to hurt us.
+
+INT. DWARVEN MINING TUNNEL - DAY
+
+A diagonal fracture cave where FIVE MINERS have been carving a level floor into the lower side and carving headroom into the upper side.
+
+A Miner's pick dislodges a rock, reveals a BLUE BUGBEAR hiding behind it. The wormy tendrils scatter, but two injured ones stay behind.
+
+MINER
+Bugbear!
+
+The healthy worms reform into a humanoid shape behind the Miners. The swing their picks at it, but they only shift the tendrils around without hurting it.
+
+BLUE BUGBEAR
+Ha!
+
+It plods back toward the injured tendrils.
+
+More pick swings pass through the bugbear. One Miner uses a gloved hand to grab a tendril, but it slips free.
+
+A second Miner tackles the bugbear, but most of the scattered tendrils simply reform closer to its target. One tendril remains attached to the Miner's face like a leech.
+
+As that Miner rolls on the floor struggling to pull off the blue worm, the first Miner yanks it off, and it quickly wriggles free to join the rest of the bugbear.
+
+BLUE BUGBEAR
+Stupid dwarves, leave. Or get hurt.
+
+The mining team's leader SIB MINER (88, adult) looks the bugbear up and down, winds up, and takes a mighty overhead swing that impales one of the tendrils to the floor.
+
+The bugbear's GURGLING SCREAM echoes down the tunnel. In a rush of every-tendril-for-itself panic, the foot-long blue worms scramble into a crack near the floor.
+
+The Miners furrow their brows in annoyance, but Sib's face brightens with an idea.
+
+Sib leaves the pick in the squealing tendril, grabs a nearby stone bucket, and stomps up to the crack.
+
+MINER
+That's not water.
+
+SIB
+Of course it's not. Who brings water to work?
+
+Sib pours the bucket into the crack, prompting gurgling noises and some splashing. Sib nods, and one of the Miners swings a pick at the opening.
+
+Another nod, another swing, and this time a spark.
+
+FOOM! Fire and flaming bits of worm erupt from the crack. The Miners congratulate Sib with slight nods.
+
+Sib drinks some of whatever is in the bucket, lets out a contented "Ah...", and passes the alcohol around.
+
+SIB
+Let's hope that's the only one the Wardens missed. If I never see another one of those things, it'll be too soon.
+
+Running down the tunnel comes a YOUNG MINER (49, adolescent) whose beard sports only a single guild knot below the lips.
+
+YOUNG MINER
+Sib Miner!
+
+SIB
+That's me.
+
+YOUNG MINER
+Grand Master Miner summons you for an expedition.
+
+Sib grabs the still-struggling impaled worm with one hand, frees the pick with the other, and motions for the Miners to get back to work.
+
+Sib stares at the Young Miner, who simply stares back.
+
+SIB
+Well, lead the way.
+
+INT. DWARVEN SMITHY - DAY
+
+Tro turns around as Sib knocks on the wall outside the entrance. Both show a glimmer of recognition.
+
+SIB
+Tro Master-Smith, sorry to keep you waiting. Grand Master Miner took the time to tell me EVERYTHING.
+
+TRO
+Not at all. It's always good to see happy Miners, means my picks have --
+
+Tro stops, points accusingly at the blunted tip of Sib's copper pick.
+
+SIB
+Combat. Haven't had a chance to --
+
+Tro motions for the pick, and Sib hands it over.
+
+TRO
+You have more important concerns. Sef!
+
+Sef pops in from a neighboring room. Tro holds the pick out to one side, which Sef takes but then stands motionless.
+
+SEF
+Is that a --
+
+TRO
+(without turning around)
+Yes.
+
+SEF
+Do you --
+
+TRO
+Yes.
+
+SEF
+Maybe I should --
+
+TRO
+Maybe you should.
+
+Sef places the tip of the pick in the smoldering fire, jogs to the neighboring room, and comes back with a set of copper scale armor and a helmet.
+
+SEF
+Here we are...
+
+SIB
+Sib Miner.
+
+Sef nods. Tro can tell by the lack of sound that the Sef is standing motionless again, frowns gravely.
+
+SEF
+Sef Apprentice-Smith. It's an honor to meet a --
+
+TRO
+(still facing Sib)
+It's an honor to SERVE a member of the expedition.
+
+SEF
+Right. What was I thinking?
+
+Sef puts the armor down, fetches the measuring cord.
+
+Tro turns, heads to the anvil, takes out the hot pick, starts hammering it while Sef measures Sib's head.
+
+SEF
+I heard you were in combat. Was it Living Stone?
+
+TRO
+(without turning)
+Living Stone is a fable to cover careless Miners hurting themselves. Sib here is careful, skillful, and observant, which is why the good Miner's never seen any so-called Living Stone.
+
+SIB
+It was a bugbear in the tunnels. We came up on the thing's hiding spot.
+
+Sib pulls Sef closer and speaks in a quieter voice as Tro continues hammering the pick.
+
+SIB
+But Living Stone is real. I've been looking for another believer to give this.
+
+Sib hands Sef a palm-sized rock.
+
+SIB
+We keep these little ones as pets. They don't do much, but they're really good listeners.
+
+Sef's eyes light up while putting the pet rock in a belt pouch, then uses the cord to measure out a helmet liner.
+
+Behind Sef's back, Tro and Sib trade knowing winks.
+
+SEF
+I need a different cord to tie this in. I'll be right back.
+
+Sef bounds into the neighboring room. Tro and Sib stifle their laughter.
+
+TRO
+Be careful. Tarn does not take kindly to liars.
+
+SIB
+Look at the world Tarn forged and TELL me that god doesn't have a sense of humor. Besides, that rock's never interrupted ME, so I'd call it a good listener.
+
+Tro takes a moment to get one last chuckle under control before hammering the pick again.
+
+EXT. ELVEN FOREST - DAY
+
+Tiny drops of black blood on leaves make a trail to the Gremlin hanging by its hands from a branch. It uses its hand-like feet to loosen some knots holding baskets above several ELVES gossiping at ground level.
+
+MALE ELF
+You're not listening to me. It was like she wanted to be seen...
+
+Addahsurri and Emmigina creep up on the Gremlin from different directions, Addahsurri across branches at about the same level as the Gremlin, Emmigina on the ground.
+
+Carefully and silently, each elf takes out a dart and loads their atlatl. Emmigina nods.
+
+Addahsurri nods back, scowls at the Gremlin, then throws himself bodily into hurling his dart, relies on his reflexes to grab a branch afterward.
+
+The Gremlin hears the movement and the approaching dart. It pulls itself up, and Addahsurri's dart whizzes below.
+
+From the side, Emmigina's shot impales the Gremlin to the tree trunk at an upward angle.
+
+EMMIGINA
+Gotcha!
+
+The Elves at ground level gasp, then gawk at the novelty of the trapped Gremlin.
+
+ADDAHSURRI
+Thanks for your help, everyone.
+
+A happy Addahsurri bounds over to the Gremlin pulling futilely at the dart. It spits at him.
+
+The gossiping Elves wave, wander off.
+
+MALE ELF (O.S.)
+She had to know she'd be seen...
+
+ADDAHSURRI
+You caused a LOT of trouble.
+
+GREMLIN
+You have trouble? I have THIS THING through me!
+
+ADDAHSURRI
+That DOES look painful.
+
+Black blood trickles down the shaft and the tree trunk.
+
+EMMIGINA
+You know, it'd almost look cute... if it had some fur or something.
+
+The Gremlin soaks both hands in its blood, flings it at the two elves. They recoil with stinging eyes, but don't lose their footing.
+
+GREMLIN
+I'll tell you what's painful.
+
+EXT. ELVEN FOREST CLEARING - DAY
+
+Ithazanna bites into a mango, tosses a second one to Aurantalla standing before her. The nervous adolescent juggles it briefly but manages to not drop it.
+
+AURANTALLA
+B-But there's nothing to tell.
+
+ITHAZANNA
+You're not telling anyone anything. That's not the same thing. We all have roles to play, and none of them is "sit in a tree all day."
+
+Addahsurri and Emmigina drop to ground level at the edge of the clearing. Emmigina holds the moaning Gremlin with her dart still run through its torso.
+
+EMMIGINA
+Matron, there was a problem... just like you said, and we handled it... just like we said.
+
+ADDAHSURRI
+Things should stay fixed now.
+
+Ithazanna takes the dart from Emmigina, looks the Gremlin over from all sides.
+
+It HISSES at her, making Emmigina flinch and Aurantalla jump.
+
+Unfazed, Ithazanna completes her examination then holds it up at arm's-length.
+
+ITHAZANNA
+We have no quarrel with your kind, but you are not welcome here. Any more gremlins who come to Havenglade WILL be put to death.
+
+The Gremlin shows Ithazanna a toothy grin.
+
+GREMLIN
+You're releasing me to deliver your message? I --
+
+ITHAZANNA
+Don't be absurd. You are Unnatural, and I think perhaps your dark god is watching you.
+
+Addahsurri, Emmigina, and Aurantalla's eyes widen.
+
+ITHAZANNA
+If your god watches you then it hears me... and it turns out your god doesn't think you're worth saving.
+
+The Gremlin's smile vanishes. It hisses again.
+
+ITHAZANNA
+Or maybe your god doesn't think you're even worth watching, in which case many more of your kind will die.
+
+The Gremlin hisses even louder.
+
+ITHAZANNA
+A very dark god, indeed.
+
+GREMLIN
+You think you've won? You don't even know the game!
+
+ITHAZANNA
+I am finished with you.
+
+Emmigina rips the Gremlin's head off.
+
+ADDAHSURRI
+That was creepy.
+
+Emmigina wipes the black blood where one of her streaks of black body paint had rubbed off.
+
+Aurantalla glances sullenly between her white streaks and Emmigina's black and brown ones.
+
+EMMIGINA
+Did you just declare war on a god?
+
+ITHAZANNA
+Don't be so dramatic. It will take a few tries, but eventually gremlins will get the message and leave us alone.
+
+AURANTALLA
+I trust in the Matron's wisdom. And that she's gonna let Onnodathi out of his labor, right?
+
+Ithazanna turns a condescending eye to Aurantalla.
+
+ITHAZANNA
+He's not innocent.
+
+Aurantalla opens her mouth to protest, but is cut off.
+
+ITHAZANNA
+Though now a fair labor would be ten dart points.
+
+Aurantalla grins with satisfaction, Addahsurri twists his mouth in disappointment.
+
+ITHAZANNA
+Go on, you two. Oowalvia is waiting.
+
+Addahsurri and Emmigina bow slightly then sprint to the branches and speed off.
+
+An elf standing nearby accepts the dart from Ithazanna, collects the Gremlin head, and carries them away.
+
+ITHAZANNA
+And you, young lady, need to spend your time with other elves to figure out your role around here. That is, if you still trust in my wisdom.
+
+Aurantalla's shoulders slump.
+
+AURANTALLA
+Yes, Matron.
+
+END OF ACT THREE
+
+ACT FOUR
+
+EXT. VALLEY - DAY
+
+Nine sheep mill around and graze. KATELL (18), a girl with a walking staff, watches them and grips a horn tightly in her hand. At her side lay eight nearly-mature wolf-dogs.
+
+Felan and Greer, both with walking staves, approach with a sheep. Seven mature dogs follow Greer. He pats the sheep on the behind, and it joins Katell's miniature flock.
+
+GREER
+That's probably the last one still out there. We'll need to catch wild ones to get back to a real flock.
+
+KATELL
+At least having these will help with training the new ones.
+
+A faint thumping sounds in the distance.
+
+FELAN
+Shh. Katell, Greer, do you hear something?
+
+Katell nervously brings the horn closer to her lips.
+
+KATELL
+Greer... Why would they be back so soon? They ate all of those sheep THAT fast?
+
+Half of the young dogs look aggressively at Katell - eyes wide, ears forward.
+
+The rhythmic thumps gradually grow louder.
+
+GREER
+No. That's the dwarves with their stupid drum. And mind your dogs.
+
+Katell regains her composure and stares down the young dogs.
+
+Greer sniffs, steps among Katell's dogs, and sniffs again.
+
+GREER
+Your dogs are in first heat. Going to be a big day for you tomorrow.
+
+Katell's eyes slowly grow wide with dread.
+
+INT. PRIEST-KING'S HOUSE - DAY
+
+Keene sits in his chair as Seath and Donagh stand chatting with elves Addahsurri, Emmigina and Oowalvia.
+
+OOWALVIA
+Ogres raid the forest about... What? ... every eighty or ninety years.
+
+EMMIGINA
+Right. They come a couple times a year for a few years, then we don't hear from them again.
+
+OOWALVIA
+It is about the right time.
+
+KEENE
+Interesting. But why are they attacking US this time?
+
+Taggart enters, followed by Cret, Irn, and Sib all wearing copper scale armor. The dwarves are virtually indistinguishable from one another except that they are armed with an axe, a sickle, and a pick, respectively.
+
+TAGGART
+Priest-King, I present Cret Warden, Irn Farmer, and Sib Miner.
+
+Each dwarf bows when mentioned.
+
+ADDAHSURRI
+Cret, nice to see you again.
+
+Cret ignores the elf and addresses Keene instead.
+
+CRET
+Priest-King Keene, would you honor us by accepting our assistance on this mission?
+
+KEENE
+Of course. Warden, Farmer, Miner... let me introduce to you: Donagh the Warrior, Seath the Beastmaster, and Taggart the Wise.
+
+Keene indicates each human in turn.
+
+OOWALVIA
+(formal)
+Greetings. I am Oowalvia, and I am a healer.
+
+ADDAHSURRI
+(friendly)
+Addahsurri, and my usual role is a hunter.
+
+EMMIGINA
+(nervous)
+Emmigina, and, uh, I'm a warrior.
+
+Cret looks warily at the humans and elves, then shrugs. Irn looks intently at each one by one. Sib's gaze wanders over the elves, humans, and the rest of the house.
+
+CRET
+So, has a route been chosen? I think straight up the valley.
+
+OOWALVIA
+Nice to meet you, too.
+
+TAGGART
+Yes, that was our thinking as well. We'll set out in the morning.
+
+DONAGH
+A quick expedition to learn where these enemies are based, and a chance for all of us to work together. Sounds great to me.
+
+Donagh's enthusiasm is met with an awkward silence.
+
+EXT. VALLEY - DAY
+
+Katell watches over her ten sheep, and keeps a wary eye on her dogs as well.
+
+Seath calls out a greeting as she approaches.
+
+Katell suppresses her startle with visible effort, puts on a stern face, forces a smile.
+
+SEATH
+Sorry to intrude. I just needed to get away from all those people.
+
+KATELL
+No problem at all, Seath. I'd like some company.
+
+SEATH
+Greer told me the good news. Sorry I can't be there, but this thing with the elves and dwarves won't wait a day.
+
+KATELL
+I understand.
+
+SEATH
+Greer will handle everything. Well, everything but your part.
+
+Katell's laugh sounds too nervous to her own ear, so she retreats to her forced smile.
+
+Seath lightly grasps Katell's forearms, lifts her hands. There's only one minor dog-bite scar.
+
+SEATH
+You handle your dogs differently than I do, and well, pretty much than everyone. But it seems to work. You're going to do just fine.
+
+Katell finally relaxes a bit.
+
+KATELL
+Thanks. So, are the dwarves going to bang that drum the whole time you're out there?
+
+SEATH
+(laughs)
+By every light in the sky, not while I'm still breathing!
+
+EXT. VALLEY - DAY
+
+The expedition advances with Donagh in the lead, Emmigina on the left flank, Cret on the right flank, and Seath in the rear. Her dogs fan out across the area.
+
+In the distance behind them, a tiny flock of sheep graze in the grass watched over by a Beastmaster and some dogs.
+
+A wide-eyed Emmigina scans the horizon constantly in the front, sides, and rear. She double-takes after catching some movement in the sky well behind the expedition.
+
+When Emmigina looks in Addahsurri's direction, he gives her a wry smile.
+
+ADDAHSURRI
+(barely audible)
+Now who's an embarrassment?
+
+She tones down her scanning from hyperactive to merely vigilant.
+
+Addahsurri's gaze next falls on Taggart who shifts the weight of his sack from one shoulder to the other.
+
+ADDAHSURRI
+Here, let me carry that.
+
+Taggart looks over at the elf - and down. Addahsurri only stands up to his shoulder.
+
+TAGGART
+That's quite kind of you, but I can manage.
+
+Irn and Sib trade glances, walk silently for a moment, then trade glances again. Sib sighs.
+
+ADDAHSURRI
+Hey, is there something you wanted me to carry --
+
+SIB
+No.
+
+CRET
+Irn, there's no need to worry.
+
+IRN
+No offense, but I prefer to be prepared.
+
+Cret and Sib both sigh.
+
+TAGGART
+Worry about what?
+
+IRN
+Look at the size of all the sacks and packs here. Some of the plants here are edible, but there's no way we have enough food to get to Porsode and back.
+
+DONAGH
+(with ADDAHSURRI)
+I hunt.
+
+IRN
+I don't like relying on luck.
+
+ADDAHSURRI
+It's not luck...
+
+Addahsurri slides a dart from his quiver. While Emmigina's atlatl is a solid piece of wood, Addahsurri's has a length of rope at the front that he uses to adjust his grip.
+
+Addahsurri launches the dart into a tall arc.
+
+ADDAHSURRI
+... it's skill.
+
+The dart falls straight down through a bush rat in the grass, killing it instantly.
+
+OOWALVIA
+(barely audible)
+Show off.
+
+DONAGH
+We're not stopping to eat yet.
+
+ADDAHSURRI
+Right. I just didn't want our allies to be nervous is all.
+
+As the group walks past the dead rat, Addahsurri retrieves his dart and puts it back in his quiver.
+
+EXT. UPPER VALLEY - DAY
+
+The mountains on the right and the forest on the left are much closer this far up the valley.
+
+Emmigina taps Oowalvia on the shoulder.
+
+EMMIGINA
+Do you know which one lives longer, humans or dogs?
+
+SEATH
+(holds necklace)
+Four fangs means this is the fourth litter of dogs I've raised.
+
+EMMIGINA
+Oh.
+(hisses at ADDAHSURRI)
+You told me humans had bad hearing.
+
+ADDAHSURRI
+I didn't say they were deaf.
+
+The dwarves smirk as Emmigina flushes with embarrassment.
+
+OOWALVIA
+I'm sorry, she isn't used to being out of our forest.
+
+Addahsurri notices Emmigina's blush, stifles a laugh.
+
+OOWALVIA
+There's no excuse for him.
+
+SEATH
+It's fine.
+
+The expedition approach the river which here lays diagonal across their path.
+
+DONAGH
+We can get a drink,
+(looks at dwarves)
+but it's too wide to cross here.
+
+Sib plods into the shallow edge of the moving water, notes how far each boot sinks into the mud, peers at the far side.
+
+SIB
+Faster to go straight. We can get across if you can.
+
+Donagh looks to Taggart, who shrugs.
+
+IRN
+I see carp in there.
+
+SIB
+More worried about the flow, but it'll be fine.
+
+Sib leans slightly toward upstream, stomps directly into the water, and disappears below the surface.
+
+Donagh and Seath stare in disbelief as Sib's helmet reappears near the far side.
+
+Just as Sib's mouth clears the water, one of the swimming carp collides with the Miner's shoulder.
+
+The force is just enough to send the dwarf tumbling. Sib's pick digs into the mud, but it won't hold.
+
+Addahsurri dashes after Sib, runs about knee-deep into the water, holds the wooden end of his atlatl and tosses the rope end toward Sib.
+
+ADDAHSURRI
+Here! Grab this!
+
+O.S. SPLASH. Donagh darts underwater past Addahsurri and Sib, pulls Sib toward the bank.
+
+The moment Sib gets decent footing, Taggart pantomimes "hands off" and Donagh lets the dwarf walk the rest of the way out.
+
+SIB
+I underestimated the fish here. Won't happen again.
+
+Cret raises an eyebrow at Sib.
+
+SIB
+(to DONAGH)
+Your assistance is appreciated.
+(to ADDAHSURRI)
+That was quick thinking.
+
+Addahsurri smiles, backs out of the water.
+
+SIB
+Didn't work, but keep at it. Might have a good idea next time.
+
+ADDAHSURRI
+Thanks. I think.
+
+DONAGH
+Do we go back, or bring everyone over here?
+
+Taggart gestures to the elves and dwarves, who simply stare at each other.
+
+Emmigina blinks, sees some movement in the distant clouds.
+
+EMMIGINA
+Can I say staying RIGHT HERE is a bad idea?
+
+Seath's glances at each elf and dwarf grow more impatient.
+
+SEATH
+Everyone over to that side.
+
+ADDAHSURRI
+(holds up atlatl)
+The rope should help a little. Does anyone else have any ideas?
+
+Irn pulls a much longer coil of rope from a satchel. Addahsurri looks askance at it, gestures from Irn to Sib.
+
+IRN
+Sib didn't ask for help.
+
+Addahsurri stomps, Emmigina pulls her hair in frustration, and Oowalvia throws up her arms.
+
+EMMIGINA
+Unbelievable!
+
+OOWALVIA
+(at the same time)
+You. Are. Impossible!
+
+Irn gives the elves a mystified head shake, continues to uncoil the rope.
+
+DONAGH
+(softly to SIB)
+Did I insult you or something?
+
+SIB
+(not softly)
+I messed up. Had it coming.
+(to IRN)
+Toss the rope!
+
+EXT. UPPER VALLEY - DAY
+
+The expedition press onward across the valley floor, with their clothes mostly dry.
+
+One of the dogs near Sib scares away a bush rat by growling at it.
+
+SIB
+That wasn't very friendly.
+
+SEATH
+It's not his job to be friendly.
+
+Addahsurri looks over to Emmigina, who motions with her head to look backward. He peers over his shoulder.
+
+ADDAHSURRI
+My friendly suggestion would be to move a little faster. I don't like being out in the open like this.
+
+SIB
+Does take some getting used to. At least we figured out how to get across water if it comes up again.
+
+Oowalvia glares over at Irn, mutters to herself.
+
+One of Seath's dogs growls at the sky behind the group.
+
+EMMIGINA
+There's five of them. Been back there for a while.
+
+She looks over her shoulder, does a double take.
+
+EMMIGINA
+But now they seem interested in us.
+
+INTO VIEW: Five winged green DRAGONS are still far away, but now flying straight toward the expedition.
+
+The dwarves shield their eyes from the sun, but apparently can't make out the attackers.
+
+CRET
+The sky's too bright. How big are these things?
+
+EMMIGINA
+Only the really tiny dragons travel in groups. So, maybe about as big as one of the dogs?
+
+ADDAHSURRI
+But with...
+(spreads arms)
+wings and a tail.
+
+The lead dragon SHRIEKS from a rapidly shrinking distance.
+
+TAGGART
+It's strange for creatures that size attack a group as big as ours.
+
+DONAGH
+They don't fear us. Even one will harass groups of Warriors or Gatherers out in the open.
+
+Donagh points to an outcropping from the mountains.
+
+DONAGH
+Head for cover!
+
+The expedition start running for the rocks. Donagh, Seath, Addahsurri, and Emmigina take turns peeking back at the dragons to check how close they are.
+
+IRN
+I've seen gray ones in the mountains, but never fought one.
+
+EMMIGINA
+I'd only ever heard of brown ones and black ones.
+
+Seath cocks an eyebrow at the smears of brown and black body paint covering Emmigina. Irn smirks at her audacity.
+
+ADDAHSURRI
+Well, these are green. Take it up with them.
+
+Taggart starts to fall behind, but Addahsurri and Seath stay with him.
+
+SEATH
+Mariners say they've seen blue ones out at sea.
+
+The dragons fly closer as the expedition members hurdle minor obstacles like shrubs and bush rats.
+
+SEATH
+Of course, they claim to see lots of things. I think they just get bored out --
+
+The lead dragon SHRIEKS again and dives toward Taggart. Addahsurri and Emmigina each launch darts while running. Emmigina's narrowly misses its head, and Addahsurri's bounces off its side.
+
+Combined, they divert the dragon just enough that its claws miss Taggart. Its tail carves a short trench in the ground.
+
+Oowalvia launches a stone from a sling, but that also bounces off the scales harmlessly.
+
+The dragon pulls up, stays out of reach from Donagh and Cret.
+
+DONAGH
+We're almost there.
+
+A third dragon dives toward Cret.
+
+SEATH
+Cret, look out!
+
+CRET
+Finally.
+
+Cret halts, turns to face the dragon, and meets its forelimb with an overhead axe swing.
+
+CLANG! Cret and the dragon both tumble along the ground. A dog jumps onto its back, two darts pelt its hide, and a sling-stone bounces off.
+
+The dragon bucks the dog off it back, spreads its wings, and leaps into the air before anyone else can hit it.
+
+Cret gets back up, holds aloft an axe with a little green blood on it.
+
+CRET
+Ha! See if it wants more of that!
+
+The first three dragons glide around to make another pass. The fourth dragon dives toward Emmigina.
+
+TAGGART
+(with ADDAHSURRI)
+Emmigina!
+
+Though now close to the rocks, Emmigina skids sideways to a halt and spins around with her atlatl loaded.
+
+Seath leads her dogs in a charge to where the dragon will be.
+
+Addahsurri loads his atlatl while on the run, and Oowalvia whips her sling over her head.
+
+Before any of them can act, a HUGE BOULDER hurls into the dragon from O.S.
+
+The impacted dragon lands in a heap, and the boulder rolls to a stop near the other six.
+
+The remaining dragons turn tail and fly away.
+
+Stunned, everyone slows to a stop and turns toward the outcropping.
+
+INTO VIEW: An OGRE claps rock dust off his hands, ROARS at the fleeing dragons. Upon seeing the elves, dwarves, and humans, the ogre picks up his hammer and ROARS at them.
+
+END OF ACT FOUR

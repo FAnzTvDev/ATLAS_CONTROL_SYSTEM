@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FANZ TV — Multi-Network Universe + Content Ecosystem</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#050509;--bg2:#0a0a12;--bg3:#10101c;--bg4:#18182a;
+  --gold:#c8a961;--gold-l:#f0d88a;
+  /* Network Colors */
+  --rumble:#e23636;--horror:#8b1a8b;--scifi:#00c8ff;--martian:#ff6b2b;--whodone:#2ecc71;--joke:#ffd700;
+  --urban:#ff1493;--pod:#9b59b6;
+  --t1:#f0f0f5;--t2:#8a8a9a;--t3:#55556a;--t4:#33334a;
+  --bdr:#1a1a2e;--glass:rgba(255,255,255,0.02);
+}
+body{background:var(--bg);color:var(--t1);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.55}
+
+/* ═══ TOP ═══ */
+.top{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:54px;background:rgba(5,5,9,0.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--bdr)}
+.top .logo{display:flex;align-items:center;gap:8px}
+.top .logo-text{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;letter-spacing:2px}
+.top .logo-text span{background:linear-gradient(135deg,var(--gold),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.top .logo-sub{font-size:8px;color:var(--t3);letter-spacing:3px;text-transform:uppercase}
+.pills{display:flex;gap:3px;flex-wrap:wrap}
+.pill{background:none;border:1px solid transparent;color:var(--t2);padding:5px 12px;border-radius:7px;cursor:pointer;font-size:11px;font-weight:500;transition:.2s;white-space:nowrap}
+.pill:hover,.pill.on{color:var(--gold);border-color:rgba(200,169,97,.2);background:rgba(200,169,97,.05)}
+
+/* ═══ SECTIONS ═══ */
+.sec{display:none;padding:72px 24px 48px;max-width:1240px;margin:0 auto}
+.sec.on{display:block}
+.sh{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;margin-bottom:4px}
+.ss{color:var(--t2);font-size:13px;margin-bottom:28px;max-width:700px;line-height:1.7}
+h3{font-size:16px;font-weight:700;margin-bottom:12px}
+h4{font-size:13px;font-weight:600;margin-bottom:6px}
+.mt{margin-top:32px}.mb{margin-bottom:20px}
+
+/* ═══ GRIDS ═══ */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.g6{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+@media(max-width:1000px){.g3,.g4,.g6{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g2,.g3,.g4,.g6{grid-template-columns:1fr}}
+
+/* ═══ CARDS ═══ */
+.cd{background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;padding:20px;transition:.25s}
+.cd:hover{border-color:rgba(200,169,97,.2);transform:translateY(-1px);box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.b{display:inline-block;padding:3px 9px;border-radius:16px;font-size:8px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
+
+/* ═══ NETWORK CARDS ═══ */
+.net-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:16px;overflow:hidden;transition:.3s;cursor:pointer}
+.net-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.net-banner{height:120px;position:relative;display:flex;align-items:flex-end;padding:14px}
+.net-banner .net-logo{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;position:relative;z-index:2}
+.net-banner .net-tag{position:absolute;top:10px;right:10px;font-size:8px;font-weight:700;padding:3px 8px;border-radius:10px;letter-spacing:.5px}
+.net-body{padding:14px}
+.net-desc{font-size:11px;color:var(--t2);line-height:1.6;margin-bottom:10px}
+.net-stats{display:flex;gap:12px}
+.net-stat{text-align:center}
+.net-stat-n{font-size:14px;font-weight:700}
+.net-stat-l{font-size:8px;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.net-shows{display:flex;flex-direction:column;gap:4px;margin-top:10px}
+.net-show{display:flex;align-items:center;gap:8px;padding:6px 8px;background:var(--bg2);border-radius:6px;font-size:10px}
+.net-show-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
+/* ═══ UNIVERSE MAP ═══ */
+.uni-center{width:100%;max-width:800px;margin:0 auto 32px;position:relative;min-height:520px}
+.uni-hub{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,rgba(200,169,97,.15),rgba(200,169,97,.03));border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:5}
+.uni-node{position:absolute;width:100px;padding:10px;text-align:center;background:var(--bg3);border:1px solid var(--bdr);border-radius:10px;font-size:10px;z-index:5;transition:.3s}
+.uni-node:hover{transform:scale(1.08)}
+.uni-node-icon{font-size:20px;margin-bottom:3px}
+
+/* ═══ CONTENT STRIP ═══ */
+.strip{display:flex;gap:12px;overflow-x:auto;padding-bottom:10px;scrollbar-width:thin;scrollbar-color:var(--bdr) transparent}
+.strip-card{min-width:200px;background:var(--bg3);border:1px solid var(--bdr);border-radius:12px;overflow:hidden;flex-shrink:0;transition:.3s}
+.strip-card:hover{border-color:rgba(200,169,97,.2)}
+.strip-thumb{height:110px;position:relative}
+.strip-live{position:absolute;top:6px;left:6px;background:var(--rumble);color:#fff;font-size:7px;font-weight:700;padding:2px 6px;border-radius:3px;letter-spacing:.5px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.strip-info{padding:10px}
+.strip-title{font-size:12px;font-weight:600}
+.strip-meta{font-size:9px;color:var(--t3);margin-top:3px}
+
+/* ═══ PODCAST ═══ */
+.pod-card{display:flex;gap:14px;padding:14px;background:var(--bg3);border:1px solid var(--bdr);border-radius:12px;margin-bottom:10px;transition:.3s}
+.pod-card:hover{border-color:rgba(155,89,182,.3)}
+.pod-art{width:60px;height:60px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.pod-info{flex:1}
+.pod-title{font-size:13px;font-weight:600}
+.pod-host{font-size:10px;color:var(--t3);margin-top:2px}
+.pod-desc{font-size:10px;color:var(--t2);margin-top:4px;line-height:1.5}
+.pod-meta{display:flex;gap:10px;margin-top:6px;font-size:9px;color:var(--t3)}
+
+/* ═══ 3D / SOCIAL ═══ */
+.social-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:.3s}
+.social-card:hover{border-color:rgba(200,169,97,.2)}
+.social-preview{height:140px;position:relative;display:flex;align-items:center;justify-content:center}
+.social-body{padding:14px}
+
+/* ═══ REVENUE ═══ */
+.rev-bar{display:flex;height:28px;border-radius:7px;overflow:hidden;margin:10px 0 6px}
+.rev-seg{display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#000}
+.rev-leg{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.rev-leg span{font-size:10px;display:flex;align-items:center;gap:4px}
+.rev-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+
+/* ═══ METRICS ═══ */
+.mx{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.mx .m{flex:1;min-width:120px;background:var(--bg3);border:1px solid var(--bdr);border-radius:10px;padding:14px;text-align:center}
+.mx .m .n{font-size:24px;font-weight:800;background:linear-gradient(135deg,var(--gold),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.mx .m .l{font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:.8px;margin-top:2px}
+
+/* ═══ GAMIFICATION ═══ */
+.xp-bar{height:6px;background:var(--bdr);border-radius:3px;overflow:hidden;margin:6px 0}
+.xp-fill{height:100%;border-radius:3px}
+.rank-row{display:flex;align-items:center;gap:10px;padding:8px;border-bottom:1px solid var(--bdr);font-size:11px}
+.rank-pos{width:24px;font-weight:700;text-align:center}
+.rank-avatar{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}
+.rank-name{flex:1}
+.rank-pts{font-weight:600}
+
+/* ═══ CROSSOVER ═══ */
+.cross-line{display:flex;align-items:center;gap:8px;padding:10px;background:var(--bg2);border-radius:8px;margin-bottom:6px;font-size:11px}
+.cross-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="logo">
+    <div>
+      <div class="logo-text"><span>FANZ</span> TV</div>
+      <div class="logo-sub">Powered by ATLAS Studios</div>
+    </div>
+  </div>
+  <div class="pills">
+    <button class="pill on" onclick="go('networks')">Networks</button>
+    <button class="pill" onclick="go('universe')">Content Universe</button>
+    <button class="pill" onclick="go('urban')">Urban + Culture</button>
+    <button class="pill" onclick="go('podcasts')">Podcasts</button>
+    <button class="pill" onclick="go('social3d')">3D Social Worlds</button>
+    <button class="pill" onclick="go('gamify')">Gamification</button>
+    <button class="pill" onclick="go('revenue')">Revenue Model</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 1. NETWORKS — THE 6 CHANNELS                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="networks" class="sec on">
+<div class="sh">The FANZ TV Network</div>
+<div class="ss">Six specialized channels — each with its own brand identity, content slate, audience, and personality. All powered by one ATLAS engine. All feeding one universe.</div>
+
+<div class="mx">
+  <div class="m"><div class="n">6</div><div class="l">Networks</div></div>
+  <div class="m"><div class="n">24/7</div><div class="l">Live Streaming</div></div>
+  <div class="m"><div class="n">50+</div><div class="l">Series</div></div>
+  <div class="m"><div class="n">500+</div><div class="l">Episodes / Year</div></div>
+  <div class="m"><div class="n">200+</div><div class="l">Characters</div></div>
+  <div class="m"><div class="n">7</div><div class="l">Revenue Streams</div></div>
+</div>
+
+<div class="g3 mb">
+  <!-- RUMBLE TV -->
+  <div class="net-card">
+    <div class="net-banner" style="background:linear-gradient(135deg,#2a0808,#1a0505,#0a0505);">
+      <div class="net-logo" style="color:var(--rumble);">RUMBLE TV</div>
+      <div class="net-tag" style="background:var(--rumble);color:#fff;">FLAGSHIP</div>
+    </div>
+    <div class="net-body">
+      <div class="net-desc">Premium drama, thrillers, and prestige narratives. The HBO of the FANZ universe — where flagship series premiere and cultural moments happen.</div>
+      <div class="net-stats">
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--rumble)">12</div><div class="net-stat-l">Series</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--rumble)">85</div><div class="net-stat-l">Episodes</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--rumble)">48</div><div class="net-stat-l">Characters</div></div>
+      </div>
+      <div class="net-shows">
+        <div class="net-show"><div class="net-show-dot" style="background:var(--rumble)"></div>Victorian Shadows <span style="margin-left:auto;color:var(--rumble);font-weight:600;">PREMIERE</span></div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--rumble)"></div>The Covenant <span style="margin-left:auto;color:var(--t3);">S2</span></div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--rumble)"></div>Blackwater Ridge <span style="margin-left:auto;color:var(--t3);">S1</span></div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--rumble)"></div>The Last Confession <span style="margin-left:auto;color:var(--t3);">NEW</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AMERICAN HORROR CLASSICS -->
+  <div class="net-card">
+    <div class="net-banner" style="background:linear-gradient(135deg,#1a0a1a,#0f050f,#1a051a);">
+      <div class="net-logo" style="color:var(--horror);">HORROR CLASSICS</div>
+      <div class="net-tag" style="background:var(--horror);color:#fff;">24/7</div>
+    </div>
+    <div class="net-body">
+      <div class="net-desc">Gothic horror, supernatural thriller, psychological terror. From haunted estates to cosmic dread — the channel that never lets you sleep.</div>
+      <div class="net-stats">
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--horror)">10</div><div class="net-stat-l">Series</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--horror)">72</div><div class="net-stat-l">Episodes</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--horror)">38</div><div class="net-stat-l">Characters</div></div>
+      </div>
+      <div class="net-shows">
+        <div class="net-show"><div class="net-show-dot" style="background:var(--horror)"></div>The Ravencroft Curse <span style="margin-left:auto;color:var(--horror);font-weight:600;">CROSSOVER</span></div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--horror)"></div>Hollowbrook Asylum</div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--horror)"></div>The Séance Club</div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--horror)"></div>Midnight Parish</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AMERICAN SCI-FI CLASSICS -->
+  <div class="net-card">
+    <div class="net-banner" style="background:linear-gradient(135deg,#050a1a,#030810,#081020);">
+      <div class="net-logo" style="color:var(--scifi);">SCI-FI CLASSICS</div>
+      <div class="net-tag" style="background:var(--scifi);color:#000;">24/7</div>
+    </div>
+    <div class="net-body">
+      <div class="net-desc">Hard sci-fi, space opera, cyberpunk, and speculative fiction. Where imagination meets AI-generated worlds that defy practical production limits.</div>
+      <div class="net-stats">
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--scifi)">8</div><div class="net-stat-l">Series</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--scifi)">64</div><div class="net-stat-l">Episodes</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--scifi)">35</div><div class="net-stat-l">Characters</div></div>
+      </div>
+      <div class="net-shows">
+        <div class="net-show"><div class="net-show-dot" style="background:var(--scifi)"></div>Colony Seven <span style="margin-left:auto;color:var(--scifi);font-weight:600;">HIT</span></div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--scifi)"></div>The Terraform Diaries</div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--scifi)"></div>Neon Meridian</div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--scifi)"></div>Signal Lost</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARTIAN TV -->
+  <div class="net-card">
+    <div class="net-banner" style="background:linear-gradient(135deg,#1a0a00,#100500,#1a0800);">
+      <div class="net-logo" style="color:var(--martian);">MARTIAN TV</div>
+      <div class="net-tag" style="background:var(--martian);color:#000;">ACTION</div>
+    </div>
+    <div class="net-body">
+      <div class="net-desc">Action, adventure, survival, and high-stakes storytelling. Mars colonies, frontier justice, and characters who fight to exist on the edge of civilization.</div>
+      <div class="net-stats">
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--martian)">7</div><div class="net-stat-l">Series</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--martian)">56</div><div class="net-stat-l">Episodes</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--martian)">30</div><div class="net-stat-l">Characters</div></div>
+      </div>
+      <div class="net-shows">
+        <div class="net-show"><div class="net-show-dot" style="background:var(--martian)"></div>Red Dust Rising <span style="margin-left:auto;color:var(--martian);font-weight:600;">NEW</span></div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--martian)"></div>Olympus Mons</div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--martian)"></div>The Last Frontier</div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--martian)"></div>Dust Devils</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHO DONE IT TV -->
+  <div class="net-card">
+    <div class="net-banner" style="background:linear-gradient(135deg,#0a1a0a,#051005,#081808);">
+      <div class="net-logo" style="color:var(--whodone);">WHO DONE IT TV</div>
+      <div class="net-tag" style="background:var(--whodone);color:#000;">MYSTERY</div>
+    </div>
+    <div class="net-body">
+      <div class="net-desc">Whodunnits, detective procedurals, cozy mysteries, and interactive crime solving. Fans vote on suspects — the community IS the detective.</div>
+      <div class="net-stats">
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--whodone)">9</div><div class="net-stat-l">Series</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--whodone)">68</div><div class="net-stat-l">Episodes</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--whodone)">42</div><div class="net-stat-l">Characters</div></div>
+      </div>
+      <div class="net-shows">
+        <div class="net-show"><div class="net-show-dot" style="background:var(--whodone)"></div>The Blackwood Files <span style="margin-left:auto;color:var(--whodone);font-weight:600;">INTERACTIVE</span></div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--whodone)"></div>Inspector Graves</div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--whodone)"></div>Cold Case Kitchen</div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--whodone)"></div>The Poison Garden</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JOKEBOX TV -->
+  <div class="net-card">
+    <div class="net-banner" style="background:linear-gradient(135deg,#1a1a00,#101000,#1a1800);">
+      <div class="net-logo" style="color:var(--joke);">JOKEBOX TV</div>
+      <div class="net-tag" style="background:var(--joke);color:#000;">COMEDY</div>
+    </div>
+    <div class="net-body">
+      <div class="net-desc">Comedy shorts, sitcoms, sketch shows, and satire. Light-hearted counterbalance to the dramatic networks — the channel you put on when you need to laugh.</div>
+      <div class="net-stats">
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--joke)">6</div><div class="net-stat-l">Series</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--joke)">48</div><div class="net-stat-l">Episodes</div></div>
+        <div class="net-stat"><div class="net-stat-n" style="color:var(--joke)">25</div><div class="net-stat-l">Characters</div></div>
+      </div>
+      <div class="net-shows">
+        <div class="net-show"><div class="net-show-dot" style="background:var(--joke)"></div>Roast of the Week <span style="margin-left:auto;color:var(--joke);font-weight:600;">VIRAL</span></div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--joke)"></div>Apartment 4B</div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--joke)"></div>AI Knows Best</div>
+        <div class="net-show"><div class="net-show-dot" style="background:var(--joke)"></div>The Writers' Room</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NETWORK AT A GLANCE -->
+<h3 class="mt">Network Programming Grid</h3>
+<div class="cd" style="overflow-x:auto;">
+  <table style="width:100%;border-collapse:collapse;font-size:10px;">
+    <thead>
+      <tr style="border-bottom:1px solid var(--bdr);">
+        <th style="padding:8px;text-align:left;color:var(--t3);font-weight:600;">TIME</th>
+        <th style="padding:8px;text-align:center;color:var(--rumble);">RUMBLE</th>
+        <th style="padding:8px;text-align:center;color:var(--horror);">HORROR</th>
+        <th style="padding:8px;text-align:center;color:var(--scifi);">SCI-FI</th>
+        <th style="padding:8px;text-align:center;color:var(--martian);">MARTIAN</th>
+        <th style="padding:8px;text-align:center;color:var(--whodone);">WHO DONE IT</th>
+        <th style="padding:8px;text-align:center;color:var(--joke);">JOKEBOX</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(26,26,46,.5);">
+        <td style="padding:6px 8px;color:var(--t3);">Prime 8pm</td>
+        <td style="padding:6px 8px;text-align:center;background:rgba(226,54,54,.05);">Victorian Shadows</td>
+        <td style="padding:6px 8px;text-align:center;background:rgba(139,26,139,.05);">Hollowbrook</td>
+        <td style="padding:6px 8px;text-align:center;background:rgba(0,200,255,.05);">Colony Seven</td>
+        <td style="padding:6px 8px;text-align:center;background:rgba(255,107,43,.05);">Red Dust</td>
+        <td style="padding:6px 8px;text-align:center;background:rgba(46,204,113,.05);">Blackwood Files</td>
+        <td style="padding:6px 8px;text-align:center;background:rgba(255,215,0,.05);">Apt 4B</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(26,26,46,.5);">
+        <td style="padding:6px 8px;color:var(--t3);">Late 10pm</td>
+        <td style="padding:6px 8px;text-align:center;">The Covenant</td>
+        <td style="padding:6px 8px;text-align:center;">Midnight Parish</td>
+        <td style="padding:6px 8px;text-align:center;">Neon Meridian</td>
+        <td style="padding:6px 8px;text-align:center;">Olympus Mons</td>
+        <td style="padding:6px 8px;text-align:center;">Inspector Graves</td>
+        <td style="padding:6px 8px;text-align:center;">Roast of Week</td>
+      </tr>
+      <tr>
+        <td style="padding:6px 8px;color:var(--t3);">Overnight</td>
+        <td style="padding:6px 8px;text-align:center;color:var(--t3);">Marathon</td>
+        <td style="padding:6px 8px;text-align:center;color:var(--t3);">Séance Club</td>
+        <td style="padding:6px 8px;text-align:center;color:var(--t3);">Signal Lost</td>
+        <td style="padding:6px 8px;text-align:center;color:var(--t3);">Last Frontier</td>
+        <td style="padding:6px 8px;text-align:center;color:var(--t3);">Cold Case</td>
+        <td style="padding:6px 8px;text-align:center;color:var(--t3);">AI Knows Best</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 2. CONTENT UNIVERSE                                    -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="universe" class="sec">
+<div class="sh">The FANZ Content Universe</div>
+<div class="ss">Characters cross networks. Storylines interweave. One shared timeline where a character from Rumble TV can appear on Horror Classics. The MCU model, powered by ATLAS.</div>
+
+<!-- CROSSOVER MAP -->
+<h3>Universe Crossover Map</h3>
+<div class="uni-center">
+  <div class="uni-hub" style="animation:none;">
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;background:linear-gradient(135deg,var(--gold),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">FANZ</div>
+    <div style="font-size:8px;color:var(--t3);">Shared Universe</div>
+    <div style="font-size:7px;color:var(--t4);margin-top:2px;">200+ Characters</div>
+  </div>
+  <div class="uni-node" style="top:10px;left:50%;transform:translateX(-50%);border-color:rgba(226,54,54,.3);">
+    <div class="uni-node-icon">🎭</div><div style="color:var(--rumble);font-weight:600;">Rumble TV</div><div style="font-size:8px;color:var(--t3);">Drama Hub</div>
+  </div>
+  <div class="uni-node" style="top:80px;right:30px;border-color:rgba(139,26,139,.3);">
+    <div class="uni-node-icon">👻</div><div style="color:var(--horror);font-weight:600;">Horror</div><div style="font-size:8px;color:var(--t3);">Dark Side</div>
+  </div>
+  <div class="uni-node" style="top:50%;right:0;transform:translateY(-50%);border-color:rgba(0,200,255,.3);">
+    <div class="uni-node-icon">🚀</div><div style="color:var(--scifi);font-weight:600;">Sci-Fi</div><div style="font-size:8px;color:var(--t3);">Future</div>
+  </div>
+  <div class="uni-node" style="bottom:80px;right:30px;border-color:rgba(255,107,43,.3);">
+    <div class="uni-node-icon">🔴</div><div style="color:var(--martian);font-weight:600;">Martian</div><div style="font-size:8px;color:var(--t3);">Frontier</div>
+  </div>
+  <div class="uni-node" style="bottom:10px;left:50%;transform:translateX(-50%);border-color:rgba(46,204,113,.3);">
+    <div class="uni-node-icon">🔍</div><div style="color:var(--whodone);font-weight:600;">Who Done It</div><div style="font-size:8px;color:var(--t3);">Mystery</div>
+  </div>
+  <div class="uni-node" style="bottom:80px;left:30px;border-color:rgba(255,215,0,.3);">
+    <div class="uni-node-icon">😂</div><div style="color:var(--joke);font-weight:600;">JokeBox</div><div style="font-size:8px;color:var(--t3);">Comedy</div>
+  </div>
+  <div class="uni-node" style="top:50%;left:0;transform:translateY(-50%);border-color:rgba(255,20,147,.3);">
+    <div class="uni-node-icon">🎤</div><div style="color:var(--urban);font-weight:600;">Urban</div><div style="font-size:8px;color:var(--t3);">Culture</div>
+  </div>
+  <div class="uni-node" style="top:80px;left:30px;border-color:rgba(155,89,182,.3);">
+    <div class="uni-node-icon">🎙️</div><div style="color:var(--pod);font-weight:600;">Podcasts</div><div style="font-size:8px;color:var(--t3);">Audio</div>
+  </div>
+</div>
+
+<!-- ACTIVE CROSSOVERS -->
+<h3>Active Crossover Events</h3>
+<div style="max-width:600px;">
+  <div class="cross-line">
+    <div class="cross-dot" style="background:rgba(226,54,54,.2);color:var(--rumble);">R</div>
+    <span>→</span>
+    <div class="cross-dot" style="background:rgba(139,26,139,.2);color:var(--horror);">H</div>
+    <div><strong>The Ravencroft Curse</strong> — Victorian Shadows characters appear in Horror Classics S2 investigating the manor's dark history</div>
+  </div>
+  <div class="cross-line">
+    <div class="cross-dot" style="background:rgba(0,200,255,.2);color:var(--scifi);">SF</div>
+    <span>→</span>
+    <div class="cross-dot" style="background:rgba(255,107,43,.2);color:var(--martian);">M</div>
+    <div><strong>Colony Seven × Red Dust</strong> — Same universe, different planets. Characters from both shows meet at a space station</div>
+  </div>
+  <div class="cross-line">
+    <div class="cross-dot" style="background:rgba(46,204,113,.2);color:var(--whodone);">W</div>
+    <span>→</span>
+    <div class="cross-dot" style="background:rgba(255,215,0,.2);color:var(--joke);">J</div>
+    <div><strong>Inspector Graves on JokeBox</strong> — Comedy parody episode where the detective solves a missing sandwich case</div>
+  </div>
+  <div class="cross-line">
+    <div class="cross-dot" style="background:rgba(255,20,147,.2);color:var(--urban);">U</div>
+    <span>→</span>
+    <div class="cross-dot" style="background:rgba(226,54,54,.2);color:var(--rumble);">R</div>
+    <div><strong>City Beats × The Covenant</strong> — Urban drama characters discover the conspiracy from The Covenant in their city</div>
+  </div>
+</div>
+
+<h3 class="mt">Character Passport — Cross-Network Tracking</h3>
+<div class="g3">
+  <div class="cd" style="text-align:center;">
+    <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--rumble);background:linear-gradient(135deg,#3a2020,#2a1010);display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto 8px;">E</div>
+    <div style="font-weight:600;font-size:13px;">Evelyn Ravencroft</div>
+    <div style="font-size:10px;color:var(--t3);margin-top:2px;">Home: Rumble TV</div>
+    <div style="display:flex;gap:4px;justify-content:center;margin-top:8px;">
+      <span class="b" style="background:rgba(226,54,54,.12);color:var(--rumble)">Rumble</span>
+      <span class="b" style="background:rgba(139,26,139,.12);color:var(--horror)">Horror</span>
+      <span class="b" style="background:rgba(46,204,113,.12);color:var(--whodone)">Mystery</span>
+    </div>
+    <div style="font-size:9px;color:var(--t3);margin-top:6px;">Appears in 3 networks, 4 series</div>
+  </div>
+  <div class="cd" style="text-align:center;">
+    <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--scifi);background:linear-gradient(135deg,#102030,#081020);display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto 8px;">K</div>
+    <div style="font-weight:600;font-size:13px;">Commander Kai</div>
+    <div style="font-size:10px;color:var(--t3);margin-top:2px;">Home: Sci-Fi Classics</div>
+    <div style="display:flex;gap:4px;justify-content:center;margin-top:8px;">
+      <span class="b" style="background:rgba(0,200,255,.12);color:var(--scifi)">Sci-Fi</span>
+      <span class="b" style="background:rgba(255,107,43,.12);color:var(--martian)">Martian</span>
+    </div>
+    <div style="font-size:9px;color:var(--t3);margin-top:6px;">Appears in 2 networks, 3 series</div>
+  </div>
+  <div class="cd" style="text-align:center;">
+    <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--whodone);background:linear-gradient(135deg,#102010,#081008);display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto 8px;">G</div>
+    <div style="font-weight:600;font-size:13px;">Inspector Graves</div>
+    <div style="font-size:10px;color:var(--t3);margin-top:2px;">Home: Who Done It TV</div>
+    <div style="display:flex;gap:4px;justify-content:center;margin-top:8px;">
+      <span class="b" style="background:rgba(46,204,113,.12);color:var(--whodone)">Mystery</span>
+      <span class="b" style="background:rgba(226,54,54,.12);color:var(--rumble)">Rumble</span>
+      <span class="b" style="background:rgba(255,215,0,.12);color:var(--joke)">JokeBox</span>
+    </div>
+    <div style="font-size:9px;color:var(--t3);margin-top:6px;">Appears in 3 networks, 5 series</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 3. URBAN + CULTURE                                     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="urban" class="sec">
+<div class="sh">Urban + Culture Content</div>
+<div class="ss">Street culture, city stories, music-driven narratives, and cultural commentary. This isn't a separate network — it's a content layer that runs ACROSS all 6 channels, bringing authenticity and contemporary voice to every genre.</div>
+
+<div class="g2 mb">
+  <div class="cd" style="border-left:3px solid var(--urban);">
+    <h4 style="color:var(--urban);">Urban Drama Series</h4>
+    <div class="net-shows">
+      <div class="net-show"><div class="net-show-dot" style="background:var(--urban)"></div><strong>City Beats</strong> — Music industry drama, studio sessions, street to stage<span style="margin-left:auto;font-size:8px;color:var(--rumble)">ON RUMBLE</span></div>
+      <div class="net-show"><div class="net-show-dot" style="background:var(--urban)"></div><strong>Block Party</strong> — Neighborhood stories, community, gentrification fights<span style="margin-left:auto;font-size:8px;color:var(--rumble)">ON RUMBLE</span></div>
+      <div class="net-show"><div class="net-show-dot" style="background:var(--urban)"></div><strong>The Cipher</strong> — Underground hip-hop mystery, stolen beats, lost legends<span style="margin-left:auto;font-size:8px;color:var(--whodone)">ON MYSTERY</span></div>
+      <div class="net-show"><div class="net-show-dot" style="background:var(--urban)"></div><strong>Neon Nights</strong> — Club culture sci-fi, underground raves in a cyberpunk city<span style="margin-left:auto;font-size:8px;color:var(--scifi)">ON SCI-FI</span></div>
+      <div class="net-show"><div class="net-show-dot" style="background:var(--urban)"></div><strong>Haunted Block</strong> — Urban supernatural horror, ghosts in the projects<span style="margin-left:auto;font-size:8px;color:var(--horror)">ON HORROR</span></div>
+    </div>
+  </div>
+  <div class="cd" style="border-left:3px solid var(--urban);">
+    <h4 style="color:var(--urban);">Culture + Music Integration</h4>
+    <div style="font-size:11px;color:var(--t2);line-height:1.7;">
+      <p style="margin-bottom:10px;">Every urban series has a <strong style="color:var(--t1)">soundtrack layer</strong> — original AI-generated music that matches the scene's energy, genre, and cultural context. Music isn't background — it's a character.</p>
+      <p style="margin-bottom:10px;"><strong style="color:var(--t1)">Cultural moments</strong> are written into scripts: references to real movements, style evolution, language shifts, neighborhood changes. Characters feel contemporary because the ATLAS engine pulls from current cultural signals.</p>
+      <p><strong style="color:var(--t1)">Cross-network culture drops:</strong> Urban characters appear at a sci-fi rave, investigate a horror in their block, solve a mystery in their community, or roast characters on JokeBox. Culture isn't siloed — it permeates everything.</p>
+    </div>
+  </div>
+</div>
+
+<h3>Urban Content Calendar</h3>
+<div class="cd" style="overflow-x:auto;">
+  <div style="display:flex;gap:6px;">
+    <div style="flex:1;min-width:140px;padding:10px;background:var(--bg2);border-radius:8px;text-align:center;">
+      <div style="font-size:9px;color:var(--urban);font-weight:600;margin-bottom:4px;">MON</div>
+      <div style="font-size:10px;">City Beats EP</div>
+      <div style="font-size:8px;color:var(--t3);">New episode drop</div>
+    </div>
+    <div style="flex:1;min-width:140px;padding:10px;background:var(--bg2);border-radius:8px;text-align:center;">
+      <div style="font-size:9px;color:var(--urban);font-weight:600;margin-bottom:4px;">TUE</div>
+      <div style="font-size:10px;">Beat Drop</div>
+      <div style="font-size:8px;color:var(--t3);">AI soundtrack release</div>
+    </div>
+    <div style="flex:1;min-width:140px;padding:10px;background:var(--bg2);border-radius:8px;text-align:center;">
+      <div style="font-size:9px;color:var(--urban);font-weight:600;margin-bottom:4px;">WED</div>
+      <div style="font-size:10px;">Street Stories</div>
+      <div style="font-size:8px;color:var(--t3);">Character social posts</div>
+    </div>
+    <div style="flex:1;min-width:140px;padding:10px;background:var(--bg2);border-radius:8px;text-align:center;">
+      <div style="font-size:9px;color:var(--urban);font-weight:600;margin-bottom:4px;">THU</div>
+      <div style="font-size:10px;">Cipher Thursday</div>
+      <div style="font-size:8px;color:var(--t3);">Mystery clue drop</div>
+    </div>
+    <div style="flex:1;min-width:140px;padding:10px;background:var(--bg2);border-radius:8px;text-align:center;">
+      <div style="font-size:9px;color:var(--urban);font-weight:600;margin-bottom:4px;">FRI</div>
+      <div style="font-size:10px;">Block Party</div>
+      <div style="font-size:8px;color:var(--t3);">New episode + live chat</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 4. PODCASTS                                            -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="podcasts" class="sec">
+<div class="sh">FANZ Podcast Network</div>
+<div class="ss">Audio extensions of every network — character interviews, lore deep-dives, mystery discussions, comedy panels, and behind-the-scenes. Podcasts drive discovery and deepen engagement between episodes.</div>
+
+<div class="g2 mb">
+  <div>
+    <div class="pod-card">
+      <div class="pod-art" style="background:linear-gradient(135deg,rgba(226,54,54,.2),rgba(226,54,54,.05));">🎭</div>
+      <div class="pod-info">
+        <div class="pod-title">The Ravencroft Files</div>
+        <div class="pod-host">Hosted by "Evelyn" — in character</div>
+        <div class="pod-desc">Evelyn reviews evidence from each episode, theorizes about the mystery, and responds to fan theories. Part investigation journal, part immersive fiction.</div>
+        <div class="pod-meta"><span>📺 Rumble TV</span><span>⏱ 25-35 min</span><span>📅 Weekly</span></div>
+      </div>
+    </div>
+    <div class="pod-card">
+      <div class="pod-art" style="background:linear-gradient(135deg,rgba(139,26,139,.2),rgba(139,26,139,.05));">👻</div>
+      <div class="pod-info">
+        <div class="pod-title">After Dark</div>
+        <div class="pod-host">Horror Classics companion podcast</div>
+        <div class="pod-desc">Post-episode breakdowns, real-world horror lore connections, listener ghost stories, and creator commentary on the AI filmmaking process.</div>
+        <div class="pod-meta"><span>📺 Horror Classics</span><span>⏱ 40 min</span><span>📅 Weekly</span></div>
+      </div>
+    </div>
+    <div class="pod-card">
+      <div class="pod-art" style="background:linear-gradient(135deg,rgba(46,204,113,.2),rgba(46,204,113,.05));">🔍</div>
+      <div class="pod-info">
+        <div class="pod-title">The Case Room</div>
+        <div class="pod-host">Fan detective panel</div>
+        <div class="pod-desc">Fans present their theories, debate suspects, and compete to solve the mystery before the show reveals the answer. Top detectives earn badges and voting power.</div>
+        <div class="pod-meta"><span>📺 Who Done It</span><span>⏱ 45 min</span><span>📅 Bi-weekly</span></div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="pod-card">
+      <div class="pod-art" style="background:linear-gradient(135deg,rgba(0,200,255,.2),rgba(0,200,255,.05));">🚀</div>
+      <div class="pod-info">
+        <div class="pod-title">Transmission Log</div>
+        <div class="pod-host">Sci-Fi + Martian universe lore</div>
+        <div class="pod-desc">In-universe "intercepted transmissions" from Colony Seven and Red Dust Rising. Audio drama meets podcast — canon content that fills gaps between episodes.</div>
+        <div class="pod-meta"><span>📺 Sci-Fi / Martian</span><span>⏱ 20 min</span><span>📅 Weekly</span></div>
+      </div>
+    </div>
+    <div class="pod-card">
+      <div class="pod-art" style="background:linear-gradient(135deg,rgba(255,215,0,.2),rgba(255,215,0,.05));">😂</div>
+      <div class="pod-info">
+        <div class="pod-title">The Green Room</div>
+        <div class="pod-host">JokeBox cast roundtable</div>
+        <div class="pod-desc">Characters from different JokeBox shows roast each other, review fan memes, and improvise sketches based on audience suggestions.</div>
+        <div class="pod-meta"><span>📺 JokeBox TV</span><span>⏱ 30 min</span><span>📅 Weekly</span></div>
+      </div>
+    </div>
+    <div class="pod-card">
+      <div class="pod-art" style="background:linear-gradient(135deg,rgba(255,20,147,.2),rgba(255,20,147,.05));">🎤</div>
+      <div class="pod-info">
+        <div class="pod-title">The Block</div>
+        <div class="pod-host">Urban culture + music podcast</div>
+        <div class="pod-desc">Music reviews, culture commentary, street interviews, and connections between urban storylines across all 6 networks. Soundtrack deep-dives.</div>
+        <div class="pod-meta"><span>📺 Cross-Network</span><span>⏱ 50 min</span><span>📅 Weekly</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Podcast Revenue Model</h3>
+<div class="cd">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center;">
+    <div style="padding:12px;background:var(--bg2);border-radius:8px;">
+      <div style="font-size:18px;margin-bottom:4px;">📢</div>
+      <div style="font-size:11px;font-weight:600;">Dynamic Ads</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:2px;">Host-read, genre-targeted. $25-40 CPM for horror/mystery.</div>
+    </div>
+    <div style="padding:12px;background:var(--bg2);border-radius:8px;">
+      <div style="font-size:18px;margin-bottom:4px;">⭐</div>
+      <div style="font-size:11px;font-weight:600;">Premium Episodes</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:2px;">Exclusive content for Studio Pass subscribers. Canon bonus content.</div>
+    </div>
+    <div style="padding:12px;background:var(--bg2);border-radius:8px;">
+      <div style="font-size:18px;margin-bottom:4px;">🔄</div>
+      <div style="font-size:11px;font-weight:600;">Cross-Promote</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:2px;">Every podcast episode drives viewers to video content. CAC = $0.</div>
+    </div>
+    <div style="padding:12px;background:var(--bg2);border-radius:8px;">
+      <div style="font-size:18px;margin-bottom:4px;">🎯</div>
+      <div style="font-size:11px;font-weight:600;">Audience Data</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:2px;">Listening patterns inform which storylines to expand, cut, or crossover.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 5. 3D SOCIAL WORLDS                                    -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="social3d" class="sec">
+<div class="sh">3D Social Worlds + Character Metaverse</div>
+<div class="ss">Every show location becomes a virtual space. Fans visit Ravencroft Manor, walk the streets of Colony Seven, or hang out in Apartment 4B. Characters are present as AI-driven avatars.</div>
+
+<div class="g3 mb">
+  <div class="social-card">
+    <div class="social-preview" style="background:linear-gradient(135deg,#2a1515,#150808,#1a0808);">
+      <div style="text-align:center;opacity:.6;">
+        <div style="font-size:36px;">🏰</div>
+        <div style="font-size:10px;margin-top:4px;">Ravencroft Manor</div>
+      </div>
+    </div>
+    <div class="social-body">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-weight:600;font-size:13px;">The Manor</div>
+        <span class="b" style="background:rgba(226,54,54,.12);color:var(--rumble)">Rumble TV</span>
+      </div>
+      <div style="font-size:10px;color:var(--t2);margin-top:4px;">Explore every room from Victorian Shadows. Discover hidden clues. Meet Evelyn and Arthur as AI avatars. Unlock secret rooms by solving puzzles.</div>
+      <div style="display:flex;gap:8px;margin-top:8px;font-size:9px;color:var(--t3);">
+        <span>👥 1,247 online</span><span>🗝️ 8 secrets</span><span>💬 Live chat</span>
+      </div>
+    </div>
+  </div>
+  <div class="social-card">
+    <div class="social-preview" style="background:linear-gradient(135deg,#081020,#040810,#0a1828);">
+      <div style="text-align:center;opacity:.6;">
+        <div style="font-size:36px;">🚀</div>
+        <div style="font-size:10px;margin-top:4px;">Colony Seven Station</div>
+      </div>
+    </div>
+    <div class="social-body">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-weight:600;font-size:13px;">The Station</div>
+        <span class="b" style="background:rgba(0,200,255,.12);color:var(--scifi)">Sci-Fi</span>
+      </div>
+      <div style="font-size:10px;color:var(--t2);margin-top:4px;">Walk the corridors of the space station. View Mars through the observation deck. Attend Commander Kai's briefings. Repair systems in mini-games.</div>
+      <div style="display:flex;gap:8px;margin-top:8px;font-size:9px;color:var(--t3);">
+        <span>👥 892 online</span><span>🎮 3 mini-games</span><span>💬 Live chat</span>
+      </div>
+    </div>
+  </div>
+  <div class="social-card">
+    <div class="social-preview" style="background:linear-gradient(135deg,#1a1a08,#101005,#181808);">
+      <div style="text-align:center;opacity:.6;">
+        <div style="font-size:36px;">🏢</div>
+        <div style="font-size:10px;margin-top:4px;">Apartment 4B</div>
+      </div>
+    </div>
+    <div class="social-body">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-weight:600;font-size:13px;">The Apartment</div>
+        <span class="b" style="background:rgba(255,215,0,.12);color:var(--joke)">JokeBox</span>
+      </div>
+      <div style="font-size:10px;color:var(--t2);margin-top:4px;">Hang out in the most chaotic apartment in AI cinema. Watch live improv shows. Participate in roasts. Leave funny notes on the fridge for characters to find.</div>
+      <div style="display:flex;gap:8px;margin-top:8px;font-size:9px;color:var(--t3);">
+        <span>👥 2,103 online</span><span>😂 Live roasts</span><span>💬 Live chat</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Social Feature Matrix</h3>
+<div class="cd">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+    <div style="padding:12px;background:var(--bg2);border-radius:8px;">
+      <div style="font-size:16px;margin-bottom:4px;">🤖</div>
+      <div style="font-size:12px;font-weight:600;">AI Character Chat</div>
+      <div style="font-size:10px;color:var(--t2);margin-top:4px;">Talk to characters in-character. They remember your conversations and reference show events in real time.</div>
+    </div>
+    <div style="padding:12px;background:var(--bg2);border-radius:8px;">
+      <div style="font-size:16px;margin-bottom:4px;">🗺️</div>
+      <div style="font-size:12px;font-weight:600;">Explore Locations</div>
+      <div style="font-size:10px;color:var(--t2);margin-top:4px;">Walk through show sets as 3D environments. Find hidden easter eggs that unlock bonus content.</div>
+    </div>
+    <div style="padding:12px;background:var(--bg2);border-radius:8px;">
+      <div style="font-size:16px;margin-bottom:4px;">🎭</div>
+      <div style="font-size:12px;font-weight:600;">Watch Parties</div>
+      <div style="font-size:10px;color:var(--t2);margin-top:4px;">Synchronized viewing with friends inside virtual locations. React together, chat in-world.</div>
+    </div>
+    <div style="padding:12px;background:var(--bg2);border-radius:8px;">
+      <div style="font-size:16px;margin-bottom:4px;">🏆</div>
+      <div style="font-size:12px;font-weight:600;">Achievements</div>
+      <div style="font-size:10px;color:var(--t2);margin-top:4px;">Collect badges for exploring worlds, solving mysteries, attending events, and predicting plot twists.</div>
+    </div>
+    <div style="padding:12px;background:var(--bg2);border-radius:8px;">
+      <div style="font-size:16px;margin-bottom:4px;">👤</div>
+      <div style="font-size:12px;font-weight:600;">Fan Avatars</div>
+      <div style="font-size:10px;color:var(--t2);margin-top:4px;">Custom avatars styled after your favorite show's aesthetic. Wear Manor clothes, space suits, or detective gear.</div>
+    </div>
+    <div style="padding:12px;background:var(--bg2);border-radius:8px;">
+      <div style="font-size:16px;margin-bottom:4px;">📸</div>
+      <div style="font-size:12px;font-weight:600;">Photo Mode</div>
+      <div style="font-size:10px;color:var(--t2);margin-top:4px;">Screenshot yourself in show locations. Share to social media. Built-in show branding overlays.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 6. GAMIFICATION                                        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="gamify" class="sec">
+<div class="sh">Gamification + Engagement System</div>
+<div class="ss">Fans don't just watch — they play. Points, ranks, predictions, voting power, badges, and rewards turn passive viewers into active participants who drive content decisions.</div>
+
+<div class="g2 mb">
+  <div class="cd">
+    <h4 style="color:var(--gold);">Fan XP System</h4>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px;">
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:11px;"><span>Watch an episode</span><span style="color:var(--gold)">+100 XP</span></div>
+        <div class="xp-bar"><div class="xp-fill" style="width:100%;background:var(--gold)"></div></div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:11px;"><span>Vote on plot decision</span><span style="color:var(--gold)">+50 XP</span></div>
+        <div class="xp-bar"><div class="xp-fill" style="width:50%;background:var(--gold)"></div></div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:11px;"><span>Correct mystery prediction</span><span style="color:var(--gold)">+500 XP</span></div>
+        <div class="xp-bar"><div class="xp-fill" style="width:100%;background:var(--whodone)"></div></div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:11px;"><span>Community post (liked 10+)</span><span style="color:var(--gold)">+75 XP</span></div>
+        <div class="xp-bar"><div class="xp-fill" style="width:75%;background:var(--blue)"></div></div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:11px;"><span>Crossover event participation</span><span style="color:var(--gold)">+200 XP</span></div>
+        <div class="xp-bar"><div class="xp-fill" style="width:40%;background:var(--purple)"></div></div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:11px;"><span>Find hidden easter egg</span><span style="color:var(--gold)">+300 XP</span></div>
+        <div class="xp-bar"><div class="xp-fill" style="width:60%;background:var(--rumble)"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="cd">
+    <h4 style="color:var(--gold);">Fan Ranks</h4>
+    <div style="display:flex;flex-direction:column;gap:0;margin-top:10px;">
+      <div class="rank-row" style="background:linear-gradient(90deg,rgba(200,169,97,.1),transparent);">
+        <div class="rank-pos" style="color:var(--gold);">👑</div>
+        <div class="rank-avatar" style="background:linear-gradient(135deg,var(--gold),var(--gold-l));color:#000;">S</div>
+        <div class="rank-name"><strong>Showrunner</strong><br><span style="font-size:9px;color:var(--t3)">50,000+ XP — 3x vote power, exclusive merch, character naming rights</span></div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-pos" style="color:var(--purple);">⭐</div>
+        <div class="rank-avatar" style="background:rgba(139,92,246,.2);color:var(--purple);">D</div>
+        <div class="rank-name"><strong>Director</strong><br><span style="font-size:9px;color:var(--t3)">20,000+ XP — 2x vote power, early access, private forums</span></div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-pos" style="color:var(--blue);">🎬</div>
+        <div class="rank-avatar" style="background:rgba(59,130,246,.2);color:var(--blue);">P</div>
+        <div class="rank-name"><strong>Producer</strong><br><span style="font-size:9px;color:var(--t3)">5,000+ XP — Vote power, character AMA access</span></div>
+      </div>
+      <div class="rank-row">
+        <div class="rank-pos" style="color:var(--green);">🎞</div>
+        <div class="rank-avatar" style="background:rgba(16,185,129,.2);color:var(--green);">V</div>
+        <div class="rank-name"><strong>Viewer</strong><br><span style="font-size:9px;color:var(--t3)">0+ XP — Basic access, standard voting</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Interactive Mechanics — By Network</h3>
+<div class="g3">
+  <div class="cd" style="border-top:2px solid var(--whodone);">
+    <div style="font-size:14px;margin-bottom:4px;">🔍</div>
+    <h4 style="color:var(--whodone);">Mystery Predictions</h4>
+    <div style="font-size:10px;color:var(--t2);line-height:1.6;">Predict the killer before the reveal. Lock in your suspect. Correct guesses earn 500 XP + "Detective" badge. Season-long accuracy tracking.</div>
+  </div>
+  <div class="cd" style="border-top:2px solid var(--rumble);">
+    <div style="font-size:14px;margin-bottom:4px;">🗳️</div>
+    <h4 style="color:var(--rumble);">Plot Voting</h4>
+    <div style="font-size:10px;color:var(--t2);line-height:1.6;">At key story crossroads, fans vote on which direction the plot takes. Higher ranks = more voting weight. Results shape the next episode.</div>
+  </div>
+  <div class="cd" style="border-top:2px solid var(--joke);">
+    <div style="font-size:14px;margin-bottom:4px;">😂</div>
+    <h4 style="color:var(--joke);">Roast Battles</h4>
+    <div style="font-size:10px;color:var(--t2);line-height:1.6;">Submit jokes for characters to "perform" on JokeBox. Top-voted jokes get animated into actual episodes. Fan-written content becomes canon.</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 7. REVENUE MODEL                                       -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="revenue" class="sec">
+<div class="sh">FANZ TV Revenue Model</div>
+<div class="ss">Six networks, seven revenue streams, one engine. Every piece of content earns across multiple channels simultaneously. Here's the full financial architecture.</div>
+
+<div class="mx">
+  <div class="m"><div class="n">$8.4M</div><div class="l">Year 1 Target</div></div>
+  <div class="m"><div class="n">$28M</div><div class="l">Year 2 Target</div></div>
+  <div class="m"><div class="n">~$253</div><div class="l">Cost / Episode</div></div>
+  <div class="m"><div class="n">500+</div><div class="l">Episodes / Year</div></div>
+  <div class="m"><div class="n">96%</div><div class="l">Gross Margin</div></div>
+</div>
+
+<h3>Revenue Mix — Year 1</h3>
+<div class="rev-bar">
+  <div class="rev-seg" style="width:35%;background:var(--gold);">FAST 35%</div>
+  <div class="rev-seg" style="width:22%;background:var(--blue);">D2C 22%</div>
+  <div class="rev-seg" style="width:15%;background:var(--rumble);">SVOD 15%</div>
+  <div class="rev-seg" style="width:10%;background:var(--purple);">Social 10%</div>
+  <div class="rev-seg" style="width:7%;background:var(--green);">Merch 7%</div>
+  <div class="rev-seg" style="width:6%;background:var(--scifi);">Podcast 6%</div>
+  <div class="rev-seg" style="width:5%;background:var(--orange);">Interactive 5%</div>
+</div>
+<div class="rev-leg">
+  <span><span class="rev-dot" style="background:var(--gold)"></span>FAST Channels $2.94M</span>
+  <span><span class="rev-dot" style="background:var(--blue)"></span>D2C Subs $1.85M</span>
+  <span><span class="rev-dot" style="background:var(--rumble)"></span>SVOD License $1.26M</span>
+  <span><span class="rev-dot" style="background:var(--purple)"></span>Social Rev $840K</span>
+  <span><span class="rev-dot" style="background:var(--green)"></span>Merch $588K</span>
+  <span><span class="rev-dot" style="background:var(--scifi)"></span>Podcasts $504K</span>
+  <span><span class="rev-dot" style="background:var(--orange)"></span>Interactive $420K</span>
+</div>
+
+<h3>Revenue Per Network — Year 1</h3>
+<div class="cd mb">
+  <div style="display:flex;flex-direction:column;gap:6px;">
+    <div style="display:flex;align-items:center;gap:10px;padding:8px;">
+      <div style="width:28px;height:28px;border-radius:6px;background:rgba(226,54,54,.1);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;color:var(--rumble);">R</div>
+      <div style="flex:1;font-size:12px;font-weight:600;">Rumble TV</div>
+      <div style="width:200px;height:8px;background:var(--bdr);border-radius:4px;overflow:hidden;"><div style="height:100%;width:100%;background:var(--rumble);border-radius:4px;"></div></div>
+      <div style="font-size:12px;font-weight:700;width:70px;text-align:right;color:var(--rumble);">$2.4M</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px;">
+      <div style="width:28px;height:28px;border-radius:6px;background:rgba(139,26,139,.1);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;color:var(--horror);">H</div>
+      <div style="flex:1;font-size:12px;font-weight:600;">Horror Classics</div>
+      <div style="width:200px;height:8px;background:var(--bdr);border-radius:4px;overflow:hidden;"><div style="height:100%;width:75%;background:var(--horror);border-radius:4px;"></div></div>
+      <div style="font-size:12px;font-weight:700;width:70px;text-align:right;color:var(--horror);">$1.8M</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px;">
+      <div style="width:28px;height:28px;border-radius:6px;background:rgba(46,204,113,.1);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;color:var(--whodone);">W</div>
+      <div style="flex:1;font-size:12px;font-weight:600;">Who Done It TV</div>
+      <div style="width:200px;height:8px;background:var(--bdr);border-radius:4px;overflow:hidden;"><div style="height:100%;width:62%;background:var(--whodone);border-radius:4px;"></div></div>
+      <div style="font-size:12px;font-weight:700;width:70px;text-align:right;color:var(--whodone);">$1.5M</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px;">
+      <div style="width:28px;height:28px;border-radius:6px;background:rgba(0,200,255,.1);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;color:var(--scifi);">SF</div>
+      <div style="flex:1;font-size:12px;font-weight:600;">Sci-Fi Classics</div>
+      <div style="width:200px;height:8px;background:var(--bdr);border-radius:4px;overflow:hidden;"><div style="height:100%;width:45%;background:var(--scifi);border-radius:4px;"></div></div>
+      <div style="font-size:12px;font-weight:700;width:70px;text-align:right;color:var(--scifi);">$1.1M</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px;">
+      <div style="width:28px;height:28px;border-radius:6px;background:rgba(255,107,43,.1);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;color:var(--martian);">M</div>
+      <div style="flex:1;font-size:12px;font-weight:600;">Martian TV</div>
+      <div style="width:200px;height:8px;background:var(--bdr);border-radius:4px;overflow:hidden;"><div style="height:100%;width:37%;background:var(--martian);border-radius:4px;"></div></div>
+      <div style="font-size:12px;font-weight:700;width:70px;text-align:right;color:var(--martian);">$900K</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px;">
+      <div style="width:28px;height:28px;border-radius:6px;background:rgba(255,215,0,.1);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;color:var(--joke);">J</div>
+      <div style="flex:1;font-size:12px;font-weight:600;">JokeBox TV</div>
+      <div style="width:200px;height:8px;background:var(--bdr);border-radius:4px;overflow:hidden;"><div style="height:100%;width:28%;background:var(--joke);border-radius:4px;"></div></div>
+      <div style="font-size:12px;font-weight:700;width:70px;text-align:right;color:var(--joke);">$700K</div>
+    </div>
+  </div>
+</div>
+
+<h3>Cost Structure — Annual</h3>
+<div class="g2">
+  <div class="cd">
+    <h4>Production Costs (500 episodes)</h4>
+    <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
+      <div style="display:flex;justify-content:space-between;font-size:11px;padding:6px 0;border-bottom:1px solid var(--bdr);">
+        <span style="color:var(--t2)">FAL API (frames + video)</span><span>$21,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;padding:6px 0;border-bottom:1px solid var(--bdr);">
+        <span style="color:var(--t2)">R2 Storage + CDN</span><span>$1,500</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;padding:6px 0;border-bottom:1px solid var(--bdr);">
+        <span style="color:var(--t2)">Compute (FFmpeg)</span><span>$4,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;padding:6px 0;border-bottom:1px solid var(--bdr);">
+        <span style="color:var(--t2)">Script Writing (human)</span><span>$100,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;padding:8px 0;">
+        <span>Total Production</span><span style="color:var(--green)">$126,500</span>
+      </div>
+    </div>
+  </div>
+  <div class="cd">
+    <h4>Operating Costs (Annual)</h4>
+    <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
+      <div style="display:flex;justify-content:space-between;font-size:11px;padding:6px 0;border-bottom:1px solid var(--bdr);">
+        <span style="color:var(--t2)">Platform infrastructure</span><span>$48,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;padding:6px 0;border-bottom:1px solid var(--bdr);">
+        <span style="color:var(--t2)">Marketing + community</span><span>$120,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;padding:6px 0;border-bottom:1px solid var(--bdr);">
+        <span style="color:var(--t2)">FAST channel distribution</span><span>$24,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;padding:6px 0;border-bottom:1px solid var(--bdr);">
+        <span style="color:var(--t2)">Team (lean)</span><span>$180,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;padding:8px 0;">
+        <span>Total Opex</span><span style="color:var(--orange)">$372,000</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mx mt">
+  <div class="m"><div class="n">$498K</div><div class="l">Total Costs Y1</div></div>
+  <div class="m"><div class="n">$8.4M</div><div class="l">Revenue Y1</div></div>
+  <div class="m"><div class="n">$7.9M</div><div class="l">Gross Profit</div></div>
+  <div class="m"><div class="n">94%</div><div class="l">Net Margin</div></div>
+</div>
+</div>
+
+<script>
+function go(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  document.querySelectorAll('.pill').forEach(p=>p.classList.remove('on'));
+  event.target.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>

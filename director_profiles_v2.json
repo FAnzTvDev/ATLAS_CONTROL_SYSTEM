@@ -1,0 +1,1384 @@
+{
+  "gothic_institutional_slowburn": {
+    "id": "gothic_institutional_slowburn",
+    "label": "Institutional Gothic - Slowburn Horror",
+    "logline": "Institutional gothic horror told with a patient, predator-like camera that makes architecture feel alive and people feel small.",
+    "cinema_influences": [
+      "Sicario",
+      "Zodiac",
+      "The Others"
+    ],
+    "influences": [
+      {
+        "film": "Sicario",
+        "year": 2015,
+        "director": "Denis Villeneuve",
+        "dp": "Roger Deakins",
+        "notes": "Patient camera, architecture as predator, institutional dread"
+      },
+      {
+        "film": "Zodiac",
+        "year": 2007,
+        "director": "David Fincher",
+        "dp": "Harris Savides",
+        "notes": "Cold observation, procedural tension, detached POV"
+      }
+    ],
+    "story_pov_policy": {
+      "pov_mode": "mostly_objective",
+      "subjective_probability": 0.3,
+      "objective_probability": 0.7,
+      "rules": [
+        "On first entry to any major location, keep protagonist under 25% of frame area.",
+        "Reserve tight CUs on protagonist's eyes for true decisions or revelations.",
+        "Avoid explicit POV shots in Act I; let the building look at them first."
+      ]
+    },
+    "global_aesthetic": {
+      "tone": [
+        "institutional",
+        "gothic",
+        "slow_burn",
+        "predatory"
+      ],
+      "color": [
+        "cool_white_fluorescent",
+        "sodium_vapor_accents",
+        "muted_blacks"
+      ],
+      "contrast": "medium_high",
+      "grain": "subtle"
+    },
+    "camera_policy": {
+      "preferred_focal_lengths_mm": [
+        24,
+        32,
+        40
+      ],
+      "avoid_focal_lengths_mm": [
+        85,
+        135
+      ],
+      "shot_size_distribution": {
+        "WS": 0.45,
+        "MS": 0.35,
+        "CU": 0.2,
+        "ECU": 0.0
+      },
+      "movement_bias": {
+        "static": 0.25,
+        "slow_dolly": 0.55,
+        "slow_pan_tilt": 0.2,
+        "handheld": 0.0
+      },
+      "angle_bias": {
+        "eye_level": 0.4,
+        "slight_low": 0.4,
+        "slight_high": 0.2,
+        "dutch": 0.0
+      },
+      "frame_stability": 0.95
+    },
+    "shot_scale_profile": {
+      "WS": 0.45,
+      "MS": 0.35,
+      "CU": 0.2,
+      "ECU": 0.0
+    },
+    "camera_movement_profile": {
+      "static": 0.25,
+      "slow_dolly": 0.55,
+      "slow_pan_tilt": 0.2,
+      "handheld": 0.0
+    },
+    "lighting_policy": {
+      "base_color_temp_K": 4100,
+      "color_temp_variation_K": 250,
+      "lighting_ratio_range": [
+        1.8,
+        2.4
+      ],
+      "contrast_bias": "medium_high",
+      "palette_keywords": [
+        "cool_white_fluorescent",
+        "sodium_vapor_accents",
+        "muted_blacks",
+        "no_romantic_candlelight"
+      ]
+    },
+    "coverage_policy": {
+      "base_shot_density_factor": 1.0,
+      "min_shots_low_complexity": 2,
+      "max_shots_high_complexity": 9,
+      "prefers_long_takes": true,
+      "establishing_priority": "high",
+      "reaction_shot_priority": "low",
+      "insert_priority": "medium"
+    },
+    "rhythm_policy": {
+      "linger_on_emotional_turn": 0.9,
+      "average_shot_weight": 0.8,
+      "pacing_style": "slow_burn",
+      "pre_cut_hold_s": 0.5,
+      "post_cut_hold_s": 0.5
+    },
+    "director_mindset_tokens": {
+      "predator_threshold": 0.8,
+      "shadows_closing_in": true,
+      "viewer_as_prey": true,
+      "architecture_as_character": true
+    },
+    "style_anchor": "grounded, cinematic, high_dynamic_range, subtle_grain, institutional_gothic",
+    "composition_rules": {
+      "grid": "rule_of_thirds",
+      "wide_anchor": "subject_small_lower_third, architecture_dominant",
+      "dialogue_two_hander": "balanced_two_shot_or_OTS",
+      "threat": "subject_lower_frame, ceiling_weighted",
+      "negative_space_bias": 0.7,
+      "symmetry_bias": 0.3
+    },
+    "semantic_knobs": {
+      "tension_increase": {
+        "strategy": "move closer + lengthen holds + decrease movement",
+        "shot_scale_shift": {
+          "CU": 0.15,
+          "WS": -0.15
+        },
+        "shot_length_multiplier": 1.2
+      },
+      "architecture_reveal": {
+        "strategy": "wide establishing, slow dolly, keep characters tiny",
+        "composition_override": "subject_under_25_percent_frame",
+        "movement_override": "slow_dolly_in"
+      }
+    },
+    "shot_length_profile": {
+      "max_seconds": 45,
+      "extended_take_probability": 0.15,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3,
+      "min_seconds": 6,
+      "avg_seconds": 12
+    }
+  },
+  "ravencroft_gothic_v2": {
+    "id": "ravencroft_gothic_v2",
+    "label": "Gothic Horror - Ravencroft Manor",
+    "camera_policy": {
+      "preferred_focal_lengths_mm": [
+        24,
+        35,
+        50,
+        85
+      ],
+      "avoid_focal_lengths_mm": [
+        18,
+        135
+      ],
+      "shot_size_distribution": {
+        "WS": 0.35,
+        "MS": 0.4,
+        "CU": 0.2,
+        "ECU": 0.05
+      },
+      "movement_bias": {
+        "locked": 0.3,
+        "slow_dolly": 0.4,
+        "slow_pan_tilt": 0.2,
+        "handheld": 0.05,
+        "slow_crane": 0.05
+      },
+      "angle_bias": {
+        "eye_level": 0.45,
+        "slight_low": 0.35,
+        "slight_high": 0.15,
+        "dutch": 0.05
+      },
+      "frame_stability": 0.9
+    },
+    "influences": [
+      {
+        "film": "The Shining",
+        "year": 1980,
+        "director": "Stanley Kubrick",
+        "dp": "John Alcott",
+        "notes": "Symmetrical dread, tracking shots, isolated figures in vast spaces"
+      },
+      {
+        "film": "Crimson Peak",
+        "year": 2015,
+        "director": "Guillermo del Toro",
+        "dp": "Dan Laustsen",
+        "notes": "Gothic interiors, practical lighting, rich color"
+      }
+    ],
+    "global_aesthetic": {
+      "tone": [
+        "gothic",
+        "atmospheric",
+        "measured",
+        "dread-filled"
+      ],
+      "color": [
+        "tungsten_warm",
+        "moonlight_cool",
+        "split_lighting"
+      ],
+      "contrast": "high",
+      "grain": "subtle"
+    },
+    "shot_scale_profile": {
+      "WS": 0.3,
+      "MS": 0.35,
+      "CU": 0.25,
+      "ECU": 0.1
+    },
+    "shot_length_profile": {
+      "avg_seconds": 10,
+      "min_seconds": 6,
+      "max_seconds": 45,
+      "long_take_probability": 0.25,
+      "extended_take_probability": 0.1,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3
+    },
+    "camera_movement_profile": {
+      "locked": 0.4,
+      "slow_push": 0.2,
+      "slow_crane": 0.15,
+      "slow_dolly": 0.15,
+      "tracking": 0.1
+    },
+    "composition_rules": {
+      "grid": "rule_of_thirds",
+      "wide_anchor": "subject_small_lower_third, symmetrical_framing, deep_staging",
+      "dialogue_two_hander": "two_shot_balanced, shallow_depth, OTS_coverage",
+      "horror_beat": "negative_space_dominant, subject_off_center, ceiling_visible",
+      "emotional_beat": "centered_or_left_third, shallow_focus, face_in_shadow",
+      "negative_space_bias": 0.65,
+      "symmetry_bias": 0.35
+    },
+    "beat_patterns": {
+      "horror_ritual": "horror_ritual",
+      "dialogue_two_hander": "dialogue_two_hander",
+      "solo_isolation": "solo_isolation",
+      "travel_exterior": "travel_exterior",
+      "discovery_revelation": "discovery_revelation",
+      "confrontation": "confrontation",
+      "apparition_supernatural": "apparition_supernatural",
+      "investigation": "investigation",
+      "escape_pursuit": "escape_pursuit",
+      "emotional_beat": "emotional_beat",
+      "default_generic": "default_generic"
+    },
+    "semantic_knobs": {
+      "tension_increase": {
+        "strategy": "closer shots, longer holds, less movement",
+        "shot_scale_shift": {
+          "CU": 0.15,
+          "WS": -0.15
+        },
+        "shot_length_multiplier": 1.3
+      },
+      "dread_build": {
+        "strategy": "keep subject small, emphasize empty space",
+        "composition_override": "subject_lower_third_tiny, heavy_negative_space",
+        "shot_length_multiplier": 1.5
+      },
+      "action_escalation": {
+        "strategy": "faster cuts, more movement, tighter framing",
+        "shot_length_multiplier": 0.6,
+        "shot_scale_shift": {
+          "MS": 0.2,
+          "WS": -0.2
+        }
+      }
+    }
+  },
+  "villeneuve_sicario_v1": {
+    "id": "villeneuve_sicario_v1",
+    "label": "Villeneuve / Deakins - Border Tension",
+    "influences": [
+      {
+        "film": "Sicario",
+        "year": 2015,
+        "director": "Denis Villeneuve",
+        "dp": "Roger Deakins",
+        "notes": "Border-crossing convoy, Juarez aerials, night-vision raid"
+      },
+      {
+        "film": "Prisoners",
+        "year": 2013,
+        "director": "Denis Villeneuve",
+        "dp": "Roger Deakins",
+        "notes": "Rain-soaked tension, controlled camera, naturalistic lighting"
+      }
+    ],
+    "global_aesthetic": {
+      "tone": [
+        "austere",
+        "observational",
+        "controlled",
+        "grounded"
+      ],
+      "color": [
+        "muted",
+        "dusty",
+        "cool_split_tungsten"
+      ],
+      "contrast": "high",
+      "grain": "subtle"
+    },
+    "shot_scale_profile": {
+      "WS": 0.35,
+      "MS": 0.4,
+      "CU": 0.2,
+      "ECU": 0.05
+    },
+    "shot_length_profile": {
+      "avg_seconds": 6,
+      "min_seconds": 4,
+      "max_seconds": 45,
+      "long_take_probability": 0.1,
+      "extended_take_probability": 0.15,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3
+    },
+    "camera_movement_profile": {
+      "locked": 0.45,
+      "slow_dolly": 0.25,
+      "slow_crane": 0.15,
+      "drift": 0.1,
+      "handheld": 0.05
+    },
+    "composition_rules": {
+      "grid": "rule_of_thirds",
+      "wide_anchor": "subject_small_lower_third, heavy_negative_space",
+      "dialogue_two_hander": "balanced_two_shot_or_OTS, horizon_upper_third",
+      "threat": "subject_lower_frame, ceiling_weighted, strong_leading_lines",
+      "safety": "subject_centered_or_upper_third, more_headroom",
+      "negative_space_bias": 0.7,
+      "symmetry_bias": 0.2
+    },
+    "beat_patterns": {
+      "dialogue_two_hander": "dialogue_two_hander",
+      "travel_exterior": "travel_exterior",
+      "solo_isolation": "solo_isolation",
+      "confrontation": "confrontation",
+      "investigation": "investigation",
+      "escape_pursuit": "escape_pursuit",
+      "default_generic": "default_generic"
+    },
+    "semantic_knobs": {
+      "tension_increase": {
+        "strategy": "move closer + lengthen holds + decrease camera movement",
+        "shot_scale_shift": {
+          "CU": 0.15,
+          "WS": -0.15
+        },
+        "shot_length_multiplier": 1.2
+      },
+      "alienation": {
+        "strategy": "keep subject small, increase negative space",
+        "composition_override": "subject_lower_third_tiny",
+        "color_shift": "colder"
+      }
+    }
+  },
+  "fincher_precision_v1": {
+    "id": "fincher_precision_v1",
+    "label": "Fincher - Precision Control",
+    "influences": [
+      {
+        "film": "Gone Girl",
+        "year": 2014,
+        "director": "David Fincher",
+        "dp": "Jeff Cronenweth",
+        "notes": "Clean frames, centered compositions, controlled movement"
+      },
+      {
+        "film": "Zodiac",
+        "year": 2007,
+        "director": "David Fincher",
+        "dp": "Harris Savides",
+        "notes": "Period authentic, naturalistic, observational"
+      }
+    ],
+    "global_aesthetic": {
+      "tone": [
+        "clinical",
+        "precise",
+        "unsettling",
+        "controlled"
+      ],
+      "color": [
+        "desaturated",
+        "cool",
+        "green_shift"
+      ],
+      "contrast": "medium_high",
+      "grain": "none"
+    },
+    "shot_scale_profile": {
+      "WS": 0.25,
+      "MS": 0.45,
+      "CU": 0.25,
+      "ECU": 0.05
+    },
+    "shot_length_profile": {
+      "avg_seconds": 5,
+      "min_seconds": 4,
+      "max_seconds": 45,
+      "long_take_probability": 0.08,
+      "extended_take_probability": 0.15,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3
+    },
+    "camera_movement_profile": {
+      "locked": 0.55,
+      "slow_dolly": 0.2,
+      "slow_push": 0.15,
+      "tracking": 0.1
+    },
+    "composition_rules": {
+      "grid": "centered_dominant",
+      "wide_anchor": "subject_centered, clean_lines, symmetrical",
+      "dialogue_two_hander": "centered_two_shot, shallow_depth",
+      "insert": "object_centered, flat_staging, minimal_background",
+      "negative_space_bias": 0.4,
+      "symmetry_bias": 0.6
+    },
+    "beat_patterns": {
+      "dialogue_two_hander": "dialogue_two_hander",
+      "investigation": "investigation",
+      "confrontation": "confrontation",
+      "emotional_beat": "emotional_beat",
+      "default_generic": "default_generic"
+    },
+    "semantic_knobs": {
+      "tension_increase": {
+        "strategy": "tighter framing, longer holds, no movement",
+        "shot_scale_shift": {
+          "CU": 0.2,
+          "WS": -0.1
+        },
+        "shot_length_multiplier": 1.1
+      }
+    }
+  },
+  "back2back_continuity_v2": {
+    "id": "back2back_continuity_v2",
+    "label": "Back2Back - Sequential Continuity",
+    "logline": "Each shot intelligently uses the previous shot as its first-frame reference, creating seamless visual continuity through the sequence.",
+    "cinema_influences": [
+      "Birdman",
+      "1917",
+      "Children of Men"
+    ],
+    "influences": [
+      {
+        "film": "Birdman",
+        "year": 2014,
+        "director": "Alejandro I\u00f1\u00e1rritu",
+        "dp": "Emmanuel Lubezki",
+        "notes": "Seamless shot-to-shot flow, maintaining visual continuity"
+      },
+      {
+        "film": "1917",
+        "year": 2019,
+        "director": "Sam Mendes",
+        "dp": "Roger Deakins",
+        "notes": "One-take illusion through careful shot matching"
+      }
+    ],
+    "reference_strategy": {
+      "mode": "sequential_previous",
+      "use_previous_shot_as_reference": true,
+      "first_shot_uses_master": true,
+      "propagate_location_consistency": true,
+      "propagate_lighting_consistency": true,
+      "propagate_character_appearance": true,
+      "match_color_grade": true,
+      "match_exposure": true,
+      "continuity_weight": 0.85
+    },
+    "global_aesthetic": {
+      "tone": [
+        "fluid",
+        "continuous",
+        "immersive",
+        "seamless"
+      ],
+      "color": [
+        "consistent_grade",
+        "matched_exposure",
+        "unified_palette"
+      ],
+      "contrast": "medium",
+      "grain": "subtle_matched"
+    },
+    "shot_scale_profile": {
+      "WS": 0.3,
+      "MS": 0.4,
+      "CU": 0.25,
+      "ECU": 0.05
+    },
+    "shot_length_profile": {
+      "avg_seconds": 8,
+      "min_seconds": 5,
+      "max_seconds": 45,
+      "long_take_probability": 0.25,
+      "extended_take_probability": 0.15,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3
+    },
+    "camera_movement_profile": {
+      "locked": 0.2,
+      "slow_dolly": 0.3,
+      "slow_push": 0.2,
+      "tracking": 0.2,
+      "drift": 0.1
+    },
+    "composition_rules": {
+      "grid": "rule_of_thirds",
+      "wide_anchor": "match_previous_frame_edges, deep_staging",
+      "dialogue_two_hander": "consistent_eyeline, matched_depth",
+      "transition_overlap": "subject_position_matched",
+      "negative_space_bias": 0.5,
+      "symmetry_bias": 0.3
+    },
+    "beat_patterns": {
+      "horror_ritual": "horror_ritual",
+      "dialogue_two_hander": "dialogue_two_hander",
+      "solo_isolation": "solo_isolation",
+      "travel_exterior": "travel_exterior",
+      "discovery_revelation": "discovery_revelation",
+      "default_generic": "default_generic"
+    },
+    "semantic_knobs": {
+      "continuity_break": {
+        "strategy": "Intentional visual break for time skip or location change",
+        "continuity_weight_override": 0.0,
+        "use_master_reference": true
+      },
+      "match_intensity": {
+        "strategy": "Tighter matching for critical sequences",
+        "continuity_weight_override": 0.95,
+        "match_focal_length": true
+      }
+    },
+    "prompt_injection": {
+      "suffix": "maintaining visual continuity from previous frame, matched lighting and color grade, seamless transition"
+    }
+  },
+  "parallel_master_reference_v2": {
+    "id": "parallel_master_reference_v2",
+    "label": "Parallel Master Reference - Quality Lock",
+    "logline": "All shots reference a single master shot to ensure consistent quality, lighting, and aesthetic across the entire sequence.",
+    "cinema_influences": [
+      "The Grand Budapest Hotel",
+      "Moonrise Kingdom",
+      "Barry Lyndon"
+    ],
+    "influences": [
+      {
+        "film": "The Grand Budapest Hotel",
+        "year": 2014,
+        "director": "Wes Anderson",
+        "dp": "Robert Yeoman",
+        "notes": "Rigorous visual consistency, locked aesthetic"
+      },
+      {
+        "film": "Barry Lyndon",
+        "year": 1975,
+        "director": "Stanley Kubrick",
+        "dp": "John Alcott",
+        "notes": "Painterly consistency, unified visual language"
+      }
+    ],
+    "reference_strategy": {
+      "mode": "master_reference",
+      "use_previous_shot_as_reference": false,
+      "use_master_shot_for_all": true,
+      "master_shot_id": null,
+      "master_shot_path": null,
+      "lock_quality_from_master": true,
+      "lock_lighting_from_master": true,
+      "lock_color_grade_from_master": true,
+      "lock_atmosphere_from_master": true,
+      "quality_anchor_weight": 0.9
+    },
+    "global_aesthetic": {
+      "tone": [
+        "controlled",
+        "unified",
+        "painterly",
+        "consistent"
+      ],
+      "color": [
+        "master_locked",
+        "period_accurate",
+        "unified_grade"
+      ],
+      "contrast": "high",
+      "grain": "subtle"
+    },
+    "shot_scale_profile": {
+      "WS": 0.35,
+      "MS": 0.35,
+      "CU": 0.25,
+      "ECU": 0.05
+    },
+    "shot_length_profile": {
+      "avg_seconds": 7,
+      "min_seconds": 4,
+      "max_seconds": 45,
+      "long_take_probability": 0.15,
+      "extended_take_probability": 0.15,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3
+    },
+    "camera_movement_profile": {
+      "locked": 0.5,
+      "slow_dolly": 0.25,
+      "slow_push": 0.15,
+      "slow_crane": 0.1
+    },
+    "composition_rules": {
+      "grid": "rule_of_thirds",
+      "wide_anchor": "quality_matched_to_master, deep_staging",
+      "dialogue_two_hander": "balanced_two_shot, master_lighting_match",
+      "quality_floor": "master_shot_quality",
+      "negative_space_bias": 0.55,
+      "symmetry_bias": 0.4
+    },
+    "beat_patterns": {
+      "horror_ritual": "horror_ritual",
+      "dialogue_two_hander": "dialogue_two_hander",
+      "solo_isolation": "solo_isolation",
+      "travel_exterior": "travel_exterior",
+      "discovery_revelation": "discovery_revelation",
+      "apparition_supernatural": "apparition_supernatural",
+      "default_generic": "default_generic"
+    },
+    "semantic_knobs": {
+      "quality_boost": {
+        "strategy": "Enhanced quality matching for hero shots",
+        "quality_anchor_weight_override": 0.98
+      },
+      "creative_deviation": {
+        "strategy": "Allow slight deviation for specific artistic moments",
+        "quality_anchor_weight_override": 0.7,
+        "allow_lighting_variation": true
+      }
+    },
+    "prompt_injection": {
+      "suffix": "matching master reference quality and lighting, unified visual aesthetic, consistent atmosphere and color grade"
+    }
+  },
+  "director1_storyaware": {
+    "id": "ravencroft_gothic_v2",
+    "label": "Gothic Horror - Ravencroft Manor",
+    "camera_policy": {
+      "preferred_focal_lengths_mm": [
+        24,
+        35,
+        50,
+        85
+      ],
+      "avoid_focal_lengths_mm": [
+        18,
+        135
+      ],
+      "shot_size_distribution": {
+        "WS": 0.35,
+        "MS": 0.4,
+        "CU": 0.2,
+        "ECU": 0.05
+      },
+      "movement_bias": {
+        "locked": 0.3,
+        "slow_dolly": 0.35,
+        "slow_pan_tilt": 0.15,
+        "handheld": 0.05,
+        "slow_crane": 0.05,
+        "static": 0.45
+      },
+      "angle_bias": {
+        "eye_level": 0.45,
+        "slight_low": 0.35,
+        "slight_high": 0.15,
+        "dutch": 0.05
+      },
+      "frame_stability": 0.9
+    },
+    "influences": [
+      {
+        "film": "The Shining",
+        "year": 1980,
+        "director": "Stanley Kubrick",
+        "dp": "John Alcott",
+        "notes": "Symmetrical dread, tracking shots, isolated figures in vast spaces"
+      },
+      {
+        "film": "Crimson Peak",
+        "year": 2015,
+        "director": "Guillermo del Toro",
+        "dp": "Dan Laustsen",
+        "notes": "Gothic interiors, practical lighting, rich color"
+      }
+    ],
+    "global_aesthetic": {
+      "tone": [
+        "gothic",
+        "atmospheric",
+        "measured",
+        "dread-filled"
+      ],
+      "color": [
+        "tungsten_warm",
+        "moonlight_cool",
+        "split_lighting"
+      ],
+      "contrast": "high",
+      "grain": "subtle"
+    },
+    "shot_scale_profile": {
+      "WS": 0.3,
+      "MS": 0.35,
+      "CU": 0.25,
+      "ECU": 0.1
+    },
+    "shot_length_profile": {
+      "avg_seconds": 10,
+      "min_seconds": 6,
+      "max_seconds": 45,
+      "long_take_probability": 0.25,
+      "extended_take_probability": 0.1,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3
+    },
+    "camera_movement_profile": {
+      "locked": 0.4,
+      "slow_push": 0.2,
+      "slow_crane": 0.15,
+      "slow_dolly": 0.15,
+      "tracking": 0.1
+    },
+    "composition_rules": {
+      "grid": "rule_of_thirds",
+      "wide_anchor": "subject_small_lower_third, symmetrical_framing, deep_staging",
+      "dialogue_two_hander": "two_shot_balanced, shallow_depth, OTS_coverage",
+      "horror_beat": "negative_space_dominant, subject_off_center, ceiling_visible",
+      "emotional_beat": "centered_or_left_third, shallow_focus, face_in_shadow",
+      "negative_space_bias": 0.65,
+      "symmetry_bias": 0.35
+    },
+    "beat_patterns": {
+      "horror_ritual": "horror_ritual",
+      "dialogue_two_hander": "dialogue_two_hander",
+      "solo_isolation": "solo_isolation",
+      "travel_exterior": "travel_exterior",
+      "discovery_revelation": "discovery_revelation",
+      "confrontation": "confrontation",
+      "apparition_supernatural": "apparition_supernatural",
+      "investigation": "investigation",
+      "escape_pursuit": "escape_pursuit",
+      "emotional_beat": "emotional_beat",
+      "default_generic": "default_generic"
+    },
+    "semantic_knobs": {
+      "tension_increase": {
+        "strategy": "closer shots, longer holds, less movement",
+        "shot_scale_shift": {
+          "CU": 0.15,
+          "WS": -0.15
+        },
+        "shot_length_multiplier": 1.3
+      },
+      "dread_build": {
+        "strategy": "keep subject small, emphasize empty space",
+        "composition_override": "subject_lower_third_tiny, heavy_negative_space",
+        "shot_length_multiplier": 1.5
+      },
+      "action_escalation": {
+        "strategy": "faster cuts, more movement, tighter framing",
+        "shot_length_multiplier": 0.6,
+        "shot_scale_shift": {
+          "MS": 0.2,
+          "WS": -0.2
+        }
+      }
+    },
+    "profile_name": "Director1 - Script-Locked Gothic",
+    "description": "Script-aligned gothic director profile with predator language only on approved patterns.",
+    "mindset_tokens": [],
+    "script_lock_fields": {
+      "world_opening": {
+        "shot_size": "WS",
+        "movement": "static"
+      },
+      "prop_plate": {
+        "shot_size": "CU",
+        "movement": "static"
+      },
+      "off_camera_voice": {
+        "shot_size": "MS",
+        "movement": "static"
+      }
+    }
+  },
+  "scifi_thriller_v2": {
+    "id": "scifi_thriller_v2",
+    "label": "Sci-Fi Thriller - Blade Runner / Ex Machina",
+    "logline": "Technological dystopia with cold precision, clinical framing, and neon-punctuated darkness.",
+    "cinema_influences": [
+      "Blade Runner 2049",
+      "Ex Machina",
+      "Minority Report"
+    ],
+    "global_aesthetic": {
+      "tone": [
+        "cyberpunk",
+        "clinical",
+        "cold_precision",
+        "technological"
+      ],
+      "color": [
+        "cyan_neon",
+        "cool_blue_LED",
+        "sterile_white"
+      ],
+      "contrast": "high",
+      "grain": "digital_clean"
+    },
+    "camera_policy": {
+      "preferred_focal_lengths_mm": [
+        24,
+        35,
+        50,
+        85
+      ],
+      "avoid_focal_lengths_mm": [
+        135,
+        200
+      ],
+      "shot_size_distribution": {
+        "WS": 0.35,
+        "MS": 0.4,
+        "CU": 0.2,
+        "ECU": 0.05
+      },
+      "movement_bias": {
+        "static": 0.3,
+        "slow_dolly": 0.35,
+        "slow_pan_tilt": 0.25,
+        "tracking": 0.1
+      },
+      "angle_bias": {
+        "eye_level": 0.5,
+        "slight_low": 0.25,
+        "slight_high": 0.15,
+        "dutch": 0.1
+      },
+      "frame_stability": 0.9
+    },
+    "lighting_policy": {
+      "base_color_temp_K": 5500,
+      "color_temp_variation_K": 800,
+      "lighting_ratio_range": [
+        2.0,
+        4.0
+      ],
+      "practical_sources": [
+        "LED_panels",
+        "holographic_displays",
+        "neon_signs"
+      ]
+    },
+    "beat_patterns": {
+      "discovery_revelation": "discovery_revelation",
+      "confrontation": "confrontation",
+      "investigation": "investigation",
+      "escape_pursuit": "escape_pursuit",
+      "dialogue_two_hander": "dialogue_two_hander",
+      "default_generic": "default_generic"
+    },
+    "shot_length_profile": {
+      "max_seconds": 45,
+      "extended_take_probability": 0.15,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3,
+      "min_seconds": 6,
+      "avg_seconds": 12
+    }
+  },
+  "action_v2": {
+    "id": "action_v2",
+    "label": "Action - John Wick / Mad Max Fury Road",
+    "logline": "High-octane kinetic energy with dynamic movement and visceral impact.",
+    "cinema_influences": [
+      "John Wick",
+      "Mad Max: Fury Road",
+      "Mission Impossible"
+    ],
+    "global_aesthetic": {
+      "tone": [
+        "kinetic",
+        "visceral",
+        "dynamic",
+        "high_octane"
+      ],
+      "color": [
+        "warm_amber",
+        "explosive_orange",
+        "gun_metal_blue"
+      ],
+      "contrast": "extreme",
+      "grain": "subtle_digital"
+    },
+    "camera_policy": {
+      "preferred_focal_lengths_mm": [
+        18,
+        24,
+        35,
+        50
+      ],
+      "avoid_focal_lengths_mm": [
+        100,
+        135,
+        200
+      ],
+      "shot_size_distribution": {
+        "WS": 0.25,
+        "MS": 0.45,
+        "CU": 0.25,
+        "ECU": 0.05
+      },
+      "movement_bias": {
+        "static": 0.1,
+        "slow_dolly": 0.15,
+        "tracking": 0.4,
+        "handheld": 0.35
+      },
+      "angle_bias": {
+        "eye_level": 0.35,
+        "slight_low": 0.35,
+        "slight_high": 0.2,
+        "dutch": 0.1
+      },
+      "frame_stability": 0.7
+    },
+    "lighting_policy": {
+      "base_color_temp_K": 4500,
+      "color_temp_variation_K": 600,
+      "lighting_ratio_range": [
+        2.5,
+        5.0
+      ],
+      "practical_sources": [
+        "muzzle_flash",
+        "explosions",
+        "headlights",
+        "street_lights"
+      ]
+    },
+    "beat_patterns": {
+      "confrontation": "confrontation",
+      "escape_pursuit": "escape_pursuit",
+      "discovery_revelation": "discovery_revelation",
+      "dialogue_two_hander": "dialogue_two_hander",
+      "default_generic": "default_generic"
+    },
+    "shot_length_profile": {
+      "max_seconds": 45,
+      "extended_take_probability": 0.15,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3,
+      "min_seconds": 6,
+      "avg_seconds": 12
+    }
+  },
+  "thriller_v2": {
+    "id": "thriller_v2",
+    "label": "Thriller - Prisoners / Zodiac",
+    "logline": "Paranoid tension with slow-burn dread and oppressive atmosphere.",
+    "cinema_influences": [
+      "Prisoners",
+      "Zodiac",
+      "Gone Girl",
+      "Se7en"
+    ],
+    "global_aesthetic": {
+      "tone": [
+        "paranoid",
+        "tense",
+        "oppressive",
+        "slow_burn"
+      ],
+      "color": [
+        "desaturated",
+        "muted_tones",
+        "sickly_greens"
+      ],
+      "contrast": "medium_high",
+      "grain": "film_like"
+    },
+    "camera_policy": {
+      "preferred_focal_lengths_mm": [
+        35,
+        50,
+        85,
+        100
+      ],
+      "avoid_focal_lengths_mm": [
+        18,
+        200
+      ],
+      "shot_size_distribution": {
+        "WS": 0.3,
+        "MS": 0.4,
+        "CU": 0.25,
+        "ECU": 0.05
+      },
+      "movement_bias": {
+        "static": 0.4,
+        "slow_dolly": 0.35,
+        "slow_pan_tilt": 0.2,
+        "handheld": 0.05
+      },
+      "angle_bias": {
+        "eye_level": 0.5,
+        "slight_low": 0.25,
+        "slight_high": 0.2,
+        "dutch": 0.05
+      },
+      "frame_stability": 0.85
+    },
+    "lighting_policy": {
+      "base_color_temp_K": 4200,
+      "color_temp_variation_K": 500,
+      "lighting_ratio_range": [
+        2.0,
+        4.0
+      ],
+      "practical_sources": [
+        "fluorescent",
+        "overcast_daylight",
+        "harsh_interrogation"
+      ]
+    },
+    "beat_patterns": {
+      "investigation": "investigation",
+      "confrontation": "confrontation",
+      "discovery_revelation": "discovery_revelation",
+      "dialogue_two_hander": "dialogue_two_hander",
+      "escape_pursuit": "escape_pursuit",
+      "default_generic": "default_generic"
+    },
+    "shot_length_profile": {
+      "max_seconds": 45,
+      "extended_take_probability": 0.15,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3,
+      "min_seconds": 6,
+      "avg_seconds": 12
+    }
+  },
+  "crime_drama_v2": {
+    "id": "crime_drama_v2",
+    "label": "Crime Drama - Heat / Sicario",
+    "logline": "Gritty realism with procedural precision and character-driven tension.",
+    "cinema_influences": [
+      "Heat",
+      "Sicario",
+      "The Town",
+      "No Country for Old Men"
+    ],
+    "global_aesthetic": {
+      "tone": [
+        "gritty",
+        "procedural",
+        "realistic",
+        "street_level"
+      ],
+      "color": [
+        "desaturated_urban",
+        "sodium_vapor",
+        "harsh_daylight"
+      ],
+      "contrast": "high",
+      "grain": "subtle"
+    },
+    "camera_policy": {
+      "preferred_focal_lengths_mm": [
+        24,
+        35,
+        50,
+        85
+      ],
+      "avoid_focal_lengths_mm": [
+        18,
+        135
+      ],
+      "shot_size_distribution": {
+        "WS": 0.35,
+        "MS": 0.4,
+        "CU": 0.2,
+        "ECU": 0.05
+      },
+      "movement_bias": {
+        "static": 0.35,
+        "slow_dolly": 0.3,
+        "tracking": 0.2,
+        "handheld": 0.15
+      },
+      "angle_bias": {
+        "eye_level": 0.55,
+        "slight_low": 0.25,
+        "slight_high": 0.15,
+        "dutch": 0.05
+      },
+      "frame_stability": 0.8
+    },
+    "lighting_policy": {
+      "base_color_temp_K": 4800,
+      "color_temp_variation_K": 600,
+      "lighting_ratio_range": [
+        2.0,
+        4.5
+      ],
+      "practical_sources": [
+        "street_lights",
+        "neon_signs",
+        "car_headlights",
+        "fluorescent"
+      ]
+    },
+    "beat_patterns": {
+      "investigation": "investigation",
+      "confrontation": "confrontation",
+      "dialogue_two_hander": "dialogue_two_hander",
+      "escape_pursuit": "escape_pursuit",
+      "discovery_revelation": "discovery_revelation",
+      "default_generic": "default_generic"
+    },
+    "shot_length_profile": {
+      "max_seconds": 45,
+      "extended_take_probability": 0.15,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3,
+      "min_seconds": 6,
+      "avg_seconds": 12
+    }
+  },
+  "cinematic_epic_v2": {
+    "id": "cinematic_epic_v2",
+    "label": "Cinematic Epic - Extended Takes",
+    "logline": "Epic storytelling with extended single-take sequences using frame stitching for 30-45s shots.",
+    "cinema_influences": [
+      "1917",
+      "Children of Men",
+      "Birdman",
+      "Gravity"
+    ],
+    "global_aesthetic": {
+      "tone": [
+        "epic",
+        "immersive",
+        "continuous",
+        "breathtaking"
+      ],
+      "color": [
+        "natural_grade",
+        "unified_palette",
+        "cinematic_warmth"
+      ],
+      "contrast": "medium_high",
+      "grain": "subtle_film"
+    },
+    "camera_policy": {
+      "preferred_focal_lengths_mm": [
+        24,
+        35,
+        50,
+        85
+      ],
+      "avoid_focal_lengths_mm": [
+        18,
+        200
+      ],
+      "shot_size_distribution": {
+        "WS": 0.35,
+        "MS": 0.4,
+        "CU": 0.2,
+        "ECU": 0.05
+      },
+      "movement_bias": {
+        "static": 0.15,
+        "slow_dolly": 0.3,
+        "tracking": 0.35,
+        "slow_crane": 0.2
+      },
+      "angle_bias": {
+        "eye_level": 0.45,
+        "slight_low": 0.3,
+        "slight_high": 0.2,
+        "dutch": 0.05
+      },
+      "frame_stability": 0.85
+    },
+    "shot_length_profile": {
+      "avg_seconds": 15,
+      "min_seconds": 8,
+      "max_seconds": 45,
+      "long_take_probability": 0.4,
+      "extended_take_probability": 0.25,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3
+    },
+    "reference_strategy": {
+      "mode": "sequential_previous",
+      "use_previous_shot_as_reference": true,
+      "first_shot_uses_master": true,
+      "propagate_location_consistency": true,
+      "propagate_lighting_consistency": true,
+      "continuity_weight": 0.9
+    },
+    "composition_rules": {
+      "grid": "rule_of_thirds",
+      "wide_anchor": "epic_scale, deep_staging, layered_composition",
+      "dialogue_two_hander": "continuous_two_shot, shallow_depth",
+      "action_sequence": "tracking_continuous, seamless_movement",
+      "negative_space_bias": 0.55,
+      "symmetry_bias": 0.35
+    },
+    "beat_patterns": {
+      "horror_ritual": "horror_ritual",
+      "dialogue_two_hander": "dialogue_two_hander",
+      "solo_isolation": "solo_isolation",
+      "travel_exterior": "travel_exterior",
+      "discovery_revelation": "discovery_revelation",
+      "confrontation": "confrontation",
+      "escape_pursuit": "escape_pursuit",
+      "default_generic": "default_generic"
+    },
+    "semantic_knobs": {
+      "tension_increase": {
+        "strategy": "extend shot duration, tighter framing gradually",
+        "shot_length_multiplier": 1.5,
+        "shot_scale_shift": {
+          "CU": 0.1,
+          "WS": -0.1
+        }
+      },
+      "epic_moment": {
+        "strategy": "maximum duration, wide framing, continuous movement",
+        "shot_length_multiplier": 2.0,
+        "force_extended_take": true
+      }
+    }
+  },
+  "scifi_thriller_extended_v2": {
+    "id": "scifi_thriller_extended_v2",
+    "label": "Sci-Fi Thriller Extended - Long Takes",
+    "logline": "Technological dystopia with extended sequences for immersive world-building.",
+    "cinema_influences": [
+      "Blade Runner 2049",
+      "Arrival",
+      "Interstellar",
+      "Ex Machina"
+    ],
+    "global_aesthetic": {
+      "tone": [
+        "cyberpunk",
+        "contemplative",
+        "immersive",
+        "vast"
+      ],
+      "color": [
+        "cyan_neon",
+        "cool_blue_LED",
+        "sterile_white",
+        "amber_accents"
+      ],
+      "contrast": "high",
+      "grain": "digital_clean"
+    },
+    "camera_policy": {
+      "preferred_focal_lengths_mm": [
+        24,
+        35,
+        50,
+        85
+      ],
+      "avoid_focal_lengths_mm": [
+        135,
+        200
+      ],
+      "shot_size_distribution": {
+        "WS": 0.4,
+        "MS": 0.35,
+        "CU": 0.2,
+        "ECU": 0.05
+      },
+      "movement_bias": {
+        "static": 0.2,
+        "slow_dolly": 0.35,
+        "slow_crane": 0.25,
+        "tracking": 0.2
+      },
+      "angle_bias": {
+        "eye_level": 0.45,
+        "slight_low": 0.3,
+        "slight_high": 0.15,
+        "dutch": 0.1
+      },
+      "frame_stability": 0.9
+    },
+    "shot_length_profile": {
+      "avg_seconds": 12,
+      "min_seconds": 6,
+      "max_seconds": 45,
+      "long_take_probability": 0.3,
+      "extended_take_probability": 0.2,
+      "use_frame_stitching": true,
+      "stitch_strategy": "last_frame_to_first",
+      "max_segments": 3
+    },
+    "lighting_policy": {
+      "base_color_temp_K": 5500,
+      "color_temp_variation_K": 800,
+      "lighting_ratio_range": [
+        2.0,
+        4.0
+      ],
+      "practical_sources": [
+        "LED_panels",
+        "holographic_displays",
+        "neon_signs",
+        "screen_glow"
+      ]
+    },
+    "beat_patterns": {
+      "discovery_revelation": "discovery_revelation",
+      "confrontation": "confrontation",
+      "investigation": "investigation",
+      "escape_pursuit": "escape_pursuit",
+      "dialogue_two_hander": "dialogue_two_hander",
+      "default_generic": "default_generic"
+    }
+  }
+}

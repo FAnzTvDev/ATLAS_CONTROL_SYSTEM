@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATLAS V36.3 — ARJ Review Dashboard</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0a0f;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,sans-serif;padding:12px}
+h1{text-align:center;font-size:20px;color:#a78bfa;margin:8px 0 4px}
+.subtitle{text-align:center;font-size:12px;color:#666;margin-bottom:16px}
+.scenes{display:flex;flex-direction:column;gap:20px}
+.scene-block{background:#111118;border-radius:12px;padding:12px;border:1px solid #1e1e2e}
+.scene-title{font-size:16px;font-weight:700;color:#60a5fa;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.scene-title .badge{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600}
+.badge-pass{background:#065f46;color:#6ee7b7}
+.badge-cost{background:#713f12;color:#fde68a}
+video{width:100%;border-radius:8px;background:#000;max-height:300px}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;margin-top:10px}
+.shot-card{background:#16161e;border-radius:8px;overflow:hidden;border:1px solid #2a2a3a}
+.shot-card.rejected{border-color:#7f1d1d}
+.shot-card.approved{border-color:#065f46}
+.shot-header{padding:8px 10px;display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600}
+.shot-header .id{color:#c4b5fd}
+.shot-header .score{font-size:14px}
+.score-pass{color:#6ee7b7}
+.score-fail{color:#fca5a5}
+.shot-video{width:100%;aspect-ratio:16/9;background:#000}
+.dims{padding:8px 10px;font-size:10px;line-height:1.5}
+.dim{margin-bottom:4px}
+.dim-name{color:#818cf8;font-weight:600;text-transform:uppercase;font-size:9px}
+.dim-text{color:#999}
+.regen-box{background:#1c1017;padding:6px 10px;font-size:10px;color:#fca5a5;border-top:1px solid #3b1a1a}
+.regen-box strong{color:#f87171}
+.stitch-section{margin-top:8px}
+.stitch-label{font-size:11px;color:#a78bfa;font-weight:600;margin-bottom:4px}
+.cost-row{display:flex;gap:12px;font-size:11px;color:#888;margin-top:6px;flex-wrap:wrap}
+.cost-row span{background:#1a1a24;padding:2px 8px;border-radius:4px}
+@media(max-width:600px){
+ .shots{grid-template-columns:1fr}
+ video{max-height:220px}
+}
+</style>
+</head>
+<body>
+<h1>ATLAS V36.3 — ARJ Review Dashboard</h1>
+<p class="subtitle">Auto-Revision Judge verdicts · 8 REJECTED → REGEN · 4 APPROVED first-pass · Mar 29 2026</p>
+<div class="scenes">
+
+  <div class="scene-block">
+    <div class="scene-title">
+      Scene 001 — Grand Foyer
+      <span class="badge badge-pass">R=0.881 · 3✅ 5❌</span>
+      <span class="badge badge-cost">$7.21</span>
+    </div>
+    <div class="stitch-section">
+      <div class="stitch-label">▶ Stitched Final</div>
+      <video controls preload="metadata" playsinline>
+        <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/final/scene_001.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="cost-row">
+      <span>Shots: 8</span>
+      <span>Regens: 5</span>
+      <span>Kling calls: 13</span>
+    </div>
+    <div class="shots">
+
+      <div class="shot-card approved">
+        <div class="shot-header">
+          <span class="id">✅ 001_E01</span>
+          <span class="score score-pass">0.72 APPROVE</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g1_001_E01.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 10.0s vs target 10.0s (1.00×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">No dialogue required.</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting is bright morning light, and dust sheets are visible, but the 'stained glass' and 'dark</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot is an interior wide shot of a foyer, completely contradicting the specification for an 'EXT</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">No characters required.</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">The character enters through the doors and pauses to scan the room, which aligns well with the beat</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame shows Eleanor standing in the foyer, which provides a stable point for a transition</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">No characters required.</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 2: 1 shots, 5s, 2 elements</span></div>
+          <div class="dim"><span class="dim-name">CHAIN</span> <span class="dim-text">Group 1 → reframed chain frame → group 2 start locked ✓</span></div>
+          <div class="dim"><span class="dim-name">HYBRID</span> <span class="dim-text">Group 2: INDEPENDENT — using own first frame as start_url</span></div>
+        </div>
+      </div>
+
+      <div class="shot-card rejected">
+        <div class="shot-header">
+          <span class="id">❌ 001_E02</span>
+          <span class="score score-fail">0.55 REJECT</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g2_001_E02.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 5.0s vs target 5.0s (1.01×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">No dialogue required.</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting suggests morning and dust motes are visible, but there are no dust sheets or explicit s</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot is a wide shot of the foyer with a character, completely contradicting the 'insert' and 'Ex</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">No characters required.</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">Eleanor pushes open the doors and pauses, but the shot was specified as an empty insert, and the cha</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame shows Eleanor standing in the doorway, which could transition to a shot of her enter</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">No characters required.</span></div>
+          <div class="dim"><span class="dim-name">CHAIN</span> <span class="dim-text">Group 2 → raw chain frame → group 3 start locked ✓</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 3: OK — 9.8MB — 114.3s</span></div>
+          <div class="dim"><span class="dim-name">HYBRID</span> <span class="dim-text">Group 3: INDEPENDENT — using own first frame as start_url</span></div>
+        </div>
+      </div>
+
+      <div class="shot-card rejected">
+        <div class="shot-header">
+          <span class="id">❌ 001_E03</span>
+          <span class="score score-fail">0.41 REJECT</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g3_001_E03.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 5.0s vs target 5.0s (1.01×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">No dialogue required.</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The first shot's lighting and metal texture convey a sense of faded elegance, but the overall clip i</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The first shot is an ECU insert of a door handle, but the clip immediately cuts to a medium shot of</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">No characters required.</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">The specified beat action 'Thomas trails his hand along the banister, eyes downcast' is not present</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The clip ends with a character speaking and moving, which does not cleanly transition from the speci</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">No characters required.</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 2: OK — 14.1MB — 261.6s</span></div>
+        </div>
+      </div>
+
+      <div class="shot-card rejected">
+        <div class="shot-header">
+          <span class="id">❌ 001_M01</span>
+          <span class="score score-fail">0.65 REJECT</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g4_001_M01.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 10.0s vs target 10.0s (1.00×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">No dialogue required.</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting suggests morning, and the room has a grand, slightly dusty feel, but there are no visib</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot starts as a medium two-shot but quickly cuts to a medium close-up of Eleanor, then a medium</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">The specification calls for a medium two-shot with Eleanor frame-left and Thomas frame-right, but th</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">Eleanor does push open a door and scan the room, but Thomas is not present in the initial shot as a</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame is a medium close-up of Thomas, which could transition to another shot, but it doesn</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">Both Eleanor and Thomas maintain consistent appearances throughout their respective shots in the cli</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 3: OK — 9.5MB — 233.0s</span></div>
+        </div>
+      </div>
+
+      <div class="shot-card rejected">
+        <div class="shot-header">
+          <span class="id">❌ 001_M02</span>
+          <span class="score score-fail">0.64 REJECT</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g5_001_M02.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 10.0s vs target 10.0s (1.00×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">Eleanor's mouth movements accurately sync with the spoken dialogue.</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting and color grade convey a melancholy and faded elegance, though perhaps a bit too bright</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot is a medium shot, but it starts with Thomas waist-up and then pans to include Eleanor, who</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">The specification calls for Eleanor frame-left facing right and Thomas frame-right facing left, but</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">Thomas does trail his hand along the banister, but his eyes are not consistently downcast, and he is</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame shows both characters looking forward, which could transition to a variety of next s</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">Both Eleanor and Thomas maintain consistent appearances throughout the clip, matching their descript</span></div>
+          <div class="dim"><span class="dim-name">VISION</span> <span class="dim-text">006_M02: analysis error — [Errno 1] Operation not permitted: 'pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g2_006_M02.mp4_vcheck</span></div>
+          <div class="dim"><span class="dim-name">UI</span> <span class="dim-text">Wrote video_url to 4 shots in shot_plan.json → UI will now show videos</span></div>
+          <div class="dim"><span class="dim-name">STITCH</span> <span class="dim-text">scene006_lite.mp4: 5.7MB (duplicate frames dropped)</span></div>
+          <div class="dim"><span class="dim-name">LEARNING</span> <span class="dim-text">RenderLearningAgent unavailable: cannot import name 'RenderLearningAgent' from 'perpetual_learning' (/sessions/clever-focused-knuth/mnt/ATLAS_CONTROL_</span></div>
+          <div class="dim"><span class="dim-name">CHAIN</span> <span class="dim-text">Group 5 → reframed chain frame → group 6 start locked ✓</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 6: OK — 10.3MB — 276.9s</span></div>
+        </div>
+      </div>
+
+      <div class="shot-card approved">
+        <div class="shot-header">
+          <span class="id">✅ 001_M03</span>
+          <span class="score score-pass">0.76 APPROVE</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g6_001_M03.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 10.0s vs target 10.0s (1.00×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">Eleanor's mouth movements perfectly match the spoken dialogue.</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting and color grade convey a serious, professional atmosphere, but the 'grief' aspect is le</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot is an over-the-shoulder, but Eleanor (speaker) is in the foreground, and Thomas (listener)</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">Eleanor, the speaker, is positioned in the foreground on the left, while Thomas, the listener, is in</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">Eleanor opens a briefcase and pulls out a folder, but the table does not appear dusty.</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame shows Eleanor looking at Thomas, which could transition to a reaction shot, but her</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">Both Eleanor and Thomas maintain consistent appearances throughout the clip.</span></div>
+          <div class="dim"><span class="dim-name">CHAIN</span> <span class="dim-text">Group 6 → reframed chain frame → group 7 start locked ✓</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 7: OK — 8.4MB — 282.3s</span></div>
+        </div>
+      </div>
+
+      <div class="shot-card rejected">
+        <div class="shot-header">
+          <span class="id">❌ 001_M04</span>
+          <span class="score score-fail">0.82 REJECT</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g7_001_M04.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 10.0s vs target 10.0s (1.00×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">Eleanor's mouth movements perfectly match the spoken dialogue.</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting and color grade create a serious atmosphere, but the 'portrait watching from above' asp</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot is a perfect over-the-shoulder shot with Thomas's back and shoulder in the left foreground</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">Characters are correctly positioned with Thomas in the foreground left and Eleanor in the midground</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">Thomas does not gaze up at the painting; his head remains level, looking forward, which contradicts</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame is stable and suitable for a transition to the next shot.</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">Both Eleanor and Thomas maintain consistent appearances throughout the clip, matching their descript</span></div>
+          <div class="dim"><span class="dim-name">CHAIN</span> <span class="dim-text">Group 7 → reframed chain frame → group 8 start locked ✓</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 8: OK — 5.7MB — 200.1s</span></div>
+        </div>
+      </div>
+
+      <div class="shot-card approved">
+        <div class="shot-header">
+          <span class="id">✅ 001_M05</span>
+          <span class="score score-pass">0.93 APPROVE</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g8_001_M05.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 5.0s vs target 5.0s (1.01×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">No dialogue required.</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting and color grade create a formal, slightly somber atmosphere suitable for a grand estate</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot is wide, with the characters appearing relatively small in the frame, effectively emphasizi</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">Two characters are present and positioned naturally in the center of the room, facing each other, th</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">The visual accurately depicts Eleanor and Thomas in a grand foyer, with the room's decor contributin</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame is stable and provides a clean visual for a transition, though the characters' stati</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">The characters generally maintain their specified appearances throughout the clip, though Thomas's s</span></div>
+          <div class="dim"><span class="dim-name">VISION</span> <span class="dim-text">001_M05: analysis error — [Errno 1] Operation not permitted: 'pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g8_001_M05.mp4_vcheck</span></div>
+          <div class="dim"><span class="dim-name">UI</span> <span class="dim-text">Wrote video_url to 8 shots in shot_plan.json → UI will now show videos</span></div>
+          <div class="dim"><span class="dim-name">STITCH</span> <span class="dim-text">scene001_lite.mp4: 6.9MB (duplicate frames dropped)</span></div>
+          <div class="dim"><span class="dim-name">LEARNING</span> <span class="dim-text">RenderLearningAgent unavailable: cannot import name 'RenderLearningAgent' from 'perpetual_learning' (/sessions/clever-focused-knuth/mnt/ATLAS_CONTROL_</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scene-block">
+    <div class="scene-title">
+      Scene 006 — Kitchen
+      <span class="badge badge-pass">R=0.906 · 1✅ 3❌</span>
+      <span class="badge badge-cost">$5.37</span>
+    </div>
+    <div class="stitch-section">
+      <div class="stitch-label">▶ Stitched Final</div>
+      <video controls preload="metadata" playsinline>
+        <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/final/scene_006.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="cost-row">
+      <span>Shots: 4</span>
+      <span>Regens: 3</span>
+      <span>Kling calls: 7</span>
+    </div>
+    <div class="shots">
+
+      <div class="shot-card rejected">
+        <div class="shot-header">
+          <span class="id">❌ 006_M01</span>
+          <span class="score score-fail">0.79 REJECT</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g1_006_M01.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 10.0s vs target 10.0s (1.00×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">Eleanor's mouth movements are mostly in sync with the spoken dialogue, with only very minor, brief d</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting is natural and the overall atmosphere conveys a sense of professional urgency and stres</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot is a perfect medium two-shot, framing both characters waist-up with the kitchen background</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">Eleanor is correctly positioned frame-left facing right, and Nadia is frame-right facing left, as sp</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">Eleanor is on the phone, but she does not pace; she remains stationary throughout the clip, which is</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame is a static shot of the two characters, which could transition to another shot, but</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">Both Eleanor and Nadia maintain consistent appearances throughout the clip, matching their descripti</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 2: OK — 4.5MB — 132.4s</span></div>
+        </div>
+      </div>
+
+      <div class="shot-card rejected">
+        <div class="shot-header">
+          <span class="id">❌ 006_M02</span>
+          <span class="score score-fail">0.59 REJECT</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g2_006_M02.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 10.0s vs target 10.0s (1.00×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">Nadia's mouth movements generally align with her dialogue, though there's a slight delay at the very</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting is natural and bright, and the atmosphere feels neutral, not specifically shifting from</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot is a medium single of Nadia, then a medium single of Eleanor, not a medium two-shot as spec</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">The shot is composed of two separate single shots of Nadia and Eleanor, not a two-shot with both cha</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">Nadia enters and speaks her lines, but she does not have a camera around her neck, and the shot is n</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame of Eleanor is a clean medium shot, which could transition to another shot, but it do</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">Both Nadia and Eleanor maintain consistent appearances throughout their respective parts of the clip</span></div>
+          <div class="dim"><span class="dim-name">CHAIN</span> <span class="dim-text">Group 2 → reframed chain frame → group 3 start locked ✓</span></div>
+          <div class="dim"><span class="dim-name">HYBRID</span> <span class="dim-text">Group 4: CHAIN_ANCHOR (001_M01) — own first frame starts chain</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 4: OK — 16.1MB — 250.8s</span></div>
+        </div>
+      </div>
+
+      <div class="shot-card approved">
+        <div class="shot-header">
+          <span class="id">✅ 006_M03</span>
+          <span class="score score-pass">0.78 APPROVE</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g3_006_M03.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 10.0s vs target 10.0s (1.00×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">Nadia's mouth movements are perfectly synced with the spoken dialogue.</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting and color grade create a serious and focused atmosphere, but lack the dramatic intensit</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot is an over-the-shoulder, but the listener (Eleanor) is in the left foreground and the speak</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">Eleanor is positioned in the left foreground and Nadia in the right mid-ground, which is the opposit</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">Nadia delivers the information clearly, but the 'hesitates' part of the beat action is not strongly</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame is stable and provides a clean cut-off, suitable for transitioning to the next shot.</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">Both Eleanor and Nadia maintain consistent appearances throughout the clip, matching their descripti</span></div>
+          <div class="dim"><span class="dim-name">CHAIN</span> <span class="dim-text">Group 4 → raw chain frame → group 5 start locked ✓</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 4: OK — 4.4MB — 199.9s</span></div>
+        </div>
+      </div>
+
+      <div class="shot-card rejected">
+        <div class="shot-header">
+          <span class="id">❌ 006_M04</span>
+          <span class="score score-fail">0.71 REJECT</span>
+        </div>
+        <video class="shot-video" controls preload="metadata" playsinline>
+          <source src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/videos_kling_lite/multishot_g4_006_M04.mp4" type="video/mp4">
+        </video>
+        <div class="dims">
+          <div class="dim"><span class="dim-name">duration_match</span> <span class="dim-text">Actual 5.0s vs target 5.0s (1.01×).</span></div>
+          <div class="dim"><span class="dim-name">dialogue_timing</span> <span class="dim-text">No dialogue required.</span></div>
+          <div class="dim"><span class="dim-name">cinematic_tone</span> <span class="dim-text">The lighting is bright and even, creating a somewhat stark and weighty atmosphere, though the room i</span></div>
+          <div class="dim"><span class="dim-name">camera_work</span> <span class="dim-text">The shot is wide, with characters small in the frame, but it is a full front shot rather than three-</span></div>
+          <div class="dim"><span class="dim-name">character_blocking</span> <span class="dim-text">Eleanor and Nadia are present and standing opposite each other in the center of the room, but the sp</span></div>
+          <div class="dim"><span class="dim-name">story_beat_accuracy</span> <span class="dim-text">The specified location is 'Hargrove Estate - Kitchen', but the video shows a plain, empty white room</span></div>
+          <div class="dim"><span class="dim-name">end_frame_continuity</span> <span class="dim-text">The final frame is stable and suitable for a transition to the next shot.</span></div>
+          <div class="dim"><span class="dim-name">identity_consistency</span> <span class="dim-text">Both characters maintain a consistent appearance throughout the clip, though Nadia's hair is not 'na</span></div>
+          <div class="dim"><span class="dim-name">MULTISHOT</span> <span class="dim-text">Group 5: OK — 13.8MB — 278.2s</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<p style="text-align:center;font-size:10px;color:#444;margin-top:16px">ATLAS V36.3 · Victorian Shadows EP1 · Generated by ARJ (Auto Revision Judge)</p>
+</body>
+</html>

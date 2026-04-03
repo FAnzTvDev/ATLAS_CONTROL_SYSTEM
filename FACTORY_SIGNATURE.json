@@ -1,0 +1,85 @@
+{
+  "version": "V17.1.0",
+  "generated_at": "2026-02-11T07:33:49.367132",
+  "factory_mode": "LOCKED",
+  "components": {
+    "schema": {
+      "file": "schemas/schema_v17.json",
+      "hash": "227286f0c12396c2"
+    },
+    "semantic_invariants": {
+      "file": "atlas_agents_v16_7/atlas_agents/semantic_invariants.py",
+      "hash": "abec692204410bdc"
+    },
+    "critic_gate": {
+      "file": "atlas_agents_v16_7/atlas_agents/critic_gate.py",
+      "hash": "7afc5dec6bf6feeb"
+    },
+    "ops_coordinator": {
+      "file": "atlas_agents_v16_7/atlas_agents/ops_coordinator.py",
+      "hash": "b1ac202c30e45076"
+    },
+    "canonical_hash": {
+      "file": "tools/canonical_hash.py",
+      "hash": "e351e334ed60c356"
+    },
+    "orchestrator_server": {
+      "file": "orchestrator_server.py",
+      "hash": "b6dd05f16324798d"
+    },
+    "auto_heal_gate": {
+      "file": "tools/auto_heal_gate.py",
+      "hash": "a98adf6a7a6ccf13"
+    },
+    "safe_io": {
+      "file": "tools/safe_io.py",
+      "hash": "b4622f32dfd95cef"
+    },
+    "smoke_test": {
+      "file": "tools/smoke_test_v17.py",
+      "hash": "f73b6cc2edc30d3c"
+    },
+    "cast_propagator": {
+      "file": "atlas_agents_v16_7/atlas_agents/cast_propagator.py",
+      "hash": "dad7490c59da7fa1"
+    }
+  },
+  "locked_models": {
+    "image": "fal-ai/nano-banana-pro",
+    "image_edit": "fal-ai/nano-banana-pro/edit",
+    "video": "fal-ai/ltx-2/image-to-video/fast",
+    "stitch": "ffmpeg"
+  },
+  "forbidden_models": [
+    "minimax",
+    "runway",
+    "pika",
+    "sora",
+    "flux",
+    "wan",
+    "omnihuman"
+  ],
+  "invariants": {
+    "total": 9,
+    "blocking": 7,
+    "warning": 2
+  },
+  "new_features": [
+    "full-pipeline endpoint",
+    "EXTRAS POOL handling",
+    "Fuzzy character name matching",
+    "Vision analysis (DINO+CLIP) in per-shot gate"
+  ],
+  "tools": [
+    "tools/canonical_hash.py",
+    "tools/replay_project.py",
+    "tools/validate_segment_integrity.py",
+    "tools/regression_matrix.py",
+    "tools/validate_model_swap.py",
+    "tools/factory_load_test.py",
+    "tools/auto_heal_gate.py",
+    "tools/safe_io.py",
+    "tools/smoke_test_v17.py"
+  ],
+  "combined_signature": "1674e165c4f95a864551f58e45576f0b13a9f5b59febe50cb7917d6fabba09ec"
+}

@@ -1,0 +1,56 @@
+{
+    "ELEANOR": {
+        "scenes": {
+            "BW_EP1_002": {
+                "wardrobe": {
+                    "outfit": {
+                        "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Eleanor_Vance.jpg",
+                        "description": "Turtleneck, cardigan, jeans, hiking boots"
+                    }
+                },
+                "props": {
+                    "journal": {
+                        "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Eleanor_Vance.jpg",
+                        "description": "Leather journal"
+                    }
+                }
+            }
+        }
+    },
+    "RHYS": {
+        "scenes": {
+            "BW_EP1_002": {
+                "wardrobe": {
+                    "outfit": {
+                        "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Father_Thomas_Rhys.jpg",
+                        "description": "Priest collar, black suit"
+                    }
+                },
+                "props": {
+                    "bag": {
+                        "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Father_Thomas_Rhys.jpg",
+                        "description": "Worn leather bag"
+                    }
+                }
+            }
+        }
+    },
+    "KENJI": {
+        "scenes": {
+            "BW_EP1_002": {
+                "wardrobe": {
+                    "outfit": {
+                        "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Kenji_Nakamura.jpg",
+                        "description": "Blazer, turtleneck, slacks"
+                    }
+                },
+                "props": {
+                    "camera": {
+                        "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Kenji_Nakamura.jpg",
+                        "description": "Camera"
+                    }
+                }
+            }
+        }
+    }
+}

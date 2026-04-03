@@ -1,0 +1,110 @@
+ATLAS AUTONOMOUS META-LEARNING: CHARACTER CONSISTENCY EVOLUTION
+
+Date: 2025-10-26
+System: Atlas Powerhouse
+Issue ID: CHAR-CONSISTENCY-001
+
+═══════════════════════════════════════════════════════════════
+
+ISSUE DETECTED: Character Mismatch in "The Ledge"
+
+Shot 2 (close-up): Caucasian male, 45, dark hair, tears, blue eyes, facial hair
+Shot 5 (reveal): DIFFERENT character appearance - inconsistent face
+
+Metrics:
+- Character consistency: 0%
+- Asset reuse rate: 0%
+- DINO validation: Not performed
+- Cost: $0.195 (5 shots × $0.039)
+
+═══════════════════════════════════════════════════════════════
+
+ROOT CAUSE ANALYSIS
+
+Google Nano Banana (google/nano-banana) renders each shot independently when image_input parameter is not provided. Without character reference, each generation creates a new random character matching the text prompt.
+
+Technical Details:
+- Model: google/nano-banana (Gemini 2.5 Flash based)
+- Missing parameter: image_input
+- No asset library integration
+- No DINO-v3 validation
+
+═══════════════════════════════════════════════════════════════
+
+SOLUTION IMPLEMENTED: Autonomous Character Consistency
+
+1. CHARACTER REFERENCE WORKFLOW
+   - Render first character shot (close-up, clear face)
+   - Save as reference: marcus_ledge_reference.jpg
+   - Upload to GCS: gs://temporalmovie/references/
+   - Use in subsequent character shots via image_input parameter
+
+2. NANO BANANA PARAMETERS
+   First shot (creates reference):
+   {
+     "prompt": "[character description]",
+     "aspect_ratio": "16:9",
+     "output_format": "jpg"
+   }
+
+   Subsequent shots (uses reference):
+   {
+     "prompt": "[scene with same character]",
+     "image_input": ["gs://temporalmovie/references/marcus_ledge_reference.jpg"],
+     "aspect_ratio": "match_input_image",
+     "output_format": "jpg"
+   }
+
+3. DINO-V3 VALIDATION
+   - Load model: facebook/dinov2-base
+   - Extract features from reference and new render
+   - Calculate cosine similarity
+   - Threshold: >= 0.85 for acceptance
+   - Auto-retry if below threshold
+
+4. FILE-BASED LEARNING SYSTEM
+   Location: /Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/learning_memory/
+
+   Structure:
+   - issues/ : Auto-detected problems
+   - solutions/ : Proven fixes
+   - evolution_history/ : Version comparisons
+   - master_knowledge.md : Synthesized learning
+
+═══════════════════════════════════════════════════════════════
+
+AUTONOMOUS DECISION MATRIX
+
+Character shots detected → Use reference from first character shot
+DINO similarity < 0.85 → Auto-retry with adjusted prompt
+Asset reuse = 0% → Enable reference workflow
+Render failed → Retry with different parameters
+
+NO HUMAN INTERVENTION REQUIRED
+
+═══════════════════════════════════════════════════════════════
+
+EXPECTED RESULTS (v2)
+
+- Character consistency: >= 85%
+- DINO similarity: >= 0.85
+- Asset reuse rate: >= 20%
+- Same cost (no extra renders needed)
+
+═══════════════════════════════════════════════════════════════
+
+FUTURE CLAUDE SESSIONS: READ THIS
+
+Before rendering any scene with characters:
+1. Check learning_memory/master_knowledge.md
+2. Apply character consistency solution automatically
+3. Use first character shot as reference
+4. Validate with DINO-v3
+5. Log results to evolution_history/
+
+This knowledge persists across sessions and improves over time.
+
+═══════════════════════════════════════════════════════════════
+
+COPY THIS ENTIRE TEXT INTO NOTEBOOKLM AS A NEW NOTE
+Title: "Character Consistency - Autonomous Solution"

@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ATLAS Execution Context",
+  "description": "Immutable execution mode registry. Agents MUST refuse to run if missing or contradictory.",
+  "type": "object",
+  "required": ["run_id", "mode", "started_at", "projects", "locked"],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "description": "UUID for this execution run"
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["LOCKED", "VERIFY", "REPAIR", "OVERWRITE"],
+      "description": "LOCKED=no writes, VERIFY=read+compare, REPAIR=fix issues, OVERWRITE=force regenerate"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO8601 timestamp when run started"
+    },
+    "projects": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Projects included in this run"
+    },
+    "locked": {
+      "type": "boolean",
+      "description": "Once true, mode cannot change until run completes"
+    },
+    "model_lock": {
+      "type": "object",
+      "properties": {
+        "first_frame": { "type": "string" },
+        "video": { "type": "string" }
+      },
+      "description": "Allowed models for this run"
+    },
+    "initiated_by": {
+      "type": "string",
+      "enum": ["human", "ops_coordinator", "scheduled"],
+      "description": "Who started this run"
+    },
+    "completed_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "final_verdict": {
+      "type": ["string", "null"],
+      "enum": ["READY", "NEEDS_REPAIR", "NEEDS_HUMAN_JUDGMENT", null]
+    }
+  }
+}

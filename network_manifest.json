@@ -1,0 +1,200 @@
+{
+  "_schema_version": "1.0",
+  "network_id": "atlas_network",
+  "network_name": "ATLAS AI Broadcast Network",
+  "programming_cycle_year": 2026,
+  "channels": [
+    {
+      "channel_id": "horror",
+      "channel_name": "Horror Channel",
+      "genre_dna": "horror",
+      "seasons_per_year": 26,
+      "series_per_season": 1,
+      "episodes_per_series": 7,
+      "airings_per_episode_48h": 4,
+      "time_block_hours": 12,
+      "series": [],
+      "_notes": "Slow-burn horror anthology. Each 7-episode series is a standalone story."
+    },
+    {
+      "channel_id": "sci_fi",
+      "channel_name": "Sci-Fi Channel",
+      "genre_dna": "sci_fi",
+      "seasons_per_year": 26,
+      "series_per_season": 1,
+      "episodes_per_series": 7,
+      "airings_per_episode_48h": 4,
+      "time_block_hours": 12,
+      "series": [],
+      "_notes": "Near-future science fiction. Hard sci-fi aesthetics."
+    },
+    {
+      "channel_id": "whodunnit",
+      "channel_name": "Whodunnit Channel",
+      "genre_dna": "whodunnit_drama",
+      "seasons_per_year": 26,
+      "series_per_season": 1,
+      "episodes_per_series": 7,
+      "airings_per_episode_48h": 4,
+      "time_block_hours": 12,
+      "series": [],
+      "_notes": "Victorian and modern mystery. ATLAS's first production: Victorian Shadows."
+    },
+    {
+      "channel_id": "rumble",
+      "channel_name": "Rumble Action Channel",
+      "genre_dna": "action",
+      "seasons_per_year": 26,
+      "series_per_season": 1,
+      "episodes_per_series": 7,
+      "airings_per_episode_48h": 4,
+      "time_block_hours": 12,
+      "series": [],
+      "_notes": "Action, fights, heists. Dynamic camera grammar."
+    },
+    {
+      "channel_id": "jokebox",
+      "channel_name": "Jokebox Comedy Channel",
+      "genre_dna": "comedy",
+      "seasons_per_year": 26,
+      "series_per_season": 1,
+      "episodes_per_series": 7,
+      "airings_per_episode_48h": 4,
+      "time_block_hours": 12,
+      "series": [],
+      "_notes": "Sitcoms, sketch comedy, stand-up narratives."
+    }
+  ],
+  "genre_dna_profiles": {
+    "horror": {
+      "genre_id": "horror",
+      "display_name": "Horror",
+      "lighting": "low-key, practical sources only, deep shadows, motivated single-source light",
+      "camera_grammar": "dutch angles for dread, slow push-ins on faces, static wide holds for isolation",
+      "avg_shot_length_seconds": 6,
+      "color_palette": "desaturated cold, deep blue shadows, amber practical sources, no warm fill",
+      "pacing": "slow burn with sharp cuts at scare beats, hold on reaction",
+      "axis_break_policy": "allowed at scare moments for disorientation",
+      "negative_prompt_additions": "bright cheerful lighting, warm color grade, shallow depth of field except extreme close-ups",
+      "nano_prompt_prefix": "HORROR ATMOSPHERE. Low-key lighting, deep shadows, practical sources. Cold desaturated color.",
+      "kling_mood_suffix": "tense slow movement, suspenseful hold",
+      "sound_design_notes": "silence punctuated by sudden audio, low-frequency dread tone",
+      "avg_scene_count_per_episode": 8,
+      "typical_shot_types": [
+        "establishing",
+        "medium",
+        "close_up",
+        "reaction",
+        "insert"
+      ]
+    },
+    "sci_fi": {
+      "genre_id": "sci_fi",
+      "display_name": "Science Fiction",
+      "lighting": "high-tech practical: LED strips, holographic sources, hard directional light",
+      "camera_grammar": "clean geometry, motivated dolly moves, eye-level for authority, low-angle for machines",
+      "avg_shot_length_seconds": 4,
+      "color_palette": "cool blues and teals, occasional warm amber accents, high contrast",
+      "pacing": "brisk cuts in action, deliberate holds on technology reveals",
+      "axis_break_policy": "strict 180 degree rule \u2014 this world has order",
+      "negative_prompt_additions": "warm candlelight, organic textures, period costumes",
+      "nano_prompt_prefix": "SCI-FI ENVIRONMENT. Clean geometric architecture, cool LED lighting, high-tech surfaces.",
+      "kling_mood_suffix": "controlled precise movement, technological world",
+      "sound_design_notes": "ambient hum, digital beeps, processed voices",
+      "avg_scene_count_per_episode": 10,
+      "typical_shot_types": [
+        "establishing",
+        "wide",
+        "medium",
+        "ots",
+        "insert"
+      ]
+    },
+    "whodunnit_drama": {
+      "genre_id": "whodunnit_drama",
+      "display_name": "Whodunnit Drama",
+      "lighting": "motivated naturalistic: window light, fireplace, practical lamps, soft fill only",
+      "camera_grammar": "slow deliberate moves, favors OTS dialogue pairs, close-ups on hands and objects",
+      "avg_shot_length_seconds": 8,
+      "color_palette": "warm amber interiors, cool exterior, desaturated shadows, rich jewel tones",
+      "pacing": "patient \u2014 let scenes breathe, hold on reaction shots",
+      "axis_break_policy": "strict 180 degree rule \u2014 spatial clarity is the mystery",
+      "negative_prompt_additions": "artificial neon lighting, fast paced editing, sci-fi elements",
+      "nano_prompt_prefix": "PERIOD DRAMA. Naturalistic lighting, warm interiors, rich textiles and wood.",
+      "kling_mood_suffix": "deliberate controlled movement, period-appropriate gesture",
+      "sound_design_notes": "ambient room tone, clock ticks, distant rain, fireplace crackle",
+      "avg_scene_count_per_episode": 13,
+      "typical_shot_types": [
+        "establishing",
+        "medium",
+        "ots",
+        "close_up",
+        "reaction",
+        "insert"
+      ]
+    },
+    "action": {
+      "genre_id": "action",
+      "display_name": "Action / Rumble",
+      "lighting": "high-key when possible, but dynamic: explosions, muzzle flash, dust-filtered sunlight",
+      "camera_grammar": "handheld in fights, motivated crash zooms, low angle on heroes, aerial establishing",
+      "avg_shot_length_seconds": 2.5,
+      "color_palette": "high contrast, crushed blacks, golden hour orange, adrenaline teal",
+      "pacing": "rapid intercutting in action, brief holds after impact",
+      "axis_break_policy": "break axis intentionally during fight choreography for chaos",
+      "negative_prompt_additions": "static talking-head compositions, soft diffused light, leisurely pacing",
+      "nano_prompt_prefix": "ACTION SEQUENCE. Dynamic lighting, high-contrast, kinetic energy.",
+      "kling_mood_suffix": "fast decisive movement, physical tension",
+      "sound_design_notes": "impact punches, whooshes, hyper-edited score",
+      "avg_scene_count_per_episode": 12,
+      "typical_shot_types": [
+        "establishing",
+        "wide",
+        "medium",
+        "close_up",
+        "reaction"
+      ]
+    },
+    "comedy": {
+      "genre_id": "comedy",
+      "display_name": "Comedy / Jokebox",
+      "lighting": "bright even fill, three-point lighting, no harsh shadows, warm friendly tone",
+      "camera_grammar": "wide singles for reaction, two-shots for rapport, occasional crash-zoom for gag",
+      "avg_shot_length_seconds": 5,
+      "color_palette": "warm saturated, bright primaries, clean backgrounds, no darkness",
+      "pacing": "tight \u2014 no hanging on a joke. Cut on the laugh or just before",
+      "axis_break_policy": "180 degree rule observed except for joke axis breaks",
+      "negative_prompt_additions": "dark shadows, horror atmosphere, desaturated grade, dutch angles",
+      "nano_prompt_prefix": "BRIGHT COMEDY SETTING. Warm even lighting, clean saturated colors, friendly space.",
+      "kling_mood_suffix": "expressive physical performance, energetic movement",
+      "sound_design_notes": "bright score, room tone, live-audience feel",
+      "avg_scene_count_per_episode": 10,
+      "typical_shot_types": [
+        "wide",
+        "medium",
+        "close_up",
+        "reaction",
+        "two_shot"
+      ]
+    }
+  },
+  "production_stats": {
+    "channels": 5,
+    "seasons_per_channel_per_year": 26,
+    "episodes_per_season": 7,
+    "total_episodes_per_year": 910,
+    "avg_runtime_minutes_per_episode": 10,
+    "total_unique_content_minutes": 9100,
+    "airings_per_episode_48h": 4,
+    "total_airings_per_year": 3640,
+    "avg_fal_calls_per_episode": 130,
+    "estimated_fal_calls_per_year": 118300,
+    "estimated_cost_per_episode_usd_low": 17,
+    "estimated_cost_per_episode_usd_high": 25,
+    "estimated_annual_cost_usd_low": 15470,
+    "estimated_annual_cost_usd_high": 22750,
+    "_cost_note": "Estimate based on: $0.03/nano frame \u00d7 100 shots, $0.81/Kling scene \u00d7 10 scenes/ep, 15% Wire A regen overhead. Excludes ElevenLabs audio and GCS storage."
+  },
+  "_created_at": "2026-03-27T15:57:35.819833",
+  "_last_updated": null
+}

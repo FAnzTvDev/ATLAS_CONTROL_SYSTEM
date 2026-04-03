@@ -1,0 +1,36 @@
+version: '3.8'
+
+# ATLAS Temporal.io Docker Compose
+# Start with: docker-compose -f docker-compose-temporal.yml up -d
+
+services:
+  temporal:
+    image: temporalio/auto-setup:latest
+    container_name: atlas-temporal
+    ports:
+      - "7233:7233"   # gRPC frontend
+      - "8233:8233"   # HTTP API
+    environment:
+      - DB=sqlite
+      - DYNAMIC_CONFIG_FILE_PATH=/etc/temporal/dynamicconfig.yaml
+    volumes:
+      - temporal-data:/var/lib/temporal
+    healthcheck:
+      test: ["CMD", "temporal", "workflow", "list", "--address", "localhost:7233"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  temporal-ui:
+    image: temporalio/ui:latest
+    container_name: atlas-temporal-ui
+    depends_on:
+      - temporal
+    ports:
+      - "8080:8080"   # Web UI
+    environment:
+      - TEMPORAL_ADDRESS=temporal:7233
+      - TEMPORAL_CORS_ORIGINS=http://localhost:3000,http://localhost:9999
+
+volumes:
+  temporal-data:

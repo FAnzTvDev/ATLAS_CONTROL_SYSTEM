@@ -1,0 +1,274 @@
+{
+  "ravencroft_gothic": {
+    "display_name": "Ravencroft Gothic",
+    "description": "Victorian ritual horror with characters dwarfed by architecture, tungsten-cool split lighting, and slow crane movement. Built from the Ravencroft Manor Story Bible (Episode 1 entry) and tuned to the ritual-room teaser.",
+    "defaults": {
+      "camera_move": "slow_crane_descending",
+      "lens_mm": 24,
+      "lighting_style": "tungsten_cool_split, 8:1 contrast, practical_shadows_stretch_long",
+      "blocking": "character_small_in_frame_rule_of_thirds_low, dwarfed by architecture",
+      "b_roll_mode": "environment_detail"
+    },
+    "prompt_tokens": [
+      "skeptical dread lingers",
+      "predator threshold camera motivation",
+      "obsidian and candle smoke palette",
+      "ritual geometry compressing the frame"
+    ],
+    "ltx_presets": {
+      "dread_build_wide": {"duration": 12, "ltx_duration_seconds": 24, "ltx_motion_metadata": "slow_crane_push"},
+      "lingering_medium": {"duration": 8, "ltx_duration_seconds": 18, "ltx_motion_metadata": "breathing_push"},
+      "candlelight_insert": {"duration": 4, "ltx_duration_seconds": 10, "ltx_motion_metadata": "macro_drift"},
+      "apparition_insert": {"duration": 6, "ltx_duration_seconds": 12, "ltx_motion_metadata": "ghost_dolly"},
+      "revelation_slow_dolly": {"duration": 10, "ltx_duration_seconds": 22, "ltx_motion_metadata": "slow_dolly"}
+    },
+    "nano_tags": [
+      "Victorian Gothic horror",
+      "ancient ritual chamber",
+      "misty candle smoke",
+      "raven feathers and obsidian stone"
+    ],
+    "character_visibility": {
+      "child_off_screen_until_beat": 2
+    },
+    "coverage_patterns": {
+      "TEASER_RITUAL_ROOM": {
+        "scene_description": "Layer 3 Scene Card S01 – Ritual Room (Past). Fear, tragedy, mystery.",
+        "beats": [
+          {
+            "beat": 1,
+            "story_moment": "Margaret chanting while watchers observe",
+            "templates": ["dread_build_wide", "lingering_medium", "detail_insert"]
+          },
+          {
+            "beat": 2,
+            "story_moment": "Child voice builds to scream, candles blow out",
+            "templates": ["revelation_slow_dolly", "apparition_insert", "detail_insert"]
+          }
+        ]
+      }
+    },
+    "coverage_system": {
+      "TEASER_RITUAL_ROOM": {
+        "story_blueprint": "Ritual goes wrong; built from Ravencroft template doc (Teaser).",
+        "shot_overrides": {
+          "TEASER_RITUAL_ROOM_000A": {
+            "timecode": "00:00-00:08",
+            "duration_seconds": 8,
+            "ltx_seconds": 16,
+            "focus": "Slow crane reveals altar geometry, watchers in masks",
+            "keywords": [
+              "chalk sigils glowing dull amber",
+              "child's toy casting long shadow",
+              "half-mask observers"
+            ],
+            "sound_design": "Low hymn + heartbeat rumble"
+          },
+          "TEASER_RITUAL_ROOM_000B": {
+            "timecode": "00:08-00:18",
+            "duration_seconds": 10,
+            "ltx_seconds": 18,
+            "focus": "Medium on Margaret, trembling hands clutching book",
+            "keywords": [
+              "leather grimoire pages fluttering",
+              "candle wax tears",
+              "Margaret's breath fogging"
+            ],
+            "sound_design": "Margaret's whisper + gust rattling rafters"
+          },
+          "TEASER_RITUAL_ROOM_000C": {
+            "timecode": "00:18-00:23",
+            "duration_seconds": 5,
+            "ltx_seconds": 10,
+            "focus": "Detail grid – toy, sigil, iron ring, blooded rune",
+            "keywords": [
+              "toy horse shadow stretching",
+              "iron rings sweating moisture",
+              "chalk sigil pulsing cobalt"
+            ],
+            "sound_design": "Chant echoes + child's shaky breath"
+          },
+          "TEASER_RITUAL_ROOM_001A": {
+            "timecode": "00:23-00:33",
+            "duration_seconds": 10,
+            "ltx_seconds": 18,
+            "focus": "Camera drifts toward doorway as child voice calls",
+            "keywords": [
+              "doorway yawns open",
+              "blue moonlight slicing through smoke",
+              "Margaret refusing to turn"
+            ],
+            "sound_design": "Child O.S. 'Gran? I'm scared' layered with wind gust"
+          },
+          "TEASER_RITUAL_ROOM_001B": {
+            "timecode": "00:33-00:41",
+            "duration_seconds": 8,
+            "ltx_seconds": 16,
+            "focus": "Watchers react; third mask tilts toward us, ritual energy distorts",
+            "keywords": [
+              "half-mask cracks revealing tears",
+              "candle flames bend inward",
+              "Margaret eyes shut tight"
+            ],
+            "sound_design": "Chant builds, dissonant strings"
+          },
+          "TEASER_RITUAL_ROOM_001C": {
+            "timecode": "00:41-00:48",
+            "duration_seconds": 7,
+            "ltx_seconds": 14,
+            "focus": "Candles blow out, scream detonates, glow from toy fades",
+            "keywords": [
+              "candlelight extinguishing in cascade",
+              "toy shadow reaching hand",
+              "smoke swallowing room"
+            ],
+            "sound_design": "PIERCING SCREAM + sudden silence"
+          }
+        }
+      }
+    }
+      ,
+      "RAVENCROFT_MANOR_EP1_001": {
+        "scene_description": "Scene 1 – Exterior gates, heir returns to the manor.",
+        "shot_overrides": {
+          "RAVENCROFT_MANOR_EP1_001_000A": {
+            "timecode": "00:00-00:10",
+            "duration_seconds": 10,
+            "ltx_seconds": 24,
+            "focus": "Slow crane glides over iron gates as carriage lanterns flare.",
+            "keywords": [
+              "sodium mist kissing wrought iron",
+              "skeptical dread in every squeaking hinge"
+            ],
+            "sound_design": "Distant thunder + heir's shallow breaths"
+          },
+          "RAVENCROFT_MANOR_EP1_001_000B": {
+            "timecode": "00:10-00:18",
+            "duration_seconds": 8,
+            "ltx_seconds": 18,
+            "focus": "Medium on heir gripping the carriage rail as manor awakens.",
+            "keywords": [
+              "gloved knuckles blanch",
+              "moon halos the manor roofline"
+            ],
+            "sound_design": "Low cello drag with whispering branches"
+          },
+          "RAVENCROFT_MANOR_EP1_001_000C": {
+            "timecode": "00:18-00:26",
+            "duration_seconds": 8,
+            "ltx_seconds": 16,
+            "focus": "Insert of carriage lamp sputtering; moths form sigil.",
+            "keywords": [
+              "moths colliding in predator threshold spiral",
+              "glass compression around flame"
+            ],
+            "sound_design": "Inverted heartbeat thump + lamp hiss"
+          }
+        }
+      },
+      "RAVENCROFT_MANOR_EP1_002": {
+        "scene_description": "Scene 2 – Interior vestibule, heir confronts staff.",
+        "shot_overrides": {
+          "RAVENCROFT_MANOR_EP1_002_000A": {
+            "timecode": "00:26-00:38",
+            "duration_seconds": 12,
+            "ltx_seconds": 20,
+            "focus": "Handheld drift past portraits as staff descend staircase.",
+            "keywords": [
+              "predator threshold camera motivation",
+              "portraits watching from gilt frames"
+            ],
+            "sound_design": "Faint metronome clicks + whispering servants"
+          },
+          "RAVENCROFT_MANOR_EP1_002_000B": {
+            "timecode": "00:38-00:48",
+            "duration_seconds": 10,
+            "ltx_seconds": 18,
+            "focus": "Two-shot of heir and housekeeper at staircase landing.",
+            "keywords": [
+              "half-lit faces, tungsten cool split",
+              "heir grips banister to steady breath"
+            ],
+            "sound_design": "Low strings, whispered 'Welcome home'"
+          },
+          "RAVENCROFT_MANOR_EP1_002_000C": {
+            "timecode": "00:48-00:55",
+            "duration_seconds": 7,
+            "ltx_seconds": 14,
+            "focus": "Insert: gloved hand touches dusty reliquary, sparks static.",
+            "keywords": [
+              "dust fractures in moon shaft",
+              "reliquary hum"
+            ],
+            "sound_design": "Glass friction swell"
+          }
+        }
+      },
+      "RAVENCROFT_MANOR_EP1_003": {
+        "scene_description": "Scene 3 – Interior corridor to nursery.",
+        "shot_overrides": {
+          "RAVENCROFT_MANOR_EP1_003_000A": {
+            "timecode": "00:55-01:05",
+            "duration_seconds": 10,
+            "ltx_seconds": 20,
+            "focus": "Tracking OTS as heir follows candle down corridor.",
+            "keywords": [
+              "walls breathe, wallpaper bulges",
+              "practical shadows stretch long"
+            ],
+            "sound_design": "Candle wax ticks like clock"
+          },
+          "RAVENCROFT_MANOR_EP1_003_000B": {
+            "timecode": "01:05-01:12",
+            "duration_seconds": 7,
+            "ltx_seconds": 14,
+            "focus": "Medium on heir pausing at nursery door, key trembling.",
+            "keywords": [
+              "key enamel flecked in moonlight",
+              "skeptical dread tears in eye"
+            ],
+            "sound_design": "Child O.S. hum reversed"
+          },
+          "RAVENCROFT_MANOR_EP1_003_000C": {
+            "timecode": "01:12-01:18",
+            "duration_seconds": 6,
+            "ltx_seconds": 12,
+            "focus": "Insert: candle flame bends toward door seam revealing breath.",
+            "keywords": [
+              "condensation halo",
+              "obsidian and candle smoke palette"
+            ],
+            "sound_design": "String harmonics + inhaled gasp"
+          }
+        }
+      }
+    }
+  },
+  "sicario_tension": {
+    "display_name": "Sicario Tension",
+    "description": "Grounded modern thriller language: handheld tension, long lenses, sodium vapor palettes.",
+    "defaults": {
+      "camera_move": "slow_push",
+      "lens_mm": 50,
+      "lighting_style": "sodium_vapor_vs_moonlight, 4:1_contrast",
+      "blocking": "characters_shoulder_to_shoulder, silhouette_edge_light",
+      "b_roll_mode": "handheld_insert"
+    },
+    "prompt_tokens": [
+      "oxygen thin, tactical whispers",
+      "sodium vapor haze collides with moonlight",
+      "operators exchanging skeptical dread glances"
+    ],
+    "ltx_presets": {
+      "handheld_insert": {"duration": 6, "ltx_duration_seconds": 12, "ltx_motion_metadata": "handheld_shake"},
+      "revelation_slow_dolly": {"duration": 8, "ltx_duration_seconds": 18, "ltx_motion_metadata": "precision_push"},
+      "dialogue_two_shot": {"duration": 10, "ltx_duration_seconds": 20, "ltx_motion_metadata": "dual_axis_slide"}
+    },
+    "nano_tags": [
+      "neon reflections",
+      "handheld tension",
+      "dust motes in air"
+    ],
+    "character_visibility": {}
+  }
+}

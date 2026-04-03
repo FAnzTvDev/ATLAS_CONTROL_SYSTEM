@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crown Heights EP1 — Higgsfield Soul Cinema Prompts</title>
+<style>
+  :root {
+    --bg: #0c0c0e;
+    --panel: #141417;
+    --card: #1a1a1f;
+    --border: #2a2a32;
+    --accent: #e05c3a;
+    --teal: #3ab8c4;
+    --amber: #e8a23a;
+    --text: #d4d4d8;
+    --muted: #6b6b78;
+    --green: #4ade80;
+    --code-bg: #0e0e12;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'SF Mono', 'Fira Code', monospace; font-size: 13px; }
+
+  .header {
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header h1 { font-size: 16px; font-family: -apple-system, sans-serif; font-weight: 600; color: #fff; letter-spacing: -0.3px; }
+  .header .meta { color: var(--muted); font-size: 11px; margin-top: 4px; }
+  .badge { display: inline-block; background: var(--accent); color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: 1px; }
+  .badge.teal { background: var(--teal); color: #000; }
+  .badge.amber { background: var(--amber); color: #000; }
+
+  .legend {
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 32px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--muted); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  .container { max-width: 1400px; margin: 0 auto; padding: 32px; }
+
+  .ref-gallery {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 36px;
+  }
+  .ref-gallery h3 { font-family: -apple-system, sans-serif; font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+  .ref-gallery-subtitle { font-size: 11px; color: var(--muted); margin-bottom: 14px; line-height: 1.5; }
+  .ref-strip { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px; }
+  .ref-strip img {
+    height: 110px;
+    width: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+    flex-shrink: 0;
+  }
+  .ref-strip img:hover { border-color: var(--teal); transform: scale(1.02); }
+  .ref-label { font-size: 10px; color: var(--muted); text-align: center; margin-top: 4px; }
+
+  .scene-header {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 24px;
+    margin-bottom: 24px;
+  }
+  .scene-header h2 { font-family: -apple-system, sans-serif; font-size: 15px; font-weight: 600; color: #fff; }
+  .scene-header .scene-meta { display: flex; gap: 16px; margin-top: 10px; }
+  .scene-stat { font-size: 11px; color: var(--muted); }
+  .scene-stat span { color: var(--text); font-weight: 600; }
+  .scene-dna {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 11px;
+    color: var(--teal);
+    line-height: 1.7;
+  }
+
+  .shot-grid { display: flex; flex-direction: column; gap: 20px; }
+
+  .shot-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .shot-card:hover { border-color: #3a3a48; }
+
+  .shot-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+    cursor: pointer;
+    user-select: none;
+  }
+  .shot-id { font-size: 13px; font-weight: 700; color: #fff; min-width: 80px; }
+  .shot-type-badge {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .type-establishing { background: #1e3a5f; color: #60a5fa; }
+  .type-broll { background: #1a2a1a; color: #4ade80; }
+  .type-medium { background: #2a1a2a; color: #c084fc; }
+  .type-reaction { background: #2a1a1a; color: var(--accent); }
+  .type-closing { background: #2a2a1a; color: var(--amber); }
+
+  .shot-chars { color: var(--muted); font-size: 11px; flex: 1; }
+  .shot-chars .char { display: inline-block; background: #1f2028; border: 1px solid var(--border); border-radius: 12px; padding: 2px 8px; margin-right: 4px; font-size: 10px; color: var(--text); }
+  .shot-toggle { color: var(--muted); font-size: 11px; margin-left: auto; }
+
+  .shot-body { padding: 0; }
+  .shot-body.collapsed { display: none; }
+
+  .caption-block {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    background: #12121a;
+  }
+  .caption-block .caption-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; }
+  .caption-block .caption-text { font-family: -apple-system, sans-serif; font-size: 14px; color: var(--text); line-height: 1.7; font-style: italic; }
+
+  .prompt-block {
+    padding: 16px 20px;
+  }
+  .prompt-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
+
+  .copy-btn {
+    background: #1e1e28;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 10px;
+    font-family: monospace;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    letter-spacing: 0.5px;
+  }
+  .copy-btn:hover { background: #282836; border-color: var(--teal); }
+  .copy-btn.copied { background: #0f2a1a; border-color: var(--green); color: var(--green); }
+
+  .prompt-json {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 11.5px;
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: pre;
+    color: #c9d1d9;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  .prompt-json::-webkit-scrollbar { width: 4px; height: 4px; }
+  .prompt-json::-webkit-scrollbar-track { background: transparent; }
+  .prompt-json::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+  /* JSON syntax highlighting */
+  .j-key { color: #79c0ff; }
+  .j-str { color: #a5d6ff; }
+  .j-num { color: #f0883e; }
+  .j-bool { color: #ff7b72; }
+
+  .atlas-vs {
+    padding: 14px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--panel);
+  }
+  .atlas-vs-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; }
+  .atlas-nano {
+    background: var(--code-bg);
+    border: 1px solid #1e3a2a;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 10.5px;
+    color: #4ade80;
+    line-height: 1.6;
+    max-height: 120px;
+    overflow-y: auto;
+  }
+
+  /* Lightbox */
+  .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 8px; box-shadow: 0 0 80px rgba(0,0,0,0.8); }
+  .lightbox-close { position: absolute; top: 20px; right: 24px; color: var(--text); font-size: 28px; cursor: pointer; }
+
+  .divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  .footer { padding: 24px 32px; border-top: 1px solid var(--border); color: var(--muted); font-size: 11px; display: flex; justify-content: space-between; }
+  .footer .rule { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Crown Heights EP1 — Soul Cinema Prompt Kit</h1>
+    <div class="meta">Higgsfield format · Scene 001 · 12 shots · Crown Heights Barbershop, Night</div>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center">
+    <span class="badge teal">HIGGSFIELD</span>
+    <span class="badge">SOUL CINEMA</span>
+    <span class="badge amber">SCENE 001</span>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="dot" style="background:#60a5fa"></div> Establishing</div>
+  <div class="legend-item"><div class="dot" style="background:#4ade80"></div> B-Roll / Insert</div>
+  <div class="legend-item"><div class="dot" style="background:#c084fc"></div> Medium / Dialogue</div>
+  <div class="legend-item"><div class="dot" style="background:#e05c3a"></div> Reaction / Close-Up</div>
+  <div class="legend-item"><div class="dot" style="background:#e8a23a"></div> Closing</div>
+  <div style="margin-left:auto;color:var(--muted);font-size:11px">Click any shot header to expand · Click images to enlarge</div>
+</div>
+
+<div class="container">
+
+  <!-- ATLAS REFERENCE GALLERY -->
+  <div class="ref-gallery">
+    <h3>ATLAS Reference — Victorian Shadows EP1 First Frames</h3>
+    <div class="ref-gallery-subtitle">
+      What ATLAS nano-banana-pro generates at full production quality. Use these as visual benchmarks when evaluating your Higgsfield outputs — look for: identity lock, room DNA consistency, lighting rig coherence across shots.
+    </div>
+    <div class="ref-strip">
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/001_E01.jpg" onclick="openLightbox(this.src)" alt="001_E01">
+        <div class="ref-label">001_E01 · Establishing</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/001_M01.jpg" onclick="openLightbox(this.src)" alt="001_M01">
+        <div class="ref-label">001_M01 · Character</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/001_M02.jpg" onclick="openLightbox(this.src)" alt="001_M02">
+        <div class="ref-label">001_M02 · Medium</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/001_M03.jpg" onclick="openLightbox(this.src)" alt="001_M03">
+        <div class="ref-label">001_M03 · OTS</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/001_M04.jpg" onclick="openLightbox(this.src)" alt="001_M04">
+        <div class="ref-label">001_M04 · Close</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/001_E02.jpg" onclick="openLightbox(this.src)" alt="001_E02">
+        <div class="ref-label">001_E02 · B-Roll</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/002_E01.jpg" onclick="openLightbox(this.src)" alt="002_E01">
+        <div class="ref-label">002_E01 · Sc002 Est.</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/002_M01.jpg" onclick="openLightbox(this.src)" alt="002_M01">
+        <div class="ref-label">002_M01 · Library</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/002_M02.jpg" onclick="openLightbox(this.src)" alt="002_M02">
+        <div class="ref-label">002_M02 · MCU</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/003_M01.jpg" onclick="openLightbox(this.src)" alt="003_M01">
+        <div class="ref-label">003_M01 · Sc003</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/004_M01.jpg" onclick="openLightbox(this.src)" alt="004_M01">
+        <div class="ref-label">004_M01 · Sc004</div>
+      </div>
+      <div>
+        <img src="pipeline_outputs/victorian_shadows_ep1/first_frames/005_M01.jpg" onclick="openLightbox(this.src)" alt="005_M01">
+        <div class="ref-label">005_M01 · Sc005</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE HEADER -->
+  <div class="scene-header">
+    <h2>SCENE 001 — EXT. CROWN HEIGHTS BARBERSHOP · NIGHT</h2>
+    <div class="scene-meta">
+      <div class="scene-stat">Shots: <span>12</span></div>
+      <div class="scene-stat">Characters: <span>MARCUS REID · DETECTIVE REYES</span></div>
+      <div class="scene-stat">Duration: <span>~60s</span></div>
+      <div class="scene-stat">Status: <span style="color:#e05c3a">NOT GENERATED</span></div>
+    </div>
+    <div class="scene-dna">
+[ROOM DNA] Brooklyn barbershop exterior, wet asphalt, metal security grate half-raised, vintage red barber pole unlit, plate glass window showing chairs + mirrors + family photos inside · Police tape strung across doorway · Emergency lights pulse blue/red from patrol cars off-frame
+[LIGHTING RIG] Blue/red emergency light key from off-frame left · Sodium streetlamp overhead amber fill · Wet pavement reflections double the light sources · High contrast noir shadows · Low-key overall
+[PALETTE] Deep navy shadows · Electric blue emergency flash · Blood-orange emergency red · Amber streetlamp pools · Black asphalt with mirror reflections
+[TONE] Muted desperation · Controlled grief beneath rigid composure · Urban noir — Brooklyn late night
+    </div>
+  </div>
+
+  <div class="shot-grid">
+
+    <!-- SHOT 001_001A -->
+    <div class="shot-card" id="card-001A">
+      <div class="shot-header" onclick="toggle('001A')">
+        <div class="shot-id">001_001A</div>
+        <span class="shot-type-badge type-establishing">Establishing</span>
+        <div class="shot-chars">No characters — environment only</div>
+        <div class="shot-toggle" id="toggle-001A">▼ expand</div>
+      </div>
+      <div class="shot-body collapsed" id="body-001A">
+        <div class="caption-block">
+          <div class="caption-label">Soul Cinema Caption</div>
+          <div class="caption-text">A Brooklyn barbershop at night — police tape across the door, emergency lights strobing blue and red against wet asphalt, the window reflecting a world turned inside out. The camera holds still as the chaos churns around an absence.</div>
+        </div>
+        <div class="prompt-block">
+          <div class="prompt-label">
+            <span>HIGGSFIELD PROMPT — COPY & PASTE</span>
+            <button class="copy-btn" onclick="copyPrompt('prompt-001A', this)">⌘ COPY JSON</button>
+          </div>
+          <div class="prompt-json" id="prompt-001A">{
+  "Caption": "A Brooklyn barbershop at night — police tape across the door, emergency lights strobing blue and red against wet asphalt, the window reflecting a world turned inside out. The camera holds still as the chaos churns around an absence.",
+  "STYLE": {
+    "Artistic Medium": "Photorealistic cinematic still",
+    "Aesthetic Movement / Genre": "Urban noir / contemporary crime drama",
+    "Cultural / Historical Influence": "Brooklyn street realism, 2020s — The Wire visual grammar meets Barry Jenkins colour sensitivity"
+  },
+  "COMPOSITION": {
+    "Framing": "Wide establishing — full barbershop facade, police tape in foreground, wet street in lower third",
+    "Layout": "Foreground: crime scene tape and wet asphalt reflections; Midground: barbershop entrance, security grate half-raised; Background: crowd silhouettes and emergency vehicles off-frame providing coloured light",
+    "Perspective": "Eye-level, slight telephoto compression pulling background crowd closer, 35mm equivalent"
+  },
+  "SCENE": {
+    "Subject Characteristics": "No characters in frame — environment as character",
+    "Setting": "Crown Heights Brooklyn barbershop exterior, night — vintage red barber pole unlit, plate glass window showing barber chairs and family photos inside, yellow crime scene tape across doorway, wet black asphalt reflecting emergency lights, metal security grate half-raised",
+    "Geographic / Cultural Context": "Crown Heights, Brooklyn — historically Black neighbourhood, contemporary night scene"
+  },
+  "CINEMATOGRAPHY_AND_LIGHTING": {
+    "Lighting Style": "Practical emergency light key — blue/red strobe pulse from police vehicles off-frame left, sodium streetlamp warm overhead fill, wet asphalt reflections multiply all light sources, high contrast with controlled shadow density",
+    "Color Palette": "Electric blue emergency flash, blood-orange emergency red, amber sodium overhead, deep navy shadows, mirror-black asphalt reflections",
+    "Overall Color Tone": "Cold blue dominant with warm red accent pulses — desaturated midtones, high contrast",
+    "Tone & Mood": "Dread contained in stillness — the calm shell of a life-changing moment, urban noir grief"
+  },
+  "CAMERA_AND_LENS": {
+    "Camera Type and Era": "Contemporary digital cinema",
+    "Lens Effects": "Gentle telephoto compression connecting crowd to facade, shallow focus on tape and entrance, background emergency lights render as coloured bokeh orbs",
+    "Depth of Field": "Moderate — tape and facade sharp, crowd background soft, emergency light bokeh prominent",
+    "Film Grain / Noise": "Subtle organic grain, pushed look consistent with night exterior low-light"
+  },
+  "PHYSICAL_ATTRIBUTES": {
+    "Material & Texture": "Wet asphalt surface with high-gloss light reflections, weathered metal security grate, plate glass window with condensation, worn plastic crime scene tape fluttering",
+    "Physics & Effects": "Strobing emergency light creating rhythmic colour pulse across the facade, rising steam from pavement grates catching blue light, police radio static implied by tension",
+    "Execution Style": "Photoreal — location-shot aesthetic, no VFX, tactile urban production design"
+  }
+}</div>
+        </div>
+        <div class="atlas-vs">
+          <div class="atlas-vs-label">ATLAS nano_prompt (current)</div>
+          <div class="atlas-nano">EXT CROWN HEIGHTS BARBERSHOP - NIGHT. Wide establishing shot of the barbershop exterior with pulsing red and blue police lights reflecting off wet asphalt. Cool blue/red emergency lighting, high contrast shadows, noir-like tension. Cinematic wide, no characters in frame yet, NO grid, NO collage, NO split screen...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOT 001_002B -->
+    <div class="shot-card" id="card-002B">
+      <div class="shot-header" onclick="toggle('002B')">
+        <div class="shot-id">001_002B</div>
+        <span class="shot-type-badge type-broll">B-Roll</span>
+        <div class="shot-chars">Insert — steam rising, wet pavement</div>
+        <div class="shot-toggle" id="toggle-002B">▼ expand</div>
+      </div>
+      <div class="shot-body collapsed" id="body-002B">
+        <div class="caption-block">
+          <div class="caption-label">Soul Cinema Caption</div>
+          <div class="caption-text">Close on wet Brooklyn asphalt — steam curling upward through a strobe of emergency blue, the pavement holding every colour of the night like a broken mirror.</div>
+        </div>
+        <div class="prompt-block">
+          <div class="prompt-label">
+            <span>HIGGSFIELD PROMPT — COPY & PASTE</span>
+            <button class="copy-btn" onclick="copyPrompt('prompt-002B', this)">⌘ COPY JSON</button>
+          </div>
+          <div class="prompt-json" id="prompt-002B">{
+  "Caption": "Close on wet Brooklyn asphalt — steam curling upward through a strobe of emergency blue, the pavement holding every colour of the night like a broken mirror.",
+  "STYLE": {
+    "Artistic Medium": "Photorealistic cinematic insert",
+    "Aesthetic Movement / Genre": "Urban noir texture study",
+    "Cultural / Historical Influence": "Spike Lee B-roll grammar — street texture as emotional punctuation"
+  },
+  "COMPOSITION": {
+    "Framing": "Extreme close-up — tight on steam and asphalt surface, no horizon visible",
+    "Layout": "Foreground: steam rising from pavement grate; Background: blurred emergency light reflections in water pooling on surface",
+    "Perspective": "Low angle, almost ground-level, camera 6 inches above the asphalt"
+  },
+  "SCENE": {
+    "Subject Characteristics": "No people — steam, water, and light are the subjects",
+    "Setting": "Wet Crown Heights sidewalk at night, emergency vehicles off-frame reflecting blue and red into standing water, steam rising from underground heat vents",
+    "Geographic / Cultural Context": "Brooklyn street surface — urban, nocturnal, charged with aftermath"
+  },
+  "CINEMATOGRAPHY_AND_LIGHTING": {
+    "Lighting Style": "Emergency vehicle practical light reflected in water — no direct source, all bounce and reflection, blue dominant with red pulse interruptions",
+    "Color Palette": "Electric cobalt blue water reflections, flashes of emergency red, dark wet charcoal asphalt, white steam catching blue light",
+    "Overall Color Tone": "Moody deep blue with high contrast steam whites",
+    "Tone & Mood": "Visceral and elemental — city breathing beneath the crime scene"
+  },
+  "CAMERA_AND_LENS": {
+    "Camera Type and Era": "Contemporary digital cinema",
+    "Lens Effects": "Macro-style extreme close-up, background light sources render as large soft bokeh orbs of blue and red",
+    "Depth of Field": "Extremely shallow — steam in sharp focus, background reflections completely dissolved into coloured light pools",
+    "Film Grain / Noise": "Visible grain pushed for night texture"
+  },
+  "PHYSICAL_ATTRIBUTES": {
+    "Material & Texture": "Wet asphalt grain, steam vapour catching blue light, pooling water with high-gloss reflections of coloured emergency lights",
+    "Physics & Effects": "Steam rising and diffusing in cold night air, water surface disturbed by footsteps creating expanding ripple reflections",
+    "Execution Style": "Photoreal macro — cinematic texture insert, no CGI"
+  }
+}</div>
+        </div>
+        <div class="atlas-vs">
+          <div class="atlas-vs-label">ATLAS nano_prompt (current)</div>
+          <div class="atlas-nano">Detail/insert shot: Close-up of steam rising from wet pavement. Cool blue/red emergency lighting, high contrast shadows, noir-like tension. No faces, environmental texture...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOT 001_003B -->
+    <div class="shot-card" id="card-003B">
+      <div class="shot-header" onclick="toggle('003B')">
+        <div class="shot-id">001_003B</div>
+        <span class="shot-type-badge type-broll">B-Roll</span>
+        <div class="shot-chars">Insert — crime scene tape</div>
+        <div class="shot-toggle" id="toggle-003B">▼ expand</div>
+      </div>
+      <div class="shot-body collapsed" id="body-003B">
+        <div class="caption-block">
+          <div class="caption-label">Soul Cinema Caption</div>
+          <div class="caption-text">A yellow ribbon of police tape flutters in the urban draft — the only movement in a held breath, its colour obscene against the blue-dark of the night.</div>
+        </div>
+        <div class="prompt-block">
+          <div class="prompt-label">
+            <span>HIGGSFIELD PROMPT — COPY & PASTE</span>
+            <button class="copy-btn" onclick="copyPrompt('prompt-003B', this)">⌘ COPY JSON</button>
+          </div>
+          <div class="prompt-json" id="prompt-003B">{
+  "Caption": "A yellow ribbon of police tape flutters in the urban draft — the only movement in a held breath, its colour obscene against the blue-dark of the night.",
+  "STYLE": {
+    "Artistic Medium": "Photorealistic cinematic insert",
+    "Aesthetic Movement / Genre": "Crime procedural texture insert — documentary realism",
+    "Cultural / Historical Influence": "Wire-era HBO texture inserts, urban documentary photography"
+  },
+  "COMPOSITION": {
+    "Framing": "Close insert — crime scene tape in partial focus, barbershop facade soft behind it",
+    "Layout": "Foreground: yellow tape crossing frame diagonally; Background: soft blue light on barbershop facade, blurred crowd",
+    "Perspective": "Eye-level, slight low angle to give the tape presence against the night sky"
+  },
+  "SCENE": {
+    "Subject Characteristics": "No people — crime scene tape as sole subject",
+    "Setting": "Police tape strung across Crown Heights barbershop entrance, night, emergency lights pulsing behind it, crowd silhouettes beyond",
+    "Geographic / Cultural Context": "Brooklyn crime scene — institutional yellow against neighbourhood night"
+  },
+  "CINEMATOGRAPHY_AND_LIGHTING": {
+    "Lighting Style": "Backlit tape with blue emergency light from behind — tape glows slightly against dark facade, foreground in shadow",
+    "Color Palette": "Acid yellow tape, deep navy background, electric blue backlighting on tape edges, crowd silhouettes as pure black shapes",
+    "Overall Color Tone": "High contrast — bright tape against near-black environment",
+    "Tone & Mood": "Bureaucratic finality — the tape as a threshold between what was and what can never be again"
+  },
+  "CAMERA_AND_LENS": {
+    "Camera Type and Era": "Contemporary digital cinema",
+    "Lens Effects": "Shallow focus on tape, background crowd and lights softly blurred into coloured shapes",
+    "Depth of Field": "Shallow — tape sharp, everything beyond soft",
+    "Film Grain / Noise": "Night-pushed grain texture"
+  },
+  "PHYSICAL_ATTRIBUTES": {
+    "Material & Texture": "Plastic crime tape with printed text partially readable, slight translucency when backlit, gentle flutter from air movement",
+    "Physics & Effects": "Tape billowing slightly in urban air current, slight blur on moving sections",
+    "Execution Style": "Photoreal — clean location documentary aesthetic"
+  }
+}</div>
+        </div>
+        <div class="atlas-vs">
+          <div class="atlas-vs-label">ATLAS nano_prompt (current)</div>
+          <div class="atlas-nano">Insert shot of yellow crime scene tape fluttering. Cool blue/red emergency lighting, high contrast shadows, noir-like tension. No faces, environmental texture...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOT 001_004B -->
+    <div class="shot-card" id="card-004B">
+      <div class="shot-header" onclick="toggle('004B')">
+        <div class="shot-id">001_004B</div>
+        <span class="shot-type-badge type-broll">B-Roll</span>
+        <div class="shot-chars">Insert — crowd faces in emergency light</div>
+        <div class="shot-toggle" id="toggle-004B">▼ expand</div>
+      </div>
+      <div class="shot-body collapsed" id="body-004B">
+        <div class="caption-block">
+          <div class="caption-label">Soul Cinema Caption</div>
+          <div class="caption-text">Faces in the crowd — neighbours, regulars, strangers — caught in the blue strobe of emergency lights, their expressions cycling through grief and shock and the particular exhaustion of this being familiar.</div>
+        </div>
+        <div class="prompt-block">
+          <div class="prompt-label">
+            <span>HIGGSFIELD PROMPT — COPY & PASTE</span>
+            <button class="copy-btn" onclick="copyPrompt('prompt-004B', this)">⌘ COPY JSON</button>
+          </div>
+          <div class="prompt-json" id="prompt-004B">{
+  "Caption": "Faces in the crowd — neighbours, regulars, strangers — caught in the blue strobe of emergency lights, their expressions cycling through grief and shock and the particular exhaustion of this being familiar.",
+  "STYLE": {
+    "Artistic Medium": "Photorealistic cinematic texture insert",
+    "Aesthetic Movement / Genre": "Observational crowd documentary — urban grief witness",
+    "Cultural / Historical Influence": "Gordon Parks street portraiture; Spike Lee crowd grammar; Brooklyn documentary tradition"
+  },
+  "COMPOSITION": {
+    "Framing": "Medium cluster of 3-4 faces in crowd, informal and observational",
+    "Layout": "Multiple faces at varying depths — foreground face sharp, others progressively softer behind",
+    "Perspective": "Eye-level, slightly compressed, observational camera reading the emotional temperature"
+  },
+  "SCENE": {
+    "Subject Characteristics": "Black and Latino neighbourhood residents, mixed ages 25-60, casual nighttime clothing — hoodies, puffy jackets, some still in work clothes, expressions of quiet grief and shock",
+    "Setting": "Night sidewalk crowd gathered at crime scene perimeter, emergency lights playing across faces from off-frame, yellow tape visible in background",
+    "Geographic / Cultural Context": "Crown Heights Brooklyn community gathering — residents who knew the barbershop, the family"
+  },
+  "CINEMATOGRAPHY_AND_LIGHTING": {
+    "Lighting Style": "Emergency vehicle strobe as primary light — blue and red pulses mapping faces in and out of shadow, ambient city glow as soft fill, no direct artificial key",
+    "Color Palette": "Blue-strobed skin tones, warm amber patches from streetlamps, dark clothing absorbing light, eyes catching blue flash",
+    "Overall Color Tone": "Cool blue dominant, flesh tones desaturated, high emotional contrast in faces",
+    "Tone & Mood": "Communal grief — the weight of a neighbourhood witnessing its own wound"
+  },
+  "CAMERA_AND_LENS": {
+    "Camera Type and Era": "Contemporary digital cinema",
+    "Lens Effects": "Telephoto compression pulling crowd together, shallow focus on foreground face, background faces soft",
+    "Depth of Field": "Shallow telephoto — foreground face sharp, depth layers dissolving into soft crowd mass",
+    "Film Grain / Noise": "Pushed night grain, slight blue channel noise from low light"
+  },
+  "PHYSICAL_ATTRIBUTES": {
+    "Material & Texture": "Human faces with visible skin texture and emotion micro-expressions, fabric of winter clothing catching emergency light, breath vapour in cold air",
+    "Physics & Effects": "Emergency light strobe rhythm casting rhythmic shadow movement across faces, slight movement blur on faces turning",
+    "Execution Style": "Photoreal — documentary-adjacent, naturalistic and unposed"
+  }
+}</div>
+        </div>
+        <div class="atlas-vs">
+          <div class="atlas-vs-label">ATLAS nano_prompt (current)</div>
+          <div class="atlas-nano">Medium shot of crowd faces illuminated by emergency lights. Cool blue/red emergency lighting, high contrast shadows, noir-like tension. No faces, environmental texture...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOT 001_005B -->
+    <div class="shot-card" id="card-005B">
+      <div class="shot-header" onclick="toggle('005B')">
+        <div class="shot-id">001_005B</div>
+        <span class="shot-type-badge type-medium">Medium</span>
+        <div class="shot-chars">
+          <span class="char">MARCUS REID</span>
+          <span class="char">DETECTIVE REYES</span>
+        </div>
+        <div class="shot-toggle" id="toggle-005B">▼ expand</div>
+      </div>
+      <div class="shot-body collapsed" id="body-005B">
+        <div class="caption-block">
+          <div class="caption-label">Soul Cinema Caption</div>
+          <div class="caption-text">A lean Black man in a navy suit pushes through the crowd with the controlled desperation of someone who has practised composure — his face a mask that hasn't decided whether to hold.</div>
+        </div>
+        <div class="prompt-block">
+          <div class="prompt-label">
+            <span>HIGGSFIELD PROMPT — COPY & PASTE</span>
+            <button class="copy-btn" onclick="copyPrompt('prompt-005B', this)">⌘ COPY JSON</button>
+          </div>
+          <div class="prompt-json" id="prompt-005B">{
+  "Caption": "A lean Black man in a navy suit pushes through the crowd with the controlled desperation of someone who has practised composure — his face a mask that hasn't decided whether to hold.",
+  "STYLE": {
+    "Artistic Medium": "Photorealistic cinematic still",
+    "Aesthetic Movement / Genre": "Contemporary urban drama — grief in motion",
+    "Cultural / Historical Influence": "Moonlight physical performance grammar; Barry Jenkins soul cinema; Brooklyn middle-class grief"
+  },
+  "COMPOSITION": {
+    "Framing": "Medium wide — subject waist-up, pushing through crowd, crime scene in background",
+    "Layout": "Subject centre-frame, crowd parting slightly around him, yellow tape and barbershop facade in background right",
+    "Perspective": "Eye-level, slight tracking feel — camera moving with him"
+  },
+  "SCENE": {
+    "Subject Characteristics": "Black man, 32 years old, lean build, close-cropped fade haircut, wearing a fitted navy suit with no tie, white dress shirt open at collar. Rigid jaw, tight expression — controlled grief, eyes locked forward. Suit slightly out of place in the street context — he came from somewhere important.",
+    "Setting": "Crown Heights barbershop exterior crime scene, night — pushing through neighbour crowd, police tape 10 feet ahead, emergency lights pulsing blue",
+    "Geographic / Cultural Context": "Black professional returning to his neighbourhood in crisis — the tension between two worlds visible in his clothes and his urgency"
+  },
+  "CINEMATOGRAPHY_AND_LIGHTING": {
+    "Lighting Style": "Emergency blue key from ahead, catching his face as he moves toward it — rim lighting on shoulders from streetlamp behind, crowd in shadow around him",
+    "Color Palette": "Navy suit absorbing blue emergency light, white shirt catching blue flash, warm amber rim on shoulders, dark crowd background",
+    "Overall Color Tone": "Cold blue forward, warm amber behind — subject moving between two colour temperatures",
+    "Tone & Mood": "Controlled urgency — a man refusing to fall apart in public until he understands what he has lost"
+  },
+  "CAMERA_AND_LENS": {
+    "Camera Type and Era": "Contemporary digital cinema",
+    "Lens Effects": "Medium telephoto compression, shallow focus keeping subject sharp against softly blurred crowd",
+    "Depth of Field": "Moderate shallow — subject sharp, crowd soft, emergency lights rendering as bokeh orbs",
+    "Film Grain / Noise": "Night-pushed grain texture, slightly elevated for emotional weight"
+  },
+  "PHYSICAL_ATTRIBUTES": {
+    "Material & Texture": "Fine navy suit fabric catching light, white cotton shirt collar, close-cropped hair with fade, visible facial tension in jaw and brow",
+    "Physics & Effects": "Natural shoulder movement of pushing through crowd, suit jacket shifting with motion",
+    "Execution Style": "Photoreal — naturalistic performance capture aesthetic, no staged quality"
+  }
+}</div>
+        </div>
+        <div class="atlas-vs">
+          <div class="atlas-vs-label">ATLAS nano_prompt (current)</div>
+          <div class="atlas-nano">Medium shot. MARCUS REID (32, lean, close-cropped fade, fitted navy suit with no tie, white shirt open at collar) pushes through the crowd. His face is rigid. A UNIFORMED OFFICER blocks his path. Marcus doesn't stop. MARCUS REID speaks: "That's my brother's shop. That's my"...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOT 001_006B -->
+    <div class="shot-card" id="card-006B">
+      <div class="shot-header" onclick="toggle('006B')">
+        <div class="shot-id">001_006B</div>
+        <span class="shot-type-badge type-medium">Medium · Dialogue</span>
+        <div class="shot-chars">
+          <span class="char">MARCUS REID</span>
+          <span class="char">DETECTIVE REYES</span>
+        </div>
+        <div class="shot-toggle" id="toggle-006B">▼ expand</div>
+      </div>
+      <div class="shot-body collapsed" id="body-006B">
+        <div class="caption-block">
+          <div class="caption-label">Soul Cinema Caption</div>
+          <div class="caption-text">A Latina detective steps between a grieving man and a uniformed officer — not to block him but to meet him. She studies his face with the practiced patience of someone who has learned that the first answer is never the true one.</div>
+        </div>
+        <div class="prompt-block">
+          <div class="prompt-label">
+            <span>HIGGSFIELD PROMPT — COPY & PASTE</span>
+            <button class="copy-btn" onclick="copyPrompt('prompt-006B', this)">⌘ COPY JSON</button>
+          </div>
+          <div class="prompt-json" id="prompt-006B">{
+  "Caption": "A Latina detective steps between a grieving man and a uniformed officer — not to block him but to meet him. She studies his face with the practiced patience of someone who has learned that the first answer is never the true one.",
+  "STYLE": {
+    "Artistic Medium": "Photorealistic cinematic still",
+    "Aesthetic Movement / Genre": "Urban crime drama — first encounter tension",
+    "Cultural / Historical Influence": "The Wire — the detective as institutionalised witness; Brooklyn Latina identity and professional authority"
+  },
+  "COMPOSITION": {
+    "Framing": "Medium two-shot — detective FRAME-LEFT, Marcus FRAME-RIGHT, tense space between them",
+    "Layout": "Two figures at conversational distance, detective facing camera slightly, Marcus three-quarter profile looking past her toward barbershop",
+    "Perspective": "Eye-level, slight authority angle on detective — she commands the space between them"
+  },
+  "SCENE": {
+    "Subject Characteristics": "DETECTIVE ELENA REYES: Latina woman, 38, medium build, sharp dark eyes, professional composure, wearing a dark navy blazer over a dark top, detective shield visible on belt, hair pulled back, minimal jewelry. Stands planted, studying Marcus with controlled intensity. MARCUS REID: Black man, 32, lean, close-cropped fade, navy suit open collar, facing slightly away toward barbershop window, jaw tight.",
+    "Setting": "Crown Heights barbershop exterior, night — police tape visible, crowd background soft, emergency lights playing over both figures",
+    "Geographic / Cultural Context": "Police-community first contact — two people who might be allies or adversaries, neither certain yet"
+  },
+  "CINEMATOGRAPHY_AND_LIGHTING": {
+    "Lighting Style": "Emergency blue as primary key catching both faces, soft amber fill from streetlamp warming the space between them, slight rim separation on both figures from background",
+    "Color Palette": "Both figures in dark clothing, blue emergency light on faces and shoulders, warm amber pocket between them, dark soft crowd background",
+    "Overall Color Tone": "Cool blue dominant with warm centre — two people in the same uncertain light",
+    "Tone & Mood": "First recognition — the quiet electricity of two people measuring each other, grief suspended in the moment of introduction"
+  },
+  "CAMERA_AND_LENS": {
+    "Camera Type and Era": "Contemporary digital cinema",
+    "Lens Effects": "Medium telephoto two-shot compression, crowd background soft, both subjects sharp, slight side-angle to read both faces simultaneously",
+    "Depth of Field": "Moderate — both subjects in sharp focus, background soft",
+    "Film Grain / Noise": "Organic night grain, pushed slightly for intimacy"
+  },
+  "PHYSICAL_ATTRIBUTES": {
+    "Material & Texture": "Navy blazer fabric, detective shield metallic glint catching blue light, navy suit material on Marcus, both faces with visible skin texture and controlled expression",
+    "Physics & Effects": "Natural body tension visible — detective planted and still, Marcus with suppressed forward momentum",
+    "Execution Style": "Photoreal — performance-driven two-shot, naturalistic and unposed"
+  }
+}</div>
+        </div>
+        <div class="atlas-vs">
+          <div class="atlas-vs-label">ATLAS nano_prompt (current)</div>
+          <div class="atlas-nano">DETECTIVE ELENA REYES (38, sharp eyes, navy blazer, detective shield on belt) steps between them. She studies Marcus for a beat too long. DETECTIVE REYES speaks: "Mr. Reid. I'm Detective Reyes. I'm sorry about your brother."...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOT 001_007B -->
+    <div class="shot-card" id="card-007B">
+      <div class="shot-header" onclick="toggle('007B')">
+        <div class="shot-id">001_007B</div>
+        <span class="shot-type-badge type-medium">Medium · Dialogue</span>
+        <div class="shot-chars">
+          <span class="char">MARCUS REID</span>
+          <span class="char">DETECTIVE REYES</span>
+        </div>
+        <div class="shot-toggle" id="toggle-007B">▼ expand</div>
+      </div>
+      <div class="shot-body collapsed" id="body-007B">
+        <div class="caption-block">
+          <div class="caption-label">Soul Cinema Caption</div>
+          <div class="caption-text">"Where is he?" — two words that carry three months of silence and a brother's weight. The detective's answer lands behind her eyes before it reaches her mouth.</div>
+        </div>
+        <div class="prompt-block">
+          <div class="prompt-label">
+            <span>HIGGSFIELD PROMPT — COPY & PASTE</span>
+            <button class="copy-btn" onclick="copyPrompt('prompt-007B', this)">⌘ COPY JSON</button>
+          </div>
+          <div class="prompt-json" id="prompt-007B">{
+  "Caption": "\"Where is he?\" — two words that carry three months of silence and a brother's weight. The detective's answer lands behind her eyes before it reaches her mouth.",
+  "STYLE": {
+    "Artistic Medium": "Photorealistic cinematic still",
+    "Aesthetic Movement / Genre": "Urban crime drama — emotional exchange",
+    "Cultural / Historical Influence": "Moonlight mid-shot intimacy — big emotional content carried in small physical performance"
+  },
+  "COMPOSITION": {
+    "Framing": "Medium OTS — over Detective Reyes' shoulder toward Marcus, his face catching the barbershop window light",
+    "Layout": "Reyes shoulder foreground left, Marcus three-quarter profile centre-right, barbershop window glowing behind him",
+    "Perspective": "Eye-level, slightly behind Reyes — aligned with her perspective, reading Marcus' face"
+  },
+  "SCENE": {
+    "Subject Characteristics": "MARCUS REID: Black man, 32, lean build, close-cropped fade, navy suit open collar, lips parting to deliver the line — vulnerability breaking through the rigid composure. DETECTIVE REYES: back of head and dark navy blazer shoulder in foreground, head slightly tilted listening.",
+    "Setting": "Barbershop exterior night — behind Marcus, the barbershop window reveals interior: barber chairs, mirrors, family photos still lit inside. The life visible behind the tape.",
+    "Geographic / Cultural Context": "The barbershop window as portal — Marcus facing what he walked away from, now unable to enter"
+  },
+  "CINEMATOGRAPHY_AND_LIGHTING": {
+    "Lighting Style": "Interior barbershop light spilling warm amber through window behind Marcus — his back-rim warm, face lit by cool emergency blue from ahead. Reyes shoulder in near-shadow foreground.",
+    "Color Palette": "Warm amber window spill on Marcus' neck/shoulder, cool blue emergency key on his face, dark navy Reyes shoulder in foreground, deep background of crowd",
+    "Overall Color Tone": "Warm-behind, cool-ahead — Marcus caught between his past (warm interior) and the present crisis (cold blue)",
+    "Tone & Mood": "Suppressed grief erupting as a single direct question — the controlled mask cracking just enough to ask the only thing that matters"
+  },
+  "CAMERA_AND_LENS": {
+    "Camera Type and Era": "Contemporary digital cinema",
+    "Lens Effects": "OTS framing with telephoto compression — Reyes shoulder soft in foreground, Marcus sharp, window behind softly glowing",
+    "Depth of Field": "Shallow OTS — foreground shoulder soft, Marcus sharp, background window as warm bokeh shape",
+    "Film Grain / Noise": "Night grain texture, warm amber grain visible in window spill areas"
+  },
+  "PHYSICAL_ATTRIBUTES": {
+    "Material & Texture": "Navy suit fabric on both figures, barbershop glass window with slight reflections and warm interior light visible through it, close-cropped hair texture on Marcus",
+    "Physics & Effects": "Subtle lip movement at the moment of the line, slight forward lean breaking his upright composure",
+    "Execution Style": "Photoreal — naturalistic performance with precise emotional micro-detail"
+  }
+}</div>
+        </div>
+        <div class="atlas-vs">
+          <div class="atlas-vs-label">ATLAS nano_prompt (current)</div>
+          <div class="atlas-nano">DETECTIVE REYES speaks: "sorry about your brother." MARCUS REID speaks: "Where is he?" DETECTIVE REYES speaks: "Behind the building. I need to ask..."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOT 001_010A -->
+    <div class="shot-card" id="card-010A">
+      <div class="shot-header" onclick="toggle('010A')">
+        <div class="shot-id">001_010A</div>
+        <span class="shot-type-badge type-medium">Medium</span>
+        <div class="shot-chars">
+          <span class="char">MARCUS REID</span>
+          <span style="color:var(--muted);font-size:11px">+ barbershop window</span>
+        </div>
+        <div class="shot-toggle" id="toggle-010A">▼ expand</div>
+      </div>
+      <div class="shot-body collapsed" id="body-010A">
+        <div class="caption-block">
+          <div class="caption-label">Soul Cinema Caption</div>
+          <div class="caption-text">Marcus stares through the barbershop window — the chairs, the mirrors, the photographs still on the wall. A life he walked away from, still there, still lit, still waiting for someone who will never walk back through the door.</div>
+        </div>
+        <div class="prompt-block">
+          <div class="prompt-label">
+            <span>HIGGSFIELD PROMPT — COPY & PASTE</span>
+            <button class="copy-btn" onclick="copyPrompt('prompt-010A', this)">⌘ COPY JSON</button>
+          </div>
+          <div class="prompt-json" id="prompt-010A">{
+  "Caption": "Marcus stares through the barbershop window — the chairs, the mirrors, the photographs still on the wall. A life he walked away from, still there, still lit, still waiting for someone who will never walk back through the door.",
+  "STYLE": {
+    "Artistic Medium": "Photorealistic cinematic still",
+    "Aesthetic Movement / Genre": "Soul cinema — memory and loss made spatial",
+    "Cultural / Historical Influence": "Barry Jenkins Moonlight visual grammar — looking as an act of grief; Black male interiority made visible"
+  },
+  "COMPOSITION": {
+    "Framing": "Medium — subject from waist up, three-quarter profile toward window, window fills right side of frame",
+    "Layout": "Marcus frame-left in profile; barbershop window frame-right revealing interior — chairs, mirrors, photos visible inside warm light; police tape below window edge",
+    "Perspective": "Eye-level, stationary — camera holding still as Marcus holds still, the moment stretching"
+  },
+  "SCENE": {
+    "Subject Characteristics": "Black man, 32, lean, close-cropped fade, navy suit open collar. Face in three-quarter profile, eyes fixed on window interior. Expression: the particular stillness of someone holding something together by refusing to move. Slight tension visible in jaw and throat.",
+    "Setting": "Barbershop exterior night — the window reveals interior still lit: red leather barber chairs, mirrors with hair product bottles, framed family photographs and community posters on walls, a life intact inside the tape",
+    "Geographic / Cultural Context": "The barbershop as sacred community space — three months of estrangement collapsed in a single look through glass"
+  },
+  "CINEMATOGRAPHY_AND_LIGHTING": {
+    "Lighting Style": "Warm amber interior window spill as key on right side of Marcus' face, cool emergency blue from behind/left as rim, creating split-lighting — two worlds on one face",
+    "Color Palette": "Warm amber interior visible through window (orange-gold chairs, warm photos), cool blue on Marcus' left shoulder and hair, deep navy shadow on his right side",
+    "Overall Color Tone": "Split — warm past visible through glass, cold present surrounding him",
+    "Tone & Mood": "The suspended moment between what was and what now is — grief crystallised into a stare"
+  },
+  "CAMERA_AND_LENS": {
+    "Camera Type and Era": "Contemporary digital cinema",
+    "Lens Effects": "Medium frame with window as secondary subject — Marcus slightly soft profile, window interior rendered sharply enough to read chairs and photos but not clinically detailed",
+    "Depth of Field": "Moderate — both Marcus and window interior readable, crowd beyond the window soft",
+    "Film Grain / Noise": "Organic grain, warm in window area, cool in shadow areas"
+  },
+  "PHYSICAL_ATTRIBUTES": {
+    "Material & Texture": "Barbershop plate glass window with slight reflections of street behind Marcus, interior lit with practical fixtures showing warm textures — red leather chairs, chrome mirrors, paper photographs",
+    "Physics & Effects": "Absolute stillness — subject not moving, the frame holding breath with him. Window glass shows faint double-reflection of street lights.",
+    "Execution Style": "Photoreal — naturalistic, emotionally precise production design in interior visible through glass"
+  }
+}</div>
+        </div>
+        <div class="atlas-vs">
+          <div class="atlas-vs-label">ATLAS nano_prompt (current)</div>
+          <div class="atlas-nano">Marcus stares past her at the barbershop. Through the glass, he can see the chairs, the mirrors, the photographs on the wall. A life he walked away from...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOT 001_011C -->
+    <div class="shot-card" id="card-011C">
+      <div class="shot-header" onclick="toggle('011C')">
+        <div class="shot-id">001_011C</div>
+        <span class="shot-type-badge type-reaction">Reaction · Close-Up</span>
+        <div class="shot-chars">
+          <span class="char">MARCUS REID</span>
+        </div>
+        <div class="shot-toggle" id="toggle-011C">▼ expand</div>
+      </div>
+      <div class="shot-body collapsed" id="body-011C">
+        <div class="caption-block">
+          <div class="caption-label">Soul Cinema Caption</div>
+          <div class="caption-text">A close-up of Marcus Reid — the blue emergency light rendering his face in cold geometric shadow, his eyes somewhere between the detective's words and three months of silence. The mask holds. Just barely.</div>
+        </div>
+        <div class="prompt-block">
+          <div class="prompt-label">
+            <span>HIGGSFIELD PROMPT — COPY & PASTE</span>
+            <button class="copy-btn" onclick="copyPrompt('prompt-011C', this)">⌘ COPY JSON</button>
+          </div>
+          <div class="prompt-json" id="prompt-011C">{
+  "Caption": "A close-up of Marcus Reid — the blue emergency light rendering his face in cold geometric shadow, his eyes somewhere between the detective's words and three months of silence. The mask holds. Just barely.",
+  "STYLE": {
+    "Artistic Medium": "Photorealistic cinematic close-up",
+    "Aesthetic Movement / Genre": "Soul cinema close-up — Black male interiority",
+    "Cultural / Historical Influence": "Moonlight close-up grammar — the face as landscape; Gordon Parks portrait intensity"
+  },
+  "COMPOSITION": {
+    "Framing": "Close-up — face fills 75% of frame, slight off-axis composition",
+    "Layout": "Face centre-left, shallow depth background showing soft blue emergency light bokeh right",
+    "Perspective": "Eye-level, slight off-axis — camera aligned with Reyes' eyeline, reading Marcus' face as she does"
+  },
+  "SCENE": {
+    "Subject Characteristics": "Black man, 32 years old, lean face with defined jaw and cheekbones, close-cropped fade haircut, dark eyes catching blue emergency light. Expression: controlled grief on the edge of breaking — jaw set, a micro-tension around the eyes, the slight elevation of the chin that signals refused vulnerability. Suit collar visible at bottom of frame.",
+    "Setting": "Crown Heights exterior night — background is pure blue/dark bokeh of emergency lights and crowd",
+    "Geographic / Cultural Context": "A man performing composure for an authority figure while containing a private earthquake"
+  },
+  "CINEMATOGRAPHY_AND_LIGHTING": {
+    "Lighting Style": "Emergency blue as sole key — hard-edged Rembrandt pattern from front-left, creating precise shadow geometry across his face. Small amber catch light in eyes from distant streetlamp. No fill — shadow side near-black.",
+    "Color Palette": "Blue-lit skin tones on key side, near-black shadow on fill side, amber micro-catchlight in eyes, blue bokeh orbs in background",
+    "Overall Color Tone": "Cold blue portrait — high contrast, emotionally precise shadow geometry",
+    "Tone & Mood": "The interior storm made briefly visible — grief, guilt, and composure fighting in a face trained to show nothing"
+  },
+  "CAMERA_AND_LENS": {
+    "Camera Type and Era": "Contemporary digital cinema",
+    "Lens Effects": "Tight frame, face fills most of image, background completely dissolved into coloured bokeh — no architectural detail visible behind him",
+    "Depth of Field": "Extremely shallow — sharp focus on eyes and forehead, slight softness on ears, background pure bokeh",
+    "Film Grain / Noise": "Night grain prominent — emotional texture in the shadow side"
+  },
+  "PHYSICAL_ATTRIBUTES": {
+    "Material & Texture": "Skin texture visible — pores, slight perspiration sheen from tension, close-cropped fade hair texture with precise edge lineup, suit collar fabric at bottom edge",
+    "Physics & Effects": "Micro-movement in jaw muscles indicating suppressed emotion, eyes tracking slightly — not entirely still",
+    "Execution Style": "Photoreal portrait — naturalistic performance captured with intimate precision"
+  }
+}</div>
+        </div>
+        <div class="atlas-vs">
+          <div class="atlas-vs-label">ATLAS nano_prompt (current)</div>
+          <div class="atlas-nano">Close-up reaction shot of MARCUS REID. Responding to Detective Reyes steps between Marcus and the officer - moment of recognition in her eyes. Cool blue/red emergency lighting, high contrast shadows, noir-like tension...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOT 001_012A -->
+    <div class="shot-card" id="card-012A">
+      <div class="shot-header" onclick="toggle('012A')">
+        <div class="shot-id">001_012A</div>
+        <span class="shot-type-badge type-closing">Closing</span>
+        <div class="shot-chars">
+          <span class="char">DETECTIVE REYES</span>
+          <span style="color:var(--muted);font-size:11px">— recognition close-up</span>
+        </div>
+        <div class="shot-toggle" id="toggle-012A">▼ expand</div>
+      </div>
+      <div class="shot-body collapsed" id="body-012A">
+        <div class="caption-block">
+          <div class="caption-label">Soul Cinema Caption</div>
+          <div class="caption-text">Detective Reyes watching Marcus — not as a detective watches a suspect, but as someone who recognises something they've spent years trying to forget. The flicker crosses her eyes and is gone, professional composure reclaiming the territory immediately.</div>
+        </div>
+        <div class="prompt-block">
+          <div class="prompt-label">
+            <span>HIGGSFIELD PROMPT — COPY & PASTE</span>
+            <button class="copy-btn" onclick="copyPrompt('prompt-012A', this)">⌘ COPY JSON</button>
+          </div>
+          <div class="prompt-json" id="prompt-012A">{
+  "Caption": "Detective Reyes watching Marcus — not as a detective watches a suspect, but as someone who recognises something they've spent years trying to forget. The flicker crosses her eyes and is gone.",
+  "STYLE": {
+    "Artistic Medium": "Photorealistic cinematic close-up",
+    "Aesthetic Movement / Genre": "Contemporary noir close — the detective's interiority",
+    "Cultural / Historical Influence": "Latina professional identity in institutional spaces — precision and composure as survival; Chloe Zhao intimate close-up grammar"
+  },
+  "COMPOSITION": {
+    "Framing": "Close-up — face fills 70% of frame, slight profile angle toward Marcus off-screen right",
+    "Layout": "Face centre-right, emergency light bokeh left background, slight depth of crowd behind",
+    "Perspective": "Eye-level, slight reverse of previous shots — we're now seeing what Marcus sees when he looks at her"
+  },
+  "SCENE": {
+    "Subject Characteristics": "Latina woman, 38, medium build, sharp dark eyes, professional composure — navy blazer, dark hair pulled back, minimal jewelry. Expression: controlled recognition — the flicker of something personal breaking through the professional mask for just a fraction of a second. Sharp intelligence in the eyes. The face of someone who reads people for a living and has just read something unexpected.",
+    "Setting": "Crown Heights exterior night — background soft blue emergency light bokeh, crowd shapes dissolved into darkness",
+    "Geographic / Cultural Context": "A detective encountering something that tests her professional detachment — the scene closing on her recognition, not his grief"
+  },
+  "CINEMATOGRAPHY_AND_LIGHTING": {
+    "Lighting Style": "Emergency blue as primary key from Marcus' direction (off-screen right) — the light that hits her face is the same light hitting his, establishing visual and emotional connection. Soft amber fill from left. Shadow under cheekbones.",
+    "Color Palette": "Blue-lit face, dark navy blazer dissolving into background, amber micro-catchlights in dark eyes, blue-dark background bokeh",
+    "Overall Color Tone": "Cool blue close — controlled and precise, like her",
+    "Tone & Mood": "Professional composure containing a private recognition — the scene's final question mark, held in her eyes"
+  },
+  "CAMERA_AND_LENS": {
+    "Camera Type and Era": "Contemporary digital cinema",
+    "Lens Effects": "Tight close-up, face sharp, background all bokeh — intimate and isolating",
+    "Depth of Field": "Very shallow — eyes and face sharp, everything beyond soft coloured bokeh",
+    "Film Grain / Noise": "Night grain, emotionally present, slightly warm in amber zones"
+  },
+  "PHYSICAL_ATTRIBUTES": {
+    "Material & Texture": "Dark olive skin catching blue key light, hair with slight sheen, navy blazer lapel visible at frame bottom, eyes with controlled micro-expression",
+    "Physics & Effects": "A subtle breath, a near-imperceptible blink, the exact stillness of professional composure actively maintained",
+    "Execution Style": "Photoreal — intimate performance close-up, the scene's emotional resolution held in restraint"
+  }
+}</div>
+        </div>
+        <div class="atlas-vs">
+          <div class="atlas-vs-label">ATLAS nano_prompt (current)</div>
+          <div class="atlas-nano">Close-up on Reyes' face as she studies Marcus with that flicker of recognition. Cool blue/red emergency lighting, high contrast shadows, noir-like tension. Cinematic composition...</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end shot-grid -->
+
+  <hr class="divider">
+
+  <!-- TRANSLATION RULES -->
+  <div class="ref-gallery">
+    <h3>TRANSLATION RULES — JSON → ATLAS</h3>
+    <div class="ref-gallery-subtitle" style="color:var(--text);line-height:1.9;font-size:12px">
+      <strong style="color:var(--teal)">Camera brands → visual descriptions:</strong> "Arri Alexa" becomes "face fills 75% of frame, background compressed flat" · Zeiss/Cooke → "shallow focus with soft background" · numeric f-stops → "extremely shallow" / "moderate depth of field"<br>
+      <strong style="color:var(--teal)">Film stocks → tone language:</strong> "35mm emulation" → "organic night grain texture" · "Kodak 2383" → "warm halation in highlights, lifted blacks"<br>
+      <strong style="color:var(--teal)">Caption → semantic anchor:</strong> Your Caption field carries directly into the ATLAS nano_prompt as the opening sentence — it's the strongest signal FAL receives<br>
+      <strong style="color:var(--teal)">HEX values → skipped:</strong> FAL doesn't parse hex — translate to: "warm amber light at #e8a23a range" → "warm amber sodium light"<br>
+      <strong style="color:var(--teal)">GRAPHIC_DESIGN section → not used:</strong> Poster/typography specs are production design, not generation instructions — skip for FAL
+    </div>
+  </div>
+
+</div><!-- end container -->
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">×</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<div class="footer">
+  <div>Crown Heights EP1 · Soul Cinema Prompt Kit · Generated by ATLAS</div>
+  <div class="rule">T2-FE-2: Camera brands stripped · T2-FE-5: Film stocks stripped · T2-FE-27: Identity injected · T2-FE-24: Visual framing, not focal length</div>
+</div>
+
+<script>
+function toggle(id) {
+  const body = document.getElementById('body-' + id);
+  const tog = document.getElementById('toggle-' + id);
+  if (body.classList.contains('collapsed')) {
+    body.classList.remove('collapsed');
+    tog.textContent = '▲ collapse';
+  } else {
+    body.classList.add('collapsed');
+    tog.textContent = '▼ expand';
+  }
+}
+
+function copyPrompt(elemId, btn) {
+  const text = document.getElementById(elemId).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✓ COPIED';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = '⌘ COPY JSON';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// Auto-expand first shot on load
+toggle('001A');
+</script>
+</body>
+</html>

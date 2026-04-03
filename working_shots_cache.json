@@ -1,0 +1,253 @@
+{
+  "working_shots": {
+    "002_A_hospital_exterior.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_A_hospital_exterior.mp4",
+      "type": "character",
+      "duration": 8.04,
+      "size_mb": 2.52,
+      "scene": "002"
+    },
+    "002_B_hallway_empty.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_B_hallway_empty.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 1.64,
+      "scene": "002"
+    },
+    "002_C_door_closeup.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_C_door_closeup.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 1.33,
+      "scene": "002"
+    },
+    "002_D_security_camera_pov.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_D_security_camera_pov.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 0.54,
+      "scene": "002"
+    },
+    "002_E_marcus_sleeping.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_E_marcus_sleeping.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 1.59,
+      "scene": "002"
+    },
+    "002_F_bracelet_macro.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_F_bracelet_macro.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 1.82,
+      "scene": "002"
+    },
+    "002_G_marcus_eyes_open.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_G_marcus_eyes_open.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 1.16,
+      "scene": "002"
+    },
+    "002_H_marcus_sits_up.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_H_marcus_sits_up.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 1.1,
+      "scene": "002"
+    },
+    "002_I_bracelet_transform.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_I_bracelet_transform.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 1.51,
+      "scene": "002"
+    },
+    "002_J_marcus_realization.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_J_marcus_realization.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 1.02,
+      "scene": "002"
+    },
+    "002_K_walls_glitch.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_K_walls_glitch.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 2.25,
+      "scene": "002"
+    },
+    "002_L_marcus_stands.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_L_marcus_stands.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 1.15,
+      "scene": "002"
+    },
+    "002_bracelet_macro.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_bracelet_macro.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.51,
+      "scene": "002"
+    },
+    "002_closeup_realization.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_closeup_realization.mp4",
+      "type": "environment",
+      "duration": 8.04,
+      "size_mb": 2.05,
+      "scene": "002"
+    },
+    "002_environment_glitch.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_environment_glitch.mp4",
+      "type": "environment",
+      "duration": 8.04,
+      "size_mb": 2.8,
+      "scene": "002"
+    },
+    "002_marcus_understanding.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_marcus_understanding.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 1.84,
+      "scene": "002"
+    },
+    "002_medium_ots.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_medium_ots.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 1.98,
+      "scene": "002"
+    },
+    "002_wide_profile.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/002_wide_profile.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 1.87,
+      "scene": "002"
+    },
+    "003_flashback_ancient.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/003_flashback_ancient.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.55,
+      "scene": "003"
+    },
+    "003_power_unleashed.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/003_power_unleashed.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.13,
+      "scene": "003"
+    },
+    "003_reality_collision.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/003_reality_collision.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.87,
+      "scene": "003"
+    },
+    "003_revelation_closeup.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/003_revelation_closeup.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.39,
+      "scene": "003"
+    },
+    "003_touch_scar.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/003_touch_scar.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.63,
+      "scene": "003"
+    },
+    "003_transformation.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/003_transformation.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 1.89,
+      "scene": "003"
+    },
+    "004_alarm_activation.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/004_alarm_activation.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.54,
+      "scene": "004"
+    },
+    "004_chen_react.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/004_chen_react.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.06,
+      "scene": "004"
+    },
+    "004_containment_field.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/004_containment_field.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.76,
+      "scene": "004"
+    },
+    "004_guards_mobilize.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/004_guards_mobilize.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.56,
+      "scene": "004"
+    },
+    "004_marcus_post_power.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/004_marcus_post_power.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 2.2,
+      "scene": "004"
+    },
+    "004_other_cells_reveal.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/004_other_cells_reveal.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 3.16,
+      "scene": "004"
+    },
+    "004_standoff_closeup.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/004_standoff_closeup.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 1.68,
+      "scene": "004"
+    },
+    "005_chen_monitors.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/005_chen_monitors.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.29,
+      "scene": "005"
+    },
+    "005_containment_field_wide.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/005_containment_field_wide.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 3.42,
+      "scene": "005"
+    },
+    "005_field_stress_closeup.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/005_field_stress_closeup.mp4",
+      "type": "environment",
+      "duration": 6.12,
+      "size_mb": 2.73,
+      "scene": "005"
+    },
+    "005_marcus_tests_field.mp4": {
+      "path": "/Users/quantum/Desktop/atlas_output/nano_banana/005_marcus_tests_field.mp4",
+      "type": "character",
+      "duration": 6.12,
+      "size_mb": 2.24,
+      "scene": "005"
+    }
+  },
+  "failed_shots": [],
+  "character_library": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked",
+  "total_working": 35,
+  "total_failed": 0
+}

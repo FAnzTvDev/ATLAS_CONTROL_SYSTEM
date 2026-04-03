@@ -1,0 +1,141 @@
+{
+  "teaser_workflow": {
+    "date_started": "2025-11-26",
+    "status": "Shot 1 Complete, Bootstrap Ready",
+    "phase": "8.9 Enhanced Methods",
+
+    "shots_completed": {
+      "total": 6,
+      "rendered": 1,
+      "pending": 5,
+      "shots": [
+        {
+          "shot_id": "TEASER_RITUAL_ROOM_000A",
+          "status": "complete",
+          "path": "/Users/quantum/Desktop/atlas_output/nano_banana/TEASER_RITUAL_ROOM_000A.jpg",
+          "endpoint_used": "/text-to-image",
+          "character_refs_used": 0,
+          "timestamp": "2025-11-26T08:13:47Z"
+        },
+        {
+          "shot_id": "TEASER_RITUAL_ROOM_000B",
+          "status": "pending",
+          "requires": "character_refs_from_shot_1"
+        },
+        {
+          "shot_id": "TEASER_RITUAL_ROOM_000C",
+          "status": "pending",
+          "requires": "character_refs_from_shot_1"
+        },
+        {
+          "shot_id": "TEASER_RITUAL_ROOM_001A",
+          "status": "pending",
+          "requires": "character_refs_from_shot_1"
+        },
+        {
+          "shot_id": "TEASER_RITUAL_ROOM_001B",
+          "status": "pending",
+          "requires": "character_refs_from_shot_1"
+        },
+        {
+          "shot_id": "TEASER_RITUAL_ROOM_001C",
+          "status": "pending",
+          "requires": "character_refs_from_shot_1"
+        }
+      ]
+    },
+
+    "character_references": {
+      "required": ["Lady Margaret", "Child", "Shadowy Figures"],
+      "available": [],
+      "library_path": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/",
+      "bootstrap_source": "TEASER_RITUAL_ROOM_000A.jpg",
+      "status": "needs_extraction"
+    },
+
+    "critical_discoveries": {
+      "api_endpoint_issue": {
+        "problem": "Using /text-to-image instead of /edit when no refs loaded",
+        "impact": "No facial consistency, no asset grid, pure text generation",
+        "solution": "Bootstrap character refs from Shot 1, then use /edit for all subsequent shots",
+        "code_location": "nano_banana_executor.py:2208-2215"
+      },
+      "scene_contamination": {
+        "problem": "Scene 003-004 showed hospital/modern elements instead of Victorian",
+        "cause": "Wrong lighting prompts in full episode manifest",
+        "solution": "Always render isolated TEASER manifest, validate prompts pre-flight",
+        "prevention": "Add period_authentic constraints"
+      },
+      "ui_not_loading": {
+        "problem": "Orchestrator UI not accessible",
+        "cause": "Server not running",
+        "solution": "python3 orchestrator_server.py &",
+        "check": "curl http://localhost:8888/health"
+      },
+      "missing_props": {
+        "problem": "Props not in prompts initially",
+        "solution": "Manually injected into TEASER_FINAL.json",
+        "automation_needed": "Auto-parse props from scene descriptions"
+      }
+    },
+
+    "manifests": {
+      "teaser_base": "manifests/TEASER_ravencroft.json",
+      "teaser_expanded": "manifests/TEASER_expanded.json",
+      "teaser_final": "manifests/TEASER_FINAL.json",
+      "episode_full": "manifests/ravencroft_episode_1_full_script.json"
+    },
+
+    "next_steps": {
+      "immediate": [
+        "Extract character refs from Shot 1",
+        "Restart orchestrator for UI",
+        "Render Shots 2-6 with /edit endpoint",
+        "Verify facial consistency"
+      ],
+      "short_term": [
+        "Generate video prompts for all 6 shots",
+        "Create LTX motion metadata",
+        "Apply workflow to Episode 1"
+      ],
+      "long_term": [
+        "Automate asset extraction",
+        "Vision validation per shot",
+        "Auto-retry on failures",
+        "Video pipeline integration"
+      ]
+    },
+
+    "validation": {
+      "shot_1_props_rendered": true,
+      "period_authentic": true,
+      "no_modern_contamination": true,
+      "character_descriptions_accurate": true,
+      "lighting_matches_script": true
+    },
+
+    "issues_resolved": [
+      "Identified wrong API endpoint usage",
+      "Fixed project folder routing (ravencroft_manor vs blackwood_estate)",
+      "Updated version label to Phase 8.9",
+      "Deleted contaminated Scene 003-004 renders",
+      "Created TEASER-only manifest with props"
+    ],
+
+    "issues_pending": [
+      "Character reference extraction",
+      "Orchestrator UI restart",
+      "Full 6-shot render",
+      "Video prompt generation"
+    ],
+
+    "system_state": {
+      "dinov2_vision": "loaded_but_not_validating",
+      "retry_manager": "active_max_3_retries",
+      "quantum_refiner": "initialized",
+      "asset_registry": "286_files_indexed",
+      "character_libraries": "5_projects_4986_refs",
+      "phase": "8.9_enhanced_methods"
+    }
+  }
+}

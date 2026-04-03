@@ -1,0 +1,1283 @@
+{
+  "episode_title": "Welcome to Blackwood",
+  "episode_number": 1,
+  "episode_theme": "Arrival and first night - seven strangers trapped in sentient house",
+  "story_bible_reference": "blackwood_story_bible.json",
+  "production_stats": {
+    "total_shots": 21
+  },
+  "scenes": [
+    {
+      "scene_number": 2,
+      "scene_id": "BW_EP1_002",
+      "scene_title": "ARRIVAL - ELEANOR & MARCUS AT GATES",
+      "scene_purpose": "Introduce leads, establish house's imposing presence and supernatural agency",
+      "location": "Exterior - Front Gates - Dusk",
+      "time": "Friday Oct 25, 2025 - 6:47 PM",
+      "characters_present": [
+        "Eleanor Vance",
+        "Marcus Sterling"
+      ],
+      "runtime_seconds": 150,
+      "tone": "gothic horror, atmospheric dread",
+      "atmosphere": "opulent decay and looming violence",
+      "dialogue_lines": 8,
+      "beats": [
+        {
+          "beat_number": 1,
+          "beat": "Eleanor and Marcus see the house",
+          "description": "Eleanor and Marcus's car pulls up to towering iron gates. Through the fog, Blackwood Estate looms - a Victorian monstrosity of turrets and broken windows.",
+          "goal": "Eleanor seeks confirmation this is the address from the cryptic invitation",
+          "conflict": "The gates are locked, and no one responds to the intercom",
+          "turn": "The gates swing open on their own with a metallic shriek",
+          "emotional_state": "anticipation → unease → dread",
+          "ghost_logic": "The house opened the gates without any visible mechanism or human intervention",
+          "narrative_tension": "Entering means accepting the house's invitation - there may be no turning back",
+          "plot_reversal_type": "trap",
+          "duration_seconds": 37,
+          "emotion_curve": "anticipation rising to unease",
+          "audio_perspective": "medium",
+          "character_action": "Eleanor and Marcus arrive, try intercom, gates open autonomously",
+          "revelation": "The house has agency and is inviting them in"
+        },
+        {
+          "beat_number": 2,
+          "beat": "Reluctant approach up the driveway",
+          "description": "Marcus drives slowly up the winding gravel driveway. The house seems to loom larger with each turn, its windows like watching eyes.",
+          "goal": "Marcus wants to maintain professional composure despite growing unease",
+          "conflict": "The driveway keeps extending, the house never seeming to get closer",
+          "turn": "They round a final bend and the house suddenly fills the entire windshield",
+          "emotional_state": "dread",
+          "ghost_logic": "Spatial distortion - the driveway was impossibly long, then abruptly short",
+          "narrative_tension": "Their sense of physical reality is already being manipulated",
+          "plot_reversal_type": "revelation",
+          "duration_seconds": 37,
+          "emotion_curve": "unease building to dread",
+          "audio_perspective": "interior_car",
+          "character_action": "Marcus drives, Eleanor watches house grow impossibly",
+          "revelation": "Space itself is warped around the house"
+        },
+        {
+          "beat_number": 3,
+          "beat": "Exit car, confronted by scale",
+          "description": "Eleanor and Marcus step out. The house towers above them, Gothic architecture twisted into something wrong. The front door is massive oak, slightly ajar.",
+          "goal": "Eleanor wants to document this moment - she takes out her phone",
+          "conflict": "Her phone shows no signal and the camera won't focus on the house",
+          "turn": "The phone dies completely, battery draining from 80% to zero",
+          "emotional_state": "dread",
+          "ghost_logic": "Technology fails in proximity to the house - it rejects outside documentation",
+          "narrative_tension": "No way to call for help or record evidence of what happens next",
+          "plot_reversal_type": "trap",
+          "duration_seconds": 37,
+          "emotion_curve": "dread to helplessness",
+          "audio_perspective": "exterior_close",
+          "character_action": "Exit car, Eleanor tries phone, phone dies",
+          "revelation": "The house rejects modern technology"
+        },
+        {
+          "beat_number": 4,
+          "beat": "Approach the open door",
+          "description": "They walk toward the entrance. The door creaks wider with each step, as if beckoning. Wind carries the smell of old wood, roses, and something sour underneath.",
+          "goal": "Marcus wants to ring the bell or knock - maintain civilized protocol",
+          "conflict": "There is no doorbell, and the door is already open - knocking feels absurd",
+          "turn": "A voice from inside calls 'Come in, we've been expecting you' - but they see no one",
+          "emotional_state": "dread",
+          "ghost_logic": "Disembodied voice that knows they are there",
+          "narrative_tension": "Someone - or something - is orchestrating their arrival",
+          "plot_reversal_type": "false_hope",
+          "duration_seconds": 37,
+          "emotion_curve": "dread to resignation",
+          "audio_perspective": "approach_distance",
+          "character_action": "Walk toward door, door opens wider, disembodied voice invites",
+          "revelation": "They are expected - this is a trap"
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "BW_EP1_002_001A",
+          "type": "wide",
+          "duration": 8,
+          "emotion_curve": "Apprehension",
+          "nano_prompt": "Low-angle ultra-wide of Eleanor and Marcus emerging from car at towering iron gates while Blackwood Estate LOOMS impossibly tall through fog.",
+          "ltx_motion_prompt": "Camera pushes forward from low angle while tilting vertically upward, revealing the house's oppressive scale as both characters step from the car dwarfed by iron and stone.",
+          "camera_motivation": "predator_approach",
+          "lighting_split": {
+            "exterior_cool": 0.75,
+            "interior_warm": 0.25
+          },
+          "atmospheric_density": 0.95,
+          "audio_perspective": "exterior_medium",
+          "human_first_frame": true,
+          "camera": "14mm ultra-wide with vertical tilt, slow push forward",
+          "lens_specs": "extreme wide angle, low angle, deep focus",
+          "lighting": "Dusk backlight from Victorian windows, fog diffusion",
+          "character_blocking": "Eleanor emerging passenger side, Marcus driver side, house looming background center",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 8,
+          "description": "CAM: 14mm ultra-wide low angle pushing forward with vertical tilt as car arrives at gates. REF: Eleanor Vance, Marcus Sterling. LIGHT: dusk glow through fog creating backlight halo on Victorian silhouette. BLOCK: Eleanor passenger side, Marcus driver side, both emerging from car with house towering impossibly tall background center.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center_left_third",
+            "secondary_subject": "Marcus Sterling",
+            "secondary_anchor": "center_right_third",
+            "camera_height": "ground_level",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": null,
+          "continuity_next": "BW_EP1_002_002B",
+          "continuity_note": "Match framing from scene BW_EP1_002 cold open and hand off cleanly to BW_EP1_002_002B.",
+          "timeline_role": "establishing_plate",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 14mm ultra-wide low angle at action start, honoring car at gates with house looming grounding.",
+            "end_pose": "Conclude with Eleanor passenger side, Marcus driver side, house towering background locked before cutting.",
+            "tempo": "8s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Hold ultra-wide distortion. Let house LOOM with vertical lines converging upward. Keep both characters visible establishing spatial relationships.",
+          "state_constraints": [
+            "Eleanor and Marcus remain at car throughout - no walking toward gates yet."
+          ],
+          "mindset_guidance": [
+            "house as predator",
+            "towering oppression via 14mm ultra-wide",
+            "fog as living entity",
+            "House looms like predator sizing up prey",
+            "Vertical lines converge to impossibility"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_002B",
+          "type": "medium",
+          "duration": 5,
+          "emotion_curve": "Anticipation",
+          "nano_prompt": "Medium shot on Eleanor pulling cryptic invitation from cardigan pocket, unfolding it with hopeful expression, comparing address to gate numbers.",
+          "ltx_motion_prompt": "Slow push-in as she unfolds the letter over 3 seconds, eyes scanning address line with neutral-to-hopeful expression, wire-frame glasses catching dusk light.",
+          "dialogue": [
+            {
+              "character": "Eleanor Vance",
+              "line": "This is it. 1428 Blackwood Lane."
+            }
+          ],
+          "dialogue_subtext": "She needs this to be the right place - the invitation is her lifeline.",
+          "camera_motivation": "empathic_close",
+          "lighting_split": {
+            "exterior_cool": 0.6,
+            "interior_warm": 0.4
+          },
+          "atmospheric_density": 0.85,
+          "audio_perspective": "dialogue_close",
+          "human_first_frame": true,
+          "camera": "50mm medium, slow push in",
+          "lens_specs": "portrait compression, shallow DOF on invitation letter",
+          "lighting": "Soft dusk key from frame left, fog glow fill",
+          "character_blocking": "Eleanor center frame, invitation paper in hands, comparing to gate post numbers",
+          "reference_needed": "Eleanor Vance",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 5,
+          "description": "CAM: 50mm medium push-in on Eleanor pulling invitation from pocket, unfolding carefully. REF: Eleanor Vance. LIGHT: soft dusk key left, fog fill. BLOCK: Eleanor center frame with invitation paper visible, comparing to rusted gate numbers.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "chest_height",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_002_001A",
+          "continuity_next": "BW_EP1_002_003C",
+          "continuity_note": "Match framing from BW_EP1_002_001A and hand off cleanly to BW_EP1_002_003C.",
+          "timeline_role": "dialogue_call",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 50mm medium at action start, honoring Eleanor center frame grounding.",
+            "end_pose": "Conclude with Eleanor holding invitation, comparing to gate numbers locked before cutting.",
+            "tempo": "5s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Keep invitation paper legible. Shallow DOF on letter. Track emotion from neutral to hopeful.",
+          "state_constraints": [
+            "Eleanor stands at passenger side of car, hasn't approached gates yet."
+          ],
+          "mindset_guidance": [
+            "ANTICIPATION keyframe START",
+            "Specific action: unfolding invitation",
+            "Neutral-to-hopeful expression progression"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_003C",
+          "type": "medium",
+          "duration": 6,
+          "emotion_curve": "Unease",
+          "nano_prompt": "Medium two-shot as Eleanor presses intercom button repeatedly with no response while Marcus's skeptical expression deepens beside her.",
+          "ltx_motion_prompt": "Handheld tracking holds as she presses button over 4 seconds, brow furrowing behind glasses, shoulders hunching with tension while Marcus crosses arms defensively.",
+          "dialogue": [
+            {
+              "character": "Marcus Sterling",
+              "line": "Maybe we should come back tomorrow. In daylight."
+            }
+          ],
+          "dialogue_subtext": "He's already regretting this and looking for an exit.",
+          "camera_motivation": "tension_build",
+          "lighting_split": {
+            "exterior_cool": 0.7,
+            "interior_warm": 0.3
+          },
+          "atmospheric_density": 0.85,
+          "audio_perspective": "dialogue_close",
+          "human_first_frame": true,
+          "camera": "50mm medium, handheld tracking",
+          "lens_specs": "medium depth keeping both figures readable",
+          "lighting": "Dusk fading to night, practical gate lamp",
+          "character_blocking": "Eleanor left-third pressing intercom, Marcus right-third arms crossed",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 50mm medium two-shot handheld tracking Eleanor pressing intercom, Marcus beside her. REF: Eleanor Vance, Marcus Sterling. LIGHT: fading dusk with gate lamp practical. BLOCK: Eleanor left-third repeatedly pressing button, Marcus right-third crossing arms defensively.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "left_third",
+            "secondary_subject": "Marcus Sterling",
+            "secondary_anchor": "right_third",
+            "camera_height": "waist_height",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": "BW_EP1_002_002B",
+          "continuity_next": "BW_EP1_002_004D",
+          "continuity_note": "Match framing from BW_EP1_002_002B and hand off cleanly to BW_EP1_002_004D.",
+          "timeline_role": "dialogue_response",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 50mm medium handheld at action start, honoring Eleanor left-third grounding.",
+            "end_pose": "Conclude with Eleanor pressing button, Marcus arms crossed locked before cutting.",
+            "tempo": "6s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Handheld adds tension. Track expression shift from anticipation to unease. Body language specific.",
+          "state_constraints": [
+            "Both characters at intercom panel, gates still closed and locked."
+          ],
+          "mindset_guidance": [
+            "UNEASE keyframe MIDDLE",
+            "Expression change: anticipation → unease",
+            "Body language: hunching, crossing arms"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_004D",
+          "type": "insert",
+          "duration": 4,
+          "emotion_curve": "Conflict/Isolation",
+          "nano_prompt": "Macro insert on Eleanor's finger pressing intercom button repeatedly, then hand pulling locked gate chain.",
+          "ltx_motion_prompt": "Locked macro holds as finger presses button three times with no response click, then hand pulls on chain showing padlock securing gates, rust flaking off metal.",
+          "camera_motivation": "forensic_detail",
+          "lighting_split": {
+            "exterior_cool": 0.8,
+            "interior_warm": 0.2
+          },
+          "atmospheric_density": 0.75,
+          "audio_perspective": "contact_close",
+          "human_first_frame": false,
+          "camera": "100mm macro insert, locked on detail",
+          "lens_specs": "extreme shallow DOF on button and chain",
+          "lighting": "Single gate lamp gleam on metal",
+          "character_blocking": "Hands centered, button and chain filling frame",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 4,
+          "description": "CAM: 100mm macro insert locked on button and chain. REF: environment detail. LIGHT: single gate lamp gleam on wet iron. BLOCK: finger pressing button center frame, then hand pulling chain showing padlock.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "insert",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "object_plane",
+            "depth_intent": "macro_plane"
+          },
+          "continuity_prev": "BW_EP1_002_003C",
+          "continuity_next": "BW_EP1_002_005E",
+          "continuity_note": "Match framing from BW_EP1_002_003C and hand off cleanly to BW_EP1_002_005E.",
+          "timeline_role": "detail_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 100mm macro locked off at action start, honoring button centered grounding.",
+            "end_pose": "Conclude with chain and padlock filling frame locked before cutting.",
+            "tempo": "4s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Macro stays perpendicular. Show obstacle: locked chain. Button unresponsive.",
+          "state_constraints": [
+            "Gates remain locked and chained throughout."
+          ],
+          "mindset_guidance": [
+            "Obstacle proof: gates are locked",
+            "Button non-functional: no connection",
+            "Forensic detail of barrier"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_005E",
+          "type": "closeup",
+          "duration": 5,
+          "emotion_curve": "Supernatural Dread",
+          "nano_prompt": "Extreme close-up on gate lever mechanism moving downward ON ITS OWN, rusty gears grinding autonomously with NO HAND visible.",
+          "ltx_motion_prompt": "Locked macro on mechanism as it moves downward over 4 seconds autonomously, gears grinding throughout motion, lever reaches bottom with final clank and dust falls.",
+          "camera_motivation": "impossible_proof",
+          "lighting_split": {
+            "exterior_cool": 0.8,
+            "interior_warm": 0.2
+          },
+          "atmospheric_density": 0.8,
+          "audio_perspective": "foley_close",
+          "human_first_frame": false,
+          "camera": "100mm macro, locked on mechanism",
+          "lens_specs": "macro depth on mechanical detail",
+          "lighting": "Rim light on moving gears, shadows deep",
+          "character_blocking": "NO HANDS - mechanism autonomous center frame",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 5,
+          "description": "CAM: 100mm macro locked on gate lever mechanism moving autonomously downward. REF: environment only - NO CHARACTER. LIGHT: rim on gears, deep shadow. BLOCK: mechanism center frame with NO HAND touching it throughout 4-second movement.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "insert",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "object_plane",
+            "depth_intent": "macro_plane"
+          },
+          "continuity_prev": "BW_EP1_002_004D",
+          "continuity_next": "BW_EP1_002_006F",
+          "continuity_note": "Match framing from BW_EP1_002_004D and hand off cleanly to BW_EP1_002_006F.",
+          "timeline_role": "symbol_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 100mm macro locked at action start, honoring mechanism at rest grounding.",
+            "end_pose": "Conclude with lever at bottom position, dust settling locked before cutting.",
+            "tempo": "5s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "CRITICAL: NO HAND in frame throughout. Mechanism moves autonomously. This proves ghost logic.",
+          "state_constraints": [
+            "NO characters in frame - mechanism moves by itself proving supernatural agency."
+          ],
+          "mindset_guidance": [
+            "Ghost logic PROOF: autonomous motion",
+            "NO HAND at any point in 4-second sequence",
+            "Mechanism as living entity"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_006F",
+          "type": "wide",
+          "duration": 6,
+          "emotion_curve": "Impossibility Revealed",
+          "nano_prompt": "Wide angle both massive iron gates swinging open SIMULTANEOUSLY over 5 seconds with fog swirling violently through widening gap.",
+          "ltx_motion_prompt": "Crane pull back reveals full scope as both gates swing open together autonomously, hinges creaking and echoing, no human figures anywhere near gates.",
+          "camera_motivation": "impossible_scope",
+          "lighting_split": {
+            "exterior_cool": 0.85,
+            "interior_warm": 0.15
+          },
+          "atmospheric_density": 0.95,
+          "audio_perspective": "exterior_wide",
+          "human_first_frame": false,
+          "camera": "24mm wide, crane pull back revealing full scope",
+          "lens_specs": "wide angle deep focus capturing full gate span",
+          "lighting": "Fog glow backlit from estate, deep shadow foreground",
+          "character_blocking": "NO characters visible - gates autonomous center frame",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 24mm wide crane pulling back as both gates swing open simultaneously. REF: environment only - NO CHARACTERS visible. LIGHT: fog backlit from estate creating ethereal glow. BLOCK: gates centered swinging from closed to fully open with NO human figures anywhere.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "wide",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "eye_level",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": "BW_EP1_002_005E",
+          "continuity_next": "BW_EP1_002_007G",
+          "continuity_note": "Match framing from BW_EP1_002_005E and hand off cleanly to BW_EP1_002_007G.",
+          "timeline_role": "establishing_plate",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 24mm wide crane at action start, honoring gates beginning to open grounding.",
+            "end_pose": "Conclude with gates fully open, fog swirling through gap locked before cutting.",
+            "tempo": "6s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "CRITICAL: NO human figures. Gates move with impossible precision simultaneously. Visual proof of supernatural control.",
+          "state_constraints": [
+            "Eleanor and Marcus NOT visible - they're off-frame watching. Gates autonomous."
+          ],
+          "mindset_guidance": [
+            "Impossibility visualization: both gates at once",
+            "NO visible cause - supernatural agency",
+            "Fog as living entity swirling through"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_007G",
+          "type": "closeup",
+          "duration": 5,
+          "emotion_curve": "Dread",
+          "nano_prompt": "Close-up reaction shots: Eleanor's face draining of color with pure DREAD, eyes wide behind glasses, body pulling back from gates.",
+          "ltx_motion_prompt": "Handheld intimate reactions as her mouth opens in disbelief, face draining color, body visibly pulling away. Cut to Marcus, skepticism breaking into genuine fear, gripping car door.",
+          "dialogue": [
+            {
+              "character": "Eleanor Vance",
+              "line": "That's... that's not possible..."
+            }
+          ],
+          "dialogue_subtext": "Her rational mind is breaking - she saw it happen but can't accept it.",
+          "camera_motivation": "visceral_horror",
+          "lighting_split": {
+            "exterior_cool": 0.7,
+            "interior_warm": 0.3
+          },
+          "atmospheric_density": 0.75,
+          "audio_perspective": "dialogue_intimate",
+          "human_first_frame": true,
+          "camera": "85mm closeup, handheld intimate reactions",
+          "lens_specs": "portrait compression, shallow DOF isolating faces",
+          "lighting": "Gate lamp bounce on faces, deep shadow behind",
+          "character_blocking": "Eleanor center frame pulling back, Marcus gripping car door",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 5,
+          "description": "CAM: 85mm closeup handheld on Eleanor's shocked face draining of color, then cut to Marcus. REF: Eleanor Vance, Marcus Sterling. LIGHT: gate lamp bounce, shadow behind. BLOCK: Eleanor center pulling back in fear, Marcus gripping door handle.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center",
+            "secondary_subject": "Marcus Sterling",
+            "secondary_anchor": "center",
+            "camera_height": "eye_level",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_002_006F",
+          "continuity_next": "BW_EP1_002_008H",
+          "continuity_note": "Match framing from BW_EP1_002_006F and hand off cleanly to BW_EP1_002_008H.",
+          "timeline_role": "dialogue_response",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 85mm closeup handheld at action start, honoring Eleanor center grounding.",
+            "end_pose": "Conclude with Eleanor pulling back, Marcus gripping door locked before cutting.",
+            "tempo": "5s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Track physical reactions: draining color, pulling back, gripping door. Cut between Eleanor and Marcus.",
+          "state_constraints": [
+            "Both characters at car, gates now open behind them."
+          ],
+          "mindset_guidance": [
+            "DREAD keyframe END",
+            "Physical reaction: draining color, pulling back",
+            "Skepticism breaking: Marcus admits fear"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_008H",
+          "type": "insert",
+          "duration": 4,
+          "emotion_curve": "Supernatural Atmosphere",
+          "nano_prompt": "Environmental B-roll: Fog swirling through now-open gates in supernatural patterns, chains swaying despite no wind.",
+          "ltx_motion_prompt": "Slow dolly through gates as fog swirls in impossible patterns, dead leaves whirl up pulled by invisible force, chains sway autonomously catching last dusk light.",
+          "camera_motivation": "atmospheric_dread",
+          "lighting_split": {
+            "exterior_cool": 0.9,
+            "interior_warm": 0.1
+          },
+          "atmospheric_density": 0.98,
+          "audio_perspective": "ambient_supernatural",
+          "human_first_frame": false,
+          "camera": "35mm insert, slow dolly through gates",
+          "lens_specs": "deep focus through fog particulate",
+          "lighting": "Dusk glow diffused through fog, ethereal",
+          "character_blocking": "NO characters - environment autonomous",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 4,
+          "description": "CAM: 35mm dolly through open gates capturing fog and environmental anomalies. REF: environment only. LIGHT: dusk ethereal glow through particulate fog. BLOCK: chains swaying center frame, leaves whirling, fog patterns supernatural.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "insert",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "waist_height",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": "BW_EP1_002_007G",
+          "continuity_next": "BW_EP1_002_009I",
+          "continuity_note": "Match framing from BW_EP1_002_007G and hand off cleanly to BW_EP1_002_009I.",
+          "timeline_role": "symbol_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 35mm dolly at action start, honoring gates open with fog grounding.",
+            "end_pose": "Conclude with fog swirling through gap, chains swaying locked before cutting.",
+            "tempo": "4s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Emphasize supernatural: fog patterns, chains moving with no wind, leaves pulled by invisible force.",
+          "state_constraints": [
+            "NO characters - pure environment showing house's living atmosphere."
+          ],
+          "mindset_guidance": [
+            "Fog as living entity",
+            "Chains swaying despite no wind = ghost logic",
+            "House breathing, inviting them in"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_009I",
+          "type": "wide",
+          "duration": 8,
+          "emotion_curve": "Dread/Commitment",
+          "nano_prompt": "Wide shot as Marcus drives slowly through open gates up winding gravel driveway, house looming larger with each second.",
+          "ltx_motion_prompt": "Tracking shot follows car up driveway over 8 seconds, fog thickening around them, Victorian mansion growing impossibly tall filling more of frame with each turn of the drive.",
+          "camera_motivation": "spatial_distortion",
+          "lighting_split": {
+            "exterior_cool": 0.8,
+            "interior_warm": 0.2
+          },
+          "atmospheric_density": 0.9,
+          "audio_perspective": "exterior_tracking",
+          "human_first_frame": true,
+          "camera": "24mm wide, tracking car motion",
+          "lens_specs": "wide angle tracking movement",
+          "lighting": "Fog diffusion with estate windows backlit growing brighter",
+          "character_blocking": "Car center frame moving away, house background growing",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 2,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 8,
+          "description": "CAM: 24mm wide tracking car driving up driveway through fog. REF: Eleanor Vance, Marcus Sterling (in car). LIGHT: fog diffusion, estate windows growing brighter. BLOCK: car center frame moving away from gates, house filling more frame each second.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "wide",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "waist_height",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": "BW_EP1_002_008H",
+          "continuity_next": "BW_EP1_002_010J",
+          "continuity_note": "Match framing from BW_EP1_002_008H and hand off cleanly to BW_EP1_002_010J.",
+          "timeline_role": "establishing_plate",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 24mm wide tracking at action start, honoring car entering gates grounding.",
+            "end_pose": "Conclude with car halfway up drive, house dominating upper frame locked before cutting.",
+            "tempo": "8s beat per Marcus 002 cadence"
+          },
+          "director_notes": "Track spatial distortion: driveway seems endless, house grows impossibly. Show ghost logic visually.",
+          "state_constraints": [
+            "Eleanor and Marcus inside car driving up driveway toward house."
+          ],
+          "mindset_guidance": [
+            "Spatial distortion visualization",
+            "House growing impossibly with each turn",
+            "Driveway extending unnaturally"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_010J",
+          "type": "medium",
+          "duration": 6,
+          "emotion_curve": "Unease Building",
+          "nano_prompt": "Medium shot from backseat of Marcus driving, hands gripping wheel, jaw clenched with growing unease.",
+          "ltx_motion_prompt": "Locked medium from rear holds as Marcus's knuckles whiten on wheel, eyes flicking to rearview mirror repeatedly, professional composure cracking.",
+          "dialogue": [
+            {
+              "character": "Marcus Sterling",
+              "line": "This driveway... it shouldn't be this long."
+            }
+          ],
+          "dialogue_subtext": "His rational mind is registering the impossible - physics are wrong here.",
+          "camera_motivation": "tension_intimate",
+          "lighting_split": {
+            "exterior_cool": 0.5,
+            "interior_warm": 0.5
+          },
+          "atmospheric_density": 0.7,
+          "audio_perspective": "interior_car",
+          "human_first_frame": true,
+          "camera": "50mm medium from backseat, locked",
+          "lens_specs": "medium depth from interior perspective",
+          "lighting": "Dashboard glow, fog glow through windshield",
+          "character_blocking": "Marcus center frame driving, Eleanor passenger visible edge frame",
+          "reference_needed": "Marcus Sterling, Eleanor Vance",
+          "beat_number": 2,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 50mm medium locked from backseat on Marcus driving with mounting tension. REF: Marcus Sterling, Eleanor Vance. LIGHT: dashboard glow, windshield fog. BLOCK: Marcus center gripping wheel, Eleanor passenger side edge frame.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Marcus Sterling",
+            "primary_anchor": "center",
+            "secondary_subject": "Eleanor Vance",
+            "secondary_anchor": "right_third",
+            "camera_height": "eye_level",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": "BW_EP1_002_009I",
+          "continuity_next": "BW_EP1_002_011K",
+          "continuity_note": "Match framing from BW_EP1_002_009I and hand off cleanly to BW_EP1_002_011K.",
+          "timeline_role": "dialogue_call",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 50mm medium locked at action start, honoring Marcus driving grounding.",
+            "end_pose": "Conclude with Marcus gripping wheel, composure cracking locked before cutting.",
+            "tempo": "6s beat per Marcus 002 cadence"
+          },
+          "director_notes": "Track body language: white knuckles, jaw clenched, eyes to mirror. Professional composure failing.",
+          "state_constraints": [
+            "Marcus driving, Eleanor passenger, car still on driveway approaching house."
+          ],
+          "mindset_guidance": [
+            "Professional composure cracking",
+            "Body language: gripping wheel, clenched jaw",
+            "Spatial wrongness registering"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_011K",
+          "type": "wide",
+          "duration": 6,
+          "emotion_curve": "Revelation/Shock",
+          "nano_prompt": "POV through windshield: Car rounds final bend and house SUDDENLY fills entire windshield impossibly close.",
+          "ltx_motion_prompt": "Locked windshield POV as car turns corner and mansion SNAPS into proximity, spatial jump cutting from distant to overwhelming in single instant.",
+          "camera_motivation": "spatial_horror",
+          "lighting_split": {
+            "exterior_cool": 0.7,
+            "interior_warm": 0.3
+          },
+          "atmospheric_density": 0.85,
+          "audio_perspective": "interior_car",
+          "human_first_frame": false,
+          "camera": "Windshield POV locked, spatial jump edit",
+          "lens_specs": "POV perspective through glass",
+          "lighting": "Estate windows blazing sudden brightness through glass",
+          "character_blocking": "NO characters visible - pure POV windshield",
+          "beat_number": 2,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: Locked POV through windshield as car rounds bend. REF: environment only - windshield POV. LIGHT: estate windows suddenly blazing close. BLOCK: house distant upper frame then JUMPS to filling entire windshield.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "insert",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "eye_level",
+            "depth_intent": "POV_perspective"
+          },
+          "continuity_prev": "BW_EP1_002_010J",
+          "continuity_next": "BW_EP1_002_012L",
+          "continuity_note": "Match framing from BW_EP1_002_010J and hand off cleanly to BW_EP1_002_012L.",
+          "timeline_role": "symbol_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera windshield POV locked at action start, honoring house distant grounding.",
+            "end_pose": "Conclude with house FILLING windshield impossibly close locked before cutting.",
+            "tempo": "6s beat per Marcus 002 cadence"
+          },
+          "director_notes": "CRITICAL: Spatial jump - house goes from distant to overwhelming in INSTANT. Ghost logic: space warps.",
+          "state_constraints": [
+            "Pure POV - no characters visible. House performs impossible spatial jump."
+          ],
+          "mindset_guidance": [
+            "Spatial distortion PROOF",
+            "Impossible jump: distant → overwhelming",
+            "Ghost logic: space warped"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_012L",
+          "type": "medium",
+          "duration": 5,
+          "emotion_curve": "Dread",
+          "nano_prompt": "Medium two-shot of Eleanor and Marcus in car, both staring up at house now towering over them, faces pale.",
+          "ltx_motion_prompt": "Locked medium holds as both stare upward through windshield in stunned silence, car engine idling, neither moving to exit.",
+          "dialogue": [
+            {
+              "character": "Eleanor Vance",
+              "line": "We're here."
+            }
+          ],
+          "dialogue_subtext": "Said like a prisoner arriving at execution - no hope, only resignation.",
+          "camera_motivation": "shared_dread",
+          "lighting_split": {
+            "exterior_cool": 0.6,
+            "interior_warm": 0.4
+          },
+          "atmospheric_density": 0.75,
+          "audio_perspective": "interior_intimate",
+          "human_first_frame": true,
+          "camera": "50mm medium locked from hood looking in",
+          "lens_specs": "medium depth through windshield",
+          "lighting": "Estate glow through glass, dashboard dim",
+          "character_blocking": "Eleanor passenger side staring up, Marcus driver side frozen",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 2,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 5,
+          "description": "CAM: 50mm medium locked from hood perspective looking at both through windshield. REF: Eleanor Vance, Marcus Sterling. LIGHT: estate glow through glass. BLOCK: Eleanor passenger staring up paralyzed, Marcus driver side frozen.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "right_third",
+            "secondary_subject": "Marcus Sterling",
+            "secondary_anchor": "left_third",
+            "camera_height": "waist_height",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": "BW_EP1_002_011K",
+          "continuity_next": "BW_EP1_002_013M",
+          "continuity_note": "Match framing from BW_EP1_002_011K and hand off cleanly to BW_EP1_002_013M.",
+          "timeline_role": "dialogue_response",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 50mm medium locked at action start, honoring both in car grounding.",
+            "end_pose": "Conclude with both staring up frozen, neither moving to exit locked before cutting.",
+            "tempo": "5s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Neither character moves - paralyzed by scale. Resignation not excitement.",
+          "state_constraints": [
+            "Both in car, engine idling, neither exiting yet. House towering over vehicle."
+          ],
+          "mindset_guidance": [
+            "Shared dread: both paralyzed",
+            "Resignation replacing anticipation",
+            "Neither wants to exit car sanctuary"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_013M",
+          "type": "wide",
+          "duration": 8,
+          "emotion_curve": "Reluctant Action",
+          "nano_prompt": "Wide low angle as Eleanor and Marcus finally exit car, house towering impossibly tall above them, dwarfing human figures.",
+          "ltx_motion_prompt": "Slow tilt upward from ground level as both car doors open and they step out hesitantly, camera rising to reveal full oppressive scale of Victorian facade looming.",
+          "camera_motivation": "scale_oppression",
+          "lighting_split": {
+            "exterior_cool": 0.8,
+            "interior_warm": 0.2
+          },
+          "atmospheric_density": 0.9,
+          "audio_perspective": "exterior_close",
+          "human_first_frame": true,
+          "camera": "18mm ultra-wide low angle, slow tilt up",
+          "lens_specs": "barrel distortion exaggerating vertical",
+          "lighting": "Dusk nearly gone, estate windows glowing ominously",
+          "character_blocking": "Eleanor passenger door, Marcus driver door, both tiny against house",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 3,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 8,
+          "description": "CAM: 18mm ultra-wide low angle slow tilt upward as both exit car. REF: Eleanor Vance, Marcus Sterling. LIGHT: estate windows glowing, dusk nearly dark. BLOCK: Eleanor passenger side, Marcus driver side, both dwarfed by towering house.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "lower_left_third",
+            "secondary_subject": "Marcus Sterling",
+            "secondary_anchor": "lower_right_third",
+            "camera_height": "ground_level",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": "BW_EP1_002_012L",
+          "continuity_next": "BW_EP1_002_014N",
+          "continuity_note": "Match framing from BW_EP1_002_012L and hand off cleanly to BW_EP1_002_014N.",
+          "timeline_role": "establishing_plate",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 18mm ultra-wide ground level at action start, honoring car with doors opening grounding.",
+            "end_pose": "Conclude with both standing outside car, house dominating upper two-thirds of frame locked before cutting.",
+            "tempo": "8s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "18mm barrel distortion makes house impossibly tall. Keep both characters in lower third, house dominates upper frame.",
+          "state_constraints": [
+            "Eleanor and Marcus have exited car, standing at vehicle. Front door visible far above."
+          ],
+          "mindset_guidance": [
+            "Scale as horror: humans dwarfed",
+            "18mm distortion creating oppression",
+            "Reluctant action: hesitant steps"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_014N",
+          "type": "medium",
+          "duration": 6,
+          "emotion_curve": "Determination/Fear",
+          "nano_prompt": "Medium shot on Eleanor pulling out phone, raising it to photograph house, screen showing camera unable to focus.",
+          "ltx_motion_prompt": "Push-in as she raises phone over 3 seconds, taps screen repeatedly, frown deepening as camera app shows blurred unfocused image of house no matter how she adjusts.",
+          "dialogue": [
+            {
+              "character": "Eleanor Vance",
+              "line": "I want to document this. For the study."
+            }
+          ],
+          "dialogue_subtext": "She's grasping at academic protocol to maintain control and rationality.",
+          "camera_motivation": "technology_failure",
+          "lighting_split": {
+            "exterior_cool": 0.7,
+            "interior_warm": 0.3
+          },
+          "atmospheric_density": 0.8,
+          "audio_perspective": "dialogue_close",
+          "human_first_frame": true,
+          "camera": "50mm medium, slow push in",
+          "lens_specs": "medium depth on Eleanor and phone screen",
+          "lighting": "Phone screen glow on face, estate backlight",
+          "character_blocking": "Eleanor center frame holding phone up, house blurred background",
+          "reference_needed": "Eleanor Vance",
+          "beat_number": 3,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 50mm medium push-in on Eleanor raising phone to photograph house. REF: Eleanor Vance. LIGHT: phone screen glow on her face, estate backlight. BLOCK: Eleanor center holding phone up, screen showing unfocused blur.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "chest_height",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_002_013M",
+          "continuity_next": "BW_EP1_002_015O",
+          "continuity_note": "Match framing from BW_EP1_002_013M and hand off cleanly to BW_EP1_002_015O.",
+          "timeline_role": "dialogue_call",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 50mm medium at action start, honoring Eleanor pulling out phone grounding.",
+            "end_pose": "Conclude with Eleanor holding phone up showing blurred screen locked before cutting.",
+            "tempo": "6s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Phone screen must be visible showing blurred unfocused image. Technology failing to capture house.",
+          "state_constraints": [
+            "Eleanor outside car attempting to photograph. Phone camera malfunctioning."
+          ],
+          "mindset_guidance": [
+            "Technology rejection: phone won't focus",
+            "Grasping at academic protocol for control",
+            "Ghost logic: house rejects documentation"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_015O",
+          "type": "insert",
+          "duration": 4,
+          "emotion_curve": "Technology Failure",
+          "nano_prompt": "Extreme close-up on phone screen: camera app blurred on house, then 'No Signal', then battery draining 80% to 0% in 2 seconds.",
+          "ltx_motion_prompt": "Locked macro on screen as it shows: blurred house (1s), NO SIGNAL appears (1s), battery percentage rapidly drains visible numbers ticking down to zero (2s), screen goes black.",
+          "camera_motivation": "supernatural_proof",
+          "lighting_split": {
+            "exterior_cool": 0.3,
+            "interior_warm": 0.7
+          },
+          "atmospheric_density": 0.6,
+          "audio_perspective": "foley_close",
+          "human_first_frame": false,
+          "camera": "100mm macro on phone screen",
+          "lens_specs": "extreme shallow DOF on screen only",
+          "lighting": "Screen glow illuminating macro frame",
+          "character_blocking": "Phone screen filling frame center",
+          "beat_number": 3,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 4,
+          "description": "CAM: 100mm macro locked on phone screen showing failure sequence. REF: environment detail. LIGHT: screen glow. BLOCK: phone screen center frame showing blurred house → NO SIGNAL → battery draining to 0% → black.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "insert",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "object_plane",
+            "depth_intent": "macro_plane"
+          },
+          "continuity_prev": "BW_EP1_002_014N",
+          "continuity_next": "BW_EP1_002_016P",
+          "continuity_note": "Match framing from BW_EP1_002_014N and hand off cleanly to BW_EP1_002_016P.",
+          "timeline_role": "symbol_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 100mm macro locked at action start, honoring phone screen active grounding.",
+            "end_pose": "Conclude with phone screen black, dead locked before cutting.",
+            "tempo": "4s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "CRITICAL: Screen must show visible battery drain from 80% to 0%. Ghost logic proof.",
+          "state_constraints": [
+            "Phone dying completely - battery visibly draining impossibly fast."
+          ],
+          "mindset_guidance": [
+            "Ghost logic PROOF: technology drain",
+            "House rejects documentation",
+            "Isolation: no communication possible"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_016P",
+          "type": "closeup",
+          "duration": 5,
+          "emotion_curve": "Helplessness",
+          "nano_prompt": "Close-up on Eleanor staring at dead phone in disbelief, Marcus stepping close behind her with hand on her shoulder.",
+          "ltx_motion_prompt": "Slow push-in as she stares at black phone screen, Marcus's hand entering frame to rest on her shoulder in silent support, both understanding they're cut off.",
+          "dialogue": [
+            {
+              "character": "Marcus Sterling",
+              "line": "Mine's dead too. We're on our own."
+            }
+          ],
+          "dialogue_subtext": "He's accepting the reality: they have no backup, no escape route.",
+          "camera_motivation": "shared_isolation",
+          "lighting_split": {
+            "exterior_cool": 0.7,
+            "interior_warm": 0.3
+          },
+          "atmospheric_density": 0.75,
+          "audio_perspective": "dialogue_intimate",
+          "human_first_frame": true,
+          "camera": "65mm closeup, slow push in",
+          "lens_specs": "portrait compression shallow DOF",
+          "lighting": "Estate window glow key from above, faces in soft light",
+          "character_blocking": "Eleanor center holding dead phone, Marcus behind hand on shoulder",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 3,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 5,
+          "description": "CAM: 65mm closeup slow push on Eleanor staring at dead phone, Marcus behind. REF: Eleanor Vance, Marcus Sterling. LIGHT: estate glow from above, soft. BLOCK: Eleanor center with phone, Marcus hand entering frame to shoulder.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center",
+            "secondary_subject": "Marcus Sterling",
+            "secondary_anchor": "background_center",
+            "camera_height": "eye_level",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_002_015O",
+          "continuity_next": "BW_EP1_002_017Q",
+          "continuity_note": "Match framing from BW_EP1_002_015O and hand off cleanly to BW_EP1_002_017Q.",
+          "timeline_role": "dialogue_response",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 65mm closeup at action start, honoring Eleanor with dead phone grounding.",
+            "end_pose": "Conclude with Marcus hand on Eleanor's shoulder, both isolated locked before cutting.",
+            "tempo": "5s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Shared moment of isolation. Marcus's hand supportive but both know they're trapped.",
+          "state_constraints": [
+            "Both phones dead. Standing outside car. No communication with outside world possible."
+          ],
+          "mindset_guidance": [
+            "Shared isolation: no escape route",
+            "Supportive touch: Marcus hand on shoulder",
+            "Resignation: accepting they're cut off"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_017Q",
+          "type": "wide",
+          "duration": 8,
+          "emotion_curve": "Reluctant Approach",
+          "nano_prompt": "Wide shot as Eleanor and Marcus walk slowly toward massive front door, door creaking wider with each step they take.",
+          "ltx_motion_prompt": "Tracking shot follows from behind as they walk up stone steps over 8 seconds, door visibly swinging wider in sync with their approach, wind carrying smell of decay.",
+          "camera_motivation": "door_beckoning",
+          "lighting_split": {
+            "exterior_cool": 0.75,
+            "interior_warm": 0.25
+          },
+          "atmospheric_density": 0.85,
+          "audio_perspective": "exterior_following",
+          "human_first_frame": true,
+          "camera": "35mm tracking from behind, dolly follow",
+          "lens_specs": "medium depth tracking movement",
+          "lighting": "Door interior glow growing brighter as it opens",
+          "character_blocking": "Eleanor left Marcus right walking toward door, door center opening",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 4,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 8,
+          "description": "CAM: 35mm tracking dolly following Eleanor and Marcus from behind approaching door. REF: Eleanor Vance, Marcus Sterling. LIGHT: door interior glow brightening. BLOCK: Eleanor left Marcus right walking slowly, door center opening wider.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center_left_third",
+            "secondary_subject": "Marcus Sterling",
+            "secondary_anchor": "center_right_third",
+            "camera_height": "waist_height",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": "BW_EP1_002_016P",
+          "continuity_next": "BW_EP1_002_018R",
+          "continuity_note": "Match framing from BW_EP1_002_016P and hand off cleanly to BW_EP1_002_018R.",
+          "timeline_role": "establishing_plate",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 35mm tracking at action start, honoring both at bottom of steps grounding.",
+            "end_pose": "Conclude with both at door threshold, door fully open locked before cutting.",
+            "tempo": "8s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Door must visibly open wider as they approach - synchronized movement. Ghost logic: door beckoning.",
+          "state_constraints": [
+            "Eleanor and Marcus walking from car to front door. Door opening in response to approach."
+          ],
+          "mindset_guidance": [
+            "Door as living entity beckoning",
+            "Each step triggers wider opening",
+            "House inviting them to threshold"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_018R",
+          "type": "medium",
+          "duration": 5,
+          "emotion_curve": "Civilized Denial",
+          "nano_prompt": "Medium shot on Marcus raising hand to knock on open door, fist hovering uncertainly mid-air, absurdity visible on face.",
+          "ltx_motion_prompt": "Locked medium holds as his hand rises to knock, freezes mid-motion realizing the absurdity, hand hovering while Eleanor watches him with sad understanding.",
+          "dialogue": [
+            {
+              "character": "Marcus Sterling",
+              "line": "I should... knock? It's already..."
+            }
+          ],
+          "dialogue_subtext": "He's clinging to civilized protocol even as it becomes meaningless.",
+          "camera_motivation": "protocol_failure",
+          "lighting_split": {
+            "exterior_cool": 0.6,
+            "interior_warm": 0.4
+          },
+          "atmospheric_density": 0.75,
+          "audio_perspective": "dialogue_close",
+          "human_first_frame": true,
+          "camera": "50mm medium locked on Marcus",
+          "lens_specs": "medium depth on face and hand",
+          "lighting": "Door interior glow behind, face in soft key",
+          "character_blocking": "Marcus center hand raised to knock, Eleanor edge frame watching",
+          "reference_needed": "Marcus Sterling, Eleanor Vance",
+          "beat_number": 4,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 5,
+          "description": "CAM: 50mm medium locked on Marcus with hand raised to knock on open door. REF: Marcus Sterling, Eleanor Vance. LIGHT: door glow behind, soft key. BLOCK: Marcus center hand hovering mid-knock, Eleanor right edge watching.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Marcus Sterling",
+            "primary_anchor": "center",
+            "secondary_subject": "Eleanor Vance",
+            "secondary_anchor": "right_third",
+            "camera_height": "chest_height",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_002_017Q",
+          "continuity_next": "BW_EP1_002_019S",
+          "continuity_note": "Match framing from BW_EP1_002_017Q and hand off cleanly to BW_EP1_002_019S.",
+          "timeline_role": "dialogue_call",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 50mm medium locked at action start, honoring Marcus raising hand grounding.",
+            "end_pose": "Conclude with Marcus hand frozen mid-air, absurdity visible locked before cutting.",
+            "tempo": "5s beat per Marcus 002 cadence"
+          },
+          "director_notes": "Hand must freeze mid-knock. Absurdity of knocking on already-open door. Protocol failing.",
+          "state_constraints": [
+            "Both at threshold. Door fully open. No doorbell visible. Knocking feels absurd."
+          ],
+          "mindset_guidance": [
+            "Civilized protocol meaningless",
+            "Hand frozen mid-knock: absurdity",
+            "Grasping at normal behavior in abnormal space"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_019S",
+          "type": "wide",
+          "duration": 6,
+          "emotion_curve": "Supernatural Invitation",
+          "nano_prompt": "Wide interior from inside foyer looking out at Eleanor and Marcus framed in doorway, dark interior behind camera.",
+          "ltx_motion_prompt": "Locked wide from inside as disembodied voice echoes 'Come in, we've been expecting you' from the darkness behind camera, both characters visibly react with shock.",
+          "dialogue": [
+            {
+              "character": "Disembodied Voice",
+              "line": "Come in. We've been expecting you."
+            }
+          ],
+          "dialogue_subtext": "The house itself speaks - they are not guests, they are prey.",
+          "camera_motivation": "threshold_trap",
+          "lighting_split": {
+            "exterior_cool": 0.4,
+            "interior_warm": 0.6
+          },
+          "atmospheric_density": 0.9,
+          "audio_perspective": "interior_reverb",
+          "human_first_frame": true,
+          "camera": "24mm wide locked from interior darkness",
+          "lens_specs": "wide angle from inside looking out",
+          "lighting": "Dusk silhouettes Eleanor and Marcus in doorway, interior pitch black",
+          "character_blocking": "Eleanor and Marcus framed in doorway backlit, interior darkness foreground",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 4,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 24mm wide locked from interior darkness looking at doorway. REF: Eleanor Vance, Marcus Sterling. LIGHT: dusk backlight silhouetting both in doorway, interior pitch black. BLOCK: both framed in doorway center, darkness surrounding camera position.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center_left_third",
+            "secondary_subject": "Marcus Sterling",
+            "secondary_anchor": "center_right_third",
+            "camera_height": "eye_level",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": "BW_EP1_002_018R",
+          "continuity_next": "BW_EP1_002_020T",
+          "continuity_note": "Match framing from BW_EP1_002_018R and hand off cleanly to BW_EP1_002_020T.",
+          "timeline_role": "dialogue_response",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 24mm wide locked at action start, honoring doorway framing grounding.",
+            "end_pose": "Conclude with both in doorway reacting to voice, darkness behind locked before cutting.",
+            "tempo": "6s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "CRITICAL: Voice must come from darkness BEHIND camera. No visible source. Interior pitch black.",
+          "state_constraints": [
+            "Both at threshold. Voice comes from inside house with NO visible speaker."
+          ],
+          "mindset_guidance": [
+            "Ghost logic: disembodied voice",
+            "House itself speaking",
+            "Threshold as trap springing closed"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_020T",
+          "type": "closeup",
+          "duration": 5,
+          "emotion_curve": "Resignation/Dread",
+          "nano_prompt": "Close-up two-shot of Eleanor and Marcus at threshold exchanging glances, resignation replacing fear, then stepping forward into darkness together.",
+          "ltx_motion_prompt": "Locked closeup holds as they share a look of mutual understanding, both taking deep breath, then stepping forward together crossing threshold into blackness.",
+          "dialogue": [
+            {
+              "character": "Eleanor Vance",
+              "line": "Together?"
+            },
+            {
+              "character": "Marcus Sterling",
+              "line": "Together."
+            }
+          ],
+          "dialogue_subtext": "They're accepting the trap and entering willingly, bonded in shared fate.",
+          "camera_motivation": "shared_fate",
+          "lighting_split": {
+            "exterior_cool": 0.5,
+            "interior_warm": 0.5
+          },
+          "atmospheric_density": 0.8,
+          "audio_perspective": "dialogue_intimate",
+          "human_first_frame": true,
+          "camera": "65mm closeup locked on both faces",
+          "lens_specs": "portrait compression tight on faces",
+          "lighting": "Edge light on faces from dusk behind, darkness ahead",
+          "character_blocking": "Eleanor left Marcus right both at threshold, faces close",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 4,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 5,
+          "description": "CAM: 65mm closeup locked on both faces at threshold. REF: Eleanor Vance, Marcus Sterling. LIGHT: edge light from behind, darkness ahead. BLOCK: Eleanor left Marcus right sharing look then stepping forward.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "left_half",
+            "secondary_subject": "Marcus Sterling",
+            "secondary_anchor": "right_half",
+            "camera_height": "eye_level",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_002_019S",
+          "continuity_next": "BW_EP1_002_021U",
+          "continuity_note": "Match framing from BW_EP1_002_019S and hand off cleanly to BW_EP1_002_021U.",
+          "timeline_role": "dialogue_response",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 65mm closeup locked at action start, honoring both at threshold grounding.",
+            "end_pose": "Conclude with both stepping forward into darkness locked before cutting.",
+            "tempo": "5s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Intimate moment of shared fate. Resignation not fear. Bond forming.",
+          "state_constraints": [
+            "Both at exact threshold. About to cross. Darkness inside unknown."
+          ],
+          "mindset_guidance": [
+            "Shared fate: bonding in trap",
+            "Resignation replacing fear",
+            "Together: mutual support"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_021U",
+          "type": "wide",
+          "duration": 6,
+          "emotion_curve": "Threshold Crossed",
+          "nano_prompt": "Wide exterior from behind as Eleanor and Marcus step through doorway into darkness, door beginning to swing closed behind them.",
+          "ltx_motion_prompt": "Locked wide holds as both cross threshold and disappear into interior blackness, massive door slowly creaking closed behind them sealing them inside over 6 seconds.",
+          "camera_motivation": "trap_closed",
+          "lighting_split": {
+            "exterior_cool": 0.7,
+            "interior_warm": 0.3
+          },
+          "atmospheric_density": 0.85,
+          "audio_perspective": "exterior_distant",
+          "human_first_frame": true,
+          "camera": "24mm wide locked exterior perspective",
+          "lens_specs": "wide angle capturing full doorway and steps",
+          "lighting": "Dusk nearly night, door interior glow swallowed by closing",
+          "character_blocking": "Eleanor and Marcus crossing threshold into darkness, door closing",
+          "reference_needed": "Eleanor Vance, Marcus Sterling",
+          "beat_number": 4,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 24mm wide locked from exterior as both cross threshold into darkness. REF: Eleanor Vance, Marcus Sterling. LIGHT: dusk nearly night, door glow disappearing. BLOCK: both crossing into interior blackness, door swinging closed behind.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "wide",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "waist_height",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": "BW_EP1_002_020T",
+          "continuity_next": null,
+          "continuity_note": "Match framing from BW_EP1_002_020T and hand off cleanly to scene BW_EP1_002 outro.",
+          "timeline_role": "exit_marker",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 24mm wide locked at action start, honoring threshold crossing grounding.",
+            "end_pose": "Conclude with door nearly closed, darkness swallowing both locked before cutting.",
+            "tempo": "6s beat per Eleanor 002 cadence"
+          },
+          "director_notes": "Final shot of scene. Door closing = trap sprung. Both swallowed by darkness. No return.",
+          "state_constraints": [
+            "Threshold crossed. Door closing. Both inside house now. Point of no return."
+          ],
+          "mindset_guidance": [
+            "Trap sprung: door closing",
+            "Threshold crossed: no return",
+            "Darkness swallows them: house claims them"
+          ]
+        }
+      ],
+      "scene_guide": "SCENE GUIDE: Exterior front gates at dusk transitioning to night; low-angle framing anchored to towering iron gates with Eleanor and Marcus's car in foreground, fog rolling through creating atmospheric density, Blackwood Estate looming impossibly tall in background with Victorian Gothic architecture, broken windows catching last light, front door massive oak slightly ajar beckoning. Camera maintains predator perspective: house watching prey arrive."
+    }
+  ]
+}

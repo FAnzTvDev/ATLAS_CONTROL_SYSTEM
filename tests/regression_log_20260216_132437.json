@@ -1,0 +1,567 @@
+{
+  "summary": {
+    "total": 60,
+    "passed": 58,
+    "failed": 2,
+    "p0_failures": 0,
+    "p1_failures": 2,
+    "elapsed_seconds": 0.31,
+    "production_ready": true,
+    "timestamp": "2026-02-16T13:24:37.148023"
+  },
+  "results": [
+    {
+      "name": "server_file_exists",
+      "category": "integrity",
+      "severity": "P0",
+      "passed": true,
+      "message": "24962 lines",
+      "details": [],
+      "duration_ms": 4.5
+    },
+    {
+      "name": "ui_file_exists",
+      "category": "integrity",
+      "severity": "P0",
+      "passed": true,
+      "message": "24465 lines",
+      "details": [],
+      "duration_ms": 8.0
+    },
+    {
+      "name": "agents_directory_exists",
+      "category": "integrity",
+      "severity": "P0",
+      "passed": true,
+      "message": "21 agent files",
+      "details": [],
+      "duration_ms": 1.7
+    },
+    {
+      "name": "cinematic_enricher_exists",
+      "category": "integrity",
+      "severity": "P1",
+      "passed": true,
+      "message": "PASS",
+      "details": [],
+      "duration_ms": 0.3
+    },
+    {
+      "name": "env_file_exists",
+      "category": "integrity",
+      "severity": "P1",
+      "passed": true,
+      "message": "All 3 API keys present",
+      "details": [],
+      "duration_ms": 0.9
+    },
+    {
+      "name": "first_frame_cost_accurate",
+      "category": "cost",
+      "severity": "P0",
+      "passed": true,
+      "message": "Frame costs: ['0.15', '0.15']",
+      "details": [],
+      "duration_ms": 0.7
+    },
+    {
+      "name": "video_cost_accurate",
+      "category": "cost",
+      "severity": "P1",
+      "passed": true,
+      "message": "VIDEO_COST_USD=$0.55",
+      "details": [],
+      "duration_ms": 0.2
+    },
+    {
+      "name": "slot_pack_image_cost",
+      "category": "cost",
+      "severity": "P1",
+      "passed": true,
+      "message": "image_cost=$0.15",
+      "details": [],
+      "duration_ms": 0.5
+    },
+    {
+      "name": "scene_budget_realistic",
+      "category": "cost",
+      "severity": "P2",
+      "passed": true,
+      "message": "Scene budget=$50.0",
+      "details": [],
+      "duration_ms": 0.1
+    },
+    {
+      "name": "no_critical_todos",
+      "category": "placeholders",
+      "severity": "P2",
+      "passed": true,
+      "message": "1 TODO/FIXME (acceptable)",
+      "details": [],
+      "duration_ms": 8.2
+    },
+    {
+      "name": "no_silent_exceptions",
+      "category": "placeholders",
+      "severity": "P1",
+      "passed": false,
+      "message": "59 silent except:pass blocks",
+      "details": [
+        "L1017: except Exception: \u2192 pass",
+        "L1025: except Exception: \u2192 pass",
+        "L1033: except Exception: \u2192 pass",
+        "L1153: except Exception: \u2192 pass",
+        "L1249: except (OSError, json.JSONDecodeError): \u2192 pass",
+        "L1656: except ValueError: \u2192 pass",
+        "L3103: except: \u2192 pass",
+        "L3147: except: \u2192 pass",
+        "L3180: except: \u2192 pass",
+        "L4978: except: \u2192 pass"
+      ],
+      "duration_ms": 1.6
+    },
+    {
+      "name": "no_stub_endpoints",
+      "category": "placeholders",
+      "severity": "P1",
+      "passed": false,
+      "message": "1 potential stub endpoints",
+      "details": [
+        "L1050: # Stub functions for graceful degradation"
+      ],
+      "duration_ms": 19.8
+    },
+    {
+      "name": "no_not_implemented",
+      "category": "placeholders",
+      "severity": "P2",
+      "passed": true,
+      "message": "PASS",
+      "details": [],
+      "duration_ms": 2.2
+    },
+    {
+      "name": "no_forbidden_models",
+      "category": "model_lock",
+      "severity": "P0",
+      "passed": true,
+      "message": "No forbidden models referenced in API calls",
+      "details": [],
+      "duration_ms": 136.8
+    },
+    {
+      "name": "correct_models_present",
+      "category": "model_lock",
+      "severity": "P0",
+      "passed": true,
+      "message": "All 3 required models present",
+      "details": [],
+      "duration_ms": 0.0
+    },
+    {
+      "name": "negatives_enforcement",
+      "category": "gold_standard",
+      "severity": "P0",
+      "passed": true,
+      "message": "Required negatives in enforcement code",
+      "details": [],
+      "duration_ms": 0.7
+    },
+    {
+      "name": "face_stability_enforcement",
+      "category": "gold_standard",
+      "severity": "P0",
+      "passed": true,
+      "message": "Face stability enforcement present",
+      "details": [],
+      "duration_ms": 2.6
+    },
+    {
+      "name": "ltx_timing_enforcement",
+      "category": "gold_standard",
+      "severity": "P1",
+      "passed": true,
+      "message": "LTX timing clauses present",
+      "details": [],
+      "duration_ms": 0.3
+    },
+    {
+      "name": "agent_files_present",
+      "category": "agents",
+      "severity": "P0",
+      "passed": true,
+      "message": "21 agent files, all critical ones present",
+      "details": [],
+      "duration_ms": 0.8
+    },
+    {
+      "name": "coordinator_correct_import",
+      "category": "agents",
+      "severity": "P1",
+      "passed": true,
+      "message": "Correct import: check_all_invariants",
+      "details": [],
+      "duration_ms": 1.3
+    },
+    {
+      "name": "enforcement_has_gate",
+      "category": "agents",
+      "severity": "P0",
+      "passed": true,
+      "message": "Pre-generation gate method present",
+      "details": [],
+      "duration_ms": 1.0
+    },
+    {
+      "name": "agents_wired_in_server",
+      "category": "agents",
+      "severity": "P0",
+      "passed": true,
+      "message": "Agents wired into generation endpoints",
+      "details": [],
+      "duration_ms": 2.0
+    },
+    {
+      "name": "modal_2arg_support",
+      "category": "ui",
+      "severity": "P0",
+      "passed": true,
+      "message": "2-argument modal signature",
+      "details": [],
+      "duration_ms": 0.1
+    },
+    {
+      "name": "no_browser_prompt_dialogs",
+      "category": "ui",
+      "severity": "P1",
+      "passed": true,
+      "message": "Browser prompt() calls within tolerance",
+      "details": [],
+      "duration_ms": 29.6
+    },
+    {
+      "name": "css_variables_complete",
+      "category": "ui",
+      "severity": "P1",
+      "passed": true,
+      "message": "All 5 CSS variables present",
+      "details": [],
+      "duration_ms": 0.0
+    },
+    {
+      "name": "show_status_shim",
+      "category": "ui",
+      "severity": "P1",
+      "passed": true,
+      "message": "PASS",
+      "details": [],
+      "duration_ms": 0.2
+    },
+    {
+      "name": "no_duplicate_functions",
+      "category": "ui",
+      "severity": "P1",
+      "passed": true,
+      "message": "No critical duplicate functions (total dupes: 0)",
+      "details": [],
+      "duration_ms": 13.7
+    },
+    {
+      "name": "shot_plan_exists",
+      "category": "project",
+      "severity": "P0",
+      "passed": true,
+      "message": "290 shots",
+      "details": [],
+      "duration_ms": 7.7
+    },
+    {
+      "name": "cast_map_valid",
+      "category": "project",
+      "severity": "P0",
+      "passed": true,
+      "message": "6 characters",
+      "details": [],
+      "duration_ms": 0.9
+    },
+    {
+      "name": "no_script_accurate_refs",
+      "category": "project",
+      "severity": "P0",
+      "passed": true,
+      "message": "Zero SCRIPT_ACCURATE references",
+      "details": [],
+      "duration_ms": 5.2
+    },
+    {
+      "name": "camera_variety",
+      "category": "project",
+      "severity": "P1",
+      "passed": true,
+      "message": "2 motion types: {'static': 289, 'unknown': 1}",
+      "details": [],
+      "duration_ms": 0.2
+    },
+    {
+      "name": "all_shots_have_prompts",
+      "category": "project",
+      "severity": "P1",
+      "passed": true,
+      "message": "All 290 shots have nano_prompt",
+      "details": [],
+      "duration_ms": 0.0
+    },
+    {
+      "name": "all_shots_have_duration",
+      "category": "project",
+      "severity": "P0",
+      "passed": true,
+      "message": "All 290 shots have duration",
+      "details": [],
+      "duration_ms": 0.0
+    },
+    {
+      "name": "extended_shots_have_segments",
+      "category": "project",
+      "severity": "P1",
+      "passed": true,
+      "message": "All extended shots have segments",
+      "details": [],
+      "duration_ms": 0.0
+    },
+    {
+      "name": "no_child_characters",
+      "category": "project",
+      "severity": "P2",
+      "passed": true,
+      "message": "No CHILD character references",
+      "details": [],
+      "duration_ms": 0.1
+    },
+    {
+      "name": "edit_engine_file_exists",
+      "category": "edit_engine",
+      "severity": "P2",
+      "passed": true,
+      "message": "1170 lines",
+      "details": [],
+      "duration_ms": 0.9
+    },
+    {
+      "name": "edit_engine_no_stubs",
+      "category": "edit_engine",
+      "severity": "P1",
+      "passed": true,
+      "message": "No stubs detected",
+      "details": [],
+      "duration_ms": 0.3
+    },
+    {
+      "name": "edit_engine_core_classes",
+      "category": "edit_engine",
+      "severity": "P1",
+      "passed": true,
+      "message": "All 9 core classes present",
+      "details": [],
+      "duration_ms": 0.1
+    },
+    {
+      "name": "edit_engine_endpoints",
+      "category": "edit_engine",
+      "severity": "P1",
+      "passed": true,
+      "message": "5/7 edit endpoints present",
+      "details": [],
+      "duration_ms": 5.2
+    },
+    {
+      "name": "edit_agents_have_logic",
+      "category": "edit_engine",
+      "severity": "P1",
+      "passed": true,
+      "message": "All 5 agents have substantive logic",
+      "details": [],
+      "duration_ms": 0.7
+    },
+    {
+      "name": "ffmpeg_engine_real",
+      "category": "edit_engine",
+      "severity": "P1",
+      "passed": true,
+      "message": "FFmpeg engine has filter chain building",
+      "details": [],
+      "duration_ms": 0.1
+    },
+    {
+      "name": "export_presets_defined",
+      "category": "edit_engine",
+      "severity": "P2",
+      "passed": true,
+      "message": "3 export presets defined",
+      "details": [],
+      "duration_ms": 0.3
+    },
+    {
+      "name": "edit_operations_complete",
+      "category": "edit_engine",
+      "severity": "P1",
+      "passed": true,
+      "message": "All 5 edit operations present",
+      "details": [],
+      "duration_ms": 0.8
+    },
+    {
+      "name": "ui_edit_engine_panel",
+      "category": "edit_engine",
+      "severity": "P1",
+      "passed": true,
+      "message": "6/6 UI panels present",
+      "details": [],
+      "duration_ms": 4.8
+    },
+    {
+      "name": "no_repo_root",
+      "category": "regression",
+      "severity": "P0",
+      "passed": true,
+      "message": "No REPO_ROOT references",
+      "details": [],
+      "duration_ms": 0.1
+    },
+    {
+      "name": "sentry_safe_wrappers",
+      "category": "regression",
+      "severity": "P0",
+      "passed": true,
+      "message": "23 safe wrapper calls, 3 in wrapper defs",
+      "details": [],
+      "duration_ms": 16.8
+    },
+    {
+      "name": "has_stability_initialized",
+      "category": "regression",
+      "severity": "P1",
+      "passed": true,
+      "message": "has_stability initialized before conditional",
+      "details": [],
+      "duration_ms": 0.0
+    },
+    {
+      "name": "video_endpoint_correct",
+      "category": "regression",
+      "severity": "P0",
+      "passed": true,
+      "message": "render-videos endpoint present",
+      "details": [],
+      "duration_ms": 0.2
+    },
+    {
+      "name": "save_mutex_present",
+      "category": "regression",
+      "severity": "P1",
+      "passed": true,
+      "message": "Save mutex for concurrent write protection",
+      "details": [],
+      "duration_ms": 3.9
+    },
+    {
+      "name": "atomic_writes_agent",
+      "category": "regression",
+      "severity": "P1",
+      "passed": true,
+      "message": "Atomic writes present",
+      "details": [],
+      "duration_ms": 0.1
+    },
+    {
+      "name": "multi_angle_endpoint",
+      "category": "v175",
+      "severity": "P1",
+      "passed": true,
+      "message": "Multi-angle generation endpoint present",
+      "details": [],
+      "duration_ms": 0.2
+    },
+    {
+      "name": "select_variant_endpoint",
+      "category": "v175",
+      "severity": "P1",
+      "passed": true,
+      "message": "Select variant endpoint present",
+      "details": [],
+      "duration_ms": 0.3
+    },
+    {
+      "name": "verify_variants_endpoint",
+      "category": "v175",
+      "severity": "P1",
+      "passed": true,
+      "message": "Verify variants endpoint present",
+      "details": [],
+      "duration_ms": 0.2
+    },
+    {
+      "name": "multi_angle_panel_ui",
+      "category": "v175",
+      "severity": "P1",
+      "passed": true,
+      "message": "Multi-angle panel HTML present",
+      "details": [],
+      "duration_ms": 0.1
+    },
+    {
+      "name": "media_bin_ui",
+      "category": "v175",
+      "severity": "P1",
+      "passed": true,
+      "message": "Media bin panel + render function present",
+      "details": [],
+      "duration_ms": 0.2
+    },
+    {
+      "name": "timeline_thumbnails",
+      "category": "v175",
+      "severity": "P1",
+      "passed": true,
+      "message": "Timeline thumbnail clip CSS + rendering present",
+      "details": [],
+      "duration_ms": 0.0
+    },
+    {
+      "name": "previs_powerhouse",
+      "category": "v175",
+      "severity": "P1",
+      "passed": true,
+      "message": "Previs filmstrip powerhouse mode present",
+      "details": [],
+      "duration_ms": 0.0
+    },
+    {
+      "name": "smart_auto_balance",
+      "category": "v175",
+      "severity": "P1",
+      "passed": true,
+      "message": "Shot-type-aware auto-balance present",
+      "details": [],
+      "duration_ms": 0.3
+    },
+    {
+      "name": "insert_shot_live_render",
+      "category": "v175",
+      "severity": "P1",
+      "passed": true,
+      "message": "Insert shot with auto-render present",
+      "details": [],
+      "duration_ms": 0.5
+    },
+    {
+      "name": "qwen_angle_presets",
+      "category": "v175",
+      "severity": "P2",
+      "passed": true,
+      "message": "Qwen angle differentiation presets present",
+      "details": [],
+      "duration_ms": 0.0
+    }
+  ]
+}

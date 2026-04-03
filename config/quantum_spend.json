@@ -1,0 +1,2008 @@
+{
+  "guardrail_total_seconds": 447.0,
+  "actual_total_seconds": 447.0,
+  "jobs": [
+    {
+      "timestamp": "2025-11-10T18:05:44.684140",
+      "job_id": "d496vh2489vs73a145n0",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-10T18:05:45.981464",
+      "job_id": "d496vh1lag1s73bitqv0",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-10T18:05:46.805456",
+      "job_id": "d496vh7nmdfs73abiv60",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-10T18:09:19.782004",
+      "job_id": "d49716si51bc738gobj0",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-10T18:09:21.538009",
+      "job_id": "d49716vnmdfs73abj0n0",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-10T18:09:22.538839",
+      "job_id": "d49716q489vs73a14790",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-10T18:12:07.211335",
+      "job_id": "d4972gvnmdfs73abj200",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-10T18:12:09.017265",
+      "job_id": "d4972gvnmdfs73abj20g",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-10T18:12:09.779447",
+      "job_id": "d4972gsi51bc738gocs0",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-10T21:43:00.760977",
+      "job_id": "d49a5afnmdfs73abm620",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-10T21:43:01.653963",
+      "job_id": "d49a5a9lag1s73bj12i0",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-10T21:43:02.822931",
+      "job_id": "d49a5afnmdfs73abm62g",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-10T21:45:58.582228",
+      "job_id": "d49a6ohlag1s73bj142g",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-10T21:46:00.323745",
+      "job_id": "d49a6oki51bc738gring",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-10T21:46:01.810254",
+      "job_id": "d49a6ohlag1s73bj1430",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-10T21:49:25.899055",
+      "job_id": "d49a83hlag1s73bj15g0",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-10T21:49:26.201310",
+      "job_id": "d49a83i489vs73a17f1g",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-10T21:49:26.372550",
+      "job_id": "d49a83ki51bc738grk6g",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-11T06:49:36.287795",
+      "job_id": "d49i5aa489vs73a1fncg",
+      "scene_id": "001",
+      "shot_id": "BW_EP1_001_001A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-11T08:29:16.745529",
+      "job_id": "d49jka2489vs73a1h6l0",
+      "scene_id": "BW_EP1_001",
+      "shot_id": "BW_EP1_001A",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-11T09:26:19.976029",
+      "job_id": "d49kf0nnmdfs73ac1010",
+      "scene_id": "BW_EP1_001",
+      "shot_id": "BW_EP1_001A",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-11T09:27:19.948453",
+      "job_id": "d49kfga489vs73a1i5ag",
+      "scene_id": "BW_EP1_001",
+      "shot_id": "BW_EP1_001A",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-11T09:41:55.323083",
+      "job_id": "d49kmbi489vs73a1id30",
+      "scene_id": "BW_EP1_001",
+      "shot_id": "BW_EP1_001A",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-12T08:56:33.139644",
+      "job_id": "d4a9437nmdfs73acm4gg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T08:56:34.268457",
+      "job_id": "d4a9434i51bc738hrvcg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T08:56:35.346447",
+      "job_id": "d4a9437nmdfs73acm4h0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:01:35.564384",
+      "job_id": "d4a96ehlag1s73bk1f60",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:01:36.365755",
+      "job_id": "d4a96ennmdfs73acm6r0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:01:37.546048",
+      "job_id": "d4a96eki51bc738hs1k0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:06:50.394080",
+      "job_id": "d4a98t9lag1s73bk1hjg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:06:51.502559",
+      "job_id": "d4a98tfnmdfs73acm95g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:06:52.549926",
+      "job_id": "d4a98t9lag1s73bk1hk0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:16:24.167163",
+      "job_id": "d4a9bcsi51bc738hs6dg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:16:25.127576",
+      "job_id": "d4a9bcplag1s73bk1jrg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:16:29.292609",
+      "job_id": "d4a9bh1lag1s73bk1k10",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002D",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:21:49.045769",
+      "job_id": "d4a9ftvnmdfs73acmfsg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:21:49.752263",
+      "job_id": "d4a9ftq489vs73a27mh0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:21:51.323200",
+      "job_id": "d4a9ftplag1s73bk1o2g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:41:32.902206",
+      "job_id": "d4a9ifhlag1s73bk1qkg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:41:34.079665",
+      "job_id": "d4a9ifnnmdfs73acmidg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:41:35.562294",
+      "job_id": "d4a9ifhlag1s73bk1ql0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:47:35.385594",
+      "job_id": "d4a9s0plag1s73bk23jg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-12T09:47:36.325846",
+      "job_id": "d4a9s0si51bc738hsm3g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-12T09:47:36.971967",
+      "job_id": "d4a9s0plag1s73bk23j0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-12T09:53:45.733966",
+      "job_id": "d4a9ut4i51bc738hsorg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:53:46.101228",
+      "job_id": "d4a9ut7nmdfs73acmu40",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:53:47.219786",
+      "job_id": "d4a9ut1lag1s73bk26ag",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:53:57.882246",
+      "job_id": "d4a9utq489vs73a284r0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:53:58.759077",
+      "job_id": "d4a9utq489vs73a284s0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T09:54:00.048438",
+      "job_id": "d4a9utq489vs73a284rg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:02:54.084132",
+      "job_id": "d4aava2489vs73a2945g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:02:55.586731",
+      "job_id": "d4aava4i51bc738htoeg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:08:15.075107",
+      "job_id": "d4ab1l2489vs73a296d0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:08:17.096100",
+      "job_id": "d4ab1l2489vs73a296dg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:08:18.703753",
+      "job_id": "d4ab1l1lag1s73bk3820",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:13:28.974763",
+      "job_id": "d4ab45a489vs73a298u0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:13:30.244162",
+      "job_id": "d4ab459lag1s73bk3abg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:13:32.235893",
+      "job_id": "d4ab45ci51bc738htt30",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:18:53.399880",
+      "job_id": "d4ab6k2489vs73a29bk0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 6.0,
+      "actual_seconds": 6.0,
+      "guardrail_cost_usd": 6.0,
+      "actual_cost_usd": 6.0
+    },
+    {
+      "timestamp": "2025-11-12T11:18:55.116513",
+      "job_id": "d4ab6k7nmdfs73aco54g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:18:56.959309",
+      "job_id": "d4ab6k7nmdfs73aco55g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:23:59.764441",
+      "job_id": "d4ab96ki51bc738hu2bg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:24:00.955878",
+      "job_id": "d4ab96q489vs73a29e4g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:24:01.852519",
+      "job_id": "d4ab96si51bc738hu2c0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:29:04.109130",
+      "job_id": "d4abbivnmdfs73acoa2g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:29:05.271847",
+      "job_id": "d4abbisi51bc738hu4jg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:29:06.191082",
+      "job_id": "d4abbiq489vs73a29gh0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:31:12.047830",
+      "job_id": "d4abcivnmdfs73acob20",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:31:13.028581",
+      "job_id": "d4abcisi51bc738hu5i0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:31:14.086191",
+      "job_id": "d4abcj1lag1s73bk3iqg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:32:39.642227",
+      "job_id": "d4abd6ki51bc738hu67g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:32:40.723419",
+      "job_id": "d4abd6nnmdfs73acobkg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:32:41.655985",
+      "job_id": "d4abd6ki51bc738hu680",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:34:01.822537",
+      "job_id": "d4abdt1lag1s73bk3k2g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:34:01.872352",
+      "job_id": "d4abdt2489vs73a29ip0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:34:02.588450",
+      "job_id": "d4abdt1lag1s73bk3k30",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:35:22.032409",
+      "job_id": "d4abeha489vs73a29jdg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:35:23.171286",
+      "job_id": "d4abeh9lag1s73bk3klg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:35:24.328339",
+      "job_id": "d4abehfnmdfs73acocsg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:39:34.959301",
+      "job_id": "d4abgfi489vs73a29lf0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 6.0,
+      "actual_seconds": 6.0,
+      "guardrail_cost_usd": 6.0,
+      "actual_cost_usd": 6.0
+    },
+    {
+      "timestamp": "2025-11-12T11:39:36.855910",
+      "job_id": "d4abgfi489vs73a29lfg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T11:39:38.647419",
+      "job_id": "d4abgfi489vs73a29lg0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T13:17:51.788132",
+      "job_id": "d4abid1lag1s73bk3okg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 5.0,
+      "actual_seconds": 5.0,
+      "guardrail_cost_usd": 5.0,
+      "actual_cost_usd": 5.0
+    },
+    {
+      "timestamp": "2025-11-12T13:18:28.325342",
+      "job_id": "d4abid7nmdfs73acogu0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 5.0,
+      "actual_seconds": 5.0,
+      "guardrail_cost_usd": 5.0,
+      "actual_cost_usd": 5.0
+    },
+    {
+      "timestamp": "2025-11-12T13:19:06.325377",
+      "job_id": "d4abid4i51bc738hubeg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 5.0,
+      "actual_seconds": 5.0,
+      "guardrail_cost_usd": 5.0,
+      "actual_cost_usd": 5.0
+    },
+    {
+      "timestamp": "2025-11-12T13:45:56.047167",
+      "job_id": "d4adbni489vs73a2bfo0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T13:45:56.490690",
+      "job_id": "d4adbnki51bc738i02lg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T13:45:58.092187",
+      "job_id": "d4adbni489vs73a2bfog",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T16:12:17.310759",
+      "job_id": "d4afgannmdfs73acsco0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T16:12:18.656901",
+      "job_id": "d4afgai489vs73a2dmc0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T16:12:19.443061",
+      "job_id": "d4afgannmdfs73acscog",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-12T16:16:28.836249",
+      "job_id": "d4afht4i51bc738i29dg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 6.0,
+      "actual_seconds": 6.0,
+      "guardrail_cost_usd": 6.0,
+      "actual_cost_usd": 6.0
+    },
+    {
+      "timestamp": "2025-11-12T16:16:30.032187",
+      "job_id": "d4afht7nmdfs73acseag",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T21:18:55.171445",
+      "job_id": "d4bu61i489vs73a3rkh0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_001A",
+      "guardrail_seconds": 6.0,
+      "actual_seconds": 6.0,
+      "guardrail_cost_usd": 6.0,
+      "actual_cost_usd": 6.0
+    },
+    {
+      "timestamp": "2025-11-14T21:18:57.218523",
+      "job_id": "d4bu61nnmdfs73ae9g80",
+      "scene_id": null,
+      "shot_id": "BW_EP1_001C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T21:18:59.047674",
+      "job_id": "d4bu61hlag1s73blkej0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_001B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T21:19:00.730374",
+      "job_id": "d4bu63ki51bc738jfdjg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_001B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T21:19:01.922659",
+      "job_id": "d4bu63hlag1s73blkelg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_001A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T21:19:04.556308",
+      "job_id": "d4bu63nnmdfs73ae9gag",
+      "scene_id": null,
+      "shot_id": "BW_EP1_001C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T21:23:36.332651",
+      "job_id": "d4bu85si51bc738jfffg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 11.0,
+      "actual_seconds": 11.0,
+      "guardrail_cost_usd": 11.0,
+      "actual_cost_usd": 11.0
+    },
+    {
+      "timestamp": "2025-11-14T21:23:37.584214",
+      "job_id": "d4bu85si51bc738jffg0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T21:23:38.238581",
+      "job_id": "d4bu85q489vs73a3rmdg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T21:29:16.410168",
+      "job_id": "d4bua8nnmdfs73ae9k20",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 8.0,
+      "actual_seconds": 8.0,
+      "guardrail_cost_usd": 8.0,
+      "actual_cost_usd": 8.0
+    },
+    {
+      "timestamp": "2025-11-14T21:29:17.335436",
+      "job_id": "d4bua8nnmdfs73ae9k2g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T21:29:19.007889",
+      "job_id": "d4bua8i489vs73a3roag",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:30:58.454142",
+      "job_id": "d4bv7qfnmdfs73aeaejg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002I",
+      "guardrail_seconds": 6.0,
+      "actual_seconds": 6.0,
+      "guardrail_cost_usd": 6.0,
+      "actual_cost_usd": 6.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:00.277081",
+      "job_id": "d4bv7q9lag1s73bllcvg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002H",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:02.024137",
+      "job_id": "d4bv7qfnmdfs73aeaek0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002K",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:03.745413",
+      "job_id": "d4bv7qci51bc738jgbrg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002D",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:04.969485",
+      "job_id": "d4bv7qci51bc738jgbs0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:06.413551",
+      "job_id": "d4bv7q9lag1s73blld00",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002P",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:07.167909",
+      "job_id": "d4bv7qa489vs73a3siug",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002N",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:08.291475",
+      "job_id": "d4bv7qfnmdfs73aeaekg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:09.434566",
+      "job_id": "d4bv7qci51bc738jgbsg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002O",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:10.629953",
+      "job_id": "d4bv7qci51bc738jgbt0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:11.674243",
+      "job_id": "d4bv7qi489vs73a3siv0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002L",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:12.879968",
+      "job_id": "d4bv7qhlag1s73blld0g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002E",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:14.128811",
+      "job_id": "d4bv7qnnmdfs73aeael0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002F",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:15.302907",
+      "job_id": "d4bv7qnnmdfs73aeaelg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002G",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:16.169198",
+      "job_id": "d4bv7qnnmdfs73aeaem0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002J",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T22:31:17.684281",
+      "job_id": "d4bv7qhlag1s73blld10",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002M",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T23:00:58.724181",
+      "job_id": "d4bvltfnmdfs73aeard0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T23:00:59.770093",
+      "job_id": "d4bvltnnmdfs73aeardg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-14T23:01:00.920134",
+      "job_id": "d4bvlti489vs73a3svo0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-15T00:01:13.164783",
+      "job_id": "d4c0i4ki51bc738jhipg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-18T06:28:57.316101",
+      "job_id": "d4e5fqulo8as739na9l0",
+      "scene_id": null,
+      "shot_id": "SICARIO_001_002",
+      "guardrail_seconds": 6.0,
+      "actual_seconds": 6.0,
+      "guardrail_cost_usd": 6.0,
+      "actual_cost_usd": 6.0
+    },
+    {
+      "timestamp": "2025-11-18T06:28:59.135693",
+      "job_id": "d4e5fqp2bisc73a15ahg",
+      "scene_id": null,
+      "shot_id": "SICARIO_001_001",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-18T06:29:02.152788",
+      "job_id": "d4e5fqolslhc73cubf6g",
+      "scene_id": null,
+      "shot_id": "SICARIO_001_004",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-18T06:50:20.416758",
+      "job_id": "d4e5qs4cdebc73euoing",
+      "scene_id": null,
+      "shot_id": "SICARIO_001_002",
+      "guardrail_seconds": 9.0,
+      "actual_seconds": 9.0,
+      "guardrail_cost_usd": 9.0,
+      "actual_cost_usd": 9.0
+    },
+    {
+      "timestamp": "2025-11-18T06:50:22.247422",
+      "job_id": "d4e5qs0lslhc73cubpk0",
+      "scene_id": null,
+      "shot_id": "SICARIO_001_000",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-18T06:50:23.562715",
+      "job_id": "d4e5qs0lslhc73cubpkg",
+      "scene_id": null,
+      "shot_id": "SICARIO_001_001",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-18T07:28:51.875280",
+      "job_id": "d4e6cvccdebc73eup4a0",
+      "scene_id": null,
+      "shot_id": "SICARIO_001_001",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-18T07:28:53.169413",
+      "job_id": "d4e6cvkcdebc73eup4ag",
+      "scene_id": null,
+      "shot_id": "SICARIO_001_000",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-18T07:28:54.354735",
+      "job_id": "d4e6cvmlo8as739nb5h0",
+      "scene_id": null,
+      "shot_id": "SICARIO_001_002",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T14:07:04.149856",
+      "job_id": "d4f1akccdebc73evkfjg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T14:07:04.687065",
+      "job_id": "d4f1ak8lslhc73cv7mfg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T14:07:05.675818",
+      "job_id": "d4f1ak92bisc73a21gl0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T14:49:29.877692",
+      "job_id": "d4f1uh4cdebc73evl350",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T14:49:29.887257",
+      "job_id": "d4f1uh4cdebc73evl360",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T14:49:31.869760",
+      "job_id": "d4f1uh12bisc73a224cg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T16:42:13.908532",
+      "job_id": "d4f3jc92bisc73a23so0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002_A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T16:42:15.389853",
+      "job_id": "d4f3jc92bisc73a23sng",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002_B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T16:42:16.406220",
+      "job_id": "d4f3jc92bisc73a23sog",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002_C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T17:04:27.120803",
+      "job_id": "d4f3tn0lslhc73cvacrg",
+      "scene_id": null,
+      "shot_id": "GATE_003",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T17:04:27.678713",
+      "job_id": "d4f3tn12bisc73a247bg",
+      "scene_id": null,
+      "shot_id": "GATE_001",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T17:04:29.406799",
+      "job_id": "d4f3tn0lslhc73cvacsg",
+      "scene_id": null,
+      "shot_id": "GATE_002",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T18:16:44.091677",
+      "job_id": "d4f4snscdebc73evo2mg",
+      "scene_id": null,
+      "shot_id": "GATE_001",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T18:16:48.570477",
+      "job_id": "d4f4um6lo8as739oa5u0",
+      "scene_id": null,
+      "shot_id": "GATE_003",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T20:25:32.739953",
+      "job_id": "d4f6s24cdebc73evq0mg",
+      "scene_id": null,
+      "shot_id": "GATE_001",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-19T20:32:51.448783",
+      "job_id": "d4f6v2ccdebc73evq3o0",
+      "scene_id": null,
+      "shot_id": "GATE_001",
+      "guardrail_seconds": 6.0,
+      "actual_seconds": 6.0,
+      "guardrail_cost_usd": 6.0,
+      "actual_cost_usd": 6.0
+    },
+    {
+      "timestamp": "2025-11-20T06:29:51.251914",
+      "job_id": "d4ffnamlo8as739olau0",
+      "scene_id": null,
+      "shot_id": "GATE_002",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-20T06:29:52.407714",
+      "job_id": "d4ffnamlo8as739olav0",
+      "scene_id": null,
+      "shot_id": "GATE_001",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-20T11:25:55.623490",
+      "job_id": "d4fk22p2bisc73a2ldo0",
+      "scene_id": null,
+      "shot_id": null,
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-21T02:28:33.790295",
+      "job_id": "d4g196h2bisc73a323a0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T02:29:58.846836",
+      "job_id": "d4g19selo8as739p7fjg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T02:37:13.218254",
+      "job_id": "d4g1cescdebc73f0l960",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T02:44:10.306850",
+      "job_id": "d4g1ghccdebc73f0lda0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T02:44:11.616704",
+      "job_id": "d4g1gh8lslhc73d08bs0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T02:44:13.181047",
+      "job_id": "d4g1ghkcdebc73f0ldag",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T02:49:13.057618",
+      "job_id": "d4g1isulo8as739p7ong",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T02:49:13.644207",
+      "job_id": "d4g1isp2bisc73a32ck0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T02:49:15.149650",
+      "job_id": "d4g1isscdebc73f0lfig",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T03:32:43.945722",
+      "job_id": "d4g279mlo8as739p8ccg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T03:32:45.774470",
+      "job_id": "d4g279glslhc73d091cg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T03:32:46.549504",
+      "job_id": "d4g279kcdebc73f0m2pg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T07:50:38.893802",
+      "job_id": "d4g5ve8lslhc73d0cl50",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 6.0,
+      "actual_seconds": 6.0,
+      "guardrail_cost_usd": 6.0,
+      "actual_cost_usd": 6.0
+    },
+    {
+      "timestamp": "2025-11-21T07:50:43.573049",
+      "job_id": "d4g5ve8lslhc73d0cl5g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T07:50:44.799374",
+      "job_id": "d4g5veccdebc73f0pp3g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T07:51:52.526178",
+      "job_id": "d4g60p0lslhc73d0cmfg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T07:51:54.229045",
+      "job_id": "d4g60p6lo8as739pc8p0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T07:51:56.196419",
+      "job_id": "d4g60pelo8as739pc8pg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T08:34:17.309718",
+      "job_id": "d4g6kkulo8as739pct4g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T08:34:18.629065",
+      "job_id": "d4g6kl6lo8as739pct50",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T08:34:19.147457",
+      "job_id": "d4g6kl12bisc73a377pg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T08:44:16.993974",
+      "job_id": "d4g6pb4cdebc73f0qihg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T08:44:18.065255",
+      "job_id": "d4g6pb4cdebc73f0qii0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T08:44:19.368277",
+      "job_id": "d4g6pb6lo8as739pd1ug",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T08:57:28.975305",
+      "job_id": "d4g6vgolslhc73d0dji0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T08:57:30.548206",
+      "job_id": "d4g6vgp2bisc73a37hv0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T08:57:31.307403",
+      "job_id": "d4g6vgulo8as739pd7vg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T09:16:11.742961",
+      "job_id": "d4g789p2bisc73a37q30",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-21T09:16:14.631047",
+      "job_id": "d4g789ulo8as739pdgag",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-21T09:16:14.671525",
+      "job_id": "d4g789scdebc73f0r0hg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-21T09:18:28.901651",
+      "job_id": "d4g7984cdebc73f0r1f0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T09:18:30.115539",
+      "job_id": "d4g7980lslhc73d0dshg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-21T09:18:32.048579",
+      "job_id": "d4g7984cdebc73f0r1fg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-24T14:00:35.976465",
+      "job_id": "d4iamjs3tdfc73dm9htg",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002_001A",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-24T14:00:36.819380",
+      "job_id": "d4iamjp0i6jc73dcjsv0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002_003C",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-11-24T14:23:13.748866",
+      "job_id": "d4ib1743tdfc73dm9rh0",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002_001A",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-24T14:23:15.672404",
+      "job_id": "d4ib17d74pkc7384rc90",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002_002B",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-11-24T14:23:16.885919",
+      "job_id": "d4ib17d74pkc7384rc9g",
+      "scene_id": null,
+      "shot_id": "BW_EP1_002_003C",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-12-01T09:29:35.260883",
+      "job_id": "d4mqcik7eg9s7398o5qg",
+      "scene_id": null,
+      "shot_id": "RM_EP1_001_RITUAL_20SEC",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-12-01T10:07:02.379519",
+      "job_id": "d4mqt7k7eg9s7398oltg",
+      "scene_id": null,
+      "shot_id": "RM_EP1_001_SHOT01_EXT",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-12-01T10:13:02.782901",
+      "job_id": "d4mr0u4h0bas73faptgg",
+      "scene_id": null,
+      "shot_id": "RM_EP1_001_SHOT01_EXT",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-12-01T10:51:01.500583",
+      "job_id": "d4mrioc7eg9s7398pau0",
+      "scene_id": null,
+      "shot_id": "RM_EP1_001_SHOT01_EXT",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-12-01T11:05:00.791335",
+      "job_id": "d4mrpa47eg9s7398pj4g",
+      "scene_id": null,
+      "shot_id": "RM_EP1_001_SHOT01_EXT",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-12-01T11:12:52.155523",
+      "job_id": "d4mrqp4h0bas73faqoi0",
+      "scene_id": null,
+      "shot_id": "RM_EP1_001_SHOT02_INT_WS",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-12-01T11:18:34.082417",
+      "job_id": "d4mrutch0bas73faqua0",
+      "scene_id": null,
+      "shot_id": "RM_EP1_001_SHOT03_ALTAR_MS",
+      "guardrail_seconds": 1.0,
+      "actual_seconds": 1.0,
+      "guardrail_cost_usd": 1.0,
+      "actual_cost_usd": 1.0
+    },
+    {
+      "timestamp": "2025-12-01T11:27:08.661874",
+      "job_id": "d4ms2och0bas73far240",
+      "scene_id": null,
+      "shot_id": "RM_EP1_001_SHOT01_EXT",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    },
+    {
+      "timestamp": "2025-12-01T11:29:47.195493",
+      "job_id": "d4ms4ssh0bas73far470",
+      "scene_id": null,
+      "shot_id": "RM_EP1_001_SHOT02_INT_WS",
+      "guardrail_seconds": 2.0,
+      "actual_seconds": 2.0,
+      "guardrail_cost_usd": 2.0,
+      "actual_cost_usd": 2.0
+    }
+  ],
+  "guardrail_total_usd": 447.0,
+  "actual_total_usd": 447.0
+}

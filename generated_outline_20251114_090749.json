@@ -1,0 +1,30 @@
+{
+  "title": "Generated from: Seven strangers receive invitations to a haunted V...",
+  "logline": "Seven strangers receive invitations to a haunted Victorian estate",
+  "theme": "The past refuses to die",
+  "scenes": [
+    {
+      "scene_id": "001",
+      "scene_title": "OPENING - TO BE FILLED",
+      "location": "Victorian mansion, remote New England",
+      "time": "TO BE SPECIFIED",
+      "characters_present": [
+        "TO BE SPECIFIED"
+      ],
+      "scene_purpose": "TO BE FILLED - use Beat Expansion to complete",
+      "beats": [
+        {
+          "beat": "PLACEHOLDER BEAT 1",
+          "description": "Use Beat Expansion form to fill this out",
+          "goal": "REQUIRED: What does the character want?",
+          "conflict": "REQUIRED: What opposes them?",
+          "turn": "REQUIRED: What changes?",
+          "emotional_state": "REQUIRED: dread/revelation/defiance/surrender",
+          "ghost_logic": "REQUIRED: Supernatural element",
+          "narrative_tension": "REQUIRED: What's at stake?",
+          "plot_reversal_type": "REQUIRED: revelation/betrayal/trap/false_hope/curse"
+        }
+      ]
+    }
+  ]
+}

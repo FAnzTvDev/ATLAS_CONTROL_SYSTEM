@@ -1,0 +1,1096 @@
+{
+  "episode_title": "Parallel Test \u2013 Arrival to Confrontation",
+  "episode_number": 0,
+  "episode_theme": "Eleanor enters Blackwood Estate under Mrs. Cross' scrutiny",
+  "production_stats": {
+    "total_shots": 19
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "scene_id": "BW_EP1_001",
+      "scene_title": "Gates of Blackwood",
+      "scene_purpose": "Establish oppressive threshold and Eleanor's forced commitment.",
+      "location": "Exterior \u2013 Front Gates \u2013 Night",
+      "time": "Friday 11:42 PM",
+      "characters_present": [
+        "Eleanor Vance",
+        "Groundsman"
+      ],
+      "runtime_seconds": 42,
+      "beats": [
+        {
+          "beat_number": 1,
+          "description": "Carriage arrival at the rusted gates in relentless rain.",
+          "goal": "Eleanor must gain entry to the estate.",
+          "conflict": "The Groundsman warns her and delays opening the gate.",
+          "turn": "He finally unlatches the iron gates.",
+          "emotional_state": "Apprehension",
+          "visual": "Rust-choked wrought-iron gates towering over the carriage while rain sheets across the lens.",
+          "beat": "BW_EP1_001_BEAT_1",
+          "duration_seconds": 26,
+          "emotion_curve": "Apprehension",
+          "audio_perspective": "distant_to_close",
+          "character_action": "Eleanor steels herself inside the carriage while the Groundsman wrestles the lock.",
+          "revelation": "The gates barely function and the house already resists."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "BW_EP1_001_001A",
+          "type": "wide",
+          "duration": 6,
+          "emotion_curve": "Apprehension",
+          "nano_prompt": "Low-angle wide of the governess's carriage dwarfed by the chained gates while rain lashes the iron.",
+          "ltx_motion_prompt": "Camera drifts backward as thunder rolls and the gates shudder only after repeated impacts, telegraphing the estate's resistance.",
+          "camera_motivation": "predator approach",
+          "lighting_split": {
+            "exterior_cool": 0.7,
+            "interior_warm": 0.3
+          },
+          "atmospheric_density": 0.95,
+          "audio_perspective": "distant_to_close",
+          "human_first_frame": true,
+          "camera": "24mm steadicam float backward",
+          "lens_specs": "deep focus, low angle",
+          "lighting": "Lantern rim light battling muted moon glow",
+          "character_blocking": "Groundsman at gate, carriage in foreground, towering gates overhead",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: low-angle wide (24mm steadicam float) on chained gates dwarfing the carriage. REF: environment only\u2014gates, carriage roof, rain. LIGHT: lantern rim battling moonlit downpour. BLOCK: Groundsman bracing lock as carriage idles under looming iron.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "wide",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "waist_height",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": null,
+          "continuity_next": "BW_EP1_001_002A",
+          "continuity_note": "Match framing from scene BW_EP1_001 cold open and hand off cleanly to BW_EP1_001_002A.",
+          "timeline_role": "establishing_plate",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 24mm steadicam float backward at action start, honoring Groundsman at gate grounding.",
+            "end_pose": "Conclude with Groundsman at gate, carriage in foreground, towering gates overhead locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_001_001A.jpg"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_001_002A",
+          "type": "insert",
+          "duration": 6,
+          "emotion_curve": "Conflict/Isolation",
+          "nano_prompt": "Macro on gloved hands forcing the corroded padlock, water exploding off the knuckles as rust flakes away.",
+          "ltx_motion_prompt": "Static macro holds while the lock screams and finally snaps, foley peaking to sell the barrier break.",
+          "camera_motivation": "forensic detail",
+          "lighting_split": {
+            "exterior_cool": 0.8,
+            "interior_warm": 0.2
+          },
+          "atmospheric_density": 0.85,
+          "audio_perspective": "contact_close",
+          "human_first_frame": false,
+          "camera": "65mm macro locked off",
+          "lens_specs": "shallow DOF on lock",
+          "lighting": "Single lantern gleam catching wet iron",
+          "character_blocking": "Hands centered, lock filling frame",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: macro insert (65mm locked) on padlock and gloves. REF: environment detail. LIGHT: single lantern gleam over soaked iron. BLOCK: gloved hands twisting center frame while rust flakes away.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "insert",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "object_plane",
+            "depth_intent": "macro_plane"
+          },
+          "continuity_prev": "BW_EP1_001_001A",
+          "continuity_next": "BW_EP1_001_003B",
+          "continuity_note": "Match framing from BW_EP1_001_001A and hand off cleanly to BW_EP1_001_003B.",
+          "timeline_role": "detail_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 65mm macro locked off at action start, honoring Hands centered grounding.",
+            "end_pose": "Conclude with Hands centered, lock filling frame locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_001_001A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_001_001A",
+          "continuity_reference": [
+            "BW_EP1_001_001A"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_001_003B",
+          "type": "closeup",
+          "duration": 8,
+          "emotion_curve": "Unnerved",
+          "nano_prompt": "Locked governess reference seen through rain-streaked glass, oil-lamp light carving her profile while breath fogs the pane.",
+          "ltx_motion_prompt": "Slow push toward the window as she states her formal request, condensation marking every restrained syllable.",
+          "dialogue": [
+            {
+              "character": "Eleanor Vance",
+              "line": "Might I enquire as to the location of the housekeeper?"
+            }
+          ],
+          "dialogue_subtext": "She keeps perfect diction to hide that she is terrified of the warning.",
+          "camera_motivation": "empathic haunting",
+          "lighting_split": {
+            "exterior_cool": 0.4,
+            "interior_warm": 0.6
+          },
+          "atmospheric_density": 0.7,
+          "audio_perspective": "muffled_interior",
+          "human_first_frame": true,
+          "camera": "85mm subtle push-in from carriage interior",
+          "lens_specs": "portrait compression through wet glass",
+          "lighting": "2500K oil lamp practical with moon occlusion",
+          "character_blocking": "Eleanor framed by window, Groundsman silhouette outside",
+          "reference_needed": "Eleanor Vance",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 85mm push-in through carriage window at governess reference. REF: Eleanor Vance portrait. LIGHT: oil lamp key with occluded moon backfill. BLOCK: Eleanor centered, Groundsman silhouette occluding exterior.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "eye_level",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_001_002A",
+          "continuity_next": "BW_EP1_001_004B",
+          "continuity_note": "Match framing from BW_EP1_001_002A and hand off cleanly to BW_EP1_001_004B.",
+          "timeline_role": "dialogue_call",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 85mm subtle push-in from carriage interior at action start, honoring Eleanor framed by window grounding.",
+            "end_pose": "Conclude with Eleanor framed by window, Groundsman silhouette outside locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_001_003B.jpg"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_001_004B",
+          "type": "medium",
+          "duration": 8,
+          "emotion_curve": "Confirmed Dread",
+          "nano_prompt": "Medium profile of the carriage rolling beneath the arch while the governess silhouette drifts past the motionless driver.",
+          "ltx_motion_prompt": "Dolly follow tracks the carriage crossing the threshold as the warning is spoken and the lamp light dies once she clears the gate.",
+          "dialogue": [
+            {
+              "character": "Groundsman",
+              "line": "Gate seals behind you, miss."
+            }
+          ],
+          "dialogue_subtext": "It is both a warning and a ritual reminder that she cannot turn back.",
+          "camera_motivation": "point_of_no_return",
+          "lighting_split": {
+            "exterior_cool": 0.75,
+            "interior_warm": 0.25
+          },
+          "atmospheric_density": 0.9,
+          "audio_perspective": "tracking_medium",
+          "human_first_frame": true,
+          "camera": "35mm dolly follow alongside carriage",
+          "lens_specs": "medium field, stabilized travel",
+          "lighting": "Lantern falloff into blackout archway",
+          "character_blocking": "Carriage passes under gate, Groundsman holds position",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 35mm dolly follow alongside carriage. REF: Governess + Groundsman references. LIGHT: lantern falloff into arch shadow. BLOCK: carriage rolling under gate while Groundsman stays statue-still in rain.",
+          "reference_needed": "Eleanor Vance, Groundsman",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center_left_third",
+            "secondary_subject": "Groundsman",
+            "secondary_anchor": "center_right_third",
+            "camera_height": "chest_height",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": "BW_EP1_001_003B",
+          "continuity_next": "BW_EP1_001_005C",
+          "continuity_note": "Match framing from BW_EP1_001_003B and hand off cleanly to BW_EP1_001_005C.",
+          "timeline_role": "dialogue_response",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 35mm dolly follow alongside carriage at action start, honoring Carriage passes under gate grounding.",
+            "end_pose": "Conclude with Carriage passes under gate, Groundsman holds position locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_001_001A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_001_001A",
+          "continuity_reference": [
+            "BW_EP1_001_001A"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_001_005C",
+          "type": "insert",
+          "duration": 8,
+          "emotion_curve": "Foreboding",
+          "nano_prompt": "Overhead view of the governess's lap with the estate map, lantern glow pooling over penciled annotations.",
+          "ltx_motion_prompt": "Top-down drift lingers as she whispers to the carriage and folds the map with deliberate composure.",
+          "dialogue": [
+            {
+              "character": "Eleanor Vance",
+              "line": "Carriage, do not fail me now."
+            }
+          ],
+          "dialogue_subtext": "She bargains with fate because no one else is listening.",
+          "camera_motivation": "anxious_cartography",
+          "lighting_split": {
+            "exterior_cool": 0.35,
+            "interior_warm": 0.65
+          },
+          "atmospheric_density": 0.75,
+          "audio_perspective": "interior_close",
+          "human_first_frame": true,
+          "camera": "Top-down 50mm crane drop",
+          "lens_specs": "medium depth, overhead rig",
+          "lighting": "Lantern pools of light over parchment",
+          "character_blocking": "Eleanor centered, map and gloved hands anchoring frame",
+          "reference_needed": "Eleanor Vance",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: overhead insert (top-down 50mm) on governess lap with estate map. REF: Eleanor Vance. LIGHT: lantern pools over penciled annotations. BLOCK: gloved hands center frame, map folds closing shot.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "object_plane",
+            "depth_intent": "macro_plane"
+          },
+          "continuity_prev": "BW_EP1_001_004B",
+          "continuity_next": "BW_EP1_001_006D",
+          "continuity_note": "Match framing from BW_EP1_001_004B and hand off cleanly to BW_EP1_001_006D.",
+          "timeline_role": "symbol_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera Top-down 50mm crane drop at action start, honoring Eleanor centered grounding.",
+            "end_pose": "Conclude with Eleanor centered, map and gloved hands anchoring frame locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_001_003B.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_001_003B",
+          "continuity_reference": [
+            "BW_EP1_001_003B"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_001_006D",
+          "type": "insert",
+          "duration": 6,
+          "emotion_curve": "Entrapment",
+          "nano_prompt": "Insert on a carriage wheel slicing through mud as the gate shadow crosses the spokes.",
+          "ltx_motion_prompt": "Tracking beside the wheel while iron bars swing shut behind, mud splash branding the carriage like possession.",
+          "camera_motivation": "ominous_symbol",
+          "lighting_split": {
+            "exterior_cool": 0.8,
+            "interior_warm": 0.2
+          },
+          "atmospheric_density": 0.85,
+          "audio_perspective": "foley_detail",
+          "human_first_frame": false,
+          "camera": "35mm slider along wheel",
+          "lens_specs": "shallow DOF on wheel and mud",
+          "lighting": "Lantern spill mixed with cold rain reflections",
+          "character_blocking": "Wheel and gate shadow dominating frame",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: low insert slider along carriage wheel. REF: environment\u2014wheel, mud, gate shadow. LIGHT: lantern spill catching water spray. BLOCK: wheel slicing through puddle as gate shadow crosses spokes.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "insert",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "object_plane",
+            "depth_intent": "macro_plane"
+          },
+          "continuity_prev": "BW_EP1_001_005C",
+          "continuity_next": null,
+          "continuity_note": "Match framing from BW_EP1_001_005C and hand off cleanly to scene BW_EP1_001 outro.",
+          "timeline_role": "exit_marker",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 35mm slider along wheel at action start, honoring Wheel and gate shadow dominating frame grounding.",
+            "end_pose": "Conclude with Wheel and gate shadow dominating frame locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_001_001A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_001_001A",
+          "continuity_reference": [
+            "BW_EP1_001_001A"
+          ]
+        }
+      ],
+      "scene_guide": "SCENE GUIDE: Exterior front gates at night; low-angle framing anchored to the iron arch with carriage foreground, rain sheeting through lantern rim light."
+    },
+    {
+      "scene_number": 2,
+      "scene_id": "BW_EP1_002",
+      "scene_title": "Foyer Entry",
+      "scene_purpose": "Show Eleanor isolated inside and introduce the hostile interior mood.",
+      "location": "Interior \u2013 Grand Foyer \u2013 Night",
+      "time": "Friday 11:47 PM",
+      "characters_present": [
+        "Eleanor Vance"
+      ],
+      "runtime_seconds": 46,
+      "beats": [
+        {
+          "beat_number": 1,
+          "description": "Eleanor steps into the oppressive foyer and realizes she is utterly alone.",
+          "goal": "Compose herself and proceed as instructed.",
+          "conflict": "The house feels hostile and deserted.",
+          "turn": "A music box melody floats from upstairs.",
+          "emotional_state": "Vulnerability",
+          "visual": "Cobwebbed chandelier above an empty foyer swallowing Eleanor in shafts of greenish gaslight.",
+          "beat": "BW_EP1_002_BEAT_1",
+          "duration_seconds": 20,
+          "emotion_curve": "Vulnerability",
+          "audio_perspective": "close_profile",
+          "character_action": "Eleanor removes her gloves, flinches at the slamming door, and studies the hostile foyer.",
+          "revelation": "She may not be alone after all."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "BW_EP1_002_001A",
+          "type": "medium",
+          "duration": 6,
+          "emotion_curve": "Vulnerability",
+          "nano_prompt": "Medium shot of the governess removing rain-damp gloves before the massive oak door.",
+          "ltx_motion_prompt": "Static hold as the door booms shut and she flinches, forcing herself upright inside the sealed foyer.",
+          "camera_motivation": "intimate observation",
+          "lighting_split": {
+            "exterior_cool": 0.3,
+            "interior_warm": 0.7
+          },
+          "atmospheric_density": 0.65,
+          "audio_perspective": "close_profile",
+          "human_first_frame": true,
+          "camera": "50mm locked medium",
+          "lens_specs": "shallow depth isolating Eleanor",
+          "lighting": "Dim gaslamp edge with door silhouette",
+          "character_blocking": "Eleanor foreground, closing door dominating background",
+          "reference_needed": "Eleanor Vance",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: locked 50mm medium on governess removing rain-damp gloves. REF: Eleanor Vance. LIGHT: dim gaslamp rim/backfill. BLOCK: Eleanor foreground rigid, oak door dominating rear plane.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center_left_third",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "chest_height",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": null,
+          "continuity_next": "BW_EP1_002_002A",
+          "continuity_note": "Match framing from scene BW_EP1_002 cold open and hand off cleanly to BW_EP1_002_002A.",
+          "timeline_role": "establishing_plate",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 50mm locked medium at action start, honoring Eleanor foreground grounding.",
+            "end_pose": "Conclude with Eleanor foreground, closing door dominating background locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_002_001A.jpg"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_002A",
+          "type": "wide",
+          "duration": 8,
+          "emotion_curve": "Oppression",
+          "nano_prompt": "Pedestal-wide of the governess standing dwarfed by the staircase and cobwebbed chandelier.",
+          "ltx_motion_prompt": "Pedestal rise lifts past her tiny figure to reveal the chandelier choked in dust as the house breathes over her.",
+          "camera_motivation": "oppressive_scale",
+          "lighting_split": {
+            "exterior_cool": 0.55,
+            "interior_warm": 0.45
+          },
+          "atmospheric_density": 0.8,
+          "audio_perspective": "ambient_hall",
+          "human_first_frame": true,
+          "camera": "24mm vertical pedestal-up",
+          "lens_specs": "deep focus capturing foyer scale",
+          "lighting": "Sickly green-yellow gaslamp with cobweb diffusion",
+          "character_blocking": "Eleanor small at base while staircase towers",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: pedestal-up wide (24mm) swallowing governess beneath staircase and chandelier. REF: Eleanor Vance. LIGHT: sickly green-yellow gaslamp vs moonlight shafts. BLOCK: Eleanor tiny at base; pedestal reveals cobwebbed chandelier and vanishing stairs.",
+          "reference_needed": "Eleanor Vance",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "left_third",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "waist_height",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": "BW_EP1_002_001A",
+          "continuity_next": "BW_EP1_002_003B",
+          "continuity_note": "Match framing from BW_EP1_002_001A and hand off cleanly to BW_EP1_002_003B.",
+          "timeline_role": "detail_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 24mm vertical pedestal-up at action start, honoring Eleanor small at base while staircase towers grounding.",
+            "end_pose": "Conclude with Eleanor small at base while staircase towers locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_002_001A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_002_001A",
+          "continuity_reference": [
+            "BW_EP1_002_001A"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_003B",
+          "type": "closeup",
+          "duration": 6,
+          "emotion_curve": "Doubt",
+          "nano_prompt": "Extreme close of the governess's ear and temple catching the faint vibration of a music box.",
+          "ltx_motion_prompt": "Subtle tilt traces behind her head while the melody drifts from above, her eye twitch betraying the warning.",
+          "camera_motivation": "sonic suspicion",
+          "lighting_split": {
+            "exterior_cool": 0.45,
+            "interior_warm": 0.55
+          },
+          "atmospheric_density": 0.6,
+          "audio_perspective": "whispered_upper",
+          "human_first_frame": true,
+          "camera": "100mm tight tilt-up",
+          "lens_specs": "extreme shallow DOF on ear and eye",
+          "lighting": "Almost no key, highlight tracing profile",
+          "character_blocking": "Eleanor listening, darkness filling background",
+          "reference_needed": "Eleanor Vance",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: extreme CU tilt (100mm) behind governess ear catching music-box vibration. REF: Eleanor Vance. LIGHT: faint rim along profile, rest in darkness. BLOCK: ear/temple fill frame while background dissolves.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "eye_level",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_002_002A",
+          "continuity_next": "BW_EP1_002_004C",
+          "continuity_note": "Match framing from BW_EP1_002_002A and hand off cleanly to BW_EP1_002_004C.",
+          "timeline_role": "dialogue_call",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 100mm tight tilt-up at action start, honoring Eleanor listening grounding.",
+            "end_pose": "Conclude with Eleanor listening, darkness filling background locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_002_001A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_002_001A"
+        },
+        {
+          "shot_id": "BW_EP1_002_004C",
+          "type": "wide",
+          "duration": 8,
+          "emotion_curve": "Command",
+          "nano_prompt": "Three-quarter wide of the governess framed by gaslamp halo at the staircase base as she calls into the void.",
+          "ltx_motion_prompt": "Slow arc around her as she commands \"Show yourself\u2014per instructions!\" and the music cuts off mid-phrase.",
+          "dialogue": [
+            {
+              "character": "Eleanor Vance",
+              "line": "Show yourself\u2014per instructions!"
+            }
+          ],
+          "dialogue_subtext": "She invokes protocol as armor even though she is alone.",
+          "camera_motivation": "haunted_spatial_mapping",
+          "lighting_split": {
+            "exterior_cool": 0.4,
+            "interior_warm": 0.6
+          },
+          "atmospheric_density": 0.85,
+          "audio_perspective": "ambient_hall",
+          "human_first_frame": true,
+          "camera": "35mm arc pan on slider",
+          "lens_specs": "deep focus slow pan",
+          "lighting": "Gaslamps tracing the railing, moonlight seep from transom",
+          "character_blocking": "Eleanor anchored right third, staircase dominating rest",
+          "reference_needed": "Eleanor Vance",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 35mm arc wide at stair base. REF: Eleanor Vance. LIGHT: gaslamp halo vs black stair void. BLOCK: Eleanor framed one-third, staircase towering toward camera as she calls upward.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "left_third",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "waist_height",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": "BW_EP1_002_003B",
+          "continuity_next": "BW_EP1_002_005D",
+          "continuity_note": "Match framing from BW_EP1_002_003B and hand off cleanly to BW_EP1_002_005D.",
+          "timeline_role": "dialogue_response",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 35mm arc pan on slider at action start, honoring Eleanor anchored right third grounding.",
+            "end_pose": "Conclude with Eleanor anchored right third, staircase dominating rest locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_002_002A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_002_002A",
+          "continuity_reference": [
+            "BW_EP1_002_002A"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_002_005D",
+          "type": "insert",
+          "duration": 6,
+          "emotion_curve": "Foreboding",
+          "nano_prompt": "Detail of the chandelier wrapped in cobwebs, crystals clinking softly in the draft.",
+          "ltx_motion_prompt": "Circular drift around the fixture as dust falls and a single crystal drops out of frame to mark decades of neglect.",
+          "camera_motivation": "decay_observation",
+          "lighting_split": {
+            "exterior_cool": 0.5,
+            "interior_warm": 0.5
+          },
+          "atmospheric_density": 0.9,
+          "audio_perspective": "ambient_hum",
+          "human_first_frame": false,
+          "camera": "70mm circular slider",
+          "lens_specs": "shallow DOF on crystal strands",
+          "lighting": "Weak gaslamp glancing across dust",
+          "character_blocking": "Chandelier centered, cobwebs framing",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: circular slider insert on chandelier. REF: environment only. LIGHT: gaslamp glints through cobwebs. BLOCK: crystal strands sway while dust motes fall.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "insert",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "object_plane",
+            "depth_intent": "macro_plane"
+          },
+          "continuity_prev": "BW_EP1_002_004C",
+          "continuity_next": "BW_EP1_002_006E",
+          "continuity_note": "Match framing from BW_EP1_002_004C and hand off cleanly to BW_EP1_002_006E.",
+          "timeline_role": "symbol_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 70mm circular slider at action start, honoring Chandelier centered grounding.",
+            "end_pose": "Conclude with Chandelier centered, cobwebs framing locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_002_002A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_002_002A"
+        },
+        {
+          "shot_id": "BW_EP1_002_006E",
+          "type": "insert",
+          "duration": 6,
+          "emotion_curve": "Observation",
+          "nano_prompt": "Tracking view along ancestral portraits where candlelight catches eyes that seem to follow.",
+          "ltx_motion_prompt": "Lateral move past the frames as candle flames gutter, implying the house cataloging the newcomer.",
+          "camera_motivation": "sentient_architecture",
+          "lighting_split": {
+            "exterior_cool": 0.45,
+            "interior_warm": 0.55
+          },
+          "atmospheric_density": 0.7,
+          "audio_perspective": "ambient_whisper",
+          "human_first_frame": false,
+          "camera": "50mm lateral slider",
+          "lens_specs": "medium depth capturing multiple frames",
+          "lighting": "Candlelight pulse with cold drafts",
+          "character_blocking": "Portraits dominating, Eleanor implied via reflection",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: lateral slider (50mm) along portrait wall. REF: environment detail. LIGHT: candle flames guttering, cool drafts. BLOCK: portrait eyes catching highlights as camera skims past.",
+          "character_visible": false,
+          "framing_matrix": {
+            "primary_subject": "insert",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "object_plane",
+            "depth_intent": "macro_plane"
+          },
+          "continuity_prev": "BW_EP1_002_005D",
+          "continuity_next": "BW_EP1_002_007F",
+          "continuity_note": "Match framing from BW_EP1_002_005D and hand off cleanly to BW_EP1_002_007F.",
+          "timeline_role": "exit_marker",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 50mm lateral slider at action start, honoring Portraits dominating grounding.",
+            "end_pose": "Conclude with Portraits dominating, Eleanor implied via reflection locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_002_002A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_002_002A"
+        },
+        {
+          "shot_id": "BW_EP1_002_007F",
+          "type": "closeup",
+          "duration": 6,
+          "emotion_curve": "Tension",
+          "nano_prompt": "Extreme close on the foyer door latch as the governess's gloved hand eases it inward, raindrops still clinging to the brass.",
+          "ltx_motion_prompt": "Tilt-down holds on the latch as it clicks shut behind her, the echo rolling through the hall before fading to silence.",
+          "camera_motivation": "ritual_lock",
+          "lighting_split": {
+            "exterior_cool": 0.35,
+            "interior_warm": 0.65
+          },
+          "atmospheric_density": 0.7,
+          "audio_perspective": "foley_detail",
+          "human_first_frame": false,
+          "camera": "80mm macro tilt",
+          "lens_specs": "shallow DOF on latch",
+          "lighting": "Gaslamp glint against damp brass",
+          "character_blocking": "Gloved hand entering from frame left, latch centered",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "character_visible": true,
+          "description": "CAM: tilt-down macro on foyer door latch and governess gloved hand easing it inward. REF: Eleanor Vance (hand detail). LIGHT: gaslamp glint over damp brass. BLOCK: hand enters from frame left, latch centered before clicking shut.",
+          "reference_needed": "Eleanor Vance",
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "eye_level",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_002_006E",
+          "continuity_next": null,
+          "continuity_note": "Match framing from BW_EP1_002_006E and hand off cleanly to scene BW_EP1_002 outro.",
+          "timeline_role": "establishing_plate",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 80mm macro tilt at action start, honoring Gloved hand entering from frame left grounding.",
+            "end_pose": "Conclude with Gloved hand entering from frame left, latch centered locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_002_001A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_002_001A",
+          "continuity_reference": [
+            "BW_EP1_002_001A"
+          ]
+        }
+      ],
+      "scene_guide": "SCENE GUIDE: Grand foyer interior; pedestal axis centered on the dual staircase and chandelier, governess framed as a small figure within the gaslamp halo."
+    },
+    {
+      "scene_number": 3,
+      "scene_id": "BW_EP1_003",
+      "scene_title": "Mrs. Cross Appears",
+      "scene_purpose": "Introduce Mrs. Cross as antagonist and force Eleanor to assert control.",
+      "location": "Interior \u2013 Side Hallway \u2013 Night",
+      "time": "Friday 11:55 PM",
+      "characters_present": [
+        "Eleanor Vance",
+        "Mrs. Cross"
+      ],
+      "runtime_seconds": 44,
+      "beats": [
+        {
+          "beat_number": 1,
+          "description": "Mrs. Cross materializes silently, forcing Eleanor to confront the house rules.",
+          "goal": "Eleanor needs cooperation from the staff.",
+          "conflict": "Mrs. Cross exerts authority and hostility.",
+          "turn": "Eleanor realizes she must assert herself.",
+          "emotional_state": "Surprise/Tension",
+          "visual": "Chiaroscuro hallway where Mrs. Cross emerges from black void as Eleanor spins in shock.",
+          "beat": "BW_EP1_003_BEAT_1",
+          "duration_seconds": 12,
+          "emotion_curve": "Surprise/Tension",
+          "audio_perspective": "startle_close",
+          "character_action": "Eleanor pivots to confront Mrs. Cross and refuses to yield ground.",
+          "revelation": "Mrs. Cross is both gatekeeper and antagonist."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "BW_EP1_003_001A",
+          "type": "medium",
+          "duration": 8,
+          "emotion_curve": "Surprise/Tension",
+          "nano_prompt": "Medium shot as the governess spins to face the housekeeper emerging silently from a side hall, both carved by a slash of light.",
+          "ltx_motion_prompt": "Snap zoom retract reveals the reprimand \"You were not invited to wander\" freezing the governess mid-step.",
+          "dialogue": [
+            {
+              "character": "Mrs. Cross",
+              "line": "You were not invited to wander."
+            }
+          ],
+          "dialogue_subtext": "She asserts total control over the space without raising her voice.",
+          "camera_motivation": "domestic_intrusion",
+          "lighting_split": {
+            "exterior_cool": 0.35,
+            "interior_warm": 0.65
+          },
+          "atmospheric_density": 0.7,
+          "audio_perspective": "startle_close",
+          "human_first_frame": true,
+          "camera": "35mm snap zoom retract",
+          "lens_specs": "medium perspective with zoom whip",
+          "lighting": "Hard chiaroscuro slash across Mrs. Cross",
+          "character_blocking": "Eleanor foreground, Mrs. Cross emerging from hallway",
+          "reference_needed": "Eleanor Vance, Mrs. Cross",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 35mm medium as housekeeper emerges from side hall, governess spinning foreground. REF: Eleanor Vance, Mrs. Cross. LIGHT: hard chiaroscuro slash isolating both faces. BLOCK: Eleanor foreground profile, Mrs. Cross materializing from void.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center_left_third",
+            "secondary_subject": "Mrs. Cross",
+            "secondary_anchor": "center_right_third",
+            "camera_height": "chest_height",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": null,
+          "continuity_next": "BW_EP1_003_002B",
+          "continuity_note": "Match framing from scene BW_EP1_003 cold open and hand off cleanly to BW_EP1_003_002B.",
+          "timeline_role": "establishing_plate",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 35mm snap zoom retract at action start, honoring Eleanor foreground grounding.",
+            "end_pose": "Conclude with Eleanor foreground, Mrs. Cross emerging from hallway locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_003_001A.jpg"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_003_002B",
+          "type": "closeup",
+          "duration": 8,
+          "emotion_curve": "Calculated Resolve",
+          "nano_prompt": "Close-up on the governess regaining composure, eyes locked while the housekeeper blurs in the background.",
+          "ltx_motion_prompt": "Static duel as she replies \"Then provide me a lamp and I will keep to my work\" using impeccable diction to reclaim control.",
+          "dialogue": [
+            {
+              "character": "Eleanor Vance",
+              "line": "Then provide me a lamp and I will keep to my work."
+            }
+          ],
+          "dialogue_subtext": "She counters authority with politeness weaponized as control.",
+          "camera_motivation": "duel_of_wills",
+          "lighting_split": {
+            "exterior_cool": 0.4,
+            "interior_warm": 0.6
+          },
+          "atmospheric_density": 0.55,
+          "audio_perspective": "intimate_dialogue",
+          "human_first_frame": true,
+          "camera": "65mm locked duel close-up",
+          "lens_specs": "shallow DOF isolating Eleanor",
+          "lighting": "Sharp key only on Eleanor, darkness behind Mrs. Cross",
+          "character_blocking": "Eleanor in focus, Mrs. Cross blurred behind",
+          "reference_needed": "Eleanor Vance, Mrs. Cross",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: locked 65mm close-up on governess reclaiming composure while housekeeper blurs behind. REF: Eleanor Vance. LIGHT: sharp key on Eleanor, darkness enveloping background. BLOCK: Eleanor center frame, Mrs. Cross defocused over shoulder.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "eye_level",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_003_001A",
+          "continuity_next": "BW_EP1_003_003C",
+          "continuity_note": "Match framing from BW_EP1_003_001A and hand off cleanly to BW_EP1_003_003C.",
+          "timeline_role": "detail_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 65mm locked duel close-up at action start, honoring Eleanor in focus grounding.",
+            "end_pose": "Conclude with Eleanor in focus, Mrs. Cross blurred behind locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_003_001A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_003_001A",
+          "continuity_reference": [
+            "BW_EP1_003_001A"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_003_003C",
+          "type": "insert",
+          "duration": 8,
+          "emotion_curve": "Power Struggle",
+          "nano_prompt": "Macro insert on the housekeeper's gloved hands gripping the brass lamp key with the governess reflected in the polished surface.",
+          "ltx_motion_prompt": "Macro hold while the whispered threat binds her to silence before the key is reluctantly offered.",
+          "camera_motivation": "ominous_symbol",
+          "lighting_split": {
+            "exterior_cool": 0.3,
+            "interior_warm": 0.7
+          },
+          "atmospheric_density": 0.6,
+          "audio_perspective": "intimate_dialogue",
+          "human_first_frame": false,
+          "camera": "90mm macro locked off",
+          "lens_specs": "extreme shallow DOF on key and reflection",
+          "lighting": "Single slit of light across key, surrounding darkness",
+          "character_blocking": "Hands and reflection sharing frame diagonals",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 90mm macro insert on housekeeper gloves gripping brass lamp key with governess reflection. REF: Mrs. Cross, Eleanor Vance. LIGHT: single slit across key, surrounding darkness. BLOCK: diagonal composition with hands and reflection.",
+          "reference_needed": "Mrs. Cross, Eleanor Vance",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Mrs. Cross",
+            "primary_anchor": "center",
+            "secondary_subject": "Eleanor Vance",
+            "secondary_anchor": "right_third",
+            "camera_height": "object_plane",
+            "depth_intent": "macro_plane"
+          },
+          "continuity_prev": "BW_EP1_003_002B",
+          "continuity_next": "BW_EP1_003_004D",
+          "continuity_note": "Match framing from BW_EP1_003_002B and hand off cleanly to BW_EP1_003_004D.",
+          "timeline_role": "dialogue_call",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 90mm macro locked off at action start, honoring Hands and reflection sharing frame diagonals grounding.",
+            "end_pose": "Conclude with Hands and reflection sharing frame diagonals locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_003_002B.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_003_002B",
+          "continuity_reference": [
+            "BW_EP1_003_002B"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_003_004D",
+          "type": "over_shoulder",
+          "duration": 8,
+          "emotion_curve": "Dominance",
+          "nano_prompt": "Over-shoulder from the housekeeper towering over the governess as the hallway stretches into darkness.",
+          "ltx_motion_prompt": "Slow push from the housekeeper's POV while she cites Mr. Blackwood's rules, forcing the governess to retreat.",
+          "dialogue": [
+            {
+              "character": "Mrs. Cross",
+              "line": "Mr. Blackwood's rules are not open to negotiation."
+            }
+          ],
+          "dialogue_subtext": "She weaponizes the master's name to keep Eleanor submissive.",
+          "camera_motivation": "authority_pressure",
+          "lighting_split": {
+            "exterior_cool": 0.35,
+            "interior_warm": 0.65
+          },
+          "atmospheric_density": 0.65,
+          "audio_perspective": "intimate_dialogue",
+          "human_first_frame": true,
+          "camera": "55mm slow push over Mrs. Cross's shoulder",
+          "lens_specs": "medium depth keeping both figures readable",
+          "lighting": "Key on Eleanor, rim on Mrs. Cross",
+          "character_blocking": "Mrs. Cross foreground silhouette, Eleanor retreating",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 55mm over-shoulder from housekeeper towering over governess, hallway stretching into darkness. REF: Eleanor Vance, Mrs. Cross. LIGHT: key on Eleanor, rim on housekeeper silhouette. BLOCK: Mrs. Cross foreground silhouette, Eleanor retreating down hall.",
+          "reference_needed": "Eleanor Vance, Mrs. Cross",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "near_right",
+            "secondary_subject": "Mrs. Cross",
+            "secondary_anchor": "far_left",
+            "camera_height": "eye_level",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": "BW_EP1_003_003C",
+          "continuity_next": "BW_EP1_003_005E",
+          "continuity_note": "Match framing from BW_EP1_003_003C and hand off cleanly to BW_EP1_003_005E.",
+          "timeline_role": "dialogue_response",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 55mm slow push over Mrs. Cross's shoulder at action start, honoring Mrs. Cross foreground silhouette grounding.",
+            "end_pose": "Conclude with Mrs. Cross foreground silhouette, Eleanor retreating locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_003_001A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_003_001A",
+          "continuity_reference": [
+            "BW_EP1_003_001A"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_003_005E",
+          "type": "wide",
+          "duration": 6,
+          "emotion_curve": "Aftermath",
+          "nano_prompt": "Wide two-shot with the governess and housekeeper separated by negative space amid foyer shadows.",
+          "ltx_motion_prompt": "Locked wide lingers as the governess lifts her bag and the housekeeper turns away, footsteps echoing to compel obedience.",
+          "camera_motivation": "emotional_distance",
+          "lighting_split": {
+            "exterior_cool": 0.4,
+            "interior_warm": 0.6
+          },
+          "atmospheric_density": 0.6,
+          "audio_perspective": "ambient_hall",
+          "human_first_frame": true,
+          "camera": "32mm locked wide",
+          "lens_specs": "deep focus keeping both figures sharp",
+          "lighting": "Gaslamp pools separated by darkness",
+          "character_blocking": "Eleanor frame left, Mrs. Cross frame right exiting",
+          "reference_needed": "Eleanor Vance, Mrs. Cross",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: locked 32mm wide two-shot in foyer negative space. REF: Eleanor Vance, Mrs. Cross. LIGHT: separated gaslamp pools. BLOCK: Eleanor frame left lifting bag, Mrs. Cross frame right turning away into corridor.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "left_third",
+            "secondary_subject": "Mrs. Cross",
+            "secondary_anchor": "right_third",
+            "camera_height": "waist_height",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": "BW_EP1_003_004D",
+          "continuity_next": "BW_EP1_003_006F",
+          "continuity_note": "Match framing from BW_EP1_003_004D and hand off cleanly to BW_EP1_003_006F.",
+          "timeline_role": "symbol_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 32mm locked wide at action start, honoring Eleanor frame left grounding.",
+            "end_pose": "Conclude with Eleanor frame left, Mrs. Cross frame right exiting locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_003_001A.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_003_001A",
+          "continuity_reference": [
+            "BW_EP1_003_001A"
+          ]
+        },
+        {
+          "shot_id": "BW_EP1_003_006F",
+          "type": "medium",
+          "duration": 6,
+          "emotion_curve": "Reluctant Obedience",
+          "nano_prompt": "Medium rear shot of the governess hesitating while Mrs. Cross glides away with the lamp key raised.",
+          "ltx_motion_prompt": "Handheld follow as she steadies herself and steps forward, keeping the housekeeper centered while footsteps echo down the hall.",
+          "camera_motivation": "command_follow",
+          "lighting_split": {
+            "exterior_cool": 0.4,
+            "interior_warm": 0.6
+          },
+          "atmospheric_density": 0.6,
+          "audio_perspective": "ambient_hall",
+          "human_first_frame": true,
+          "camera": "45mm handheld follow",
+          "lens_specs": "medium depth keeping both figures readable",
+          "lighting": "Gaslamp glow trailing into darkness",
+          "character_blocking": "Housekeeper centered ahead, governess foreground back toward camera",
+          "reference_needed": "Eleanor Vance, Mrs. Cross",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "character_visible": true,
+          "description": "CAM: handheld 45mm follow from behind governess as housekeeper glides away with lamp key raised. REF: Eleanor Vance, Mrs. Cross. LIGHT: trailing gaslamp glow fading into darkness. BLOCK: housekeeper centered ahead, governess back toward camera hesitates then steps forward.",
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center_left_third",
+            "secondary_subject": "Mrs. Cross",
+            "secondary_anchor": "center_right_third",
+            "camera_height": "chest_height",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": "BW_EP1_003_005E",
+          "continuity_next": null,
+          "continuity_note": "Match framing from BW_EP1_003_005E and hand off cleanly to scene BW_EP1_003 outro.",
+          "timeline_role": "exit_marker",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 45mm handheld follow at action start, honoring Housekeeper centered ahead grounding.",
+            "end_pose": "Conclude with Housekeeper centered ahead, governess foreground back toward camera locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          },
+          "reference_images": [
+            "/Users/quantum/Desktop/atlas_output/nano_banana/BW_EP1_003_005E.jpg"
+          ],
+          "asset_reuse_from": "BW_EP1_003_005E",
+          "continuity_reference": [
+            "BW_EP1_003_005E"
+          ]
+        }
+      ],
+      "scene_guide": "SCENE GUIDE: Narrow side hallway; camera aligned along corridor depth with housekeeper emerging from doorway, gaslamp pools and deep negative space."
+    }
+  ]
+}

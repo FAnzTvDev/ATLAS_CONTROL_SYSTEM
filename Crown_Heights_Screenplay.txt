@@ -1,0 +1,682 @@
+# CROWN HEIGHTS
+**Episode**: Season 1 Episode 1 — "The Ledger"
+**Written By**: ATLAS Production System
+**Genre**: Urban Drama / Crime Thriller
+**Logline**: When a tech-savvy accountant inherits his murdered brother's barbershop in Crown Heights, Brooklyn, he discovers it launders money for a local kingpin — and must choose between burning the books or becoming the most dangerous man on the block.
+**Tone**: Gritty cinematic realism with warm golden-hour Brooklyn light cutting through cold institutional fluorescents. Handheld intimacy in personal moments, locked-off steady compositions during power plays.
+**Runtime Target**: 12 min
+**Setting**: Crown Heights, Brooklyn, New York City — Present Day. Summer heat. Brownstones, bodegas, basketball courts, barbershops. The gentrification line runs right through the neighborhood.
+
+## Act Outline
+**Act One — The Inheritance (Scenes 1-4)**
+- MARCUS discovers his brother DANTE was murdered behind the barbershop
+- He inherits the shop and meets the crew: SLIM the barber, YOLANDA the manager
+- First encounter with BISHOP, the local power broker who funded the shop
+- Marcus finds the second set of books hidden in the shop
+
+**Act Two — The Trap (Scenes 5-8)**
+- Marcus confronts Slim about the laundering operation
+- Detective REYES visits — knows more than she says
+- BISHOP sends a message through a neighborhood event
+- Marcus discovers the scale of the operation and his brother's true role
+
+**Act Three — The Choice (Scenes 9-11)**
+- Yolanda reveals she was protecting Dante, offers Marcus a way out
+- Marcus meets Bishop face-to-face on the rooftop
+- Final scene: Marcus makes his decision at the barbershop chair
+
+## Scene Cards
+**Scene 1 — EXT. CROWN HEIGHTS BARBERSHOP - NIGHT**
+- Purpose: Cold open. Crime scene. Establish the murder that sets everything in motion.
+- Characters: MARCUS REID, DETECTIVE REYES
+- Atmosphere: Red and blue police lights reflecting off wet pavement. Summer night. Crowd gathered behind yellow tape. Marcus arriving, pushing through.
+
+**Scene 2 — INT. MARCUS REID APARTMENT - MORNING**
+- Purpose: Establish Marcus's legitimate world. Corporate accountant. Clean life. The call from the lawyer.
+- Characters: MARCUS REID
+- Atmosphere: Minimalist Midtown apartment. Morning light through floor-to-ceiling windows. Everything precise, controlled, sterile.
+
+**Scene 3 — INT. CROWN HEIGHTS BARBERSHOP - DAY**
+- Purpose: Marcus enters the shop for the first time since childhood. Meets SLIM and YOLANDA. Feels the weight of his brother's life.
+- Characters: MARCUS REID, SLIM JACKSON, YOLANDA MORALES
+- Atmosphere: Warm amber light through front windows. Old-school hip-hop on speakers. Three barber chairs, vintage posters. Neighborhood institution.
+
+**Scene 4 — INT. CROWN HEIGHTS BARBERSHOP - BACK OFFICE - DAY**
+- Purpose: Marcus finds the second set of books. The discovery that changes everything.
+- Characters: MARCUS REID
+- Atmosphere: Cramped office. Fluorescent buzzing. Filing cabinets. A desk with Dante's personal items — family photos, a gold chain, a Bible.
+
+**Scene 5 — EXT. BASKETBALL COURT - CROWN HEIGHTS - DAY**
+- Purpose: Marcus confronts Slim in neutral territory. Slim reveals the scope of Bishop's operation.
+- Characters: MARCUS REID, SLIM JACKSON
+- Atmosphere: Hot summer day. Chain-link fence. Pickup game in background. Kids on the sideline. Sweat. Tension disguised as casual.
+
+**Scene 6 — INT. CROWN HEIGHTS BARBERSHOP - DAY**
+- Purpose: Detective Reyes visits the shop under the guise of community outreach. Probes Marcus. She knows about the books.
+- Characters: MARCUS REID, DETECTIVE REYES, SLIM JACKSON
+- Atmosphere: Midday light. Shop is busy with customers. Normal day. But Reyes's presence changes the energy. Everyone watches.
+
+**Scene 7 — EXT. CROWN HEIGHTS BLOCK PARTY - NIGHT**
+- Purpose: Bishop makes his public appearance. Community leader facade. He approaches Marcus warmly — a warning wrapped in hospitality.
+- Characters: MARCUS REID, BISHOP TATE, YOLANDA MORALES
+- Atmosphere: Street festival. String lights. DJ booth. Grills smoking. Kids dancing. Music loud. Beautiful but underlaid with menace. Bishop holds court.
+
+**Scene 8 — INT. CROWN HEIGHTS BARBERSHOP - BACK OFFICE - NIGHT**
+- Purpose: Marcus digs deeper into the ledger. Discovers Dante wasn't just laundering — he was skimming. That's why he's dead.
+- Characters: MARCUS REID
+- Atmosphere: Alone in the office. Single desk lamp. Calculator. Laptop screen glow. The numbers tell the story. Marcus's face in blue-white light.
+
+**Scene 9 — INT. YOLANDA APARTMENT - CROWN HEIGHTS - NIGHT**
+- Purpose: Yolanda reveals she loved Dante. She was protecting him. She offers Marcus the contacts to disappear the books.
+- Characters: MARCUS REID, YOLANDA MORALES
+- Atmosphere: Small but warm apartment. Candles. Dominican music softly playing. Family photos. A life built carefully around danger.
+
+**Scene 10 — EXT. ROOFTOP - CROWN HEIGHTS - NIGHT**
+- Purpose: Marcus and Bishop meet alone. Bishop offers partnership or consequences. The city stretches out behind them.
+- Characters: MARCUS REID, BISHOP TATE
+- Atmosphere: Night skyline. Manhattan glowing across the river. Brooklyn rooftops. Wind. Two men silhouetted. Power negotiation at the edge.
+
+**Scene 11 — INT. CROWN HEIGHTS BARBERSHOP - DAWN**
+- Purpose: Final image. Marcus alone in the barber chair. He's made his choice. Opens the shop. First customer enters.
+- Characters: MARCUS REID
+- Atmosphere: Pre-dawn blue light through windows. Shop is quiet. Marcus in the chair where his brother used to sit. Golden sunrise slowly filling the room.
+
+## Characters
+### Lead
+**MARCUS REID** — Man, 32, lean athletic build, close-cropped fade haircut, sharp brown eyes, clean-shaven, medium-dark brown skin. Wears a fitted navy suit with no tie, white dress shirt open at collar, expensive watch. Carries himself with quiet precision. Corporate accountant pulled into street politics.
+
+### Antagonist
+**BISHOP TATE** — Man, 55, tall imposing frame, shaved head, dark brown skin, deep-set commanding eyes, salt-and-pepper goatee, gold rings on both hands. Wears a tailored cream linen suit, open-collar silk shirt, gold chain. Moves slowly and deliberately. Community patron and drug kingpin. Every gesture is a calculation.
+
+### Supporting
+**SLIM JACKSON** — Man, 40, wiry build, dark brown skin, thin mustache, weathered hands, kind eyes hiding worry. Wears barber's apron over plain white t-shirt, fresh white sneakers. Head barber for 15 years. Loyal to Dante. Knows everything but says little.
+
+**YOLANDA MORALES** — Woman, 29, Dominican-American, warm bronze skin, dark wavy hair pulled back, expressive dark eyes, small silver hoop earrings. Wears fitted jeans, crisp white blouse, minimal gold jewelry. Shop manager. Fierce, protective, carrying grief she won't show at work.
+
+**DETECTIVE ELENA REYES** — Woman, 38, Puerto Rican-American, medium build, sharp watchful eyes, dark hair in a tight bun, no makeup, plain navy blazer over white shirt, detective shield on belt. Carries herself like she's always working. Knows the neighborhood from growing up three blocks away.
+
+## Aliases
+- MARCUS = MARCUS REID
+- BISHOP = BISHOP TATE
+- SLIM = SLIM JACKSON
+- YOLANDA = YOLANDA MORALES
+- REYES = DETECTIVE REYES = DETECTIVE ELENA REYES
+- DANTE = DANTE REID
+
+## Casting Stopwords
+- generic, unnamed, crowd, bystander, customer, barber customer, pickup player, kid, child, DJ, party guest, passerby, pedestrian, background
+
+---SCREENPLAY---
+
+CROWN HEIGHTS
+
+"The Ledger"
+
+Season 1 — Episode 1
+
+
+FADE IN:
+
+EXT. CROWN HEIGHTS BARBERSHOP - NIGHT
+
+Red and blue police lights pulse across wet asphalt. Summer rain just stopped. Steam rises from the pavement. A crowd presses against yellow crime scene tape outside DANTE'S CUTS, a corner barbershop with a vintage neon sign — half the letters still glowing.
+
+MARCUS REID (32, lean, close-cropped fade, fitted navy suit with no tie, white shirt open at collar) pushes through the crowd. His face is rigid. Controlled. An expensive watch catches the police lights.
+
+A UNIFORMED OFFICER blocks his path. Marcus doesn't stop.
+
+MARCUS REID
+That's my brother's shop. That's my
+brother's shop.
+
+DETECTIVE ELENA REYES (38, sharp eyes, navy blazer, detective shield on belt) steps between them. She studies Marcus for a beat too long.
+
+DETECTIVE REYES
+Mr. Reid. I'm Detective Reyes. I'm
+sorry about your brother.
+
+MARCUS REID
+Where is he?
+
+DETECTIVE REYES
+(carefully)
+Behind the building. I need to ask
+you some questions first.
+
+MARCUS REID
+I haven't talked to Dante in three
+months. Whatever happened here — I
+don't know anything about it.
+
+Reyes watches him. Something flickers behind her eyes — not sympathy. Recognition.
+
+DETECTIVE REYES
+Everybody says that at first.
+
+Marcus stares past her at the barbershop. Through the glass, he can see the chairs, the mirrors, the photographs on the wall. A life he walked away from.
+
+
+INT. MARCUS REID APARTMENT - MORNING
+
+A minimalist Midtown apartment. Floor-to-ceiling windows overlook the East River. Everything is precise — aligned books, clean surfaces, a single orchid on the kitchen island.
+
+Marcus stands at the window in boxer briefs and a white undershirt, phone pressed to his ear. He hasn't slept. His suit jacket is draped over a chair, the same one from last night.
+
+MARCUS REID
+(into phone)
+What do you mean I'm the sole
+beneficiary? Dante and I barely —
+
+He listens. His jaw tightens.
+
+MARCUS REID
+The building too? Everything?
+
+He puts the phone down slowly. Stares at the city. Somewhere out there, across the bridge, is a barbershop with his brother's blood behind it.
+
+Marcus opens his laptop. On screen: a corporate dashboard, clean spreadsheets, quarterly projections. His world. Safe. Numerical. Controllable.
+
+He closes the laptop.
+
+
+INT. CROWN HEIGHTS BARBERSHOP - DAY
+
+Afternoon light pours through the front windows, warming everything gold. Old-school hip-hop plays from a portable speaker — Nas, "The World Is Yours." Three barber chairs face a wall of mirrors. Vintage hip-hop posters. Photographs of neighborhood legends. A shelf of hair products.
+
+SLIM JACKSON (40, wiry, white t-shirt under barber's apron, thin mustache) works a clipper over a CUSTOMER's head with surgical precision. He doesn't look up when the door opens.
+
+YOLANDA MORALES (29, dark wavy hair pulled back, crisp white blouse, small silver hoops) stands behind a register that's older than she is. She sees Marcus enter and freezes.
+
+Marcus stands in the doorway. He's wearing different clothes now — dark jeans, a fitted black polo, clean sneakers. Trying not to look like he just came from Wall Street. Failing.
+
+SLIM JACKSON
+(still cutting, not looking)
+We're full up. Walk-ins tomorrow.
+
+YOLANDA MORALES
+Slim.
+
+Slim glances up. Sees Marcus. The clipper stops.
+
+SLIM JACKSON
+Damn.
+
+He sets the clipper down. Pulls off his apron slowly.
+
+SLIM JACKSON
+You look just like him. Around the
+eyes.
+
+MARCUS REID
+You must be Slim. Dante talked
+about you.
+
+SLIM JACKSON
+He talked about you too. The one
+who got out.
+
+The words hang. Yolanda steps forward, extends her hand.
+
+YOLANDA MORALES
+I'm Yolanda. I managed the books.
+I managed everything, really.
+
+MARCUS REID
+I know who you are. Dante mentioned
+you in every phone call.
+
+Yolanda's composure cracks for just a second. She recovers.
+
+YOLANDA MORALES
+The lawyer says the shop is yours
+now. Whatever you want to do with
+it — we understand.
+
+Marcus looks around the shop. Runs his hand along the leather of the first barber chair. Touches the photographs. His brother's life, pinned to the walls.
+
+MARCUS REID
+I'm not selling anything. Not yet.
+I just need to understand what I'm
+looking at.
+
+
+INT. CROWN HEIGHTS BARBERSHOP - BACK OFFICE - DAY
+
+A cramped office behind the main floor. Metal filing cabinets. A desk cluttered with receipts, a gold chain coiled on a notepad, a framed photograph of Marcus and Dante as kids — maybe ten and fourteen — standing in front of this same barbershop.
+
+Marcus sits at the desk. He opens the laptop — Dante's, not his. The desktop is chaos. Folders everywhere.
+
+He opens the accounting software. Revenue. Expenses. Payroll. Standard small business. Everything checks out.
+
+Then he notices a folder on the desktop: "BACKUP - DO NOT DELETE"
+
+He opens it. A second spreadsheet. Different numbers. Much bigger numbers. Cash deposits that dwarf the shop's actual revenue. Payments coded with initials — B.T., K.R., D.M.
+
+Marcus stares at the screen. The fluorescent light buzzes overhead. The gold chain on the notepad catches light.
+
+MARCUS REID
+(whispered)
+What did you do, Dante?
+
+He pulls open a desk drawer. Underneath old receipts, a leather-bound notebook. Handwritten entries. Names. Amounts. Dates. His brother's handwriting, careful and precise — the same handwriting from birthday cards.
+
+This is a ledger. A real one. Not digital. Not traceable. Old school.
+
+Marcus closes the notebook. Sits back. Through the office door, he can hear Slim's clippers buzzing, a customer laughing, hip-hop playing. The normal world, ten feet away.
+
+
+EXT. BASKETBALL COURT - CROWN HEIGHTS - DAY
+
+Blazing summer heat. Chain-link fence rattles in hot wind. A pickup game runs on the cracked court — all elbows and trash talk. Kids watch from the sideline, sharing a bag of chips.
+
+Marcus and Slim sit on a bench outside the fence. Marcus holds two bottles of water. He hands one to Slim. Neither drinks.
+
+MARCUS REID
+How long?
+
+SLIM JACKSON
+How long what?
+
+MARCUS REID
+Don't do that. The books. The
+second set. How long was Dante
+washing money through the shop?
+
+Slim takes a long breath. Watches the game.
+
+SLIM JACKSON
+Four years. Maybe five. Bishop set
+it up. Dante just... let it happen.
+
+MARCUS REID
+Bishop.
+
+SLIM JACKSON
+Bishop Tate. He owns half this
+neighborhood. Not on paper. But
+the bodegas, the laundromats, the
+car wash on Nostrand — all Bishop.
+The barbershop was just another
+channel.
+
+MARCUS REID
+And Dante was okay with this?
+
+SLIM JACKSON
+Dante was surviving. You think a
+barbershop in Crown Heights pays
+for that building? The rent alone
+would've killed him in year two.
+Bishop's money kept the lights on.
+
+Marcus processes this. A ball bounces off the fence near them. A KID yells "my bad" and retrieves it.
+
+MARCUS REID
+Why is Dante dead?
+
+Slim finally looks at Marcus. Really looks at him.
+
+SLIM JACKSON
+I don't know. And that's the truth.
+But if I had to guess? Dante
+started thinking he was smarter
+than Bishop. And nobody's smarter
+than Bishop.
+
+
+INT. CROWN HEIGHTS BARBERSHOP - DAY
+
+Midday. The shop hums with its usual rhythm. Two CUSTOMERS in chairs. Slim working one, a SECOND BARBER working the other. Yolanda at the register. Hip-hop plays.
+
+The door opens. DETECTIVE REYES walks in wearing a casual blazer, no badge visible. She looks around like she's browsing. Picks up a business card from the counter.
+
+DETECTIVE REYES
+Nice shop. My father used to get
+his cuts on this block. Different
+place, same vibe.
+
+YOLANDA MORALES
+Can I help you, Detective?
+
+Reyes smiles. So much for undercover.
+
+DETECTIVE REYES
+Just checking in on the new owner.
+How's the transition, Mr. Reid?
+
+Marcus emerges from the back office. He's calm. He's been expecting this.
+
+MARCUS REID
+Smooth. Appreciate you asking.
+
+DETECTIVE REYES
+Your brother had a lot of friends
+in this neighborhood. A lot of
+people who depended on this shop
+staying open.
+
+MARCUS REID
+That's the plan.
+
+DETECTIVE REYES
+Good. Because some of those friends
+— they're the kind that make things
+complicated for new owners.
+
+She picks up a jar of pomade, examines it, sets it back.
+
+DETECTIVE REYES
+You're a CPA, right? Forensic
+accounting background?
+
+MARCUS REID
+That's public record.
+
+DETECTIVE REYES
+It is. Interesting skillset for a
+barbershop owner. Almost like you'd
+know exactly what to look for.
+
+She holds his gaze. A beat. Then she smiles again — warm, professional, lethal.
+
+DETECTIVE REYES
+Keep my card. Call if you remember
+anything about your brother's
+associates.
+
+She leaves. The bell above the door chimes. The shop exhales.
+
+Slim looks at Marcus through the mirror. Marcus looks back. Neither speaks.
+
+
+EXT. CROWN HEIGHTS BLOCK PARTY - NIGHT
+
+A summer block party in full swing. String lights crisscross between brownstones. A DJ booth pumps dancehall. Grills line the sidewalk — jerk chicken, plantains, the smoke rising golden under the lights. Kids chase each other between folding tables. Old men play dominoes.
+
+Marcus moves through the crowd with Yolanda. He's uncomfortable. She's not.
+
+YOLANDA MORALES
+Relax. You look like a narc.
+
+MARCUS REID
+I look like a guy who doesn't know
+anybody here.
+
+YOLANDA MORALES
+You know me. That's enough for
+tonight.
+
+Then the energy shifts. People straighten up. Conversations pause. The crowd parts naturally, the way water moves around a stone.
+
+BISHOP TATE (55, tall, shaved head, tailored cream linen suit, gold chain, gold rings) walks through the block party like he built it. Because he did. He shakes hands. Kisses cheeks. Hands a hundred-dollar bill to a kid.
+
+He sees Marcus. His face breaks into a wide, warm smile.
+
+BISHOP TATE
+Marcus Reid. Man, I'm looking at
+a ghost. You got your brother's
+face and your mama's eyes.
+
+He extends a hand. Marcus shakes it. The grip is firm. Measured.
+
+BISHOP TATE
+Dante was family to me. And that
+means you're family. Whatever you
+need with the shop — you come to
+me.
+
+MARCUS REID
+I appreciate that, Mr. Tate.
+
+BISHOP TATE
+Bishop. Call me Bishop. Everybody
+does.
+
+He puts a hand on Marcus's shoulder. Steers him slightly apart from Yolanda. His voice drops. The smile stays.
+
+BISHOP TATE
+Your brother and I had an
+arrangement. Good for him. Good for
+the neighborhood. I'd hate to see
+all that good work disappear
+because of a misunderstanding.
+
+MARCUS REID
+I'm just trying to run a
+barbershop.
+
+BISHOP TATE
+That's exactly what Dante said. And
+he was right. A barbershop is the
+heartbeat of a neighborhood. It
+would break my heart to see that
+heartbeat stop.
+
+He squeezes Marcus's shoulder. Releases. Steps back into the crowd. The party resumes around him.
+
+Yolanda appears beside Marcus. She saw the whole thing.
+
+YOLANDA MORALES
+(quietly)
+Now you understand.
+
+
+INT. CROWN HEIGHTS BARBERSHOP - BACK OFFICE - NIGHT
+
+Late. The shop is dark and closed. Only the desk lamp is on, casting a cone of warm light in the small office.
+
+Marcus has both sets of books open — the digital on the laptop, the handwritten ledger beside it. A calculator. A legal pad covered in his own notes.
+
+He cross-references entries. His finger traces a column. His eyes narrow.
+
+MARCUS REID
+(to himself)
+You weren't just washing it. You
+were skimming off the top.
+
+He pulls up another file on the laptop. Monthly deposits to an account he doesn't recognize. Small amounts — two thousand, three thousand — siphoned from Bishop's wash cycle before the clean money went back.
+
+Over four years, his brother stole over four hundred thousand dollars from Bishop Tate.
+
+Marcus sits back. Covers his face with both hands.
+
+MARCUS REID
+You idiot. You beautiful idiot.
+
+He opens the desk drawer where he found the ledger. Reaches deeper. In the very back, taped to the underside of the drawer above, is a USB drive.
+
+Marcus peels it free. Holds it up in the desk lamp light. It's labeled in Dante's handwriting: "INSURANCE"
+
+
+INT. YOLANDA APARTMENT - CROWN HEIGHTS - NIGHT
+
+A small one-bedroom apartment. Warm and lived-in. Candles on the windowsill. Family photographs on every surface — Yolanda's family in Santo Domingo, Yolanda at the barbershop with Dante, laughing.
+
+Bachata plays softly from a speaker. Yolanda sits on the couch, legs tucked under her. Marcus sits across from her. Two glasses of rum between them. Untouched.
+
+MARCUS REID
+You knew about the skimming.
+
+YOLANDA MORALES
+I knew about everything.
+
+MARCUS REID
+Why didn't you stop him?
+
+YOLANDA MORALES
+(sharp)
+You think I didn't try? I begged
+him. Every month I begged him to
+stop.
+
+She picks up her glass. Drinks. Sets it down hard.
+
+YOLANDA MORALES
+He said it was his retirement plan.
+Get enough put away, then
+disappear. Buy a house somewhere
+warm. Take me with him.
+
+MARCUS REID
+Take you with him.
+
+YOLANDA MORALES
+We were together, Marcus. Two
+years. He didn't tell you because
+you would have told him to leave.
+And he wasn't ready to leave.
+
+Marcus absorbs this. Another piece of his brother he never knew.
+
+MARCUS REID
+The USB drive. You know what's on
+it?
+
+YOLANDA MORALES
+Everything. Every transaction.
+Every name. Every dollar that
+moved through Bishop's network.
+Dante recorded it all. He said if
+anything ever happened to him —
+
+She stops. Breathes.
+
+YOLANDA MORALES
+He said to give it to you. Because
+you'd know what to do with numbers.
+
+Marcus looks at the photographs on the wall. Dante smiling. Yolanda smiling. A life that was supposed to have a future.
+
+MARCUS REID
+I can make this all disappear. The
+second books, the ledger, the USB.
+Burn it. Walk away. Sell the shop.
+Go back to my life.
+
+YOLANDA MORALES
+You could.
+
+MARCUS REID
+Or?
+
+YOLANDA MORALES
+Or you could do what Dante couldn't
+finish. Use the numbers. Take
+Bishop down. But Marcus —
+
+She leans forward. Her eyes are fierce and frightened.
+
+YOLANDA MORALES
+If you go that route, there's no
+going back to Midtown. There's no
+going back to anything.
+
+
+EXT. ROOFTOP - CROWN HEIGHTS - NIGHT
+
+The Brooklyn skyline stretches in every direction. Manhattan glows across the East River — towers of glass and money. Up here, the city noise is a distant hum. Wind moves across the tar roof.
+
+Marcus stands near the edge, looking out. Behind him, a rooftop door opens. Bishop emerges alone. No entourage. Just a man.
+
+BISHOP TATE
+Beautiful night for a conversation.
+
+He walks to stand beside Marcus. They look at the skyline together.
+
+BISHOP TATE
+I built half of what you're looking
+at. The legitimate half. Community
+center on Franklin. Youth program
+on Sterling. The playground your
+niece plays in? That was me.
+
+MARCUS REID
+And the other half?
+
+BISHOP TATE
+The other half is how you build the
+first half. This country was built
+on dirty money, Marcus. Every
+fortune starts with a sin. I'm
+just honest about mine.
+
+He turns to face Marcus.
+
+BISHOP TATE
+Your brother was smart. Too smart
+for his own good. He forgot the
+first rule — you don't steal from
+the man who's stealing for you.
+
+MARCUS REID
+Is that a confession?
+
+BISHOP TATE
+(laughing softly)
+It's a lesson. And here's another
+one. That shop sits on the corner
+of the most valuable block in Crown
+Heights. Developers are circling.
+Gentrification is coming whether
+we want it or not. I can keep that
+shop open for another fifty years.
+Or I can let it get swallowed.
+
+He lets that sink in.
+
+BISHOP TATE
+Be my partner. Run the books like
+your brother did, but smarter. No
+skimming. No freelancing. Clean
+operation. You'll make more in a
+year than your corporate job pays
+in five. And the neighborhood keeps
+its heartbeat.
+
+MARCUS REID
+And if I say no?
+
+Bishop smiles. It doesn't reach his eyes.
+
+BISHOP TATE
+Then I'll miss you, Marcus. The
+way I miss your brother.
+
+He walks back toward the door. Stops.
+
+BISHOP TATE
+You have until Friday.
+
+The door closes. Marcus stands alone on the roof. The Manhattan skyline pulses. The Brooklyn streets breathe below. Somewhere, a siren wails.
+
+
+INT. CROWN HEIGHTS BARBERSHOP - DAWN
+
+Pre-dawn. The shop is empty, bathed in deep blue light. The chairs are shadows. The mirrors reflect nothing but stillness.
+
+Marcus sits in the first barber chair — Dante's chair. He's been here all night. The leather creaks as he shifts. In his hands: the ledger in one hand, the USB drive in the other.
+
+He looks at his reflection in the mirror across from him. For a moment, he sees his brother.
+
+Slowly, golden light begins to fill the shop. Sunrise through the front windows. The neon sign outside catches the first rays — DANTE'S CUTS glows warm.
+
+Marcus puts the USB drive in his pocket. He puts the ledger in the desk drawer in the back office and locks it.
+
+He comes back out. Puts on a barber's apron from the hook. It doesn't fit right. He adjusts it.
+
+He walks to the front door. Unlocks it. Flips the sign from CLOSED to OPEN.
+
+Through the glass, the first CUSTOMER approaches. An OLD MAN with a cane, regular as sunrise.
+
+Marcus holds the door open.
+
+MARCUS REID
+Morning. Come on in.
+
+The old man settles into the chair. Marcus picks up the clippers. He doesn't know how to cut hair. But he knows how to start.
+
+The shop hums to life.
+
+SMASH CUT TO BLACK.
+
+END OF EPISODE

@@ -1,0 +1,191 @@
+{
+  "project": "Blackwood Chronicles - Comprehensive Asset Grid",
+  "version": "2.0",
+  "description": "Complete 14-slot asset grid with all characters, locations, props, and quality anchors from script",
+  "character_library": {
+    "ELEANOR": {
+      "face_neutral": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/the_blackwood_estate/ELEANOR_VANCE_LOCKED_REFERENCE.jpg",
+        "description": "Eleanor Vance - neutral expression, paranormal investigator",
+        "slot_priority": 1
+      },
+      "wardrobe": {
+        "url": "https://i.ibb.co/yck64wg4/VICTORIAN-COAT.jpg",
+        "description": "Eleanor's Victorian traveling coat",
+        "slot_priority": 10
+      }
+    },
+    "MARCUS": {
+      "face_neutral": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/the_blackwood_estate/MARCUS_STERLING_LOCKED_REFERENCE.jpg",
+        "description": "Marcus Sterling - skeptical expression, professional",
+        "slot_priority": 1
+      }
+    },
+    "VICTORIA": {
+      "face_neutral": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/the_blackwood_estate/VICTORIA_ASHFORD_LOCKED_REFERENCE.jpg",
+        "description": "Victoria - elegant older woman, aristocratic features",
+        "slot_priority": 1
+      },
+      "body_reference": {
+        "url": "https://i.ibb.co/hx3CsB2d/VICTORIA-BODY.jpg",
+        "description": "Victoria - full body in Victorian dress",
+        "slot_priority": 2
+      }
+    },
+    "FATHER_RHYS": {
+      "face_neutral": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/the_blackwood_estate/FATHER_THOMAS_RHYS_LOCKED_REFERENCE.jpg",
+        "description": "Father Rhys - priest in civilian clothes, haunted expression",
+        "slot_priority": 1
+      }
+    }
+  },
+  "location_library": {
+    "FRONT_GATES": {
+      "description": "Exterior front gates at dusk, imposing iron gates with fog",
+      "depth_references": {
+        "wide_establishing": {
+          "url": "https://i.ibb.co/ymMKc7F4/GATES-WIDE.jpg",
+          "description": "Wide shot through fog, car approaching",
+          "slot_priority": 6,
+          "camera_distance": "wide"
+        },
+        "medium_approach": {
+          "url": "https://i.ibb.co/Zz8zPBcz/GATES-MEDIUM.jpg",
+          "description": "Medium shot from car POV",
+          "slot_priority": 7,
+          "camera_distance": "medium"
+        },
+        "close_detail": {
+          "url": "https://i.ibb.co/xtXYR8N3/GATES-CLOSE.jpg",
+          "description": "Close-up of ornate gate mechanism",
+          "slot_priority": 8,
+          "camera_distance": "close"
+        },
+        "interior_view": {
+          "url": "https://i.ibb.co/8gdK3TP9/GATES-INTERIOR.jpg",
+          "description": "View from inside estate looking out",
+          "slot_priority": 9,
+          "camera_distance": "medium"
+        }
+      }
+    },
+    "GRAND_FOYER": {
+      "description": "Interior grand foyer with chandelier, marble floors, grand staircase",
+      "depth_references": {
+        "wide_establishing": {
+          "url": "https://i.ibb.co/x8MB1NFH/FOYER-WIDE.jpg",
+          "description": "Wide shot with chandelier and staircase",
+          "slot_priority": 6,
+          "camera_distance": "wide"
+        },
+        "medium_center": {
+          "url": "https://i.ibb.co/fzPcKpqr/FOYER-MEDIUM.jpg",
+          "description": "Medium shot from center of room",
+          "slot_priority": 7,
+          "camera_distance": "medium"
+        },
+        "close_staircase": {
+          "url": "https://i.ibb.co/hFWZsKz3/FOYER-CLOSE.jpg",
+          "description": "Close-up of grand staircase detail",
+          "slot_priority": 8,
+          "camera_distance": "close"
+        },
+        "overhead_marble": {
+          "url": "https://i.ibb.co/Rk4w0Mt9/FOYER-OVERHEAD.jpg",
+          "description": "Overhead view of marble floors",
+          "slot_priority": 9,
+          "camera_distance": "overhead"
+        }
+      }
+    }
+  },
+  "wardrobe_library": {
+    "ELEANOR_COAT": {
+      "url": "https://i.ibb.co/yck64wg4/VICTORIAN-COAT.jpg",
+      "description": "Victorian traveling coat, deep burgundy wool",
+      "slot_priority": 10,
+      "character": "Eleanor"
+    },
+    "VICTORIA_DRESS": {
+      "url": "https://i.ibb.co/hx3CsB2d/VICTORIA-BODY.jpg",
+      "description": "Elegant Victorian dress, burgundy velvet",
+      "slot_priority": 10,
+      "character": "Victoria"
+    }
+  },
+  "props_library": {
+    "IRON_GATES": {
+      "url": "https://i.ibb.co/xtXYR8N3/GATES-CLOSE.jpg",
+      "description": "Ornate iron gate mechanism, gothic metalwork",
+      "slot_priority": 11,
+      "location": "Front Gates"
+    },
+    "CHANDELIER": {
+      "url": "https://i.ibb.co/x8MB1NFH/FOYER-WIDE.jpg",
+      "description": "Grand crystal chandelier in foyer",
+      "slot_priority": 11,
+      "location": "Grand Foyer"
+    }
+  },
+  "quality_anchors": {
+    "GOTHIC_HORROR": {
+      "url": "https://i.ibb.co/ymMKc7F4/GATES-WIDE.jpg",
+      "description": "Gothic horror aesthetic - atmospheric dread, fog, muted colors, dramatic shadows",
+      "style_keywords": [
+        "gothic",
+        "horror",
+        "atmospheric",
+        "fog",
+        "dread"
+      ]
+    },
+    "VICTORIAN_PERIOD": {
+      "url": "https://i.ibb.co/x8MB1NFH/FOYER-WIDE.jpg",
+      "description": "Victorian period drama - authentic architecture, historical accuracy, ornate details",
+      "style_keywords": [
+        "victorian",
+        "period",
+        "authentic",
+        "ornate",
+        "historical"
+      ]
+    },
+    "CINEMATIC_LIGHTING": {
+      "url": "https://i.ibb.co/fzPcKpqr/FOYER-MEDIUM.jpg",
+      "description": "Cinematic lighting - tungsten-cool split, motivated practicals, atmospheric haze",
+      "style_keywords": [
+        "cinematic",
+        "lighting",
+        "tungsten",
+        "atmospheric",
+        "motivated"
+      ]
+    },
+    "SUPERNATURAL_TENSION": {
+      "url": "https://i.ibb.co/8gdK3TP9/GATES-INTERIOR.jpg",
+      "description": "Supernatural tension - impossible geometry, watching presence, spatial distortion",
+      "style_keywords": [
+        "supernatural",
+        "tension",
+        "impossible",
+        "distortion",
+        "presence"
+      ]
+    }
+  },
+  "metadata": {
+    "total_characters": 4,
+    "total_locations": 2,
+    "total_location_angles": 8,
+    "total_wardrobe_items": 2,
+    "total_props": 2,
+    "total_quality_anchors": 4,
+    "total_references": 18,
+    "slot_coverage": "1-11, 14 (12 reserved for continuity, 13 unused)",
+    "created": "2025-11-21",
+    "source": "Blackwood Episode 1 - Welcome to Blackwood"
+  }
+}

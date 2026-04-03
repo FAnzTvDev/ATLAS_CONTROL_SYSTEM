@@ -1,0 +1,213 @@
+================================================================================
+ATLAS CHARACTER DESCRIPTION INJECTION PIPELINE
+================================================================================
+
+GENERATE-FIRST-FRAMES ENDPOINT (orchestrator_server.py lines 19088-19200)
+================================================================================
+
+FOR EACH SHOT:
+
+  ┌─────────────────────────────────────────────────────────────────────┐
+  │ NANO_PROMPT ENRICHMENT SEQUENCE                                     │
+  │ (Each step appends/modifies nano_prompt)                            │
+  └─────────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ STEP 1: Scene Anchor (line 19093)                                   │
+  │ Function: scene_anchor_system.enhance_prompt(shot)                  │
+  │ Adds: Color grade, lighting direction                               │
+  │ Example: "...scene anchor: ethereal moonlight, cool blue cast..."  │
+  │ Dedup Check: N/A (not character text)                              │
+  └──────────────────────────────────────────────────────────────────────┘
+                                ↓
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ STEP 2: Cinematic Enricher (line 19109)                            │
+  │ Function: enricher.enrich_nano_prompt(nano_prompt, shot)           │
+  │ Adds: Humanization, film stock, timing, camera movement            │
+  │ Example: "...moment of understanding crosses her face, subtle..."  │
+  │ Dedup Check: N/A (not character appearance)                        │
+  └──────────────────────────────────────────────────────────────────────┘
+                                ↓
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ STEP 3: Cast Trait Injection (line 19128)                          │
+  │ Function: enricher.inject_cast_traits(nano_prompt, shot, ...)      │
+  │ Adds: Character appearance from CANONICAL_CHARACTERS               │
+  │ Example: "...EVELYN: woman in her late 60s, gaunt face..."        │
+  │                                                                     │
+  │ Dedup Check: YES — checks if char_name.upper() in prompt.upper()  │
+  │ Problem: Only checks NAME existence, not DESCRIPTION existence      │
+  │ Risk: If description exists without name → DUPLICATE INJECTION    │
+  └──────────────────────────────────────────────────────────────────────┘
+                                ↓
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ STEP 4: Face-Lock Injection (line 19155) ⚠️  DUPLICATE RISK         │
+  │ Function: Manual loop looking up CANONICAL_CHARACTERS              │
+  │ Adds: Character appearance AGAIN (same source as STEP 3)           │
+  │ Example: "...EVELYN (woman in her late 60s, gaunt face...)..."   │
+  │                                                                     │
+  │ Dedup Check: NONE ⚠️                                               │
+  │ Risk: INJECTS SAME CHARACTER APPEARANCE A SECOND TIME              │
+  │                                                                     │
+  │ Code (lines 19144-19155):                                          │
+  │   for _v19_char in characters:                                     │
+  │     # [fuzzy match in CANONICAL_CHARACTERS]                        │
+  │     _v19_desc = _v19_canon.get("appearance", "")                  │
+  │     if _v19_desc:                                                  │
+  │       _v19_face_locks.append(f"{_v19_char} ({_v19_desc[:150]})") │
+  │                                                                     │
+  │   # IMMEDIATELY INJECT:                                            │
+  │   nano_prompt = ... + _v19_face_lock_str + ". " + ...            │
+  └──────────────────────────────────────────────────────────────────────┘
+                                ↓
+                        nano_prompt now has:
+                    STEP 3 description + STEP 4 description
+                            (DUPLICATE!)
+                                ↓
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ STEP 5: Prompt Authority Gate (line 19182) ✅ FIXES DUPLICATE       │
+  │ Function: _process_prompt(nano_prompt, scene_id, characters, ...)   │
+  │ Does: Runs _enforce_single_character() with negative lookahead      │
+  │                                                                     │
+  │ Regex: rf'{escaped}\s*(?:(?!{escaped})[^.])*\.?\s*'               │
+  │                                                                     │
+  │ Effect: Keeps FIRST character block, STRIPS subsequent ones        │
+  │ Example:                                                            │
+  │   Before: "EVELYN: desc1. EVELYN: desc2."                         │
+  │   After:  "EVELYN: desc1."                                        │
+  │                                                                     │
+  │ Result: ✅ DEDUPLICATES the prompt                                 │
+  └──────────────────────────────────────────────────────────────────────┘
+
+
+RENDER-VIDEOS CHAIN PIPELINE (orchestrator_server.py lines 6852-6943)
+================================================================================
+
+FOR EACH SCENE SHOT:
+
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ STEP 1: Scene Anchor (line 6860)                                    │
+  │ Function: _scene_anchor.enhance_prompt(_shot)                       │
+  │ Adds: Color grade, lighting                                         │
+  └──────────────────────────────────────────────────────────────────────┘
+                                ↓
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ STEP 2: Cinematic Enricher (line 6867)                             │
+  │ Function: _enricher.enrich_nano_prompt(_np, _shot)                 │
+  │ Adds: Humanization, film stock, timing                             │
+  └──────────────────────────────────────────────────────────────────────┘
+                                ↓
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ STEP 3: Cast Trait Injection (line 6869)                           │
+  │ Function: _enricher.inject_cast_traits(_np, _shot, ...)            │
+  │ Adds: Character appearance from CANONICAL_CHARACTERS               │
+  │ Dedup Check: YES — checks char name existence (partial)            │
+  └──────────────────────────────────────────────────────────────────────┘
+                                ↓
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ STEP 4: Face-Lock Injection (line 6881) ⚠️  DUPLICATE RISK          │
+  │ Function: _build_face_lock_text(_flc) for each character           │
+  │ Adds: Character appearance AGAIN                                    │
+  │                                                                     │
+  │ Code (lines 6880-6891):                                            │
+  │   for _flc in _shot_chars:                                         │
+  │     _flt = _build_face_lock_text(_flc)  ← looks up CANONICAL       │
+  │     if _flt:                                                       │
+  │       _face_locks.append(f"{_flc}: {_flt}")                       │
+  │                                                                     │
+  │   # IMMEDIATELY INJECT:                                            │
+  │   _np = _np[:_fp+2] + _face_lock_str + ". " + _np[_fp+2:]        │
+  │                                                                     │
+  │ Dedup Check: NONE ⚠️                                               │
+  │ Risk: INJECTS SAME CHARACTER APPEARANCE A SECOND TIME              │
+  └──────────────────────────────────────────────────────────────────────┘
+                                ↓
+                        nano_prompt now has:
+                    STEP 3 description + STEP 4 description
+                            (DUPLICATE!)
+                                ↓
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │ STEP 5: Authority Gate (line 6938) ✅ FIXES DUPLICATE               │
+  │ Function: enforce_prompt_authority(scene_shots, ...)                │
+  │ Does: Runs _process_prompt() → _enforce_single_character()         │
+  │ Effect: Keeps first, strips duplicates                              │
+  └──────────────────────────────────────────────────────────────────────┘
+
+
+INJECTION POINT ANALYSIS
+================================================================================
+
+POINT  │ LOCATION              │ INJECTS           │ DEDUP │ STATUS
+────────────────────────────────────────────────────────────────────────
+1      │ Scene Anchor (19093)  │ Color/lighting    │  N/A  │ SAFE
+2      │ Enricher (19109)      │ Humanization      │  N/A  │ SAFE
+3      │ Cast Traits (19128)   │ Character DESC    │ WEAK  │ PARTIAL
+4      │ Face-Lock (19155)     │ Character DESC    │ NONE  │ BROKEN ⚠️
+5      │ Cast Traits (6869)    │ Character DESC    │ WEAK  │ PARTIAL
+6      │ Face-Lock (6881)      │ Character DESC    │ NONE  │ BROKEN ⚠️
+7      │ Authority Gate        │ Dedup/Clean       │ FULL  │ FIXES ✅
+       │ (19182, 6938)         │                   │       │
+
+
+DEDUP LOGIC DETAIL
+================================================================================
+
+inject_cast_traits dedup (tools/cinematic_enricher.py line 943):
+
+  if char_name.upper() not in prompt.upper():
+      # Only inject if character NAME doesn't appear
+      appearance = canon.get("appearance", "")
+      if appearance:
+          cast_additions.append(f"{char_name}: {appearance[:200]}")
+
+  Issue: This checks if the NAME exists, but not if the DESCRIPTION exists.
+  Example:
+    If prompt = "...ethereal moonlight, woman in late 60s, gaunt face..."
+    Check passes because "EVELYN" is not in prompt
+    Injects again: "EVELYN: woman in late 60s, gaunt face..."
+    Result: DUPLICATE DESCRIPTION
+
+
+Authority Gate dedup (tools/prompt_authority_gate.py line 1320-1321):
+
+  for char_name in characters:
+      result = _enforce_single_character(result, char_name, sid)
+
+  This calls _enforce_single_character which:
+    - Finds ALL blocks describing this character
+    - Keeps FIRST block only
+    - STRIPS ALL subsequent blocks
+
+  Regex: rf'{escaped}\s*(?:(?!{escaped})[^.])*\.?\s*'
+
+  This is a PROPER dedup that catches the duplicates from Points 3 & 4
+
+
+CURRENT FLOW SUMMARY
+================================================================================
+
+✅ SAFE: Scene anchors (not character appearance)
+✅ SAFE: Cinematic enricher (humanization, not character appearance)
+⚠️  RISKY: Cast traits inject + Face-lock inject (same content, no inter-dedup)
+✅ PROTECTED: Authority Gate catches duplicates after both injections
+
+SYSTEM STATUS: Working but suboptimal design
+  - Two injection points describe same characters (unnecessary redundancy)
+  - No dedup between the two injections
+  - Authority Gate saves the day but runs after unnecessary duplication
+  - Better design: One injection point + one dedup gate
+
+
+RECOMMENDATION
+================================================================================
+
+Remove STEP 4 (Face-Lock injection at line 19134-19166 in generate-first-frames
+and line 6873-6892 in render-videos).
+
+Let inject_cast_traits handle all character appearance injection.
+Let Authority Gate handle edge-case dedup.
+
+This would:
+  ✅ Eliminate duplicate injection points
+  ✅ Simplify the pipeline
+  ✅ Maintain the same dedup protection (Authority Gate still runs)
+  ✅ Reduce prompt bloat from unnecessary redundancy

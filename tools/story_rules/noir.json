@@ -1,0 +1,112 @@
+{
+  "genre": "noir",
+  "required_narrative_fields": [
+    "moral_decay",
+    "femme_fatale_or_homme_fatal",
+    "past_sins_return",
+    "no_easy_answers",
+    "cynical_worldview"
+  ],
+  "narrative_rules": {
+    "moral_decay": "Everyone is compromised, no one is innocent",
+    "femme_fatale_or_homme_fatal": "Seductive danger, sexual manipulation",
+    "past_sins_return": "What you did catches up, no escape",
+    "no_easy_answers": "Ambiguous endings, pyrrhic victories",
+    "cynical_worldview": "The system is corrupt, institutions fail"
+  },
+  "motifs": [
+    "venetian_blind_shadows",
+    "rain_reflections",
+    "cigarette_smoke",
+    "neon_signs",
+    "urban_decay",
+    "mirrors_and_windows",
+    "guns_on_tables",
+    "femme_fatale_entrance"
+  ],
+  "pace_expectations": {
+    "act_1": {
+      "pacing": "languid_establishment",
+      "shot_duration": "15-30 seconds",
+      "editing_rhythm": "patient_observation"
+    },
+    "act_2": {
+      "pacing": "tangled_complications",
+      "shot_duration": "12-25 seconds",
+      "editing_rhythm": "measured_reveal"
+    },
+    "act_3": {
+      "pacing": "inevitable_doom",
+      "shot_duration": "10-20 seconds",
+      "editing_rhythm": "tragic_convergence"
+    }
+  },
+  "default_lens_choices": {
+    "standard": {
+      "lens_mm": 35-50,
+      "why": "Classic focal lengths, timeless noir aesthetic"
+    },
+    "closeup": {
+      "lens_mm": 85,
+      "why": "Dramatic faces, shadow play on features"
+    },
+    "wide": {
+      "lens_mm": 24,
+      "why": "Urban landscape, character dwarfed by city"
+    }
+  },
+  "default_camera_moves": {
+    "standard": "static_composed",
+    "reveal": "slow_track_in",
+    "tension": "locked_observational",
+    "climax": "crane_up_showing_trap",
+    "investigation": "pan_across_clues",
+    "seduction": "slow_circular_prowl"
+  },
+  "default_lighting": {
+    "style": "high_contrast_chiaroscuro",
+    "color_temp": "tungsten_warm",
+    "ratios": "8:1 to 12:1 extreme",
+    "atmosphere": "smoke_venetian_shadows",
+    "signature_elements": ["single_lamp_overhead", "window_blinds_casting", "neon_glow_through_rain"]
+  },
+  "sound_requirements": [
+    "jazz_score_melancholic",
+    "rain_on_windows",
+    "city_ambience_distant",
+    "whiskey_pouring",
+    "lipstick_opening"
+  ],
+  "color_palette": {
+    "classic_noir": "Black and white only, no color",
+    "neo_noir": "Desaturated with strategic color (neon blue, blood red)",
+    "avoid": ["bright_saturated_colors", "warm_cozy_lighting"]
+  },
+  "subgenres": {
+    "classic": {
+      "modifiers": "1940s aesthetic, black and white, voiceover narration",
+      "reference": "The Maltese Falcon (1941)"
+    },
+    "neo": {
+      "modifiers": "Modern setting, color with noir lighting, sexual explicitness",
+      "reference": "Chinatown (1974)"
+    },
+    "tech": {
+      "modifiers": "Cyberpunk aesthetic, neon, rain-soaked future cities",
+      "reference": "Blade Runner (1982)"
+    }
+  },
+  "voiceover_style": {
+    "required": "Often present - cynical, world-weary, past tense",
+    "tone": "Fatalistic, sardonic, self-aware",
+    "content": "Reflecting on mistakes, rationalizing choices, foreshadowing doom"
+  },
+  "forbidden_elements": [
+    "happy_endings",
+    "pure_heroism",
+    "institutional_justice_working",
+    "bright_flat_lighting",
+    "innocence_preserved"
+  ],
+  "citation": "Classic noir conventions, neo-noir evolution"
+}

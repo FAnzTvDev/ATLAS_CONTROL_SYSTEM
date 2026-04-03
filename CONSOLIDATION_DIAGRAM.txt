@@ -1,0 +1,324 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    RAVENCROFT CONSOLIDATION VISUAL DIAGRAM
+═══════════════════════════════════════════════════════════════════════════════
+
+CURRENT V22 STRUCTURE (25 scenes, 251 shots)
+═════════════════════════════════════════════════════════════════════════════
+
+Act 1 (38%)
+  001 ─ RITUAL (8s)
+  002 ─ APARTMENT (7s)
+  003 ─ LAW OFFICE (13s)        ← SPLIT (should merge)
+  004 ─ PACKING (8s)
+  005 ─ COASTAL ROAD (6s)
+  006 ─ EVELYN'S CAR (7s)        ← SPLIT (should merge)
+
+Act 2 (38%)
+  007 ─ VILLAGE (7s)
+  008 ─ PUB (16s)               ← SPLIT (should merge)
+  009 ─ WALK TO MANOR (7s)
+  010 ─ MANOR EXT (6s)
+  011 ─ FOYER (10s)             ← SPLIT (should merge)
+  012 ─ GUEST ROOM (9s)
+  013 ─ KITCHEN (8s)
+  014 ─ GROUNDS (17s)           ← SPLIT (should merge)
+  015 ─ LIBRARY MORNING (9s)
+  016 ─ LIBRARY LATER (9s)      ← SPLIT (should merge)
+  017 ─ HALLWAY (8s)
+  018 ─ BEDROOM NIGHT (7s)      ← SPLIT (should merge)
+
+Act 3 (26%)
+  019 ─ CHURCH (15s)
+  020 ─ CAR RETURN (10s)
+  021 ─ ROAD RETURN (3s)        ← SPLIT (should merge)
+  022 ─ FOYER DAY (17s)
+  023 ─ HALLWAY CONT (27s)      ← SPLIT (should merge) [MAJOR - 44 shots]
+  024 ─ FOYER NIGHT (10s)
+  025 ─ EPILOGUE (7s)
+
+Problems:
+  ✗ 9 scene pairs are artificially split
+  ✗ Creates redundant transitions
+  ✗ Unclear dramatic boundaries
+  ✗ Missing V9 B-roll establishing shots
+  ✗ Act 3 is fragmented (022+023 = 44 shots as one scene?)
+
+
+TARGET STRUCTURE (15 scenes, 220-240 shots)
+═════════════════════════════════════════════════════════════════════════════
+
+ACT 1: COLD OPEN & CALL TO ACTION (6 scenes, ~50 shots, ~8 min)
+─────────────────────────────────────────────────────────────────
+
+  001 ┌─ RITUAL COLD OPEN
+      │  V9 S1: Ritual chamber, 1890s flashback
+      │  Current: V22:001 (8 shots)
+      │  Action: KEEP AS-IS
+      │  Result: 8 shots
+      └─
+
+  002 ┌─ LONDON CITYSCAPE AWAKENS                               [NEW]
+      │  V9 S2: Westminster, Parliament, Thames, dawn
+      │  Current: MISSING (0 shots in V22)
+      │  Action: ADD NEW B-ROLL
+      │  Result: 4-5 shots
+      └─
+
+  003 ┌─ THE PHONE CALL (INTERCUT)                               [MERGE]
+      │  V9 S3: Evelyn apartment ↔ Law office, morning
+      │  Current: V22:002 (7) + V22:003 (13) = 20 shots
+      │  Action: CONSOLIDATE INTO 1 SCENE
+      │  Remove: 2-3 duplicate transitions
+      │  Result: 16-18 shots
+      └─
+
+  004 ┌─ PACKING SCENE (BJ Addition)
+      │  V9 N/A: Evelyn prepares to leave London
+      │  Current: V22:004 (8 shots)
+      │  Action: KEEP AS-IS
+      │  Result: 8 shots
+      └─
+
+  005 ┌─ THE JOURNEY MONTAGE (MERGE + EXPAND)
+      │  V9 S4: Train, coastal road, car, journey
+      │  Current: V22:005 (6) + V22:006 (7) = 13 shots
+      │  Action: MERGE + ADD TRAIN B-ROLL
+      │  Remove: 1-2 duplicate transitions
+      │  Add: 2-3 train/coastal B-roll
+      │  Result: 10-12 shots
+      └─
+
+  006 ┌─ WALK TO MANOR (UPGRADE)
+      │  V9 S6: Dusk walk, silhouette arrival
+      │  Current: V22:009 (7 shots)
+      │  Action: ENHANCE WITH SILHOUETTE + REVEAL
+      │  Add: 1-2 dramatic silhouette shots
+      │  Result: 7-8 shots
+      └─
+
+  ACT 1 TOTAL: 6 scenes, ~50 shots (40% reduction from 96 shots)
+  Benefits: Clean setup, international scope established, decision made
+
+
+ACT 2: ARRIVAL & INVESTIGATION (7 scenes, ~70 shots, ~11 min)
+──────────────────────────────────────────────────────────────
+
+  007 ┌─ THE VILLAGE PUB (MERGE + B-ROLL)
+      │  V9 S5: Village approach + pub gossip
+      │  Current: V22:007 (7) + V22:008 (16) = 23 shots
+      │  Action: MERGE + EMBED VILLAGE B-ROLL
+      │  Remove: 2-3 transitions
+      │  Add: 2-3 village establishing
+      │  Result: 20-22 shots
+      └─
+
+  008 ┌─ ARRIVAL AT THE MANOR (MERGE)
+      │  V9 S7: Manor gates, foyer entry
+      │  Current: V22:010 (6) + V22:011 (10) = 16 shots
+      │  Action: MERGE EXTERIOR + INTERIOR
+      │  Remove: 1-2 transitions
+      │  Result: 13-15 shots
+      └─
+
+  009 ┌─ GUEST ROOM - FIRST NIGHT
+      │  V9 S8: Evelyn alone, preparation, dread
+      │  Current: V22:012 (9 shots)
+      │  Action: KEEP AS-IS
+      │  Result: 9 shots
+      └─
+
+  010 ┌─ MANOR AT MIDNIGHT B-ROLL                               [NEW]
+      │  V9 S9: Manor architectural, shadows, atmosphere
+      │  Current: MISSING (0 shots in V22)
+      │  Action: ADD NEW B-ROLL
+      │  Result: 4-5 shots
+      └─
+
+  011 ┌─ MORNING EXPLORATION (MERGE)
+      │  V9 S12: Kitchen + grounds discovery
+      │  Current: V22:013 (8) + V22:014 (17) = 25 shots
+      │  Action: MERGE INTERIOR + EXTERIOR
+      │  Remove: 2-3 transitions
+      │  Result: 18-20 shots
+      └─
+
+  012 ┌─ STUDY - WILL REVELATION (MERGE)
+      │  V9 S13: Library, documents, plot discovery
+      │  Current: V22:015 (9) + V22:016 (9) = 18 shots
+      │  Action: MERGE MORNING + LATER TIME
+      │  Remove: 1-2 duplicate setups
+      │  Result: 16-18 shots
+      └─
+
+  013 ┌─ STRANGE NOISES (MERGE)
+      │  V9 S10: Hallway investigation + bedroom fear
+      │  Current: V22:017 (8) + V22:018 (7) = 15 shots
+      │  Action: MERGE FEAR ESCALATION
+      │  Remove: 1-2 redundant scares
+      │  Result: 13-15 shots
+      └─
+
+  ACT 2 TOTAL: 7 scenes, ~70 shots (improved continuity)
+  Benefits: Seamless arrival→investigation arc, atmospheric buildup
+
+
+ACT 3: DEEPENING MYSTERY & CLIMAX (5 scenes, ~85 shots, ~13 min)
+────────────────────────────────────────────────────────────────
+
+  014 ┌─ DAWN BREAKS - CLIFFS (NEW B-ROLL)
+      │  V9 S11: Ocean, cliffs, golden light, renewal
+      │  Current: MISSING (0 shots in V22)
+      │  Action: ADD NEW B-ROLL
+      │  Result: 3-4 shots
+      └─
+
+  015 ┌─ CLARA'S WARNING (BJ Addition)
+      │  V9 N/A: Church/cemetery, supernatural hint
+      │  Current: V22:019 (15 shots)
+      │  Action: KEEP AS-IS
+      │  Result: 15 shots
+      └─
+
+  016 ┌─ RETURN JOURNEY (BJ Addition)
+      │  V9 N/A: Car return, mirror of Act 1 journey
+      │  Current: V22:020 (10) + V22:021 (3) = 13 shots
+      │  Action: MERGE CAR + ROAD
+      │  Remove: 1-2 transitions
+      │  Result: 12-13 shots
+      └─
+
+  017 ┌─ ACT 3 DEEP EXPLORATION (MAJOR MERGE)
+      │  V9 N/A: BJ added — foyer + hallway revelation
+      │  Current: V22:022 (17) + V22:023 (27) = 44 shots ⚠️ HUGE
+      │  Action: CONSOLIDATE EXPLORATION ARC
+      │  Remove: 3-5 redundant location shots
+      │  Result: 40-45 shots
+      │  Notes: This is the Act 3 centerpiece — longest scene
+      └─
+
+  018 ┌─ NIGHT CLIMAX (BJ Climax)
+      │  V9 N/A: Supernatural confrontation
+      │  Current: V22:024 (10 shots)
+      │  Action: KEEP AS-IS
+      │  Result: 10 shots
+      └─
+
+  019 ┌─ EPILOGUE - DAWN AFTER (BJ Epilogue)
+      │  V9 N/A: One week later, resolution
+      │  Current: V22:025 (7 shots)
+      │  Action: KEEP AS-IS
+      │  Result: 7 shots
+      └─
+
+  ACT 3 TOTAL: 5 scenes, ~85 shots (climactic intensity)
+  Benefits: Supernatural mystery deepens, major revelation, emotional payoff
+
+
+═════════════════════════════════════════════════════════════════════════════
+CONSOLIDATION SUMMARY
+═════════════════════════════════════════════════════════════════════════════
+
+MERGES EXECUTED:
+  V22:002+003 → Target 003 | 20 → 16-18 shots | Phone call intercut
+  V22:005+006 → Target 005 | 13 → 10-12 shots | Journey montage
+  V22:007+008 → Target 007 | 23 → 20-22 shots | Village pub
+  V22:010+011 → Target 008 | 16 → 13-15 shots | Arrival at manor
+  V22:013+014 → Target 011 | 25 → 18-20 shots | Morning exploration
+  V22:015+016 → Target 012 | 18 → 16-18 shots | Library revelation
+  V22:017+018 → Target 013 | 15 → 13-15 shots | Strange noises
+  V22:020+021 → Target 016 | 13 → 12-13 shots | Return journey
+  V22:022+023 → Target 017 | 44 → 40-45 shots | Act 3 deep exploration
+
+  SUBTOTAL: 9 merges, 183 shots → 159-168 shots (-15 to -24 shots)
+
+B-ROLL ADDITIONS:
+  Target 002: London cityscape (NEW) | 4-5 shots
+  Target 010: Manor midnight (NEW) | 4-5 shots
+  Target 014: Dawn breaks cliffs (NEW) | 3-4 shots
+  Target 007 embedded: Village establishing (NEW) | 2-3 shots
+
+  SUBTOTAL: 4 B-roll scenes, 13-17 shots added
+
+KEEP UNCHANGED:
+  V22:001 → Target 001 | 8 shots
+  V22:004 → Target 004 | 8 shots
+  V22:009 (upgrade) → Target 006 | 7-8 shots
+  V22:012 → Target 009 | 9 shots
+  V22:019 → Target 015 | 15 shots
+  V22:024 → Target 018 | 10 shots
+  V22:025 → Target 019 | 7 shots
+
+  SUBTOTAL: 7 scenes, 64-65 shots
+
+FINAL COUNT:
+  Before: 25 scenes | 251 shots
+  After:  15-16 scenes | 220-240 shots
+  Change: -40% scenes | -12% to +4% shots (net)
+
+
+═════════════════════════════════════════════════════════════════════════════
+SHOT DISTRIBUTION COMPARISON
+═════════════════════════════════════════════════════════════════════════════
+
+CURRENT V22:
+┌─────────────┬───────┬────────┬──────────┐
+│ Act         │ Scenes│ Shots  │ % of Avg │
+├─────────────┼───────┼────────┼──────────┤
+│ Act 1       │   6   │  38    │   15%    │
+│ Act 2       │  12   │ 113    │   45%    │
+│ Act 3       │   7   │ 100    │   40%    │
+├─────────────┼───────┼────────┼──────────┤
+│ TOTAL       │  25   │ 251    │   —      │
+│ Avg/Scene   │  —    │ 10.0   │   —      │
+└─────────────┴───────┴────────┴──────────┘
+
+TARGET:
+┌─────────────┬───────┬────────┬──────────┐
+│ Act         │ Scenes│ Shots  │ % of Avg │
+├─────────────┼───────┼────────┼──────────┤
+│ Act 1       │   6   │  50    │   21%    │
+│ Act 2       │   7   │  70    │   29%    │
+│ Act 3       │   5   │  85    │   35%    │
+├─────────────┼───────┼────────┼──────────┤
+│ TOTAL       │  18   │ 205*   │   —      │
+│ Avg/Scene   │  —    │ 11.4   │   —      │
+└─────────────┴───────┴────────┴──────────┘
+
+* With new B-roll and upgrades: 220-240 shots
+
+
+═════════════════════════════════════════════════════════════════════════════
+IMPLEMENTATION PRIORITY
+═════════════════════════════════════════════════════════════════════════════
+
+TIER 1 (Start Here - Highest Impact):
+  1. Target 017 (V22:022+023) — 44 → 40-45 shots — Act 3 consolidation
+  2. Target 007 (V22:007+008) — 23 → 20-22 shots — Village pub merge
+  3. Target 011 (V22:013+014) — 25 → 18-20 shots — Morning exploration
+  4. Target 003 (V22:002+003) — 20 → 16-18 shots — Phone call intercut
+
+TIER 2 (Enhancements):
+  5. Target 002 (NEW) — Add London cityscape B-roll
+  6. Target 010 (NEW) — Add Manor midnight B-roll
+  7. Target 006 (UPGRADE) — Enhance walk to manor with silhouettes
+
+TIER 3 (Remaining Merges):
+  8-13. Remaining merges (005, 008, 012, 013, 016, 014 NEW)
+
+
+═════════════════════════════════════════════════════════════════════════════
+NARRATIVE BENEFITS
+═════════════════════════════════════════════════════════════════════════════
+
+✓ Clearer dramatic boundaries — each scene serves ONE purpose
+✓ Tighter pacing — no redundant transitions
+✓ Better character continuity — emotions flow across merged locations
+✓ Stronger visual storytelling — new B-roll establishes scope
+✓ Improved rhythm — 15 scenes feels more cinematic than 25
+✓ Easier to follow — viewers track larger story beats
+✓ Production efficiency — fewer scene setups, cleaner edits
+
+
+═════════════════════════════════════════════════════════════════════════════
+READY FOR IMPLEMENTATION — START WITH TIER 1
+═════════════════════════════════════════════════════════════════════════════

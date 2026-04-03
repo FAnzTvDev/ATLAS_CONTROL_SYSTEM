@@ -1,0 +1,894 @@
+{
+  "ELEANOR": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Eleanor_Vance.jpg",
+      "description": "Pale skin, dark circles, messy auburn hair in bun, glasses"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Eleanor_Vance.jpg",
+      "description": "Turtleneck, cardigan, jeans, hiking boots"
+    }
+  },
+  "RHYS": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Father_Thomas_Rhys.jpg",
+      "description": "58yo Welsh priest, weathered face, burn scars"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Father_Thomas_Rhys.jpg",
+      "description": "Priest collar, black suit, worn leather bag"
+    }
+  },
+  "KENJI": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Kenji_Nakamura.jpg",
+      "description": "31yo Japanese American, slight build, meticulous"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Kenji_Nakamura.jpg",
+      "description": "Blazer, turtleneck, slacks, polished shoes"
+    }
+  },
+  "Lady Margaret": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/LADY_MARGARET_RAVENCROFT_LOCKED_REFERENCE.jpg",
+      "description": "50s, severe elegant woman, silver hair piled high in Victorian style, mourning gown"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/LADY_MARGARET_RAVENCROFT_LOCKED_REFERENCE.jpg",
+      "description": "Black mourning gown, Victorian aristocrat, severe posture"
+    },
+    "_points_to": "Lady Margaret Ravencroft"
+  },
+  "Lady Margaret Ravencroft": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/LADY_MARGARET_RAVENCROFT_LOCKED_REFERENCE.jpg",
+      "description": "50s, regal in stature, blond hair and blue eyed beauty, elegant white robe, severe look on face"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/LADY_MARGARET_RAVENCROFT_LOCKED_REFERENCE.jpg",
+      "description": "Elegant white ritual robe for ceremony scenes, Victorian mourning dress"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.092709"
+  },
+  "child": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/RAVENCROFT_HEIR_CHILD_LOCKED_REFERENCE.jpg",
+      "description": "child locked reference"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/RAVENCROFT_HEIR_CHILD_LOCKED_REFERENCE.jpg",
+      "description": "child wardrobe reference"
+    },
+    "_points_to": "Ravencroft Heir Child"
+  },
+  "Ravencroft Heir Child": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/RAVENCROFT_HEIR_CHILD_LOCKED_REFERENCE.jpg",
+      "description": "Young child in Victorian era, innocent face, associated with ritual and haunting"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/RAVENCROFT_HEIR_CHILD_LOCKED_REFERENCE.jpg",
+      "description": "Victorian child nightgown or formal attire"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.092953"
+  },
+  "shadowy figures": {
+    "face_neutral": {
+      "url": "",
+      "description": "Dark robed figures, supernatural entities, barely visible shadows - DO NOT USE CHILD REFERENCE"
+    },
+    "body_reference": {
+      "url": "",
+      "description": "Hooded robes, indistinct forms, ominous presence - abstract shadow shapes only"
+    },
+    "_WARNING": "NEVER inject child image for shadow figures - this should be abstract darkness only",
+    "_points_to": "Shadowy Figures"
+  },
+  "masked figures": {
+    "face_neutral": {
+      "url": "",
+      "description": "Hooded ritual attendants wearing half-masks, anonymous silhouettes, Victorian robes"
+    },
+    "body_reference": {
+      "url": "",
+      "description": "Group blocking reference for masked attendants surrounding altar, robes with candles"
+    },
+    "_NOTE": "Use for crowd/chorus shots where masked figures appear in the ritual chamber",
+    "_points_to": "Shadowy Figures"
+  },
+  "_PROPS": {
+    "diary": {
+      "url": "https://i.ibb.co/MyfQXVGw/prop-ciphered-diary-20251125-162120-jpg.png",
+      "description": "Ciphered diary prop - Leather-bound, mysterious symbols"
+    },
+    "candlestick": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_pair_brass_candels_cc44b8.jpg",
+      "description": "Pair of brass Victorian candlesticks, dripping wax"
+    },
+    "oil_lamp": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_antique_oil_lamp_20251125_162145.jpg",
+      "description": "Antique glass oil lamp with warm glow"
+    },
+    "grandfather_clock": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_grandfather_clock_pendulum_445a6f.jpg",
+      "description": "Victorian grandfather clock pendulum detail"
+    },
+    "stack_books": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_stack_books_wax_c9c7d4.jpg",
+      "description": "Stacked ledgers with candle wax drips"
+    },
+    "raven_pendant": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_raven_pendant_20251125_162051.jpg",
+      "description": "Raven pendant talisman on chain"
+    },
+    "creepy_building": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_creepy_looking_building_bf8f18.jpg",
+      "description": "Gothic silhouette reference for manor exterior"
+    }
+  },
+  "Evelyn": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/EVELYN_RAVENCROFT_LOCKED_REFERENCE.jpg",
+      "description": "Evelyn locked reference"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/EVELYN_RAVENCROFT_LOCKED_REFERENCE.jpg",
+      "description": "Evelyn wardrobe reference"
+    },
+    "name": "Evelyn",
+    "description": "Evelyn - key character in crime drama story",
+    "face_reference": null,
+    "notes": null,
+    "source": "auto_studio",
+    "_points_to": "Evelyn Ravencroft"
+  },
+  "Evelyn Ravencroft": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/EVELYN_RAVENCROFT_LOCKED_REFERENCE.jpg",
+      "description": "Early 30s, fairly attractive, short blonde hair, thin side, piercing ice blue eyes that look tired around the edges"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/EVELYN_RAVENCROFT_LOCKED_REFERENCE.jpg",
+      "description": "Day: city clothes, traveling attire. Night: provided Victorian-style dress"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.092618"
+  },
+  "Arthur": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ARTHUR_GRAY_LOCKED_REFERENCE.jpg",
+      "description": "Arthur locked reference"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ARTHUR_GRAY_LOCKED_REFERENCE.jpg",
+      "description": "Arthur wardrobe reference"
+    },
+    "name": "Arthur",
+    "description": "Arthur - key character in crime drama story",
+    "face_reference": null,
+    "notes": null,
+    "source": "auto_studio",
+    "_points_to": "Arthur Gray"
+  },
+  "Arthur Pembroke": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ARTHUR_GRAY_LOCKED_REFERENCE.jpg",
+      "description": "Middle-aged gentleman, distinguished, Victorian formal wear"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ARTHUR_GRAY_LOCKED_REFERENCE.jpg",
+      "description": "Victorian suit, waistcoat, pocket watch"
+    },
+    "_points_to": "Arthur Gray"
+  },
+  "Clara": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/CLARA_BYRNE_LOCKED_REFERENCE.jpg",
+      "description": "Clara locked reference"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/CLARA_BYRNE_LOCKED_REFERENCE.jpg",
+      "description": "Clara wardrobe reference"
+    },
+    "_points_to": "Clara Byrne"
+  },
+  "Clara Whitmore": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/CLARA_BYRNE_LOCKED_REFERENCE.jpg",
+      "description": "Young woman, servant attire, Victorian maid"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/CLARA_BYRNE_LOCKED_REFERENCE.jpg",
+      "description": "Maid uniform, apron, cap"
+    },
+    "_points_to": "Clara Byrne"
+  },
+  "Elias": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ELIAS_FINCH_LOCKED_REFERENCE.jpg",
+      "description": "Elias locked reference"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ELIAS_FINCH_LOCKED_REFERENCE.jpg",
+      "description": "Elias wardrobe reference"
+    },
+    "_points_to": "Dr. Elias Ward"
+  },
+  "Elias Finch": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ELIAS_FINCH_LOCKED_REFERENCE.jpg",
+      "description": "Older butler, formal attire, dignified bearing"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ELIAS_FINCH_LOCKED_REFERENCE.jpg",
+      "description": "Butler uniform, formal tailcoat"
+    },
+    "_points_to": "Dr. Elias Ward"
+  },
+  "villagers": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/VILLAGERS_LOCKED_REFERENCE.jpg",
+      "description": "Background villagers placeholder"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/VILLAGERS_LOCKED_REFERENCE.jpg",
+      "description": "Background villagers placeholder"
+    },
+    "_points_to": "Villagers"
+  },
+  "Marcus Sterling": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Marcus_Sterling.jpg",
+      "description": "Mixed race (Black/Asian), athletic build, well-groomed beard, tired eyes, smart casual - button-down, dark jeans, leather jacket"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Marcus_Sterling.jpg",
+      "description": "Mixed race (Black/Asian), athletic build, well-groomed beard, tired eyes, smart casual - button-down, dark jeans, leather jacket"
+    }
+  },
+  "MarcusSterling": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Marcus_Sterling.jpg",
+      "description": "Mixed race (Black/Asian), athletic build, well-groomed beard, tired eyes, smart casual - button-down, dark jeans, leather jacket"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Marcus_Sterling.jpg",
+      "description": "Mixed race (Black/Asian), athletic build, well-groomed beard, tired eyes, smart casual - button-down, dark jeans, leather jacket"
+    }
+  },
+  "Victoria Ashford": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Victoria_Ashford.jpg",
+      "description": "Elegant, silver-blonde hair, expensive understated style, cashmere, silk, pearls, aristocratic"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Victoria_Ashford.jpg",
+      "description": "Elegant, silver-blonde hair, expensive understated style, cashmere, silk, pearls, aristocratic"
+    }
+  },
+  "VictoriaAshford": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Victoria_Ashford.jpg",
+      "description": "Elegant, silver-blonde hair, expensive understated style, cashmere, silk, pearls, aristocratic"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Victoria_Ashford.jpg",
+      "description": "Elegant, silver-blonde hair, expensive understated style, cashmere, silk, pearls, aristocratic"
+    }
+  },
+  "Test Hero": {
+    "name": "Test Hero",
+    "description": "A brave protagonist",
+    "face_reference": "/test/hero.jpg",
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Test Villain": {
+    "name": "Test Villain",
+    "description": "An evil antagonist",
+    "face_reference": "/test/villain.jpg",
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Test Character": {
+    "name": "Test Character",
+    "description": "A test character",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Mrs. Blackwood": {
+    "name": "Mrs. Blackwood",
+    "description": "Mrs. Blackwood - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Alex": {
+    "name": "Alex",
+    "description": null,
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Jordan": {
+    "name": "Jordan",
+    "description": null,
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Sam": {
+    "name": "Sam",
+    "description": null,
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Dr. Chen": {
+    "name": "Dr. Chen",
+    "description": "Dr. Chen - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Marcus": {
+    "name": "Marcus",
+    "description": "Marcus - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "AI-7": {
+    "name": "AI-7",
+    "description": "AI-7 - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Detective Morgan": {
+    "name": "Detective Morgan",
+    "description": "Detective Morgan - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Sarah": {
+    "name": "Sarah",
+    "description": "Sarah - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Chief Walsh": {
+    "name": "Chief Walsh",
+    "description": "Chief Walsh - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Arthur Gray": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ARTHUR_GRAY_LOCKED_REFERENCE.jpg",
+      "description": "70s, immaculately suited, posture like a soldier at ease, silver-haired distinguished gentleman, prominent nose, pencil thin mustache, thin lips, bit on the snooty side"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ARTHUR_GRAY_LOCKED_REFERENCE.jpg",
+      "description": "Victorian butler formal wear, impeccably maintained"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.092661"
+  },
+  "Clara Byrne": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/CLARA_BYRNE_LOCKED_REFERENCE.jpg",
+      "description": "Late 20s, bartender with lived-in charm, warm approachable demeanor"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/CLARA_BYRNE_LOCKED_REFERENCE.jpg",
+      "description": "Victorian pub attire, practical bar clothes"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.092761"
+  },
+  "Dr. Elias Ward": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ELIAS_FINCH_LOCKED_REFERENCE.jpg",
+      "description": "50s, rumpled academic type, chubby, kind face, village records keeper"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/ELIAS_FINCH_LOCKED_REFERENCE.jpg",
+      "description": "Tweed jacket, spectacles, rumpled academic attire"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.092789"
+  },
+  "The Lawyer": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/THE_LAWYER_LOCKED_REFERENCE.jpg",
+      "description": "50s, precise demeanor, modern professional, on headset during calls"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/THE_LAWYER_LOCKED_REFERENCE.jpg",
+      "description": "Modern business suit, professional attire"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.092824"
+  },
+  "Lawyer": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/THE_LAWYER_LOCKED_REFERENCE.jpg",
+      "description": "Alias for The Lawyer"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/THE_LAWYER_LOCKED_REFERENCE.jpg",
+      "description": "Alias for The Lawyer"
+    },
+    "_alias_for": "The Lawyer",
+    "_points_to": "The Lawyer"
+  },
+  "A Lawyer": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/THE_LAWYER_LOCKED_REFERENCE.jpg",
+      "description": "Alias for The Lawyer"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/THE_LAWYER_LOCKED_REFERENCE.jpg",
+      "description": "Alias for The Lawyer"
+    },
+    "_alias_for": "The Lawyer",
+    "_points_to": "The Lawyer"
+  },
+  "Local #1 Male": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/LOCAL_1_LOCKED_REFERENCE.jpg",
+      "description": "Slightly pudgy male in his 50s, village pub patron"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/LOCAL_1_LOCKED_REFERENCE.jpg",
+      "description": "Working class Victorian village attire"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.092866"
+  },
+  "Local #1": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/LOCAL_1_LOCKED_REFERENCE.jpg",
+      "description": "Alias for Local #1 Male"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/LOCAL_1_LOCKED_REFERENCE.jpg",
+      "description": "Alias for Local #1 Male"
+    },
+    "_alias_for": "Local #1 Male",
+    "_points_to": "Local #1 Male"
+  },
+  "LOCAL #1": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/LOCAL_1_LOCKED_REFERENCE.jpg",
+      "description": "Alias for Local #1 Male"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/LOCAL_1_LOCKED_REFERENCE.jpg",
+      "description": "Alias for Local #1 Male"
+    },
+    "_alias_for": "Local #1 Male",
+    "_points_to": "Local #1 Male"
+  },
+  "Local #2 Female": {
+    "face_neutral": {
+      "url": "",
+      "description": "Slim red head woman in her 60s, village pub patron"
+    },
+    "body_reference": {
+      "url": "",
+      "description": "Working class Victorian village attire"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.092916"
+  },
+  "Child": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/RAVENCROFT_HEIR_CHILD_LOCKED_REFERENCE.jpg",
+      "description": "Alias for Ravencroft Heir Child"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/RAVENCROFT_HEIR_CHILD_LOCKED_REFERENCE.jpg",
+      "description": "Alias for Ravencroft Heir Child"
+    },
+    "_alias_for": "Ravencroft Heir Child",
+    "_points_to": "Ravencroft Heir Child"
+  },
+  "Shadowy Figures": {
+    "face_neutral": {
+      "url": "",
+      "description": "Half-masked dark robed figures, ritual attendants, holding blood red candles"
+    },
+    "body_reference": {
+      "url": "",
+      "description": "Dark robes, half-masks, anonymous cult members"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.093002"
+  },
+  "Villagers": {
+    "face_neutral": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/VILLAGERS_LOCKED_REFERENCE.jpg",
+      "description": "Background village pub patrons, suspicious of outsiders"
+    },
+    "body_reference": {
+      "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/VILLAGERS_LOCKED_REFERENCE.jpg",
+      "description": "Working class Victorian village attire"
+    },
+    "_script_accurate": true,
+    "_synced": "2026-01-03T10:59:23.093026"
+  },
+  "Captain Jace Park": {
+    "name": "Captain Jace Park",
+    "description": "Captain Jace Park - key character in scifi thriller story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Aria": {
+    "name": "Aria",
+    "description": "Aria - key character in scifi thriller story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Zephyr": {
+    "name": "Zephyr",
+    "description": "Zephyr - key character in scifi thriller story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Maya Chen": {
+    "name": "Maya Chen",
+    "description": "MAYA CHEN, Asian-American woman age 30, athletic lean build, long black hair in practical ponytail, dark brown intense focused eyes, small scar through left eyebrow, dragon tattoo on right shoulder blade, tactical modern clothing #2D2D2D",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Aria Patel": {
+    "name": "Aria Patel",
+    "description": "ARIA PATEL, South Asian woman age 35, slender yoga-practiced posture, long black hair with subtle purple undertones, dark brown analytical eyes that see through people, elegant hands, third eye bindi, modern professional with Indian influences jewel tones #5D4037",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Jackson Wright": {
+    "name": "Jackson Wright",
+    "description": "JACKSON WRIGHT, Caucasian man age 45, lean gaunt build from method acting, salt-and-pepper unkempt professor hair, piercing blue bloodshot eyes, deep laugh lines, permanent stubble, slight limp, rumpled vintage suit #4A4A4A",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Marcus Stone": {
+    "name": "Marcus Stone",
+    "description": "Marcus Stone - partner in thriller story. Unlikely ally met during the crisis. Has skills the lead lacks....",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Keiko Tanaka": {
+    "name": "Keiko Tanaka",
+    "description": "Keiko Tanaka - protagonist in thriller story. Ordinary person thrust into extraordinary danger. security background becomes survival asset....",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "James Morgan": {
+    "name": "James Morgan",
+    "description": "James Morgan - protagonist in scifi thriller story. Brilliant security who designed the system now threatening them. Carries guilt from past project fai...",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "James": {
+    "name": "James",
+    "description": "James - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Morgan": {
+    "name": "Morgan",
+    "description": "Morgan - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Chicago": {
+    "name": "Chicago",
+    "description": "Chicago - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Sarah Chen": {
+    "name": "Sarah Chen",
+    "description": "Sarah Chen - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Detective James": {
+    "name": "Detective James",
+    "description": "Detective James - key character in scifi thriller story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Generate": {
+    "name": "Generate",
+    "description": "Generate - key character in scifi thriller story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Sci": {
+    "name": "Sci",
+    "description": "Sci - key character in scifi thriller story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Noir": {
+    "name": "Noir",
+    "description": "Noir - key character in scifi thriller story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Neon": {
+    "name": "Neon",
+    "description": "Neon - key character in scifi thriller story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Luna Rodriguez": {
+    "name": "Luna Rodriguez",
+    "description": "LUNA RODRIGUEZ, Latina woman age 22, petite athletic gymnast build, dark brown wavy hair often braided, hazel eyes shifting green to brown, freckles across nose, bright smile, practical adventure leather jacket boots #9C27B0",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Amara Johnson": {
+    "name": "Amara Johnson",
+    "description": "AMARA JOHNSON, African-American woman age 30, athletic graceful tech entrepreneur build, natural afro futuristic styling, dark brown intelligent confident eyes, afrofuturist fashion metallics tech aesthetic #7B1FA2",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Partner Detective": {
+    "name": "Partner Detective",
+    "description": "Partner Detective - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Captain": {
+    "name": "Captain",
+    "description": "Captain - key character in crime drama story",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Tech Specialist": {
+    "name": "Tech Specialist",
+    "description": "JACKSON WRIGHT, Caucasian man age 45, lean gaunt build from method acting, salt-and-pepper unkempt professor hair, piercing blue bloodshot eyes, deep laugh lines, permanent stubble, slight limp, rumpled vintage suit #4A4A4A",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Security Chief": {
+    "name": "Security Chief",
+    "description": "SOFIA ANDERSSON, Swedish-American woman age 25, curvy energetic build, platinum blonde bob with pink highlights, bright green sparkling mischievous eyes, dimples, infectious smile, colorful vintage dress #E91E63",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Sofia Andersson": {
+    "name": "Sofia Andersson",
+    "description": "Sofia Andersson - authority in scifi thriller story. Security or military background, prioritizes containment over individuals...",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Dimitri Volkov": {
+    "name": "Dimitri Volkov",
+    "description": "DIMITRI VOLKOV, Eastern European man age 40, muscular imposing broad chest, dark slicked-back hair hints of gray at temples, ice blue unblinking unnerving eyes, prominent cheekbones, thin neck scar, expensive dark tailored suit long coat #1A1A1A",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Charlotte Beaumont": {
+    "name": "Charlotte Beaumont",
+    "description": "Charlotte Beaumont - authority in thriller story. Power player who may be friend or foe. Agenda unclear until climax....",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Victoria Sterling": {
+    "name": "Victoria Sterling",
+    "description": "Victoria Sterling - authority in thriller story. Power player who may be friend or foe. Agenda unclear until climax....",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Daniel Reeves": {
+    "name": "Daniel Reeves",
+    "description": "DANIEL REEVES, Caucasian man age 55, weathered dad-bod everyman build, grey disheveled hair, world-weary brown tired eyes, everyman quality, rumpled trench coat loosened tie #6D4C41",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Sakura Yamamoto": {
+    "name": "Sakura Yamamoto",
+    "description": "SAKURA YAMAMOTO, Japanese woman age 23, petite energetic kawaii presence, colorful hair currently pink, bright animated expressive eyes, Harajuku fashion cosplay influence vibrant colors #FF4081",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Elena Reyes": {
+    "name": "Elena Reyes",
+    "description": "Elena Reyes - protagonist in scifi thriller story. Brilliant security who designed the system now threatening them. Carries guilt from past project fai...",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "AI Researcher": {
+    "name": "AI Researcher",
+    "description": "MARCUS STONE, British man age 60, broad-shouldered distinguished bearing, silver perfectly styled hair, deep brown wise warm eyes, resonant voice, perfect posture, expressive hands, three-piece charcoal suit classic timepiece #363636",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Nyx": {
+    "name": "Nyx",
+    "description": "MAYA CHEN, Asian-American woman age 30, athletic lean build, long black hair in practical ponytail, dark brown intense focused eyes, small scar through left eyebrow, dragon tattoo on right shoulder blade, tactical modern clothing #2D2D2D",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Rhea": {
+    "name": "Rhea",
+    "description": "JACKSON WRIGHT, Caucasian man age 45, lean gaunt build from method acting, salt-and-pepper unkempt professor hair, piercing blue bloodshot eyes, deep laugh lines, permanent stubble, slight limp, rumpled vintage suit #4A4A4A",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Cole": {
+    "name": "Cole",
+    "description": "SOFIA ANDERSSON, Swedish-American woman age 25, curvy energetic build, platinum blonde bob with pink highlights, bright green sparkling mischievous eyes, dimples, infectious smile, colorful vintage dress #E91E63",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Malik": {
+    "name": "Malik",
+    "description": "MARCUS STONE, British man age 60, broad-shouldered distinguished bearing, silver perfectly styled hair, deep brown wise warm eyes, resonant voice, perfect posture, expressive hands, three-piece charcoal suit classic timepiece #363636",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Tonight": {
+    "name": "Tonight",
+    "description": "SOFIA ANDERSSON, Swedish-American woman age 25, curvy energetic build, platinum blonde bob with pink highlights, bright green sparkling mischievous eyes, dimples, infectious smile, colorful vintage dress #E91E63",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Burned": {
+    "name": "Burned",
+    "description": "MAYA CHEN, Asian-American woman age 30, athletic lean build, long black hair in practical ponytail, dark brown intense focused eyes, small scar through left eyebrow, dragon tattoo on right shoulder blade, tactical modern clothing #2D2D2D",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Pre": {
+    "name": "Pre",
+    "description": "JACKSON WRIGHT, Caucasian man age 45, lean gaunt build from method acting, salt-and-pepper unkempt professor hair, piercing blue bloodshot eyes, deep laugh lines, permanent stubble, slight limp, rumpled vintage suit #4A4A4A",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Ryan Cooper": {
+    "name": "Ryan Cooper",
+    "description": "RYAN COOPER, Caucasian man age 36, military special ops build, short brown military precision hair, steel grey intense calculating eyes, military bearing, tactical casual capable #455A64",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Javier Morales": {
+    "name": "Javier Morales",
+    "description": "JAVIER MORALES, Mexican man age 40, street-lean dangerous presence build, dark short hair scar across jaw, intense dark street-wise eyes, dangerous charisma, street wear expensive #424242",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Miranda Cross": {
+    "name": "Miranda Cross",
+    "description": "MIRANDA CROSS, Caucasian woman age 38, chameleon transformative presence, naturally dark hair changes for roles, intelligent probing eyes, method actor intensity, style changes completely per role #546E7A",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Natasha Petrova": {
+    "name": "Natasha Petrova",
+    "description": "NATASHA PETROVA, Russian woman age 35, athletic spy-ready build, dark hair severe sophisticated, ice blue calculating secretive eyes, sophisticated international, designer spy chic #37474F",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  },
+  "Character": {
+    "name": "Character",
+    "description": "MAYA CHEN, Asian-American woman age 30, athletic lean build, long black hair in practical ponytail, dark brown intense focused eyes, small scar through left eyebrow, dragon tattoo on right shoulder blade, tactical modern clothing #2D2D2D",
+    "face_reference": null,
+    "body_reference": null,
+    "notes": null,
+    "source": "auto_studio"
+  }
+}

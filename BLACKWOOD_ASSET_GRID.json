@@ -1,0 +1,21 @@
+{
+  "project": "Blackwood Chronicles - Production",
+  "character_library": {
+    "ELEANOR": {
+      "face": {
+        "url": "https://i.ibb.co/pBb6QxFf/CHAR-REF-Eleanor-Vance.jpg",
+        "description": "ELEANOR character reference",
+        "slot_priority": 1
+      }
+    },
+    "MARCUS": {
+      "face": {
+        "url": "https://i.ibb.co/pBb6QxFf/CHAR-REF-Eleanor-Vance.jpg",
+        "description": "MARCUS character reference",
+        "slot_priority": 1
+      }
+    }
+  },
+  "location_library": {},
+  "quality_anchors": {}
+}

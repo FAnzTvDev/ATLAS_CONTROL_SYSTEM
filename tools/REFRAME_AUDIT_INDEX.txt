@@ -1,0 +1,229 @@
+================================================================================
+                         REFRAME AUDIT — FILE INDEX
+================================================================================
+
+This directory contains a comprehensive audit of the ATLAS V27.1 end-frame
+reframing system. Three documents are provided:
+
+================================================================================
+1. REFRAME_AUDIT.txt (774 lines)
+================================================================================
+
+WHAT IT IS:
+  Comprehensive, line-by-line inventory of every end-frame reframing
+  reference in the production codebase.
+
+STRUCTURE:
+  ├─ Executive summary
+  ├─ Detailed findings by search pattern:
+  │  ├─ "end_frame" / "end-frame" (44 files, 8 production)
+  │  ├─ "reframe" (41 files, 9 production)
+  │  ├─ "nano-banana-pro/edit" (84 files, 8 production)
+  │  ├─ "angle_variant" / "multi_angle" (31 files, 9 production)
+  │  ├─ "first_frame_variants" (8 files)
+  │  └─ "num_images" / "num_outputs" (114 files, 2 production)
+  ├─ Architecture overview (5 workflows)
+  ├─ Detailed component status
+  ├─ Execution flow analysis
+  ├─ Can each component be disabled?
+  ├─ Cost analysis
+  ├─ Integration risk assessment
+  ├─ Summary for user
+  └─ Research conclusion
+
+BEST FOR:
+  ✓ Deep technical understanding of reframing architecture
+  ✓ Line-by-line code navigation
+  ✓ Identifying all dependencies and integration points
+  ✓ Comprehensive reference for developers
+
+WHO SHOULD READ:
+  → Engineers planning to modify reframing code
+  → Architects planning major refactoring
+  → Code reviewers validating integration changes
+
+================================================================================
+2. REFRAME_AUDIT_QUICK_REFERENCE.txt (203 lines)
+================================================================================
+
+WHAT IT IS:
+  Condensed reference guide with tables, key code blocks, and
+  disabling recommendations for each subsystem.
+
+CONTENTS:
+  ├─ Five reframing subsystems (overview table)
+  ├─ Nano-banana-pro/edit model calls (6 active call sites)
+  ├─ Directory structure (first_frame_variants/)
+  ├─ Key code blocks (4 critical sections)
+  ├─ Cost breakdown (4 scenarios)
+  ├─ Disabling recommendations (safe/medium/hard)
+  └─ Integration dependencies (import map)
+
+BEST FOR:
+  ✓ Quick reference during code changes
+  ✓ Understanding which subsystems interact
+  ✓ Estimating effort for modifications
+  ✓ Finding specific code blocks by purpose
+
+WHO SHOULD READ:
+  → Developers working on reframing code
+  → Project managers estimating refactoring effort
+  → Code reviewers looking for integration points
+
+================================================================================
+3. REFRAME_AUDIT_SUMMARY.txt (309 lines)
+================================================================================
+
+WHAT IT IS:
+  Executive summary and high-level findings for decision-makers.
+  Includes recommendations for cost reduction and quality improvement.
+
+CONTENTS:
+  ├─ Key findings (4 major points)
+  ├─ Five reframing subsystems (purpose, status, cost, disableable?)
+  ├─ Core files (5 critical files with line numbers)
+  ├─ Execution flow (both endpoints: generate-first-frames, render-scene)
+  ├─ Cost impact analysis (4 scenarios: A, B, C, disable options)
+  ├─ Dependency map (import relationships)
+  ├─ Disabling difficulty assessment (safe/medium/hard)
+  ├─ Recommendations (cost reduction vs. quality improvement)
+  ├─ Final assessment (5 positives, 3 caveats)
+  └─ Conclusion with recommendations
+
+BEST FOR:
+  ✓ Understanding system at 30,000-foot level
+  ✓ Making design decisions about cost vs. quality
+  ✓ Communicating findings to stakeholders
+  ✓ High-level risk assessment
+
+WHO SHOULD READ:
+  → Project managers
+  → Engineering leads
+  → Architects planning future enhancements
+  → Decision-makers evaluating cost vs. quality tradeoffs
+
+================================================================================
+THIS FILE: REFRAME_AUDIT_INDEX.txt
+================================================================================
+
+This index document.
+
+================================================================================
+QUICK NAVIGATION BY USE CASE
+================================================================================
+
+"I need to understand how end-frame reframing works"
+  → Start: REFRAME_AUDIT_SUMMARY.txt (read all)
+  → Then: REFRAME_AUDIT_QUICK_REFERENCE.txt (key code blocks section)
+  → Deep dive: REFRAME_AUDIT.txt (detailed findings)
+
+"I need to modify reframing code"
+  → Start: REFRAME_AUDIT_QUICK_REFERENCE.txt (key code blocks)
+  → Then: REFRAME_AUDIT.txt (detailed findings for your file)
+  → Reference: REFRAME_AUDIT_SUMMARY.txt (dependencies)
+
+"I need to estimate effort for disabling a subsystem"
+  → Start: REFRAME_AUDIT_QUICK_REFERENCE.txt (disabling recommendations)
+  → Then: REFRAME_AUDIT_SUMMARY.txt (disabling difficulty assessment)
+  → Reference: REFRAME_AUDIT.txt (actual code locations)
+
+"I need to communicate findings to stakeholders"
+  → Use: REFRAME_AUDIT_SUMMARY.txt (entire file)
+  → Appendix: REFRAME_AUDIT_QUICK_REFERENCE.txt (cost breakdown)
+
+"I need to debug a reframing issue"
+  → Start: REFRAME_AUDIT_SUMMARY.txt (execution flow)
+  → Then: REFRAME_AUDIT_QUICK_REFERENCE.txt (key code blocks)
+  → Reference: REFRAME_AUDIT.txt (line-by-line details)
+
+"I need to find all calls to nano-banana-pro/edit"
+  → Use: REFRAME_AUDIT_QUICK_REFERENCE.txt (section 2: 6 call sites)
+  → Verify: REFRAME_AUDIT.txt (section 3: 84 files, 8 production)
+
+================================================================================
+KEY STATISTICS
+================================================================================
+
+SYSTEM SCOPE:
+  Production files affected: 8
+  Active code blocks: 40+
+  Total lines of active code: 200+
+  New files added in V27.1: 1 (endframe_gate.py)
+
+REFRAMING SUBSYSTEMS:
+  Master-chain system: 54+ mentions in master_shot_chain_agent.py
+  Multi-candidate generation: 2 files, lines 22258-22267
+  End-frame reframing: orchestrator_server.py lines 8730-8840
+  Continuity memory: 2 files, 7+ mentions
+  End-frame validation: 450+ lines in endframe_gate.py
+
+NANO-BANANA-PRO/EDIT CALLS:
+  Total files mentioning model: 84
+  Production files with active calls: 8
+  Actual active call sites: 6
+  Most critical file: orchestrator_server.py
+
+TEST COVERAGE:
+  Total tests passing: 362+
+  CPC tests: 125
+  Editorial tests: 76
+  Continuity tests: 74
+  Film engine tests: 55
+  Regression tests: 31
+
+================================================================================
+METHODOLOGY NOTE
+================================================================================
+
+This audit was conducted using:
+  1. Grep search across entire production codebase
+  2. Manual code review of identified files
+  3. Cross-reference analysis of dependencies
+  4. Cost impact modeling based on FAL pricing
+  5. Disabling effort estimation based on code structure
+
+Search patterns used:
+  ✓ "end.frame" or "end_frame"
+  ✓ "reframe"
+  ✓ "nano-banana-pro/edit"
+  ✓ "angle.variant" or "angle_variant" or "multi.angle" or "multi_angle"
+  ✓ "first_frame_variants"
+  ✓ "num_images" or "num_outputs"
+
+Files EXCLUDED from analysis:
+  ✗ venv/ (Python virtual environment)
+  ✗ archive/ (legacy v22 code)
+  ✗ _showcase_lock_v17.1/ (frozen version)
+  ✗ LOCKED_V18_MODEL_SELECTOR/ (frozen version)
+  ✗ V16.7_FREEZE_ARCHIVE/ (frozen version)
+
+Result: Focus on ACTIVE production code only.
+
+================================================================================
+DOCUMENT METADATA
+================================================================================
+
+Audit Date: 2026-03-17
+ATLAS Version: V27.1 (Scene Visual DNA + Split Anti-Morph + Focal Enforcement)
+Project Code: ATLAS_CONTROL_SYSTEM
+Scope: End-frame reframing system (5 subsystems, 8 production files)
+Status: RESEARCH ONLY — No modifications made to codebase
+Total Lines Across All Audits: 1,286 lines (REFRAME_AUDIT.txt + QUICK_REFERENCE.txt + SUMMARY.txt)
+
+================================================================================
+CONTACT & QUESTIONS
+================================================================================
+
+These audit documents are RESEARCH ONLY. They do not recommend any changes
+to the production codebase without careful review of:
+
+  1. All dependencies (see DEPENDENCY MAP in SUMMARY.txt)
+  2. Fallback code paths (ensure they exist and are tested)
+  3. Cost implications (see COST IMPACT ANALYSIS in SUMMARY.txt)
+  4. Quality impact (see DISABLING RECOMMENDATIONS in QUICK_REFERENCE.txt)
+
+For questions about specific code blocks, refer to:
+  • REFRAME_AUDIT.txt (detailed line-by-line findings)
+  • REFRAME_AUDIT_QUICK_REFERENCE.txt (key code blocks section)
+
+================================================================================

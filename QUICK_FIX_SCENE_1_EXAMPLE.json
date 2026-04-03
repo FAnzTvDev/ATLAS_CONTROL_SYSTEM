@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "purpose": "Example enriched Scene 1 beats to test Story Validator",
+    "usage": "Copy these beats into BLACKWOOD_EPISODE_1_COMPLETE.json to test validation",
+    "note": "This demonstrates what ALL 90 beats need to look like"
+  },
+
+  "scene_1_enriched_beats": [
+    {
+      "beat_number": 1,
+      "beat_id": "BW_EP1_001_BEAT_1",
+      "beat": "TRAPPED_REALIZATION",
+
+      "goal": "Sarah wants to hide herself and daughter from the killer approaching from upstairs",
+      "conflict": "Basement has no exits, killer descending stairs blocks only escape, candle dying",
+      "turn": "Sarah tries door at top of stairs, realizes it's been locked from outside",
+      "reveal": "This was premeditated - killer locked them in before descending",
+      "emotional_state": "fear escalating to desperate protectiveness",
+
+      "description": "Sarah Blackwood hears heavy footsteps on wooden stairs above, grabs her 5-year-old daughter's hand, scans the Victorian basement frantically. Stone walls, coal furnace, wine racks, no windows. Single candle on barrel. Daughter whimpers. Sarah puts finger to lips.",
+      "visual": "Victorian basement 1893, stone walls with frost forming impossibly, single candle on barrel creating harsh 8:1 shadows, narrow wooden staircase only exit, coal furnace in corner, wine racks, no windows, oppressive confinement",
+      "character_action": "Sarah grabs daughter, looks around desperately, hand gently over daughter's mouth to silence her, eyes locked on staircase entrance",
+      "duration_seconds": 30,
+      "emotion_curve": "slow dread rising to trapped terror",
+      "audio_perspective": "distant footsteps growing closer",
+      "dialogue": null,
+
+      "props": ["candle", "coal_furnace", "wine_barrels"],
+      "visual_motifs": ["frost_forming_impossible", "shadows_stretching", "single_light_source_dying"],
+      "ghost_appearance": null
+    },
+
+    {
+      "beat_number": 2,
+      "beat_id": "BW_EP1_001_BEAT_2",
+      "beat": "HIDING_ATTEMPT",
+
+      "goal": "Sarah wants to hide behind the coal furnace before killer sees them",
+      "conflict": "Furnace is hot, daughter scared of it, no time, killer's footsteps descending",
+      "turn": "Sarah spots her daughter's toy doll left on floor in open - would give away hiding spot",
+      "reveal": "They were playing down here earlier - daughter's belongings scattered",
+      "emotional_state": "urgent calculation under terror",
+
+      "description": "Sarah pulls daughter toward coal furnace in corner, it's the only cover. Daughter resists (hot, scared). Footsteps closer. Sarah sees daughter's porcelain doll on floor 10 feet away in candlelight - dead giveaway. Must retrieve it but would expose them crossing open space.",
+      "visual": "Low angle from behind furnace showing mother and daughter crouching, porcelain doll visible in candlelight center frame, staircase background with descending shadow growing, steam rising from furnace creating eerie atmosphere",
+      "character_action": "Sarah crouches behind furnace pulling daughter down, spots doll, freezes in decision paralysis, killer's shadow appears on basement wall",
+      "duration_seconds": 30,
+      "emotion_curve": "urgent decision under mounting threat",
+      "audio_perspective": "footsteps on stairs very close, floorboards creaking",
+      "dialogue": null,
+
+      "props": ["coal_furnace", "porcelain_doll", "scattered_toys"],
+      "visual_motifs": ["shadow_growing_wall", "candlelight_flickering", "impossible_cold_breath"],
+      "ghost_appearance": null
+    },
+
+    {
+      "beat_number": 3,
+      "beat_id": "BW_EP1_001_BEAT_3",
+      "beat": "KILLER_REVEALED",
+
+      "goal": "Sarah wants to see who the killer is (family member? intruder?) without being seen",
+      "conflict": "Daughter squirming, about to make noise, killer descending final stairs",
+      "turn": "Killer reaches basement floor, turns toward them - it's someone they know",
+      "reveal": "Killer is Edmund Blackwood, the patriarch - family massacre by head of household",
+      "emotional_state": "horror compounded by betrayal",
+
+      "description": "Sarah tightens grip on daughter (too hard, daughter winces silently). Footsteps reach basement floor. Pause. Then slow deliberate steps on stone. Killer enters candlelight. Sarah's face: recognition then horror. It's Edmund Blackwood in evening dress, holding family carving knife, blood already on cuffs.",
+      "visual": "Over-shoulder from Sarah's POV hiding behind furnace, Edmund Blackwood enters frame, Victorian gentleman 1893 evening dress, carving knife glints in candlelight, blood on white shirt cuffs, his face calm/methodical not crazed, shadows stretch behind him impossibly long",
+      "character_action": "Sarah's eyes widen in recognition, hand clamps harder over daughter's mouth, daughter squirms but Sarah holds firm, both frozen in horror watching patriarch hunt them",
+      "duration_seconds": 30,
+      "emotion_curve": "recognition crashing into betrayal horror",
+      "audio_perspective": "slow footsteps on stone, Edmund breathing steady (not panicked)",
+      "dialogue": "Edmund (calm, conversational): 'Sarah. Bring the child out. This will be quick.'",
+
+      "props": ["carving_knife", "evening_dress", "blood_stains"],
+      "visual_motifs": ["impossible_shadows", "frost_breath_visible", "candlelight_dying"],
+      "ghost_appearance": null
+    },
+
+    {
+      "beat_number": 4,
+      "beat_id": "BW_EP1_001_BEAT_4",
+      "beat": "LAST_STAND",
+
+      "goal": "Sarah wants to fight Edmund to buy time for daughter to escape somehow",
+      "conflict": "No weapons, no escape route, Edmund blocking stairs, daughter helpless",
+      "turn": "Sarah grabs coal shovel as weapon, steps out from hiding to draw Edmund away from daughter",
+      "reveal": "Sarah sacrifices herself to save daughter - mother's love vs. patriarch's madness",
+      "emotional_state": "sacrificial courage overriding fear",
+
+      "description": "Sarah releases daughter, whispers 'stay hidden,' grabs coal shovel from furnace, steps out into candlelight facing Edmund. He smiles sadly. 'You were always the brave one.' Sarah raises shovel. Edmund advances. Daughter watches through furnace grate as mother makes final stand.",
+      "visual": "Wide shot, Sarah center frame small against basement vastness, coal shovel raised, Edmund advancing right frame with knife, daughter visible through furnace grate left frame, candle dying creates countdown urgency, frost spreading across ceiling impossible physics",
+      "character_action": "Sarah steps forward protective stance, shovel raised trembling, Edmund advances unhurried, knife held casually, daughter screaming silently behind grate, basement suddenly freezing (breath fog visible)",
+      "duration_seconds": 30,
+      "emotion_curve": "sacrificial courage building to impact moment",
+      "audio_perspective": "Sarah's breathing heavy, Edmund's footsteps steady, daughter's muffled scream, candle guttering out",
+      "dialogue": "Sarah: 'Run upstairs! RUN!' Edmund: 'There's no one left upstairs, Sarah.'",
+
+      "props": ["coal_shovel", "carving_knife", "dying_candle"],
+      "visual_motifs": ["impossible_frost_ceiling", "breath_fog", "shadows_moving_wrong", "candle_dies"],
+      "ghost_appearance": null,
+
+      "camera_note": "Cut to black before violence shown - let imagination fill gaps"
+    }
+  ],
+
+  "how_to_use": {
+    "step_1": "Copy the 4 beats above",
+    "step_2": "Replace beats 1-4 in BLACKWOOD_EPISODE_1_COMPLETE.json -> scenes[0].beats",
+    "step_3": "Run: python3 tools/story_validator.py BLACKWOOD_EPISODE_1_COMPLETE.json",
+    "step_4": "Should see: Scene 1 beats PASS validation (4/4 valid)",
+    "step_5": "Test ShotSpec generation: python3 tools/beat_to_shotspec.py --scene 001",
+    "step_6": "Review generated prompts - should be 500+ chars with cinema details"
+  },
+
+  "what_this_demonstrates": {
+    "valid_beats": "Each beat has goal/conflict/turn/reveal/emotional_state",
+    "cinematic_detail": "Visual descriptions reference cinematography (angles, lighting, lenses)",
+    "character_psychology": "Emotional arcs and motivations clear",
+    "narrative_structure": "Each beat builds on previous, clear cause-effect chain",
+    "ghost_logic": "No random supernatural - all effects motivated by story",
+    "period_authenticity": "1893 Victorian details, no anachronisms"
+  },
+
+  "next_steps": {
+    "option_1": "Manually enrich remaining 86 beats (7 hours)",
+    "option_2": "Use LLM to enrich based on this example pattern (~$0.50)",
+    "option_3": "Hire writer to enrich all beats (highest quality)"
+  }
+}

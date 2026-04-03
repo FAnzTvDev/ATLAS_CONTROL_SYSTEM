@@ -1,0 +1,42 @@
+{
+  "version": "16.1.0",
+  "timestamp": "2026-02-04T21:47:43.690998",
+  "system_checks": {
+    "lock_system": true,
+    "fixer_workflow": true,
+    "temporal": true,
+    "critics": true,
+    "render_gate": true,
+    "duration_rules": true,
+    "extended_segmentation": true,
+    "character_propagation": true,
+    "golden_baseline": true
+  },
+  "project_status": {
+    "ravencroft_new": {
+      "shots": 78,
+      "valid_durations_pct": "100%",
+      "character_refs_pct": "96%",
+      "ready": true
+    },
+    "test_tokyo_thriller": {
+      "shots": 3,
+      "valid_durations_pct": "100%",
+      "character_refs_pct": "100%",
+      "ready": true
+    },
+    "kord": {
+      "shots": 61,
+      "valid_durations_pct": "100%",
+      "character_refs_pct": "75%",
+      "ready": true
+    },
+    "ravencroft_final": {
+      "shots": 444,
+      "valid_durations_pct": "100%",
+      "character_refs_pct": "91%",
+      "ready": true
+    }
+  },
+  "production_ready": true
+}

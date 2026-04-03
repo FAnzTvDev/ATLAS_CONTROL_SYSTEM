@@ -1,0 +1,431 @@
+{
+  "episode_title": "Welcome to Blackwood",
+  "episode_number": 1,
+  "total_runtime_minutes": 45,
+  "total_runtime_seconds": 2700,
+  "episode_theme": "Arrival and first night - the house reveals its sentience",
+  "story_bible_reference": "blackwood_story_bible.json",
+
+  "act_structure": {
+    "act_1": {
+      "title": "ARRIVAL",
+      "runtime": "0:00 - 15:00 (900s)",
+      "scenes": [1, 2, 3, 4, 5, 6]
+    },
+    "act_2": {
+      "title": "EXPLORATION & FIRST MANIFESTATIONS",
+      "runtime": "15:00 - 30:00 (900s)",
+      "scenes": [7, 8, 9, 10, 11, 12, 13]
+    },
+    "act_3": {
+      "title": "NIGHT TERRORS",
+      "runtime": "30:00 - 45:00 (900s)",
+      "scenes": [14, 15, 16, 17, 18, 19, 20]
+    }
+  },
+
+  "scenes": [
+    {
+      "scene_number": 1,
+      "scene_id": "BW_EP1_001",
+      "scene_title": "COLD OPEN - THE 1893 MURDERS",
+      "location": "Interior - Basement/Kitchen - 1893 Flashback",
+      "time": "October 31, 1893 - 11:47 PM",
+      "characters_present": ["Victim (Sarah Blackwood)", "Killer (shadowed)"],
+      "runtime_seconds": 120,
+      "scene_purpose": "Establish the house's violent history, create dread",
+      "tone": "Period horror, sepia-toned, violent",
+
+      "beats": [
+        {
+          "beat_number": 1,
+          "beat": "SERVANT'S TERROR",
+          "description": "Young maid Sarah runs down basement stairs, candle flickering, pursued by heavy footsteps",
+          "visual": "Handheld chase, candle as only light source, shadows dancing on stone walls",
+          "character_action": "Sarah trips, turns to face pursuer, screams",
+          "revelation": "This basement has seen murder before",
+          "duration_seconds": 30
+        },
+        {
+          "beat_number": 2,
+          "beat": "THE FIRST KILL",
+          "description": "Shadowed figure with meat cleaver, blood spray on stone walls",
+          "visual": "Silhouette only, no face shown, emphasize shadow on wall not gore",
+          "character_action": "Sarah's final scream cuts to silence, candle extinguishes",
+          "revelation": "The violence that cursed the house began here",
+          "duration_seconds": 25
+        },
+        {
+          "beat_number": 3,
+          "beat": "BLOOD SOAKS STONE",
+          "description": "Pool of blood spreading across floor, seeping into cracks between stones",
+          "visual": "Slow push-in on blood, time-lapse of it spreading and drying into permanent stain",
+          "character_action": "None - aftermath only",
+          "revelation": "This blood never washed away - it's still there 132 years later",
+          "duration_seconds": 20
+        },
+        {
+          "beat_number": 4,
+          "beat": "TITLE CARD",
+          "description": "Smash cut to title: THE BLACKWOOD ESTATE - October 2025",
+          "visual": "Blood transforms into title typography, modern day begins",
+          "character_action": "None",
+          "revelation": "Time jump to present",
+          "duration_seconds": 45
+        }
+      ],
+
+      "shots": [
+        {
+          "shot_id": "BW_EP1_001A",
+          "type": "wide",
+          "description": "Sarah fleeing down stairs into basement darkness",
+          "camera": "24mm handheld chase, descending with character",
+          "lens_specs": "moderate depth f/4, candle sharp foreground soft",
+          "lighting": "Single candle practical, bouncing with movement, deep shadows",
+          "character_blocking": "Sarah center descending left to right, killer shadow above",
+          "duration": 10,
+          "reference_needed": "Period costume reference - 1893 maid uniform"
+        },
+        {
+          "shot_id": "BW_EP1_001B",
+          "type": "medium",
+          "description": "Sarah on ground looking up at killer",
+          "camera": "50mm low angle from floor, killer's POV",
+          "lens_specs": "shallow f/2.8, Sarah's terrified face sharp",
+          "lighting": "Candle on floor beside her, rim light from killer's candle above",
+          "character_blocking": "Sarah sprawled lower right, hands up defensive, killer looming",
+          "duration": 8,
+          "reference_needed": "Sarah character (period), killer silhouette only"
+        },
+        {
+          "shot_id": "BW_EP1_001C",
+          "type": "closeup",
+          "description": "Extreme close-up - blood spreading on stone",
+          "camera": "85mm macro lens, locked overhead",
+          "lens_specs": "shallow f/1.8, blood droplets sharp, stone texture visible",
+          "lighting": "Dying candle light, cool moonlight from small window",
+          "character_blocking": "No characters, blood pool center frame expanding",
+          "duration": 12,
+          "reference_needed": "Stone floor texture, blood VFX"
+        }
+      ]
+    },
+
+    {
+      "scene_number": 2,
+      "scene_id": "BW_EP1_002",
+      "scene_title": "ARRIVAL AT THE GATES - ELEANOR & MARCUS",
+      "location": "Exterior - Front Gates - Dusk",
+      "time": "Friday, October 25, 2025 - 6:47 PM",
+      "characters_present": ["Eleanor Vance", "Marcus Sterling"],
+      "runtime_seconds": 180,
+      "scene_purpose": "Introduce protagonists, establish house's imposing presence",
+      "tone": "Gothic foreboding, building dread",
+
+      "dialogue": [
+        {
+          "character": "Marcus",
+          "line": "This is it? Blackwood Estate?",
+          "timing": "0:05"
+        },
+        {
+          "character": "Eleanor",
+          "line": "The gates... they're opening by themselves.",
+          "timing": "0:22"
+        },
+        {
+          "character": "Marcus",
+          "line": "Probably motion sensor. Rich people love automation.",
+          "timing": "0:28"
+        },
+        {
+          "character": "Eleanor",
+          "line": "My EMF detector is going crazy. Marcus, we should leave.",
+          "timing": "0:42"
+        },
+        {
+          "character": "Marcus",
+          "line": "We just got here. Besides, I need this story.",
+          "timing": "0:48"
+        }
+      ],
+
+      "beats": [
+        {
+          "beat_number": 1,
+          "beat": "FIRST GLIMPSE",
+          "description": "Car headlights illuminate rusted iron gates with Blackwood crest - raven clutching dead roses",
+          "visual": "Crane down from gates to car, tungsten headlights cutting through blue dusk fog",
+          "character_action": "Eleanor stares up at mansion silhouette, Marcus checks rear mirror nervously",
+          "revelation": "The house is larger and more menacing than photos suggested",
+          "duration_seconds": 45
+        },
+        {
+          "beat_number": 2,
+          "beat": "THRESHOLD CROSSING",
+          "description": "Gates creak open on their own, no mechanism visible, invitation accepted",
+          "visual": "Wide shot - gates part slowly, car headlights revealing empty driveway beyond",
+          "character_action": "Eleanor whispers warning, Marcus forces skeptical laugh but grips wheel",
+          "revelation": "The house is aware and welcoming them in",
+          "duration_seconds": 35
+        },
+        {
+          "beat_number": 3,
+          "beat": "THE APPROACH",
+          "description": "Long driveway lined with dead trees, mansion growing larger, single lit window like an eye",
+          "visual": "Dolly follow behind car, low angle making house loom, one amber window prominent",
+          "character_action": "Eleanor's EMF readings spike, nosebleed starts (first sign of her sensitivity)",
+          "revelation": "This isn't passive - it's actively watching",
+          "duration_seconds": 60
+        },
+        {
+          "beat_number": 4,
+          "beat": "OTHERS HAVE ARRIVED",
+          "description": "Two other cars already parked - they're not alone",
+          "visual": "Park beside expensive sedan and old van, lights on in house",
+          "character_action": "Marcus grabs camera bag, Eleanor hesitates touching door handle",
+          "revelation": "The other guests are already inside",
+          "duration_seconds": 40
+        }
+      ],
+
+      "shots": [
+        {
+          "shot_id": "BW_EP1_002A",
+          "type": "wide",
+          "description": "Establishing - gates and approaching car",
+          "camera": "24mm crane movement, descending from gate top to car level",
+          "lens_specs": "deep depth f/8, entire scene sharp",
+          "lighting": "Dusk blue hour, tungsten headlights, no moon yet",
+          "character_blocking": "Car center lower third, gates dominating upper frame",
+          "duration": 15,
+          "reference_needed": "Gate design, car model, mansion silhouette"
+        },
+        {
+          "shot_id": "BW_EP1_002B",
+          "type": "medium",
+          "description": "Interior car - Eleanor and Marcus react to gates opening",
+          "camera": "50mm dual shot through windshield, dashboard mounted",
+          "lens_specs": "moderate depth f/4, faces sharp dashboard slightly soft",
+          "lighting": "Dashboard glow blue, headlights bouncing back from fog",
+          "character_blocking": "Eleanor right looking up/left, Marcus left focused forward",
+          "duration": 12,
+          "reference_needed": "Eleanor character reference, Marcus character reference"
+        },
+        {
+          "shot_id": "BW_EP1_002C",
+          "type": "closeup",
+          "description": "Eleanor's face - fear and recognition",
+          "camera": "85mm portrait, slight slow push-in",
+          "lens_specs": "shallow f/1.8, eyes sharp everything else soft bokeh",
+          "lighting": "Cool blue from window, warm dash glow from below",
+          "character_blocking": "Eleanor's face fills frame, eyes reflecting gate movement",
+          "duration": 10,
+          "reference_needed": "Eleanor reference - fearful/knowing expression"
+        },
+        {
+          "shot_id": "BW_EP1_002D",
+          "type": "medium",
+          "description": "Following car up driveway - house growing larger",
+          "camera": "35mm dolly follow from behind, low angle",
+          "lens_specs": "moderate depth f/5.6",
+          "lighting": "Headlights creating path, house window lit amber, trees silhouetted",
+          "character_blocking": "Car lower third, mansion dominating upper two-thirds",
+          "duration": 20,
+          "reference_needed": "Mansion architecture, driveway, dead trees"
+        },
+        {
+          "shot_id": "BW_EP1_002E",
+          "type": "closeup",
+          "description": "EMF detector in Eleanor's hand - readings spiking",
+          "camera": "85mm macro lens on device",
+          "lens_specs": "shallow f/2, device sharp hand soft",
+          "lighting": "Device LED screen glow, ambient car interior",
+          "character_blocking": "Device center, Eleanor's trembling hand",
+          "duration": 8,
+          "reference_needed": "EMF detector prop, Eleanor's hand"
+        },
+        {
+          "shot_id": "BW_EP1_002F",
+          "type": "wide",
+          "description": "Parking beside other vehicles",
+          "camera": "24mm from house POV looking down at driveway",
+          "lens_specs": "deep depth f/8",
+          "lighting": "Car headlights, porch lights from house, dusk fading",
+          "character_blocking": "Three cars arranged, Eleanor and Marcus exiting",
+          "duration": 15,
+          "reference_needed": "Full cast positioning, vehicle variety"
+        }
+      ]
+    },
+
+    {
+      "scene_number": 3,
+      "scene_id": "BW_EP1_003",
+      "scene_title": "GRAND FOYER - INTRODUCTIONS",
+      "location": "Interior - Grand Foyer",
+      "time": "Friday 7:03 PM",
+      "characters_present": ["Eleanor", "Marcus", "Victoria", "Father Rhys", "Kenji"],
+      "runtime_seconds": 240,
+      "scene_purpose": "Gather full cast, establish dynamics, first supernatural event",
+      "tone": "False civility masking dread",
+
+      "dialogue": [
+        {
+          "character": "Victoria",
+          "line": "Welcome to Blackwood Estate. I'm Victoria Ashford, your host for the weekend.",
+          "timing": "0:08"
+        },
+        {
+          "character": "Marcus",
+          "line": "Marcus Sterling, investigative journalist. Mind if I record?",
+          "timing": "0:15"
+        },
+        {
+          "character": "Victoria",
+          "line": "Please don't. This is... private research.",
+          "timing": "0:19"
+        },
+        {
+          "character": "Father Rhys",
+          "line": "Father Thomas Rhys. The Church sent me to assess the... situation.",
+          "timing": "0:26"
+        },
+        {
+          "character": "Kenji",
+          "line": "Kenji Nakamura, architectural historian. This house is extraordinary.",
+          "timing": "0:34"
+        },
+        {
+          "character": "Eleanor",
+          "line": "Eleanor Vance. Paranormal researcher. And something is very wrong here.",
+          "timing": "0:42"
+        },
+        {
+          "character": "Victoria",
+          "line": "Wine? You'll all need it. The house... has expectations.",
+          "timing": "0:52"
+        },
+        {
+          "character": "Marcus",
+          "line": "What kind of expectations?",
+          "timing": "0:57"
+        },
+        {
+          "character": "Eleanor",
+          "line": "Oh god... the portraits. They're all looking at ME.",
+          "timing": "1:15"
+        }
+      ],
+
+      "beats": [
+        {
+          "beat_number": 1,
+          "beat": "MEET THE HOST",
+          "description": "Victoria greets arrivals at base of grand staircase, elegant but visibly tense",
+          "visual": "Symmetrical framing, Victoria centered, dual staircases framing her",
+          "character_action": "Victoria's practiced welcome masks trembling hands, avoids looking at portraits",
+          "revelation": "The host is terrified of her own house",
+          "duration_seconds": 45
+        },
+        {
+          "beat_number": 2,
+          "beat": "THE ASSEMBLED",
+          "description": "Each guest introduces themselves, hidden agendas clash",
+          "visual": "Rotating focus as each speaks, portraits visible in background",
+          "character_action": "Marcus suspicious and recording mentally, Father Rhys touches rosary, Kenji photographs everything, Eleanor growing pale",
+          "revelation": "Everyone has a secret reason for being here",
+          "duration_seconds": 60
+        },
+        {
+          "beat_number": 3,
+          "beat": "FIRST MANIFESTATION",
+          "description": "Chandelier begins swinging violently, all portrait eyes shift to Eleanor",
+          "visual": "Sudden chaos - candles flicker, temperature drops visible in breath",
+          "character_action": "Eleanor gasps, nosebleed starts, Father Rhys begins Latin prayer, Marcus tries to rationalize",
+          "revelation": "The house recognizes Eleanor as the psychic - she's the primary target",
+          "duration_seconds": 50
+        },
+        {
+          "beat_number": 4,
+          "beat": "VICTORIA'S WARNING",
+          "description": "Victoria admits truth - everyone invited for a reason, house feeds on fear",
+          "visual": "Tight group shot, all looking at Victoria, chandelier still swaying above",
+          "character_action": "Victoria breaks down, confesses her family's curse, begs them to leave tonight",
+          "revelation": "This wasn't a research invitation - it's a trap set by the house itself",
+          "duration_seconds": 85
+        }
+      ],
+
+      "shots": [
+        {
+          "shot_id": "BW_EP1_003A",
+          "type": "wide",
+          "description": "Full foyer establishing - cast assembled",
+          "camera": "24mm from balcony level, high angle looking down",
+          "lens_specs": "deep depth f/8, entire space sharp",
+          "lighting": "Chandelier key light, wall sconces fill, window moonlight",
+          "character_blocking": "Victoria at staircase base center, guests in semicircle facing her",
+          "duration": 15,
+          "reference_needed": "All 5 character references, foyer architecture"
+        },
+        {
+          "shot_id": "BW_EP1_003B",
+          "type": "medium",
+          "description": "Victoria's greeting - portraits behind her",
+          "camera": "50mm chest-level, slight push in as she speaks",
+          "lens_specs": "moderate depth f/4, portraits slightly soft but visible",
+          "lighting": "Warm sconce uplight on face, cool window backlight",
+          "character_blocking": "Victoria center, two portraits flanking, eyes painted to seem watching",
+          "duration": 18,
+          "reference_needed": "Victoria reference, portrait artwork"
+        },
+        {
+          "shot_id": "BW_EP1_003C",
+          "type": "closeup",
+          "description": "Eleanor's horror - nosebleed begins",
+          "camera": "85mm portrait, locked tight on face",
+          "lens_specs": "shallow f/1.8, blood droplet sharp background soft",
+          "lighting": "Horror lighting - overhead creating shadows under eyes",
+          "character_blocking": "Eleanor touching nose, blood on fingertips, eyes wide at portraits",
+          "duration": 10,
+          "reference_needed": "Eleanor reference - terror expression, blood practical"
+        },
+        {
+          "shot_id": "BW_EP1_003D",
+          "type": "medium",
+          "description": "Father Rhys reaction - begins prayer",
+          "camera": "50mm profile angle",
+          "lens_specs": "moderate depth f/4",
+          "lighting": "Side light from window, shadows on praying hands",
+          "character_blocking": "Father Rhys right third, rosary in hands, lips moving",
+          "duration": 12,
+          "reference_needed": "Father Rhys reference, rosary prop"
+        },
+        {
+          "shot_id": "BW_EP1_003E",
+          "type": "wide",
+          "description": "Chandelier swinging - chaos erupts",
+          "camera": "24mm from floor looking up, dutch angle",
+          "lens_specs": "deep depth f/8",
+          "lighting": "Chandelier swinging creating moving shadows, candles flickering",
+          "character_blocking": "All five guests visible scattered, looking up",
+          "duration": 15,
+          "reference_needed": "Full cast blocking, chandelier VFX"
+        },
+        {
+          "shot_id": "BW_EP1_003F",
+          "type": "closeup",
+          "description": "Portrait eyes - subtle movement",
+          "camera": "85mm locked on single portrait",
+          "lens_specs": "shallow f/2.8, eyes sharp",
+          "lighting": "Flickering candlelight, shadows moving",
+          "character_blocking": "Portrait only, eyes seeming to track",
+          "duration": 8,
+          "reference_needed": "Portrait art with movable eyes VFX"
+        }
+      ]
+    }
+  ]
+}

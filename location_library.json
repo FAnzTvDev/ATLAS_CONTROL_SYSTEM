@@ -1,0 +1,617 @@
+{
+  "RITUAL_CHAMBER": {
+    "depth_references": {
+      "angle_a": {
+        "url": "https://i.ibb.co/MDT0Y0Nk/location-ritual-chamber-20251125-161900-jpg.png",
+        "slot_priority": 1,
+        "description": "Ritual chamber main angle - Gothic architecture, candlelit"
+      },
+      "angle_b": {
+        "url": "https://i.ibb.co/GfbS9yCW/location-ritual-chamber-anglea-20251125-204247-jpg.png",
+        "slot_priority": 2,
+        "description": "Ritual chamber angle B - Altar perspective"
+      },
+      "angle_c": {
+        "url": "https://i.ibb.co/jvHxhPfm/location-ritual-chamber-angleb-20251125-204306-jpg.png",
+        "slot_priority": 3,
+        "description": "Ritual chamber angle C - Wide atmospheric shot"
+      },
+      "angle_d": {
+        "url": "https://i.ibb.co/4q6j2bB/location-ritual-chamber-anglec-20251125-204324-jpg.png",
+        "slot_priority": 4,
+        "description": "Ritual chamber angle D - Close detail perspective"
+      }
+    },
+    "primary_style": "Gothic Victorian, candlelit, stone architecture",
+    "mood": "Ominous, supernatural, atmospheric"
+  },
+  "RITUAL CHAMBER": {
+    "depth_references": {
+      "angle_a": {
+        "url": "https://i.ibb.co/MDT0Y0Nk/location-ritual-chamber-20251125-161900-jpg.png",
+        "slot_priority": 1,
+        "description": "Ritual chamber main angle"
+      },
+      "angle_b": {
+        "url": "https://i.ibb.co/GfbS9yCW/location-ritual-chamber-anglea-20251125-204247-jpg.png",
+        "slot_priority": 2,
+        "description": "Ritual chamber angle B"
+      },
+      "angle_c": {
+        "url": "https://i.ibb.co/jvHxhPfm/location-ritual-chamber-angleb-20251125-204306-jpg.png",
+        "slot_priority": 3,
+        "description": "Ritual chamber angle C"
+      },
+      "angle_d": {
+        "url": "https://i.ibb.co/4q6j2bB/location-ritual-chamber-anglec-20251125-204324-jpg.png",
+        "slot_priority": 4,
+        "description": "Ritual chamber angle D"
+      }
+    }
+  },
+  "Interior - Ritual Chamber - 1890": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_ritual_chamber_20251125_161900.jpg",
+        "slot_priority": 1,
+        "description": "location_ritual_chamber_20251125_161900 reference 1"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_ritual_chamber_anglea_20251125_204247.jpg",
+        "slot_priority": 2,
+        "description": "Ritual chamber angle A - altar perspective"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_ritual_chamber_angleb_20251125_204306.jpg",
+        "slot_priority": 3,
+        "description": "Ritual chamber angle B - ceiling arches"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_ritual_chamber_anglec_20251125_204324.jpg",
+        "slot_priority": 4,
+        "description": "Ritual chamber angle C - door perspective"
+      }
+    },
+    "primary_style": "location ritual chamber 20251125 161900"
+  },
+  "Exterior - Ravencroft Gates": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_manor_exterior_night_20251125_161814.jpg",
+        "slot_priority": 1,
+        "description": "location manor exterior night 20251125 161814"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_manor_exterior_night_anglea_20251125_203754.jpg",
+        "slot_priority": 2,
+        "description": "location manor exterior night anglea 20251125 203754"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_manor_exterior_night_angleb_20251125_203825.jpg",
+        "slot_priority": 3,
+        "description": "location manor exterior night angleb 20251125 203825"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_manor_exterior_night_anglec_20251125_203907.jpg",
+        "slot_priority": 4,
+        "description": "location manor exterior night anglec 20251125 203907"
+      }
+    },
+    "primary_style": "Exterior - Ravencroft Gates"
+  },
+  "Exterior - Countryside": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_house_lot_windows_92591a.jpg",
+        "slot_priority": 1,
+        "description": "location house lot windows 92591a"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_creepy_looking_building_bf8f18.jpg",
+        "slot_priority": 2,
+        "description": "prop creepy looking building bf8f18"
+      }
+    },
+    "primary_style": "Exterior - Countryside"
+  },
+  "Exterior - Cliffs": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_church_sky_full_68ea63.jpg",
+        "slot_priority": 1,
+        "description": "location church sky full 68ea63"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_creepy_looking_building_bf8f18.jpg",
+        "slot_priority": 2,
+        "description": "prop creepy looking building bf8f18"
+      }
+    },
+    "primary_style": "Exterior - Cliffs"
+  },
+  "Interior - City Apartment": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_living_room_fireplace_498d4e.jpg",
+        "slot_priority": 1,
+        "description": "location living room fireplace 498d4e"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_living_room_fireplace_68608d.jpg",
+        "slot_priority": 2,
+        "description": "location living room fireplace 68608d"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_room_desk_chair_936e6d.jpg",
+        "slot_priority": 3,
+        "description": "location room desk chair 936e6d"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_woman_standing_room_de6ee3.jpg",
+        "slot_priority": 4,
+        "description": "location woman standing room de6ee3"
+      }
+    },
+    "primary_style": "Interior - City Apartment"
+  },
+  "Interior - Whitmore Inn": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_couple_people_sitting_b9df3a.jpg",
+        "slot_priority": 1,
+        "description": "location couple people sitting b9df3a"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_man_sitting_bar_828f04.jpg",
+        "slot_priority": 2,
+        "description": "location man sitting bar 828f04"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_living_room_fireplace_498d4e.jpg",
+        "slot_priority": 3,
+        "description": "location living room fireplace 498d4e"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_living_room_fireplace_68608d.jpg",
+        "slot_priority": 4,
+        "description": "location living room fireplace 68608d"
+      }
+    },
+    "primary_style": "Interior - Whitmore Inn"
+  },
+  "Interior - Grand Hall / East Wing": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_20251125_161919.jpg",
+        "slot_priority": 1,
+        "description": "location servants hall 20251125 161919"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_anglea_20251125_204407.jpg",
+        "slot_priority": 2,
+        "description": "location servants hall anglea 20251125 204407"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_angleb_20251125_204422.jpg",
+        "slot_priority": 3,
+        "description": "location servants hall angleb 20251125 204422"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_anglec_20251125_204440.jpg",
+        "slot_priority": 4,
+        "description": "location servants hall anglec 20251125 204440"
+      }
+    },
+    "primary_style": "Interior - Grand Hall / East Wing"
+  },
+  "Interior - Evelyn's Bedroom": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_anglea_20251125_204005.jpg",
+        "slot_priority": 1,
+        "description": "location attic nursery anglea 20251125 204005"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_angleb_20251125_204120.jpg",
+        "slot_priority": 2,
+        "description": "location attic nursery angleb 20251125 204120"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_angled_20251125_204218.jpg",
+        "slot_priority": 3,
+        "description": "location attic nursery angled 20251125 204218"
+      }
+    },
+    "primary_style": "Interior - Evelyn's Bedroom"
+  },
+  "Interior - Bedroom": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_20251125_161842.jpg",
+        "slot_priority": 1,
+        "description": "location attic nursery 20251125 161842"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_anglea_20251125_204005.jpg",
+        "slot_priority": 2,
+        "description": "location attic nursery anglea 20251125 204005"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_angleb_20251125_204120.jpg",
+        "slot_priority": 3,
+        "description": "location attic nursery angleb 20251125 204120"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_anglec_20251125_204134.jpg",
+        "slot_priority": 4,
+        "description": "location attic nursery anglec 20251125 204134"
+      }
+    },
+    "primary_style": "Interior - Bedroom"
+  },
+  "Interior - East Wing Corridor": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_anglec_20251125_204440.jpg",
+        "slot_priority": 1,
+        "description": "location servants hall anglec 20251125 204440"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_angled_20251125_204526.jpg",
+        "slot_priority": 2,
+        "description": "location servants hall angled 20251125 204526"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_anglea_20251125_204407.jpg",
+        "slot_priority": 3,
+        "description": "location servants hall anglea 20251125 204407"
+      }
+    },
+    "primary_style": "Interior - East Wing Corridor"
+  },
+  "Interior - Study": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_room_desk_chair_936e6d.jpg",
+        "slot_priority": 1,
+        "description": "location room desk chair 936e6d"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_woman_standing_room_de6ee3.jpg",
+        "slot_priority": 2,
+        "description": "location woman standing room de6ee3"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_chair_book_shelf_7a6a24.jpg",
+        "slot_priority": 3,
+        "description": "location chair book shelf 7a6a24"
+      }
+    },
+    "primary_style": "Interior - Study"
+  },
+  "Interior - Library": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_chair_book_shelf_7a6a24.jpg",
+        "slot_priority": 1,
+        "description": "location chair book shelf 7a6a24"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_stack_books_wax_c9c7d4.jpg",
+        "slot_priority": 2,
+        "description": "prop stack books wax c9c7d4"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_room_desk_chair_936e6d.jpg",
+        "slot_priority": 3,
+        "description": "location room desk chair 936e6d"
+      }
+    },
+    "primary_style": "Interior - Library"
+  },
+  "Interior - Records Office": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_room_desk_chair_936e6d.jpg",
+        "slot_priority": 1,
+        "description": "location room desk chair 936e6d"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_woman_standing_room_de6ee3.jpg",
+        "slot_priority": 2,
+        "description": "location woman standing room de6ee3"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_chair_book_shelf_7a6a24.jpg",
+        "slot_priority": 3,
+        "description": "location chair book shelf 7a6a24"
+      }
+    },
+    "primary_style": "Interior - Records Office"
+  },
+  "CITY_APARTMENT": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_living_room_fireplace_498d4e.jpg",
+        "slot_priority": 1,
+        "description": "location living room fireplace 498d4e"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_living_room_fireplace_68608d.jpg",
+        "slot_priority": 2,
+        "description": "location living room fireplace 68608d"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_room_desk_chair_936e6d.jpg",
+        "slot_priority": 3,
+        "description": "location room desk chair 936e6d"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_woman_standing_room_de6ee3.jpg",
+        "slot_priority": 4,
+        "description": "location woman standing room de6ee3"
+      }
+    },
+    "primary_style": "Interior - City Apartment"
+  },
+  "WHITMORE_INN": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_couple_people_sitting_b9df3a.jpg",
+        "slot_priority": 1,
+        "description": "location couple people sitting b9df3a"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_man_sitting_bar_828f04.jpg",
+        "slot_priority": 2,
+        "description": "location man sitting bar 828f04"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_living_room_fireplace_498d4e.jpg",
+        "slot_priority": 3,
+        "description": "location living room fireplace 498d4e"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_living_room_fireplace_68608d.jpg",
+        "slot_priority": 4,
+        "description": "location living room fireplace 68608d"
+      }
+    },
+    "primary_style": "Interior - Whitmore Inn"
+  },
+  "GRAND_HALL_/_EAST_WING": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_20251125_161919.jpg",
+        "slot_priority": 1,
+        "description": "location servants hall 20251125 161919"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_anglea_20251125_204407.jpg",
+        "slot_priority": 2,
+        "description": "location servants hall anglea 20251125 204407"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_angleb_20251125_204422.jpg",
+        "slot_priority": 3,
+        "description": "location servants hall angleb 20251125 204422"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_anglec_20251125_204440.jpg",
+        "slot_priority": 4,
+        "description": "location servants hall anglec 20251125 204440"
+      }
+    },
+    "primary_style": "Interior - Grand Hall / East Wing"
+  },
+  "EAST_WING_CORRIDOR": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_anglec_20251125_204440.jpg",
+        "slot_priority": 1,
+        "description": "location servants hall anglec 20251125 204440"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_angled_20251125_204526.jpg",
+        "slot_priority": 2,
+        "description": "location servants hall angled 20251125 204526"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_servants_hall_anglea_20251125_204407.jpg",
+        "slot_priority": 3,
+        "description": "location servants hall anglea 20251125 204407"
+      }
+    },
+    "primary_style": "Interior - East Wing Corridor"
+  },
+  "LIBRARY": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_chair_book_shelf_7a6a24.jpg",
+        "slot_priority": 1,
+        "description": "location chair book shelf 7a6a24"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_stack_books_wax_c9c7d4.jpg",
+        "slot_priority": 2,
+        "description": "prop stack books wax c9c7d4"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_room_desk_chair_936e6d.jpg",
+        "slot_priority": 3,
+        "description": "location room desk chair 936e6d"
+      }
+    },
+    "primary_style": "Interior - Library"
+  },
+  "STUDY": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_room_desk_chair_936e6d.jpg",
+        "slot_priority": 1,
+        "description": "location room desk chair 936e6d"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_woman_standing_room_de6ee3.jpg",
+        "slot_priority": 2,
+        "description": "location woman standing room de6ee3"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_chair_book_shelf_7a6a24.jpg",
+        "slot_priority": 3,
+        "description": "location chair book shelf 7a6a24"
+      }
+    },
+    "primary_style": "Interior - Study"
+  },
+  "BEDROOM": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_20251125_161842.jpg",
+        "slot_priority": 1,
+        "description": "location attic nursery 20251125 161842"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_anglea_20251125_204005.jpg",
+        "slot_priority": 2,
+        "description": "location attic nursery anglea 20251125 204005"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_angleb_20251125_204120.jpg",
+        "slot_priority": 3,
+        "description": "location attic nursery angleb 20251125 204120"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_anglec_20251125_204134.jpg",
+        "slot_priority": 4,
+        "description": "location attic nursery anglec 20251125 204134"
+      }
+    },
+    "primary_style": "Interior - Bedroom"
+  },
+  "EVELYN'S_BEDROOM": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_anglea_20251125_204005.jpg",
+        "slot_priority": 1,
+        "description": "location attic nursery anglea 20251125 204005"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_angleb_20251125_204120.jpg",
+        "slot_priority": 2,
+        "description": "location attic nursery angleb 20251125 204120"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_attic_nursery_angled_20251125_204218.jpg",
+        "slot_priority": 3,
+        "description": "location attic nursery angled 20251125 204218"
+      }
+    },
+    "primary_style": "Interior - Evelyn's Bedroom"
+  },
+  "RECORDS_OFFICE": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_room_desk_chair_936e6d.jpg",
+        "slot_priority": 1,
+        "description": "location room desk chair 936e6d"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_woman_standing_room_de6ee3.jpg",
+        "slot_priority": 2,
+        "description": "location woman standing room de6ee3"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_chair_book_shelf_7a6a24.jpg",
+        "slot_priority": 3,
+        "description": "location chair book shelf 7a6a24"
+      }
+    },
+    "primary_style": "Interior - Records Office"
+  },
+  "LIBRARY/STUDY": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_chair_book_shelf_7a6a24.jpg",
+        "slot_priority": 1,
+        "description": "location chair book shelf 7a6a24"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_room_desk_chair_936e6d.jpg",
+        "slot_priority": 2,
+        "description": "location room desk chair 936e6d"
+      }
+    },
+    "primary_style": "Interior - Library/Study"
+  },
+  "Interior - Library/Study": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_chair_book_shelf_7a6a24.jpg",
+        "slot_priority": 1,
+        "description": "location chair book shelf 7a6a24"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_room_desk_chair_936e6d.jpg",
+        "slot_priority": 2,
+        "description": "location room desk chair 936e6d"
+      }
+    },
+    "primary_style": "Interior - Library/Study"
+  },
+  "CLIFFS": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_church_sky_full_68ea63.jpg",
+        "slot_priority": 1,
+        "description": "location church sky full 68ea63"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_creepy_looking_building_bf8f18.jpg",
+        "slot_priority": 2,
+        "description": "prop creepy looking building bf8f18"
+      }
+    },
+    "primary_style": "Exterior - Cliffs"
+  },
+  "COUNTRYSIDE": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_house_lot_windows_92591a.jpg",
+        "slot_priority": 1,
+        "description": "location house lot windows 92591a"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/prop_creepy_looking_building_bf8f18.jpg",
+        "slot_priority": 2,
+        "description": "prop creepy looking building bf8f18"
+      }
+    },
+    "primary_style": "Exterior - Countryside"
+  },
+  "RAVENCROFT_GATES": {
+    "depth_references": {
+      "angle_1": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_manor_exterior_night_20251125_161814.jpg",
+        "slot_priority": 1,
+        "description": "location manor exterior night 20251125 161814"
+      },
+      "angle_2": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_manor_exterior_night_anglea_20251125_203754.jpg",
+        "slot_priority": 2,
+        "description": "location manor exterior night anglea 20251125 203754"
+      },
+      "angle_3": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_manor_exterior_night_angleb_20251125_203825.jpg",
+        "slot_priority": 3,
+        "description": "location manor exterior night angleb 20251125 203825"
+      },
+      "angle_4": {
+        "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/location_manor_exterior_night_anglec_20251125_203907.jpg",
+        "slot_priority": 4,
+        "description": "location manor exterior night anglec 20251125 203907"
+      }
+    },
+    "primary_style": "Exterior - Ravencroft Gates"
+  }
+}

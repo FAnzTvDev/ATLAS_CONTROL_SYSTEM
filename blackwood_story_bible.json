@@ -1,0 +1,707 @@
+{
+  "title": "The Blackwood Estate",
+  "genre": "gothic horror anthology",
+  "logline": "Seven strangers receive invitations to spend a weekend at the infamous Blackwood Estate, where each night reveals deeper layers of the house's supernatural malevolence.",
+  "themes": [
+    "the past refusing to die",
+    "guilt manifesting as hauntings",
+    "architecture as a living entity",
+    "isolation breeding terror"
+  ],
+  "tone": "atmospheric dread building to visceral horror",
+  "setting": "The Blackwood Estate - Victorian mansion in remote New England, built 1847, site of multiple tragedies",
+  "time_period": "Present day, October 2025",
+  "characters": [
+    {
+      "name": "Eleanor Vance",
+      "role": "protagonist/psychic sensitive",
+      "age": 28,
+      "description": "Anxious graduate student researching paranormal phenomena, invited as 'subject expert'",
+      "personality_traits": [
+        "skeptical despite sensitivity",
+        "analytical under pressure",
+        "protective of others",
+        "haunted by childhood visions"
+      ],
+      "backstory": "Saw her first ghost at age 7, spent two decades trying to rationalize it away through academic study",
+      "goals": "Prove or disprove the supernatural scientifically, survive the weekend",
+      "conflicts": "Her gifts make her vulnerable to the house's influence",
+      "visual_markers": {
+        "physical": "Pale skin, dark circles under eyes from insomnia, messy auburn hair always in practical bun",
+        "costume": "Practical layers - turtleneck, cardigan, jeans, hiking boots",
+        "signature_items": "Wire-frame glasses, leather journal, EMF detector"
+      },
+      "manifestation_responses": [
+        "Headaches precede supernatural events",
+        "Nosebleeds during intense activity",
+        "Can see 'echoes' - residual haunting imprints",
+        "Temperature sensitivity (cold spots)"
+      ]
+    },
+    {
+      "name": "Sarah Blackwood",
+      "role": "ancestral matriarch / bound spirit",
+      "age": 32,
+      "description": "Victorian bookkeeper whose death sealed the estate's original curse",
+      "personality_traits": [
+        "protective of family",
+        "stubbornly loyal",
+        "secretive",
+        "self-sacrificing"
+      ],
+      "backstory": "Signed the Blackwood ledger during the 1893 murders, died resisting the patriarch's blood oath, now tethered to the estate as a warning whisper",
+      "goals": "Guide worthy descendants, prevent the house from claiming new victims",
+      "conflicts": "Bound to the ledger and furnace\u2014can only manifest through blood or sanctified frequencies",
+      "visual_markers": {
+        "physical": "Translucent Victorian dress, soot-streaked skin, ember-glow eyes",
+        "costume": "Late 19th century ledger dress, apron scorched at the hem",
+        "signature_items": "Blood-stained ledger, rosary with iron beads"
+      },
+      "manifestation_responses": [
+        "Whispers 'Not again' when the ledger is opened",
+        "Heat pulses through rosary to warn allies",
+        "Ash ravens swirl when her warnings are ignored"
+      ]
+    },
+    {
+      "name": "Shadowed Killer",
+      "role": "bound enforcer / human antagonist",
+      "age": 38,
+      "description": "Faceless patriarchal agent forced to carry out the estate's commands",
+      "personality_traits": [
+        "duty-bound",
+        "emotionally suppressed",
+        "remorseful beneath control"
+      ],
+      "backstory": "Original estate steward compelled by oath to silence anyone threatening the ritual\u2014eternally bound to the furnace room",
+      "goals": "Fulfill the house's orders to avoid his family's torment",
+      "conflicts": "Cannot defy commands yet secretly helps those who resist",
+      "visual_markers": {
+        "physical": "Silhouette with indistinct features, coat soaked in furnace soot",
+        "costume": "Victorian steward uniform, leather gloves",
+        "signature_items": "Iron poker, ring of estate keys"
+      },
+      "manifestation_responses": [
+        "Footsteps in descending rhythm announce his arrival",
+        "Temperature drop follows his shadow",
+        "Keys rattle when he wrestles with the house's orders"
+      ]
+    },
+    {
+      "name": "Marcus Sterling",
+      "role": "skeptic/journalist",
+      "age": 35,
+      "description": "Investigative journalist writing expos\u00e9 on 'haunted house tourism scams'",
+      "personality_traits": [
+        "cynical professional",
+        "protective instinct hidden by sarcasm",
+        "curious despite skepticism",
+        "guilt over past mistakes"
+      ],
+      "backstory": "Lost credibility on a story, needs this expos\u00e9 to rebuild career",
+      "goals": "Expose the Blackwood 'haunting' as fraud, find the con",
+      "conflicts": "Evidence contradicts his skepticism, past trauma resurfaces",
+      "visual_markers": {
+        "physical": "Mixed race (Black/Asian), athletic build, well-groomed beard, tired eyes",
+        "costume": "Smart casual - button-down shirt, dark jeans, leather jacket, boots",
+        "signature_items": "Digital recorder, camera, notebook, flask (bourbon)"
+      }
+    },
+    {
+      "name": "Victoria Ashford",
+      "role": "heiress/secret connection",
+      "age": 42,
+      "description": "Descendant of the original Blackwood family, inherited the estate",
+      "secret": "Her great-grandfather committed the murders that cursed the house",
+      "motivation": "Trying to break the curse before it claims her",
+      "visual_markers": {
+        "physical": "Elegant, silver-blonde hair, expensive but understated style",
+        "costume": "Designer pieces in muted colors - cashmere, silk, pearls",
+        "tells": "Trembling hands she hides, won't look at portraits"
+      }
+    },
+    {
+      "name": "Father Thomas Rhys",
+      "role": "exorcist/believer",
+      "age": 58,
+      "description": "Catholic priest with Vatican training in exorcism",
+      "visual_markers": {
+        "physical": "Welsh, gray hair, weathered face, burn scars on hands",
+        "costume": "Priest's collar, black suit, rosary, worn leather bag",
+        "signature_items": "Holy water, Bible with annotations, blessed salt"
+      }
+    },
+    {
+      "name": "Kenji Nakamura",
+      "role": "architect/historian",
+      "age": 31,
+      "description": "Architectural historian specializing in 'psycho-geographic spaces'",
+      "visual_markers": {
+        "physical": "Japanese American, slight build, meticulous presentation",
+        "costume": "Blazer, turtleneck, slacks, polished shoes",
+        "signature_items": "Antique blueprints, measuring tools, camera"
+      }
+    },
+    {
+      "name": "Mrs. Cross",
+      "role": "housekeeper",
+      "age": 68,
+      "description": "Severe Blackwood steward who enforces ritual compliance with quiet authority",
+      "visual_markers": {
+        "physical": "Gaunt pale skin, tightly pinned silver hair, piercing dark eyes",
+        "costume": "High-collared black mourning dress with lace cuffs, floor-length skirt, black gloves",
+        "signature_items": "Brass lamp key ring, leather housekeeping ledger"
+      },
+      "personality_traits": [
+        "authoritarian",
+        "ritualistic",
+        "unyielding"
+      ]
+    },
+    {
+      "name": "Groundsman",
+      "role": "gatekeeper / estate steward",
+      "age": 52,
+      "description": "Taciturn caretaker who manages the front gates and enforces arrivals with ritual formality",
+      "visual_markers": {
+        "physical": "Weathered pale skin, short graying beard, broad shoulders",
+        "costume": "Oilskin coat, wool cap, rain-soaked leather gloves",
+        "signature_items": "Ring of corroded gate keys, heavy brass lantern"
+      },
+      "personality_traits": [
+        "stoic",
+        "obedient",
+        "protective of house rules"
+      ]
+    },
+    {
+      "name": "Interrogator A",
+      "role": "external_agent",
+      "age": "40s",
+      "description": "Lead agent with sharp jawline, dark suit, white shirt, thin tie, cold eyes.",
+      "personality_traits": [
+        "controlled",
+        "methodical",
+        "intimidating"
+      ],
+      "backstory": "Federal interrogator assigned to high-value detainees.",
+      "goals": "Extract truth without escalating violence.",
+      "conflicts": "Must keep partners in line while suspects play mind games.",
+      "visual_markers": {
+        "physical": "Dark navy suit, white shirt, thin black tie, short dark hair, five o'clock shadow",
+        "costume": "Tailored suit with pressed shirt and muted tie",
+        "signature_items": "Tape recorder, leather dossier"
+      },
+      "manifestation_responses": "Remains calm, uses silence as weapon."
+    },
+    {
+      "name": "Interrogator B",
+      "role": "external_agent",
+      "age": "40s",
+      "description": "Senior operative with gray temples, glasses, measured tone, scar on eyebrow.",
+      "personality_traits": [
+        "controlled",
+        "methodical",
+        "intimidating"
+      ],
+      "backstory": "Federal interrogator assigned to high-value detainees.",
+      "goals": "Extract truth without escalating violence.",
+      "conflicts": "Must keep partners in line while suspects play mind games.",
+      "visual_markers": {
+        "physical": "Charcoal suit, olive tie, silver hair at temples, rectangular glasses, eyebrow scar",
+        "costume": "Tailored suit with pressed shirt and muted tie",
+        "signature_items": "Tape recorder, leather dossier"
+      },
+      "manifestation_responses": "Remains calm, uses silence as weapon."
+    },
+    {
+      "name": "Interpreter Lopez",
+      "role": "analyst",
+      "age": "30s",
+      "description": "Female intelligence interpreter supporting the interrogation, calm but observant.",
+      "personality_traits": [
+        "observant",
+        "stoic",
+        "precise"
+      ],
+      "backstory": "Former military linguist assigned to the federal task force.",
+      "goals": "Document every nuance and keep the conversation controlled.",
+      "conflicts": "Must remain neutral despite empathy for subjects.",
+      "visual_markers": {
+        "physical": "Latina, dark hair slicked back, piercing eyes behind slim glasses",
+        "costume": "Slate blouse, black blazer, ID badge, communication earpiece",
+        "signature_items": "Tablet with stylus, digital recorder"
+      },
+      "manifestation_responses": "Grips tablet tighter, leans forward when tension spikes."
+    },
+    {
+      "name": "Matt Graver",
+      "role": "task_force_lead",
+      "age": "40s",
+      "description": "Seasoned CIA operator, relaxed posture even under pressure.",
+      "personality_traits": [
+        "confident",
+        "calm",
+        "strategic"
+      ],
+      "backstory": "Leads joint task force briefings.",
+      "goals": "Control the meeting and steer decisions.",
+      "conflicts": "Must justify aggressive actions to military brass.",
+      "visual_markers": {
+        "physical": "Broad build, swept-back dark hair, rugged features",
+        "costume": "Olive field jacket over pale shirt with ID badge",
+        "signature_items": "Leather field notebook, ID clip"
+      },
+      "manifestation_responses": "Leans back casually yet eyes track everyone."
+    },
+    {
+      "name": "Cynthia Richards",
+      "role": "state_department_liaison",
+      "age": "40s",
+      "description": "Female analyst seated near the window, poised but concerned.",
+      "personality_traits": [
+        "observant",
+        "measured",
+        "empathetic"
+      ],
+      "backstory": "Mediator between agencies during crisis response.",
+      "goals": "Ensure legal oversight of the plan.",
+      "conflicts": "Feels tension with aggressive tactics.",
+      "visual_markers": {
+        "physical": "Long brunette hair, composed expression",
+        "costume": "Black suit, white ID badge",
+        "signature_items": "Leather folio, pen"
+      },
+      "manifestation_responses": "Clenches hands when debate escalates."
+    },
+    {
+      "name": "Secretary Burnham",
+      "role": "cabinet_secretary",
+      "age": "50s",
+      "description": "Senior official standing at desk addressing generals.",
+      "personality_traits": [
+        "authoritative",
+        "impatient"
+      ],
+      "backstory": "Oversees joint special operations.",
+      "goals": "Demand decisive plan.",
+      "conflicts": "Must appease political superiors.",
+      "visual_markers": {
+        "physical": "Tall, blond hair, glasses",
+        "costume": "White shirt, dark tie, standing behind mahogany desk",
+        "signature_items": "Briefing folders, bronze horse sculpture"
+      },
+      "manifestation_responses": "Plants hands on desk when making a point."
+    },
+    {
+      "name": "General Fowler",
+      "role": "joint_chiefs",
+      "age": "60s",
+      "description": "Decorated officer seated left sofa, chest full of ribbons.",
+      "personality_traits": [
+        "disciplined",
+        "stern"
+      ],
+      "backstory": "Army general advising task force.",
+      "goals": "Keep military options on table.",
+      "conflicts": "Skeptical of CIA autonomy.",
+      "visual_markers": {
+        "physical": "Gray hair, square jaw, numerous medals",
+        "costume": "Dress uniform with ribbons",
+        "signature_items": "Leather portfolio"
+      },
+      "manifestation_responses": "Crosses arms when disagreeing."
+    },
+    {
+      "name": "General Cole",
+      "role": "joint_chiefs",
+      "age": "50s",
+      "description": "Officer seated beside Fowler, attentive and note-taking.",
+      "personality_traits": [
+        "analytical",
+        "quiet"
+      ],
+      "backstory": "Air Force representative.",
+      "goals": "Document every detail.",
+      "conflicts": "Concerned about legal exposure.",
+      "visual_markers": {
+        "physical": "Short gray hair, serious eyes",
+        "costume": "Dark suit with ID badge",
+        "signature_items": "Notebook, pen"
+      },
+      "manifestation_responses": "Jots notes as others speak."
+    },
+    {
+      "name": "General Webb",
+      "role": "joint_chiefs",
+      "age": "50s",
+      "description": "Marine liaison seated rear left, watchful.",
+      "personality_traits": [
+        "stoic",
+        "skeptical"
+      ],
+      "backstory": "Marine representative.",
+      "goals": "Gauge seriousness of proposal.",
+      "conflicts": "Feels sidelined by CIA.",
+      "visual_markers": {
+        "physical": "Balding, lean build",
+        "costume": "Dress blues",
+        "signature_items": "Crossed arms"
+      },
+      "manifestation_responses": "Raises brow at risky ideas."
+    }
+  ],
+  "locations": [
+    {
+      "name": "The Grand Foyer",
+      "description": "Two-story entrance with dual staircases, chandelier, portrait gallery",
+      "atmosphere": "False opulence hiding decay - cobwebs in corners, portraits with following eyes",
+      "significance": "First impression of the house's malevolence, portraits are 'watching'",
+      "visual_style": "Deep shadows, tungsten-warm light fighting cold moonlight through windows",
+      "paranormal_activity": "Portraits age/de-age, chandelier swings without wind, phantom footsteps on stairs"
+    },
+    {
+      "name": "Cell Block Bedroom - Eleanor's Room",
+      "description": "Guest bedroom that was once a servant's quarters, locked from outside",
+      "atmosphere": "Oppressive confinement, too quiet, air feels thick",
+      "significance": "This room housed the first victim in 1893",
+      "visual_style": "Pale blues and grays, single overhead light, heavy curtains",
+      "paranormal_activity": "Door locks itself, temperature drops, writing appears on frost-covered mirror"
+    },
+    {
+      "name": "The Library",
+      "description": "Three stories of books, rolling ladders, hidden alcoves, trapdoor to below",
+      "atmosphere": "Knowledge as labyrinth - easy to get lost, air tastes like old paper",
+      "significance": "Contains the Blackwood family grimoire",
+      "visual_style": "Amber light from banker's lamps, deep shadows between shelves, dust motes dancing",
+      "paranormal_activity": "Books rearrange themselves, whispers between shelves, cold drafts from nowhere"
+    },
+    {
+      "name": "The Basement/Old Kitchen",
+      "description": "Victorian service area with stone walls, meat hooks, cold storage",
+      "atmosphere": "Predatory darkness, smell of old blood, feeling of being hunted",
+      "significance": "Site of the 1847 murders",
+      "visual_style": "Harsh single bulb lighting, rust stains, standing water reflecting light eerily",
+      "paranormal_activity": "Phantom cooking sounds, shadow figures, violent cold spots, blood seeping through walls"
+    }
+  ],
+  "episode_1_structure": {
+    "episode_title": "Welcome to Blackwood",
+    "episode_theme": "Arrival and first night - the house reveals its nature",
+    "total_runtime": "8-10 minutes",
+    "scenes": [
+      {
+        "scene_id": "001",
+        "scene_title": "ARRIVAL AT THE GATES",
+        "location": "Exterior - Front Gates at Dusk",
+        "time": "Friday, 6:47 PM",
+        "characters_present": [
+          "Eleanor",
+          "Marcus"
+        ],
+        "scene_purpose": "Establish the estate's gothic menace, introduce two leads",
+        "beats": [
+          {
+            "beat": "FIRST GLIMPSE",
+            "description": "Car headlights illuminate rusted iron gates bearing the Blackwood family crest - a raven clutching dead roses",
+            "visual": "Crane down from gates to car, tungsten headlights cutting through blue dusk fog",
+            "character_action": "Eleanor (passenger) stares up at mansion silhouette, Marcus (driving) checks rear mirror nervously",
+            "revelation": "The house is larger and more menacing than photos suggested"
+          },
+          {
+            "beat": "THRESHOLD CROSSING",
+            "description": "Gates creak open on their own as car approaches",
+            "visual": "Wide shot - gates part slowly, no mechanism visible, car hesitates",
+            "character_action": "Eleanor whispers 'It knows we're here' - Marcus forces laugh but grips wheel tighter",
+            "revelation": "The invitation/arrival was expected by... something"
+          },
+          {
+            "beat": "THE APPROACH",
+            "description": "Long driveway lined with dead trees, mansion grows larger, single window lit",
+            "visual": "Dolly follow car, low angle making house loom, one amber window like an eye",
+            "character_action": "Eleanor checks EMF detector - readings spiking already",
+            "revelation": "This isn't a passive haunting - it's active and aware"
+          }
+        ],
+        "shots": [
+          {
+            "shot_id": "001A",
+            "type": "wide",
+            "description": "Establishing shot of gates and car",
+            "camera": "24mm wide angle, crane movement down",
+            "lens_specs": "deep depth of field f/8",
+            "lighting": "Tungsten headlights vs cool dusk blue",
+            "character_blocking": "Car center frame, Eleanor visible through windshield looking up",
+            "duration": 8,
+            "reference_needed": "Eleanor character reference"
+          },
+          {
+            "shot_id": "001B",
+            "type": "medium",
+            "description": "Interior car - Eleanor's reaction to gates",
+            "camera": "50mm at dashboard level, locked",
+            "lens_specs": "moderate depth f/4",
+            "lighting": "Dashboard glow on faces, exterior lights raking through",
+            "character_blocking": "Eleanor right frame looking up/left, Marcus left frame focused forward",
+            "duration": 6,
+            "reference_needed": "Eleanor reference, Marcus reference"
+          },
+          {
+            "shot_id": "001C",
+            "type": "closeup",
+            "description": "Eleanor's face as gates open",
+            "camera": "85mm portrait lens, slight push in",
+            "lens_specs": "shallow depth f/1.8, face sharp background soft",
+            "lighting": "Cool blue exterior light mixing with warm interior",
+            "character_blocking": "Eleanor's face fills frame, eyes reflecting gate movement",
+            "duration": 5,
+            "reference_needed": "Eleanor reference - fearful expression"
+          }
+        ]
+      },
+      {
+        "scene_id": "002",
+        "scene_title": "FOYER INTRODUCTIONS",
+        "location": "Interior - Grand Foyer",
+        "time": "Friday, 7:03 PM",
+        "characters_present": [
+          "Eleanor",
+          "Marcus",
+          "Victoria",
+          "Father Rhys",
+          "Kenji"
+        ],
+        "scene_purpose": "Gather the cast, establish dynamics, first supernatural event",
+        "beats": [
+          {
+            "beat": "MEET THE HOST",
+            "description": "Victoria greets arrivals, elegant but tense, avoiding eye contact with portraits",
+            "visual": "Grand staircase behind her, chandelier casting dramatic shadows",
+            "character_action": "Victoria's practiced welcome masks fear, hand trembles offering wine",
+            "revelation": "The host is terrified of her own house"
+          },
+          {
+            "beat": "THE ASSEMBLED",
+            "description": "Each guest introduces themselves, reasons for being here conflict",
+            "visual": "Group shot rotating focus as each speaks",
+            "character_action": "Kenji photographs architecture, Father Rhys touches rosary, Marcus records everything",
+            "revelation": "Everyone has a hidden agenda"
+          },
+          {
+            "beat": "FIRST SIGN",
+            "description": "Chandelier swings violently, all portraits' eyes shift to look at Eleanor",
+            "visual": "Sudden movement, candles flicker, temperature drop visible in breath",
+            "character_action": "Eleanor gasps, nose bleeds, Father Rhys starts praying",
+            "revelation": "The house recognizes Eleanor as the psychic - she's the target"
+          }
+        ],
+        "shots": [
+          {
+            "shot_id": "002A",
+            "type": "wide",
+            "description": "Full foyer with cast assembled",
+            "camera": "24mm wide from balcony level looking down",
+            "lens_specs": "deep depth f/8 showing full space",
+            "lighting": "Chandelier key light, sconces fill, window moonlight backlight",
+            "character_blocking": "Victoria at staircase base, guests semicircle facing her",
+            "duration": 10,
+            "reference_needed": "All character references, spatial relationships"
+          },
+          {
+            "shot_id": "002B",
+            "type": "medium",
+            "description": "Victoria's greeting, portraits behind her",
+            "camera": "50mm chest-level shot",
+            "lens_specs": "moderate depth f/4, portraits slightly soft but visible",
+            "lighting": "Warm sconce light from below, cool moonlight from window",
+            "character_blocking": "Victoria center, portraits flanking, one portrait's eyes catching light oddly",
+            "duration": 8,
+            "reference_needed": "Victoria reference, portrait art direction"
+          },
+          {
+            "shot_id": "002C",
+            "type": "closeup",
+            "description": "Eleanor's nosebleed reaction",
+            "camera": "85mm portrait, tight on face",
+            "lens_specs": "shallow f/1.8, blood droplet sharp, background bokeh",
+            "lighting": "Horror lighting - overhead shadows, blood catches light",
+            "character_blocking": "Eleanor touching nose, blood on fingertips, eyes wide",
+            "duration": 4,
+            "reference_needed": "Eleanor reference - horror/pain expression"
+          }
+        ]
+      },
+      {
+        "scene_id": "003",
+        "scene_title": "ROOM ASSIGNMENTS - ELEANOR'S NIGHTMARE",
+        "location": "Interior - Eleanor's Bedroom",
+        "time": "Friday, 11:47 PM",
+        "characters_present": [
+          "Eleanor"
+        ],
+        "scene_purpose": "First direct supernatural encounter, establish the haunting rules",
+        "beats": [
+          {
+            "beat": "TRYING TO SLEEP",
+            "description": "Eleanor lies in bed, unable to sleep, room too quiet, door handle rattles",
+            "visual": "Low light, single lamp, shadows moving on walls",
+            "character_action": "Eleanor sits up, reaches for EMF detector - it's screaming red",
+            "revelation": "Something is in the room with her"
+          },
+          {
+            "beat": "THE MESSAGE",
+            "description": "Frost forms on mirror, words appear: 'GET OUT WHILE YOU CAN'",
+            "visual": "Condensation spreading, finger-written letters, Eleanor's reflection distorting",
+            "character_action": "Eleanor approaches mirror, breath visible, touches glass - it's ice cold",
+            "revelation": "A warning from a previous victim's spirit"
+          },
+          {
+            "beat": "LOCKED IN",
+            "description": "Door won't open, window won't budge, temperature plummets, Eleanor's breath fogs",
+            "visual": "Panic - trying door, trying window, frost spreading across ceiling",
+            "character_action": "Eleanor grabs journal, starts documenting - academic reflex under terror",
+            "revelation": "The house traps its victims before it takes them"
+          }
+        ],
+        "shots": [
+          {
+            "shot_id": "003A",
+            "type": "wide",
+            "description": "Full bedroom, Eleanor small in frame",
+            "camera": "24mm from corner, high angle looking down",
+            "lens_specs": "deep depth f/8, entire room sharp",
+            "lighting": "Single bedside lamp, deep shadows in corners, moonlight strip from window",
+            "character_blocking": "Eleanor in bed left third, door right frame, mirror back wall",
+            "duration": 7,
+            "reference_needed": "Eleanor reference, bedroom art direction"
+          },
+          {
+            "shot_id": "003B",
+            "type": "medium",
+            "description": "Eleanor at mirror seeing message",
+            "camera": "50mm over-shoulder, seeing her reflection",
+            "lens_specs": "shallow f/2.8, mirror sharp, room behind soft",
+            "lighting": "Cool blue moonlight, warm lamp behind, frost glowing",
+            "character_blocking": "Eleanor's back to camera, reflection facing us, words forming",
+            "duration": 9,
+            "reference_needed": "Eleanor reference from behind, mirror VFX"
+          },
+          {
+            "shot_id": "003C",
+            "type": "closeup",
+            "description": "Eleanor's terrified face, frost spreading",
+            "camera": "85mm extreme close-up on eyes",
+            "lens_specs": "shallow f/1.8, eyes sharp, frost in foreground bokeh",
+            "lighting": "Rim light from window, shadows under eyes",
+            "character_blocking": "Just eyes and frost spreading across frame",
+            "duration": 5,
+            "reference_needed": "Eleanor reference - pure terror expression"
+          }
+        ]
+      }
+    ]
+  },
+  "visual_motifs": [
+    "Eyes in portraits following movement",
+    "Frost/condensation revealing messages",
+    "Chandelier as pendulum of doom",
+    "Shadows that don't match light sources",
+    "Reflections showing different realities",
+    "Cold breath in impossible places",
+    "Blood seeping through walls/floors",
+    "Candles extinguishing in patterns"
+  ],
+  "color_palette": {
+    "primary": "Cool cyan shadows, tungsten warm candlelight",
+    "secondary": "Oxidized green (old copper), deep mahogany",
+    "accent": "Blood red (sparingly), ice blue (supernatural)",
+    "forbidden": "Neon, modern LED, bright whites, saturated colors"
+  },
+  "cinematography_rules": {
+    "aspect_ratio": "2.39:1 anamorphic",
+    "grain": "Subtle 35mm texture",
+    "luts": "Tungsten-cool split toning",
+    "camera_movement": "Motivated by character or reveal, never gratuitous",
+    "lens_choices": "24mm wide establishing, 50mm conversation, 85mm emotion",
+    "lighting_style": "Natural motivated sources - candles, moonlight, single bulbs"
+  },
+  "horror_rules": {
+    "scare_types": [
+      "Atmospheric dread (primary)",
+      "Jump scares (maximum 2 per episode, earned)",
+      "Psychological horror (reality questioning)",
+      "Gore (minimal, only when story-critical)"
+    ],
+    "tension_building": "Silence more powerful than sound, anticipation over surprise",
+    "reveal_strategy": "Show less than hide, imagination is scariest"
+  },
+  "director_mindsets": [
+    {
+      "name": "blackwood_cinematic",
+      "label": "Blackwood Gothic Lens",
+      "description": "Wide establishing shots, slow deliberate camera movements, deep focus compositions",
+      "philosophy": "Let the architecture tell the story - the house is the main character",
+      "camera_approach": "Locked tripod shots, crane movements, slow dolly reveals",
+      "lighting_preference": "Tungsten-cool split toning, motivated sources only",
+      "blocking_style": "Characters positioned to emphasize isolation and scale",
+      "preferred_focal_lengths": [
+        "24mm",
+        "50mm",
+        "85mm"
+      ],
+      "movement_speed": "slow",
+      "composition_rules": [
+        "rule of thirds",
+        "symmetry",
+        "deep space staging"
+      ]
+    },
+    {
+      "name": "blackwood_handheld",
+      "label": "Handheld Possession",
+      "description": "Jittery POV shots, close-ups, subjective camera",
+      "philosophy": "Visceral immediacy - you ARE the character experiencing the horror",
+      "camera_approach": "Handheld operator, tight following, reactive movement",
+      "lighting_preference": "Harsh practicals, flashlight beams, deep shadows",
+      "blocking_style": "Characters fill frame, claustrophobic spacing",
+      "preferred_focal_lengths": [
+        "35mm",
+        "50mm",
+        "85mm"
+      ],
+      "movement_speed": "fast",
+      "composition_rules": [
+        "dutch angles",
+        "extreme close-ups",
+        "off-center framing"
+      ]
+    },
+    {
+      "name": "blackwood_formalist",
+      "label": "Formalist Haunting",
+      "description": "Symmetrical compositions, static frames, geometric precision",
+      "philosophy": "Kubrickian control - every frame a painting, unnatural perfection creates unease",
+      "camera_approach": "Locked-off tripod, precise framing, no movement except motivated push-ins",
+      "lighting_preference": "Symmetrical key-fill, single source overhead, moonlight through windows",
+      "blocking_style": "Centered subjects, geometric patterns, perfect symmetry",
+      "preferred_focal_lengths": [
+        "24mm",
+        "50mm",
+        "100mm"
+      ],
+      "movement_speed": "none",
+      "composition_rules": [
+        "center framing",
+        "perfect symmetry",
+        "one-point perspective"
+      ]
+    }
+  ],
+  "cinematography": {
+    "preferred_motivation": "observer tension",
+    "lighting_bias": {
+      "exterior_cool": 0.65,
+      "interior_warm": 0.45
+    }
+  }
+}

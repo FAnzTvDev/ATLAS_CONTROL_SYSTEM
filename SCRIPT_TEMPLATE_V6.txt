@@ -1,0 +1,58 @@
+## 1) Story Bible
+**Title:** [YOUR TITLE HERE]
+**Episode:** [Episode Number or "Pilot"]
+**Genre:** [thriller/gothic_horror/scifi/drama/action/crime_drama]
+**Runtime Target:** [5min/10min/15min/30min/45min]
+**Logline:** [One sentence describing your story]
+**Tone:** [e.g., "dark, suspenseful, atmospheric" or "light, comedic, fast-paced"]
+
+## 2) Act Outline
+- S01 ([Location]) - [Brief scene description]
+- S02 ([Location]) - [Brief scene description]
+- S03 ([Location]) - [Brief scene description]
+
+## 3) Scene Cards
+### S01 - [Location Name] - [TIME OF DAY]
+Purpose: [What this scene accomplishes narratively]
+Characters: [Character names present]
+
+### S02 - [Location Name] - [TIME OF DAY]
+Purpose: [What this scene accomplishes narratively]
+Characters: [Character names present]
+
+### S03 - [Location Name] - [TIME OF DAY]
+Purpose: [What this scene accomplishes narratively]
+Characters: [Character names present]
+
+## 4) Characters
+- **[Character Name] ([role: protagonist/antagonist/supporting])** - [Physical description, age, key traits, wardrobe]
+- **[Character Name] ([role])** - [Physical description, age, key traits, wardrobe]
+- **[Character Name] ([role])** - [Physical description, age, key traits, wardrobe]
+
+## Aliases
+[SHORT NAME] = [FULL CHARACTER NAME]
+[NICKNAME] = [FULL CHARACTER NAME]
+
+## Casting Stopwords
+NIGHT, MORNING, EVENING, DAY, DAWN, DUSK, CONTINUOUS, V.O., O.S., CUT TO, FADE TO, DISSOLVE TO
+
+
+---SCREENPLAY---
+[SCREENPLAY STARTS HERE - Use standard format:]
+
+INT./EXT. [LOCATION NAME] - [TIME OF DAY]
+
+[Action/description in prose]
+
+[CHARACTER NAME]
+[Dialogue goes here]
+
+[CHARACTER NAME]
+(parenthetical direction)
+[Dialogue goes here]
+
+[Action/description continues...]
+
+[More scenes follow the same format...]
+
+FADE OUT.

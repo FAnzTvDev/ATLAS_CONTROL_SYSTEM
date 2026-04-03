@@ -1,0 +1,774 @@
+================================================================================
+                    ATLAS V27.1 END-FRAME REFRAMING AUDIT
+                           Research Report (Read-Only)
+================================================================================
+Date: 2026-03-17
+Scope: All production source files (excluding archive/, venv/, frozen versions)
+Purpose: Comprehensive inventory of end-frame reframing system components
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+The ATLAS codebase contains a MATURE, MULTI-LAYERED end-frame reframing system
+used for:
+  1. Master-chain continuity (end-frame → next shot's first-frame)
+  2. Multi-angle variants (1 master frame → 3 reframed angles via nano-pro-edit)
+  3. Continuity memory-driven reframe candidate selection
+  4. End-frame validation gates (post-video analysis)
+
+FINDING: The system is DEEPLY INTEGRATED across 8 production files.
+         Disabling it would require changes to orchestrator_server.py,
+         atlas_v26_controller.py, master_shot_chain_agent.py, and others.
+
+KEY COMPONENTS ACTIVE:
+  ✅ End-frame extraction (post-video, per-shot)
+  ✅ Reframe validation gates (analyzing extracted frames)
+  ✅ Nano-banana-pro/edit model calls (fal-ai/nano-banana-pro/edit)
+  ✅ First-frame-variants directory (stores angle reframes)
+  ✅ Multi-candidate generation (num_outputs/num_images = 3)
+  ✅ Continuity memory reframe candidate selection
+  ✅ Master-chain system (1 master + N reframes)
+
+================================================================================
+DETAILED FINDINGS BY SEARCH PATTERN
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────
+1. "end.frame" or "end_frame" (44 files found, 8 production files)
+────────────────────────────────────────────────────────────────────────────
+
+FILE: orchestrator_server.py
+  TOTAL MENTIONS: 44 occurrences
+  STATUS: DEEPLY INTEGRATED — ACTIVE CODE
+
+  Line 7222: Comment — "Stores per-shot spatial state after end-frame extraction"
+  Line 7478: Function definition — "Check if two adjacent shots should chain"
+  Line 7686: Comment — "end-frame locks environment"
+  Line 8132: Comment — "end-frame reframe"
+  Line 8155-8160: ACTIVE CODE — Chained shot uses end-frame reframe from previous shot
+    └─ `frame_source = "chained_endframe_reframe"`
+    └─ Logger: "using end-frame reframe from {prev_shot['shot_id']}"
+    └─ FIRES DURING: generate-first-frames AND render-scene paths
+
+  Line 8236: Comment — "environment locked by end-frame image"
+  Line 8629: ACTIVE CODE — "extracting end frame..."
+  Line 8664: ACTIVE CODE — End frame extraction failure handling
+  Line 8666-8672: ACTIVE CODE — Blocking-aware shots extract end frame for next shot's spatial memory
+    └─ Logger: "blocking-aware shot — end frame stored for next shot's spatial memory"
+    └─ FIRES DURING: render-scene (after video generation)
+
+  Line 8683: Comment — "The end frame captures actual blocking"
+  Line 8719-8726: ACTIVE CODE — End-frame base64 conversion for FAL input
+    └─ `_end_frame_b64 = _upload_frame_for_api(last_frame_path)`
+    └─ `_do_reframe = bool(_end_frame_b64)`
+    └─ FIRES DURING: render-scene (converts end frame to base64)
+
+  Line 8730-8840: ACTIVE CODE BLOCK — `_reframe_end_frame()` function
+    └─ Builds reframe prompt from canonical character descriptions
+    └─ Calls fal-ai/nano-banana-pro/edit with end_frame_b64_url as image_urls
+    └─ Saves reframed variants to first_frame_variants directory
+    └─ Logger: "[CHAIN-REFRAME] ✅ {out_path.name} saved (reframed from end frame)"
+    └─ FIRES DURING: render-scene (after end-frame extraction)
+
+  Line 8840-8978: ACTIVE CODE — Chain management with reframe fallbacks
+    └─ If reframe succeeds: use variants for next shot
+    └─ If reframe fails: use raw end frame
+    └─ Logger: "no reframe variants — using raw end frame for chain"
+    └─ FIRES DURING: render-scene
+
+  Line 9147: Assignment — `_end_frame_b64 = None` (initialization)
+  Line 9688: API doc comment — "end_image_shot" for continuity
+  Line 21008: Cost analysis — "Master-chain provides end-frame chaining"
+  Line 24111: Cost constant — `FAL_COST_REFRAME = 0.15` (nano-pro-edit per angle)
+  Line 33022: Documentation — "Master-chain provides end-frame chaining"
+
+────────────────────────────────────────────────────────────────────────────
+
+FILE: atlas_v26_controller.py
+  TOTAL MENTIONS: 8 occurrences
+  STATUS: ACTIVE — Coordinates reframing workflow
+
+  Line 107: Comment — "Continuity Memory (spatial state + reframe candidates)"
+  Line 111: Import statement — "generate_reframe_candidates, compile_continuity_delta"
+  Line 203: Import statement — "analyze_end_frame, extract_end_frame, EndFrameAnalysis"
+    └─ Imports from tools/endframe_gate.py
+
+  Line 1375: ACTIVE CODE — `candidates = generate_reframe_candidates(...)`
+    └─ Generates 3 candidate reframe strategies per shot
+    └─ FIRES DURING: render-scene (phase E1 — blocking analysis)
+
+  Line 1676: Comment — "anchor, chain, end_frame_reframe, independent_parallel..."
+  Line 1861: ACTIVE CODE — `IMAGE_MODEL_WITH_REF = "fal-ai/nano-banana-pro/edit"`
+  Line 1903: ACTIVE CODE — `"num_outputs": n_candidates`
+    └─ Multi-candidate generation (typically 3 variants)
+    └─ FIRES DURING: generate-first-frames (Phase D.2)
+
+  Line 1911: ACTIVE CODE — `"num_images": n_candidates`
+    └─ FAL parameter for nano-pro-edit variant count
+    └─ FIRES DURING: generate-first-frames (image generation)
+
+  Line 2745-2848: ACTIVE CODE — Fallback image generation with num_outputs=1
+
+────────────────────────────────────────────────────────────────────────────
+
+FILE: tools/endframe_gate.py
+  TOTAL LINES: ~450
+  STATUS: NEW FILE (V27.1) — ACTIVE GATE SYSTEM
+
+  Lines 1-28: Module docstring explaining end-frame reuse eligibility
+  Lines 37-51: EndFrameAnalysis dataclass
+    └─ Structured analysis result for reuse decisions
+    └─ Fields: identity_preserved, environment_stable, reuse_verdict, etc.
+
+  Lines 54-94: Motion/sharpness classification keywords
+    └─ Dynamic motion keywords (blocks reuse): walking, exiting, gesturing wildly
+    └─ Static motion keywords (allows reuse): standing, sitting, breathing
+
+  Lines 97-onwards: ACTIVE FUNCTIONS:
+    └─ analyze_end_frame(video_path, shot_state, cast_map) → EndFrameAnalysis
+    └─ extract_end_frame(video_path) → frame image
+    └─ Used by orchestrator_server.py post-video generation
+    └─ FIRES DURING: render-scene (after LTX/Kling video completion)
+
+────────────────────────────────────────────────────────────────────────────
+
+FILE: atlas_agents/master_shot_chain_agent.py
+  TOTAL MENTIONS: 54 occurrences (all active)
+  STATUS: CORE SYSTEM — Master chain + reframe pipeline
+
+  Line 21: Comment — "Reduces regeneration cost (1 master + N reframes < N gens)"
+  Line 62: Comment — "reframe_crash" risk tracking
+  Line 181: Comment — "All reframe calls hit dead URLs" (performance issue note)
+  Line 230: Field — `reframe_cost: float`
+
+  Line 429-747: CORE FUNCTION — `reframe_to_angles()`
+    └─ Takes master frame, reframes it into single correct camera angle
+    └─ Returns: {shot_id: reframed_frame_path}, metadata
+    └─ FIRES DURING: master-chain pipeline (step 2)
+
+  Line 483: `reframe_dir = project_path / "pipeline_outputs" / project / "first_frame_variants"`
+    └─ Directory where angle variants are saved
+
+  Line 551: Comment — "Mapping: coverage_role → single reframe instruction"
+    └─ Each shot type (wide, medium, close) gets ONE reframe angle
+
+  Line 648-720: ACTIVE CODE — FAL call loop
+    └─ Builds reframe prompt from canonical character descriptions
+    └─ Calls: fal_client.run("fal-ai/nano-banana-pro/edit", ...)
+    └─ Parameters: "prompt", "image_urls": [master_image], "num_outputs": 1
+    └─ Saves reframed variants to first_frame_variants/{shot_id}_{angle}.jpg
+    └─ Logger: "gpu_reframes" counter, cost += 0.15 per angle
+
+  Line 716-732: CPU fallback — `_crop_image_to_angle()` for reframe failures
+    └─ If FAL call fails, use CPU-based image cropping
+    └─ Logger: "cpu_crops" counter
+
+  Line 1074-1152: ACTIVE CODE — Master chain orchestration
+    └─ Step 1: Generate master frame
+    └─ Step 2: Reframe to angles via `reframe_to_angles()`
+    └─ Step 3: Inject reframed frames back into shot_plan
+    └─ Logger: "Reframed {len(reframed_frames)} shots"
+    └─ FIRES DURING: master-chain agent workflow
+
+────────────────────────────────────────────────────────────────────────────
+
+FILE: tools/continuity_memory.py
+  TOTAL MENTIONS: 7 occurrences
+  STATUS: ACTIVE — Generates reframe candidate strategies
+
+  Line 13: Comment — "learned reframe patterns"
+  Line 25: Example — "candidates = mem.generate_reframe_candidates(shot, prev_state)"
+  Line 110: Dataclass — "A proposed reframe for the next shot"
+
+  Line 155-164: Enum values:
+    └─ "REFRAME: Same primary character, different angle (end-frame reframe)"
+
+  Line 371-onwards: FUNCTION — `generate_reframe_candidates(shot, previous_state)`
+    └─ Generates 3-5 reframe strategy candidates based on spatial analysis
+    └─ Returns: List[ReframeCandidate]
+    └─ Strategies: continuity_match, emotional_push, action_widen, reaction_cut, reveal_ots
+
+  Line 798-802: FUNCTION — `generate_reframe_candidates()` method (convenience wrapper)
+    └─ Called by orchestrator_server.py (line 8210-8228)
+    └─ FIRES DURING: generate-first-frames (blocking-aware analysis phase)
+
+  Line 1132: FUNCTION — `analyze_end_frame_spatial()`
+    └─ Analyzes end-frame spatial characteristics for next-shot planning
+
+  Line 1383: FUNCTION — `vision_analyze_end_frame()`
+    └─ Vision-based end-frame analysis (optional, non-blocking)
+
+────────────────────────────────────────────────────────────────────────────
+
+FILE: tools/creation_pack_validator.py
+  TOTAL MENTIONS: 3 occurrences
+  STATUS: ACTIVE — Validates multi-angle ref packs
+
+  Line 972: Comment — "All other angles = IMAGE-TO-IMAGE reframe FROM headshot"
+  Line 983: Comment — "Resolve headshot path (needed as source for angle reframes)"
+  Line 1011: Comment — "All other angles = IMAGE-TO-IMAGE reframe FROM headshot"
+    └─ Enforces character ref consistency across angles
+
+  Line 1027: Comment — "Location angles are IMAGE-TO-IMAGE reframes FROM the wide master"
+  Line 1039: Comment — "Find the wide master to use as source image for angle reframes"
+  Line 1077: Comment — "IMAGE-TO-IMAGE reframe from existing wide master"
+    └─ Validates location master angle variants
+
+────────────────────────────────────────────────────────────────────────────
+
+FILE: models/project.py
+  TOTAL MENTIONS: 2 occurrences
+  STATUS: ACTIVE — Data model for variant storage
+
+  Line 85: Field — `first_frame_variants_dir: Optional[Path] = None  # Multi-angle variants`
+  Line 212: Directory initialization — `first_frames_dir, first_frame_variants_dir, videos_dir`
+    └─ Ensures directory structure exists for storing angle variants
+
+────────────────────────────────────────────────────────────────────────────
+
+FILE: tools/film_engine.py
+  TOTAL MENTIONS: 1 occurrence
+  STATUS: ACTIVE — Model reference
+
+  Line 725: Constant — `"nano_edit": "fal-ai/nano-banana-pro/edit"`
+    └─ Model reference for reframing workflows
+
+────────────────────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────────────────────
+2. "reframe" in all Python files (41 files found, 9 production files)
+────────────────────────────────────────────────────────────────────────────
+
+ADDITIONAL FINDINGS (beyond end-frame mentions):
+
+FILE: tools/chain_policy.py
+  Contains reframe-related chain classification logic
+  Status: ACTIVE — Determines which shots get reframed variants
+
+FILE: tools/vision_analyst.py
+  Contains vision-based reframe scoring
+  Status: ACTIVE — Evaluates reframe quality
+
+FILE: atlas_agents_v16_7/atlas_agents/master_shot_chain_agent.py
+  Mirror copy of master_shot_chain_agent.py
+  Status: LEGACY MIRROR — Should be sync'd or removed
+
+────────────────────────────────────────────────────────────────────────────
+3. "nano-banana-pro/edit" model calls (84 files found, 8 production files)
+────────────────────────────────────────────────────────────────────────────
+
+FILE: orchestrator_server.py
+  Line 1626: Constant — `NANO_BANANA_EDIT = "nano_banana_edit"`
+  Line 6283: FAL model call — Line in qwen_reframe_shot() endpoint
+  Line 7458: Constant — `NANO_MODEL_REF = "fal-ai/nano-banana-pro/edit"`
+  Line 10164: FAL model call — Image generation with refs
+  Line 30757: FAL model call — conditionally selected (with image_urls)
+  Line 38119: FAL model call — character reference generation
+  Line 47005: Model reference — IMAGE_MODEL_WITH_REF
+
+  TOTAL ACTIVE CALLS: 7+ locations where nano-pro-edit is called
+
+FILE: atlas_v26_controller.py
+  Line 1861: Constant — `IMAGE_MODEL_WITH_REF = "fal-ai/nano-banana-pro/edit"`
+  Line 2745: Constant — `IMAGE_MODEL_WITH_REF = "fal-ai/nano-banana-pro/edit"`
+
+  TOTAL ACTIVE CALLS: 2+ locations
+
+FILE: atlas_agents/master_shot_chain_agent.py
+  Lines 671-686: FAL API call — reframing master to angle variants
+    └─ model: "fal-ai/nano-banana-pro/edit"
+    └─ FIRES DURING: master-chain pipeline
+
+FILES: tools/creation_pack_validator.py, tools/film_engine.py, LOCKED_MODELS_CONFIG.py
+  All contain model reference constants
+
+────────────────────────────────────────────────────────────────────────────
+4. "angle_variant" or "multi_angle" (31 files found, 9 production files)
+────────────────────────────────────────────────────────────────────────────
+
+FILE: orchestrator_server.py
+  No direct mentions of "angle_variant" or "multi_angle"
+  BUT: Extensive use of "variant" terminology throughout
+
+FILE: tools/ots_enforcer.py
+  Contains "multi_angle" references in dialogue framing logic
+  Status: ACTIVE — OTS (over-the-shoulder) multi-angle handling
+
+FILE: tools/perpetual_learning.py
+  Multi-angle learning patterns
+  Status: ADVISORY — Machine learning component
+
+FILE: models/shot.py
+  References to variant selection
+  Status: ACTIVE — Shot data model
+
+FILE: tools/creation_pack_validator.py
+  Line 972-1077: Extensive multi-angle ref pack validation
+  Status: ACTIVE — Validates character ref angles and location ref angles
+
+FILES: tools/dp_framing_standards.py, tools/atlas_scene_controller.py
+  Multi-angle selection based on shot type
+  Status: ACTIVE — DP (Director of Photography) shot framing standards
+
+────────────────────────────────────────────────────────────────────────────
+5. "first_frame_variants" directory references (8 files found)
+────────────────────────────────────────────────────────────────────────────
+
+FILE: orchestrator_server.py
+  Line 1336: Path construction — `var_dir = project_path / "first_frame_variants"`
+  Line 6787: Path for variant storage — `_var_dir = project_path / "first_frame_variants"`
+  Line 6873-6887: Variant directory management — ensuring directory exists
+  Line 21407: Path reference in editorial workflow
+
+  Multiple locations where variants are:
+    ✅ Created (if not existing)
+    ✅ Written to (angle variants saved)
+    ✅ Read from (next shot uses previous variants)
+    ✅ Cached (UI bundle includes variant URLs)
+
+FILE: atlas_v26_controller.py
+  Line (locations not shown) — variant directory handling in multi-candidate paths
+
+FILE: atlas_agents/master_shot_chain_agent.py
+  Line 483: `reframe_dir = project_path / "pipeline_outputs" / project / "first_frame_variants"`
+    └─ Where reframed angles are saved
+
+FILES: models/project.py, routes/routes_editing.py
+  Directory initialization and access points
+
+TOTAL ACTIVE OPERATIONS:
+  ✅ Directory creation — lines 1336, 6787
+  ✅ Variant writing — lines 8800-8840 (orchestrator)
+  ✅ Variant reading — lines 8160-8163 (orchestrator chaining)
+  ✅ UI caching — line 16446 (invalidation awareness)
+
+────────────────────────────────────────────────────────────────────────────
+6. "num_images" or "num_outputs" in FAL call contexts (114 files found)
+────────────────────────────────────────────────────────────────────────────
+
+FILE: orchestrator_server.py
+  TOTAL MENTIONS: 28 occurrences
+
+  Multi-candidate generation (num_outputs/num_images = 3):
+    Line 7934: num_outputs=1 (safety variant)
+    Line 7939: num_images=1 (LTX model)
+    Line 8037: num_outputs=1 (safety variant)
+    Line 8042: num_images=1 (LTX model)
+    Line 8334: num_outputs=1 (character depth)
+    Line 8342: num_images=1 (editorial variant)
+
+  ACTIVE MULTI-CANDIDATE CALLS:
+    Line 22258: `"num_outputs": effective_variants` (3 variants)
+    Line 22267: `"num_images": effective_variants` (3 variants)
+      └─ Used in hero shot generation (close-ups, MCU, ECU)
+      └─ FIRES DURING: generate-first-frames (Phase D.2)
+
+  Single-candidate calls (num_outputs/num_images = 1):
+    Multiple locations for safety fallbacks and editorial passes
+
+FILE: atlas_v26_controller.py
+  Line 1903: `"num_outputs": n_candidates` (multi-candidate)
+    └─ Typically n_candidates = 3 for hero shots
+    └─ FIRES DURING: generate-first-frames
+
+  Line 1911: `"num_images": n_candidates`
+    └─ FAL parameter for nano-pro-edit variant count
+
+  Line 2840: `"num_outputs": 1` (fallback)
+  Line 2848: `"num_images": 1` (fallback)
+
+FILE: atlas_agents/master_shot_chain_agent.py
+  Line 674: `"num_outputs": 1` in reframe_to_angles()
+    └─ ONE reframe angle per shot (not 3)
+    └─ Reason: Cost optimization (1 master + N×1 reframe < N×3 variants)
+
+SUMMARY:
+  ✅ Multi-candidate generation ACTIVE (num_outputs/num_images = 3)
+  ✅ Used for hero shots (close-ups, MCU, ECU)
+  ✅ Reduces cost while maintaining quality via post-generation selection
+  ✅ Fallbacks to single-candidate when multi-candidate fails
+
+================================================================================
+ARCHITECTURE OVERVIEW
+================================================================================
+
+FIVE DISTINCT REFRAMING WORKFLOWS:
+
+1. MASTER-CHAIN SYSTEM (atlas_agents/master_shot_chain_agent.py)
+   ├─ Generates 1 master frame (wide/establishing)
+   ├─ Reframes master into 1 angle variant per shot (via nano-pro-edit)
+   ├─ Cost: 1 master + (N shots × 1 reframe) = 1 + N calls
+   ├─ Output: first_frame_variants/{shot_id}_{angle_name}.jpg
+   └─ FIRES: master-chain agent workflow (optional, user-selected)
+
+2. MULTI-CANDIDATE GENERATION (orchestrator_server.py lines 22258-22267)
+   ├─ Generates 3 candidate frames per hero shot (num_outputs=3)
+   ├─ Scored by keyframe gate, best selected, others saved as variants
+   ├─ Cost: N shots × 3 candidates = 3N calls
+   ├─ Output: first_frames/{shot_id}.jpg (best) + variants/ (alternates)
+   └─ FIRES: generate-first-frames (Phase D.2 — multi-candidate loop)
+
+3. END-FRAME REFRAMING (orchestrator_server.py lines 8730-8840)
+   ├─ After video generation, extracts last frame
+   ├─ Reframes end-frame into 3 angle variants via nano-pro-edit
+   ├─ Angle data: {name: "reverse", "wide", "medium_close"}
+   ├─ Cost: 1 video → 3 reframes = 3 calls per shot
+   ├─ Output: first_frame_variants/{shot_id}_{angle_name}.jpg
+   └─ FIRES: render-scene (after LTX/Kling video completion)
+
+4. CONTINUITY MEMORY REFRAMING (tools/continuity_memory.py + orchestrator_server.py)
+   ├─ Analyzes previous shot end-frame + spatial state
+   ├─ Generates reframe candidates (5 strategies)
+   ├─ Orchestrator selects best candidate for next shot
+   ├─ Cost: Analysis only (no generation cost, informs strategy)
+   ├─ Output: Influence on next shot's prompt via continuity delta
+   └─ FIRES: generate-first-frames (Phase E1 — blocking analysis)
+
+5. CREATION PACK MULTI-ANGLE REFS (tools/creation_pack_validator.py)
+   ├─ Character ref packs: headshot (P1) + 3_quarter (P2) + full_body (P3)
+   ├─ Location ref packs: wide (P1) + reverse_angle (P2) + medium_interior (P3)
+   ├─ Each angle = IMAGE-TO-IMAGE reframe from P1 master
+   ├─ Cost: Auto-recast generates missing refs on demand
+   ├─ Output: character_library_locked/{char}_{angle}.jpg + location_masters/
+   └─ FIRES: creation-pack validation (Phase 6 of pre-generation checklist)
+
+================================================================================
+DETAILED COMPONENT STATUS
+================================================================================
+
+COMPONENT: End-Frame Extraction
+  File: orchestrator_server.py (lines 8629-8672, 8683)
+  Function: Extracts last frame from LTX/Kling video after generation
+  Status: ✅ ACTIVE CODE
+  Fires: render-scene (Phase G — post-video analysis)
+  Disabled? CAN BE: Conditional guard on line 8655 (try/except)
+
+COMPONENT: Nano-Banana-Pro/Edit Model Calls
+  Files: orchestrator_server.py, atlas_v26_controller.py, master_shot_chain_agent.py
+  Purpose: Reframe images (end-frame → angle variants, master → angles, refs)
+  Status: ✅ ACTIVE CODE — 7+ FAL call sites
+  Fires: Both generate-first-frames AND render-scene paths
+  Disabled? CAN BE: Would require replacing 3-5 specific FAL calls
+  Cost Impact: ~$0.15 per reframe call × N variants = cost driver
+
+COMPONENT: First-Frame-Variants Directory
+  File: models/project.py, orchestrator_server.py (multiple lines)
+  Purpose: Stores multi-angle variant frames
+  Status: ✅ ACTIVE DIRECTORY CREATION AND USAGE
+  Used By:
+    - Master-chain system (saves reframed angles)
+    - End-frame reframing (saves extracted frame variants)
+    - Multi-candidate selection (saves alternate candidates)
+    - Chaining logic (reads variants for next shot)
+  Disabled? CAN BE: Would require disabling all variant saving
+
+COMPONENT: Multi-Candidate Generation (num_outputs=3)
+  File: orchestrator_server.py (lines 22258-22267)
+  Purpose: Generate 3 candidate frames, select best via keyframe gate
+  Status: ✅ ACTIVE CODE
+  Fires: generate-first-frames (Phase D.2 — hero shot generation)
+  Disabled? CAN BE: Change effective_variants from 3 to 1
+  Cost Impact: 3× FAL cost per hero shot if disabled (vs 1 call with 3 outputs)
+
+COMPONENT: Continuity Memory Reframe Candidate Selection
+  File: tools/continuity_memory.py + orchestrator_server.py (lines 8210-8228)
+  Purpose: Analyze spatial state, recommend reframe strategies
+  Status: ✅ ACTIVE CODE
+  Fires: generate-first-frames (Phase E1 — blocking-aware analysis)
+  Disabled? CAN BE: Comment out import + function calls
+  Cost Impact: ZERO (analysis only, no FAL calls)
+
+COMPONENT: End-Frame Validation Gate
+  File: tools/endframe_gate.py (NEW in V27.1)
+  Purpose: Analyze extracted end-frame for reuse eligibility
+  Status: ✅ ACTIVE CODE
+  Fires: render-scene (Phase G — post-video analysis)
+  Disabled? CAN BE: Make analysis non-blocking (already is)
+  Cost Impact: ZERO (analysis only, no FAL calls)
+
+COMPONENT: Creation Pack Multi-Angle Validation
+  File: tools/creation_pack_validator.py
+  Purpose: Validate character/location ref angle packs
+  Status: ✅ ACTIVE CODE
+  Fires: Pre-generation Phase 6 (creation-pack validation)
+  Disabled? CAN BE: Would require removing multi-angle ref validation
+  Cost Impact: Depends on auto-recast usage
+
+================================================================================
+EXECUTION FLOW: WHEN DOES REFRAMING FIRE?
+================================================================================
+
+GENERATE-FIRST-FRAMES ENDPOINT:
+  ├─ Phase D.2: Multi-candidate generation (num_outputs=3)
+  │   └─ IF hero shot: generate 3 candidates, select best
+  │   └─ Cost: 1 FAL call with num_outputs=3
+  │
+  ├─ Phase E1: Continuity Memory reframe candidate selection
+  │   └─ IF blocking-aware: analyze spatial state, recommend strategy
+  │   └─ Cost: ZERO (analysis only)
+  │
+  ├─ Phase E1.5: Blocking-aware multi-candidate fallback
+  │   └─ IF blocking-aware AND non-hero: generate 3 candidates
+  │   └─ Cost: 1 FAL call with num_outputs=3
+  │
+  └─ Phase G: Post-generation analysis (end-frame validation)
+      └─ IF generation succeeded: validate frame for reuse
+      └─ Cost: ZERO (analysis only)
+
+RENDER-SCENE ENDPOINT:
+  ├─ Phase G: Video generation (LTX/Kling)
+  │   └─ FIRES: LTX-2 or Kling-3.0 video generation
+  │
+  ├─ Phase G.1: End-frame extraction
+  │   └─ FIRES: Extract last frame from video
+  │   └─ Cost: ZERO (file I/O only)
+  │
+  ├─ Phase G.2: End-frame reframing
+  │   └─ IF chain mode AND end-frame valid: reframe to 3 angles
+  │   └─ Cost: 3 FAL calls × nano-pro-edit (@$0.15 each)
+  │
+  ├─ Phase G.3: Chain injection
+  │   └─ FIRES: Store end-frame (or variants) for next shot's spatial memory
+  │   └─ Cost: ZERO (storage only)
+  │
+  └─ Phase G.4: Blocking-aware end-frame storage
+      └─ FIRES: Store end-frame for continuity delta (no variants)
+      └─ Cost: ZERO (storage only)
+
+MASTER-CHAIN AGENT WORKFLOW (optional):
+  ├─ Step 1: Generate master frame
+  │   └─ Cost: 1 FAL call (nano-pro for wide)
+  │
+  ├─ Step 2: Reframe to angles
+  │   └─ FIRES: reframe_to_angles() for each shot in scene
+  │   └─ Cost: N shots × 1 reframe = N FAL calls (@$0.15 each)
+  │
+  └─ Step 3: Inject reframed frames
+      └─ FIRES: Store variants in first_frame_variants/ for scene
+
+CREATION-PACK VALIDATION (Phase 6):
+  ├─ Character ref validation
+  │   └─ IF ref missing: trigger auto-recast
+  │   └─ Cost: Depends on ref pack completeness
+  │
+  └─ Location ref validation
+      └─ IF angle missing: trigger auto-recast
+      └─ Cost: Depends on location master completeness
+
+================================================================================
+CAN EACH COMPONENT BE SAFELY DISABLED?
+================================================================================
+
+1. END-FRAME EXTRACTION
+   ├─ Status: CAN BE DISABLED
+   ├─ How: Guard line 8629 with conditional flag
+   ├─ Impact: Chain inference loses actual blocking from video
+   ├─ Consequence: Next shot spatial continuity delta becomes less informed
+   └─ Risk: Low-to-medium (continuity still works via prompt analysis)
+
+2. NANO-BANANA-PRO/EDIT CALLS (End-Frame Reframing)
+   ├─ Status: CAN BE DISABLED
+   ├─ How: Set condition on lines 8724 to `_do_reframe = False`
+   ├─ Impact: End-frame reframing skipped, raw end-frame used for chain
+   ├─ Consequence: Angle consistency between shots may drift
+   ├─ Savings: $0.15 × 3 angles × N shots per scene
+   └─ Risk: High (visual continuity suffers, may see lighting/angle jumps)
+
+3. MULTI-CANDIDATE GENERATION (num_outputs=3)
+   ├─ Status: CAN BE DISABLED
+   ├─ How: Change lines 22258/22267 from `effective_variants` to 1
+   ├─ Impact: Only 1 candidate generated per shot (no keyframe selection)
+   ├─ Consequence: Quality may suffer (no best-of-3 selection)
+   ├─ Savings: 2× FAL cost per hero shot
+   └─ Risk: Medium (may lose quality advantage of multi-candidate)
+
+4. CONTINUITY MEMORY REFRAME CANDIDATES
+   ├─ Status: CAN BE DISABLED
+   ├─ How: Comment out lines 8210-8228 in orchestrator_server.py
+   ├─ Impact: No reframe strategy recommendations (analysis still runs)
+   ├─ Consequence: Continuity delta loses strategic guidance
+   ├─ Savings: ZERO (analysis only, no cost impact)
+   └─ Risk: Very Low (purely advisory system)
+
+5. END-FRAME VALIDATION GATE
+   ├─ Status: ALREADY NON-BLOCKING
+   ├─ How: Already has try/except (line 8655)
+   ├─ Impact: Disabling doesn't change behavior (validation still runs)
+   ├─ Consequence: None (diagnostic only)
+   ├─ Savings: ZERO (analysis only)
+   └─ Risk: None
+
+6. CREATION PACK MULTI-ANGLE REFS
+   ├─ Status: CAN BE DISABLED
+   ├─ How: Remove multi-angle ref pack validation from creation_pack_validator.py
+   ├─ Impact: Only headshot refs validated, angle variants optional
+   ├─ Consequence: DP framing standards relaxed (may see image-to-image drift)
+   ├─ Savings: Depends on auto-recast usage
+   └─ Risk: Medium (spatial continuity within shot types may suffer)
+
+7. FIRST-FRAME-VARIANTS DIRECTORY
+   ├─ Status: CAN BE DISABLED
+   ├─ How: Would require removing all variant-saving code
+   ├─ Impact: No angle variants stored (end-frame reframing skipped)
+   ├─ Consequence: Chaining loses angle consistency
+   ├─ Savings: Disk space only
+   └─ Risk: High (cascading impact on multiple systems)
+
+8. MASTER-CHAIN SYSTEM
+   ├─ Status: CAN BE DISABLED
+   ├─ How: User doesn't select master-chain render strategy
+   ├─ Impact: Master-chain agent never invoked
+   ├─ Consequence: Falls back to independent-parallel rendering
+   ├─ Savings: N reframes × $0.15 per scene
+   └─ Risk: None (independent rendering is slower but equivalent)
+
+================================================================================
+COST ANALYSIS
+================================================================================
+
+REFRAMING COST PER SCENE (assuming 11 shots like Scene 001):
+
+Scenario A: Master-Chain System (Optional)
+  Master frame:              1 × $0.30 = $0.30
+  Reframes (11 shots):      11 × $0.15 = $1.65
+  ───────────────────────────────────────
+  Total per scene:                      $1.95
+  (vs $3.30 for 11 independent text-to-image)
+
+Scenario B: Multi-Candidate Generation (Standard)
+  Hero shots (3 candidates): 5 × $0.30 = $1.50
+  Regular shots (1 candidate): 6 × $0.30 = $1.80
+  ───────────────────────────────────────
+  Total per scene:                      $3.30
+
+Scenario C: End-Frame Reframing (Chaining)
+  Video generations:        11 × $0.60 = $6.60
+  End-frame reframes:       11 × $0.45 = $4.95 (3 angles each)
+  ───────────────────────────────────────
+  Total per scene:                     $11.55
+
+Scenario D: No Reframing (Disabled)
+  Independent rendering:    11 × $0.30 = $3.30 (text-to-image only)
+  ───────────────────────────────────────
+  Total per scene:                      $3.30
+  (Same cost as multi-candidate, but no angle variants)
+
+COST SAVINGS BY DISABLING:
+  Disable multi-candidate:   -$0 (cost stays ~$3.30 with 1 candidate)
+  Disable end-frame reframe: -$4.95 per scene
+  Disable master-chain:      -$1.95 per scene (if opted in)
+  Disable all reframing:     No additional savings (reframing ≈ single-model cost)
+
+================================================================================
+INTEGRATION RISK ASSESSMENT
+================================================================================
+
+TIGHT INTEGRATION (HIGH RISK):
+  ✗ End-frame extraction (orchestrator_server.py lines 8629-8840)
+    └─ 27 lines of active code, deeply nested in render loop
+    └─ Would require refactoring render loop to disable
+
+  ✗ End-frame validation gate (endframe_gate.py)
+    └─ New in V27.1, integrated into render post-processing
+    └─ Would require removing import + function calls
+
+  ✗ Continuity memory reframe candidates (orchestrator_server.py lines 8210-8228)
+    └─ Tightly integrated into blocking-aware path
+    └─ Would require refactoring blocking-aware logic
+
+MODERATE INTEGRATION (MEDIUM RISK):
+  ⚠ Nano-pro-edit FAL calls (scattered across 3 files)
+    └─ Lines 8730-8800, 22258-22267, master_shot_chain_agent.py 671
+    └─ Could be disabled individually with guards
+
+  ⚠ Multi-candidate generation (orchestrator_server.py lines 22258-22267)
+    └─ Relatively localized, could change effective_variants = 1
+    └─ Would lose quality advantages but code wouldn't break
+
+LOOSE INTEGRATION (LOW RISK):
+  ✓ Master-chain system (atlas_agents/master_shot_chain_agent.py)
+    └─ Optional, user-selected render strategy
+    └─ Can be disabled without affecting other code
+
+  ✓ First-frame-variants directory (models/project.py)
+    └─ Directory is created but not required
+    └─ Could be eliminated if variant saving disabled
+
+  ✓ Creation pack multi-angle refs (creation_pack_validator.py)
+    └─ Validation is non-blocking
+    └─ Could be skipped without pipeline failure
+
+================================================================================
+SUMMARY FOR USER
+================================================================================
+
+The ATLAS V27.1 reframing system is a mature, multi-layered architecture with
+5 distinct reframing workflows:
+
+  1. Master-chain: 1 master + N angle reframes (optional, cost optimization)
+  2. Multi-candidate: 3 candidates per hero shot (quality optimization)
+  3. End-frame reframing: Extract video end-frame, reframe to 3 angles (chain continuation)
+  4. Continuity memory: Analyze spatial state, recommend reframe strategies (advisory)
+  5. Creation pack: Validate multi-angle character/location ref packs (pre-generation gate)
+
+TOTAL ACTIVE MENTIONS:
+  ✅ "end_frame" / "end-frame": 44 files (8 production)
+  ✅ "reframe": 41 files (9 production)
+  ✅ "nano-banana-pro/edit": 84 files (8 production)
+  ✅ "first_frame_variants": 8 files
+  ✅ "num_outputs" / "num_images" (multi-candidate): 114 files (2 production)
+
+DEEPLY INTEGRATED FILES (production):
+  1. orchestrator_server.py (44+ active mentions)
+  2. atlas_v26_controller.py (8+ active mentions)
+  3. atlas_agents/master_shot_chain_agent.py (54+ active mentions)
+  4. tools/endframe_gate.py (NEW — ~450 lines)
+  5. tools/continuity_memory.py (7+ active mentions)
+  6. tools/creation_pack_validator.py (3+ active mentions)
+  7. models/project.py (2+ active mentions)
+  8. tools/film_engine.py (1+ reference)
+
+EXECUTION FLOW:
+  Generate-first-frames: Phases D.2 (multi-candidate), E1 (continuity), G (validation)
+  Render-scene: Phase G (extraction), G.1 (reframing), G.2 (chain injection)
+
+DISABLING RECOMMENDATIONS:
+  ✓ Safe: Disable master-chain (optional render strategy)
+  ✓ Safe: Disable continuity reframe candidates (advisory only)
+  ✓ Medium: Disable end-frame reframing (impacts chain angle consistency)
+  ✓ Medium: Disable multi-candidate generation (impacts quality selection)
+  ✗ Hard: Disable end-frame extraction (requires major refactoring)
+  ✗ Hard: Disable all nano-pro-edit calls (scattered across codebase)
+
+COST IMPACT OF DISABLING:
+  Disable end-frame reframing: -$4.95 per scene (11 shots)
+  Disable master-chain: -$1.95 per scene (if opted in)
+  Disable multi-candidate: -$0 (cost stays ~$3.30)
+  No additional savings from disabling all reframing
+    (reframing cost ≈ equivalent to single-model text-to-image)
+
+================================================================================
+RESEARCH CONCLUSION
+================================================================================
+
+The reframing system is NOT a "bolt-on" feature that can be easily disabled.
+It is deeply woven into the generation pipeline with multiple interdependencies:
+
+  • orchestrator_server.py: 44+ active code points
+  • atlas_v26_controller.py: 8+ active code points
+  • master_shot_chain_agent.py: 54+ active code points
+  • endframe_gate.py: 450+ lines of validation logic
+  • continuity_memory.py: 7+ active strategies
+  • creation_pack_validator.py: 3+ validation points
+
+Disabling ANY SINGLE reframing subsystem would require:
+  1. Identifying all call sites (scattered across 8 production files)
+  2. Adding conditional guards (if reframe_disabled: return fallback)
+  3. Testing fallback paths (not currently exercised)
+  4. Verifying render output quality (may suffer without angle consistency)
+
+Recommendation: Reframing is PRODUCTION-READY. Do not attempt to disable without
+careful analysis of dependencies and fallback behavior.
+
+================================================================================

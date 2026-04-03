@@ -1,0 +1,280 @@
+{
+  "session_id": "2025-10-27_fal_pipeline_refinement",
+  "timestamp": "2025-10-27T13:00:00Z",
+  "session_type": "troubleshooting_and_optimization",
+  "duration_hours": 3,
+  "goal": "Troubleshoot and optimize FAL nano-banana + LTXv2 pipeline for character consistency",
+  "status": "PIPELINE_WORKING_REFINED",
+
+  "models_locked": {
+    "image_generation": "fal-ai/nano-banana/edit",
+    "video_conversion": "fal-ai/ltxv-2/image-to-video/fast",
+    "locked_status": true,
+    "reason": "User requirement - no model switching"
+  },
+
+  "bugs_fixed": [
+    {
+      "bug_id": "fal_response_parsing",
+      "error_message": "'dict' object has no attribute 'data'",
+      "root_cause": "FAL client returns data directly, not wrapped in .data attribute",
+      "fix_location": "nano_banana_executor.py:768-795",
+      "fix_type": "defensive_parsing",
+      "status": "RESOLVED",
+      "test_passed": true
+    }
+  ],
+
+  "issues_identified": [
+    {
+      "issue_id": "character_consistency_failure",
+      "severity": "HIGH",
+      "description": "nano-banana/edit receives references but generates different characters",
+      "evidence": {
+        "shot_1_character": "Black male with cybernetic arms",
+        "reference_character": "Caucasian male with facial hair",
+        "mismatch": true
+      },
+      "hypothesis": "Model prioritizes creative freedom over reference accuracy",
+      "status": "ONGOING",
+      "attempted_fixes": ["MASTER reference strategy", "prompt fine-tuning"]
+    },
+    {
+      "issue_id": "cost_labeling_error",
+      "severity": "MEDIUM",
+      "description": "System logs incorrectly labeled FAL nano-banana as 'FREE!'",
+      "correction": "FAL nano-banana is NOT free - costs apply per generation",
+      "action_taken": "Documentation updated",
+      "status": "RESOLVED"
+    }
+  ],
+
+  "refinements_implemented": [
+    {
+      "refinement_id": "phase_7_reference_selection",
+      "version": "7.0",
+      "type": "reference_strategy",
+      "location": "nano_banana_executor.py:671-714",
+      "description": "Intelligent 3-reference system with strategic prioritization",
+      "priority_order": [
+        {
+          "priority": 0,
+          "name": "MASTER_reference",
+          "purpose": "Fixed identity anchor - never changes",
+          "example": "002_marcus_understanding.jpg",
+          "benefit": "Consistent character identity across all shots"
+        },
+        {
+          "priority": 1,
+          "name": "previous_frame",
+          "purpose": "Shot-to-shot temporal continuity",
+          "source": "Output from previous shot",
+          "benefit": "Smooth flow between consecutive shots"
+        },
+        {
+          "priority": 2,
+          "name": "dinov3_inspired_frame",
+          "purpose": "Best asset match from scene library",
+          "scoring": "DINOv3 similarity metrics",
+          "benefit": "Quality-scored inspiration for new generation"
+        }
+      ],
+      "change_from_previous": "OLD: asset + character + fallback | NEW: MASTER + previous + inspired",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "refinement_id": "phase_7_prompt_finetuning",
+      "version": "7.0",
+      "type": "prompt_engineering",
+      "location": "nano_banana_executor.py:732-744",
+      "description": "Prepend strong consistency instructions to all prompts",
+      "components": {
+        "consistency_prefix": "MATCH THE EXACT CHARACTER from the reference images. Maintain the same face, skin tone, age, hairstyle, and facial features. Keep the same character identity.",
+        "meta_learning_keywords": "Dynamically added from continuity analysis",
+        "combined_length": "~1280 characters"
+      },
+      "hypothesis": "Explicit consistency instructions will reduce model creativity",
+      "status": "IMPLEMENTED",
+      "testing": "Awaiting visual comparison results"
+    }
+  ],
+
+  "performance_metrics": {
+    "test_1_shot_1": {
+      "shot_id": "005_containment_field_wide",
+      "image_generation_time_seconds": 11.6,
+      "video_conversion_time_seconds": 6.0,
+      "total_time_seconds": 17.6,
+      "references_used": 3,
+      "system_version": "phase_6",
+      "consistency_issue": true,
+      "issue_description": "Character changed despite references"
+    },
+    "test_2_shot_2": {
+      "shot_id": "005_marcus_tests_field",
+      "image_generation_time_seconds": 9.7,
+      "video_conversion_time_seconds": 6.0,
+      "total_time_seconds": 15.7,
+      "references_used": 2,
+      "reference_strategy": ["MASTER", "inspired"],
+      "system_version": "phase_7_refined",
+      "prompt_length_characters": 1280,
+      "consistency_check": "PENDING_VISUAL_INSPECTION"
+    }
+  },
+
+  "cost_analysis": {
+    "warning": "FAL services are NOT free",
+    "model_costs": {
+      "fal_nano_banana_edit": {
+        "cost_per_generation": "TBD",
+        "currency": "USD",
+        "unit": "per_image"
+      },
+      "fal_ltxv2_video": {
+        "cost_per_generation": "TBD",
+        "currency": "USD",
+        "unit": "per_6s_video_1080p"
+      }
+    },
+    "estimated_cost_per_shot": "TBD",
+    "action_needed": "Track actual costs for budget planning"
+  },
+
+  "meta_learning_insights": {
+    "what_worked": [
+      "Response parsing fix - stable API calls achieved",
+      "Multi-reference system - technically functional",
+      "LTXv2 integration - reliable video conversion",
+      "MASTER reference strategy - identity anchor established"
+    ],
+    "what_needs_improvement": [
+      "nano-banana reference respect - model creativity too high",
+      "Character consistency - still generating variations",
+      "Prompt influence - needs stronger consistency keywords",
+      "Cost tracking - add actual cost monitoring"
+    ],
+    "hypotheses_for_testing": [
+      {
+        "hypothesis": "single_master_only_reference",
+        "description": "Test with ONLY master reference (exclude previous/inspired)",
+        "expected_outcome": "Increased consistency by reducing reference confusion",
+        "priority": "HIGH"
+      },
+      {
+        "hypothesis": "stronger_prompt_weighting",
+        "description": "Increase consistency keyword density in prompts",
+        "expected_outcome": "Model follows instructions more strictly",
+        "priority": "MEDIUM"
+      },
+      {
+        "hypothesis": "dinov3_rejection_threshold",
+        "description": "Auto-reject generations below similarity threshold",
+        "expected_outcome": "Only accept shots matching master reference",
+        "priority": "HIGH"
+      },
+      {
+        "hypothesis": "alternative_fal_model",
+        "description": "Test FAL FLUX-dev as fallback image generator",
+        "expected_outcome": "Better reference respect than nano-banana",
+        "priority": "LOW"
+      }
+    ]
+  },
+
+  "files_modified": [
+    {
+      "file": "nano_banana_executor.py",
+      "lines_changed": "671-714, 732-744",
+      "change_type": "ENHANCEMENT",
+      "description": "Reference selection refactor + prompt fine-tuning"
+    },
+    {
+      "file": "NANO_BANANA_TROUBLESHOOTING.md",
+      "change_type": "DOCUMENTATION",
+      "description": "Added test results and optimization strategies"
+    }
+  ],
+
+  "files_created": [
+    {
+      "file": "test_refined_consistency.py",
+      "purpose": "Test Script for Shot 2 with Phase 7 refinements"
+    },
+    {
+      "file": "SESSION_OVERVIEW_2025_10_27.md",
+      "purpose": "Comprehensive session documentation"
+    },
+    {
+      "file": "META_LEARNING_NOTEBOOK_ENTRY_2025_10_27.json",
+      "purpose": "Structured meta-learning data for import"
+    }
+  ],
+
+  "output_assets": {
+    "generated_images": [
+      "/Users/quantum/Desktop/atlas_output/nano_banana/005_containment_field_wide.jpg",
+      "/Users/quantum/Desktop/atlas_output/nano_banana/005_marcus_tests_field.jpg"
+    ],
+    "generated_videos": [
+      "/Users/quantum/Desktop/atlas_output/nano_banana/005_containment_field_wide.mp4",
+      "/Users/quantum/Desktop/atlas_output/nano_banana/005_marcus_tests_field.mp4"
+    ],
+    "logs": [
+      "test_refined_shot2.log",
+      "NANO_BANANA_TROUBLESHOOTING.md"
+    ]
+  },
+
+  "next_steps": {
+    "immediate": [
+      "Visual comparison of Shot 1 vs Shot 2 for consistency check",
+      "Verify MASTER reference strategy effectiveness",
+      "Document actual cost per shot for budget tracking"
+    ],
+    "short_term": [
+      "Test full 6-shot Scene 005 sequence with refined system",
+      "Implement DINOv3 similarity scoring for auto-acceptance",
+      "Connect autonomous auto-accepter with quality gates",
+      "Add cost tracking to all generation logs"
+    ],
+    "long_term": [
+      "Establish consistency threshold (minimum DINOv3 score)",
+      "Build retry logic for failed consistency checks",
+      "Integrate refined system with production pipeline",
+      "Scale to multi-scene generation with confidence"
+    ]
+  },
+
+  "system_state": {
+    "models_locked": true,
+    "pipeline": "fal-nano-banana/edit -> fal-ltxv2",
+    "guardrails_active": true,
+    "guardrail_settings": {
+      "resolution": "1080p",
+      "duration_seconds": 6,
+      "locked": true
+    },
+    "reference_strategy_version": "phase_7",
+    "prompt_strategy": "fine_tuned_with_consistency_reinforcement",
+    "auto_acceptance_enabled": true,
+    "auto_acceptance_threshold": "all_shots_currently_accepted"
+  },
+
+  "tags": [
+    "troubleshooting",
+    "consistency",
+    "fal_pipeline",
+    "reference_strategy",
+    "prompt_engineering",
+    "meta_learning",
+    "phase_7"
+  ],
+
+  "success_criteria": {
+    "technical_success": true,
+    "consistency_success": "PENDING_VERIFICATION",
+    "pipeline_stability": true,
+    "user_satisfaction": "AWAITING_FEEDBACK"
+  }
+}

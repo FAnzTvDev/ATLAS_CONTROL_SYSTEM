@@ -1,0 +1,323 @@
+═══════════════════════════════════════════════════════════════════════════════
+QUALITY GATE ARCHITECTURE — V27.2
+═══════════════════════════════════════════════════════════════════════════════
+
+CURRENT ARCHITECTURE (V27.1):
+────────────────────────────────────────────────────────────────────────────────
+
+    ORCHESTRATOR                    V26 CONTROLLER
+    ────────────────                ─────────────────────────
+
+    POST /api/auto/               render_scene():
+    generate-first-frames         ├─ Phase A-I (compile + validation)
+         │                        └─ Return to orchestrator
+         ├─ Load shot_plan
+         ├─ Run creation pack
+         ├─ Probe shot
+         ├─ FAL calls             [Frames returned from FAL]
+         │  (nano-banana-pro)
+         └─ Save frames/
+            first_frames/
+
+                                   [Operator manually calls]
+                                   POST /api/v17/shot/kling-i2v
+                                   per shot
+                                   │
+                                   ├─ Kling video gen
+                                   └─ Save videos/
+
+─────────────────────────────────────────────────────────────────────────────
+
+NEW ARCHITECTURE (V27.2):
+────────────────────────────────────────────────────────────────────────────────
+
+    ORCHESTRATOR                    V26 CONTROLLER              QUALITY GATE
+    ────────────────                ─────────────────────────    ────────────
+
+    POST /api/auto/               render_scene():
+    generate-first-frames         ├─ Phase A-I (compile)
+         │                        │  (Phase J: Quality Gate
+         ├─ Load shot_plan        │   deferred to post-gen)
+         ├─ Run creation pack      └─ Return compiled batch
+         ├─ Probe shot             
+         ├─ FAL calls                                        
+         │  (nano-banana-pro)     [Frames returned from FAL]
+         │                             │
+         └─ Save frames/           ┌──┴──────────────────┐
+            first_frames/          │                      │
+                 │          POST /api/v27/quality-gate/
+                 │          {project}/{scene_id}
+                 │                │
+                 └────────────────┤ For each shot:
+                                  ├─ Analyze frame (vision)
+                                  ├─ Score identity (0.0-1.0)
+                                  ├─ Score composition
+                                  ├─ Check B-roll narrative
+                                  ├─ [Optional] Generate variants
+                                  │  (FAL num_outputs=3)
+                                  └─ Return results + options
+                                      │
+                                      └─ Operator reviews
+                                          │
+                         POST /api/v27/quality-gate-select
+                                {project}
+                                      │
+                         ├─ Select variants per shot
+                         ├─ Copy to first_frames/
+                         └─ Lock frames
+                                      │
+                         [Frames quality-approved & locked]
+                                      │
+                         POST /api/auto/render-videos
+                                      │
+                              ├─ LTX or Kling
+                              └─ Save videos/
+
+─────────────────────────────────────────────────────────────────────────────
+
+DATA FLOW — Quality Gate Endpoints:
+────────────────────────────────────────────────────────────────────────────────
+
+1. ANALYSIS ENDPOINT
+   ────────────────
+
+   POST /api/v27/quality-gate/{project}/{scene_id}
+
+   Input:
+   ┌─ shot_id
+   ├─ frame_url (path to generated first frame)
+   ├─ nano_prompt
+   ├─ shot_type (close_up, medium, wide, etc.)
+   ├─ dialogue_text (if present)
+   ├─ characters (list)
+   ├─ location
+   ├─ generate_variations (true/false)
+   └─ skip_narrative_check (true/false)
+
+   Process:
+   ┌─ Load cast_map.json
+   ├─ Load story_bible.json
+   ├─ Call vision_analyzer()
+   │  ├─ Extract identity features
+   │  ├─ Extract composition (framing %)
+   │  └─ Score against shot_type rules
+   ├─ [If B-roll] Call quality_gate_check_broll_narrative()
+   │  ├─ Detect generic patterns
+   │  ├─ Extract beat keywords
+   │  └─ Generate suggestions
+   ├─ [If generate_variations=true] Call quality_gate_generate_variations()
+   │  ├─ FAL call with num_outputs=3
+   │  ├─ Score all 3 candidates
+   │  └─ Rank by identity + composition
+   └─ Return analysis results
+
+   Output:
+   ┌─ quality_status (APPROVED | VARIATIONS_AVAILABLE | NEEDS_REGEN)
+   ├─ identity_score (0.89)
+   ├─ composition_score (0.82)
+   ├─ variations[] (if requested)
+   │  ├─ variant_id
+   │  ├─ url
+   │  ├─ identity_score
+   │  ├─ composition_score
+   │  └─ ranking (1, 2, 3)
+   ├─ narrative_analysis (for B-roll)
+   │  ├─ is_generic_broll
+   │  ├─ beat_keywords
+   │  ├─ suggestions
+   │  └─ warnings
+   ├─ recommendation (human-readable)
+   └─ operator_action_required (true/false)
+
+
+2. SELECTION ENDPOINT
+   ──────────────────
+
+   POST /api/v27/quality-gate-select/{project}
+
+   Input:
+   ┌─ scene_id
+   └─ selections[] (per shot)
+      ├─ shot_id
+      ├─ selected_variant (null or variant_id)
+      └─ approved (true/false)
+
+   Process:
+   ┌─ For each approved=true shot:
+   │  ├─ If selected_variant:
+   │  │  └─ Copy variant to first_frames/{shot_id}.jpg
+   │  └─ Else:
+   │     └─ Keep original frame in place
+   └─ For each approved=false shot:
+      └─ Mark for regeneration (optional re-prompt)
+
+   Output:
+   ┌─ frames_locked (count)
+   ├─ frames_needing_regen (count)
+   └─ next_endpoint (/api/auto/render-videos)
+
+─────────────────────────────────────────────────────────────────────────────
+
+QUALITY METRICS — Scoring Rules:
+────────────────────────────────────────────────────────────────────────────────
+
+IDENTITY SCORE (0.0 – 1.0):
+  ├─ 0.90–1.00  = Excellent match, approve
+  ├─ 0.80–0.89  = Good match, approve
+  ├─ 0.70–0.79  = Acceptable, consider variation
+  ├─ 0.65–0.69  = Marginal, suggest regen
+  └─ <0.65      = Reject, regen required
+
+COMPOSITION SCORE (0.0 – 1.0):
+  ├─ Close-up (medium_close, close_up, ECU):
+  │  ├─ Target: Face fills 60–85% of frame
+  │  ├─ Success: 0.85+
+  │  └─ Fail: <0.60 (too wide, face not prominent)
+  │
+  ├─ Medium (medium, two_shot):
+  │  ├─ Target: Waist-up visible, room context secondary
+  │  ├─ Success: 0.75+
+  │  └─ Fail: <0.50 (too wide or too tight)
+  │
+  └─ Wide (wide, establishing):
+     ├─ Target: Full geography visible, depth of field
+     ├─ Success: 0.70+
+     └─ Fail: <0.45 (not wide enough)
+
+B-ROLL NARRATIVE:
+  ├─ Generic patterns (FAIL):
+  │  ├─ "empty room"
+  │  ├─ "no people"
+  │  ├─ "environmental detail only"
+  │  ├─ "context shot"
+  │  └─ Generic descriptions without story context
+  │
+  └─ Rich patterns (PASS):
+     ├─ Specific props mentioned
+     ├─ Character action implied
+     ├─ Emotional/atmospheric tone
+     └─ Story beat keywords
+
+─────────────────────────────────────────────────────────────────────────────
+
+VISION INTEGRATION:
+────────────────────────────────────────────────────────────────────────────────
+
+Vision Analyzer (existing service, extended):
+
+  analyze_frame(frame_path, shot_data, cast_map):
+    ├─ Face detection + DINO embedding
+    ├─ Compare to character_reference (from cast_map)
+    ├─ Extract identity features
+    ├─ Return identity_score
+    │
+    ├─ Bounding box detection
+    ├─ Measure face % of frame
+    ├─ Measure eye-line direction
+    ├─ Measure shoulder position
+    └─ Return composition_score (shot_type-aware)
+
+  For dialogue shots:
+    ├─ Check mouth position (dialogue marker validation)
+    ├─ Check eye-line (should match conversation partner)
+    └─ Flag morphing artifacts (frozen face detection)
+
+─────────────────────────────────────────────────────────────────────────────
+
+B-ROLL NARRATIVE ENRICHMENT FLOW:
+────────────────────────────────────────────────────────────────────────────────
+
+Shot: 001_009B (B-roll, establishing library)
+
+     quality_gate_check_broll_narrative()
+            │
+            ├─ Extract description: "library interior, dark wood"
+            ├─ Load story_bible.scenes[001].beats[]
+            ├─ Extract beat keywords: [fireplace, shadows, letter, Eleanor]
+            │
+            └─ Analyze:
+               ├─ Is "library" generic? NO (specific location)
+               ├─ Does description mention story props? NO
+               ├─ Does description imply character action? NO
+               └─ RESULT: is_generic_broll=false, but could be enriched
+                  
+                  Suggestions:
+                  ├─ "Add fireplace prominent in frame (beat keyword)"
+                  ├─ "Show light catching envelope/letter on desk"
+                  └─ "Add subtle character shadow or silhouette"
+
+     → Return to operator as OPTIONAL enhancement
+     → Operator can select original or request variation with enriched prompt
+
+─────────────────────────────────────────────────────────────────────────────
+
+CONTROLLER PHASE STRUCTURE (render_scene):
+────────────────────────────────────────────────────────────────────────────────
+
+  render_scene(scene_id, **kwargs):
+      │
+      ├─ Verify 5 conditions (lines 1054–1126)
+      │  └─ Cast verified, plan locked, etc.
+      │
+      ├─ PROBE SHOT (lines 1141–1191)
+      │  └─ Run hardest shot first as canary
+      │
+      ├─ PHASE A: SHOT AUTHORITY (lines 1194–1220)
+      │  └─ Set resolution, ref cap per shot
+      │
+      ├─ PHASE B: EDITORIAL INTELLIGENCE (lines 1223–1259)
+      │  └─ Tag for reuse, overlay, hold
+      │
+      ├─ PHASE C: META DIRECTOR (lines 1262–1284)
+      │  └─ 8-dimensional readiness
+      │
+      ├─ PHASE D: CONTINUITY MEMORY (lines 1287–1306)
+      │  └─ Initialize spatial state
+      │
+      ├─ PHASE E: FILM ENGINE COMPILE (lines 1309–1412)
+      │  ├─ E1.5: Narrative beat injection
+      │  ├─ E2: Dialogue cinematography
+      │  ├─ E3: Perpetual learning
+      │  ├─ E4: Scene continuity
+      │  ├─ E4b: Blocking analyzer
+      │  └─ E5: Scene visual DNA
+      │
+      ├─ PHASE F: SHOT STATE COMPILE (lines 1627–1671)
+      │  └─ Build ShotState objects
+      │
+      ├─ PHASE G: CHAIN POLICY (lines 1674–1711)
+      │  └─ Classify chain membership
+      │
+      ├─ PHASE H: MODEL ROUTING (lines 1714–1749)
+      │  └─ Route to LTX or Kling
+      │
+      ├─ PHASE I: PAYLOAD VALIDATION (lines 1752–1784)
+      │  └─ Strip invalid FAL params
+      │
+      ├─ PHASE J: QUALITY GATE (lines 1785–NEW) ◄─── INSERT HERE
+      │  └─ [DEFERRED] Post-frame review
+      │     (actual review happens in orchestrator)
+      │
+      └─ EXECUTION (lines 1786+)
+         └─ Call FAL, save results, return
+
+─────────────────────────────────────────────────────────────────────────────
+
+ENDPOINTS SUMMARY:
+────────────────────────────────────────────────────────────────────────────────
+
+  Existing:
+  ├─ POST /api/auto/generate-first-frames (MODIFIED)
+  └─ POST /api/auto/render-videos
+
+  New:
+  ├─ POST /api/v27/quality-gate/{project}/{scene_id}
+  └─ POST /api/v27/quality-gate-select/{project}
+
+  Future (not yet wired):
+  ├─ POST /api/v27/quality-gate/{shot_id}/regenerate
+  │  └─ Regenerate single shot with operator feedback
+  └─ POST /api/v27/quality-gate/{shot_id}/approve-variant
+     └─ Quick-select endpoint for UI
+
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,29 @@
+# ATLAS V13.4 MVP Requirements
+# Install with: pip install -r requirements.txt
+
+# Core Web Framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+starlette>=0.27.0
+python-multipart>=0.0.6
+
+# HTTP Clients
+requests>=2.31.0
+aiohttp>=3.9.0
+httpx>=0.25.0
+websockets>=12.0
+
+# AI/ML API Clients (optional - for rendering)
+fal-client>=0.4.0
+replicate>=0.20.0
+
+# Utilities
+python-dotenv>=1.0.0
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# Optional - for enhanced features
+# torch>=2.0.0          # For local inference
+# transformers>=4.30.0  # For local models
+# opencv-python>=4.8.0  # For video processing

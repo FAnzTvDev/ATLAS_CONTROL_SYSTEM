@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATLAS V26.1 — Live Pipeline Monitor</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'SF Mono', 'Fira Code', monospace; background: #0a0a0f; color: #e0e0e0; }
+.header { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 20px 30px; border-bottom: 2px solid #0f3460; }
+.header h1 { font-size: 22px; color: #e94560; letter-spacing: 2px; }
+.header .session { color: #888; font-size: 12px; margin-top: 4px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 20px; }
+.card { background: #111122; border: 1px solid #222244; border-radius: 8px; padding: 16px; }
+.card h2 { font-size: 14px; color: #e94560; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.subsystem { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #1a1a2e; font-size: 13px; }
+.subsystem .name { color: #aaa; }
+.subsystem .ok { color: #4ade80; }
+.subsystem .fail { color: #f87171; }
+.metric { display: flex; justify-content: space-between; padding: 6px 0; }
+.metric .label { color: #888; font-size: 13px; }
+.metric .value { color: #60a5fa; font-size: 14px; font-weight: bold; }
+.metric .value.good { color: #4ade80; }
+.metric .value.warn { color: #fbbf24; }
+.metric .value.bad { color: #f87171; }
+.phase-bar { display: flex; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
+.phase { padding: 4px 10px; border-radius: 4px; font-size: 11px; text-transform: uppercase; }
+.phase.pass { background: #064e3b; color: #4ade80; }
+.phase.warn { background: #78350f; color: #fbbf24; }
+.phase.fail { background: #7f1d1d; color: #f87171; }
+.phase.active { background: #1e3a5f; color: #60a5fa; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+.shot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin-top: 8px; }
+.shot-card { background: #0a0a1a; border: 1px solid #222; border-radius: 6px; padding: 8px; text-align: center; }
+.shot-card img { width: 100%; height: 80px; object-fit: cover; border-radius: 4px; background: #111; }
+.shot-card .sid { font-size: 11px; color: #888; margin-top: 4px; }
+.shot-card .score { font-size: 12px; font-weight: bold; margin-top: 2px; }
+.ledger-log { max-height: 300px; overflow-y: auto; font-size: 11px; background: #050510; padding: 8px; border-radius: 4px; }
+.ledger-line { padding: 2px 0; border-bottom: 1px solid #111; }
+.ledger-line .type { color: #e94560; }
+.ledger-line .shot { color: #60a5fa; }
+.ledger-line .result { color: #4ade80; }
+.full-width { grid-column: 1 / -1; }
+.refresh-btn { background: #e94560; color: white; border: none; padding: 8px 20px; border-radius: 4px; cursor: pointer; font-family: inherit; font-size: 13px; margin-left: 20px; }
+.refresh-btn:hover { background: #c9304a; }
+.render-btn { background: #2563eb; color: white; border: none; padding: 10px 24px; border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: bold; }
+.render-btn:hover { background: #1d4ed8; }
+.render-btn:disabled { background: #333; cursor: not-allowed; }
+.scene-select { background: #1a1a2e; color: #e0e0e0; border: 1px solid #333; padding: 8px 12px; border-radius: 4px; font-family: inherit; font-size: 13px; }
+.controls { display: flex; gap: 12px; align-items: center; margin-top: 12px; }
+.status-indicator { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+.status-indicator.online { background: #4ade80; box-shadow: 0 0 6px #4ade80; }
+.status-indicator.offline { background: #f87171; }
+.status-indicator.rendering { background: #fbbf24; animation: pulse 1s infinite; }
+#renderLog { white-space: pre-wrap; font-size: 11px; color: #888; max-height: 200px; overflow-y: auto; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div style="display:flex;justify-content:space-between;align-items:center;">
+    <div>
+      <h1>ATLAS V26.1 — LIVE PIPELINE MONITOR</h1>
+      <div class="session">Session: <span id="sessionId">—</span> | Server: <span id="serverStatus">checking...</span></div>
+    </div>
+    <div>
+      <button class="refresh-btn" onclick="refreshAll()">↻ Refresh</button>
+    </div>
+  </div>
+  <div class="controls">
+    <select id="sceneSelect" class="scene-select"></select>
+    <button id="renderBtn" class="render-btn" onclick="renderScene()">▶ RENDER SCENE</button>
+    <span id="renderStatus"></span>
+  </div>
+</div>
+
+<div class="grid">
+  <!-- Subsystems -->
+  <div class="card">
+    <h2>Subsystems (16)</h2>
+    <div id="subsystems"></div>
+  </div>
+
+  <!-- Render Pipeline Phases -->
+  <div class="card">
+    <h2>Render Pipeline Phases</h2>
+    <div id="phases" class="phase-bar"></div>
+    <div style="margin-top: 12px;">
+      <div class="metric"><span class="label">Shots Attempted</span><span class="value" id="shotsAttempted">—</span></div>
+      <div class="metric"><span class="label">Shots Generated</span><span class="value good" id="shotsGenerated">—</span></div>
+      <div class="metric"><span class="label">Shots Halted</span><span class="value" id="shotsHalted">—</span></div>
+      <div class="metric"><span class="label">Prompt Locks Intact</span><span class="value" id="locksIntact">—</span></div>
+    </div>
+  </div>
+
+  <!-- Scene Health -->
+  <div class="card">
+    <h2>Scene Health (8 Dimensions)</h2>
+    <div id="healthDimensions"></div>
+    <div class="metric" style="margin-top: 8px; border-top: 1px solid #333; padding-top: 8px;">
+      <span class="label">Composite Score</span>
+      <span class="value" id="compositeScore">—</span>
+    </div>
+    <div class="metric">
+      <span class="label">Verdict</span>
+      <span class="value" id="healthVerdict">—</span>
+    </div>
+  </div>
+
+  <!-- Contract Audit -->
+  <div class="card">
+    <h2>10-Contract Audit</h2>
+    <div id="contracts"></div>
+  </div>
+
+  <!-- Generated Frames -->
+  <div class="card full-width">
+    <h2>Generated Frames — <span id="frameSceneLabel">Scene 001</span></h2>
+    <div id="frameGrid" class="shot-grid"></div>
+  </div>
+
+  <!-- Ledger -->
+  <div class="card full-width">
+    <h2>V26 Decision Ledger</h2>
+    <div id="ledgerLog" class="ledger-log">Loading...</div>
+  </div>
+
+  <!-- Render Log -->
+  <div class="card full-width">
+    <h2>Render Output</h2>
+    <div id="renderLog">Ready. Select a scene and click RENDER.</div>
+  </div>
+</div>
+
+<script>
+const API = '';  // Same origin
+let lastRenderResult = null;
+let currentProject = 'victorian_shadows_ep1';
+
+async function api(path, method='GET', body=null) {
+  const opts = { method, headers: {'Content-Type': 'application/json'} };
+  if (body) opts.body = JSON.stringify(body);
+  try {
+    const res = await fetch(API + path, opts);
+    return await res.json();
+  } catch(e) {
+    return { error: e.message };
+  }
+}
+
+async function loadStatus() {
+  const data = await api(`/api/v26/status/${currentProject}`);
+  if (data.error) {
+    document.getElementById('serverStatus').innerHTML = '<span class="status-indicator offline"></span>OFFLINE';
+    return;
+  }
+  document.getElementById('serverStatus').innerHTML = '<span class="status-indicator online"></span>ONLINE';
+  document.getElementById('sessionId').textContent = data.session_id || '—';
+
+  // Subsystems
+  const el = document.getElementById('subsystems');
+  el.innerHTML = '';
+  const subs = data.subsystems || {};
+  for (const [name, ok] of Object.entries(subs)) {
+    el.innerHTML += `<div class="subsystem"><span class="name">${name}</span><span class="${ok ? 'ok' : 'fail'}">${ok ? '✅' : '❌'}</span></div>`;
+  }
+
+  // Ledger summary
+  const ledger = data.ledger_summary || {};
+  if (ledger.compliance_pct !== undefined) {
+    document.getElementById('compositeScore').textContent = ledger.compliance_pct.toFixed(1) + '%';
+  }
+}
+
+async function loadScenes() {
+  const data = await api('/api/auto/projects');
+  const proj = (data.projects || []).find(p => p.name === currentProject);
+  const sel = document.getElementById('sceneSelect');
+  sel.innerHTML = '';
+  const count = proj ? proj.scene_count : 13;
+  for (let i = 0; i < count; i++) {
+    const sid = String(i).padStart(3, '0');
+    sel.innerHTML += `<option value="${sid}">Scene ${sid}</option>`;
+  }
+}
+
+async function loadAudit() {
+  const data = await api(`/api/v21/audit/${currentProject}`, 'POST');
+  const el = document.getElementById('contracts');
+  el.innerHTML = '';
+  const contracts = data.contracts || data.results || {};
+  for (const [name, result] of Object.entries(contracts)) {
+    const v = result.violations || result.count || 0;
+    const cls = v === 0 ? 'ok' : 'warn';
+    el.innerHTML += `<div class="subsystem"><span class="name">${name}</span><span class="${cls}">${v === 0 ? '✅ PASS' : '⚠️ ' + v}</span></div>`;
+  }
+}
+
+async function loadFrames(sceneId) {
+  document.getElementById('frameSceneLabel').textContent = `Scene ${sceneId}`;
+  const grid = document.getElementById('frameGrid');
+  grid.innerHTML = '';
+
+  // Try to load bundle to find frames
+  const bundle = await api(`/api/v16/ui/bundle/${currentProject}`);
+  if (bundle.error) return;
+
+  const shots = (bundle.shot_gallery_rows || []).filter(s =>
+    (s.shot_id || '').startsWith(sceneId + '_')
+  );
+
+  for (const shot of shots) {
+    const url = shot.first_frame_url || '';
+    const card = document.createElement('div');
+    card.className = 'shot-card';
+    card.innerHTML = `
+      ${url ? `<img src="${url}" alt="${shot.shot_id}" onerror="this.style.display='none'">` : '<div style="height:80px;background:#111;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#444;font-size:11px;">No frame</div>'}
+      <div class="sid">${shot.shot_id || '?'}</div>
+      <div class="score" style="color:${shot.shot_type === 'close_up' ? '#e94560' : '#60a5fa'}">${shot.shot_type || '?'}</div>
+    `;
+    grid.appendChild(card);
+  }
+}
+
+function displayRenderResult(data) {
+  lastRenderResult = data;
+
+  // Phases
+  const phases = data.phases || {};
+  const phasesEl = document.getElementById('phases');
+  phasesEl.innerHTML = '';
+  const phaseNames = ['shot_authority', 'editorial', 'meta_director', 'continuity_memory', 'film_engine', 'shot_state_compile', 'chain_policy', 'model_routing', 'payload_validation'];
+  for (const name of phaseNames) {
+    const p = phases[name] || {};
+    const hasError = p.error;
+    const cls = hasError ? 'warn' : 'pass';
+    phasesEl.innerHTML += `<span class="phase ${cls}" title="${hasError || 'OK'}">${name.replace(/_/g, ' ')}</span>`;
+  }
+
+  // Render stats
+  const rr = data.render_results || {};
+  document.getElementById('shotsAttempted').textContent = rr.shots_attempted || '—';
+  document.getElementById('shotsGenerated').textContent = rr.shots_generated || '—';
+  document.getElementById('shotsHalted').textContent = rr.shots_halted || '—';
+  document.getElementById('locksIntact').textContent = rr.prompt_locks_intact || '—';
+
+  // Scene health
+  const health = data.scene_health || {};
+  const dims = health.dimensions || {};
+  const dimEl = document.getElementById('healthDimensions');
+  dimEl.innerHTML = '';
+  for (const [dim, score] of Object.entries(dims)) {
+    const pct = (score * 100).toFixed(0);
+    const cls = score >= 0.8 ? 'good' : score >= 0.5 ? 'warn' : 'bad';
+    dimEl.innerHTML += `<div class="metric"><span class="label">${dim.replace(/_/g, ' ')}</span><span class="value ${cls}">${pct}%</span></div>`;
+  }
+  document.getElementById('compositeScore').textContent = ((health.composite_score || 0) * 100).toFixed(1) + '%';
+  document.getElementById('compositeScore').className = 'value ' + ((health.composite_score || 0) >= 0.7 ? 'good' : 'warn');
+  document.getElementById('healthVerdict').textContent = health.verdict || '—';
+  document.getElementById('healthVerdict').className = 'value ' + (health.verdict === 'PASS' ? 'good' : 'warn');
+}
+
+async function renderScene() {
+  const sceneId = document.getElementById('sceneSelect').value;
+  const btn = document.getElementById('renderBtn');
+  const log = document.getElementById('renderLog');
+  const status = document.getElementById('renderStatus');
+
+  btn.disabled = true;
+  btn.textContent = '⏳ RENDERING...';
+  status.innerHTML = '<span class="status-indicator rendering"></span>Generating frames...';
+  log.textContent = `[${new Date().toISOString()}] Starting V26 controller render for Scene ${sceneId}...\n`;
+
+  const data = await api('/api/v26/render', 'POST', {
+    project: currentProject,
+    scene_id: sceneId,
+    mode: 'frames'
+  });
+
+  btn.disabled = false;
+  btn.textContent = '▶ RENDER SCENE';
+
+  if (data.error) {
+    status.innerHTML = '<span class="status-indicator offline"></span>FAILED';
+    log.textContent += `ERROR: ${data.error}\n`;
+    return;
+  }
+
+  const rr = data.render_results || {};
+  status.innerHTML = `<span class="status-indicator online"></span>${rr.shots_generated}/${rr.shots_attempted} generated`;
+  log.textContent += JSON.stringify(data, null, 2);
+
+  displayRenderResult(data);
+  await loadFrames(sceneId);
+}
+
+async function refreshAll() {
+  await Promise.all([loadStatus(), loadScenes(), loadAudit()]);
+  const sceneId = document.getElementById('sceneSelect').value || '001';
+  await loadFrames(sceneId);
+  if (lastRenderResult) displayRenderResult(lastRenderResult);
+}
+
+document.getElementById('sceneSelect').addEventListener('change', (e) => {
+  loadFrames(e.target.value);
+});
+
+// Init
+refreshAll();
+setInterval(loadStatus, 10000);  // Auto-refresh status every 10s
+</script>
+</body>
+</html>

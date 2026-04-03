@@ -1,0 +1,169 @@
+{
+  "atlas_run_report": true,
+  "version": "22.2.0",
+  "generated": "2026-03-04T19:45:48.434296",
+  "project": "ravencroft_v22",
+  "success": true,
+  "phases": {
+    "data_lock": {
+      "status": "PASS",
+      "detail": "OK"
+    },
+    "load_data": {
+      "status": "PASS",
+      "shots": 265,
+      "scenes": 19,
+      "cast": 7,
+      "wardrobe_entries": 36,
+      "extras_entries": 25,
+      "audio_mode": "foley_only"
+    },
+    "v22_modules": {
+      "status": "PASS",
+      "modules": [
+        {
+          "module": "actor_intent",
+          "enriched": 147,
+          "total": 265
+        },
+        {
+          "module": "delta_prompt",
+          "chained": 24,
+          "anchors": 0
+        },
+        {
+          "module": "composition_cache",
+          "unique": 142,
+          "savings_pct": 46.4,
+          "reuse_groups": 49
+        },
+        {
+          "module": "continuity_store",
+          "shots_tracked": 265
+        }
+      ]
+    },
+    "chain_detection": {
+      "status": "PASS",
+      "chain_groups": 14,
+      "chained_shots": 43,
+      "chains": {
+        "CHAIN_001_01": 2,
+        "CHAIN_004_01": 4,
+        "CHAIN_005_01": 2,
+        "CHAIN_006_01": 3,
+        "CHAIN_007_01": 2,
+        "CHAIN_008_01": 5,
+        "CHAIN_009_01": 4,
+        "CHAIN_011_01": 3,
+        "CHAIN_012_01": 5,
+        "CHAIN_012_02": 4,
+        "CHAIN_013_01": 3,
+        "CHAIN_013_02": 2,
+        "CHAIN_016_01": 2,
+        "CHAIN_019_01": 2
+      }
+    },
+    "preflight": {
+      "status": "PASS",
+      "total_checks": 10,
+      "passed": 10,
+      "halt_failures": 0,
+      "warnings": 0,
+      "checks": [
+        {
+          "name": "character_refs",
+          "passed": true,
+          "detail": "147/147 character shots have refs",
+          "severity": "WARN"
+        },
+        {
+          "name": "wardrobe_present",
+          "passed": true,
+          "detail": "147/147 character shots have wardrobe coverage",
+          "severity": "WARN"
+        },
+        {
+          "name": "chain_groups_detected",
+          "passed": true,
+          "detail": "24 shots in chain groups",
+          "severity": "WARN"
+        },
+        {
+          "name": "actor_intent_enriched",
+          "passed": true,
+          "detail": "147/265 shots have actor intent",
+          "severity": "WARN"
+        },
+        {
+          "name": "ltx_prompts_present",
+          "passed": true,
+          "detail": "265/265 shots have LTX motion prompts",
+          "severity": "HALT"
+        },
+        {
+          "name": "nano_prompts_present",
+          "passed": true,
+          "detail": "265/265 shots have nano prompts",
+          "severity": "HALT"
+        },
+        {
+          "name": "cast_map_complete",
+          "passed": true,
+          "detail": "All characters in cast_map",
+          "severity": "WARN"
+        },
+        {
+          "name": "durations_present",
+          "passed": true,
+          "detail": "265/265 shots have durations",
+          "severity": "HALT"
+        },
+        {
+          "name": "no_duplicate_enrichment",
+          "passed": true,
+          "detail": "0 shots have duplicate enrichment blocks",
+          "severity": "WARN"
+        },
+        {
+          "name": "scene_coverage",
+          "passed": true,
+          "detail": "19 unique scenes in shots",
+          "severity": "WARN"
+        }
+      ]
+    },
+    "save": {
+      "status": "PASS",
+      "path": "/sessions/beautiful-sharp-pasteur/mnt/ATLAS_CONTROL_SYSTEM/pipeline_outputs/ravencroft_v22/shot_plan.json"
+    }
+  },
+  "stats": {
+    "total_shots": 265,
+    "total_scenes": 19,
+    "character_shots": 147,
+    "broll_shots": 166,
+    "chained_shots": 43,
+    "independent_shots": 222,
+    "chain_groups": 14,
+    "actor_intent_enriched": 147,
+    "delta_prompts": 24,
+    "composition_hashes": 265,
+    "modules_fired": [
+      "actor_intent",
+      "delta_prompt",
+      "composition_cache",
+      "continuity_store"
+    ],
+    "cast_characters": 7,
+    "wardrobe_entries": 36,
+    "audio_mode": "foley_only"
+  },
+  "errors": [],
+  "warnings": [],
+  "locks": {
+    "route_lock": "Master Chain Renderer only",
+    "data_lock": "Project: ravencroft_v22",
+    "prompt_authority": "All prompts from shot_plan pipeline"
+  }
+}

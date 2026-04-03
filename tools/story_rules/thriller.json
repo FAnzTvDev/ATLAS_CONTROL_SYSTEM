@@ -1,0 +1,114 @@
+{
+  "genre": "thriller",
+  "required_narrative_fields": [
+    "ticking_clock",
+    "information_asymmetry",
+    "moral_ambiguity",
+    "action_consequence_chain",
+    "trust_erosion"
+  ],
+  "narrative_rules": {
+    "ticking_clock": "Deadline creates urgency - time running out",
+    "information_asymmetry": "Audience/protagonist knows different things at different times",
+    "moral_ambiguity": "No pure heroes or villains - everyone compromised",
+    "action_consequence_chain": "Every choice ripples forward, no resets",
+    "trust_erosion": "Allies become enemies, assumptions shatter"
+  },
+  "motifs": [
+    "paranoia",
+    "surveillance",
+    "double_cross",
+    "race_against_time",
+    "revelation_cascade",
+    "phones_that_ring",
+    "watches_and_clocks",
+    "doors_that_open_wrong_moment"
+  ],
+  "pace_expectations": {
+    "act_1": {
+      "pacing": "setup_rapid",
+      "shot_duration": "8-15 seconds",
+      "editing_rhythm": "quick_establishment"
+    },
+    "act_2": {
+      "pacing": "acceleration_constant",
+      "shot_duration": "5-12 seconds",
+      "editing_rhythm": "mounting_pressure"
+    },
+    "act_3": {
+      "pacing": "breakneck_convergence",
+      "shot_duration": "3-8 seconds",
+      "editing_rhythm": "rapid_cross_cutting"
+    }
+  },
+  "default_lens_choices": {
+    "tension": {
+      "lens_mm": 50,
+      "why": "Neutral observation, no distortion, documentary feel"
+    },
+    "action": {
+      "lens_mm": 24-35,
+      "why": "Handheld wide for kinetic energy"
+    },
+    "revelation": {
+      "lens_mm": 85,
+      "why": "Tight reaction shot for dawning realization"
+    },
+    "pursuit": {
+      "lens_mm": 16,
+      "why": "Ultra-wide distortion creates disorientation"
+    }
+  },
+  "default_camera_moves": {
+    "paranoia": "slow_360_reveal",
+    "action": "handheld_kinetic",
+    "tension": "creeping_dolly",
+    "climax": "crane_up_god_view",
+    "revelation": "crash_zoom_into_face",
+    "chase": "steadicam_pursuit"
+  },
+  "default_lighting": {
+    "style": "high_contrast_noir",
+    "color_temp": "neutral_5600K",
+    "ratios": "6:1 dramatic",
+    "atmosphere": "harsh_shadows_urban",
+    "avoid": ["flat_even_lighting", "warm_cozy_tones"]
+  },
+  "sound_requirements": [
+    "rapid_dialogue_overlapping",
+    "heartbeat_score_rising",
+    "clock_ticking_prominent",
+    "phone_ring_cuts_silence",
+    "breathing_when_hiding"
+  ],
+  "subgenres": {
+    "spy": {
+      "modifiers": "International locations, gadgets, double agents",
+      "reference": "Three Days of the Condor (1975)"
+    },
+    "conspiracy": {
+      "modifiers": "Systems of power, paranoia, everyone is in on it",
+      "reference": "The Parallax View (1974)"
+    },
+    "legal": {
+      "modifiers": "Courtroom, evidence, procedural, moral complexity",
+      "reference": "The Verdict (1982)"
+    },
+    "techno": {
+      "modifiers": "Surveillance, hacking, digital footprints",
+      "reference": "Enemy of the State (1998)"
+    },
+    "psychological": {
+      "modifiers": "Unreliable narrator, mental manipulation, gaslighting",
+      "reference": "Shutter Island (2010)"
+    }
+  },
+  "forbidden_elements": [
+    "slow_pacing_without_justification",
+    "protagonists_waiting_around",
+    "deus_ex_machina_saves",
+    "convenient_coincidences",
+    "villains_explaining_plans"
+  ],
+  "citation": "Thriller narrative theory, genre conventions analysis"
+}

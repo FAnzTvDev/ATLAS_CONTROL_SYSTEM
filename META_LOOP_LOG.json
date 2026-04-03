@@ -1,0 +1,142 @@
+{
+  "project": "RAVENCROFT_MANOR_EP1_001",
+  "scene": "The Ritual - Cold Open",
+  "meta_loop_cycles": [
+    {
+      "cycle": 1,
+      "version": "V1-V5",
+      "date": "2025-12-01",
+      "iterations": [
+        {
+          "version": "V1",
+          "changes": "Initial video generation with hardcoded short prompts",
+          "issues": "Wrong prompts, no dialog, wrong timecode"
+        },
+        {
+          "version": "V2",
+          "changes": "Read ltx_motion_prompt from manifest, added quantum enhancement",
+          "issues": "No dialog injection, no SFX"
+        },
+        {
+          "version": "V3",
+          "changes": "Added SFX injection (crying, scream)",
+          "issues": "Added soundscapes by mistake - user said NO soundscapes"
+        },
+        {
+          "version": "V4",
+          "changes": "SFX only (no soundscapes), added actual script dialog from L4_full",
+          "issues": "Dialog not announced clearly, still using num_frames not duration"
+        },
+        {
+          "version": "V5",
+          "changes": "Full manifest rewrite with reveal structure, continuous audio design, character visibility rules",
+          "issues_from_review": [
+            "Incantation not truly continuous through all shots",
+            "20-second shot truncated (was using num_frames limit)",
+            "Empty rooms in shots 2-3 when Margaret should be visible",
+            "Shadow figure doesn't match master frame",
+            "No dialog overlap in climax - should have Margaret OVER scream"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 2,
+      "version": "V6_METALOOP",
+      "date": "2025-12-01",
+      "human_refinement_feedback": [
+        "Incantations must sound THROUGH ALL shots - continuous, not dropping",
+        "Woman's dialog changed - need consistent extended incantation",
+        "Birds/ravens continuation was GOOD - keep that",
+        "NOT sticking to 20-second first shot - use duration parameter!",
+        "Lady dialog too short - need full incantation spanning all shots",
+        "Shadow figures not constant from master shot - must match lighting",
+        "Can't show empty room if character supposed to be there",
+        "Lady needs to SPEAK WHILE girl screams - overlap in climax"
+      ],
+      "api_discovery": {
+        "issue": "Was using num_frames parameter (max 121 = ~5s)",
+        "solution": "LTX v2 supports duration parameter: 6, 8, 10, 12, 14, 16, 18, 20 seconds",
+        "note": "Durations 12-20s require 25fps and 1080p"
+      },
+      "fixes_applied": [
+        "Using duration parameter instead of num_frames",
+        "Shot 1 now full 20 seconds",
+        "Margaret visible in shots 2-3 (hands visible, figure at altar)",
+        "Full extended incantation: 9 parts spanning all shots",
+        "Each shot has specific incantation_segment and incantation_level",
+        "Shot 7 explicitly matches master frame lighting",
+        "Shot 8: Margaret continues OVER child crying",
+        "Shot 9: Margaret SHOUTS final words OVER child scream - simultaneous climax"
+      ],
+      "issues_from_v6_review": [
+        "Shot 06 generated as 6-panel grid instead of single frame",
+        "Shot 08 has cult members in background - Margaret should be ALONE",
+        "Baby visible in background somewhere - NOT in script",
+        "Character consistency - Margaret face varies between shots",
+        "Chamber architecture varies between interior shots"
+      ]
+    },
+    {
+      "cycle": 3,
+      "version": "V7_QUANTUM_REFINED",
+      "date": "2025-12-01",
+      "human_refinement_feedback_v7": [
+        "INTRO WAS AMAZING - keep shot 01 approach",
+        "Shot 02 zooming out TOO FAST - slow down camera motion",
+        "ALL interior shots need IDENTICAL color/texture/lighting",
+        "Shot 08 cult members - either match everything or REMOVE THEM",
+        "Margaret and child voices SIMULTANEOUS - not Margaret lip-syncing child lines",
+        "BABY IN BACKGROUND - remove, not in script",
+        "Shot 09 empty room makes NO SENSE - candles should blow out but STILL BE VISIBLE",
+        "Better VOCAL SIGNATURE descriptions needed for dialog",
+        "Apply all metalearning to FULL EPISODE profile"
+      ],
+      "critical_fixes_v7": [
+        "Add negative prompts: 'no other people, no cult members, no babies, no grid, no collage, Margaret ALONE'",
+        "Slow camera motion in shot 02: 'very slow crane, glacial pace'",
+        "Force lighting consistency: 'tungsten candlelight 2700K, deep amber shadows, identical to shot 02'",
+        "Shot 09 fix: 'candles extinguished but still present, smoke wisps, chamber STILL VISIBLE'",
+        "Dialog tone markers: 'ancient resonant whisper', 'terrified child whimper', 'commanding ritual shout'",
+        "Simultaneous audio: 'Margaret's voice AND child scream LAYERED, both audible, not sequential'"
+      ],
+      "quantum_integration": {
+        "purpose": "Enhance motion variety while maintaining consistency",
+        "method": "100-shot measurement simulation per shot",
+        "motifs_applied": {
+          "shot_01": "arcane symbols illuminating",
+          "shot_02": "metal implements glinting",
+          "shot_03": "candlelight flickering with shadow dance",
+          "shot_04": "shadows stretching/contracting",
+          "shot_05": "supernatural glow intensifying",
+          "shot_06": "cobwebs trembling",
+          "shot_07": "crimson light bleeding",
+          "shot_08": "dust motes spiraling",
+          "shot_09": "ravens wings casting shadows"
+        }
+      }
+    }
+  ],
+  "key_learnings": [
+    "Always check API schema for correct parameters (duration vs num_frames)",
+    "Continuous audio requires explicit threading through every shot prompt",
+    "Character visibility must be consistent - no sudden appearance/disappearance",
+    "Dialog overlap requires both voices mentioned in same prompt as LAYERED/SIMULTANEOUS",
+    "Master frame lighting must be explicitly matched in derivative shots",
+    "Negative prompts essential: 'no other people, no grid, no collage, ALONE'",
+    "Camera motion speed must be explicit: 'very slow', 'glacial', 'deliberate'",
+    "Interior consistency: reference exact color temperature and lighting setup",
+    "After-climax shots: objects remain visible even if effect ends",
+    "Vocal signatures help LTX generate better implied audio: 'ancient whisper', 'terrified whimper'",
+    "Human review catches issues AI analysis misses"
+  ],
+  "director_profile_learnings": {
+    "camera_motion": "ALWAYS glacial/very slow unless action beat",
+    "lighting_reference": "Lock to master frame, specify color temp (2700K tungsten)",
+    "character_isolation": "ALWAYS specify 'ALONE, no other people' unless script says otherwise",
+    "audio_layering": "SIMULTANEOUS/LAYERED not sequential for overlapping voices",
+    "negative_prompts": "Standard: 'no grid, no collage, no babies, no cult members unless specified'",
+    "post_climax": "Objects remain visible, just affected (candles out but present)",
+    "vocal_descriptors": "Add tone: 'ancient resonant', 'terrified whimper', 'commanding shout'"
+  }
+}

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>ATLAS V27.2 — Scene 001 Continuity Assessment</title>
+<style>
+body { background: #0a0e1a; color: #e2e8f0; font-family: 'Inter', sans-serif; padding: 20px; margin: 0; }
+h1 { color: #3b82f6; margin-bottom: 5px; }
+.subtitle { color: #94a3b8; margin-bottom: 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 16px; }
+.card { background: #111827; border: 1px solid #334155; border-radius: 8px; overflow: hidden; }
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card-body { padding: 12px; }
+.shot-id { font-weight: 700; color: #3b82f6; font-size: 14px; }
+.shot-type { color: #94a3b8; font-size: 12px; margin-left: 8px; }
+.chars { color: #f59e0b; font-size: 11px; margin-top: 4px; }
+.section { margin-top: 8px; }
+.section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+.lighting { color: #f59e0b; }
+.framing { color: #06b6d4; }
+.blocking { color: #10b981; }
+.flags { color: #ef4444; }
+.tag { display: inline-block; background: #1e293b; padding: 2px 6px; border-radius: 3px; font-size: 10px; margin: 1px; }
+.tag.ok { border-left: 2px solid #10b981; }
+.tag.enriched { border-left: 2px solid #f59e0b; }
+.tag.missing { border-left: 2px solid #ef4444; }
+.grade { font-size: 24px; font-weight: 800; padding: 4px 12px; border-radius: 6px; display: inline-block; }
+.grade-a { background: #10b981; color: #000; }
+.grade-b { background: #3b82f6; color: #fff; }
+.grade-c { background: #f59e0b; color: #000; }
+.grade-d { background: #ef4444; color: #fff; }
+.summary { background: #111827; border: 1px solid #334155; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+.bar { height: 6px; border-radius: 3px; margin: 4px 0; }
+.bar-fill { height: 100%; border-radius: 3px; }
+</style></head><body>
+<h1>ATLAS V27.2 — Scene 001 Continuity Assessment</h1>
+<p class="subtitle">Lighting Lock + Framing Sync + Blocking Audit | 2026-03-16 21:37</p>
+
+<div class="summary">
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">
+<div>
+<div style="font-size:11px;color:#94a3b8;">SCENE GRADE</div>
+<div class="grade grade-d">D → B</div>
+<div style="font-size:10px;color:#94a3b8;margin-top:4px;">Before → After enforcement</div>
+</div>
+<div style="flex:1;">
+<div style="font-size:12px;margin-bottom:4px;">Lighting Lock: <span class="lighting">FOYER</span> — dim natural light from tall arched windows, deep charcoal shadows</div>
+<div style="font-size:12px;margin-bottom:4px;">Room Detection: Story Bible → "HARGROVE ESTATE - GRAND FOYER" (priority 1)</div>
+<div style="font-size:12px;">Per-shot overrides: 001_001A=cemetery, 001_003B=exterior</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;font-size:12px;">
+<div>LIGHTING: 4/12 shots enriched<div class="bar" style="background:#1e293b;"><div class="bar-fill" style="width:33%;background:#f59e0b;"></div></div></div>
+<div>FRAMING: 11/12 shots enriched<div class="bar" style="background:#1e293b;"><div class="bar-fill" style="width:92%;background:#06b6d4;"></div></div></div>
+<div>BLOCKING: 3/12 shots enriched<div class="bar" style="background:#1e293b;"><div class="bar-fill" style="width:25%;background:#10b981;"></div></div></div>
+</div>
+</div>
+
+<div class="grid">
+
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_001A.jpg" alt="001_001A" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_001A</span><span class="shot-type">establishing</span></div>
+            <div class="chars">No characters</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">COLD OPEN: Rain-soaked cemetery at dawn. Fresh burial mound with white flowers wilting. Black-clad m...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag ok">overcast</span><span class="tag ok">dawn</span><span class="tag ok">muted</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">35mm</span><span class="tag enriched">deep</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag missing">none detected</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>framing:dof_injected:deep</span><span class='tag missing'>framing:composition_injected</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_002B.jpg" alt="001_002B" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_002B</span><span class="shot-type">insert</span></div>
+            <div class="chars">No characters</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">INSERT: Television screen showing a local news broadcast. Newsreader behind desk, graphic showing th...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag ok">warm</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">50mm</span><span class="tag enriched">shallow depth</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag ok">enters</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>framing:composition_injected</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_003B.jpg" alt="001_003B" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_003B</span><span class="shot-type">establishing</span></div>
+            <div class="chars">No characters</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">DRONE: Overhead aerial shot looking straight down at the Hargrove Estate. Grand Victorian manor surr...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag ok">overcast</span><span class="tag ok">muted</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">24mm</span><span class="tag enriched">deep</span><span class="tag enriched">overhead</span><span class="tag enriched">drone</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag missing">none detected</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>framing:dof_injected:deep</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_004B.jpg" alt="001_004B" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_004B</span><span class="shot-type">medium</span></div>
+            <div class="chars">THOMAS BLACKWOOD</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">Thomas Blackwood enters the grand foyer behind Eleanor. He stops at the threshold, hand instinctivel...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag ok">warm</span><span class="tag ok">cool</span><span class="tag ok">amber</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">50mm</span><span class="tag enriched">deep</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag enriched">enters</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>framing:composition_injected</span><span class='tag missing'>blocking:auto_injected:THOMAS BLACKWOOD enters thr</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_005B.jpg" alt="001_005B" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_005B</span><span class="shot-type">over_the_shoulder</span></div>
+            <div class="chars">THOMAS BLACKWOOD, ELEANOR VOSS</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag ok">shadow</span><span class="tag ok">charcoal</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">bokeh</span><span class="tag enriched">shallow depth</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag ok">eyeline</span><span class="tag ok">facing camera</span><span class="tag ok">shoulder</span><span class="tag ok">foreground</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>framing:composition_injected</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_006B.jpg" alt="001_006B" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_006B</span><span class="shot-type">over_the_shoulder</span></div>
+            <div class="chars">THOMAS BLACKWOOD, ELEANOR VOSS</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag ok">shadow</span><span class="tag ok">charcoal</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">85mm</span><span class="tag enriched">bokeh</span><span class="tag enriched">shallow depth</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag ok">eyeline</span><span class="tag ok">facing camera</span><span class="tag ok">shoulder</span><span class="tag ok">foreground</span><span class="tag ok">holds</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>framing:composition_injected</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_007B.jpg" alt="001_007B" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_007B</span><span class="shot-type">two_shot</span></div>
+            <div class="chars">THOMAS BLACKWOOD, ELEANOR VOSS</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag enriched">shadow</span><span class="tag enriched">dim</span><span class="tag enriched">charcoal</span><span class="tag enriched">natural light</span><span class="tag enriched">arched windows</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">50mm</span><span class="tag enriched">f/2.8</span><span class="tag enriched">deep</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag ok">eyeline</span><span class="tag ok">stands</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>lighting:scene_lock_injected:foyer</span><span class='tag missing'>framing:dof_injected:medium f/2.8</span><span class='tag missing'>framing:composition_injected</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_008B.jpg" alt="001_008B" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_008B</span><span class="shot-type">medium_close</span></div>
+            <div class="chars">ELEANOR VOSS</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag enriched">shadow</span><span class="tag enriched">dim</span><span class="tag enriched">charcoal</span><span class="tag enriched">natural light</span><span class="tag enriched">arched windows</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">85mm</span><span class="tag enriched">deep</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag enriched">eyeline</span><span class="tag enriched">holds</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>lighting:scene_lock_injected:foyer</span><span class='tag missing'>framing:composition_injected</span><span class='tag missing'>blocking:auto_injected:ELEANOR VOSS holds position</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_009B.jpg" alt="001_009B" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_009B</span><span class="shot-type">medium_close</span></div>
+            <div class="chars">THOMAS BLACKWOOD</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag enriched">shadow</span><span class="tag enriched">dim</span><span class="tag enriched">charcoal</span><span class="tag enriched">natural light</span><span class="tag enriched">arched windows</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">85mm</span><span class="tag enriched">f/1.4</span><span class="tag enriched">deep</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag ok">eyeline</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>lighting:scene_lock_injected:foyer</span><span class='tag missing'>framing:dof_injected:shallow f/1.4-2.0</span><span class='tag missing'>framing:composition_injected</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_010B.jpg" alt="001_010B" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_010B</span><span class="shot-type">wide</span></div>
+            <div class="chars">THOMAS BLACKWOOD, ELEANOR VOSS</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag enriched">dim</span><span class="tag enriched">charcoal</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag ok">35mm</span><span class="tag ok">deep</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag ok">eyeline</span><span class="tag ok">stands</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>lighting:scene_lock_injected:foyer</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_011C.jpg" alt="001_011C" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_011C</span><span class="shot-type">reaction</span></div>
+            <div class="chars">ELEANOR VOSS</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">Eleanor absorbs Thomas defiance. Her jaw tightens. She looks down at the folder in her hands, then b...</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag ok">cool</span><span class="tag ok">amber</span><span class="tag ok">shadow</span><span class="tag ok">charcoal</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">50mm</span><span class="tag enriched">f/1.4</span><span class="tag enriched">bokeh</span><span class="tag enriched">deep</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag ok">facing camera</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>framing:dof_injected:shallow f/1.4</span><span class='tag missing'>framing:composition_injected</span><span class='tag missing'>blocking:missing_eyeline</span></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/api/media?path=pipeline_outputs/victorian_shadows_ep1/first_frames/001_012A.jpg" alt="001_012A" onerror="this.style.background='#1e293b';this.style.height='200px';">
+        <div class="card-body">
+            <div><span class="shot-id">001_012A</span><span class="shot-type">closing</span></div>
+            <div class="chars">THOMAS BLACKWOOD, ELEANOR VOSS</div>
+            <div style="font-size:11px;color:#64748b;margin-top:4px;">Wide pull-back: two figures in vast foyer, separated by dusty space. Neither moves toward the other....</div>
+            
+            <div class="section">
+                <div class="section-label lighting">Lighting</div>
+                <span class="tag ok">cool</span><span class="tag ok">amber</span><span class="tag ok">shadow</span><span class="tag ok">charcoal</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label framing">Framing</div>
+                <span class="tag enriched">50mm</span><span class="tag enriched">deep</span>
+            </div>
+            
+            <div class="section">
+                <div class="section-label blocking">Blocking</div>
+                <span class="tag enriched">stands</span>
+            </div>
+            
+            <div class="section"><div class="section-label flags">Flags</div><span class='tag missing'>framing:dof_injected:medium-deep</span><span class='tag missing'>framing:composition_injected</span><span class='tag missing'>blocking:auto_injected:THOMAS BLACKWOOD stands mot</span></div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="summary" style="margin-top:20px;">
+<h3 style="color:#3b82f6;margin-bottom:8px;">System Status: What's Enforced</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:12px;">
+<div>
+<div style="color:#10b981;font-weight:700;margin-bottom:4px;">✅ ENFORCED (Pre-Generation)</div>
+<div>• Screen position lock (180° rule) — Thomas RIGHT, Eleanor LEFT</div>
+<div>• Room-lock — all interior shots stay in Grand Foyer</div>
+<div>• Eye-line inheritance — close-ups look toward partner</div>
+<div>• Dialogue duration protection — won't cut mid-sentence</div>
+<div>• Scene lighting lock — foyer profile applied to all shots</div>
+<div>• Framing rules — lens/DOF/composition per shot type</div>
+<div>• Blocking audit — physical direction for character shots</div>
+</div>
+<div>
+<div style="color:#f59e0b;font-weight:700;margin-bottom:4px;">⚠ ADVISORY ONLY (Post-Generation)</div>
+<div>• Vision analyst color/environment scoring</div>
+<div>• Cross-shot memory drift detection</div>
+<div>• Continuity gate state tracking</div>
+<div style="color:#ef4444;font-weight:700;margin-top:12px;">❌ NOT YET IMPLEMENTED</div>
+<div>• Key light direction tracking across shots</div>
+<div>• Color temperature Kelvin enforcement</div>
+<div>• Exposure/brightness continuity gate</div>
+<div>• Compositional micro-rules (rule of thirds, headroom)</div>
+</div>
+</div>
+</div>
+
+</body></html>

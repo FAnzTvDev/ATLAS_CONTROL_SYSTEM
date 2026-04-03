@@ -1,0 +1,81 @@
+[
+  {
+    "id": "rec_001",
+    "type": "lighting_bias",
+    "message": "Analysis of 6 shots shows 85% success rate with tungsten-cool split lighting (exterior_cool: 0.55, interior_warm: 0.45). Recommend updating default cinematography lighting bias.",
+    "confidence": 0.85,
+    "status": "approved",
+    "suggested_value": {
+      "exterior_cool": 0.55,
+      "interior_warm": 0.45
+    },
+    "evidence": {
+      "shots_analyzed": 6,
+      "average_score": 4.5,
+      "pattern_frequency": 0.85,
+      "std_dev": 0.12
+    },
+    "created_at": "2025-11-14T09:50:00Z"
+  },
+  {
+    "id": "rec_002",
+    "type": "camera_motivation",
+    "message": "Observer tension camera motivation achieved highest ratings (avg 4.67/5.0) across arrival and foyer scenes. Recommend as default for gothic horror establishing shots.",
+    "confidence": 0.88,
+    "status": "approved",
+    "suggested_value": "observer tension",
+    "evidence": {
+      "shots_analyzed": 4,
+      "average_score": 4.67,
+      "pattern_frequency": 1.0,
+      "std_dev": 0.08
+    },
+    "created_at": "2025-11-14T09:50:15Z"
+  },
+  {
+    "id": "rec_003",
+    "type": "atmospheric_density",
+    "message": "Atmospheric density of 0.50-0.60 correlates with highest visual poetry scores (avg 4.8/5.0). Creates optimal 'particulate haze' effect for gothic atmosphere.",
+    "confidence": 0.82,
+    "status": "rejected",
+    "suggested_value": {
+      "min": 0.5,
+      "max": 0.6,
+      "optimal": 0.55
+    },
+    "evidence": {
+      "shots_analyzed": 6,
+      "average_score": 4.8,
+      "pattern_frequency": 0.75,
+      "std_dev": 0.14
+    },
+    "created_at": "2025-11-14T09:50:30Z"
+  },
+  {
+    "id": "rec_004",
+    "type": "shot_variety",
+    "message": "Wide (24mm) \u2192 Medium (50mm) \u2192 Closeup (85mm) progression achieved 95% narrative clarity. Recommend as standard beat coverage pattern.",
+    "confidence": 0.92,
+    "status": "pending",
+    "suggested_value": {
+      "pattern": "wide_medium_closeup",
+      "focal_lengths": [
+        "24mm",
+        "50mm",
+        "85mm"
+      ],
+      "durations": [
+        8,
+        10,
+        10
+      ]
+    },
+    "evidence": {
+      "beats_analyzed": 3,
+      "average_clarity": 4.67,
+      "pattern_frequency": 1.0,
+      "std_dev": 0.05
+    },
+    "created_at": "2025-11-14T09:50:45Z"
+  }
+]

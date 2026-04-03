@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-11-05",
+    "purpose": "Granular DINOv3 quality thresholds for Phase 8.7+ QC validation",
+    "model": "DINOv3 ViT-L/14 from Facebook AI Research"
+  },
+
+  "global_threshold": {
+    "overall_score": 0.90,
+    "description": "Minimum acceptable combined score across all features"
+  },
+
+  "granular_thresholds": {
+    "face_consistency": {
+      "threshold": 0.92,
+      "weight": 0.40,
+      "description": "Facial features match character reference (eyes, nose, mouth, bone structure)",
+      "failure_action": "regen_with_stronger_reference_weight",
+      "critical": true
+    },
+    "costume_consistency": {
+      "threshold": 0.88,
+      "weight": 0.25,
+      "description": "Wardrobe matches character bible specifications",
+      "failure_action": "regen_with_costume_emphasis",
+      "critical": false
+    },
+    "lighting_consistency": {
+      "threshold": 0.85,
+      "weight": 0.15,
+      "description": "Lighting style matches scene specifications (color temp, ratios, atmosphere)",
+      "failure_action": "adjust_prompt_lighting_params",
+      "critical": false
+    },
+    "composition_quality": {
+      "threshold": 0.87,
+      "weight": 0.10,
+      "description": "Framing, rule of thirds, depth staging per ShotSpec",
+      "failure_action": "regen_with_composition_emphasis",
+      "critical": false
+    },
+    "period_authenticity": {
+      "threshold": 0.90,
+      "weight": 0.10,
+      "description": "No anachronisms (modern elements, wrong era props/costumes)",
+      "failure_action": "regen_with_period_constraints",
+      "critical": true
+    }
+  },
+
+  "combined_score_formula": {
+    "description": "Weighted average of all granular scores",
+    "formula": "score = (face * 0.40) + (costume * 0.25) + (lighting * 0.15) + (composition * 0.10) + (period * 0.10)",
+    "pass_condition": "combined_score >= global_threshold AND all critical thresholds met"
+  },
+
+  "failure_actions": {
+    "regen_with_stronger_reference_weight": {
+      "description": "Increase character reference influence in prompt",
+      "parameters": {
+        "reference_strength": 0.90,
+        "prompt_modification": "Add 'exact facial features from reference' emphasis"
+      }
+    },
+    "regen_with_costume_emphasis": {
+      "description": "Add detailed costume description to prompt",
+      "parameters": {
+        "costume_detail_level": "high",
+        "prompt_modification": "Prepend full costume description from character bible"
+      }
+    },
+    "adjust_prompt_lighting_params": {
+      "description": "Strengthen lighting specifications in prompt",
+      "parameters": {
+        "lighting_detail_level": "technical",
+        "prompt_modification": "Add color temperature, ratios, and source positions"
+      }
+    },
+    "regen_with_composition_emphasis": {
+      "description": "Add specific composition rules to prompt",
+      "parameters": {
+        "composition_rules": ["rule_of_thirds", "depth_staging", "leading_lines"],
+        "prompt_modification": "Add framing and composition technical specs"
+      }
+    },
+    "regen_with_period_constraints": {
+      "description": "Add explicit period constraints and forbidden elements",
+      "parameters": {
+        "period": "1893_victorian",
+        "forbidden": ["modern_zippers", "synthetic_fabrics", "led_lights", "digital_displays"],
+        "prompt_modification": "Add 'no modern elements' negative prompt"
+      }
+    }
+  },
+
+  "logging": {
+    "log_file": "logs/dinov3_scores.log",
+    "log_format": "{timestamp} | {shot_id} | face:{face_score} costume:{costume_score} lighting:{lighting_score} composition:{composition_score} period:{period_score} | combined:{combined_score} | {pass_fail}",
+    "failed_shots_manifest": "logs/dinov3_failures.json"
+  },
+
+  "phase_8_7_integration": {
+    "description": "How this integrates with existing Phase 8.7 pipeline",
+    "workflow": [
+      "1. nano-banana generates 3 candidates per shot",
+      "2. DINOv3 scores each candidate with granular thresholds",
+      "3. Select highest scoring candidate that passes all critical thresholds",
+      "4. If no candidate passes, trigger failure_action based on lowest scoring feature",
+      "5. Regenerate with adjusted prompt, score again (max 2 retries)",
+      "6. If still failing, flag for human review"
+    ]
+  },
+
+  "human_review_triggers": {
+    "face_consistency_below_0_85": "Critical character mismatch",
+    "period_authenticity_below_0_80": "Anachronism detected",
+    "all_retries_exhausted": "System unable to meet thresholds",
+    "combined_score_below_0_85": "Overall quality insufficient"
+  },
+
+  "calibration_notes": {
+    "face_threshold_0_92": "Tested on 50 character shots, 92% ensures recognizable features",
+    "costume_threshold_0_88": "Allows minor variations while maintaining character identity",
+    "lighting_threshold_0_85": "Permits artistic interpretation within style guide",
+    "composition_threshold_0_87": "Enforces professional framing without being rigid",
+    "period_threshold_0_90": "Strict to prevent immersion-breaking anachronisms"
+  },
+
+  "future_enhancements": {
+    "todo": [
+      "Add motion consistency threshold for ltx-video outputs",
+      "Implement ghost entity visual signature validation",
+      "Add dialogue lip-sync accuracy scoring",
+      "Create director style adherence metrics (Tarkovsky pacing, Kubrick symmetry, etc.)"
+    ]
+  }
+}

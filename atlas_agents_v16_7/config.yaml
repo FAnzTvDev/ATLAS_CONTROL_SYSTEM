@@ -1,0 +1,17 @@
+version: "16.7"
+paths:
+  repo_root: "."
+  pipeline_outputs_dir: "pipeline_outputs"
+  actor_library_file: "ai_actors_library.json"   # relative to repo_root
+  media_url_prefix: "/api/media?path="
+
+policy:
+  casting:
+    min_fit_score: 55          # drop to 45 if you want fewer uncast characters
+    fallback_mode: "best_available"  # strict | best_available | placeholder
+    placeholder_actor: "UNKNOWN_ACTOR"
+  render_plan:
+    max_single_render_seconds: 20
+    segment_floor_seconds: 6
+  critics:
+    fail_on_warnings: false

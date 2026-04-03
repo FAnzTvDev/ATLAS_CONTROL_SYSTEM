@@ -1,0 +1,16 @@
+{
+  "run_id": "8b32a88c",
+  "mode": "VERIFY",
+  "started_at": "2026-02-11T12:32:05.317167Z",
+  "projects": [
+    "ravencroft_v17"
+  ],
+  "locked": false,
+  "model_lock": {
+    "first_frame": "fal-ai/nano-banana-pro",
+    "video": "fal-ai/ltx-2/image-to-video/fast"
+  },
+  "initiated_by": "human",
+  "completed_at": "2026-02-11T12:32:05.438745Z",
+  "final_verdict": "READY"
+}

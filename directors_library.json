@@ -1,0 +1,680 @@
+{
+  "version": "2.0",
+  "source": "ATLAS V5 Director Profiles - Based on Actor Template Structure",
+  "total_directors": 10,
+  "template_source": "AI Actors Master Document structure",
+  
+  "directors": [
+    {
+      "id": "D001",
+      "name": "Helena Blackwood",
+      "specialty": ["Gothic Horror", "Psychological Thriller", "Period Drama"],
+      "genres": ["gothic_horror", "psychological", "period_drama", "supernatural"],
+      
+      "visual_signature": {
+        "camera_philosophy": "The camera is a character. It breathes, hesitates, reveals.",
+        "composition_style": "Negative space dominates, figures framed within architecture",
+        "movement_vocabulary": {
+          "default": "slow dolly, creep push, static dread",
+          "tension": "imperceptible zoom, 1 inch per 10 seconds",
+          "revelation": "hold static, let performance carry",
+          "horror": "low angle dutch, shadows reaching"
+        },
+        "lighting_signature": {
+          "philosophy": "Motivated practical. If there's no source, there's no light.",
+          "palette": "candlelight amber, moonlight blue, never mixed artificially",
+          "ratio": "High contrast 8:1, deep shadows, faces half-lit",
+          "instruments": ["candles", "fireplaces", "oil lamps", "moonlight through windows"]
+        },
+        "lens_preferences": {
+          "establishing": "35mm anamorphic, deep focus",
+          "dialogue": "50mm, shallow focus on eyes",
+          "horror": "24mm wide, distortion at edges",
+          "intimate": "85mm portrait, bokeh isolation"
+        },
+        "color_grade": {
+          "primary": "Desaturated with amber accents",
+          "shadow_tone": "Deep blue-black, never crushed",
+          "skin_treatment": "Warm but sickly, candlelit pallor"
+        }
+      },
+      
+      "signature_color": "#2F1810",
+      "default_camera_motion": "locked tripod with subtle creep, weighted atmospheric stillness",
+      
+      "presence": {
+        "set_demeanor": "Quiet intensity, speaks rarely but precisely",
+        "communication_style": "Visual references over verbal instructions",
+        "actor_direction": "Minimal interference, trusts preparation"
+      },
+      
+      "sample_direction": [
+        "Let the silence work.",
+        "Find the dread in the stillness.",
+        "The house is watching. Show me that.",
+        "Don't act scared. Be someone who refuses to admit they're scared."
+      ],
+      
+      "skills": ["Practical effects over CGI", "Long take choreography", "Architectural dread", "Actor-driven horror", "Literary adaptation"],
+      
+      "influences": [
+        {"director": "Stanley Kubrick", "film": "The Shining", "element": "Architectural horror, symmetry"},
+        {"director": "Guillermo del Toro", "film": "Crimson Peak", "element": "Gothic romance, practical effects"},
+        {"director": "Robert Eggers", "film": "The Witch", "element": "Period authenticity, natural lighting"}
+      ],
+      
+      "actor_chemistry": {
+        "Charlotte Beaumont": 0.98,
+        "Jackson Wright": 0.92,
+        "Keiko Tanaka": 0.95,
+        "Marcus Stone": 0.88,
+        "Miranda Cross": 0.90,
+        "Yuki Sato": 0.87
+      },
+      
+      "writer_collaborations": ["W001"],
+      
+      "creative_philosophy": {
+        "origin": "Trained at RADA in theater, transitioned to film seeking 'permanent dread'",
+        "core_belief": "Horror is not about what we see. It's about what we almost see.",
+        "methodology": "Extensive rehearsal period. Actors must live in the space before cameras roll.",
+        "signature_technique": "The 'Blackwood Hold' - never cut before the actor breaks"
+      },
+      
+      "shot_braintree_overrides": {
+        "establishing": {"default": "wide drone fog approach", "duration": 12, "motion": "slow push toward structure"},
+        "dialogue": {"default": "OTS with reaction holds", "lighting": "single candle source, face half-lit"},
+        "horror_beat": {"default": "static wide, subject small in frame", "duration": 8, "shadow_treatment": "shadows move independently"},
+        "revelation": {"default": "slow push to CU, rack focus", "motion": "creep push 1 inch per second", "hold": 3}
+      },
+      
+      "fanz_tv_channel": "AMERICAN HORROR CLASSICS"
+    },
+    
+    {
+      "id": "D002",
+      "name": "Victor Tanaka",
+      "specialty": ["Action", "Martial Arts", "Thriller"],
+      "genres": ["action", "martial_arts", "thriller", "spy"],
+      
+      "visual_signature": {
+        "camera_philosophy": "The camera fights alongside the actors. Every frame is impact.",
+        "composition_style": "Tight framing during combat, wide for choreography appreciation",
+        "movement_vocabulary": {
+          "default": "handheld with stabilization, following action",
+          "combat": "Steadicam tracking, whip pans on impacts",
+          "tension": "slow push into confrontation",
+          "victory": "crane out, hero framing"
+        },
+        "lighting_signature": {
+          "philosophy": "High contrast to sculpt muscles, dramatic backlighting",
+          "palette": "High energy, motivated practicals plus stylized enhancement",
+          "ratio": "3:1 for drama, 5:1 for villainy",
+          "instruments": ["neon", "sodium vapor", "practical sparks"]
+        },
+        "lens_preferences": {
+          "wide_action": "18mm for environment",
+          "combat": "35mm following",
+          "face_off": "50mm, both subjects sharp",
+          "impact": "85mm for slow motion hits"
+        }
+      },
+      
+      "signature_color": "#1A1A1A",
+      "default_camera_motion": "fluid tracking with whip pan transitions, impact shake",
+      
+      "sample_direction": [
+        "The punch lands in the edit. Give me the wind-up and recovery.",
+        "Fight like you're exhausted. This is round 10.",
+        "The space between the hits is where the audience breathes.",
+        "Make it hurt. Not look like it hurts. Actually hurt."
+      ],
+      
+      "skills": ["Long take action sequences", "Stunt coordination", "Hong Kong style editing", "Combat choreography integration"],
+      
+      "influences": [
+        {"director": "John Wick team", "element": "Gun-fu fluidity"},
+        {"director": "Jackie Chan", "element": "Comedic timing in action"},
+        {"director": "Park Chan-wook", "element": "Violence as art"}
+      ],
+      
+      "actor_chemistry": {
+        "Maya Chen": 0.98,
+        "Kai Wong": 0.96,
+        "Elena Kozlov": 0.94,
+        "Dimitri Volkov": 0.92,
+        "Ryan Cooper": 0.90,
+        "Carlos Mendoza": 0.88
+      },
+      
+      "writer_collaborations": ["W002", "W003"],
+
+      "creative_philosophy": {
+        "origin": "Stunt performer turned director, learned filmmaking through physical storytelling",
+        "core_belief": "Action is character. How someone fights tells you who they are.",
+        "methodology": "Rehearse fights like dance numbers. Camera learns the choreography.",
+        "signature_technique": "The 'Tanaka Oner' - one continuous shot through entire fight sequence"
+      },
+
+      "shot_braintree_overrides": {
+        "establishing": {"default": "wide tracking, environment reveals threat geography", "duration": 6, "motion": "Steadicam push through space"},
+        "dialogue": {"default": "tight two-shot, actors in same frame — no singles until tension breaks", "lighting": "high contrast side-light"},
+        "action_beat": {"default": "wide master for choreography, cut to medium for impacts", "duration": 5, "motion": "Steadicam following action"},
+        "tension": {"default": "slow push into confrontation, OTS favoring aggressor", "motion": "imperceptible dolly in"},
+        "climax": {"default": "cross-cutting wide choreography and CU impacts", "motion": "whip pans on strikes"},
+        "aftermath": {"default": "static wide hold, let exhaustion play", "duration": 8, "hold": 4}
+      },
+
+      "fanz_tv_channel": "RUMBLE TV"
+    },
+    
+    {
+      "id": "D003",
+      "name": "Claire Fontaine",
+      "specialty": ["Period Drama", "Historical", "Literary Adaptation"],
+      "genres": ["historical_drama", "period", "romance", "drama"],
+      
+      "visual_signature": {
+        "camera_philosophy": "Observe history. Don't intrude upon it.",
+        "composition_style": "Painterly frames, classical composition, golden ratio",
+        "movement_vocabulary": {
+          "default": "elegant dolly, motivated by character movement",
+          "tension": "static locked frames, characters move within",
+          "emotion": "slow push during confession scenes",
+          "spectacle": "crane for scale and grandeur"
+        },
+        "lighting_signature": {
+          "philosophy": "Natural and available light, period-appropriate sources only",
+          "palette": "Warm amber daylight, cool blue moonlight, candle glow",
+          "ratio": "Soft 2:1 for romance, 4:1 for drama",
+          "instruments": ["window light", "chandeliers", "fireplaces", "candelabras"]
+        },
+        "lens_preferences": {
+          "establishing": "40mm for architecture",
+          "dialogue": "75mm portrait lens, period flattering",
+          "intimate": "100mm for soft romantic looks"
+        }
+      },
+      
+      "signature_color": "#8B4513",
+      "default_camera_motion": "elegant dolly motivated by emotion, period-appropriate restraint",
+      
+      "sample_direction": [
+        "You're not in a costume. You live in these clothes.",
+        "Slower. People in 1840 weren't in a hurry.",
+        "The corset informs every breath. Let me see that.",
+        "Your hands tell the story of your station."
+      ],
+      
+      "actor_chemistry": {
+        "Marcus Stone": 0.97,
+        "Charlotte Beaumont": 0.95,
+        "Isabella Moretti": 0.94,
+        "Emma Fitzgerald": 0.96,
+        "Gabriel Santos": 0.88
+      },
+
+      "creative_philosophy": {
+        "origin": "Art history scholar turned filmmaker, treats each frame as a painting",
+        "core_belief": "History speaks through gesture, posture, and the weight of fabric.",
+        "methodology": "Three weeks of etiquette training before cameras roll. Every movement is period-accurate.",
+        "signature_technique": "The 'Fontaine Tableau' - characters arranged like portraiture, camera observes"
+      },
+
+      "shot_braintree_overrides": {
+        "establishing": {"default": "wide tableau, architecture frames characters", "duration": 10, "motion": "elegant slow dolly, golden ratio composition"},
+        "dialogue": {"default": "medium portrait at 75mm, period-flattering soft focus", "lighting": "natural window light, period practicals"},
+        "confession": {"default": "slow push to CU during emotional reveals", "motion": "dolly in motivated by confession", "hold": 3},
+        "spectacle": {"default": "crane wide for scale, crowd as living painting", "duration": 8, "motion": "crane down into scene"},
+        "intimate": {"default": "close-up at 100mm, soft bokeh isolation", "lighting": "warm candle glow, face fully lit"},
+        "transition": {"default": "wide exterior, characters small in landscape", "duration": 6}
+      },
+
+      "fanz_tv_channel": "AMERICAN HORROR CLASSICS"
+    },
+
+    {
+      "id": "D004",
+      "name": "Raymond Cross",
+      "specialty": ["Political Drama", "Biopic", "Legal Drama"],
+      "genres": ["political", "biopic", "legal_drama", "drama"],
+      
+      "visual_signature": {
+        "camera_philosophy": "Power lives in the space between people. Frame the power.",
+        "composition_style": "Centered authority figures, power dynamics in vertical space",
+        "movement_vocabulary": {
+          "default": "steady tripod, deliberate dolly",
+          "power_shift": "slow track to show who's winning",
+          "revelation": "push past shoulder to reaction",
+          "speech": "crane for crowd, tight for conviction"
+        },
+        "lighting_signature": {
+          "philosophy": "Institutional lighting - fluorescent overhead, power-window light",
+          "palette": "Cool bureaucratic tones, warm wood-paneled contrast"
+        }
+      },
+      
+      "signature_color": "#1B365D",
+      "default_camera_motion": "steady deliberate moves, power framing, Sorkin-walk coverage",
+      
+      "sample_direction": [
+        "You're not making a speech. You're making history.",
+        "The weight of the office is in how you sit.",
+        "Let me see you think before you speak.",
+        "Power whispers. Weakness shouts."
+      ],
+      
+      "actor_chemistry": {
+        "James Okonkwo": 0.98,
+        "Samuel Cross": 0.96,
+        "Victoria Sterling": 0.94,
+        "Malik Washington": 0.95,
+        "Scarlett O'Brien": 0.90
+      },
+
+      "creative_philosophy": {
+        "origin": "Political journalist turned filmmaker, brings investigative rigor to every scene",
+        "core_belief": "Power is visible. The camera must show who has it and who wants it.",
+        "methodology": "Research the real rooms where power lives. Recreate the pressure, not just the set.",
+        "signature_technique": "The 'Cross Walk-and-Talk' - Sorkin-style tracking through corridors of power"
+      },
+
+      "shot_braintree_overrides": {
+        "establishing": {"default": "wide institutional framing, building as character", "duration": 6, "motion": "steady dolly through corridors"},
+        "dialogue": {"default": "OTS power framing — camera favors the listener, not the speaker", "lighting": "overhead institutional, face half-shadowed"},
+        "speech": {"default": "medium for conviction, crane out for crowd reaction", "duration": 8, "motion": "slow zoom in during key argument"},
+        "power_shift": {"default": "tracking shot following the winner, static on the loser", "motion": "deliberate dolly alongside walking figure"},
+        "revelation": {"default": "push past shoulder to face, hold on reaction", "motion": "dolly past evidence to CU of understanding"},
+        "confrontation": {"default": "tight two-shot, shrinking frame as tension builds", "motion": "imperceptible zoom tightening"}
+      },
+
+      "fanz_tv_channel": "WHO DONE IT TV"
+    },
+
+    {
+      "id": "D005",
+      "name": "Ingrid Magnusson",
+      "specialty": ["Nordic Noir", "Psychological Thriller", "Mystery"],
+      "genres": ["thriller", "mystery", "psychological", "nordic_noir"],
+      
+      "visual_signature": {
+        "camera_philosophy": "Cold light reveals cold truth. Let the landscape judge.",
+        "composition_style": "Vast landscapes dwarfing characters, isolation framing",
+        "movement_vocabulary": {
+          "default": "slow static holds, environment as character",
+          "investigation": "methodical tracking, evidence revelation",
+          "psychological": "extreme close-up, nowhere to hide"
+        },
+        "lighting_signature": {
+          "philosophy": "Available Nordic light - gray, flat, unforgiving",
+          "palette": "Desaturated, blue-gray, occasional warm relief",
+          "ratio": "Flat 1.5:1, no hiding in shadows"
+        }
+      },
+      
+      "signature_color": "#4A5568",
+      "default_camera_motion": "static holds, slow methodical movement, landscape dominance",
+      
+      "sample_direction": [
+        "The cold is in your bones. I need to see it.",
+        "Scandinavians don't emote. They contain.",
+        "Let the silence tell me what the dialogue won't.",
+        "The landscape is judging you. Feel that."
+      ],
+      
+      "actor_chemistry": {
+        "Aurora Lindberg": 0.98,
+        "Jackson Wright": 0.92,
+        "Magnus Eriksson": 0.94,
+        "Aria Patel": 0.88
+      },
+
+      "creative_philosophy": {
+        "origin": "Documentary filmmaker in Tromsø, transitioned to narrative through landscape obsession",
+        "core_belief": "Silence is the most honest dialogue. The landscape never lies.",
+        "methodology": "Cast locals. Shoot in winter. Let the cold do the acting.",
+        "signature_technique": "The 'Magnusson Stare' - extreme CU held past comfort, nowhere to hide"
+      },
+
+      "shot_braintree_overrides": {
+        "establishing": {"default": "extreme wide, character tiny in vast landscape", "duration": 12, "motion": "static tripod, let environment breathe"},
+        "dialogue": {"default": "medium static, characters contained in frame — never cut for rhythm, only for truth", "lighting": "available Nordic light, flat and unforgiving"},
+        "investigation": {"default": "methodical tracking through evidence, medium to close", "motion": "slow deliberate dolly along evidence"},
+        "psychological": {"default": "extreme close-up, held past comfort — the Magnusson Stare", "duration": 6, "hold": 4},
+        "isolation": {"default": "wide static, character alone in frame, architecture or landscape dwarfs them", "duration": 8},
+        "revelation": {"default": "static medium, let the face tell everything", "hold": 3}
+      },
+
+      "fanz_tv_channel": "WHO DONE IT TV"
+    },
+
+    {
+      "id": "D006",
+      "name": "Danny Kowalski",
+      "specialty": ["Comedy", "Rom-Com", "Sitcom"],
+      "genres": ["comedy", "romantic_comedy", "sitcom", "physical_comedy"],
+      
+      "visual_signature": {
+        "camera_philosophy": "Comedy lives in timing and space. Give actors room to play.",
+        "composition_style": "Clean coverage for timing, reaction shots are gold",
+        "movement_vocabulary": {
+          "default": "static master, coverage for performance options",
+          "physical": "wide for slapstick, follow the chaos",
+          "reaction": "snap zoom to reaction, hold for beat"
+        },
+        "lighting_signature": {
+          "philosophy": "Bright and even - no dramatic shadows to confuse tone",
+          "palette": "Warm, inviting, sitcom brightness"
+        }
+      },
+      
+      "signature_color": "#FFA726",
+      "default_camera_motion": "static for timing, motivated moves for physical comedy",
+      
+      "sample_direction": [
+        "The laugh is in the pause. Wait for it.",
+        "Play it straight. The situation is funny, not you.",
+        "Give me three versions. Deadpan, big, and weird.",
+        "The funniest person in the room thinks they're the most normal."
+      ],
+      
+      "actor_chemistry": {
+        "Sofia Andersson": 0.98,
+        "Omar Hassan": 0.97,
+        "Chloe Martin": 0.96,
+        "Tyler Brooks": 0.88,
+        "Ruby Taylor": 0.85
+      },
+
+      "creative_philosophy": {
+        "origin": "Stand-up comedian who started directing his own specials, then sketch, then features",
+        "core_belief": "The funniest person in the room thinks they're the most normal person in the room.",
+        "methodology": "Run the scene 20 times. The first 5 are the script. The last 15 are the movie.",
+        "signature_technique": "The 'Kowalski Cut' - reaction shot held one beat longer than comfortable, where the comedy lives"
+      },
+
+      "shot_braintree_overrides": {
+        "establishing": {"default": "clean wide master, bright and inviting — establish geography for physical comedy", "duration": 5, "motion": "static tripod"},
+        "dialogue": {"default": "medium singles with FAST cutting to reactions — the reaction IS the joke", "lighting": "bright even, no dramatic shadows"},
+        "physical_comedy": {"default": "wide master for slapstick choreography, no cutting during physical bit", "duration": 8, "motion": "follow the chaos, handheld"},
+        "reaction": {"default": "snap zoom to face, hold one extra beat — the Kowalski Cut", "duration": 4, "hold": 2},
+        "awkward_moment": {"default": "static two-shot, let silence build the cringe", "hold": 3},
+        "punchline": {"default": "CU on deliverer, then SNAP to reactor — comedy is in the cut", "motion": "whip pan to reaction"}
+      },
+
+      "fanz_tv_channel": "JOKEBOX TV"
+    },
+
+    {
+      "id": "D007",
+      "name": "Zara Okonkwo",
+      "specialty": ["Sci-Fi", "Afrofuturism", "Fantasy"],
+      "genres": ["scifi_thriller", "sci_fi", "fantasy", "afrofuturism"],
+      
+      "visual_signature": {
+        "camera_philosophy": "The future is real to these characters. Make it mundane.",
+        "composition_style": "Clean futurism, tech-integrated framing, widescreen scope",
+        "movement_vocabulary": {
+          "default": "steady fluid movement, tech-assisted stability",
+          "space": "zero-G simulation, floating camera",
+          "action": "precision tracking through complex environments"
+        },
+        "lighting_signature": {
+          "philosophy": "Practical sci-fi lighting - screens, HUDs, engine glow",
+          "palette": "Cool tech blue, warm human contrast"
+        }
+      },
+      
+      "signature_color": "#00BCD4",
+      "default_camera_motion": "fluid tech-assisted movement, scope preservation",
+      
+      "sample_direction": [
+        "You've done this a thousand times. The tech is boring to you.",
+        "The future isn't shiny. It's lived in.",
+        "Zero-G means everything floats. Including your emotions.",
+        "The stars are always watching. That's home now."
+      ],
+      
+      "actor_chemistry": {
+        "Luna Rodriguez": 0.97,
+        "Amara Johnson": 0.98,
+        "Sakura Yamamoto": 0.94,
+        "Jin-Ho Kim": 0.92,
+        "Ethan Park": 0.90
+      },
+
+      "creative_philosophy": {
+        "origin": "VFX supervisor who understood that great sci-fi is about people, not spaceships",
+        "core_belief": "The future is real to these characters. Show the wonder through their boredom.",
+        "methodology": "Build the world first. Let actors live in it for a week. Then shoot what they discover.",
+        "signature_technique": "The 'Okonkwo Scale' - establish vast scope wide, then find the intimate human moment inside it"
+      },
+
+      "shot_braintree_overrides": {
+        "establishing": {"default": "extreme wide scope, technology and architecture frame the human", "duration": 8, "motion": "fluid tech-assisted dolly through environment"},
+        "dialogue": {"default": "medium two-shot with environment visible — characters always contextualized in their world", "lighting": "practical sci-fi: screens, HUDs, engine glow"},
+        "technology": {"default": "insert CU on tech interaction, then pull to medium showing human using it", "motion": "dolly from detail to context"},
+        "space": {"default": "wide with floating camera, zero-G feel", "motion": "fluid Steadicam, no gravity reference"},
+        "emotional": {"default": "close-up, warm light contrast against cold tech — the human moment", "lighting": "warm practical against cool tech ambient"},
+        "action": {"default": "precision tracking through complex environments, medium for clarity", "motion": "Steadicam tracking, motivated by character path"}
+      },
+
+      "fanz_tv_channel": "SCI-FI CLASSICS"
+    },
+
+    {
+      "id": "D008",
+      "name": "Frank DiMaggio",
+      "specialty": ["Crime Drama", "Noir", "Detective"],
+      "genres": ["crime_drama", "noir", "detective", "thriller"],
+      
+      "visual_signature": {
+        "camera_philosophy": "Truth hides in shadows. Light the moral ambiguity.",
+        "composition_style": "Noir framing, venetian blind shadows, smoke atmosphere",
+        "movement_vocabulary": {
+          "default": "slow track through crime scenes",
+          "interrogation": "tight OTS, tightening frame",
+          "revelation": "push past evidence to face"
+        },
+        "lighting_signature": {
+          "philosophy": "Noir lighting - high contrast, motivated by environment",
+          "palette": "Sodium vapor orange, fluorescent green, neon accent"
+        }
+      },
+      
+      "signature_color": "#37474F",
+      "default_camera_motion": "slow deliberate tracking, evidence framing, noir shadows",
+      
+      "sample_direction": [
+        "Every detective has one case that broke them. This is yours.",
+        "You've seen this before. That's the problem.",
+        "The evidence doesn't lie. But it doesn't tell the whole truth either.",
+        "Look at them like you know they did it but can't prove it yet."
+      ],
+      
+      "actor_chemistry": {
+        "Daniel Reeves": 0.98,
+        "Alessandro Romano": 0.94,
+        "Javier Morales": 0.96,
+        "Aria Patel": 0.92,
+        "Victoria Sterling": 0.88
+      },
+
+      "creative_philosophy": {
+        "origin": "Crime reporter who started making documentaries, then couldn't stop at reality",
+        "core_belief": "Every frame is evidence. The audience is the jury.",
+        "methodology": "Walk the crime scene before building the set. Smell the street before writing the dialogue.",
+        "signature_technique": "The 'DiMaggio Reveal' - camera pushes past the evidence to find the face behind it"
+      },
+
+      "shot_braintree_overrides": {
+        "establishing": {"default": "slow tracking through crime scene, details in foreground", "duration": 8, "motion": "dolly through evidence, rack focus to background"},
+        "dialogue": {"default": "OTS interrogation style — tightening frame as pressure builds", "lighting": "noir high-contrast, venetian blind shadows"},
+        "interrogation": {"default": "tight OTS, tightening frame — closer every cut", "motion": "imperceptible zoom in", "hold": 2},
+        "evidence": {"default": "insert detail shot, then pull to detective's face — the DiMaggio Reveal", "motion": "dolly past evidence to CU reaction"},
+        "street": {"default": "wide tracking behind subject through noir cityscape", "motion": "Steadicam following at distance"},
+        "revelation": {"default": "push past shoulder to face, hold reaction — let realization play", "motion": "dolly push to CU", "hold": 3}
+      },
+
+      "fanz_tv_channel": "WHO DONE IT TV"
+    },
+
+    {
+      "id": "D009",
+      "name": "Rebecca Hayes",
+      "specialty": ["Romance", "Rom-Com", "Drama"],
+      "genres": ["romance", "romantic_comedy", "drama"],
+      
+      "visual_signature": {
+        "camera_philosophy": "Love is in the glances. Catch every micro-moment.",
+        "composition_style": "Soft focus romance, two-shots that become singles",
+        "movement_vocabulary": {
+          "default": "gentle dolly toward connection",
+          "first_meet": "separate frames merging",
+          "kiss": "slow orbit around the couple"
+        },
+        "lighting_signature": {
+          "philosophy": "Everyone looks beautiful in love. Light accordingly.",
+          "palette": "Golden hour, warm practicals, catch-lights in eyes"
+        }
+      },
+      
+      "signature_color": "#E91E63",
+      "default_camera_motion": "gentle romantic movement, chemistry framing",
+      
+      "sample_direction": [
+        "The kiss starts three lines before the kiss.",
+        "You're falling. Let me see the moment you realize it.",
+        "Chemistry is in the space you don't fill.",
+        "Look at them like they're the only person in the room."
+      ],
+      
+      "actor_chemistry": {
+        "Tyler Brooks": 0.97,
+        "Sofia Andersson": 0.95,
+        "Charlotte Beaumont": 0.92,
+        "Valentina Rossi": 0.96,
+        "Nina Volkov": 0.90
+      },
+
+      "creative_philosophy": {
+        "origin": "Choreographer who discovered that falling in love has its own dance",
+        "core_belief": "Love is in the glances. The audience must want to lean in.",
+        "methodology": "Chemistry reads. If the actors don't have it, recast. If they do, get out of the way.",
+        "signature_technique": "The 'Hayes Orbit' - slow camera orbit around the couple at the moment of connection"
+      },
+
+      "shot_braintree_overrides": {
+        "establishing": {"default": "warm wide, golden hour light, location as romance backdrop", "duration": 6, "motion": "gentle dolly toward connection point"},
+        "dialogue": {"default": "medium singles with OTS glimpses — seeing them SEE each other", "lighting": "golden hour, catch-lights in eyes"},
+        "first_meet": {"default": "separate medium frames that slowly share frame — merging composition", "motion": "dolly pushing subjects into same frame"},
+        "tension": {"default": "tight CU alternating, breath-close distance", "hold": 2},
+        "kiss": {"default": "slow orbit two-shot, golden light, soft focus background — the Hayes Orbit", "motion": "orbit around the couple", "duration": 8},
+        "heartbreak": {"default": "static wide, growing distance between figures — the space tells the story", "duration": 6, "hold": 3}
+      },
+
+      "fanz_tv_channel": "JOKEBOX TV"
+    },
+
+    {
+      "id": "D010",
+      "name": "Morgan Sinclair",
+      "specialty": ["Art House", "Experimental", "LGBTQ+"],
+      "genres": ["art_house", "experimental", "lgbtq", "drama"],
+      
+      "visual_signature": {
+        "camera_philosophy": "Film is art. Rules are suggestions.",
+        "composition_style": "Unconventional framing, negative space, visual poetry",
+        "movement_vocabulary": {
+          "default": "motivated by emotion, not geography",
+          "internal": "abstract, dreamlike floating",
+          "confrontation": "uncomfortable static holds"
+        },
+        "lighting_signature": {
+          "philosophy": "Light as emotion. Practical rules don't apply.",
+          "palette": "Bold color statements, unmotivated beauty"
+        }
+      },
+      
+      "signature_color": "#9C27B0",
+      "default_camera_motion": "emotional motivation, experimental freedom",
+      
+      "sample_direction": [
+        "Forget the script. What does your body want to do?",
+        "The frame is a prison. Let's see you escape it.",
+        "Normal is boring. Give me truth.",
+        "Art isn't comfortable. Make me uncomfortable."
+      ],
+      
+      "actor_chemistry": {
+        "Phoenix Rise": 0.99,
+        "Antoine Dubois": 0.96,
+        "Ruby Taylor": 0.90,
+        "Noah Campbell": 0.92
+      },
+
+      "creative_philosophy": {
+        "origin": "Gallery installation artist who discovered moving image as the ultimate canvas",
+        "core_belief": "Film is art. The audience should leave changed, not entertained.",
+        "methodology": "Throw away the storyboard. Let the scene breathe until it shows you what it wants to be.",
+        "signature_technique": "The 'Sinclair Hold' - uncomfortable static frame held until the audience shifts in their seat"
+      },
+
+      "shot_braintree_overrides": {
+        "establishing": {"default": "unconventional framing, negative space dominates — the location as abstract art", "duration": 10, "motion": "static hold or dreamlike float"},
+        "dialogue": {"default": "off-center framing, speakers in negative space — silence weighs more than words", "lighting": "bold color statements, unmotivated beauty"},
+        "internal": {"default": "abstract close-up, dreamlike shallow focus on textures and details", "motion": "floating motivated by emotion"},
+        "confrontation": {"default": "uncomfortable static two-shot, no relief — the Sinclair Hold", "duration": 8, "hold": 5},
+        "emotional": {"default": "extreme CU eyes only, then pull to reveal full body in negative space", "motion": "slow pull from intimate to isolated"},
+        "transition": {"default": "visual poetry — match cut on shape/color/movement, not narrative logic", "motion": "motivated by visual rhyme"}
+      },
+
+      "fanz_tv_channel": "SCI-FI CLASSICS"
+    }
+  ],
+  
+  "genre_to_director_mapping": {
+    "gothic_horror": "D001",
+    "horror": "D001",
+    "action": "D002",
+    "action_adventure": "D002",
+    "martial_arts": "D002",
+    "historical_drama": "D003",
+    "period": "D003",
+    "political": "D004",
+    "legal_drama": "D004",
+    "thriller": "D005",
+    "nordic_noir": "D005",
+    "mystery_thriller": "D005",
+    "comedy": "D006",
+    "romantic_comedy": "D006",
+    "scifi_thriller": "D007",
+    "sci_fi": "D007",
+    "crime_drama": "D008",
+    "detective": "D008",
+    "romance": "D009",
+    "art_house": "D010",
+    "fantasy": "D002",
+    "epic_fantasy": "D003",
+    "dark_fantasy": "D001",
+    "adventure": "D002",
+    "war": "D002",
+    "drama": "D003",
+    "noir": "D008",
+    "mystery": "D005",
+    "supernatural": "D001",
+    "western": "D008",
+    "musical": "D006",
+    "documentary": "D010",
+    "animation": "D007"
+  },
+  
+  "fanz_tv_channel_mapping": {
+    "RUMBLE TV": "D002",
+    "AMERICAN HORROR CLASSICS": "D001",
+    "SCI-FI CLASSICS": "D007",
+    "JOKEBOX TV": "D006",
+    "MARTIAN TV": "D007",
+    "WHO DONE IT TV": "D008"
+  }
+}

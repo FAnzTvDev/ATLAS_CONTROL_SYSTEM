@@ -1,0 +1,113 @@
+{
+  "project": "Blackwood Chronicles - Complete Asset Grid",
+  "character_library": {
+    "ELEANOR": {
+      "face_neutral": {
+        "url": "https://i.ibb.co/pBb6QxFf/CHAR-REF-Eleanor-Vance.jpg",
+        "description": "Eleanor Vance - neutral expression",
+        "slot_priority": 1
+      },
+      "body_reference": {
+        "url": "PLACEHOLDER_ELEANOR_BODY",
+        "description": "Eleanor - full body in traveling coat",
+        "slot_priority": 2
+      }
+    },
+    "MARCUS": {
+      "face_neutral": {
+        "url": "https://i.ibb.co/pBb6QxFf/CHAR-REF-Eleanor-Vance.jpg",
+        "description": "Marcus Thorne - neutral expression",
+        "slot_priority": 1
+      },
+      "body_reference": {
+        "url": "PLACEHOLDER_MARCUS_BODY",
+        "description": "Marcus - full body in groundskeeper uniform",
+        "slot_priority": 2
+      }
+    }
+  },
+  "location_library": {
+    "BLACKWOOD_GATES": {
+      "depth_references": {
+        "wide_establishing": {
+          "url": "PLACEHOLDER_GATES_WIDE",
+          "description": "Wide shot of imposing iron gates",
+          "slot_priority": 6
+        },
+        "medium_approach": {
+          "url": "PLACEHOLDER_GATES_MEDIUM",
+          "description": "Medium shot approaching gates",
+          "slot_priority": 7
+        },
+        "close_detail": {
+          "url": "PLACEHOLDER_GATES_CLOSE",
+          "description": "Close-up of ornate ironwork",
+          "slot_priority": 8
+        },
+        "interior_view": {
+          "url": "PLACEHOLDER_GATES_INTERIOR",
+          "description": "View from inside estate looking out",
+          "slot_priority": 9
+        }
+      }
+    },
+    "GRAND_FOYER": {
+      "depth_references": {
+        "wide_establishing": {
+          "url": "PLACEHOLDER_FOYER_WIDE",
+          "description": "Wide shot of grand foyer with chandelier",
+          "slot_priority": 6
+        },
+        "medium_center": {
+          "url": "PLACEHOLDER_FOYER_MEDIUM",
+          "description": "Medium shot from center of foyer",
+          "slot_priority": 7
+        },
+        "close_chandelier": {
+          "url": "PLACEHOLDER_FOYER_CHANDELIER",
+          "description": "Close-up of ornate chandelier",
+          "slot_priority": 8
+        },
+        "staircase_angle": {
+          "url": "PLACEHOLDER_FOYER_STAIRS",
+          "description": "View from grand staircase",
+          "slot_priority": 9
+        }
+      }
+    }
+  },
+  "wardrobe_library": {
+    "ELEANOR_COAT": {
+      "url": "PLACEHOLDER_ELEANOR_COAT",
+      "description": "Eleanor's Victorian traveling coat",
+      "slot_priority": 10
+    },
+    "MARCUS_UNIFORM": {
+      "url": "PLACEHOLDER_MARCUS_UNIFORM",
+      "description": "Marcus's groundskeeper uniform",
+      "slot_priority": 10
+    }
+  },
+  "props_library": {
+    "GATE_LOCK": {
+      "url": "PLACEHOLDER_GATE_LOCK",
+      "description": "Ornate iron gate lock mechanism",
+      "slot_priority": 11
+    },
+    "LUGGAGE": {
+      "url": "PLACEHOLDER_LUGGAGE",
+      "description": "Victorian era traveling luggage",
+      "slot_priority": 11
+    }
+  },
+  "quality_anchors": {
+    "GOTHIC_HORROR": {
+      "url": "PLACEHOLDER_GOTHIC_ANCHOR",
+      "description": "Gothic horror aesthetic - atmospheric dread, muted colors, dramatic shadows"
+    },
+    "PERIOD_DRAMA": {
+      "url": "PLACEHOLDER_PERIOD_ANCHOR",
+      "description": "Victorian period drama - authentic costumes, historical accuracy"
+    }
+  }
+}

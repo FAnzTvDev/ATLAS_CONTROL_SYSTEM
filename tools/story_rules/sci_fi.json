@@ -1,0 +1,129 @@
+{
+  "genre": "sci_fi",
+  "required_narrative_fields": [
+    "speculative_premise",
+    "technology_impact",
+    "human_vs_system",
+    "world_building_consistency",
+    "philosophical_question"
+  ],
+  "narrative_rules": {
+    "speculative_premise": "One scientific 'what if' extrapolated logically",
+    "technology_impact": "Tech changes society, not just gadgets",
+    "human_vs_system": "Individual against machine/corporation/algorithm",
+    "world_building_consistency": "Rules established and followed, no magic",
+    "philosophical_question": "What does it mean to be human? Free? Real?"
+  },
+  "motifs": [
+    "technology_as_character",
+    "isolation_in_vastness",
+    "humanity_definition",
+    "surveillance_state",
+    "artificial_vs_natural",
+    "sterile_environments",
+    "screens_and_interfaces",
+    "distant_earth_or_stars"
+  ],
+  "pace_expectations": {
+    "act_1": {
+      "pacing": "world_building_patient",
+      "shot_duration": "15-35 seconds",
+      "editing_rhythm": "establish_rules"
+    },
+    "act_2": {
+      "pacing": "philosophical_exploration",
+      "shot_duration": "12-25 seconds",
+      "editing_rhythm": "ideas_in_motion"
+    },
+    "act_3": {
+      "pacing": "consequences_accelerating",
+      "shot_duration": "8-20 seconds",
+      "editing_rhythm": "convergence_or_divergence"
+    }
+  },
+  "default_lens_choices": {
+    "environment": {
+      "lens_mm": 14-24,
+      "why": "Ultra-wide for scale, alien architecture, vast spaces"
+    },
+    "intimacy": {
+      "lens_mm": 50,
+      "why": "Human moments amid technology"
+    },
+    "technology_detail": {
+      "lens_mm": 100,
+      "why": "Macro for intricate tech, emphasize artificiality"
+    },
+    "isolation": {
+      "lens_mm": 85,
+      "why": "Compressed perspective, lone human in vast ship"
+    }
+  },
+  "default_camera_moves": {
+    "establishing": "slow_crane_reveal_scale",
+    "tech_interaction": "locked_observational",
+    "discovery": "slow_dolly_forward",
+    "crisis": "handheld_chaos_breaking_order",
+    "philosophical": "static_contemplative",
+    "space_travel": "long_smooth_tracking"
+  },
+  "default_lighting": {
+    "style": "cool_clinical_or_neon_saturated",
+    "color_temp": "5600K-6500K cool or extreme neon",
+    "ratios": "2:1 flat institutional OR 10:1 extreme contrast",
+    "atmosphere": "hard_edges_geometric",
+    "signature_elements": ["overhead_fluorescent", "computer_screen_glow", "emergency_red_lights"]
+  },
+  "sound_requirements": [
+    "synthetic_score_ambient",
+    "computer_beeps_and_hums",
+    "airlock_hiss_mechanical",
+    "silence_of_space",
+    "breathing_in_helmet"
+  },
+  "subgenres": {
+    "hard": {
+      "modifiers": "Scientific accuracy, realistic tech, problem-solving",
+      "reference": "The Martian (2015)"
+    },
+    "cyberpunk": {
+      "modifiers": "High tech low life, neon noir, corporate dystopia",
+      "reference": "Blade Runner (1982)"
+    },
+    "space_opera": {
+      "modifiers": "Epic scale, alien cultures, politics and war",
+      "reference": "Star Wars (1977)"
+    },
+    "post_apocalyptic": {
+      "modifiers": "After collapse, survival, what remains",
+      "reference": "Mad Max: Fury Road (2015)"
+    },
+    "time_travel": {
+      "modifiers": "Temporal mechanics, paradoxes, fate vs choice",
+      "reference": "Primer (2004)"
+    },
+    "ai_consciousness": {
+      "modifiers": "What is consciousness? Can machines think/feel?",
+      "reference": "Ex Machina (2014)"
+    }
+  },
+  "visual_world_building": {
+    "show_dont_tell": "Technology visible in background, not explained",
+    "lived_in": "Tech is used, worn, practical - not pristine museum",
+    "consistency": "Establish visual logic and maintain it"
+  },
+  "forbidden_elements": [
+    "technobabble_without_purpose",
+    "deus_ex_machina_tech_saves",
+    "ignoring_established_rules",
+    "magic_disguised_as_science",
+    "tech_that_solves_everything"
+  ],
+  "color_coding": {
+    "cool_blues_greens": "Technology, artificial, clinical",
+    "warm_oranges_reds": "Humanity, danger, blood",
+    "purple_magenta": "Alien, otherworldly, psychedelic",
+    "white_sterile": "Institutional control, inhuman perfection"
+  },
+  "citation": "Science fiction genre theory, visual conventions analysis"
+}

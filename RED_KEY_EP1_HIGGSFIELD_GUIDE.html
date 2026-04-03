@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RED KEY EP1 — Higgsfield Production Guide</title>
+<style>
+  :root {
+    --black: #050505;
+    --deep: #0d0d0d;
+    --panel: #141414;
+    --border: #222;
+    --text: #e0e0e0;
+    --muted: #888;
+    --amber: #f0a030;
+    --blue: #4a9eff;
+    --red: #e84040;
+    --green: #40c070;
+    --teal: #30c0c0;
+    --gold: #c8a040;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--black); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; }
+
+  .header { background: linear-gradient(180deg, #1a0a00 0%, #050505 100%); padding: 40px; border-bottom: 1px solid var(--amber); }
+  .header h1 { font-size: 28px; color: var(--amber); letter-spacing: 4px; text-transform: uppercase; }
+  .header h2 { font-size: 14px; color: var(--muted); letter-spacing: 2px; margin-top: 8px; }
+  .header .badge { display: inline-block; background: var(--amber); color: #000; font-size: 10px; font-weight: 700; letter-spacing: 2px; padding: 3px 8px; margin-top: 12px; }
+
+  .style-ref { background: var(--panel); border: 1px solid var(--border); margin: 20px; border-radius: 4px; overflow: hidden; }
+  .style-ref .title-bar { background: #1a1a00; padding: 12px 20px; border-bottom: 1px solid var(--border); font-size: 11px; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; }
+  .style-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1px; background: var(--border); }
+  .style-cell { background: var(--panel); padding: 16px; }
+  .style-cell .label { font-size: 9px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
+  .style-cell .value { font-size: 12px; color: var(--text); line-height: 1.5; }
+  .style-cell .value span { color: var(--teal); }
+
+  .dna-box { background: var(--panel); border: 1px solid #1a3a1a; margin: 20px; border-radius: 4px; overflow: hidden; }
+  .dna-box.night { border-color: #1a1a3a; }
+  .dna-box .title-bar { padding: 12px 20px; border-bottom: 1px solid var(--border); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+  .dna-box.day .title-bar { background: #001a2a; color: var(--blue); }
+  .dna-box.night .title-bar { background: #0a0a1a; color: #8080ff; }
+  .dna-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--border); }
+  .dna-cell { background: var(--panel); padding: 14px; }
+  .dna-cell .label { font-size: 9px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
+  .dna-cell .value { font-size: 11px; color: var(--text); line-height: 1.6; }
+
+  .scene-header { padding: 20px 20px 10px; }
+  .scene-header h3 { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; }
+  .scene-header h3.s001 { color: #8060ff; }
+  .scene-header h3.s002 { color: var(--blue); }
+  .scene-header p { color: var(--muted); font-size: 11px; margin-top: 4px; }
+
+  .shot-card { background: var(--panel); border: 1px solid var(--border); margin: 6px 20px; border-radius: 4px; overflow: hidden; }
+  .shot-card.s001 { border-left: 3px solid #604060; }
+  .shot-card.s002 { border-left: 3px solid #304060; }
+  .shot-header { display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: #0d0d0d; border-bottom: 1px solid var(--border); }
+  .shot-id { font-size: 13px; font-weight: 700; color: var(--text); letter-spacing: 1px; }
+  .shot-type { font-size: 9px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; background: #1a1a1a; padding: 2px 8px; border-radius: 2px; }
+  .shot-dur { font-size: 11px; color: var(--amber); margin-left: auto; font-weight: 600; }
+  .shot-cam { font-size: 10px; color: var(--teal); }
+
+  .prompt-block { padding: 14px 16px; }
+  .prompt-label { font-size: 9px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
+  .prompt-text { font-size: 12px; color: #d0d0d0; line-height: 1.7; background: #0a0a0a; padding: 12px; border-radius: 3px; border: 1px solid #1a1a1a; font-family: 'Courier New', monospace; white-space: pre-wrap; word-break: break-word; }
+
+  .meta-row { display: flex; gap: 8px; padding: 10px 16px; background: #0a0a0a; border-top: 1px solid var(--border); flex-wrap: wrap; }
+  .meta-tag { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
+  .tag-dur { background: #2a1a00; color: var(--amber); }
+  .tag-cam { background: #001a2a; color: var(--blue); }
+  .tag-style { background: #001a1a; color: var(--teal); }
+  .tag-ref { background: #1a001a; color: #c080ff; }
+  .tag-mode { background: #001a00; color: var(--green); }
+
+  .warning-box { background: #1a0a00; border: 1px solid #603010; margin: 20px; padding: 16px 20px; border-radius: 4px; }
+  .warning-box h4 { color: var(--amber); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .warning-box p { color: #c0a080; font-size: 12px; line-height: 1.6; }
+  .warning-box code { background: #0a0a0a; padding: 2px 6px; font-family: monospace; color: var(--teal); }
+
+  .instruction-box { background: #001020; border: 1px solid #003050; margin: 20px; padding: 16px 20px; border-radius: 4px; }
+  .instruction-box h4 { color: var(--blue); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+  .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .step-num { font-size: 11px; font-weight: 700; color: var(--blue); min-width: 24px; }
+  .step-text { font-size: 12px; color: var(--text); line-height: 1.6; }
+  .step-text code { background: #0a0a0a; padding: 2px 6px; font-family: monospace; color: var(--teal); }
+
+  .footer { padding: 40px 20px; text-align: center; color: var(--muted); font-size: 10px; letter-spacing: 2px; border-top: 1px solid var(--border); margin-top: 30px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Red Key Adventures — Episode 1</h1>
+  <h2>Higgsfield Production Guide · 11 Shots · 2 Scenes</h2>
+  <div class="badge">V36 · PARALLEL MODE · NO FAL</div>
+</div>
+
+<!-- CINEMATIC STYLE REFERENCE -->
+<div class="style-ref">
+  <div class="title-bar">● CINEMATIC STYLE — Extracted from Reference / Applied to All Shots</div>
+  <div class="style-grid">
+    <div class="style-cell">
+      <div class="label">Artistic Medium</div>
+      <div class="value"><span>Photorealistic cinematic movie still</span> — not illustrated, not stylized. Looks like it was captured by a real cinema camera.</div>
+    </div>
+    <div class="style-cell">
+      <div class="label">Lighting Philosophy</div>
+      <div class="value"><span>Low-key, high contrast</span> — deep black shadows, minimal fill, light sources earn every inch they illuminate. No accidental light.</div>
+    </div>
+    <div class="style-cell">
+      <div class="label">Color Grade</div>
+      <div class="value">Cool and desaturated base — <span>teal-green in shadows, deep black crush</span>, warm sources (fire/lantern) are isolated pops. Gritty, not pretty.</div>
+    </div>
+    <div class="style-cell">
+      <div class="label">Camera / Lens</div>
+      <div class="value">Digital cinema 2010s–2020s. <span>Moderate depth of field</span> — subject sharp, background softens. Physical lens effects: water on glass, slight distortion.</div>
+    </div>
+    <div class="style-cell">
+      <div class="label">Film Grain</div>
+      <div class="value"><span>Visible digital noise in shadow areas</span> — contributes to gritty tension. Not clean, not filtered. The grain is part of the story.</div>
+    </div>
+    <div class="style-cell">
+      <div class="label">Physics / Texture</div>
+      <div class="value"><span>Real-world material texture visible</span> — wet fabric weight, mud surface reflectivity, water splash physics, breathing in cold air. Physical presence.</div>
+    </div>
+    <div class="style-cell">
+      <div class="label">Mood Signature</div>
+      <div class="value"><span>Tense, urgent, foreboding</span> — every frame implies something worse is coming. The world is not safe. The light is not reassuring.</div>
+    </div>
+    <div class="style-cell">
+      <div class="label">Higgsfield Style Tag</div>
+      <div class="value">Use: <span>cinematic, photorealistic, high contrast, desaturated, film grain, low-key lighting, anamorphic</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SCENE 001 DNA -->
+<div class="dna-box night">
+  <div class="title-bar">🌑 SCENE 001 — LOCKED VISUAL DNA · 1850s Louisiana Marsh · Dead of Night</div>
+  <div class="dna-grid">
+    <div class="dna-cell">
+      <div class="label">Time / Setting</div>
+      <div class="value">Dead of night · 2–3am · 1850s Louisiana bayou · Same marsh patch across all 5 shots</div>
+    </div>
+    <div class="dna-cell">
+      <div class="label">Primary Light</div>
+      <div class="value">Single iron lantern · warm amber-orange · 3000K · 15ft radius max · The PURSUER carries it · always visible in background</div>
+    </div>
+    <div class="dna-cell">
+      <div class="label">Secondary Light</div>
+      <div class="value">Cold moonbeam · 5600K blue-silver · breaks through cypress canopy at 45° from upper right · hits water surface only</div>
+    </div>
+    <div class="dna-cell">
+      <div class="label">Color Grade</div>
+      <div class="value">Near-monochromatic · blacks crush · mid-tones cool grey-blue · ONLY warm = lantern · no fill, no ambient</div>
+    </div>
+    <div class="dna-cell">
+      <div class="label">Atmosphere</div>
+      <div class="value">Ground fog · 12 inches above water · still air · humid · wet black mud · silver moonlight on water surface</div>
+    </div>
+    <div class="dna-cell">
+      <div class="label">Higgsfield Style</div>
+      <div class="value">cinematic, photorealistic, 1850s period, night, high contrast, near-monochromatic, teal shadow, amber point source, film grain</div>
+    </div>
+  </div>
+</div>
+
+<!-- SCENE 002 DNA -->
+<div class="dna-box day">
+  <div class="title-bar">☀️ SCENE 002 — LOCKED VISUAL DNA · Contemporary Middle School Gymnasium · Daytime</div>
+  <div class="dna-grid">
+    <div class="dna-cell">
+      <div class="label">Time / Setting</div>
+      <div class="value">Midday · contemporary · Belmont Creek Middle School gymnasium · Same gym from every angle</div>
+    </div>
+    <div class="dna-cell">
+      <div class="label">Primary Light</div>
+      <div class="value">Overhead fluorescent fixtures · bright, even · 5000K daylight · high-key · nearly shadowless</div>
+    </div>
+    <div class="dna-cell">
+      <div class="label">Secondary Light</div>
+      <div class="value">West-wall windows · natural daylight 5500K · warm fill from camera-left · subtle</div>
+    </div>
+    <div class="dna-cell">
+      <div class="label">Color Grade</div>
+      <div class="value">Clean · slightly cool · blue-white dominant · warm wood floor accent · bright and modern</div>
+    </div>
+    <div class="dna-cell">
+      <div class="label">Atmosphere</div>
+      <div class="value">No haze · no atmosphere · clean gymnasium air · sharp depth of field on medium shots</div>
+    </div>
+    <div class="dna-cell">
+      <div class="label">Higgsfield Style</div>
+      <div class="value">cinematic, photorealistic, contemporary, high-key, bright, clean, shallow DOF on close shots</div>
+    </div>
+  </div>
+</div>
+
+<!-- HIGGSFIELD INSTRUCTIONS -->
+<div class="instruction-box">
+  <h4>Higgsfield Multishot Instructions</h4>
+  <div class="step"><div class="step-num">1</div><div class="step-text">Upload the corresponding first frame as your <code>start image</code> for each shot — these are your locked composition references.</div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-text">Use the <code>Higgsfield prompt</code> exactly as written — it includes camera movement, subject action, and duration cue.</div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-text">Add the <code>style tags</code> shown per shot in the Higgsfield style/quality field.</div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-text">Set duration to the value shown — Scene 001 shots are <code>4–6s</code> (chase pace), Scene 002 shots are <code>5–8s</code> (tension build), except M04 which is <code>4s</code> (punch cut).</div></div>
+  <div class="step"><div class="step-num">5</div><div class="step-text">Each shot is <strong>independent</strong> — no chaining. Start frame comes from <code>first_frames/{shot_id}.jpg</code> in your project folder.</div></div>
+</div>
+
+<!-- SCENE 001 SHOTS -->
+<div class="scene-header">
+  <h3 class="s001">◈ SCENE 001 — THE COLD OPEN — 1850s Louisiana Marsh</h3>
+  <p>5 shots · chase sequence · continuous night · same marsh, same lantern, same moon</p>
+</div>
+
+<div class="shot-card s001">
+  <div class="shot-header">
+    <span class="shot-id">001_E01</span>
+    <span class="shot-type">low-angle medium</span>
+    <span class="shot-cam">Static → slight upward drift</span>
+    <span class="shot-dur">5 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">Black woman sprints through black marsh water, small child crushed to her chest. Bare feet pound through mud, water explodes with each step. Head whips back over her shoulder — eyes wide white with terror, jaw locked. She does NOT slow down. Camera low at water level, slight upward tilt. Cold moonlight hits the water behind her feet. Warm amber lantern glow visible far background. FACE IDENTITY LOCK — features unchanged through motion. Body: running gait, arm pump, grip on child tightening.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">5 sec</span>
+    <span class="meta-tag tag-cam">camera: low static, slight upward drift</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · high contrast · night · teal shadows · amber point source · film grain</span>
+    <span class="meta-tag tag-ref">start frame: 001_E01.jpg</span>
+    <span class="meta-tag tag-mode">independent shot</span>
+  </div>
+</div>
+
+<div class="shot-card s001">
+  <div class="shot-header">
+    <span class="shot-id">001_I01</span>
+    <span class="shot-type">extreme close-up</span>
+    <span class="shot-cam">Ground level static</span>
+    <span class="shot-dur">4 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">EXTREME CLOSE — ground level. Dark brown bare feet — child's feet and adult's feet — pound through black mud at full sprint. Toes claw into earth with each stride. Mud flicks upward. Feet sink and rip free, sink and rip free. A cracked heel glistens. The feet do not stop. Breath heaving off-frame. Camera locked at ground level, no movement. Moonlight silver on water surface between footfalls.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">4 sec</span>
+    <span class="meta-tag tag-cam">camera: ground locked, no movement</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · extreme close · high contrast · night · wet mud texture · film grain</span>
+    <span class="meta-tag tag-ref">start frame: 001_I01.jpg</span>
+    <span class="meta-tag tag-mode">independent shot</span>
+  </div>
+</div>
+
+<div class="shot-card s001">
+  <div class="shot-header">
+    <span class="shot-id">001_M01</span>
+    <span class="shot-type">medium — authority figure</span>
+    <span class="shot-cam">Slow push in</span>
+    <span class="shot-dur">5 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">White man in heavy dark riding coat stands at marsh edge, one boot on a cypress root. Right arm fully extended overhead — iron lantern burning amber in his grip, held high. Left arm points into the darkness ahead, finger aimed. Face: jaw clenched, nostrils flared, cold fury — not afraid, furious. The lantern underlit his face with warm orange. He turns his head slowly, listening. Camera slow push forward. He has not found them yet. He will.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">5 sec</span>
+    <span class="meta-tag tag-cam">camera: slow push forward</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · high contrast · amber under-lighting · deep shadow eye sockets · film grain</span>
+    <span class="meta-tag tag-ref">start frame: 001_M01.jpg</span>
+    <span class="meta-tag tag-mode">independent shot</span>
+  </div>
+</div>
+
+<div class="shot-card s001">
+  <div class="shot-header">
+    <span class="shot-id">001_M01b</span>
+    <span class="shot-type">medium — stumble and catch</span>
+    <span class="shot-cam">Handheld slight shake</span>
+    <span class="shot-dur">4 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">Dark marsh. Person pitches forward into the reeds — another person lunges sideways, grabs their arm with both hands, hauls them upright. No words exchanged. Hand presses hard on their back — forward. The group surges on through black water. Reeds close behind them. The motion is urgent, practiced — these people know how to keep moving. Camera handheld slight shake, tracking their direction of travel.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">4 sec</span>
+    <span class="meta-tag tag-cam">camera: handheld slight shake, tracking motion</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · high contrast · near-dark · teal-black tones · film grain · physical movement</span>
+    <span class="meta-tag tag-ref">start frame: 001_M01b.jpg</span>
+    <span class="meta-tag tag-mode">independent shot</span>
+  </div>
+</div>
+
+<div class="shot-card s001">
+  <div class="shot-header">
+    <span class="shot-id">001_M02</span>
+    <span class="shot-type">extreme wide — night panorama</span>
+    <span class="shot-cam">Wide static — no movement</span>
+    <span class="shot-dur">6 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">EXTREME WIDE. Four to six dark silhouettes sprint across an open patch of marsh — black water, silver moonlight on the surface. They are tiny in the frame. Legs pumping hard. One figure is smaller — a child. Their shadows stretch long across the silver water. Far background — 50 yards away — a single amber lantern bead. It drifts. It is getting closer. Camera wide, completely static. The world is enormous and indifferent. The lantern gains on them for the full shot.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">6 sec</span>
+    <span class="meta-tag tag-cam">camera: extreme wide locked static</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · night landscape · high contrast · silhouette · silver water · amber lantern point · film grain</span>
+    <span class="meta-tag tag-ref">start frame: 001_M02.jpg</span>
+    <span class="meta-tag tag-mode">independent shot</span>
+  </div>
+</div>
+
+<!-- SCENE 002 SHOTS -->
+<div class="scene-header">
+  <h3 class="s002">◈ SCENE 002 — NAOMI'S PRESENT — Contemporary School Gymnasium</h3>
+  <p>6 shots · tension build · bright gymnasium · something is wrong with this girl</p>
+</div>
+
+<div class="shot-card s002">
+  <div class="shot-header">
+    <span class="shot-id">002_E01</span>
+    <span class="shot-type">wide establishing</span>
+    <span class="shot-cam">Wide static</span>
+    <span class="shot-dur">7 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">Wide shot of a middle school gymnasium. Twelve cheerleaders in blue and white uniforms execute a formation on the hardwood court. Bodies sharp, arms snapping to positions, sneakers squeak on polished wood. Blue and white banners overhead. Digital scoreboard at 12:17. Bright overhead light — clean, contemporary. One girl front-center lets her eyes drift sideways for just a fraction of a second — not distracted, pulled. Her body continues the routine perfectly. Camera wide, locked, observing.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">7 sec</span>
+    <span class="meta-tag tag-cam">camera: wide locked static</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · high-key gymnasium · clean · contemporary · sharp</span>
+    <span class="meta-tag tag-ref">start frame: 002_E01.jpg</span>
+    <span class="meta-tag tag-mode">independent shot</span>
+  </div>
+</div>
+
+<div class="shot-card s002">
+  <div class="shot-header">
+    <span class="shot-id">002_I01</span>
+    <span class="shot-type">extreme close — notebook</span>
+    <span class="shot-cam">Slow reveal tilt</span>
+    <span class="shot-dur">5 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">EXTREME CLOSE. Personal notebook open on a gymnasium bench. Left page: pencil-drawn spiral galaxies, obsessively detailed. Right page: handwritten equations crowding every margin. Center: 'Escape Velocity?' circled three times — ink pressed harder each pass. A water bottle at the edge partially hides the page. Camera slow downward tilt revealing the full notebook. Gym noise distant. This is a private world, hidden in plain sight. The drawings are extraordinary for a child.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">5 sec</span>
+    <span class="meta-tag tag-cam">camera: slow downward tilt reveal</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · close · sharp detail · warm gym light · shallow DOF on paper texture</span>
+    <span class="meta-tag tag-ref">start frame: 002_I01.jpg</span>
+    <span class="meta-tag tag-mode">independent shot</span>
+  </div>
+</div>
+
+<div class="shot-card s002">
+  <div class="shot-header">
+    <span class="shot-id">002_M01</span>
+    <span class="shot-type">medium — cheer performance</span>
+    <span class="shot-cam">Slow push in</span>
+    <span class="shot-dur">7 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">12-year-old Black girl — cheerleader uniform, blue and white, silver ribbon in natural hair — stands at the front of the formation. Both arms in sharp V overhead, perfectly aligned, smile locked and real. She holds the final beat of the routine. Completely still. Teammates blur with motion around her. She is frozen. Her eyes are aimed past the gymnasium, past the camera — focused on something that does not exist in this room. Camera slow push forward. She is receiving something.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">7 sec</span>
+    <span class="meta-tag tag-cam">camera: slow push forward on subject</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · high-key · FACE IDENTITY LOCK · shallow DOF on performer · formation blur background</span>
+    <span class="meta-tag tag-ref">start frame: 002_M01.jpg · char ref: NAOMI_THREE_QUARTER.jpg</span>
+    <span class="meta-tag tag-mode">independent shot</span>
+  </div>
+</div>
+
+<div class="shot-card s002">
+  <div class="shot-header">
+    <span class="shot-id">002_M02</span>
+    <span class="shot-type">MCU — bench alert</span>
+    <span class="shot-cam">Static — locked</span>
+    <span class="shot-dur">6 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">Medium close. 12-year-old Black girl on a gymnasium bench. Spine perfectly straight, trained posture. Chin slightly elevated. Her eyes are locked on something frame right — not casual, not distracted. She is reading something with absolute intensity. Jaw tightens almost imperceptibly. One hand grips the bench edge. One knee begins to bounce — once — then stops. She controls it. She is the most still person in the gymnasium and she is doing the most work. Camera locked. Do not cut away from her face.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">6 sec</span>
+    <span class="meta-tag tag-cam">camera: medium close locked static</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · high-key · FACE IDENTITY LOCK · 85mm equiv · bokeh gym background · catch light eyes</span>
+    <span class="meta-tag tag-ref">start frame: 002_M02.jpg · char ref: NAOMI_CHAR_REFERENCE.jpg</span>
+    <span class="meta-tag tag-mode">independent shot</span>
+  </div>
+</div>
+
+<div class="shot-card s002">
+  <div class="shot-header">
+    <span class="shot-id">002_M03</span>
+    <span class="shot-type">medium — frozen in formation</span>
+    <span class="shot-cam">Slow push — stops short</span>
+    <span class="shot-dur">8 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">Medium shot. 12-year-old Black girl stands in cheer formation with arms locked in V extension overhead. She does not move. Around her, three cheerleaders continue the routine — arms moving, feet stepping. She is a still point in a world of motion. Her gaze goes inward — vast and distant. Her chest rises with a slow, deliberate breath. Her lips part slightly. She sees something. Not afraid. Receiving. Camera slow push forward, stops 2 feet short of her face. Holds.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">8 sec</span>
+    <span class="meta-tag tag-cam">camera: slow push, stops — holds on face</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · high-key · FACE IDENTITY LOCK · motion contrast still/moving · formation depth</span>
+    <span class="meta-tag tag-ref">start frame: 002_M03.jpg · char ref: NAOMI_THREE_QUARTER.jpg</span>
+    <span class="meta-tag tag-mode">independent shot</span>
+  </div>
+</div>
+
+<div class="shot-card s002">
+  <div class="shot-header">
+    <span class="shot-id">002_M04</span>
+    <span class="shot-type">ECU — notebook glow</span>
+    <span class="shot-cam">Locked — no movement</span>
+    <span class="shot-dur">4 sec</span>
+  </div>
+  <div class="prompt-block">
+    <div class="prompt-label">Higgsfield Prompt</div>
+    <div class="prompt-text">EXTREME CLOSE. Notebook page. 'Time Glitch #1?' written in careful ink. Then — beginning from beneath the letters — a warm red luminescence pulses. Not ink bleeding. Something breathing. The glow pulses once. Twice. The page edges begin to darken very slowly, as if absorbing heat from outside the frame inward. The words are alive. Camera absolutely locked. No movement. The glow does all the work. CUT on the second pulse.</div>
+  </div>
+  <div class="meta-row">
+    <span class="meta-tag tag-dur">4 sec</span>
+    <span class="meta-tag tag-cam">camera: absolute lock — zero movement</span>
+    <span class="meta-tag tag-style">cinematic · photorealistic · practical glow effect · red luminescence · vignette edges · supernatural tension</span>
+    <span class="meta-tag tag-ref">start frame: 002_M04.jpg</span>
+    <span class="meta-tag tag-mode">independent shot · PUNCH CUT to black</span>
+  </div>
+</div>
+
+<div class="warning-box">
+  <h4>⚠ No Fal — Higgsfield Only for Video</h4>
+  <p>All video generation uses <strong>Higgsfield</strong>. No Kling, no Fal. Upload the first frame from <code>first_frames/{shot_id}.jpg</code> as your start image. Add the character reference as a secondary image where noted. Use the exact prompt text and duration above. The scene DNA (lighting rig, room architecture, atmosphere) is baked into the first frames — Higgsfield will maintain it through the animation.</p>
+</div>
+
+<div class="footer">
+  RED KEY EP1 · ATLAS V36 · HIGGSFIELD PRODUCTION GUIDE · 2026-03-26
+</div>
+
+</body>
+</html>

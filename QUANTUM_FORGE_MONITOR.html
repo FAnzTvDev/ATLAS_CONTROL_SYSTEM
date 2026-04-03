@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚛️ QUANTUM FORGE - Real-Time Monitor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Monaco', 'Menlo', monospace;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #00ff88;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 15px;
+            border: 2px solid #00ff88;
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 20px #00ff88;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #88ffdd;
+            opacity: 0.8;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .panel {
+            background: rgba(26, 31, 58, 0.8);
+            border: 2px solid #00ff88;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .panel:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+        }
+
+        .panel-header {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #00ff88;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-badge {
+            font-size: 0.7em;
+            padding: 5px 15px;
+            border-radius: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        .status-running {
+            background: #00ff88;
+            color: #0a0e27;
+        }
+
+        .status-idle {
+            background: #ffaa00;
+            color: #0a0e27;
+        }
+
+        .status-complete {
+            background: #00aaff;
+            color: #0a0e27;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .metric-label {
+            color: #88ffdd;
+        }
+
+        .metric-value {
+            color: #00ff88;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .quantum-circuit {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            border: 1px solid #00ff88;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+
+        .log-container {
+            height: 300px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px solid #00ff88;
+        }
+
+        .log-entry {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .log-timestamp {
+            color: #88ffdd;
+            opacity: 0.7;
+        }
+
+        .log-quantum {
+            color: #ff88ff;
+        }
+
+        .log-image {
+            color: #ffaa00;
+        }
+
+        .log-video {
+            color: #00aaff;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            margin: 15px 0;
+            overflow: hidden;
+            border: 1px solid #00ff88;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88, #00aaff);
+            border-radius: 15px;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a0e27;
+            font-weight: bold;
+        }
+
+        .shot-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #00ff88;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .shot-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .shot-id {
+            font-size: 1.2em;
+            color: #00ff88;
+        }
+
+        .shot-status {
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.9em;
+        }
+
+        .status-pending {
+            background: rgba(255, 170, 0, 0.3);
+            color: #ffaa00;
+        }
+
+        .status-processing {
+            background: rgba(0, 255, 136, 0.3);
+            color: #00ff88;
+            animation: pulse 1.5s infinite;
+        }
+
+        .status-done {
+            background: rgba(0, 170, 255, 0.3);
+            color: #00aaff;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .knob-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .knob-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .knob-field label {
+            font-size: 0.9em;
+            color: #88ffdd;
+        }
+
+        .knob-field select,
+        .knob-field input[type="number"],
+        .knob-field input[type="range"] {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid #00ff88;
+            border-radius: 8px;
+            color: #00ff88;
+            padding: 8px;
+            font-family: inherit;
+        }
+
+        .slider-value {
+            font-size: 0.9em;
+            color: #ffaa00;
+        }
+
+        .status-note {
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: #88ffdd;
+        }
+
+        .manifest-upload {
+            margin-top: 20px;
+            border-top: 1px solid rgba(0, 255, 136, 0.2);
+            padding-top: 15px;
+        }
+
+        .manifest-upload input[type="file"] {
+            color: #88ffdd;
+            margin-bottom: 10px;
+        }
+
+        .quantum-log-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .quantum-log-table th,
+        .quantum-log-table td {
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            padding: 8px;
+            text-align: left;
+        }
+
+        .quantum-log-table th {
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .prompt-snippet {
+            font-size: 0.85em;
+            color: #88ffdd;
+        }
+
+        .shot-inspector-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .shot-list {
+            min-width: 220px;
+            flex: 1;
+        }
+
+        .shot-form {
+            flex: 2;
+            min-width: 280px;
+        }
+
+        .shot-form textarea {
+            min-height: 70px;
+        }
+
+        .shot-form .field-group {
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .refinement-log {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid #00ff88;
+            border-radius: 10px;
+            padding: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: 'Menlo', monospace;
+            font-size: 12px;
+            color: #88ffdd;
+            margin-top: 10px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #00ff88, #00aaff);
+            color: #0a0e27;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .refresh-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #00ff88;
+            border-radius: 50%;
+            margin-left: 10px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .vision-scores {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .vision-score {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            border: 1px solid #00ff88;
+        }
+
+        .score-value {
+            font-size: 2em;
+            color: #00ff88;
+            margin: 10px 0;
+        }
+
+        .score-label {
+            color: #88ffdd;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚛️ QUANTUM FORGE</h1>
+            <div class="subtitle">
+                Phase 8.8 - Real-Time Quantum Production Monitor
+                <span class="refresh-indicator"></span>
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- System Status -->
+            <div class="panel">
+                <div class="panel-header">
+                    System Status
+                    <span class="status-badge status-running" id="system-status">RUNNING</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Session:</span>
+                    <span class="metric-value" id="session-id">Loading...</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Quantum Mode:</span>
+                    <span class="metric-value" id="quantum-mode">MOCK</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Shots Processed:</span>
+                    <span class="metric-value"><span id="shots-done">0</span> / <span id="shots-total">0</span></span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Total Quantum Time:</span>
+                    <span class="metric-value" id="quantum-time">0.00s</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Production Time:</span>
+                    <span class="metric-value" id="production-time">0.00s</span>
+                </div>
+            </div>
+
+            <!-- Current Shot -->
+            <div class="panel">
+                <div class="panel-header">
+                    Current Shot
+                    <span class="status-badge status-processing" id="shot-status">PROCESSING</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Shot ID:</span>
+                    <span class="metric-value" id="current-shot-id">-</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Stage:</span>
+                    <span class="metric-value" id="current-stage">Initializing...</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="shot-progress" style="width: 0%">0%</div>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Quantum Variations:</span>
+                    <span class="metric-value" id="variations-count">0</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Winning Score:</span>
+                    <span class="metric-value" id="winning-score">-</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3-Vision DINOv3 Scores -->
+        <div class="panel full-width">
+            <div class="panel-header">
+                3-Vision DINOv3 Analysis
+            </div>
+            <div class="vision-scores">
+                <div class="vision-score">
+                    <div class="score-label">Vision 1: Overall Quality</div>
+                    <div class="score-value" id="vision-1">-</div>
+                    <div class="score-label">Weight: 40%</div>
+                </div>
+                <div class="vision-score">
+                    <div class="score-label">Vision 2: Face Sharpness</div>
+                    <div class="score-value" id="vision-2">-</div>
+                    <div class="score-label">Weight: 30%</div>
+                </div>
+                <div class="vision-score">
+                    <div class="score-label">Vision 3: Composition</div>
+                    <div class="score-value" id="vision-3">-</div>
+                    <div class="score-label">Weight: 30%</div>
+                </div>
+            </div>
+            <div class="metric-row" style="margin-top: 20px;">
+                <span class="metric-label">⚛️ Quantum Combined Score:</span>
+                <span class="metric-value" id="quantum-combined" style="font-size: 1.8em;">-</span>
+            </div>
+        </div>
+
+        <!-- Director Control Knobs -->
+        <div class="panel">
+            <div class="panel-header">
+                Director Control Knobs
+            </div>
+            <form id="director-knobs-form">
+                <div class="knob-grid">
+                    <div class="knob-field">
+                        <label for="director-profile">Director Profile</label>
+                        <select id="director-profile"></select>
+                    </div>
+                    <div class="knob-field">
+                        <label for="knob-cadence">Scene Cadence</label>
+                        <select id="knob-cadence">
+                            <option value="slow_burn">Slow Burn</option>
+                            <option value="standard">Standard</option>
+                            <option value="frenetic">Frenetic</option>
+                        </select>
+                    </div>
+                    <div class="knob-field">
+                        <label for="knob-qc">Validation Strictness (0.75 – 0.95)</label>
+                        <input type="range" id="knob-qc" min="0.75" max="0.95" step="0.01" value="0.85">
+                        <span class="slider-value" id="knob-qc-value">0.85</span>
+                    </div>
+                    <div class="knob-field">
+                        <label for="knob-camera">Camera Motivation</label>
+                        <select id="knob-camera">
+                            <option value="predator">Predator Approach</option>
+                            <option value="observer">Observer Tension</option>
+                            <option value="empathetic">Empathetic Witness</option>
+                        </select>
+                    </div>
+                    <div class="knob-field">
+                        <label for="knob-lighting">Lighting Split (Cool %)</label>
+                        <input type="range" id="knob-lighting" min="0" max="100" step="5" value="50">
+                        <span class="slider-value" id="knob-lighting-value">50% cool / 50% warm</span>
+                    </div>
+                    <div class="knob-field">
+                        <label for="knob-atmosphere">Atmospheric Density</label>
+                        <input type="range" id="knob-atmosphere" min="0" max="100" step="5" value="45">
+                        <span class="slider-value" id="knob-atmosphere-value">0.45</span>
+                    </div>
+                    <div class="knob-field">
+                        <label for="knob-dialogue">Dialogue Pattern</label>
+                        <select id="knob-dialogue">
+                            <option value="measured">Measured Victorian</option>
+                            <option value="subtext_only">Subtext Only</option>
+                            <option value="victorian">Victorian Formal</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit">Save Director Settings</button>
+                <div id="director-settings-status" class="status-note"></div>
+            </form>
+            <form id="manifest-upload-form" class="manifest-upload">
+                <label for="manifest-file">Upload Manifest (.json)</label>
+                <input type="file" id="manifest-file" name="manifest" accept=".json">
+                <button type="submit">Upload + Replace Working Manifest</button>
+                <div id="manifest-upload-status" class="status-note"></div>
+            </form>
+        </div>
+
+        <!-- Director Decisions -->
+        <div class="panel">
+            <div class="panel-header">
+                Director Decisions
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Lighting Split:</span>
+                <span class="metric-value" id="lighting-split">-</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Atmosphere Density:</span>
+                <span class="metric-value" id="atmosphere">-</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Camera Motivation:</span>
+                <span class="metric-value" id="camera">-</span>
+            </div>
+        </div>
+
+        <!-- Quantum Job Dashboard -->
+        <div class="panel full-width">
+            <div class="panel-header">
+                Quantum Job Dashboard
+            </div>
+            <div class="log-container" style="height:auto; max-height:400px; overflow-y:auto;">
+                <table class="quantum-log-table">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Shot</th>
+                            <th>IBM Job ID</th>
+                            <th>Seconds</th>
+                            <th>Prompt Delta</th>
+                        </tr>
+                    </thead>
+                    <tbody id="quantum-log-body">
+                        <tr>
+                            <td colspan="5" style="text-align:center; color:#88ffdd;">Loading quantum jobs…</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Shot Inspector -->
+        <div class="panel full-width">
+            <div class="panel-header">
+                Shot Inspector & Overrides
+            </div>
+            <div class="shot-inspector-grid">
+                <div class="shot-list">
+                    <div class="field-group">
+                        <label for="shot-select">Shot</label>
+                        <select id="shot-select"></select>
+                    </div>
+                    <button type="button" class="btn btn-secondary" id="reload-shots-btn">Reload Shots</button>
+                </div>
+                <form id="shot-inspector-form" class="shot-form">
+                    <div class="field-group">
+                        <label for="shot-description">Description / Prompt Seed</label>
+                        <textarea id="shot-description"></textarea>
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-duration">Duration (seconds)</label>
+                        <input type="number" id="shot-duration" min="1" max="60">
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-references">References (comma separated)</label>
+                        <input type="text" id="shot-references">
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-camera">Camera</label>
+                        <input type="text" id="shot-camera">
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-lighting">Lighting</label>
+                        <input type="text" id="shot-lighting">
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-camera-motivation">Camera Motivation</label>
+                        <select id="shot-camera-motivation">
+                            <option value="observer tension">Observer Tension</option>
+                            <option value="isolated voyeur">Isolated Voyeur</option>
+                            <option value="predator threshold">Predator Threshold</option>
+                            <option value="empathetic">Empathetic Witness</option>
+                        </select>
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-lighting-split">Lighting Split (Cool %)</label>
+                        <input type="range" id="shot-lighting-split" min="0" max="100" step="5">
+                        <span class="slider-value" id="shot-lighting-split-value">50% cool / 50% warm</span>
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-atmosphere">Atmospheric Density</label>
+                        <input type="range" id="shot-atmosphere" min="0" max="1" step="0.05">
+                        <span class="slider-value" id="shot-atmosphere-value">0.50</span>
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-blocking">Character Blocking</label>
+                        <textarea id="shot-blocking"></textarea>
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-vision">Vision Guidance (one per line)</label>
+                        <textarea id="shot-vision"></textarea>
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-state">State Constraints (one per line)</label>
+                        <textarea id="shot-state"></textarea>
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-mindset">Mindset Guidance (one per line)</label>
+                        <textarea id="shot-mindset"></textarea>
+                    </div>
+                    <div class="field-group">
+                        <label for="shot-quantum">Quantum Guidance (one per line)</label>
+                        <textarea id="shot-quantum"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-secondary" id="apply-identity-template">Apply Identity Lock Template</button>
+                    <button type="submit" class="btn btn-primary">Save Shot Overrides</button>
+                </form>
+            </div>
+            <div id="shot-update-status" class="status-note"></div>
+        </div>
+
+        <!-- Meta-Learning Recommendations -->
+        <div class="panel full-width">
+            <div class="panel-header">
+                Quantum Learning Recommendations
+            </div>
+            <div id="meta-learning-container">
+                <p style="color:#88ffdd;">No meta-learning results yet.</p>
+            </div>
+        </div>
+
+        <!-- Refinement Harness -->
+        <div class="panel">
+            <div class="panel-header">
+                Still-Only Refinement Harness
+            </div>
+            <button type="button" class="btn btn-secondary" id="run-refinement-btn">Run 10 still-only iterations</button>
+            <div id="refinement-status" class="status-note"></div>
+            <div class="refinement-log" id="refinement-log">No harness output yet.</div>
+        </div>
+
+        <!-- Scene Runner -->
+        <div class="panel full-width">
+            <div class="panel-header">
+                Scene Runner
+            </div>
+            <div class="field-group">
+                <label for="scene-select">Select Scenes (⌘/Ctrl + click for multiple)</label>
+                <select id="scene-select" multiple style="min-height:140px;"></select>
+            </div>
+            <div class="field-group">
+                <label>Options</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="run-stills-only"> Stills only (--no-video)</label>
+                    <label><input type="checkbox" id="run-meta-update" checked> Enable meta-update</label>
+                    <label><input type="checkbox" id="run-no-quantum"> Disable quantum</label>
+                    <label><input type="checkbox" id="run-quantum-only"> Quantum only</label>
+                </div>
+            </div>
+            <div class="knob-grid">
+                <div class="knob-field">
+                    <label for="run-max-quantum">Max Quantum / Scene</label>
+                    <input type="number" id="run-max-quantum" min="0" value="2">
+                </div>
+                <div class="knob-field">
+                    <label for="run-max-seconds">Max Quantum Seconds / Scene (0 = unlimited)</label>
+                    <input type="number" id="run-max-seconds" min="0" value="4">
+                </div>
+                <div class="knob-field">
+                    <label for="run-parallel-shots">Parallel Shots</label>
+                    <input type="number" id="run-parallel-shots" min="1" value="3">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="run-scenes-btn">Run Selected Scenes</button>
+            <div id="run-scenes-status" class="status-note"></div>
+            <div class="refinement-log" id="run-scenes-log">No scene run launched yet.</div>
+        </div>
+
+        <!-- Production Log -->
+        <div class="panel">
+            <div class="panel-header">
+                Live Production Log
+            </div>
+            <div class="log-container" id="log-container">
+                <!-- Log entries will be added here -->
+            </div>
+        </div>
+
+        <!-- All Shots -->
+        <div class="panel full-width">
+            <div class="panel-header">
+                All Shots
+            </div>
+            <div id="shots-container">
+                <!-- Shot cards will be added here -->
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="panel full-width">
+            <div class="panel-header">
+                Controls
+            </div>
+            <div class="controls">
+                <button onclick="refreshData()">🔄 Refresh Now</button>
+                <button onclick="openSessionFolder()">📁 Open Session Folder</button>
+                <button onclick="viewResults()">📊 View Results JSON</button>
+                <button onclick="toggleAutoRefresh()">⏸️ Pause Auto-Refresh</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let autoRefresh = true;
+        let refreshInterval;
+        let currentSessionDir = null;
+        let directorProfiles = [];
+        let shotsCache = [];
+        let selectedShotId = null;
+        let scenesCache = [];
+        let refinementPollInterval = null;
+        let sceneRunPollInterval = null;
+
+        // Add log entry
+        function addLog(message, type = 'info') {
+            const logContainer = document.getElementById('log-container');
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+
+            const timestamp = new Date().toLocaleTimeString();
+            const typeClass = type === 'quantum' ? 'log-quantum' :
+                            type === 'image' ? 'log-image' :
+                            type === 'video' ? 'log-video' : '';
+
+            entry.innerHTML = `<span class="log-timestamp">[${timestamp}]</span> <span class="${typeClass}">${message}</span>`;
+            logContainer.insertBefore(entry, logContainer.firstChild);
+
+            // Keep only last 50 entries
+            while (logContainer.children.length > 50) {
+                logContainer.removeChild(logContainer.lastChild);
+            }
+        }
+
+        const qcSlider = document.getElementById('knob-qc');
+        const qcValue = document.getElementById('knob-qc-value');
+        const lightingSlider = document.getElementById('knob-lighting');
+        const lightingValue = document.getElementById('knob-lighting-value');
+        const atmosphereSlider = document.getElementById('knob-atmosphere');
+        const atmosphereValue = document.getElementById('knob-atmosphere-value');
+
+        function updateRangeLabels() {
+            if (qcSlider && qcValue) {
+                qcValue.textContent = Number(qcSlider.value).toFixed(2);
+            }
+            if (lightingSlider && lightingValue) {
+                const cool = Number(lightingSlider.value);
+                lightingValue.textContent = `${cool}% cool / ${100 - cool}% warm`;
+            }
+            if (atmosphereSlider && atmosphereValue) {
+                atmosphereValue.textContent = (Number(atmosphereSlider.value) / 100).toFixed(2);
+            }
+        }
+
+        [qcSlider, lightingSlider, atmosphereSlider].forEach(slider => {
+            if (slider) {
+                slider.addEventListener('input', updateRangeLabels);
+            }
+        });
+
+        async function loadProfiles() {
+            const select = document.getElementById('director-profile');
+            if (!select) return;
+            try {
+                const response = await fetch('/api/director/profiles');
+                const data = await response.json();
+                directorProfiles = data.profiles || [];
+                select.innerHTML = directorProfiles.map(profile => `
+                    <option value="${profile.key}">${profile.key.replace(/_/g, ' ')}</option>
+                `).join('');
+                if (data.active) {
+                    select.value = data.active;
+                }
+            } catch (error) {
+                console.error('Failed to load director profiles', error);
+            }
+        }
+
+        async function loadDirectorSettings() {
+            if (!document.getElementById('director-knobs-form')) return;
+            try {
+                const response = await fetch('/api/director/settings');
+                const data = await response.json();
+                document.getElementById('knob-cadence').value = data.cadence || 'standard';
+                document.getElementById('knob-qc').value = data.qc_threshold || 0.85;
+                document.getElementById('knob-camera').value = data.camera_motivation || 'empathetic';
+                const cool = data.lighting_split ? data.lighting_split.cool : 50;
+                document.getElementById('knob-lighting').value = cool;
+                const density = data.atmospheric_density || 0.45;
+                document.getElementById('knob-atmosphere').value = Math.round(density * 100);
+                document.getElementById('knob-dialogue').value = data.dialogue_pattern || 'measured';
+                if (document.getElementById('director-profile') && data.profile) {
+                    document.getElementById('director-profile').value = data.profile;
+                }
+                updateRangeLabels();
+            } catch (error) {
+                console.error('Failed to load director settings', error);
+            }
+        }
+
+        async function initializeDirectorControls() {
+            await loadProfiles();
+            await loadDirectorSettings();
+            updateRangeLabels();
+        }
+
+        async function saveDirectorSettings(event) {
+            event.preventDefault();
+            updateRangeLabels();
+            const payload = {
+                cadence: document.getElementById('knob-cadence').value,
+                qc_threshold: Number(document.getElementById('knob-qc').value),
+                camera_motivation: document.getElementById('knob-camera').value,
+                lighting_split: Number(document.getElementById('knob-lighting').value),
+                atmospheric_density: Number(document.getElementById('knob-atmosphere').value) / 100,
+                dialogue_pattern: document.getElementById('knob-dialogue').value,
+                profile: document.getElementById('director-profile') ? document.getElementById('director-profile').value : undefined
+            };
+            const statusNode = document.getElementById('director-settings-status');
+            statusNode.textContent = 'Saving...';
+            try {
+                const response = await fetch('/api/director/update-settings', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                statusNode.textContent = result.status === 'success'
+                    ? `Saved at ${result.timestamp}`
+                    : `Error: ${result.message}`;
+            } catch (error) {
+                statusNode.textContent = `Error: ${error.message}`;
+            }
+        }
+
+        async function uploadManifest(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById('manifest-file');
+            const statusNode = document.getElementById('manifest-upload-status');
+            if (!fileInput.files.length) {
+                statusNode.textContent = 'Select a manifest file first.';
+                return;
+            }
+            const formData = new FormData();
+            formData.append('manifest', fileInput.files[0]);
+            statusNode.textContent = 'Uploading...';
+            try {
+                const response = await fetch('/api/director/upload-manifest', {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+                statusNode.textContent = result.status === 'success'
+                    ? 'Manifest applied successfully.'
+                    : `Error: ${result.message}`;
+            } catch (error) {
+                statusNode.textContent = `Error: ${error.message}`;
+            }
+        }
+
+        function getShotById(id) {
+            return shotsCache.find(shot => shot.shot_id === id);
+        }
+
+        function setShotLightingText(value) {
+            const label = document.getElementById('shot-lighting-split-value');
+            if (label) {
+                const num = Number(value) || 0;
+                label.textContent = `${num}% cool / ${100 - num}% warm`;
+            }
+        }
+
+        function setShotAtmosphereText(value) {
+            const label = document.getElementById('shot-atmosphere-value');
+            if (label) {
+                label.textContent = Number(value || 0).toFixed(2);
+            }
+        }
+
+        function populateShotForm(shot) {
+            if (!shot) return;
+            selectedShotId = shot.shot_id;
+            document.getElementById('shot-description').value = shot.description || '';
+            document.getElementById('shot-duration').value = shot.duration || '';
+            const refs = Array.isArray(shot.reference_needed) ? shot.reference_needed.join(', ') : (shot.reference_needed || '');
+            document.getElementById('shot-references').value = refs;
+            document.getElementById('shot-camera').value = shot.camera || '';
+            document.getElementById('shot-lighting').value = shot.lighting || '';
+            document.getElementById('shot-camera-motivation').value = shot.camera_motivation || 'observer tension';
+            const coolPct = shot.lighting_split && typeof shot.lighting_split.exterior_cool === 'number'
+                ? Math.round(shot.lighting_split.exterior_cool * 100)
+                : 50;
+            document.getElementById('shot-lighting-split').value = coolPct;
+            setShotLightingText(coolPct);
+            const atmos = shot.atmospheric_density ?? 0.5;
+            document.getElementById('shot-atmosphere').value = atmos;
+            setShotAtmosphereText(atmos);
+            document.getElementById('shot-blocking').value = shot.character_blocking || '';
+            const vision = Array.isArray(shot.vision_guidance) ? shot.vision_guidance.join('\n') : (shot.vision_guidance || '');
+            document.getElementById('shot-vision').value = vision;
+            const state = Array.isArray(shot.state_constraints) ? shot.state_constraints.join('\n') : (shot.state_constraints || '');
+            document.getElementById('shot-state').value = state;
+            const mindset = Array.isArray(shot.mindset_guidance) ? shot.mindset_guidance.join('\n') : (shot.mindset_guidance || '');
+            document.getElementById('shot-mindset').value = mindset;
+            const quantum = Array.isArray(shot.quantum_guidance) ? shot.quantum_guidance.join('\n') : (shot.quantum_guidance || '');
+            document.getElementById('shot-quantum').value = quantum;
+        }
+
+        function populateShotSelect() {
+            const select = document.getElementById('shot-select');
+            if (!select) return;
+            if (!shotsCache.length) {
+                select.innerHTML = '<option value="">No shots available</option>';
+                selectedShotId = null;
+                return;
+            }
+            select.innerHTML = shotsCache.map(shot => `
+                <option value="${shot.shot_id}">${shot.scene_id} • ${shot.shot_id}</option>
+            `).join('');
+            const targetId = selectedShotId || shotsCache[0].shot_id;
+            select.value = targetId;
+            const shot = getShotById(targetId);
+            populateShotForm(shot);
+        }
+
+        async function loadShots() {
+            const select = document.getElementById('shot-select');
+            if (!select) return;
+            try {
+                const response = await fetch('/api/director/shots?limit=400');
+                const data = await response.json();
+                shotsCache = data.shots || [];
+                populateShotSelect();
+            } catch (error) {
+                console.error('Failed to load shots', error);
+            }
+        }
+
+        async function loadScenes() {
+            const select = document.getElementById('scene-select');
+            if (!select) return;
+            try {
+                const response = await fetch('/api/director/scenes');
+                const data = await response.json();
+                scenesCache = data.scenes || [];
+                select.innerHTML = scenesCache.map(scene => `
+                    <option value="${scene.scene_id}">${scene.scene_id} — ${scene.scene_title}</option>
+                `).join('');
+            } catch (error) {
+                console.error('Failed to load scenes', error);
+            }
+        }
+
+        function buildIdentityTemplate(shot) {
+            if (!shot) return '';
+            const refs = shot.reference_needed
+                ? shot.reference_needed.split(',').map(r => r.trim()).filter(Boolean)
+                : [];
+            const primary = refs[0] || 'primary subject';
+            const secondary = refs[1] || 'secondary subject';
+            return `Maintain identical blocking and framing. Primary subject: ${primary}. ` +
+                   `Secondary subject: ${secondary}. This reference frame is the ground truth for the entire shot—` +
+                   `facial geometry, skin tone, age, and hairstyle must remain exact.`;
+        }
+
+        function applyIdentityTemplate() {
+            const shot = getShotById(selectedShotId);
+            const template = buildIdentityTemplate(shot);
+            if (!template) return;
+            const field = document.getElementById('shot-quantum');
+            if (field) {
+                field.value = template;
+            }
+        }
+
+        async function saveShotOverrides(event) {
+            event.preventDefault();
+            if (!selectedShotId) return;
+            const shot = getShotById(selectedShotId);
+            if (!shot) return;
+            const lightingPercent = Number(document.getElementById('shot-lighting-split').value || 50);
+            const payload = {
+                shot_id: shot.shot_id,
+                scene_id: shot.scene_id,
+                updates: {
+                    description: document.getElementById('shot-description').value,
+                    duration: document.getElementById('shot-duration').value,
+                    reference_needed: document.getElementById('shot-references').value,
+                    camera: document.getElementById('shot-camera').value,
+                    lighting: document.getElementById('shot-lighting').value,
+                    camera_motivation: document.getElementById('shot-camera-motivation').value,
+                    lighting_split: { cool: lightingPercent },
+                    atmospheric_density: document.getElementById('shot-atmosphere').value,
+                    character_blocking: document.getElementById('shot-blocking').value,
+                    vision_guidance: document.getElementById('shot-vision').value,
+                    state_constraints: document.getElementById('shot-state').value,
+                    mindset_guidance: document.getElementById('shot-mindset').value,
+                    quantum_guidance: document.getElementById('shot-quantum').value
+                }
+            };
+            const statusNode = document.getElementById('shot-update-status');
+            statusNode.textContent = 'Saving...';
+            try {
+                const response = await fetch('/api/director/shot/update', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.status === 'success') {
+                    statusNode.textContent = `Shot ${shot.shot_id} updated`;
+                    await loadShots();
+                } else {
+                    statusNode.textContent = `Error: ${result.message}`;
+                }
+            } catch (error) {
+                statusNode.textContent = `Error: ${error.message}`;
+            }
+        }
+
+        async function loadMetaLearning() {
+            const container = document.getElementById('meta-learning-container');
+            if (!container) return;
+            try {
+                const response = await fetch('/api/director/meta-learning');
+                const data = await response.json();
+                const entries = data.entries || [];
+                if (!entries.length) {
+                    container.innerHTML = '<p style="color:#88ffdd;">No meta-learning recommendations yet.</p>';
+                    return;
+                }
+                container.innerHTML = entries.map(entry => `
+                    <div class="card" style="margin-bottom:15px;">
+                        <div style="display:flex; justify-content:space-between;">
+                            <strong>${entry.category_label}</strong>
+                            <span>Status: ${entry.status}</span>
+                        </div>
+                        <pre style="white-space:pre-wrap; font-size:12px; margin-top:10px; color:#88ffdd;">${JSON.stringify(entry.item, null, 2)}</pre>
+                        <div class="controls">
+                            <button type="button" class="btn btn-secondary meta-action"
+                                data-category="${entry.category}"
+                                data-index="${entry.index}"
+                                data-decision="approved">Approve</button>
+                            <button type="button" class="btn btn-danger meta-action"
+                                data-category="${entry.category}"
+                                data-index="${entry.index}"
+                                data-decision="rejected">Reject</button>
+                            <button type="button" class="btn meta-action"
+                                data-category="${entry.category}"
+                                data-index="${entry.index}"
+                                data-decision="pending">Clear</button>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                container.innerHTML = `<p style="color:#ff8888;">Failed to load meta-learning report: ${error.message}</p>`;
+            }
+        }
+
+        async function sendMetaDecision(category, index, decision) {
+            const container = document.getElementById('meta-learning-container');
+            if (!container) return;
+            try {
+                await fetch('/api/director/meta-learning/decision', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({category, index, decision})
+                });
+                loadMetaLearning();
+            } catch (error) {
+                console.error('Failed to update meta decision', error);
+            }
+        }
+
+        async function startSceneRun() {
+            const statusNode = document.getElementById('run-scenes-status');
+            const logNode = document.getElementById('run-scenes-log');
+            const button = document.getElementById('run-scenes-btn');
+            if (!statusNode || !logNode || !button) return;
+            const sceneSelect = document.getElementById('scene-select');
+            const selectedScenes = Array.from(sceneSelect ? sceneSelect.selectedOptions : []).map(opt => opt.value);
+            const payload = {
+                scene_ids: selectedScenes,
+                stills_only: document.getElementById('run-stills-only').checked,
+                meta_update: document.getElementById('run-meta-update').checked,
+                no_quantum: document.getElementById('run-no-quantum').checked,
+                quantum_only: document.getElementById('run-quantum-only').checked,
+                max_quantum_per_scene: document.getElementById('run-max-quantum').value,
+                max_quantum_seconds_per_scene: document.getElementById('run-max-seconds').value,
+                parallel_shots: document.getElementById('run-parallel-shots').value
+            };
+            button.disabled = true;
+            statusNode.textContent = 'Starting director run...';
+            try {
+                const response = await fetch('/api/director/run', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+                const data = await response.json();
+                if (data.status === 'started') {
+                    statusNode.textContent = `Run started (PID ${data.pid})`;
+                    logNode.textContent = '';
+                    startSceneRunPolling();
+                } else {
+                    statusNode.textContent = `Error: ${data.message || 'Unable to start run'}`;
+                }
+            } catch (error) {
+                statusNode.textContent = `Error: ${error.message}`;
+            } finally {
+                button.disabled = false;
+            }
+        }
+
+        function startSceneRunPolling() {
+            pollSceneRunStatus();
+            if (sceneRunPollInterval) clearInterval(sceneRunPollInterval);
+            sceneRunPollInterval = setInterval(pollSceneRunStatus, 5000);
+        }
+
+        async function pollSceneRunStatus() {
+            const statusNode = document.getElementById('run-scenes-status');
+            const logNode = document.getElementById('run-scenes-log');
+            if (!statusNode || !logNode) return;
+            try {
+                const response = await fetch('/api/director/run-status');
+                const data = await response.json();
+                statusNode.textContent = data.running
+                    ? `Run in progress${data.command ? ' — ' + data.command : ''}`
+                    : 'Run idle';
+                if (data.log_tail) {
+                    logNode.textContent = data.log_tail.join('');
+                }
+                if (!data.running && sceneRunPollInterval) {
+                    clearInterval(sceneRunPollInterval);
+                    sceneRunPollInterval = null;
+                }
+            } catch (error) {
+                statusNode.textContent = `Status error: ${error.message}`;
+            }
+        }
+
+        async function runRefinementHarness() {
+            const btn = document.getElementById('run-refinement-btn');
+            const statusNode = document.getElementById('refinement-status');
+            if (!btn) return;
+            btn.disabled = true;
+            statusNode.textContent = 'Starting refinement harness...';
+            try {
+                const response = await fetch('/api/director/run-refinement', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({runs: 10, fps: 1})
+                });
+                const result = await response.json();
+                if (result.status === 'started') {
+                    statusNode.textContent = `Harness started (PID ${result.pid})`;
+                    startRefinementPolling();
+                } else {
+                    statusNode.textContent = `Error: ${result.message}`;
+                }
+            } catch (error) {
+                statusNode.textContent = `Error: ${error.message}`;
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
+        function startRefinementPolling() {
+            pollRefinementStatus();
+            if (refinementPollInterval) clearInterval(refinementPollInterval);
+            refinementPollInterval = setInterval(pollRefinementStatus, 5000);
+        }
+
+        async function pollRefinementStatus() {
+            const statusNode = document.getElementById('refinement-status');
+            const logNode = document.getElementById('refinement-log');
+            if (!statusNode || !logNode) return;
+            try {
+                const response = await fetch('/api/director/refinement-status');
+                const data = await response.json();
+                statusNode.textContent = data.running
+                    ? `Harness running (PID ${data.pid})`
+                    : 'Harness idle';
+                if (data.log_tail) {
+                    logNode.textContent = data.log_tail.join('');
+                }
+                if (!data.running && refinementPollInterval) {
+                    clearInterval(refinementPollInterval);
+                    refinementPollInterval = null;
+                }
+            } catch (error) {
+                statusNode.textContent = `Status error: ${error.message}`;
+            }
+        }
+
+        function truncatePrompt(text, length = 160) {
+            if (!text) return '';
+            return text.length > length ? `${text.slice(0, length)}…` : text;
+        }
+
+        function renderQuantumLog(logs) {
+            const tbody = document.getElementById('quantum-log-body');
+            if (!tbody) return;
+            if (!logs.length) {
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:#88ffdd;">No quantum jobs logged yet.</td></tr>';
+                return;
+            }
+            tbody.innerHTML = logs.map(entry => `
+                <tr>
+                    <td>${entry.timestamp || '-'}</td>
+                    <td>${entry.shot_id}</td>
+                    <td>${entry.job_id && entry.job_id !== 'pending'
+                        ? '<a href="https://quantum-computing.ibm.com/lab/jobs/' + entry.job_id + '" target="_blank">' + entry.job_id + '</a>'
+                        : (entry.job_id || '-')
+                    }</td>
+                    <td>${typeof entry.seconds === 'number' ? entry.seconds.toFixed(2) : (entry.seconds || '-')}</td>
+                    <td>
+                        <div class="prompt-snippet"><strong>Base:</strong> ${truncatePrompt(entry.base_prompt)}</div>
+                        <div class="prompt-snippet"><strong>Quantum:</strong> ${truncatePrompt(entry.quantum_prompt)}</div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        async function loadQuantumLogs() {
+            try {
+                const response = await fetch('/api/director/quantum/logs');
+                const data = await response.json();
+                renderQuantumLog(data.logs || []);
+            } catch (error) {
+                console.error('Unable to load quantum logs', error);
+            }
+        }
+
+        if (document.getElementById('director-knobs-form')) {
+            document.getElementById('director-knobs-form').addEventListener('submit', saveDirectorSettings);
+            document.getElementById('manifest-upload-form').addEventListener('submit', uploadManifest);
+            initializeDirectorControls();
+        }
+
+        const shotForm = document.getElementById('shot-inspector-form');
+        if (shotForm) {
+            const shotSelect = document.getElementById('shot-select');
+            const reloadShotsBtn = document.getElementById('reload-shots-btn');
+            const lightingSplitSlider = document.getElementById('shot-lighting-split');
+            const atmosphereSliderShot = document.getElementById('shot-atmosphere');
+            const identityButton = document.getElementById('apply-identity-template');
+            if (shotSelect) {
+                shotSelect.addEventListener('change', event => {
+                    selectedShotId = event.target.value;
+                    populateShotForm(getShotById(selectedShotId));
+                });
+            }
+            if (reloadShotsBtn) {
+                reloadShotsBtn.addEventListener('click', loadShots);
+            }
+            if (lightingSplitSlider) {
+                lightingSplitSlider.addEventListener('input', event => setShotLightingText(event.target.value));
+            }
+            if (atmosphereSliderShot) {
+                atmosphereSliderShot.addEventListener('input', event => setShotAtmosphereText(event.target.value));
+            }
+            if (identityButton) {
+                identityButton.addEventListener('click', applyIdentityTemplate);
+            }
+            shotForm.addEventListener('submit', saveShotOverrides);
+            loadShots();
+        }
+
+        if (document.getElementById('run-refinement-btn')) {
+            document.getElementById('run-refinement-btn').addEventListener('click', runRefinementHarness);
+            pollRefinementStatus();
+        }
+
+        const metaContainer = document.getElementById('meta-learning-container');
+        if (metaContainer) {
+            metaContainer.addEventListener('click', event => {
+                const target = event.target;
+                if (target.classList.contains('meta-action')) {
+                    sendMetaDecision(
+                        target.getAttribute('data-category'),
+                        target.getAttribute('data-index'),
+                        target.getAttribute('data-decision')
+                    );
+                }
+            });
+            loadMetaLearning();
+        }
+
+        const sceneRunButton = document.getElementById('run-scenes-btn');
+        if (sceneRunButton) {
+            sceneRunButton.addEventListener('click', startSceneRun);
+            loadScenes();
+            pollSceneRunStatus();
+        }
+
+        setInterval(loadQuantumLogs, 6000);
+        loadQuantumLogs();
+
+        // Refresh data from latest session
+        async function refreshData() {
+            try {
+                // Find latest session directory
+                const response = await fetch('/Users/quantum/Desktop/atlas_output/blackwood_complete/');
+                // In real implementation, you'd have a server endpoint that returns the latest session data
+
+                // For now, manually check the latest production_results.json
+                const logPath = '/Users/quantum/Desktop/atlas_output/blackwood_complete_WORKING.log';
+
+                // Update UI with latest data
+                updateUIFromLog();
+
+                addLog('Data refreshed successfully', 'info');
+            } catch (error) {
+                addLog('Failed to refresh data: ' + error.message, 'error');
+            }
+        }
+
+        // Update UI from log file
+        function updateUIFromLog() {
+            // This would parse the log file and update all UI elements
+            // For real-time monitoring, you'd use WebSocket or polling
+            document.getElementById('session-id').textContent = 'session_' + new Date().toISOString().split('T')[0];
+        }
+
+        // Open session folder in Finder
+        function openSessionFolder() {
+            if (currentSessionDir) {
+                // This would need a backend API to execute the command
+                addLog('Opening session folder...', 'info');
+            } else {
+                addLog('No active session', 'info');
+            }
+        }
+
+        // View results JSON
+        function viewResults() {
+            if (currentSessionDir) {
+                const url = currentSessionDir + '/production_results.json';
+                window.open(url, '_blank');
+            } else {
+                addLog('No results available yet', 'info');
+            }
+        }
+
+        // Toggle auto-refresh
+        function toggleAutoRefresh() {
+            autoRefresh = !autoRefresh;
+            const btn = event.target;
+            btn.textContent = autoRefresh ? '⏸️ Pause Auto-Refresh' : '▶️ Resume Auto-Refresh';
+
+            if (autoRefresh) {
+                startAutoRefresh();
+                addLog('Auto-refresh enabled', 'info');
+            } else {
+                stopAutoRefresh();
+                addLog('Auto-refresh paused', 'info');
+            }
+        }
+
+        // Start auto-refresh
+        function startAutoRefresh() {
+            if (refreshInterval) clearInterval(refreshInterval);
+            refreshInterval = setInterval(refreshData, 2000); // Refresh every 2 seconds
+        }
+
+        // Stop auto-refresh
+        function stopAutoRefresh() {
+            if (refreshInterval) {
+                clearInterval(refreshInterval);
+                refreshInterval = null;
+            }
+        }
+
+        // Initialize
+        addLog('⚛️ Quantum Forge initialized', 'quantum');
+        addLog('Monitoring for production activity...', 'info');
+        startAutoRefresh();
+        refreshData();
+
+        // Simulate some activity for demo
+        setTimeout(() => {
+            addLog('🎬 Shot BW_EP1_001A - Quantum enhancement started', 'quantum');
+            document.getElementById('current-shot-id').textContent = 'BW_EP1_001A';
+            document.getElementById('current-stage').textContent = 'Quantum Enhancement';
+            document.getElementById('shot-progress').style.width = '20%';
+            document.getElementById('shot-progress').textContent = '20%';
+        }, 2000);
+
+        setTimeout(() => {
+            addLog('⚛️ Generated 100 quantum variations in 0.012s', 'quantum');
+            document.getElementById('variations-count').textContent = '100';
+            document.getElementById('current-stage').textContent = 'Prompt Judgment';
+            document.getElementById('shot-progress').style.width = '40%';
+            document.getElementById('shot-progress').textContent = '40%';
+        }, 4000);
+
+        setTimeout(() => {
+            addLog('⚖️ Winning prompt selected (score: 0.891)', 'quantum');
+            document.getElementById('winning-score').textContent = '0.891';
+            document.getElementById('current-stage').textContent = 'Image Generation';
+            document.getElementById('shot-progress').style.width = '60%';
+            document.getElementById('shot-progress').textContent = '60%';
+        }, 6000);
+
+        setTimeout(() => {
+            addLog('🎨 3 images generated, analyzing with DINOv3...', 'image');
+            document.getElementById('current-stage').textContent = '3-Vision Validation';
+            document.getElementById('shot-progress').style.width = '80%';
+            document.getElementById('shot-progress').textContent = '80%';
+            document.getElementById('vision-1').textContent = '0.92';
+            document.getElementById('vision-2').textContent = '0.88';
+            document.getElementById('vision-3').textContent = '0.85';
+            document.getElementById('quantum-combined').textContent = '0.891';
+        }, 8000);
+
+        setTimeout(() => {
+            addLog('✅ Shot BW_EP1_001A completed! Final quality: 0.891', 'info');
+            document.getElementById('current-stage').textContent = 'Complete';
+            document.getElementById('shot-progress').style.width = '100%';
+            document.getElementById('shot-progress').textContent = '100%';
+            document.getElementById('shots-done').textContent = '1';
+            document.getElementById('shots-total').textContent = '3';
+        }, 10000);
+    </script>
+</body>
+</html>

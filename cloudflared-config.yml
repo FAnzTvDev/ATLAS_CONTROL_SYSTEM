@@ -1,0 +1,7 @@
+tunnel: eb5fd803-db3e-49ee-a04d-b8763ed38f1a
+credentials-file: /Users/quantum/.cloudflared/eb5fd803-db3e-49ee-a04d-b8763ed38f1a.json
+
+ingress:
+  - hostname: atlas.fanztv.com
+    service: http://localhost:9999
+  - service: http_status:404

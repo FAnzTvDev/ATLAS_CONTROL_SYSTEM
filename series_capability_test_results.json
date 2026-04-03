@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-01-14T10:07:36.167072",
+  "tests": [
+    {
+      "name": "series_directory",
+      "status": "FAIL",
+      "message": "No series/ directory - need to create",
+      "severity": "high"
+    },
+    {
+      "name": "project_count",
+      "status": "INFO",
+      "message": "76 projects found",
+      "severity": "info"
+    },
+    {
+      "name": "episodic_projects",
+      "status": "PASS",
+      "message": "8 episodic projects",
+      "severity": "info"
+    },
+    {
+      "name": "global_actors",
+      "status": "PASS",
+      "message": "50 actors available",
+      "severity": "info"
+    },
+    {
+      "name": "series_fields",
+      "status": "WARN",
+      "message": "Need series-level fields",
+      "severity": "medium"
+    },
+    {
+      "name": "render_queue",
+      "status": "FAIL",
+      "message": "No queue system",
+      "severity": "high"
+    },
+    {
+      "name": "social_export",
+      "status": "FAIL",
+      "message": "Need social export system",
+      "severity": "medium"
+    },
+    {
+      "name": "api_endpoints",
+      "status": "WARN",
+      "message": "Series endpoints need implementation",
+      "severity": "high"
+    }
+  ],
+  "passed": 2,
+  "failed": 3,
+  "warnings": 3
+}

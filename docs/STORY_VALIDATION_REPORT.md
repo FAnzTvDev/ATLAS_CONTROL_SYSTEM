@@ -1,0 +1,561 @@
+# Story Validation Report
+
+## Errors
+- [BW_EP1_001 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_001 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_001 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_001 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_002 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_002 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_002 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_002 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_003 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_003 :: beat 1] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_003 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_003 :: beat 2] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_003 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_003 :: beat 3] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_003 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_003 :: beat 4] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_003 :: beat 5] `character_action` is missing or templated.
+- [BW_EP1_003 :: beat 5] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_004 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_004 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_004 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_004 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_005 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_005 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_005 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_005 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_005 :: beat 5] `character_action` is missing or templated.
+- [BW_EP1_005 :: beat 6] `character_action` is missing or templated.
+- [BW_EP1_006 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_006 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_006 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_007 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_007 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_007 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_007 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_008 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_008 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_008 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_008 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_008 :: beat 5] `character_action` is missing or templated.
+- [BW_EP1_009 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_009 :: beat 1] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_009 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_009 :: beat 2] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_009 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_009 :: beat 3] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_009 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_009 :: beat 4] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_009 :: beat 5] `character_action` is missing or templated.
+- [BW_EP1_009 :: beat 5] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_010 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_010 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_010 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_010 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_011 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_011 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_011 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_011 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_011 :: beat 5] `character_action` is missing or templated.
+- [BW_EP1_012 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_012 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_012 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_012 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_013 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_013 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_013 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_013 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_014 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_014 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_014 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_014 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_015 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_015 :: beat 1] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_015 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_015 :: beat 2] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_015 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_015 :: beat 3] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_015 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_015 :: beat 4] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_015 :: beat 5] `character_action` is missing or templated.
+- [BW_EP1_015 :: beat 5] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_015 :: beat 6] `character_action` is missing or templated.
+- [BW_EP1_015 :: beat 6] Scene implies supernatural activity but `ghost_logic` is absent.
+- [BW_EP1_016 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_016 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_016 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_016 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_016 :: beat 5] `character_action` is missing or templated.
+- [BW_EP1_017 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_017 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_017 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_017 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_018 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_018 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_018 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_018 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_018 :: beat 5] `character_action` is missing or templated.
+- [BW_EP1_019 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_019 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_019 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_019 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_020 :: beat 1] `character_action` is missing or templated.
+- [BW_EP1_020 :: beat 2] `character_action` is missing or templated.
+- [BW_EP1_020 :: beat 3] `character_action` is missing or templated.
+- [BW_EP1_020 :: beat 4] `character_action` is missing or templated.
+- [BW_EP1_020 :: beat 5] `character_action` is missing or templated.
+
+## Warnings
+- [BW_EP1_001 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_001 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_001 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_001 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_001 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_001 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_001 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_001 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_001 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_001 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_001 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_001 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_001 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_001 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_001 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_001 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_001 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_001 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_001 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_001 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_002 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_002 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_002 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_002 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_002 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_002 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_002 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_002 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_002 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_002 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_002 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_002 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_002 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_002 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_002 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_002 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_002 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_002 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_002 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_002 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_003 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_003 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_003 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_003 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_003 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_003 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_003 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_003 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_003 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_003 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_003 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_003 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_003 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_003 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_003 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_003 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_003 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_003 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_003 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_003 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_003 :: beat 5] `goal` missing; consider adding.
+- [BW_EP1_003 :: beat 5] `conflict` missing; consider adding.
+- [BW_EP1_003 :: beat 5] `turn` missing; consider adding.
+- [BW_EP1_003 :: beat 5] `emotion` missing; consider adding.
+- [BW_EP1_003 :: beat 5] `ghost_logic` missing; consider adding.
+- [BW_EP1_004 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_004 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_004 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_004 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_004 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_004 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_004 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_004 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_004 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_004 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_004 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_004 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_004 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_004 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_004 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_004 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_004 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_004 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_004 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_004 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_005 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_005 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_005 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_005 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_005 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_005 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_005 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_005 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_005 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_005 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_005 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_005 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_005 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_005 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_005 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_005 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_005 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_005 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_005 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_005 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_005 :: beat 5] `goal` missing; consider adding.
+- [BW_EP1_005 :: beat 5] `conflict` missing; consider adding.
+- [BW_EP1_005 :: beat 5] `turn` missing; consider adding.
+- [BW_EP1_005 :: beat 5] `emotion` missing; consider adding.
+- [BW_EP1_005 :: beat 5] `ghost_logic` missing; consider adding.
+- [BW_EP1_005 :: beat 6] `goal` missing; consider adding.
+- [BW_EP1_005 :: beat 6] `conflict` missing; consider adding.
+- [BW_EP1_005 :: beat 6] `turn` missing; consider adding.
+- [BW_EP1_005 :: beat 6] `emotion` missing; consider adding.
+- [BW_EP1_005 :: beat 6] `ghost_logic` missing; consider adding.
+- [BW_EP1_006 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_006 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_006 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_006 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_006 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_006 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_006 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_006 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_006 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_006 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_006 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_006 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_006 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_006 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_006 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_007 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_007 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_007 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_007 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_007 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_007 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_007 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_007 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_007 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_007 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_007 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_007 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_007 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_007 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_007 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_007 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_007 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_007 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_007 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_007 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_008 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_008 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_008 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_008 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_008 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_008 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_008 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_008 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_008 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_008 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_008 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_008 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_008 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_008 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_008 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_008 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_008 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_008 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_008 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_008 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_008 :: beat 5] `goal` missing; consider adding.
+- [BW_EP1_008 :: beat 5] `conflict` missing; consider adding.
+- [BW_EP1_008 :: beat 5] `turn` missing; consider adding.
+- [BW_EP1_008 :: beat 5] `emotion` missing; consider adding.
+- [BW_EP1_008 :: beat 5] `ghost_logic` missing; consider adding.
+- [BW_EP1_009 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_009 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_009 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_009 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_009 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_009 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_009 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_009 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_009 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_009 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_009 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_009 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_009 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_009 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_009 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_009 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_009 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_009 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_009 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_009 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_009 :: beat 5] `goal` missing; consider adding.
+- [BW_EP1_009 :: beat 5] `conflict` missing; consider adding.
+- [BW_EP1_009 :: beat 5] `turn` missing; consider adding.
+- [BW_EP1_009 :: beat 5] `emotion` missing; consider adding.
+- [BW_EP1_009 :: beat 5] `ghost_logic` missing; consider adding.
+- [BW_EP1_010 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_010 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_010 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_010 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_010 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_010 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_010 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_010 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_010 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_010 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_010 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_010 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_010 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_010 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_010 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_010 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_010 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_010 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_010 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_010 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_011 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_011 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_011 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_011 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_011 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_011 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_011 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_011 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_011 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_011 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_011 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_011 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_011 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_011 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_011 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_011 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_011 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_011 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_011 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_011 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_011 :: beat 5] `goal` missing; consider adding.
+- [BW_EP1_011 :: beat 5] `conflict` missing; consider adding.
+- [BW_EP1_011 :: beat 5] `turn` missing; consider adding.
+- [BW_EP1_011 :: beat 5] `emotion` missing; consider adding.
+- [BW_EP1_011 :: beat 5] `ghost_logic` missing; consider adding.
+- [BW_EP1_012 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_012 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_012 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_012 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_012 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_012 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_012 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_012 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_012 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_012 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_012 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_012 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_012 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_012 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_012 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_012 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_012 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_012 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_012 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_012 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_013 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_013 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_013 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_013 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_013 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_013 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_013 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_013 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_013 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_013 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_013 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_013 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_013 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_013 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_013 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_013 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_013 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_013 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_013 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_013 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_014 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_014 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_014 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_014 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_014 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_014 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_014 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_014 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_014 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_014 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_014 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_014 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_014 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_014 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_014 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_014 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_014 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_014 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_014 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_014 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_015 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_015 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_015 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_015 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_015 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_015 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_015 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_015 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_015 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_015 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_015 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_015 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_015 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_015 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_015 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_015 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_015 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_015 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_015 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_015 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_015 :: beat 5] `goal` missing; consider adding.
+- [BW_EP1_015 :: beat 5] `conflict` missing; consider adding.
+- [BW_EP1_015 :: beat 5] `turn` missing; consider adding.
+- [BW_EP1_015 :: beat 5] `emotion` missing; consider adding.
+- [BW_EP1_015 :: beat 5] `ghost_logic` missing; consider adding.
+- [BW_EP1_015 :: beat 6] `goal` missing; consider adding.
+- [BW_EP1_015 :: beat 6] `conflict` missing; consider adding.
+- [BW_EP1_015 :: beat 6] `turn` missing; consider adding.
+- [BW_EP1_015 :: beat 6] `emotion` missing; consider adding.
+- [BW_EP1_015 :: beat 6] `ghost_logic` missing; consider adding.
+- [BW_EP1_016 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_016 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_016 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_016 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_016 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_016 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_016 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_016 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_016 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_016 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_016 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_016 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_016 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_016 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_016 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_016 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_016 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_016 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_016 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_016 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_016 :: beat 5] `goal` missing; consider adding.
+- [BW_EP1_016 :: beat 5] `conflict` missing; consider adding.
+- [BW_EP1_016 :: beat 5] `turn` missing; consider adding.
+- [BW_EP1_016 :: beat 5] `emotion` missing; consider adding.
+- [BW_EP1_016 :: beat 5] `ghost_logic` missing; consider adding.
+- [BW_EP1_017 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_017 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_017 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_017 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_017 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_017 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_017 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_017 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_017 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_017 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_017 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_017 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_017 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_017 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_017 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_017 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_017 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_017 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_017 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_017 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_018 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_018 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_018 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_018 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_018 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_018 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_018 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_018 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_018 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_018 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_018 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_018 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_018 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_018 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_018 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_018 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_018 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_018 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_018 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_018 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_018 :: beat 5] `goal` missing; consider adding.
+- [BW_EP1_018 :: beat 5] `conflict` missing; consider adding.
+- [BW_EP1_018 :: beat 5] `turn` missing; consider adding.
+- [BW_EP1_018 :: beat 5] `emotion` missing; consider adding.
+- [BW_EP1_018 :: beat 5] `ghost_logic` missing; consider adding.
+- [BW_EP1_019 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_019 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_019 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_019 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_019 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_019 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_019 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_019 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_019 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_019 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_019 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_019 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_019 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_019 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_019 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_019 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_019 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_019 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_019 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_019 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_020 :: beat 1] `goal` missing; consider adding.
+- [BW_EP1_020 :: beat 1] `conflict` missing; consider adding.
+- [BW_EP1_020 :: beat 1] `turn` missing; consider adding.
+- [BW_EP1_020 :: beat 1] `emotion` missing; consider adding.
+- [BW_EP1_020 :: beat 1] `ghost_logic` missing; consider adding.
+- [BW_EP1_020 :: beat 2] `goal` missing; consider adding.
+- [BW_EP1_020 :: beat 2] `conflict` missing; consider adding.
+- [BW_EP1_020 :: beat 2] `turn` missing; consider adding.
+- [BW_EP1_020 :: beat 2] `emotion` missing; consider adding.
+- [BW_EP1_020 :: beat 2] `ghost_logic` missing; consider adding.
+- [BW_EP1_020 :: beat 3] `goal` missing; consider adding.
+- [BW_EP1_020 :: beat 3] `conflict` missing; consider adding.
+- [BW_EP1_020 :: beat 3] `turn` missing; consider adding.
+- [BW_EP1_020 :: beat 3] `emotion` missing; consider adding.
+- [BW_EP1_020 :: beat 3] `ghost_logic` missing; consider adding.
+- [BW_EP1_020 :: beat 4] `goal` missing; consider adding.
+- [BW_EP1_020 :: beat 4] `conflict` missing; consider adding.
+- [BW_EP1_020 :: beat 4] `turn` missing; consider adding.
+- [BW_EP1_020 :: beat 4] `emotion` missing; consider adding.
+- [BW_EP1_020 :: beat 4] `ghost_logic` missing; consider adding.
+- [BW_EP1_020 :: beat 5] `goal` missing; consider adding.
+- [BW_EP1_020 :: beat 5] `conflict` missing; consider adding.
+- [BW_EP1_020 :: beat 5] `turn` missing; consider adding.
+- [BW_EP1_020 :: beat 5] `emotion` missing; consider adding.
+- [BW_EP1_020 :: beat 5] `ghost_logic` missing; consider adding.

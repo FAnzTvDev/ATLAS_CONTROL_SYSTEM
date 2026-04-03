@@ -1,0 +1,480 @@
+# V24.1 PROMPT COMPARISON REPORT
+# What the UI/FAL will see vs what was there before
+================================================================================
+
+================================================================================
+SHOT: 001_001A | Characters: [] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  35mm WS, composition: establishing wide, off-axis camera, INT HARGROVE ESTATE - GRAND FOYER - MORNING. Wide establishing shot of the grand foyer, dust sheets creating ghostly shapes, morning light str...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  camera slowly pushes in, controlled movement, establishing atmosphere. camera slowly pushes in, establishing atmosphere. static hold, slow dolly, settle. at : camera slowly reveals the full landscape,...
+
+NEW ltx_motion_prompt (first 200):
+  camera slowly pushes in, controlled movement, establishing atmosphere. camera slowly pushes in, establishing atmosphere. static hold, slow dolly, settle. at : camera slowly reveals the full landscape,...
+
+================================================================================
+SHOT: 001_002B | Characters: [] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE, 50mm MS, composition: rule of thirds, subject off-center, Detail/insert shot: Close-up of Eleanor's briefcase snapping open. Cold morning light, muted colors with stained glass acc...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  static camera, no movement, detail focus. static camera, detail focus. Subtle movement, Close-up of Eleanor's briefcase snapping open, atmospheric detail, NO morphing, NO face generation, environment ...
+
+NEW ltx_motion_prompt (first 200):
+  static camera, no movement, detail focus. static camera, detail focus. Subtle movement, Close-up of Eleanor's briefcase snapping open, atmospheric detail, NO morphing, NO face generation, environment ...
+
+CONTINUITY DELTA (embedded in ltx):
+  
+REFRAME PLAN:
+Preserve exact blocking, position, and body angle from previous shot.
+- Target framing: wide (24mm equivalent)
+
+EXECUTION CONSTRAINTS:
+- DO NOT reset character pose to default idle
+- DO...
+
+================================================================================
+SHOT: 001_003B | Characters: [] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE, 50mm MS, composition: rule of thirds, subject off-center, Detail/insert shot: Detail shot of fractured colored light patterns on marble floor. Cold morning light, muted colors with...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  static camera, no movement, detail focus. static camera, detail focus. Subtle movement, Detail shot of fractured colored light patterns on marble floor, atmospheric detail, NO morphing, NO face genera...
+
+NEW ltx_motion_prompt (first 200):
+  static camera, no movement, detail focus. static camera, detail focus. Subtle movement, Detail shot of fractured colored light patterns on marble floor, atmospheric detail, NO morphing, NO face genera...
+
+CONTINUITY DELTA (embedded in ltx):
+  
+REFRAME PLAN:
+Preserve exact blocking, position, and body angle from previous shot.
+- Target framing: medium (50mm equivalent)
+
+EXECUTION CONSTRAINTS:
+- DO NOT reset character pose to default idle
+- ...
+
+================================================================================
+SHOT: 001_004B | Characters: [] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE GRAND FOYER, 85mm close-up, composition: tight framing, Detail shot: Ornate Victorian mirror in foyer reflecting dust motes in morning light, antique gilded frame, ghostly quality. ...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  0-2s static hold, 2-6s slow push, NO morphing, NO face generation, environment only...
+
+NEW ltx_motion_prompt (first 200):
+  0-2s static hold, 2-6s slow push, NO morphing, NO face generation, environment only
+
+
+REFRAME PLAN:
+Preserve exact blocking, position, and body angle from previous shot.
+- Target framing: medium (50mm...
+
+CONTINUITY DELTA (embedded in ltx):
+  
+REFRAME PLAN:
+Preserve exact blocking, position, and body angle from previous shot.
+- Target framing: medium (50mm equivalent)
+
+EXECUTION CONSTRAINTS:
+- DO NOT reset character pose to default idle
+- ...
+
+================================================================================
+SHOT: 001_005B | Characters: ['ELEANOR VOSS', 'THOMAS BLACKWOOD'] | V24 recommends: kling
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  photorealistic, 35mm film grain, natural skin texture, subsurface scattering, real human imperfections, natural lighting, cinematic color grading, shallow depth of field, anamorphic lens flare, profes...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy. organic handheld drift, documentary truth, subtle breathing. medium. Kodak 2383 print look, desaturated cool tones, teal shadows, amber pract...
+
+OLD ltx_motion_prompt:
+  ELEANOR speaks: professional introduction, extending hand. THOMAS watches from across foyer, guarded expression. Natural greeting pacing. camera holds steady on speaker, subtle drift, character consis...
+
+NEW ltx_motion_prompt (first 200):
+  ELEANOR speaks: professional introduction, extending hand. THOMAS watches from across foyer, guarded expression. Natural greeting pacing. camera holds steady on speaker, subtle drift, character consis...
+
+CONTINUITY DELTA (embedded in ltx):
+  
+REFRAME PLAN:
+ELEANOR VOSS listens and reacts. Show emotional response on face. Reverse screen direction for shot/reverse-shot pattern.
+- Target framing: medium_close (65mm equivalent)
+- Focus: ELEAN...
+
+================================================================================
+SHOT: 001_006B | Characters: ['ELEANOR VOSS'] | V24 recommends: kling
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  photorealistic, 35mm film grain, natural skin texture, subsurface scattering, real human imperfections, natural lighting, cinematic color grading, shallow depth of field, anamorphic lens flare, profes...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy. organic handheld drift, documentary truth, subtle breathing. medium. Kodak 2383 print look, desaturated cool tones, teal shadows, amber pract...
+
+OLD ltx_motion_prompt:
+  camera holds steady on speaker, subtle drift, character consistent. camera holds steady on speaker, character consistent. DIALOGUE PERFORMANCE MANDATORY: ELEANOR VOSS speaks: "ELEANOR VOSS: Mr. Blackw...
+
+NEW ltx_motion_prompt (first 200):
+  camera holds steady on speaker, subtle drift, character consistent. camera holds steady on speaker, character consistent. DIALOGUE PERFORMANCE MANDATORY: ELEANOR VOSS speaks: "ELEANOR VOSS: Mr. Blackw...
+
+CONTINUITY DELTA (embedded in ltx):
+  CONTINUITY MEMORY:
+Previous shot final frame establishes:
+- ELEANOR VOSS at center frame, angled slightly right of camera, three-quarter view
+- THOMAS BLACKWOOD at center frame, facing camera directly...
+
+================================================================================
+SHOT: 001_007B | Characters: ['ELEANOR VOSS', 'THOMAS BLACKWOOD'] | V24 recommends: kling
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  Cooke S7/i 50mm anamorphic, photorealistic, 35mm film grain, natural skin texture, subsurface scattering, real human imperfections, natural lighting, cinematic color grading, shallow depth of field, a...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy. organic handheld drift, documentary truth, subtle breathing. medium. Kodak 2383 print look, desaturated cool tones, teal shadows, amber pract...
+
+OLD ltx_motion_prompt:
+  0-3s static hold, 3-10s slow dolly, 10-20s settle, face stable NO morphing, character consistent. ACTING (bio-real): emotion blend: anger at intensity 0.8 layered with determination, high control; mic...
+
+NEW ltx_motion_prompt (first 200):
+  0-3s static hold, 3-10s slow dolly, 10-20s settle, face stable NO morphing, character consistent. ACTING (bio-real): emotion blend: anger at intensity 0.8 layered with determination, high control; mic...
+
+CONTINUITY DELTA (embedded in ltx):
+  CONTINUITY MEMORY:
+Previous shot final frame establishes:
+- ELEANOR VOSS at center frame, angled slightly right of camera, three-quarter view
+- Camera: close, direction left_to_right
+
+REFRAME PLAN:
+TH...
+
+================================================================================
+SHOT: 001_008B | Characters: ['ELEANOR VOSS'] | V24 recommends: kling
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  photorealistic, 35mm film grain, natural skin texture, subsurface scattering, real human imperfections, natural lighting, cinematic color grading, shallow depth of field, anamorphic lens flare, profes...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy. organic handheld drift, documentary truth, subtle breathing. medium. Kodak 2383 print look, desaturated cool tones, teal shadows, amber pract...
+
+OLD ltx_motion_prompt:
+  camera holds steady on speaker, subtle drift, character consistent. static hold, slow dolly, face stable NO morphing, character consistent, 14s, character speaking: "The auction house arrives at noon....
+
+NEW ltx_motion_prompt (first 200):
+  camera holds steady on speaker, subtle drift, character consistent. static hold, slow dolly, face stable NO morphing, character consistent, 14s, character speaking: "The auction house arrives at noon....
+
+CONTINUITY DELTA (embedded in ltx):
+  CONTINUITY MEMORY:
+Previous shot final frame establishes:
+- ELEANOR VOSS at center frame, angled slightly right of camera, three-quarter view
+  gesture: gripping the oak banister
+- THOMAS BLACKWOOD at...
+
+================================================================================
+SHOT: 001_009B | Characters: ['ELEANOR VOSS', 'THOMAS BLACKWOOD'] | V24 recommends: kling
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  Cooke S7/i 50mm anamorphic, photorealistic, 35mm film grain, natural skin texture, subsurface scattering, real human imperfections, natural lighting, cinematic color grading, shallow depth of field, a...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy. organic handheld drift, documentary truth, subtle breathing. medium. Kodak 2383 print look, desaturated cool tones, teal shadows, amber pract...
+
+OLD ltx_motion_prompt:
+  0-3s static hold, 3-10s slow dolly, 10-20s settle, face stable NO morphing, character consistent. ACTING (bio-real): emotion blend: anger at intensity 0.8 layered with determination, high control; mic...
+
+NEW ltx_motion_prompt (first 200):
+  0-3s static hold, 3-10s slow dolly, 10-20s settle, face stable NO morphing, character consistent. ACTING (bio-real): emotion blend: anger at intensity 0.8 layered with determination, high control; mic...
+
+CONTINUITY DELTA (embedded in ltx):
+  CONTINUITY MEMORY:
+Previous shot final frame establishes:
+- ELEANOR VOSS at center frame, angled slightly right of camera, three-quarter view
+- Camera: close, direction left_to_right
+
+REFRAME PLAN:
+TH...
+
+================================================================================
+SHOT: 001_010B | Characters: ['ELEANOR VOSS'] | V24 recommends: kling
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  photorealistic, 35mm film grain, natural skin texture, subsurface scattering, real human imperfections, natural lighting, cinematic color grading, shallow depth of field, anamorphic lens flare, profes...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy. organic handheld drift, documentary truth, subtle breathing. medium. Kodak 2383 print look, desaturated cool tones, teal shadows, amber pract...
+
+OLD ltx_motion_prompt:
+  camera holds steady on speaker, subtle drift, character consistent. static hold, slow dolly, face stable NO morphing, character consistent, 10s, character speaking: "Everything is on the table, Mr. AC...
+
+NEW ltx_motion_prompt (first 200):
+  camera holds steady on speaker, subtle drift, character consistent. static hold, slow dolly, face stable NO morphing, character consistent, 10s, character speaking: "Everything is on the table, Mr. AC...
+
+CONTINUITY DELTA (embedded in ltx):
+  CONTINUITY MEMORY:
+Previous shot final frame establishes:
+- ELEANOR VOSS at center frame, angled slightly right of camera, three-quarter view
+- THOMAS BLACKWOOD at center frame, facing camera directly...
+
+================================================================================
+SHOT: 001_011C | Characters: ['THOMAS BLACKWOOD'] | V24 recommends: kling
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  photorealistic, 35mm film grain, natural skin texture, subsurface scattering, real human imperfections, natural lighting, cinematic color grading, shallow depth of field, anamorphic lens flare, profes...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy. organic handheld drift, documentary truth, subtle breathing. medium. Kodak 2383 print look, desaturated cool tones, teal shadows, amber pract...
+
+OLD ltx_motion_prompt:
+  THOMAS speaks: quiet, haunted tone, eyes distant. Processing painful memory. Subtle emotional shift. camera holds steady on speaker, subtle drift, character consistent. camera holds steady on speaker,...
+
+NEW ltx_motion_prompt (first 200):
+  THOMAS speaks: quiet, haunted tone, eyes distant. Processing painful memory. Subtle emotional shift. camera holds steady on speaker, subtle drift, character consistent. camera holds steady on speaker,...
+
+CONTINUITY DELTA (embedded in ltx):
+  CONTINUITY MEMORY:
+Previous shot final frame establishes:
+- ELEANOR VOSS at center frame, angled slightly right of camera, three-quarter view
+- Camera: close, direction left_to_right
+
+REFRAME PLAN:
+Pr...
+
+================================================================================
+SHOT: 001_012A | Characters: [] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE, 50mm MS, composition: rule of thirds, subject off-center, Close-up of the Victorian woman's painted eyes in the portrait. Cold morning light, muted colors with stained glass accent...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  camera slowly pushes in, controlled movement, establishing atmosphere. camera slowly pushes in, establishing atmosphere. Slow pull back or static hold, atmospheric, NO morphing, NO face generation, en...
+
+NEW ltx_motion_prompt (first 200):
+  camera slowly pushes in, controlled movement, establishing atmosphere. camera slowly pushes in, establishing atmosphere. Slow pull back or static hold, atmospheric, NO morphing, NO face generation, en...
+
+CONTINUITY DELTA (embedded in ltx):
+  CONTINUITY MEMORY:
+Previous shot final frame establishes:
+- THOMAS BLACKWOOD at center frame, angled slightly right of camera, three-quarter view
+- Camera: close, direction left_to_right
+
+REFRAME PLAN...
+
+================================================================================
+SHOT: 002_013A | Characters: [] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  INT HARGROVE ESTATE - LIBRARY - MORNING. Medium shot tracking through towering bookshelves, emphasizing the library's grandeur. Warm amber lighting from windows, scholarly and intimate mood. Cinematic...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  camera holds steady on speaker, subtle drift, character consistent. camera holds steady on speaker, character consistent. : Bronte, Dickens, Wilkie Collins. She had taste.", static hold, slow dolly, s...
+
+NEW ltx_motion_prompt (first 200):
+  camera holds steady on speaker, subtle drift, character consistent. camera holds steady on speaker, character consistent. : Bronte, Dickens, Wilkie Collins. She had taste.", static hold, slow dolly, s...
+
+================================================================================
+SHOT: 002_014B | Characters: [] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE, Detail/insert shot: Extreme close-up of Nadia's fingers opening an old book. Warm amber lighting from windows, scholarly and intimate mood. No faces, environmental texture, NO grid...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  static camera, no movement, detail focus. static camera, detail focus. Subtle movement, Extreme close-up of Nadia's fingers opening an old book, atmospheric detail, NO morphing, NO face generation, en...
+
+NEW ltx_motion_prompt (first 200):
+  static camera, no movement, detail focus. static camera, detail focus. Subtle movement, Extreme close-up of Nadia's fingers opening an old book, atmospheric detail, NO morphing, NO face generation, en...
+
+CONTINUITY DELTA (embedded in ltx):
+  
+REFRAME PLAN:
+Preserve exact blocking, position, and body angle from previous shot.
+- Target framing: wide (24mm equivalent)
+
+EXECUTION CONSTRAINTS:
+- DO NOT reset character pose to default idle
+- DO...
+
+================================================================================
+SHOT: 002_015B | Characters: [] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE, Detail/insert shot: Insert shot of the folded letter falling from pages. Warm amber lighting from windows, scholarly and intimate mood. No faces, environmental texture, NO grid, NO...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  static camera, no movement, detail focus. static camera, detail focus. Subtle movement, Insert shot of the folded letter falling from pages, atmospheric detail, NO morphing, NO face generation, enviro...
+
+NEW ltx_motion_prompt (first 200):
+  static camera, no movement, detail focus. static camera, detail focus. Subtle movement, Insert shot of the folded letter falling from pages, atmospheric detail, NO morphing, NO face generation, enviro...
+
+CONTINUITY DELTA (embedded in ltx):
+  
+REFRAME PLAN:
+Preserve exact blocking, position, and body angle from previous shot.
+- Target framing: medium (50mm equivalent)
+
+EXECUTION CONSTRAINTS:
+- DO NOT reset character pose to default idle
+- ...
+
+================================================================================
+SHOT: 002_016B | Characters: [] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE, Detail/insert shot: Close-up of Nadia's face as she reads, expression shifting. Warm amber lighting from windows, scholarly and intimate mood. No faces, environmental texture, NO g...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  camera holds steady on speaker, subtle drift, character consistent. camera holds steady on speaker, character consistent. static camera, no movement, detail focus. Subtle movement, Close-up of Nadia's...
+
+NEW ltx_motion_prompt (first 200):
+  camera holds steady on speaker, subtle drift, character consistent. camera holds steady on speaker, character consistent. static camera, no movement, detail focus. Subtle movement, Close-up of Nadia's...
+
+CONTINUITY DELTA (embedded in ltx):
+  
+REFRAME PLAN:
+Preserve exact blocking, position, and body angle from previous shot.
+- Target framing: medium (50mm equivalent)
+
+EXECUTION CONSTRAINTS:
+- DO NOT reset character pose to default idle
+- ...
+
+================================================================================
+SHOT: 002_017B | Characters: ['NADIA COLE'] | V24 recommends: kling
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE, Medium Close shot. Character action: A folded letter falls from a book — Nadia reads it and discovers Harriets secret. Floor-to-ceiling bookshelves line every wall. Leather-bound v...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy. organic handheld drift, documentary truth, subtle breathing. medium. Kodak 2383 print look, desaturated cool tones, teal shadows, amber pract...
+
+OLD ltx_motion_prompt:
+  camera holds steady on speaker, subtle drift, character consistent. camera holds steady on speaker, character consistent. DIALOGUE PERFORMANCE MANDATORY: NADIA COLE speaks: "NADIA COLE: First editions...
+
+NEW ltx_motion_prompt (first 200):
+  camera holds steady on speaker, subtle drift, character consistent. camera holds steady on speaker, character consistent. DIALOGUE PERFORMANCE MANDATORY: NADIA COLE speaks: "NADIA COLE: First editions...
+
+CONTINUITY DELTA (embedded in ltx):
+  
+REFRAME PLAN:
+Preserve exact blocking, position, and body angle from previous shot.
+- Target framing: medium (50mm equivalent)
+- Focus: NADIA COLE
+
+EXECUTION CONSTRAINTS:
+- DO NOT reset character pos...
+
+================================================================================
+SHOT: 002_018B | Characters: ['NADIA COLE'] | V24 recommends: kling
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE, Medium Close shot. Character action: A folded letter falls from a book — Nadia reads it and discovers Harriets secret. She lifts a book carefully, opens the cover. A folded letter ...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy. organic handheld drift, documentary truth, subtle breathing. medium. Kodak 2383 print look, desaturated cool tones, teal shadows, amber pract...
+
+OLD ltx_motion_prompt:
+  camera holds steady on speaker, subtle drift, character consistent. static hold, slow dolly, face stable NO morphing, character consistent, 10s, character speaking: ""My dearest Thomas, the house keep...
+
+NEW ltx_motion_prompt (first 200):
+  camera holds steady on speaker, subtle drift, character consistent. static hold, slow dolly, face stable NO morphing, character consistent, 10s, character speaking: ""My dearest Thomas, the house keep...
+
+CONTINUITY DELTA (embedded in ltx):
+  CONTINUITY MEMORY:
+Previous shot final frame establishes:
+- NADIA COLE at center frame, angled slightly right of camera, three-quarter view
+- Camera: close, direction left_to_right
+- Light: from scree...
+
+================================================================================
+SHOT: 002_019A | Characters: ['NADIA COLE'] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE, Medium shot. Character action: Character experiences the moment. She looks toward the door, folds the letter quickly, and slips it into her back pocket. Warm amber lighting from wi...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  camera holds steady, gentle slow push, measured pace. camera holds steady, measured pace. static hold, slow dolly, face stable NO morphing, character consistent. ACTING (bio-real): emotion blend: neut...
+
+NEW ltx_motion_prompt (first 200):
+  camera holds steady, gentle slow push, measured pace. camera holds steady, measured pace. static hold, slow dolly, face stable NO morphing, character consistent. ACTING (bio-real): emotion blend: neut...
+
+CONTINUITY DELTA (embedded in ltx):
+  CONTINUITY MEMORY:
+Previous shot final frame establishes:
+- NADIA COLE at center frame, angled slightly right of camera, three-quarter view
+- Camera: close, direction left_to_right
+- Light: from scree...
+
+================================================================================
+SHOT: 002_020A | Characters: [] | V24 recommends: ltx
+================================================================================
+
+OLD nano_prompt (what UI showed before):
+  at HARGROVE ESTATE, Close-up of the letter being slipped into Nadia's pocket. Warm amber lighting from windows, scholarly and intimate mood. Cinematic composition, NO grid, NO collage, NO split screen...
+
+NEW nano_prompt (what UI/FAL will see NOW):
+  50mm normal lens, natural perspective, eye-level intimacy: Kodak 2383 print look, desaturated cool tones, teal shadows, amber practicals, 35mm grain. worst quality, inconsistent motion, blurry, jitter...
+
+OLD ltx_motion_prompt:
+  camera slowly pushes in, controlled movement, establishing atmosphere. camera slowly pushes in, establishing atmosphere. Slow pull back or static hold, atmospheric, NO morphing, NO face generation, en...
+
+NEW ltx_motion_prompt (first 200):
+  camera slowly pushes in, controlled movement, establishing atmosphere. camera slowly pushes in, establishing atmosphere. Slow pull back or static hold, atmospheric, NO morphing, NO face generation, en...
+
+CONTINUITY DELTA (embedded in ltx):
+  CONTINUITY MEMORY:
+Previous shot final frame establishes:
+- NADIA COLE at center frame, angled slightly right of camera, three-quarter view
+- Camera: medium, direction left_to_right
+- Light: from scre...

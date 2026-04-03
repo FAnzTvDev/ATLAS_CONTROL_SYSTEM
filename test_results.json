@@ -1,0 +1,345 @@
+{
+  "timestamp": "2026-01-15T12:53:12.132910",
+  "tests": [
+    {
+      "name": "server_health",
+      "status": "PASS",
+      "message": "Server is running",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.137974"
+    },
+    {
+      "name": "system_diagnostics",
+      "status": "WARN",
+      "message": "Diagnostics endpoint not available",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.139551"
+    },
+    {
+      "name": "list_projects",
+      "status": "PASS",
+      "message": "Found 30 projects",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.403711"
+    },
+    {
+      "name": "get_verification_state",
+      "status": "PASS",
+      "message": "Can get verification state",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.406343"
+    },
+    {
+      "name": "approve_story",
+      "status": "PASS",
+      "message": "/api/v6/approve/story responds correctly",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.408159"
+    },
+    {
+      "name": "approve_locations",
+      "status": "PASS",
+      "message": "/api/v6/approve/locations responds correctly",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.409506"
+    },
+    {
+      "name": "approve_characters",
+      "status": "PASS",
+      "message": "/api/v6/approve/characters responds correctly",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.410848"
+    },
+    {
+      "name": "approve_casting",
+      "status": "PASS",
+      "message": "/api/v6/approve/casting responds correctly",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.412305"
+    },
+    {
+      "name": "ai_actors_library",
+      "status": "PASS",
+      "message": "Found 50 AI actors",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.416877"
+    },
+    {
+      "name": "actor_fields",
+      "status": "PASS",
+      "message": "Actors have required fields",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.416882"
+    },
+    {
+      "name": "char_images",
+      "status": "PASS",
+      "message": "Found 52 locked character images",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.417125"
+    },
+    {
+      "name": "shot_plan_exists",
+      "status": "PASS",
+      "message": "Shot plan has 72 shots",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.417362"
+    },
+    {
+      "name": "shot_structure",
+      "status": "PASS",
+      "message": "Shots have required fields",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.417365"
+    },
+    {
+      "name": "prompt_quality",
+      "status": "PASS",
+      "message": "Prompts are detailed (493 chars)",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.417367"
+    },
+    {
+      "name": "batch_update",
+      "status": "PASS",
+      "message": "Batch update endpoint works",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.418799"
+    },
+    {
+      "name": "list_series",
+      "status": "PASS",
+      "message": "Found 1 series",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.420212"
+    },
+    {
+      "name": "render_queue",
+      "status": "PASS",
+      "message": "Queue has 1 items",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.421729"
+    },
+    {
+      "name": "series_db",
+      "status": "PASS",
+      "message": "Series database exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.421756"
+    },
+    {
+      "name": "ollama_mistral",
+      "status": "PASS",
+      "message": "Ollama + Mistral 7B available",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.423377"
+    },
+    {
+      "name": "file_three_shot_prompt_selector.py",
+      "status": "PASS",
+      "message": "3-Shot Selector exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.423402"
+    },
+    {
+      "name": "file_APPLY_V13_GOLD_STANDARD.py",
+      "status": "PASS",
+      "message": "V13 Gold Standard exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.423414"
+    },
+    {
+      "name": "file_PROTOCOL_VISUAL_SPEC_GENERATOR.py",
+      "status": "PASS",
+      "message": "V15 Visual Specs exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.423423"
+    },
+    {
+      "name": "file_LOCAL_LLM_INTEGRATION.py",
+      "status": "PASS",
+      "message": "Local LLM Integration exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.423431"
+    },
+    {
+      "name": "regen_endpoint",
+      "status": "PASS",
+      "message": "Regenerate character endpoint responds",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425044"
+    },
+    {
+      "name": "nano_edit_model",
+      "status": "PASS",
+      "message": "nano-banana-pro/edit in approved models",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425274"
+    },
+    {
+      "name": "dir_pipeline_outputs",
+      "status": "PASS",
+      "message": "Project outputs exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425287"
+    },
+    {
+      "name": "dir_series",
+      "status": "PASS",
+      "message": "Series directory exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425297"
+    },
+    {
+      "name": "dir_render_queue",
+      "status": "PASS",
+      "message": "Render queue exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425306"
+    },
+    {
+      "name": "dir_character_library_locked",
+      "status": "PASS",
+      "message": "Character library exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425313"
+    },
+    {
+      "name": "dir_manifests",
+      "status": "PASS",
+      "message": "Manifests exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425320"
+    },
+    {
+      "name": "file_ai_actors_library.json",
+      "status": "PASS",
+      "message": "AI Actors Library exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425328"
+    },
+    {
+      "name": "file_director_profiles_v2.json",
+      "status": "PASS",
+      "message": "Director Profiles exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425336"
+    },
+    {
+      "name": "file_orchestrator_server.py",
+      "status": "PASS",
+      "message": "Main Server exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425344"
+    },
+    {
+      "name": "file_auto_studio_tab.html",
+      "status": "PASS",
+      "message": "Auto Studio UI exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425352"
+    },
+    {
+      "name": "file_series_manager.py",
+      "status": "PASS",
+      "message": "Series Manager exists",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.425359"
+    },
+    {
+      "name": "response_structure",
+      "status": "PASS",
+      "message": "All required fields present",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.430170"
+    },
+    {
+      "name": "import_status",
+      "status": "PASS",
+      "message": "Status: success",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.430173"
+    },
+    {
+      "name": "project_name_returned",
+      "status": "PASS",
+      "message": "Project: ui_workflow_test_1768499592",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.430175"
+    },
+    {
+      "name": "project_load",
+      "status": "PASS",
+      "message": "Project loads successfully",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.432232"
+    },
+    {
+      "name": "story_data_present",
+      "status": "PASS",
+      "message": "Has story_bible: {'title': 'ui_workflow_test_1768499592', 'genre': 'thriller', 'runtime': '5min', 'logline': 'An imported thriller script', 'characters': [{'name': 'JOHN', 'role': 'main', 'description': 'JOHN sits', 'dialogue_count': 2, 'source': 'action_intro'}, {'name': 'SARAH', 'role': 'main', 'description': 'SARAH enters', 'dialogue_count': 1, 'source': 'action_intro'}], 'locations': [{'name': 'PARKING GARAGE', 'description': 'PARKING GARAGE - cinematic establishing shot, empty scene'}, {'name': 'OFFICE', 'description': 'OFFICE - cinematic establishing shot, empty scene'}], 'scenes': [{'location': 'OFFICE', 'time_of_day': 'DAY', 'line_num': 1, 'format': 'screenplay'}, {'location': 'PARKING GARAGE', 'time_of_day': 'NIGHT', 'line_num': 16, 'format': 'screenplay'}], 'imported_from': 'test_screenplay.txt'}, Has manifest: {'project': 'ui_workflow_test_1768499592', 'title': 'ui_workflow_test_1768499592', 'genre': 'thriller', 'runtime': '5min', 'imported_from': 'test_screenplay.txt', 'created_at': '2026-01-15T12:53:12.428787', 'characters': [{'name': 'JOHN', 'role': 'main', 'description': 'JOHN sits', 'dialogue_count': 2, 'source': 'action_intro'}, {'name': 'SARAH', 'role': 'main', 'description': 'SARAH enters', 'dialogue_count': 1, 'source': 'action_intro'}], 'locations': [{'name': 'PARKING GARAGE', 'description': 'PARKING GARAGE - cinematic establishing shot, empty scene'}, {'name': 'OFFICE', 'description': 'OFFICE - cinematic establishing shot, empty scene'}], 'camera_directions': [], 'dialogue_count': 0, 'preflight_validation': {'project_name': 'Unknown Project', 'script_path': 'inline', 'timestamp': '2026-01-15T12:53:12.427739', 'gates_passed': ['CHARACTER_GATE', 'LOCATION_GATE', 'TIMING_GATE', 'COVERAGE_GATE', 'REFERENCE_GATE', 'CONSISTENCY_GATE'], 'gates_failed': [], 'can_render': True, 'auto_fixes_available': 11, 'issues': [{'gate': 'CHARACTER_GATE', 'severity': 'warning', 'message': \"Character name mismatch: script='JOHN' vs library='Amara Johnson'\", 'details': {'script_name': 'JOHN', 'library_name': 'Amara Johnson'}, 'auto_fix': 'RENAME_CHARACTER:Amara Johnson:JOHN'}, {'gate': 'CHARACTER_GATE', 'severity': 'warning', 'message': \"Character description mismatch for 'JOHN'\", 'details': {'script_description': 'JOHN sits', 'library_description': 'AMARA JOHNSON, African-American woman age 30, athletic graceful tech entrepreneur build, natural afro futuristic styling, dark brown intelligent confident eyes, afrofuturist fashion metallics tech aesthetic #7B1FA2', 'similarity': '3.6%'}, 'auto_fix': 'UPDATE_DESCRIPTION:JOHN'}, {'gate': 'LOCATION_GATE', 'severity': 'warning', 'message': \"No location master for 'PARKING GARAGE'\", 'details': {'script_location': 'PARKING GARAGE', 'normalized': 'PARKING_GARAGE', 'closest_match': None, 'available_masters': []}, 'auto_fix': 'CREATE_LOCATION_MASTER:PARKING_GARAGE'}, {'gate': 'LOCATION_GATE', 'severity': 'warning', 'message': \"No location master for 'OFFICE'\", 'details': {'script_location': 'OFFICE', 'normalized': 'OFFICE', 'closest_match': None, 'available_masters': []}, 'auto_fix': 'CREATE_LOCATION_MASTER:OFFICE'}, {'gate': 'CONSISTENCY_GATE', 'severity': 'warning', 'message': 'Duplicate character entries with different descriptions', 'details': {'entry_1': 'Test Hero', 'entry_2': 'Test Villain', 'desc_1': 'A brave protagonist', 'desc_2': 'An evil antagonist'}, 'auto_fix': 'MERGE_CHARACTERS:Test Hero:Test Villain'}, {'gate': 'CONSISTENCY_GATE', 'severity': 'warning', 'message': 'Duplicate character entries with different descriptions', 'details': {'entry_1': 'Test Hero', 'entry_2': 'Test Character', 'desc_1': 'A brave protagonist', 'desc_2': 'A test character'}, 'auto_fix': 'MERGE_CHARACTERS:Test Hero:Test Character'}, {'gate': 'CONSISTENCY_GATE', 'severity': 'warning', 'message': 'Duplicate character entries with different descriptions', 'details': {'entry_1': 'Aria', 'entry_2': 'Aria Patel', 'desc_1': 'Aria - key character in scifi thriller story', 'desc_2': 'Aria Patel - authority in scifi thriller story. Security or military background, prioritizes contain'}, 'auto_fix': 'MERGE_CHARACTERS:Aria:Aria Patel'}, {'gate': 'CONSISTENCY_GATE', 'severity': 'warning', 'message': 'Duplicate character entries with different descriptions', 'details': {'entry_1': 'James Morgan', 'entry_2': 'James', 'desc_1': 'James Morgan - protagonist in scifi thriller story. Brilliant security who designed the system now t', 'desc_2': 'James - key character in crime drama story'}, 'auto_fix': 'MERGE_CHARACTERS:James Morgan:James'}, {'gate': 'CONSISTENCY_GATE', 'severity': 'warning', 'message': 'Duplicate character entries with different descriptions', 'details': {'entry_1': 'Sarah', 'entry_2': 'Sarah Chen', 'desc_1': 'Sarah - key character in crime drama story', 'desc_2': 'Sarah Chen - key character in crime drama story'}, 'auto_fix': 'MERGE_CHARACTERS:Sarah:Sarah Chen'}, {'gate': 'CONSISTENCY_GATE', 'severity': 'warning', 'message': 'Duplicate character entries with different descriptions', 'details': {'entry_1': 'Detective Morgan', 'entry_2': 'Detective James', 'desc_1': 'Detective Morgan - key character in crime drama story', 'desc_2': 'Detective James - key character in scifi thriller story'}, 'auto_fix': 'MERGE_CHARACTERS:Detective Morgan:Detective James'}, {'gate': 'CONSISTENCY_GATE', 'severity': 'warning', 'message': 'Duplicate character entries with different descriptions', 'details': {'entry_1': 'Captain Jace Park', 'entry_2': 'Captain', 'desc_1': 'Captain Jace Park - key character in scifi thriller story', 'desc_2': 'Captain - key character in crime drama story'}, 'auto_fix': 'MERGE_CHARACTERS:Captain Jace Park:Captain'}], 'summary': {'critical': 0, 'warnings': 11, 'info': 0, 'auto_fixable': 0}}, 'character_refs': {}, 'location_refs': {}, 'script_path': '/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/pipeline_outputs/ui_workflow_test_1768499592/imported_script.txt'}",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.432267"
+    },
+    {
+      "name": "characters_parsed",
+      "status": "PASS",
+      "message": "Found 2 characters",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.432316"
+    },
+    {
+      "name": "locations_parsed",
+      "status": "PASS",
+      "message": "Found 2 locations",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.432321"
+    },
+    {
+      "name": "shot_plan_created",
+      "status": "PASS",
+      "message": "Shot plan created with 12 shots",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.432324"
+    },
+    {
+      "name": "ui_/auto-studio",
+      "status": "WARN",
+      "message": "Auto Studio UI: Expecting value: line 1 column 1 (char 0)",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.436938"
+    },
+    {
+      "name": "ui_/api/auto/projects",
+      "status": "PASS",
+      "message": "Projects list available",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.695573"
+    },
+    {
+      "name": "ui_/api/v6/profiles/directors",
+      "status": "PASS",
+      "message": "Director profiles available",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.697530"
+    },
+    {
+      "name": "ui_/api/v6/profiles/writers",
+      "status": "PASS",
+      "message": "Writer profiles available",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.699878"
+    },
+    {
+      "name": "ui_/api/ai-actors",
+      "status": "PASS",
+      "message": "AI actors available",
+      "details": null,
+      "timestamp": "2026-01-15T12:53:12.704078"
+    }
+  ],
+  "passed": 46,
+  "failed": 0,
+  "warnings": 2,
+  "skipped": 0
+}

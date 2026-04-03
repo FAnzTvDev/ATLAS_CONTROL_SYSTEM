@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phase 7.8 Production Monitor</title>
+    <meta http-equiv="refresh" content="5">
+    <style>
+        body {
+            font-family: 'Monaco', monospace;
+            background: #0a0a0a;
+            color: #00ff41;
+            padding: 20px;
+            margin: 0;
+        }
+        .header {
+            border: 2px solid #00ff41;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: #1a1a1a;
+        }
+        .timer {
+            font-size: 32px;
+            color: #ffaa00;
+            margin: 10px 0;
+        }
+        .progress {
+            background: #333;
+            border: 1px solid #00ff41;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .shot {
+            padding: 8px;
+            margin: 5px 0;
+            border-left: 4px solid #00ff41;
+            background: #1a1a1a;
+        }
+        .completed { border-left-color: #00ff41; }
+        .in-progress { border-left-color: #ffaa00; animation: pulse 1s infinite; }
+        .pending { border-left-color: #555; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat {
+            background: #1a1a1a;
+            border: 1px solid #00ff41;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 28px;
+            color: #ffaa00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 PHASE 7.8: PARALLEL QC DIRECTOR</h1>
+        <div class="timer" id="timer">⏱️ Elapsed: Loading...</div>
+        <p>🎯 Quality Threshold: 0.75 | 🔄 Max Regen: 3 | ⚡ Max Parallel: 4</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-value" id="scene-progress">-/-</div>
+            <div>Scenes Complete</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="shot-progress">-/-</div>
+            <div>Shots Complete</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="speed">-</div>
+            <div>Shots/Minute</div>
+        </div>
+    </div>
+
+    <div class="progress">
+        <h2>📊 Current Scene Progress</h2>
+        <div id="current-scene">Loading...</div>
+    </div>
+
+    <div class="progress">
+        <h2>📝 Recent Logs</h2>
+        <div id="logs" style="max-height: 400px; overflow-y: auto;"></div>
+    </div>
+
+    <script>
+        const startTime = new Date('2025-10-27T17:01:08');
+
+        function updateTimer() {
+            const now = new Date();
+            const elapsed = Math.floor((now - startTime) / 1000);
+            const minutes = Math.floor(elapsed / 60);
+            const seconds = elapsed % 60;
+            document.getElementById('timer').textContent =
+                `⏱️ Elapsed: ${minutes}m ${seconds}s`;
+        }
+
+        async function updateProgress() {
+            try {
+                const response = await fetch('/api/gallery/run/status');
+                const data = await response.json();
+
+                // Parse progress from runs data
+                const runs = data.runs || {};
+                const runIds = Object.keys(runs);
+
+                if (runIds.length > 0) {
+                    // Get most recent run
+                    const latestRun = runs[runIds[runIds.length - 1]];
+                    const shots = latestRun.shots || [];
+                    const logLines = latestRun.log || [];
+
+                    // Update shot progress
+                    const completedShots = shots.length;
+                    document.getElementById('shot-progress').textContent = `${completedShots} shots`;
+
+                    // Update status
+                    document.getElementById('scene-progress').textContent = latestRun.status || 'unknown';
+
+                    // Show log lines
+                    const displayLines = logLines.slice(-10);
+                    document.getElementById('logs').innerHTML = displayLines.join('<br>');
+                } else {
+                    document.getElementById('logs').innerHTML = 'No active runs. Start a pipeline to see progress.';
+                }
+
+            } catch (e) {
+                console.error('Failed to fetch status:', e);
+                document.getElementById('logs').innerHTML = 'Error fetching status: ' + e.message;
+            }
+        }
+
+        setInterval(updateTimer, 1000);
+        setInterval(updateProgress, 5000);
+        updateTimer();
+        updateProgress();
+    </script>
+</body>
+</html>

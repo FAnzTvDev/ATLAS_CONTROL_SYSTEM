@@ -1,0 +1,73 @@
+{
+  "project": "Blackwood Chronicles - Complete Asset Grid",
+  "character_library": {
+    "ELEANOR": {
+      "face_neutral": {
+        "url": "https://i.ibb.co/pBb6QxFf/CHAR-REF-Eleanor-Vance.jpg",
+        "description": "Eleanor Vance - neutral expression",
+        "slot_priority": 1
+      },
+      "wardrobe": {
+        "url": "https://i.ibb.co/yck64wg4/VICTORIAN-COAT.jpg",
+        "description": "Eleanor's Victorian traveling coat",
+        "slot_priority": 10
+      }
+    },
+    "MARCUS": {
+      "face_neutral": {
+        "url": "https://i.ibb.co/pBb6QxFf/CHAR-REF-Eleanor-Vance.jpg",
+        "description": "Marcus Thorne - neutral expression",
+        "slot_priority": 1
+      }
+    }
+  },
+  "location_library": {
+    "BLACKWOOD_GATES": {
+      "depth_references": {
+        "wide_establishing": {
+          "url": "https://i.ibb.co/sJRfPdKp/BLACKWOOD-GATES-WIDE.jpg",
+          "description": "Wide shot of imposing iron gates",
+          "slot_priority": 6
+        },
+        "close_detail": {
+          "url": "https://i.ibb.co/4Z8h0dzF/BLACKWOOD-GATES-CLOSE.jpg",
+          "description": "Close-up of ornate ironwork and lock",
+          "slot_priority": 8
+        }
+      }
+    },
+    "GRAND_FOYER": {
+      "depth_references": {
+        "wide_establishing": {
+          "url": "https://i.ibb.co/8nDcZkBd/GRAND-FOYER-WIDE.jpg",
+          "description": "Wide shot of grand foyer with chandelier",
+          "slot_priority": 6
+        }
+      }
+    }
+  },
+  "wardrobe_library": {
+    "ELEANOR_COAT": {
+      "url": "https://i.ibb.co/yck64wg4/VICTORIAN-COAT.jpg",
+      "description": "Eleanor's Victorian traveling coat",
+      "slot_priority": 10
+    }
+  },
+  "props_library": {
+    "GATE_LOCK": {
+      "url": "https://i.ibb.co/4Z8h0dzF/BLACKWOOD-GATES-CLOSE.jpg",
+      "description": "Ornate iron gate lock mechanism",
+      "slot_priority": 11
+    }
+  },
+  "quality_anchors": {
+    "GOTHIC_HORROR": {
+      "url": "https://i.ibb.co/sJRfPdKp/BLACKWOOD-GATES-WIDE.jpg",
+      "description": "Gothic horror aesthetic - atmospheric dread, muted colors, dramatic shadows"
+    },
+    "VICTORIAN_PERIOD": {
+      "url": "https://i.ibb.co/8nDcZkBd/GRAND-FOYER-WIDE.jpg",
+      "description": "Victorian period drama - authentic architecture, historical accuracy"
+    }
+  }
+}

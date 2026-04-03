@@ -1,0 +1,17 @@
+{
+  "status": "healthy",
+  "server_pid": 2528,
+  "uptime_start": "2026-02-24 18:57:21.284082",
+  "crash_count": 0,
+  "total_restarts": 0,
+  "last_crash_reason": null,
+  "last_restart": null,
+  "restart_times": [],
+  "health_checks": 720,
+  "health_failures": 0,
+  "consecutive_failures": 0,
+  "paused": false,
+  "pause_reason": null,
+  "version": "V18.4",
+  "server_uptime_seconds": 9890.33334
+}

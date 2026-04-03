@@ -1,0 +1,147 @@
+/* ═══════════════════════════════════════════════════════════════════
+   THEME.CSS — Design System Variables, Colors, Typography
+   ATLAS V23 — Phase 5: CSS Extraction
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Dark theme color palette and design tokens */
+:root {
+    --bg-dark: #0a0e1a;
+    --bg-card: #111827;
+    --bg-input: #1e293b;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #0f172a;
+    --bg-panel: #111827;
+    --accent: #3b82f6;
+    --accent-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --accent-green: #10b981;
+    --accent-orange: #f59e0b;
+    --accent-red: #ef4444;
+    --accent-purple: #8b5cf6;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border: #334155;
+}
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body and typography */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* Text selection */
+::selection {
+    background: var(--accent);
+    color: white;
+}
+
+/* Mobile optimization: Touch targets and responsive */
+@media (max-width: 768px) {
+    .studio-header {
+        padding: 10px 12px !important;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .studio-header h1 {
+        font-size: 16px !important;
+    }
+
+    .header-status {
+        gap: 8px !important;
+        flex-wrap: wrap;
+    }
+
+    #screeningDQAPanel {
+        padding: 4px 8px !important;
+    }
+
+    #screeningDQAPanel button {
+        min-height: 36px !important;
+        min-width: 36px !important;
+        font-size: 12px !important;
+        padding: 6px 10px !important;
+    }
+
+    #serverHealthBar {
+        padding: 4px 8px !important;
+    }
+
+    #genStatusBar {
+        padding: 4px 8px !important;
+        flex-wrap: wrap;
+    }
+
+    .previs-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .previs-filmstrip {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dc-chip {
+        min-height: 36px !important;
+        font-size: 11px !important;
+    }
+
+    .btn {
+        min-height: 36px !important;
+    }
+
+    .modal-overlay .modal-content {
+        width: 95vw !important;
+        max-height: 85vh !important;
+    }
+
+    #voiceTranscriptBar {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .studio-header h1 {
+        font-size: 14px !important;
+    }
+
+    .studio-header h1 span {
+        display: none;
+    }
+
+    #screeningDQAPanel button span.dqa-text {
+        display: none;
+    }
+
+    #screeningDQAPanel {
+        gap: 4px !important;
+    }
+}

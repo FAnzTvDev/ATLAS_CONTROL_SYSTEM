@@ -1,0 +1,787 @@
+{
+  "document_metadata": {
+    "title": "Complete Source Material for Atlas/Quantum Forge Cinematic Pipeline",
+    "version": "1.0",
+    "generated": "2025-11-05",
+    "purpose": "Story-first automation and director-style meta-learning implementation",
+    "project": "The Blackwood Estate - Episode 1"
+  },
+
+  "character_bible": {
+    "source": "blackwood_story_bible.json",
+    "characters": [
+      {
+        "name": "Eleanor Vance",
+        "role": "protagonist/psychic sensitive",
+        "age": 28,
+        "description": "Anxious graduate student researching paranormal phenomena, invited as 'subject expert'",
+        "personality_traits": [
+          "skeptical despite sensitivity",
+          "analytical under pressure",
+          "protective of others",
+          "haunted by childhood visions"
+        ],
+        "backstory": "Saw her first ghost at age 7, spent two decades trying to rationalize it away through academic study",
+        "goals": "Prove or disprove the supernatural scientifically, survive the weekend",
+        "conflicts": "Her gifts make her vulnerable to the house's influence",
+        "visual_markers": {
+          "physical": "Pale skin, dark circles under eyes from insomnia, messy auburn hair always in practical bun",
+          "costume": "Practical layers - turtleneck, cardigan, jeans, hiking boots",
+          "signature_items": "Wire-frame glasses, leather journal, EMF detector"
+        },
+        "manifestation_responses": [
+          "Headaches precede supernatural events",
+          "Nosebleeds during intense activity",
+          "Can see 'echoes' - residual haunting imprints",
+          "Temperature sensitivity (cold spots)"
+        ],
+        "quote_examples": [
+          "\"It knows we're here\"",
+          "\"I've spent twenty years trying to explain this away\""
+        ]
+      },
+      {
+        "name": "Marcus Sterling",
+        "role": "skeptic/journalist",
+        "age": 35,
+        "description": "Investigative journalist writing exposé on 'haunted house tourism scams'",
+        "personality_traits": [
+          "cynical professional",
+          "protective instinct hidden by sarcasm",
+          "curious despite skepticism",
+          "guilt over past mistakes"
+        ],
+        "backstory": "Lost credibility on a story, needs this exposé to rebuild career",
+        "goals": "Expose the Blackwood 'haunting' as fraud, find the con",
+        "conflicts": "Evidence contradicts his skepticism, past trauma resurfaces",
+        "visual_markers": {
+          "physical": "Mixed race (Black/Asian), athletic build, well-groomed beard, tired eyes",
+          "costume": "Smart casual - button-down shirt, dark jeans, leather jacket, boots",
+          "signature_items": "Digital recorder, camera, notebook, flask (bourbon)"
+        },
+        "wardrobe_notes": "Layers suggest readiness to leave quickly, practical over stylish",
+        "motivation": "Redemption through truth-telling, even if truth is terrifying"
+      },
+      {
+        "name": "Victoria Ashford",
+        "role": "heiress/secret connection",
+        "age": 42,
+        "description": "Descendant of the original Blackwood family, inherited the estate",
+        "secret": "Her great-grandfather committed the murders that cursed the house",
+        "motivation": "Trying to break the curse before it claims her",
+        "visual_markers": {
+          "physical": "Elegant, silver-blonde hair, expensive but understated style",
+          "costume": "Designer pieces in muted colors - cashmere, silk, pearls",
+          "tells": "Trembling hands she hides, won't look at portraits"
+        },
+        "wardrobe_notes": "Old money aesthetic, no visible logos, quality fabrics",
+        "character_arc": "denial → acceptance → sacrifice"
+      },
+      {
+        "name": "Father Thomas Rhys",
+        "role": "exorcist/believer",
+        "age": 58,
+        "description": "Catholic priest with Vatican training in exorcism",
+        "visual_markers": {
+          "physical": "Welsh, gray hair, weathered face, burn scars on hands",
+          "costume": "Priest's collar, black suit, rosary, worn leather bag",
+          "signature_items": "Holy water, Bible with annotations, blessed salt"
+        },
+        "wardrobe_notes": "Functional religious uniform, signs of past battles (scars)",
+        "quote_examples": [
+          "\"Evil doesn't hide here - it reigns\""
+        ]
+      },
+      {
+        "name": "Kenji Nakamura",
+        "role": "architect/historian",
+        "age": 31,
+        "description": "Architectural historian specializing in 'psycho-geographic spaces'",
+        "visual_markers": {
+          "physical": "Japanese American, slight build, meticulous presentation",
+          "costume": "Blazer, turtleneck, slacks, polished shoes",
+          "signature_items": "Antique blueprints, measuring tools, camera"
+        },
+        "wardrobe_notes": "Academic professional, precise tailoring, neutral colors"
+      }
+    ],
+    "citation": "blackwood_story_bible.json, lines 15-96"
+  },
+
+  "director_corpus": {
+    "auteurs": [
+      {
+        "name": "Andrei Tarkovsky",
+        "philosophical_notes": [
+          "Cinema should sculpt time itself - duration creates spiritual weight",
+          "Long takes force the viewer into contemplative state",
+          "Nature and architecture as moral forces",
+          "Water, fire, wind as metaphysical presence"
+        ],
+        "lens_lighting_blocking": {
+          "lens_preference": "Wide lenses (18-35mm) for environmental context",
+          "lighting": "Natural motivated sources, painterly chiaroscuro",
+          "blocking": "Characters small in frame, dwarfed by space",
+          "camera_movement": "Slow deliberate tracking, no handheld"
+        },
+        "pacing_rhythm": "Extreme patience - 45-120 second shots, silence as punctuation",
+        "symbolism_color": {
+          "water": "Memory and spiritual cleansing",
+          "ruins": "Decay of civilization",
+          "color_desaturation": "Muted earth tones, reject artificial color"
+        },
+        "normalized_attributes": {
+          "pacing_speed": 0.15,
+          "shot_complexity": 0.92,
+          "symbolic_density": 0.95,
+          "naturalism": 0.88,
+          "metaphysical_weight": 1.0
+        },
+        "citation": "Sculpting in Time (1986), Chapters 2-4"
+      },
+      {
+        "name": "Guillermo del Toro",
+        "philosophical_notes": [
+          "Monsters are victims - horror comes from empathy",
+          "Fairy tales encode adult trauma",
+          "Practical effects > CGI for tactile reality",
+          "Color as emotional architecture"
+        ],
+        "lens_lighting_blocking": {
+          "lens_preference": "50mm for intimacy, 24mm for fantastical spaces",
+          "lighting": "Theatrical expressionism - amber/teal splits",
+          "blocking": "Symmetrical framing for formality, asymmetric for chaos",
+          "camera_movement": "Fluid Steadicam, crane reveals"
+        },
+        "pacing_rhythm": "Fairy tale pacing - slow setup, emotional crescendo",
+        "symbolism_color": {
+          "teal_amber": "Cold reality vs warm fantasy",
+          "insects": "Transformation and decay",
+          "clocks": "Time as prison or liberation"
+        },
+        "normalized_attributes": {
+          "pacing_speed": 0.55,
+          "shot_complexity": 0.85,
+          "symbolic_density": 0.80,
+          "color_saturation": 0.75,
+          "empathy_focus": 0.95
+        },
+        "citation": "Cabinet of Curiosities: My Notebooks (2013), Pan's Labyrinth Commentary (2006)"
+      },
+      {
+        "name": "Stanley Kubrick",
+        "philosophical_notes": [
+          "Symmetry reveals human systems of control",
+          "One-point perspective as oppressive order",
+          "Perfection is inhuman and therefore terrifying",
+          "Architecture shapes psychology"
+        ],
+        "lens_lighting_blocking": {
+          "lens_preference": "Wide angle (18-24mm) for geometric distortion",
+          "lighting": "High-key fluorescent horror, practical only",
+          "blocking": "Perfect center framing, dead-center hallways",
+          "camera_movement": "Steadicam tracking, symmetrical dollies"
+        },
+        "pacing_rhythm": "Methodical escalation, silence before violence",
+        "symbolism_color": {
+          "red": "Violence and warning",
+          "white": "Sterility and madness",
+          "yellow": "Decay beneath perfection"
+        },
+        "normalized_attributes": {
+          "pacing_speed": 0.45,
+          "shot_complexity": 0.88,
+          "geometric_precision": 1.0,
+          "color_coding": 0.70,
+          "psychological_dread": 0.92
+        },
+        "citation": "The Shining (1980), Full Metal Jacket (1987), Eyes Wide Shut (1999) cinematography analysis"
+      },
+      {
+        "name": "Jordan Peele",
+        "philosophical_notes": [
+          "Horror comes from social systems, not supernatural",
+          "Sunken Place as metaphor for marginalization",
+          "Comedy and horror share DNA - subvert expectations",
+          "The mundane is the most terrifying"
+        ],
+        "lens_lighting_blocking": {
+          "lens_preference": "50-85mm for character focus",
+          "lighting": "Naturalistic daylight horror, shadow contrast",
+          "blocking": "Off-center framing showing power dynamics",
+          "camera_movement": "Static dread, sudden handheld panic"
+        },
+        "pacing_rhythm": "Slow burn with sharp tonal shifts",
+        "symbolism_color": {
+          "white_clothing": "False innocence",
+          "mirrors_reflections": "Duality and hidden selves",
+          "suburban_perfection": "Concealment of violence"
+        },
+        "normalized_attributes": {
+          "pacing_speed": 0.60,
+          "shot_complexity": 0.75,
+          "social_commentary": 1.0,
+          "naturalism": 0.85,
+          "subtext_density": 0.95
+        },
+        "citation": "Get Out (2017), Us (2019), Nope (2022) director's commentary"
+      },
+      {
+        "name": "Alfred Hitchcock",
+        "philosophical_notes": [
+          "Suspense > surprise: show the bomb under the table",
+          "MacGuffin is irrelevant - emotion is the real plot",
+          "Audience complicity makes them voyeurs",
+          "Geometry of fear - verticals = falling, horizontals = chase"
+        ],
+        "lens_lighting_blocking": {
+          "lens_preference": "50mm for POV, dolly zoom for vertigo",
+          "lighting": "High contrast noir, shadows as character",
+          "blocking": "Staircase compositions, vertical threat",
+          "camera_movement": "Crash zooms, dolly counter-zoom (vertigo effect)"
+        },
+        "pacing_rhythm": "Measured revelation, withhold information strategically",
+        "symbolism_color": {
+          "blondes": "Ideal vs reality tension",
+          "birds_height": "God's eye view / loss of control",
+          "staircases": "Moral descent"
+        },
+        "normalized_attributes": {
+          "pacing_speed": 0.65,
+          "shot_complexity": 0.80,
+          "suspense_vs_surprise": 0.95,
+          "audience_manipulation": 1.0,
+          "geometric_composition": 0.88
+        },
+        "citation": "Hitchcock/Truffaut (1966), Vertigo (1958), Psycho (1960) analysis"
+      },
+      {
+        "name": "Chloe Zhao",
+        "philosophical_notes": [
+          "Natural light as documentary truth",
+          "Non-actors bring authenticity",
+          "Landscape = emotional state",
+          "Silence and space > dialogue"
+        ],
+        "lens_lighting_blocking": {
+          "lens_preference": "Wide lenses for landscape, long lens for intimacy",
+          "lighting": "Golden hour magic hour, reject artificial",
+          "blocking": "Characters within landscape, part of environment",
+          "camera_movement": "Handheld intimacy, static observation"
+        },
+        "pacing_rhythm": "Observational patience, naturalistic rhythm",
+        "symbolism_color": {
+          "horizon": "Hope and possibility",
+          "dust_light": "Impermanence",
+          "wide_open_spaces": "Freedom and loneliness"
+        },
+        "normalized_attributes": {
+          "pacing_speed": 0.50,
+          "shot_complexity": 0.70,
+          "naturalism": 1.0,
+          "landscape_integration": 0.95,
+          "poetic_realism": 0.88
+        },
+        "citation": "Nomadland (2020), The Rider (2017), Eternals (2021) cinematography"
+      },
+      {
+        "name": "Dario Argento",
+        "philosophical_notes": [
+          "Color as violence - red, blue, green as aggressive forces",
+          "Logic is secondary to visual rhythm",
+          "Architecture as maze and trap",
+          "Opera and horror share emotional extremism"
+        ],
+        "lens_lighting_blocking": {
+          "lens_preference": "Wide for spatial disorientation",
+          "lighting": "Expressionist colored gels - unnatural primaries",
+          "blocking": "Off-kilter angles, dutch tilts",
+          "camera_movement": "Prowling Steadicam, floating POV"
+        },
+        "pacing_rhythm": "Operatic - slow stalking then explosive violence",
+        "symbolism_color": {
+          "primary_colors": "Violence coded by hue (red=blood, blue=supernatural, green=poison)",
+          "geometric_patterns": "Order vs chaos",
+          "mirrors": "Fractured identity"
+        },
+        "normalized_attributes": {
+          "pacing_speed": 0.70,
+          "shot_complexity": 0.92,
+          "color_saturation": 1.0,
+          "expressionism": 0.95,
+          "violence_aesthetics": 0.88
+        },
+        "citation": "Suspiria (1977), Deep Red (1975), Inferno (1980) color grading analysis"
+      }
+    ],
+    "citation": "Director filmographies, published interviews, cinematography textbooks"
+  },
+
+  "genre_rules": {
+    "horror": {
+      "required_narrative_fields": [
+        "threat_escalation",
+        "isolation_factor",
+        "protagonist_vulnerability",
+        "reveal_vs_conceal_balance",
+        "scare_economy"
+      ],
+      "motifs": [
+        "confined_spaces",
+        "darkness_vs_light",
+        "rational_world_breaking",
+        "body_violation",
+        "home_as_trap"
+      ],
+      "pace_expectations": {
+        "act_1": "slow_dread_build",
+        "act_2": "escalating_encounters",
+        "act_3": "relentless_assault"
+      },
+      "default_lens_choices": {
+        "establishing": "24mm wide - show environment threat",
+        "stalking": "35mm - character in space",
+        "fear": "50mm - subjective intensity",
+        "violation": "85mm closeup - see terror"
+      },
+      "default_camera_moves": {
+        "dread": "slow_dolly_forward",
+        "pursuit": "handheld_chase",
+        "reveal": "crane_descending",
+        "trapped": "locked_static"
+      },
+      "default_lighting": {
+        "style": "motivated_practical_only",
+        "color_temp": "tungsten_warm_vs_moonlight_cool",
+        "ratios": "4:1 to 8:1 high contrast",
+        "atmosphere": "volumetric_fog_low"
+      },
+      "sound_requirements": [
+        "silence_as_primary_tool",
+        "diegetic_ambience_only",
+        "sudden_stings_maximum_2_per_episode",
+        "breathing_and_heartbeat_emphasis"
+      ],
+      "citation": "blackwood_story_bible.json lines 376-385, horror_rules section"
+    },
+    "thriller": {
+      "required_narrative_fields": [
+        "ticking_clock",
+        "information_asymmetry",
+        "moral_ambiguity",
+        "action_consequence_chain",
+        "trust_erosion"
+      ],
+      "motifs": [
+        "paranoia",
+        "surveillance",
+        "double_cross",
+        "race_against_time",
+        "revelation_cascade"
+      ],
+      "pace_expectations": {
+        "act_1": "setup_rapid",
+        "act_2": "acceleration_constant",
+        "act_3": "breakneck_convergence"
+      },
+      "default_lens_choices": {
+        "tension": "50mm neutral observation",
+        "action": "24-35mm handheld",
+        "revelation": "85mm tight reaction",
+        "pursuit": "16mm ultra-wide distortion"
+      },
+      "default_camera_moves": {
+        "paranoia": "slow_360_reveal",
+        "action": "handheld_kinetic",
+        "tension": "creeping_dolly",
+        "climax": "crane_up_God_view"
+      },
+      "default_lighting": {
+        "style": "high_contrast_noir",
+        "color_temp": "neutral_5600K",
+        "ratios": "6:1 dramatic",
+        "atmosphere": "harsh_shadows_urban"
+      }
+    },
+    "noir": {
+      "required_narrative_fields": [
+        "moral_decay",
+        "femme_fatale_or_homme_fatal",
+        "past_sins_return",
+        "no_easy_answers",
+        "cynical_worldview"
+      ],
+      "motifs": [
+        "venetian_blind_shadows",
+        "rain_reflections",
+        "cigarette_smoke",
+        "neon_signs",
+        "urban_decay"
+      ],
+      "default_lens_choices": {
+        "standard": "35-50mm classic focal lengths",
+        "closeup": "85mm for dramatic faces"
+      },
+      "default_camera_moves": {
+        "standard": "static_composed",
+        "reveal": "slow_track_in"
+      },
+      "default_lighting": {
+        "style": "high_contrast_chiaroscuro",
+        "color_temp": "tungsten_warm",
+        "ratios": "8:1 to 12:1 extreme",
+        "atmosphere": "smoke_venetian_shadows"
+      }
+    },
+    "sci_fi": {
+      "required_narrative_fields": [
+        "speculative_premise",
+        "technology_impact",
+        "human_vs_system",
+        "world_building_consistency",
+        "philosophical_question"
+      ],
+      "motifs": [
+        "technology_as_character",
+        "isolation_in_vastness",
+        "humanity_definition",
+        "surveillance_state",
+        "artificial_vs_natural"
+      ],
+      "default_lens_choices": {
+        "environment": "14-24mm ultra-wide for scale",
+        "intimacy": "50mm for human moments",
+        "technology": "macro 100mm for detail"
+      },
+      "default_lighting": {
+        "style": "cool_clinical_or_neon_saturated",
+        "color_temp": "5600K-6500K cool",
+        "atmosphere": "hard_edges_geometric"
+      }
+    }
+  },
+
+  "cinematography_guides": {
+    "blocking_principles": [
+      {
+        "principle": "Rule of Thirds",
+        "description": "Place subject on intersection points, never dead center unless intentional",
+        "when_to_use": "Natural framing, documentary feel",
+        "when_to_break": "Kubrick symmetry, oppressive order",
+        "citation": "The Filmmaker's Handbook, Steven Ascher, Chapter 8"
+      },
+      {
+        "principle": "Eye Line Match",
+        "description": "Characters looking off-frame should match direction in reverse shot",
+        "technical": "30-degree axis rule, maintain screen direction",
+        "citation": "Cinematography: Theory and Practice, Blain Brown, Chapter 12"
+      },
+      {
+        "principle": "Depth Staging",
+        "description": "Use foreground/midground/background to create visual layers",
+        "technical": "f/4-f/8 for moderate depth, f/1.8-f/2.8 for shallow",
+        "citation": "Master Shots Vol. 1, Christopher Kenworthy, pages 45-67"
+      }
+    ],
+    "sound_cues_visual_equivalents": [
+      {
+        "sound": "heartbeat_rising",
+        "visual": "slow_dolly_forward, tightening_frame",
+        "example": "The Haunting (1963) - hallway approach"
+      },
+      {
+        "sound": "breath_fog",
+        "visual": "practical_condensation, temperature_drop_indicators",
+        "example": "The Innocents (1961) - window frost"
+      },
+      {
+        "sound": "floorboard_creak",
+        "visual": "static_locked_camera, subject_reacts_to_offscreen",
+        "example": "The Shining (1980) - empty hallways"
+      }
+    ],
+    "exposure_tricks": [
+      {
+        "technique": "Low-key lighting",
+        "method": "Expose for highlights, let shadows crush to black",
+        "ratios": "8:1 or higher key-to-fill ratio",
+        "citation": "Set Lighting Technician's Handbook, Harry Box, Chapter 4"
+      },
+      {
+        "technique": "Practical-only lighting",
+        "method": "Use motivated sources (candles, lamps), augment minimally",
+        "benefit": "Naturalistic, period-authentic look",
+        "citation": "The Innocents (1961) cinematography analysis, Freddie Francis BSC"
+      }
+    ],
+    "beat_timing_shotspecs": [
+      {
+        "beat_type": "revelation",
+        "duration": "7-12 seconds",
+        "camera": "slow_dolly_forward at 2 inches/second",
+        "lens": "24-35mm",
+        "rationale": "Give audience time to process discovery"
+      },
+      {
+        "beat_type": "shock",
+        "duration": "1.5-3 seconds",
+        "camera": "locked_static or sudden_crash_zoom",
+        "lens": "85mm tight",
+        "rationale": "Brief impact, don't linger on jump scare"
+      },
+      {
+        "beat_type": "dread_build",
+        "duration": "15-30 seconds",
+        "camera": "creeping_dolly or crane_descending",
+        "lens": "24mm wide",
+        "rationale": "Patience creates anxiety"
+      }
+    ],
+    "citation": "Cinematography textbooks (Blain Brown, Steven Ascher), film analyses (Criterion Collection)"
+  },
+
+  "prompt_crafting": {
+    "co_star_framework": {
+      "C_context": "Provide genre, time period, location, emotional state",
+      "O_objective": "What should the image/video achieve? (reveal character, build dread, show location)",
+      "S_style": "Reference real films, cinematographers, or art movements",
+      "T_tone": "Emotional atmosphere (dread, melancholy, terror, wonder)",
+      "A_audience": "Who is this for? (horror fans, art house, prestige TV)",
+      "R_response": "What should viewer feel? (unease, empathy, fear)",
+      "example": "Context: Victorian basement 1893, gothic horror. Objective: Establish isolation and decay. Style: The Innocents (1961) Freddie Francis cinematography. Tone: Atmospheric dread. Audience: Elevated horror fans. Response: Unease and curiosity.",
+      "citation": "CO-STAR prompting framework, adapted for cinema"
+    },
+    "chain_of_thought_considerations": [
+      "Start with camera and lens specs (grounds technical reality)",
+      "Add character physical descriptions (ensures consistency)",
+      "Layer blocking and composition (spatial relationships)",
+      "Inject lighting details (color temp, ratios, atmosphere)",
+      "Include emotional intent (why this shot exists)",
+      "End with narrative purpose (what it reveals)"
+    ],
+    "persona_framing": {
+      "cinematographer_voice": "Write prompts as if they are camera notes from a DP to gaffer/operator",
+      "example": "Locked 35mm MCU, Eleanor (pale skin, dark circles, auburn hair) examining wall symbols, 2700K candle key left creating 4:1 ratio, deep focus stone walls, breath fog drifting, revelation building as eyes widen",
+      "benefit": "Technical precision + emotional intent = cinema-literate output",
+      "citation": "COMPLETE_BLACKWOOD_PRODUCTION_MASTER_PLAN.md lines 327-383"
+    },
+    "negative_constraints": {
+      "banned_phrases": [
+        "no text on screen",
+        "no captions",
+        "no subtitles",
+        "no modern elements",
+        "no neon lighting (unless intentional noir)",
+        "no digital displays",
+        "no logos or branding"
+      ],
+      "period_authenticity": "Always specify time period (1893, 1960s, etc.) to avoid anachronism",
+      "constraint_enforcement": "Include in ShotSpec constraints field for validation"
+    },
+    "relevant_quotes": [
+      "\"Show, don't tell\" - Cinema is visual storytelling, not illustrated dialogue",
+      "\"Every frame a painting\" - Composition matters as much as content",
+      "\"Motivated lighting\" - Light sources must have diegetic reason to exist"
+    ]
+  },
+
+  "human_feedback_templates": {
+    "rating_criteria": [
+      {
+        "criterion": "emotional_honesty",
+        "definition": "Does the shot convey authentic emotion without melodrama?",
+        "scale": "1-5 (1=flat/overacted, 5=genuine emotional truth)",
+        "guidance": "Check: Are facial expressions naturalistic? Does body language match emotional state? Is fear/joy/sorrow earned by narrative context?",
+        "citation": "Adapted from Stanislavski Method, emotional truth principles"
+      },
+      {
+        "criterion": "visual_poetry",
+        "definition": "Does composition/lighting/color create meaning beyond literal content?",
+        "scale": "1-5 (1=utilitarian, 5=transcendent visual metaphor)",
+        "guidance": "Check: Does framing reinforce theme? Do colors encode emotion? Does lighting create subtext? Could this frame exist as standalone art?",
+        "citation": "Tarkovsky 'Sculpting in Time', visual metaphor theory"
+      },
+      {
+        "criterion": "narrative_clarity",
+        "definition": "Is story information communicated efficiently without confusion?",
+        "scale": "1-5 (1=opaque, 5=crystal clear)",
+        "guidance": "Check: Can viewer parse who/what/where/why? Is spatial geography maintained? Do props/costumes signal period/status? Is emotional arc legible?",
+        "citation": "Classical continuity editing principles"
+      },
+      {
+        "criterion": "period_authenticity",
+        "definition": "Does shot feel genuinely of its time period without anachronism?",
+        "scale": "1-5 (1=modern bleed, 5=perfect period accuracy)",
+        "guidance": "Check: Costumes, props, architecture, lighting technology, color palette all period-accurate? Any modern tells (zippers, synthetic fabrics, LED bulbs)?",
+        "citation": "Production design reference: historical accuracy standards"
+      },
+      {
+        "criterion": "character_consistency",
+        "definition": "Do characters maintain physical appearance, costume, and personality across shots?",
+        "scale": "1-5 (1=different person, 5=perfect match)",
+        "guidance": "Check: Facial features, hair, costume, posture, mannerisms match previous appearances? Use DINOv3 scoring for computational validation.",
+        "citation": "Phase 8.7 DINOv3 integration, >0.90 threshold requirement"
+      },
+      {
+        "criterion": "cinematic_craft",
+        "definition": "Does shot demonstrate professional cinematography fundamentals?",
+        "scale": "1-5 (1=amateur, 5=prestige cinema quality)",
+        "guidance": "Check: Proper exposure? Motivated lighting? Rule of thirds or intentional symmetry? Depth of field appropriate for shot scale? Camera movement justified?",
+        "citation": "ASC (American Society of Cinematographers) technical standards"
+      }
+    ],
+    "human_ratings_json_schema": {
+      "shot_id": "string",
+      "timestamp": "ISO 8601 datetime",
+      "rater_id": "string",
+      "ratings": {
+        "emotional_honesty": "integer 1-5",
+        "visual_poetry": "integer 1-5",
+        "narrative_clarity": "integer 1-5",
+        "period_authenticity": "integer 1-5",
+        "character_consistency": "integer 1-5",
+        "cinematic_craft": "integer 1-5"
+      },
+      "notes": "string - free text feedback",
+      "keep_or_regen": "enum [keep, regen, regen_with_notes]"
+    }
+  },
+
+  "quantum_metrics": {
+    "statistical_fidelity": {
+      "bitstring_distribution": {
+        "description": "Quantum measurement produces probability distribution over all possible parameter combinations",
+        "threshold": "Use measurements with >5% probability to ensure statistical significance",
+        "standard_deviation": "Calculate std dev of probability weights; high variance = more creative exploration, low variance = convergence on pattern",
+        "citation": "quantum_prompt_enhancer.py lines 158-200"
+      },
+      "coherence_threshold": {
+        "description": "Quantum circuits must maintain coherence to produce valid measurements",
+        "metric": "T1/T2 coherence times on IBM Quantum hardware",
+        "requirement": "Circuit depth < T2 time to avoid decoherence noise",
+        "citation": "Qiskit documentation, quantum error mitigation"
+      }
+    },
+    "emotion_alignment_targeting": {
+      "description": "Map quantum-selected parameters to intended emotional impact",
+      "method": "Track which bitstrings correlate with high human_ratings.emotional_honesty scores",
+      "feedback_loop": "After 20+ quantum-enhanced shots rated, analyze bitstring→emotion correlation",
+      "threshold": "If specific bitstring patterns consistently score >4.0 on emotional_honesty, lock into prompt library",
+      "citation": "meta_learning loop concept, COMPLETE_BLACKWOOD_PRODUCTION_MASTER_PLAN.md lines 502-516"
+    },
+    "budget_tracking_metrics": {
+      "guardrail_cost": "$3 per quantum job (conservative estimate for budgeting)",
+      "actual_cost": "IBM Quantum rate $96/minute, billed per second with 1-second minimum",
+      "variance_tracking": "Monitor guardrail_total_usd vs actual_total_usd to refine estimates",
+      "alert_threshold": "Halt quantum jobs if actual_total_usd > MAX_QUANTUM_SPEND_USD",
+      "citation": "quantum_prompt_enhancer.py lines 77-83, 158-200"
+    },
+    "convergence_detection": {
+      "description": "Detect when quantum exploration converges on winning patterns",
+      "metric": "If same parameter combination selected >70% of time across 10+ jobs, pattern has emerged",
+      "action": "Lock winning pattern into classical prompt library, stop quantum enhancement for that beat type",
+      "benefit": "Convert quantum discoveries to zero-cost classical prompts for future episodes",
+      "citation": "Meta-learning feedback loop design"
+    }
+  },
+
+  "safety_notes": {
+    "prompt_injection_safeguards": [
+      {
+        "threat": "User-supplied text containing model instructions",
+        "mitigation": "Never directly concatenate user input to prompts. Use templating with escaped variables.",
+        "example_vulnerable": "f\"Generate image of {user_input}\"",
+        "example_safe": "f\"Generate image of {sanitize(user_input)}\" with allow-list validation",
+        "citation": "OWASP LLM Top 10, Prompt Injection Prevention"
+      },
+      {
+        "threat": "Dialogue text containing instruction-like phrases",
+        "mitigation": "Wrap dialogue in ShotSpec.dialogue_text field, never insert into prompt body. Use audio generation APIs (ElevenLabs) for speech, not visual text.",
+        "citation": "COMPLETE_BLACKWOOD_PRODUCTION_MASTER_PLAN.md lines 714-730, prompt_guard.py"
+      },
+      {
+        "threat": "Metadata poisoning (malicious values in story bible)",
+        "mitigation": "Validate all story_bible fields against schema. Reject entries with suspicious tokens (IGNORE, SYSTEM, etc.)",
+        "citation": "Input validation best practices"
+      }
+    ],
+    "confirmation_steps": [
+      {
+        "step": "Pre-flight checklist",
+        "actions": [
+          "Verify character_library_locked/ contains ONLY project characters (no bleed from previous projects)",
+          "Run story_validator.py to ensure all beats pass narrative checks",
+          "Check quantum and FAL spend ledgers are under budget limits",
+          "Validate prompts contain no banned phrases (captions, text, subtitles)"
+        ],
+        "citation": "COMPLETE_BLACKWOOD_PRODUCTION_MASTER_PLAN.md lines 706-730"
+      },
+      {
+        "step": "Runtime monitoring",
+        "actions": [
+          "Watch quantum_spend.json and fal_spend.json every 30 seconds",
+          "Tail logs/production_errors.log for failures",
+          "Monitor DINOv3 scores - halt if average drops <0.85",
+          "Check for character bleed mid-run with character_bleed_check.py"
+        ],
+        "citation": "COMPLETE_BLACKWOOD_PRODUCTION_MASTER_PLAN.md lines 732-744"
+      },
+      {
+        "step": "Emergency stop procedures",
+        "actions": [
+          "scripts/emergency_stop.py --halt-quantum (if overspend detected)",
+          "scripts/emergency_stop.py --halt-all (if character bleed detected)",
+          "scripts/purge_contaminated_shots.py (remove cross-project contamination)"
+        ],
+        "citation": "COMPLETE_BLACKWOOD_PRODUCTION_MASTER_PLAN.md lines 746-759"
+      }
+    ],
+    "auto_execution_warnings": [
+      "NEVER auto-execute quantum jobs without budget headroom check",
+      "NEVER auto-commit story bible updates from meta-learning without human approval",
+      "NEVER auto-deploy new cinema library templates without validation against reference films",
+      "ALWAYS require human confirmation before: budget increases, character library changes, story bible modifications"
+    ]
+  },
+
+  "gaps": {
+    "missing_sources": [
+      {
+        "item": "Complete director corpus for Zhao",
+        "need": "More detailed Nomadland/The Rider cinematography breakdowns with specific lens/lighting notes",
+        "priority": "MEDIUM",
+        "workaround": "Use available Criterion Collection essays and DP interviews"
+      },
+      {
+        "item": "Genre rules for comedy and romance",
+        "need": "Narrative requirements, default lens/lighting choices for non-horror genres",
+        "priority": "LOW",
+        "workaround": "Not needed for Blackwood (horror-only project)"
+      },
+      {
+        "item": "Quantitative DINOv3 score thresholds per feature",
+        "need": "Separate thresholds for face (>0.90), costume (>0.88), lighting (>0.85) as mentioned in code",
+        "priority": "HIGH",
+        "workaround": "Currently using single >0.90 threshold, need granular validation"
+      },
+      {
+        "item": "Cinema library templates beyond 4 examples",
+        "need": "8-10 total templates covering all beat types (confrontation, revelation, dread, shock, investigation, escape)",
+        "priority": "HIGH",
+        "workaround": "Build during Phase 1 implementation (Week 1) using The Innocents, The Haunting, The Shining as references"
+      },
+      {
+        "item": "Meta-learning analysis algorithms",
+        "need": "Specific code for pattern detection in quantum_enhancement_log.json",
+        "priority": "MEDIUM",
+        "workaround": "Manual analysis initially, automate during Phase 3"
+      },
+      {
+        "item": "Human rating correlation analysis",
+        "need": "Statistical methods for linking bitstrings to human_ratings.emotional_honesty scores",
+        "priority": "MEDIUM",
+        "workaround": "Start with simple correlation coefficient, refine with more data"
+      }
+    ]
+  }
+}

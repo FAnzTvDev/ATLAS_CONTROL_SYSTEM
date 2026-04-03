@@ -1,0 +1,433 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-11-05",
+    "purpose": "Reference-based cinematography templates from classic films",
+    "usage": "Load templates for Beat→ShotSpec conversion",
+    "citation": "Analyzed from The Innocents (1961), The Haunting (1963), The Shining (1980)"
+  },
+
+  "templates": {
+    "confrontation_close": {
+      "name": "Confrontation Closeup",
+      "reference_film": "The Innocents (1961)",
+      "reference_cinematographer": "Freddie Francis BSC",
+      "scale": "MCU",
+      "lens_mm": 35,
+      "camera_move": "locked",
+      "speed": null,
+      "depth_of_field": "deep_focus",
+      "blocking": "two-shot, characters 3ft apart, eye contact direct",
+      "lighting": {
+        "style": "candle_key_moon_rim",
+        "key_light": "motivated_candle_left",
+        "fill_light": "moonlight_window_right",
+        "color_temp": "2700K key + 5600K rim",
+        "ratios": "4:1 dramatic split",
+        "atmosphere": "breath_fog_visible"
+      },
+      "sound_cues": ["breath_fog_drifting", "floorboard_creak"],
+      "pacing": "slow_build_to_shock",
+      "duration_target": "8-12 seconds",
+      "when_to_use": [
+        "emotional confrontation",
+        "truth revealed",
+        "stakes escalate",
+        "character conflict peak"
+      ],
+      "beat_types": ["confrontation", "revelation", "confession"]
+    },
+
+    "revelation_slow_dolly": {
+      "name": "Revelation Dolly Forward",
+      "reference_film": "The Haunting (1963)",
+      "reference_cinematographer": "Davis Boulton BSC",
+      "scale": "FS",
+      "lens_mm": 24,
+      "camera_move": "slow_dolly_forward",
+      "speed": "2_inches_per_second",
+      "depth_of_field": "deep",
+      "blocking": "character discovers evidence, back to camera initially, turns to reveal reaction",
+      "lighting": {
+        "style": "motivated_practical_only",
+        "key_light": "oil_lamp_practical",
+        "fill_light": "moonlight_window",
+        "color_temp": "2400K warm key + 5600K cool fill",
+        "ratios": "6:1 high contrast",
+        "atmosphere": "volumetric_dust_shafts"
+      },
+      "sound_cues": ["heartbeat_rising", "house_settling_creak", "paper_rustle"],
+      "pacing": "tension_ramp",
+      "duration_target": "10-15 seconds",
+      "when_to_use": [
+        "character discovers key information",
+        "dread builds slowly",
+        "realization dawning",
+        "clue revealed"
+      ],
+      "beat_types": ["revelation", "discovery", "investigation"]
+    },
+
+    "apparition_insert": {
+      "name": "Ghost Appearance Insert",
+      "reference_film": "The Innocents (1961)",
+      "reference_cinematographer": "Freddie Francis BSC",
+      "scale": "ECU",
+      "lens_mm": 85,
+      "camera_move": "locked",
+      "speed": null,
+      "depth_of_field": "shallow",
+      "blocking": "ghost_face_partial_frame_left, edge-lit, barely visible",
+      "lighting": {
+        "style": "rim_only",
+        "key_light": "none",
+        "fill_light": "none",
+        "color_temp": "5600K_cold",
+        "ratios": "edge_light_only",
+        "atmosphere": "frost_breath_visible"
+      },
+      "sound_cues": ["whisper_unintelligible", "temperature_drop_audio", "child_laughter_distant"],
+      "pacing": "shock_cut",
+      "duration_target": "1.5-3 seconds maximum",
+      "when_to_use": [
+        "ghost motif payoff",
+        "after setup established",
+        "brief shock moment",
+        "supernatural confirmation"
+      ],
+      "beat_types": ["ghost_appearance", "shock", "supernatural_event"]
+    },
+
+    "dread_build_wide": {
+      "name": "Atmospheric Dread Establishing",
+      "reference_film": "The Shining (1980)",
+      "reference_cinematographer": "John Alcott BSC",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "slow_crane_descending",
+      "speed": "4_inches_per_second",
+      "depth_of_field": "deep",
+      "blocking": "character_small_in_frame_rule_of_thirds_low, dwarfed by architecture",
+      "lighting": {
+        "style": "tungsten_cool_split",
+        "key_light": "overhead_practical_chandelier",
+        "fill_light": "window_moonlight",
+        "color_temp": "3200K tungsten + 5600K moon",
+        "ratios": "8:1_extreme_contrast",
+        "atmosphere": "practical_shadows_stretch_long"
+      },
+      "sound_cues": ["ambient_silence", "distant_creak", "wind_outside"],
+      "pacing": "slow_patient",
+      "duration_target": "15-30 seconds",
+      "when_to_use": [
+        "isolation emphasis",
+        "vulnerability",
+        "location establishment",
+        "show scale of threat"
+      ],
+      "beat_types": ["establishing", "isolation", "dread_build", "location"]
+    },
+
+    "investigation_medium": {
+      "name": "Investigation Medium Shot",
+      "reference_film": "The Haunting (1963)",
+      "reference_cinematographer": "Davis Boulton BSC",
+      "scale": "MS",
+      "lens_mm": 50,
+      "camera_move": "slow_pan_follow",
+      "speed": "1_inch_per_second",
+      "depth_of_field": "moderate",
+      "blocking": "character examining space, moving through environment, touching objects",
+      "lighting": {
+        "style": "motivated_practical_follow",
+        "key_light": "handheld_lamp_character_carries",
+        "fill_light": "ambient_moonlight",
+        "color_temp": "2700K warm key + 5600K ambient",
+        "ratios": "6:1 dramatic",
+        "atmosphere": "light_pool_moves_with_character"
+      },
+      "sound_cues": ["footsteps_echo", "breathing_close", "object_handling"],
+      "pacing": "methodical_exploration",
+      "duration_target": "10-20 seconds",
+      "when_to_use": [
+        "character exploring space",
+        "searching for clues",
+        "methodical investigation",
+        "environmental storytelling"
+      ],
+      "beat_types": ["investigation", "exploration", "search", "discovery_setup"]
+    },
+
+    "escape_handheld": {
+      "name": "Escape Pursuit Handheld",
+      "reference_film": "The Shining (1980)",
+      "reference_cinematographer": "John Alcott BSC",
+      "scale": "MS",
+      "lens_mm": 35,
+      "camera_move": "handheld_chase",
+      "speed": "rapid_following",
+      "depth_of_field": "moderate",
+      "blocking": "character fleeing, over-shoulder or profile, environment blurs past",
+      "lighting": {
+        "style": "practical_only_chaotic",
+        "key_light": "overhead_emergency",
+        "fill_light": "none",
+        "color_temp": "variable_3200K-5600K",
+        "ratios": "10:1_high_contrast_shadows",
+        "atmosphere": "strobing_panic"
+      },
+      "sound_cues": ["heavy_breathing", "footsteps_running", "pursuer_sounds"],
+      "pacing": "frantic_kinetic",
+      "duration_target": "5-10 seconds",
+      "when_to_use": [
+        "chase sequence",
+        "escape attempt",
+        "panic flight",
+        "immediate danger"
+      ],
+      "beat_types": ["escape", "chase", "panic", "pursuit"]
+    },
+
+    "isolation_static": {
+      "name": "Isolation Static Trap",
+      "reference_film": "The Innocents (1961)",
+      "reference_cinematographer": "Freddie Francis BSC",
+      "scale": "FS",
+      "lens_mm": 35,
+      "camera_move": "locked",
+      "speed": null,
+      "depth_of_field": "deep",
+      "blocking": "character centered, small in frame, surrounded by negative space",
+      "lighting": {
+        "style": "single_source_overhead",
+        "key_light": "single_overhead_bulb",
+        "fill_light": "none",
+        "color_temp": "2700K warm",
+        "ratios": "12:1_extreme_no_fill",
+        "atmosphere": "shadows_closing_in"
+      },
+      "sound_cues": ["silence_oppressive", "character_breathing_only", "door_lock_click"],
+      "pacing": "static_dread",
+      "duration_target": "8-15 seconds",
+      "when_to_use": [
+        "character trapped",
+        "isolation emphasis",
+        "helplessness",
+        "before escape attempt"
+      ],
+      "beat_types": ["trapped", "isolation", "helplessness", "pre_escape"]
+    },
+
+    "dialogue_two_shot": {
+      "name": "Gothic Dialogue Two-Shot",
+      "reference_film": "The Haunting (1963)",
+      "reference_cinematographer": "Davis Boulton BSC",
+      "scale": "MS",
+      "lens_mm": 50,
+      "camera_move": "locked",
+      "speed": null,
+      "depth_of_field": "moderate",
+      "blocking": "two characters in profile or 3/4, 5ft apart, shared frame left-right split",
+      "lighting": {
+        "style": "motivated_window_natural",
+        "key_light": "window_large_diffused",
+        "fill_light": "reflected_ambient",
+        "color_temp": "5600K cool daylight",
+        "ratios": "3:1 moderate contrast",
+        "atmosphere": "natural_realistic"
+      },
+      "sound_cues": ["dialogue_primary", "room_ambience", "clock_ticking"],
+      "pacing": "conversation_rhythm",
+      "duration_target": "6-10 seconds per exchange",
+      "when_to_use": [
+        "character conversation",
+        "information exchange",
+        "relationship building",
+        "exposition delivery"
+      ],
+      "beat_types": ["dialogue", "conversation", "exposition", "relationship"]
+    },
+
+    "pov_subjective": {
+      "name": "POV Subjective Horror",
+      "reference_film": "The Shining (1980)",
+      "reference_cinematographer": "John Alcott BSC",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": ["breathing_camera_operator", "wheel_squeak", "footsteps_off"],
+      "pacing": "gliding_inexorable",
+      "duration_target": "10-20 seconds",
+      "when_to_use": [
+        "stalker perspective",
+        "supernatural entity POV",
+        "ominous approach",
+        "subjective dread"
+      ],
+      "beat_types": ["pov", "stalking", "supernatural_presence", "approach"]
+    },
+
+    "transition_environment": {
+      "name": "Environment Transition Establishing",
+      "reference_film": "The Haunting (1963)",
+      "reference_cinematographer": "Davis Boulton BSC",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "slow_pan_across",
+      "speed": "2_inches_per_second",
+      "depth_of_field": "deep",
+      "blocking": "empty room or hallway, no characters, architecture and atmosphere primary",
+      "lighting": {
+        "style": "motivated_natural_window",
+        "key_light": "window_hard_directional",
+        "fill_light": "bounce_ambient",
+        "color_temp": "5600K daylight",
+        "ratios": "5:1 moderate_dramatic",
+        "atmosphere": "dust_shafts_volumetric"
+      },
+      "sound_cues": ["ambient_wind", "house_settling", "bird_distant"],
+      "pacing": "patient_observational",
+      "duration_target": "6-10 seconds",
+      "when_to_use": [
+        "scene transition",
+        "location change",
+        "time passage",
+        "establishing environment"
+      ],
+      "beat_types": ["transition", "establishing", "location_change", "time_passage"]
+    }
+  },
+
+  "ghost_motif_register": {
+    "sarah_blackwood_victim": {
+      "entity_name": "Sarah Blackwood",
+      "entity_type": "victim_spirit",
+      "death_year": 1893,
+      "visual_signature": "frost_breath, Victorian_dress_torn, defensive_posture, child_features",
+      "audio_signature": "child_laughter_echo, whisper_warning, temperature_drop_audio",
+      "rules": {
+        "appears_when": [
+          "character_near_murder_site",
+          "midnight_hour",
+          "guilt_trigger",
+          "truth_spoken_aloud"
+        ],
+        "never_appears": [
+          "daylight_exterior",
+          "multiple_witnesses_skeptics",
+          "before_setup_established",
+          "outside_house_grounds"
+        ],
+        "trigger_requirements": "minimum_one_condition_from_appears_when"
+      },
+      "narrative_arc": "victim → warning → protector → final_rest",
+      "payoff_scene": "Scene_19_ritual_resolution",
+      "frequency_targets": {
+        "act_1": 2,
+        "act_2": 4,
+        "act_3": 6
+      },
+      "escalation_pattern": [
+        "subtle_frost_breath_only",
+        "partial_figure_edge_frame",
+        "full_figure_distant",
+        "close_proximity_warning",
+        "physical_interaction_protective"
+      ],
+      "template_override": "apparition_insert"
+    },
+
+    "house_entity": {
+      "entity_name": "Blackwood House Sentience",
+      "entity_type": "malevolent_architecture",
+      "manifestation": "environmental_supernatural",
+      "visual_signature": "shadows_move_independently, walls_breathe, geometry_impossible, doors_lock",
+      "audio_signature": "house_settling_wrong, breathing_walls, spatial_disorientation",
+      "rules": {
+        "appears_when": [
+          "truth_about_murders_discovered",
+          "rooms_entered_forbidden",
+          "doors_attempt_escape",
+          "night_progression_midnight_to_3am"
+        ],
+        "never_appears": [
+          "exterior_shots",
+          "daylight_rational_hours",
+          "before_invitation_accepted"
+        ],
+        "trigger_requirements": "always_active_after_midnight_first_night"
+      },
+      "narrative_arc": "dormant → aware → hunting → bound_or_destroyed",
+      "payoff_scene": "Scene_20_final_confrontation",
+      "frequency_targets": {
+        "act_1": 3,
+        "act_2": 6,
+        "act_3": 8
+      },
+      "escalation_pattern": [
+        "ambient_environmental_only",
+        "doors_lock_windows_sealed",
+        "geometry_shifts_subtle",
+        "active_pursuit_via_architecture",
+        "full_assault_reality_breaking"
+      ],
+      "template_override": "dread_build_wide"
+    },
+
+    "eleanor_guilt_manifestation": {
+      "entity_name": "Eleanor's Repressed Trauma",
+      "entity_type": "psychological_projection",
+      "manifestation": "subjective_only_eleanor_sees",
+      "visual_signature": "childhood_ghost_version_of_self, mirror_reflections_wrong, cold_spots_follow",
+      "audio_signature": "voice_younger_self, warnings_internal, mother_calling",
+      "rules": {
+        "appears_when": [
+          "eleanor_alone",
+          "eleanor_guilt_triggered",
+          "eleanor_near_breaking_point",
+          "mirrors_present"
+        ],
+        "never_appears": [
+          "other_characters_present",
+          "eleanor_rational_analytical_mode",
+          "before_first_night"
+        ],
+        "trigger_requirements": "eleanor_must_be_isolated_and_vulnerable"
+      },
+      "narrative_arc": "denial → recognition → integration → strength",
+      "payoff_scene": "Scene_18_mirror_confrontation",
+      "frequency_targets": {
+        "act_1": 1,
+        "act_2": 3,
+        "act_3": 5
+      },
+      "escalation_pattern": [
+        "reflection_delayed_in_mirror",
+        "reflection_moves_independently",
+        "reflection_speaks_warnings",
+        "reflection_emerges_from_mirror",
+        "integration_acceptance"
+      ],
+      "template_override": "pov_subjective"
+    }
+  },
+
+  "usage_notes": {
+    "template_selection": "Beat→ShotSpec generator classifies beat type, selects matching template",
+    "customization": "Templates are base recipes - customize blocking/lighting per scene metadata",
+    "ghost_logic": "Always check ghost_motif_register before using apparition templates",
+    "escalation": "Track ghost frequency targets per act to maintain narrative pacing",
+    "coverage": "Generate ABC angle variants from single template (wide/medium/close)"
+  }
+}

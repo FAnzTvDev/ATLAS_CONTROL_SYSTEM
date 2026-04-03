@@ -1,0 +1,486 @@
+{
+  "scene_id": "BW_EP1_001",
+  "scene_title": "COLD OPEN - 1893 MURDERS FLASHBACK",
+  "shotspecs": [
+    {
+      "shot_id": "BW_EP1_001_000A",
+      "beat_id": "beat_000",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, Sarah Blackwood (Translucent Victorian dress, soot-streaked skin, ember-glow eyes, wearing Late 19th century ledger dress, apron scorched at the hem), Shadowed Killer (Silhouette with indistinct features, coat soaked in furnace soot, wearing Victorian steward uniform, leather gloves), hallway or corridor, centered one-point perspective, no character visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 1, Story revelation 1, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 1",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_000B",
+      "beat_id": "beat_000",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, Sarah Blackwood (Translucent Victorian dress, soot-streaked skin, ember-glow eyes, wearing Late 19th century ledger dress, apron scorched at the hem), Shadowed Killer (Silhouette with indistinct features, coat soaked in furnace soot, wearing Victorian steward uniform, leather gloves), hallway or corridor, centered one-point perspective, no character visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 1, Story revelation 1, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 1",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_000C",
+      "beat_id": "beat_000",
+      "scale": "ECU",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, environment detail, no characters visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 1, Story revelation 1, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 1",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_001A",
+      "beat_id": "beat_001",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, Sarah Blackwood (Translucent Victorian dress, soot-streaked skin, ember-glow eyes, wearing Late 19th century ledger dress, apron scorched at the hem), Shadowed Killer (Silhouette with indistinct features, coat soaked in furnace soot, wearing Victorian steward uniform, leather gloves), hallway or corridor, centered one-point perspective, no character visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 2, Story revelation 2, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 2",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_001B",
+      "beat_id": "beat_001",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, Sarah Blackwood (Translucent Victorian dress, soot-streaked skin, ember-glow eyes, wearing Late 19th century ledger dress, apron scorched at the hem), Shadowed Killer (Silhouette with indistinct features, coat soaked in furnace soot, wearing Victorian steward uniform, leather gloves), hallway or corridor, centered one-point perspective, no character visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 2, Story revelation 2, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 2",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_001C",
+      "beat_id": "beat_001",
+      "scale": "ECU",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, environment detail, no characters visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 2, Story revelation 2, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 2",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_002A",
+      "beat_id": "beat_002",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, Sarah Blackwood (Translucent Victorian dress, soot-streaked skin, ember-glow eyes, wearing Late 19th century ledger dress, apron scorched at the hem), Shadowed Killer (Silhouette with indistinct features, coat soaked in furnace soot, wearing Victorian steward uniform, leather gloves), hallway or corridor, centered one-point perspective, no character visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 3, Story revelation 3, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 3",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_002B",
+      "beat_id": "beat_002",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, Sarah Blackwood (Translucent Victorian dress, soot-streaked skin, ember-glow eyes, wearing Late 19th century ledger dress, apron scorched at the hem), Shadowed Killer (Silhouette with indistinct features, coat soaked in furnace soot, wearing Victorian steward uniform, leather gloves), hallway or corridor, centered one-point perspective, no character visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 3, Story revelation 3, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 3",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_002C",
+      "beat_id": "beat_002",
+      "scale": "ECU",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, environment detail, no characters visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 3, Story revelation 3, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 3",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_003A",
+      "beat_id": "beat_003",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, Sarah Blackwood (Translucent Victorian dress, soot-streaked skin, ember-glow eyes, wearing Late 19th century ledger dress, apron scorched at the hem), Shadowed Killer (Silhouette with indistinct features, coat soaked in furnace soot, wearing Victorian steward uniform, leather gloves), hallway or corridor, centered one-point perspective, no character visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 4, Story revelation 4, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 4",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_003B",
+      "beat_id": "beat_003",
+      "scale": "WS",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, Sarah Blackwood (Translucent Victorian dress, soot-streaked skin, ember-glow eyes, wearing Late 19th century ledger dress, apron scorched at the hem), Shadowed Killer (Silhouette with indistinct features, coat soaked in furnace soot, wearing Victorian steward uniform, leather gloves), hallway or corridor, centered one-point perspective, no character visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 4, Story revelation 4, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 4",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    },
+    {
+      "shot_id": "BW_EP1_001_003C",
+      "beat_id": "beat_003",
+      "scale": "ECU",
+      "lens_mm": 24,
+      "camera_move": "steadicam_floating_forward",
+      "speed": "3_inches_per_second",
+      "depth_of_field": "deep",
+      "lut": "tungsten_cool_split",
+      "blocking": "hallway or corridor, centered one-point perspective, no character visible",
+      "lighting": {
+        "style": "overhead_fluorescent_harsh",
+        "key_light": "overhead_practical_strips",
+        "fill_light": "reflected_walls",
+        "color_temp": "4100K cool_white_fluorescent",
+        "ratios": "2:1 flat_ominous",
+        "atmosphere": "sterile_institutional"
+      },
+      "sound_cues": [
+        "breathing_camera_operator",
+        "wheel_squeak",
+        "footsteps_off"
+      ],
+      "dialogue_text": null,
+      "props": [],
+      "constraints": {
+        "period_authentic": true,
+        "no_neon": true,
+        "no_captions": true,
+        "no_subtitles": true,
+        "no_modern_elements": true
+      },
+      "prompt": "steadicam_floating_forward 24mm WS at 3_inches_per_second, environment detail, no characters visible, overhead_fluorescent_harsh lighting, 4100K cool_white_fluorescent, 2:1 flat_ominous, sterile_institutional, Character actions for beat 4, Story revelation 4, Cinematic horror composition with motivated lighting, Present day, October 2025 period authentic",
+      "emotional_intent": null,
+      "narrative_purpose": "Story revelation 4",
+      "template_used": "pov_subjective",
+      "reference_film": "The Shining (1980)",
+      "duration_target": "10-20 seconds",
+      "pacing": "gliding_inexorable"
+    }
+  ]
+}

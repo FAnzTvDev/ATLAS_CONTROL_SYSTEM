@@ -1,0 +1,594 @@
+/* ═══════════════════════════════════════════════════════════════════
+   TIMELINE.CSS — Timeline Editor, Clips, Tracks, Previs
+   ATLAS V23 — Phase 5: CSS Extraction
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Timeline Section */
+.timeline-section {
+    grid-column: 1 / -1;
+    min-height: 280px;
+    overflow: hidden;
+}
+
+.timeline-toolbar {
+    display: flex;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--bg-input);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.timeline-toolbar .btn {
+    font-size: 11px;
+    padding: 4px 10px;
+}
+
+.timeline-toolbar .divider {
+    width: 1px;
+    height: 24px;
+    background: var(--border);
+}
+
+/* Timeline Canvas */
+.timeline-canvas-wrap {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #0d1117;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.timeline-canvas {
+    min-width: 100%;
+    height: 220px;
+}
+
+/* Timeline Track */
+.timeline-track {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.timeline-track-label {
+    width: 90px;
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.timeline-track-content {
+    flex: 1;
+    display: flex;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    gap: 2px;
+}
+
+/* Timeline Clips */
+.timeline-clip {
+    height: 32px;
+    border-radius: 4px;
+    font-size: 9px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+}
+
+.timeline-clip:hover {
+    opacity: 0.85;
+}
+
+.timeline-clip.video {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.timeline-clip.dialogue {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.timeline-clip.music {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.timeline-clip.sfx {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.timeline-clip.selected {
+    outline: 2px solid #fff;
+    outline-offset: 1px;
+}
+
+.timeline-clip.active-shot {
+    outline: 2px solid #f59e0b;
+    outline-offset: 1px;
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+}
+
+/* Timeline Playhead */
+.timeline-playhead {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent-red);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.timeline-playhead::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -5px;
+    width: 12px;
+    height: 8px;
+    background: var(--accent-red);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* Timeline Ruler */
+.timeline-ruler {
+    display: flex;
+    height: 20px;
+    border-bottom: 1px solid var(--border);
+    padding-left: 90px;
+    font-size: 9px;
+    color: var(--text-secondary);
+    align-items: flex-end;
+}
+
+.timeline-ruler-mark {
+    flex-shrink: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 4px;
+    padding-bottom: 2px;
+}
+
+/* Director Constraints Bar */
+.director-constraints-bar {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(59, 130, 246, 0.05));
+    border-top: 1px solid rgba(139, 92, 246, 0.3);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.director-constraints-bar .dc-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-purple);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.director-constraints-bar .dc-chip {
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+
+.director-constraints-bar .dc-chip:hover {
+    border-color: var(--accent-purple);
+    color: var(--accent-purple);
+}
+
+.director-constraints-bar .dc-chip.active {
+    background: var(--accent-purple);
+    color: #000;
+    border-color: var(--accent-purple);
+    font-weight: 600;
+}
+
+.dc-sep {
+    width: 1px;
+    height: 20px;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+/* Timeline Context Menu */
+.timeline-context-menu {
+    position: fixed;
+    z-index: 10000;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 4px 0;
+    min-width: 200px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-context-menu .ctx-item {
+    padding: 8px 16px;
+    font-size: 12px;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-context-menu .ctx-item:hover {
+    background: var(--bg-secondary);
+}
+
+.timeline-context-menu .ctx-item .ctx-icon {
+    font-size: 14px;
+    width: 20px;
+    text-align: center;
+}
+
+.timeline-context-menu .ctx-item .ctx-key {
+    margin-left: auto;
+    font-size: 10px;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    padding: 1px 6px;
+    border-radius: 3px;
+}
+
+.timeline-context-menu .ctx-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 4px 0;
+}
+
+/* Insert Shot Drop Zone */
+.timeline-insert-zone {
+    width: 4px;
+    min-height: 32px;
+    background: transparent;
+    cursor: col-resize;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.15s;
+}
+
+.timeline-insert-zone:hover,
+.timeline-insert-zone.drag-over {
+    width: 24px;
+    background: rgba(34, 197, 94, 0.3);
+    border-radius: 4px;
+}
+
+.timeline-insert-zone:hover::after,
+.timeline-insert-zone.drag-over::after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent-green);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Clipboard Highlight */
+.timeline-clip.cut-source {
+    opacity: 0.35;
+    border: 2px dashed var(--accent-red);
+}
+
+.timeline-clip.copied-source {
+    outline: 2px dashed var(--accent-cyan);
+    outline-offset: 1px;
+}
+
+/* Previs Filmstrip */
+.previs-filmstrip {
+    display: flex;
+    gap: 2px;
+    padding: 8px 16px;
+    overflow-x: auto;
+    background: #000;
+    border-top: 1px solid var(--border);
+}
+
+.previs-filmstrip-frame {
+    width: 80px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center;
+    background-color: #1a1a2e;
+    border: 1px solid transparent;
+    cursor: pointer;
+    position: relative;
+    transition: border 0.15s;
+}
+
+.previs-filmstrip-frame:hover {
+    border-color: var(--accent-green);
+    transform: scale(1.35);
+    z-index: 10;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+    transition: transform 0.15s, border 0.15s, box-shadow 0.15s;
+}
+
+.previs-filmstrip-frame.current {
+    border-color: var(--accent-orange);
+    border-width: 2px;
+}
+
+.previs-filmstrip-frame.generating {
+    border-color: var(--accent-cyan);
+    animation: pulse-border 1.5s infinite;
+}
+
+.previs-filmstrip-frame.generating::after {
+    content: attr(data-progress);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.55);
+    color: var(--accent-cyan);
+    font-size: 10px;
+    font-weight: 800;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    border-radius: 3px;
+    z-index: 5;
+}
+
+.previs-filmstrip-frame.generating .ff-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: var(--accent-cyan);
+    z-index: 6;
+    border-radius: 0 0 3px 3px;
+    transition: width 1s linear;
+}
+
+.previs-filmstrip-frame.just-completed {
+    border-color: #10b981;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
+    animation: frame-arrive 0.5s ease-out;
+}
+
+@keyframes frame-arrive {
+    0% {
+        transform: scale(1.15);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse-border {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.previs-filmstrip-frame .ff-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 7px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 1px 2px;
+}
+
+.previs-filmstrip-frame .ff-status {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.previs-filmstrip-frame .ff-status.has-frame {
+    background: var(--accent-green);
+}
+
+.previs-filmstrip-frame .ff-status.has-video {
+    background: var(--accent-purple);
+    box-shadow: 0 0 6px var(--accent-purple);
+}
+
+.previs-filmstrip-frame .ff-status.pending {
+    background: var(--text-secondary);
+}
+
+/* Play Icon Overlay */
+.previs-filmstrip-frame .ff-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+    transition: opacity 0.15s, transform 0.15s;
+    pointer-events: none;
+}
+
+.previs-filmstrip-frame:hover .ff-play-overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+.previs-filmstrip-frame .ff-play-overlay::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 11px;
+    border-color: transparent transparent transparent #fff;
+    margin-left: 2px;
+}
+
+/* Video Ready Glow */
+.previs-filmstrip-frame.has-video-ready {
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+}
+
+/* Timeline Thumbnail Clips */
+.timeline-clip.video.has-thumb {
+    background-size: cover !important;
+    background-position: center !important;
+    height: 48px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.timeline-clip.video.has-thumb .clip-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 1px 4px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timeline-clip.video.has-thumb .clip-dur {
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    font-size: 7px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0 3px;
+    border-radius: 2px;
+    color: #ccc;
+}
+
+.timeline-track-content.thumb-mode {
+    height: 52px;
+}
+
+.timeline-track.thumb-mode {
+    height: 56px;
+}
+
+/* Enhanced Previs Filmstrip */
+.previs-filmstrip.powerhouse {
+    gap: 4px;
+    padding: 10px 16px;
+    min-height: 72px;
+}
+
+.previs-filmstrip.powerhouse .previs-filmstrip-frame {
+    width: 120px;
+    height: 68px;
+}
+
+.previs-filmstrip.powerhouse .previs-filmstrip-frame .ff-label {
+    font-size: 10px;
+    padding: 2px 4px;
+    font-weight: 600;
+}
+
+.previs-filmstrip.powerhouse .previs-filmstrip-frame .ff-variants-dot {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-orange);
+}
+
+/* Filmstrip Drag-over Highlight */
+.previs-filmstrip.drag-over {
+    outline: 2px dashed var(--accent-green) !important;
+    outline-offset: -2px;
+    background: rgba(52, 211, 153, 0.08) !important;
+}
+
+.previs-filmstrip-frame.drag-target {
+    border-color: var(--accent-green) !important;
+    box-shadow: 0 0 12px rgba(52, 211, 153, 0.5) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .previs-filmstrip, .previs-filmstrip.powerhouse {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 8px !important;
+    }
+
+    .previs-filmstrip .frame-thumb, .previs-filmstrip.powerhouse .frame-thumb {
+        scroll-snap-align: start;
+        min-width: 100px !important;
+        min-height: 60px !important;
+        flex-shrink: 0;
+    }
+
+    .timeline-clip {
+        min-height: 50px !important;
+        min-width: 60px !important;
+    }
+
+    .timeline-track-label {
+        font-size: 11px !important;
+        min-width: 60px !important;
+    }
+
+    .director-bar, .constraints-bar {
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .previs-filmstrip .frame-thumb, .previs-filmstrip.powerhouse .frame-thumb {
+        min-width: 80px !important;
+        min-height: 48px !important;
+    }
+}

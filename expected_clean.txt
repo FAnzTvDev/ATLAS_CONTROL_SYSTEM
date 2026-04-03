@@ -1,0 +1,78 @@
+/api/agents/renderer/jobs
+/api/agents/renderer/run-async
+/api/ai-actors
+/api/ai-actors/pre-generate-all
+/api/ai-actors/references/status
+/api/auto/agents/status
+/api/auto/apply-director-profile
+/api/auto/expand-cinematography
+/api/auto/generate-characters
+/api/auto/generate-episode
+/api/auto/generate-first-frames
+/api/auto/generate-first-frames-by-scene
+/api/auto/generate-image
+/api/auto/generate-location-masters
+/api/auto/generate-story-bible
+/api/auto/projects
+/api/auto/projects/save
+/api/auto/render-videos
+/api/auto/save-verification
+/api/auto/upload-story-bible
+/api/auto/validate-qa
+/api/director/meta-learning
+/api/directors
+/api/gallery/cast
+/api/gallery/quantum-log
+/api/gallery/run/status
+/api/gallery/shots
+/api/live-generations
+/api/live-generations/clear
+/api/live-generations/sync
+/api/media
+/api/shot-plan/fix-v13
+/api/shot-plan/regenerate
+/api/story-bible/
+/api/v12/approve-scene-video
+/api/v12/render-scene-videos
+/api/v12/stitch-scenes
+/api/v15/config
+/api/v15/script/import-and-validate
+/api/v15/visual-spec/enhance-prompt
+/api/v15/visual-spec/preview
+/api/v3/slot-pack/budget
+/api/v3/slot-pack/validate
+/api/v3/temporal/actor-motion
+/api/v3/temporal/lens-sequence
+/api/v5/vision/health
+/api/v6/approve/, {
+/api/v6/approve/all
+/api/v6/approve/casting
+/api/v6/approve/characters
+/api/v6/approve/locations
+/api/v6/casting/fit-score
+/api/v6/casting/rationale/
+/api/v6/character-lock/, {
+/api/v6/character/delete/${encodeURIComponent(project
+/api/v6/character/update/${encodeURIComponent(project
+/api/v6/current-script
+/api/v6/delete-character/, {
+/api/v6/delete-location/, {
+/api/v6/generate/characters
+/api/v6/generate/locations
+/api/v6/live-status/
+/api/v6/location-lock/, {
+/api/v6/profiles/actors/
+/api/v6/profiles/directors
+/api/v6/profiles/directors/
+/api/v6/profiles/writers
+/api/v6/profiles/writers/
+/api/v6/regenerate-character
+/api/v6/regenerate-character, {
+/api/v6/regenerate-location, {
+/api/v6/regenerate//, {
+/api/v6/script/full-import
+/api/v6/shots//update, {
+/api/v6/story-state/
+/api/v6/story-state/, {
+/api/v6/verification-state/
+/api/writers

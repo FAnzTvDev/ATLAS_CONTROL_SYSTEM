@@ -1,0 +1,250 @@
+# ============================================
+# ATLAS CONTROL SYSTEM — .gitignore
+# Code-only repo. All media/data stays local.
+# ============================================
+
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+venv/
+.venv/
+*.whl
+.pytest_cache/
+pytest-cache-files-*/
+htmlcov/
+.coverage
+
+# === ENVIRONMENT ===
+.env
+.env.*
+!.env.example
+
+# === MEDIA (ALL) ===
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.svg
+*.wav
+*.mp3
+*.flac
+*.aac
+*.ogg
+
+# === LARGE DATA ===
+*.sqlite
+*.db
+*.sqlite3
+pipeline_outputs/
+golden/
+backups/
+
+# === CHARACTER/LOCATION ASSETS (images) ===
+character_library_locked/
+character_library_locked_backup_*/
+character_assets/
+character_generations/
+character_sheets/
+characters/
+ai_actor_headshots/
+ai_actor_welcome_videos/
+actor_factory/
+hero_refs/
+location_masters/
+location_references/
+first_frame_review/
+frame_seeds/
+master_shots/
+cast_profiles/
+
+# === PLATFORM/CLOUD ARTIFACTS ===
+.wrangler/
+cloudflare/
+platform_assets/
+social_media_exports/
+
+# === GENERATED REPORTS (HTML/JS diagnostics) ===
+ATLAS_*.html
+ATLAS_*.js
+CAST_VERIFICATION.html
+
+# === OLD VERSIONS / ARCHIVES ===
+_archived_*/
+_stitched_archive/
+_showcase_lock_*/
+V13_GUARDRAILS/
+V16.7_FREEZE_ARCHIVE/
+V27_3_Scene002_FirstFrames/
+V27_4_FirstFrames/
+V27_4_StrategicTest/
+V27_5_RetestResults/
+Victorian_Shadows_Assets/
+HIGGSFIELD_UPLOAD/
+REALRUNNER/
+SHIP_READY/
+LOCKED_V18_MODEL_SELECTOR/
+
+# === ACCIDENTAL DIRECTORIES (created by shell mistakes) ===
+-p/
+cp/
+echo/
+ls/
+mkdir/
+mv/
+rm/
+Backed up and removed old Maya Chen frames/
+Cleared Scene 001 assets for fresh run/
+
+# === LOGS / REPORTS / TEMP ===
+*.log
+*.tmp
+*.jsonl
+logs/
+reports/
+ecc_logs/
+run_log*.txt
+.DS_Store
+
+# === CACHES ===
+.vision_cache/
+fal_cache/
+.atlas/
+
+# === RENDER / STITCH OUTPUT ===
+render_gallery/
+render_queue/
+render_specs/
+stitched_scenes/
+comparison_output/
+mock_outputs/
+mock_stress_test_output/
+
+# === PROJECT-SPECIFIC DATA ===
+victorian_shadows_ep1/
+season01/
+series/
+series_manifests/
+story_bibles/
+manifests/
+
+# === MISC HEAVY/LEGACY ===
+learning_memory/
+analysis/
+archive/
+asset_grids/
+notebooklm_staging/
+shared_assets/
+director_uploads/
+continuation_config/
+intent_graphs/
+
+# === LARGE TXT DUMPS ===
+*_concat.txt
+*_SUMMARY.txt
+*_REFERENCE.txt
+*_REPORT.txt
+AUDIT_*.txt
+HEALTH_CHECK_*.txt
+imgbb_keys.txt
+R2_CREDENTIALS_*.txt
+
+# === ATLAS .claude (cowork sessions) ===
+.claude/
+
+# === REFERENCE / MISC ===
+reference_repository/
+references/
+*_backup/
+STORY_REFERENCE_LIBRARY/
+dialogue_templates/
+director_profiles/
+director_rules/
+ecosystem/
+shared_brain/
+ltx_adapters/
+models/
+monitor/
+state/
+test_scripts/
+scripts/
+styles/
+atlas_tasks/
+atlas_core/
+
+# === GIT LFS (if ever enabled) ===
+*.lfs
+
+# === DOCUMENTS (not code) ===
+*.docx
+*.pdf
+*.xlsx
+*.pptx
+*.doc
+*.xls
+*.ppt
+*.odt
+*.ods
+*.odp
+.~lock.*
+
+# === MISC NON-CODE ===
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.bz2
+*.rar
+15s
+ATLAS_ASSET_PACKAGE
+.metadata_never_index
+.phase_2_complete
+
+# === BACKUP FILES ===
+*.backup*
+*.OLD_BACKUP
+*.pre_*_backup
+*.backup_*
+CLAUDE.md.backup.*
+FAL_VIDEOS_BACKUP
+FRAME_BACKUP_*
+
+# === OUTPUT / EXPORT DIRS ===
+atlas_output/
+director_outputs/
+exports/
+output/
+_archive/
+_archived_outputs/
+scene_*_review/
+
+# === MISC ===
+server.pid
+*.pid
+
+# === MORE CLEANUP ===
+*.bak*
+_archive/
+_archived_outputs/
+atlas_output/
+director_outputs/
+exports/
+output/
+scene_*_review/
+*python3*
+
+# === LEGACY CODE WITH HARDCODED SECRETS ===
+_showcase_lock_*/
+archive/

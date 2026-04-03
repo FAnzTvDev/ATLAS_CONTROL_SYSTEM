@@ -1,0 +1,236 @@
+================================================================================
+QUICK REFERENCE: ALL 7 CHARACTER DESCRIPTION INJECTION POINTS
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ INJECTION #1: scene_anchor_system.enhance_prompt()                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ File:       tools/scene_anchor_system.py                                    │
+│ Function:   enhance_prompt(self, shot: Dict, scene_id: Optional[str]) → str │
+│ Lines:      285-410 (126 lines)                                             │
+│                                                                              │
+│ What:       Scene-level wardrobe ("LADY MARGARET wearing flowing white...") │
+│ Dedup:      ✅ YES - checks if wardrobe text already in prompt               │
+│ Call Sites: 4 - Lines 4845, 4889, 4922, 19093 (in orchestrator_server.py) │
+│                                                                              │
+│ Dedup Code: if wardrobe and wardrobe.lower() not in nano_prompt.lower(): │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ INJECTION #2: cinematic_enricher.enrich_nano_prompt()                      │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ File:       tools/cinematic_enricher.py                                     │
+│ Function:   enrich_nano_prompt(self, nano_prompt: str, shot: Dict) → str  │
+│ Lines:      693-787 (95 lines)                                              │
+│                                                                              │
+│ What:       8 enrichment layers:                                            │
+│             1. Film stock (ARRI Alexa)                                      │
+│             2. Color grade (DaVinci Resolve)                                │
+│             3. Humanization (breathing, blinks)                             │
+│             4. Continuity (face stable)                                     │
+│             5. LUT (filmic highlight rolloff)                               │
+│             6. Director vision                                              │
+│             7. Performance notes                                            │
+│             8. Subtext layer                                                │
+│                                                                              │
+│ Dedup:      ⚠️ PARTIAL - checks film stock + grade, NOT appearance         │
+│ Call Sites: 3 - Lines 5793, 6867, 19109 (in orchestrator_server.py)      │
+│                                                                              │
+│ Dedup Code: if "ARRI" not in prompt and "sensor" not in prompt.lower(): │
+│             if "grade" not in prompt.lower() and "color" not in ...:   │
+│             (but NOTHING for character appearance)                         │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ INJECTION #3: cinematic_enricher.inject_cast_traits()                       │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ File:       tools/cinematic_enricher.py                                     │
+│ Function:   inject_cast_traits(self, prompt, shot, cast_map, actor_lib)  │
+│ Lines:      905-952 (48 lines)                                              │
+│                                                                              │
+│ What:       CANONICAL character appearance (200 chars max):                 │
+│             "LADY MARGARET: regal woman in her 50s, commanding..."         │
+│                                                                              │
+│ Dedup:      ⚠️ WEAK - checks if char name in prompt (too broad)             │
+│ Call Sites: 2 - Lines 6869, 19128 (in orchestrator_server.py)             │
+│                                                                              │
+│ Dedup Code: if char_name.upper() not in prompt.upper():                  │
+│             (problem: name can appear in action, not just appearance)     │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ INJECTION #4: _build_face_lock_text() [CHAIN PIPELINE]                     │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ File:       orchestrator_server.py                                          │
+│ Function:   Inline _build_face_lock_text(char_name) defined in function   │
+│ Lines:      6825-6884 (definition) + 6881 (usage)                          │
+│                                                                              │
+│ What:       CANONICAL character appearance (200 chars max):                 │
+│             "regal woman in her 50s, commanding aristocratic..."           │
+│                                                                              │
+│ Dedup:      ❌ NONE - ALWAYS appends if canonical found                    │
+│ Call Site:  1 - Line 6881 (in chain pipeline enrichment loop)              │
+│                                                                              │
+│ Injection:  for _flc in characters:                                        │
+│                 _flt = _build_face_lock_text(_flc)                        │
+│                 if _flt:                                                   │
+│                     shot["nano_prompt"] = ... + _flt  # ← NO CHECK        │
+│                                                                              │
+│ CRITICAL:   Runs AFTER inject_cast_traits — may re-inject same text!      │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ INJECTION #5: inject_wardrobe_into_prompt()                                │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ File:       atlas_agents/wardrobe_extras_agent.py                          │
+│ Function:   inject_wardrobe_into_prompt(prompt, shot_wardrobe, is_ltx)   │
+│ Lines:      228-275 (48 lines)                                              │
+│                                                                              │
+│ What:       Wardrobe tags from wardrobe.json:                              │
+│             "LADY MARGARET wearing: flowing white robe..."                 │
+│                                                                              │
+│ Dedup:      ✅ YES - guards BEFORE calling function                        │
+│ Call Sites: 3 - Lines 6723-6726, 18947-18949, 25814                       │
+│                                                                              │
+│ Guard Code: if "wearing:" not in _sn.lower():                            │
+│                 _shot["nano_prompt"] = inject_wardrobe_into_prompt(...)  │
+│                                                                              │
+│ Issue:      Coarse check — prevents ALL wardrobe if ANY "wearing:" exists │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ INJECTION #6: inject_emotion_into_nano()                                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ File:       atlas_agents/emotion_layer_agent.py                            │
+│ Function:   inject_emotion_into_nano(nano_prompt, emotion_state, char)   │
+│ Lines:      804-824 (21 lines)                                              │
+│                                                                              │
+│ What:       Emotion expression cue:                                        │
+│             "LADY MARGARET expression: controlled dread, tension..."      │
+│                                                                              │
+│ Dedup:      ✅ YES - checks for "emotion:" marker                          │
+│ Call Sites: 3 - Lines 6764, 19013, 25861 (in orchestrator_server.py)    │
+│                                                                              │
+│ Dedup Code: if "emotion:" in nano_prompt.lower():                        │
+│                 return nano_prompt  # Already has emotion                 │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ INJECTION #7: V21.9 FACE-LOCK INJECTION [TURBO/GENERATE-FIRST-FRAMES]     │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ File:       orchestrator_server.py                                          │
+│ Function:   Inline in generate-first-frames endpoint                       │
+│ Lines:      19134-19164 (31 lines)                                          │
+│                                                                              │
+│ What:       CANONICAL character appearance injected AFTER 1st sentence:     │
+│             "Medium shot of EVELYN at desk. EVELYN (woman early 30s..."    │
+│                                                                              │
+│ Dedup:      ❌ NONE - ALWAYS appends if canonical found                    │
+│ Call Site:  1 - Lines 19134-19164 (in generate-first-frames endpoint)      │
+│                                                                              │
+│ Injection:  for _v19_char in characters:                                  │
+│                 if _v19_canon:                                            │
+│                     _v19_desc = _v19_canon.get("appearance", "")        │
+│                     if _v19_desc:                                        │
+│                         _v19_face_locks.append(...)  # ← NO CHECK       │
+│                                                                              │
+│ CRITICAL:   Runs AFTER all previous injections — highest duplication risk  │
+│             No coordination with #3 (inject_cast_traits)                   │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+SUMMARY TABLE
+================================================================================
+
+#   Function Name                   File                            Dedup  Risk
+──────────────────────────────────────────────────────────────────────────────
+1   enhance_prompt()                scene_anchor_system.py          ✅     LOW
+2   enrich_nano_prompt()            cinematic_enricher.py           ⚠️     MED
+3   inject_cast_traits()            cinematic_enricher.py           ⚠️     MED
+4   _build_face_lock_text()         orchestrator_server.py          ❌     HIGH
+5   inject_wardrobe_into_prompt()   wardrobe_extras_agent.py        ✅     LOW
+6   inject_emotion_into_nano()      emotion_layer_agent.py          ✅     LOW
+7   V21.9 Face-Lock Injection       orchestrator_server.py          ❌     HIGH
+
+================================================================================
+EXECUTION ORDER IN generate-first-frames
+================================================================================
+
+Line 19093  → #1 enhance_prompt()
+            ↓
+Line 19109  → #2 enrich_nano_prompt()
+            ↓
+Line 19128  → #3 inject_cast_traits()
+            ↓
+Line 19134  → #7 V21.9 FACE-LOCK [NO DEDUP] ← DUPLICATE RISK
+            ↓
+Line 19177  → Authority Gate (cleanup - too late)
+
+================================================================================
+EXECUTION ORDER IN CHAIN PIPELINE
+================================================================================
+
+Line 6860   → #1 enhance_prompt()
+            ↓
+Line 6867   → #2 enrich_nano_prompt()
+            ↓
+Line 6869   → #3 inject_cast_traits()
+            ↓
+Line 6881   → #4 _build_face_lock_text() [NO DEDUP] ← DUPLICATE RISK
+            ↓
+Line 6726   → #5 inject_wardrobe_into_prompt()
+            ↓
+Line 6764   → #6 inject_emotion_into_nano()
+            ↓
+Line 6789   → Authority Gate (cleanup - too late)
+
+================================================================================
+DEDUP STATUS DASHBOARD
+================================================================================
+
+Functions with ✅ adequate dedup:     3/7 (43%)
+Functions with ⚠️ weak dedup:         2/7 (29%)
+Functions with ❌ zero dedup:         2/7 (29%) ← PROBLEMS
+
+HIGH RISK functions (❌):
+  - #4: _build_face_lock_text()           [Line 6881]
+  - #7: V21.9 Face-Lock Injection         [Line 19134]
+
+MEDIUM RISK functions (⚠️):
+  - #2: enrich_nano_prompt()              [Line 6867, 19109]
+  - #3: inject_cast_traits()              [Line 6869, 19128]
+
+================================================================================
+IMMEDIATE ACTIONS (Tier 1 Fixes)
+================================================================================
+
+ACTION 1: Add dedup check to #7 (V21.9 Face-Lock) — Line 19155
+  Current:  if _v19_desc:
+                _v19_face_locks.append(f"{_v19_char} ({_v19_desc[:150]})")
+
+  Fixed:    desc_keywords = _v19_desc.split()[0:5]
+            if not all(kw in nano_prompt for kw in desc_keywords):
+                _v19_face_locks.append(f"{_v19_char} ({_v19_desc[:150]})")
+
+  Impact:   Eliminates 40-50% of character description duplicates
+
+ACTION 2: Add dedup check to #4 (_build_face_lock_text) — Line 6881
+  Current:  if _flt:
+                shot["nano_prompt"] = shot["nano_prompt"] + ". " + _flt
+
+  Fixed:    desc_keywords = _flt.split()[0:5]
+            if not all(kw in shot["nano_prompt"] for kw in desc_keywords):
+                shot["nano_prompt"] = shot["nano_prompt"] + ". " + _flt
+
+  Impact:   Eliminates other 40-50% of duplicates
+
+Total Impact: 70-80% reduction in character description duplication
+
+================================================================================

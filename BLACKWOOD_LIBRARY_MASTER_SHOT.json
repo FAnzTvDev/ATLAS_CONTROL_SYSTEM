@@ -1,0 +1,279 @@
+{
+    "project": "Blackwood Chronicles - Master Shot Demo",
+    "scene_id": "BLACKWOOD_LIBRARY_CONFRONTATION",
+    "description": "Eleanor confronts Marcus in the Blackwood Mansion library. Demonstrates master shot + simple directive workflow.",
+    "character_library": {
+        "ELEANOR": {
+            "face": {
+                "url": "file:///Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Eleanor_Vance.jpg",
+                "description": "Young woman, short black bob haircut, intense eyes, red turtleneck visible",
+                "slot_priority": 1
+            },
+            "outfit": {
+                "url": "https://i.ibb.co/PLACEHOLDER/ELEANOR_RED_COAT.jpg",
+                "description": "Red leather tactical coat, fitted, futuristic design with angular panels",
+                "slot_priority": 3
+            },
+            "visor": {
+                "url": "https://i.ibb.co/PLACEHOLDER/ELEANOR_VISOR.jpg",
+                "description": "Futuristic red and silver wraparound visor, reflective lens",
+                "slot_priority": 10
+            },
+            "motorcycle": {
+                "url": "https://i.ibb.co/PLACEHOLDER/ELEANOR_MOTORCYCLE.jpg",
+                "description": "Sleek red and chrome motorcycle, futuristic design, cyberpunk aesthetic",
+                "slot_priority": 11
+            },
+            "pistol": {
+                "url": "https://i.ibb.co/PLACEHOLDER/ELEANOR_PISTOL.jpg",
+                "description": "Futuristic silver pistol with red accents, compact design",
+                "slot_priority": 10
+            },
+            "boots": {
+                "url": "https://i.ibb.co/PLACEHOLDER/ELEANOR_BOOTS.jpg",
+                "description": "Red and silver tactical boots, armored, futuristic design",
+                "slot_priority": 11
+            }
+        },
+        "MARCUS": {
+            "face": {
+                "url": "file:///Users/quantum/Desktop/atlas_output/nano_banana/CHAR_REF_Father_Thomas_Rhys.jpg",
+                "description": "Middle-aged man, sharp features, calculating expression",
+                "slot_priority": 2
+            },
+            "outfit": {
+                "url": "https://i.ibb.co/PLACEHOLDER/MARCUS_SUIT.jpg",
+                "description": "Dark tailored suit, expensive, traditional businessman aesthetic",
+                "slot_priority": 4
+            }
+        }
+    },
+    "location_library": {
+        "BLACKWOOD_MANSION_LIBRARY": {
+            "depth_references": {
+                "wide_establishing": {
+                    "url": "file:///Users/quantum/Desktop/atlas_output/nano_banana/GATE_002_FINAL.jpg",
+                    "description": "Ornate library: floor-to-ceiling bookshelves, leather furniture, fireplace, dark wood paneling",
+                    "slot_priority": 6
+                },
+                "detail_texture": {
+                    "url": "file:///Users/quantum/Desktop/atlas_output/nano_banana/GATE_004_FINAL.jpg",
+                    "description": "Leather chair detail, book spines, wood grain, brass fixtures",
+                    "slot_priority": 7
+                },
+                "depth_perspective": {
+                    "url": "file:///Users/quantum/Desktop/atlas_output/nano_banana/GATE_007_FINAL.jpg",
+                    "description": "View down the length of the library showing depth, windows in background",
+                    "slot_priority": 8
+                },
+                "atmospheric": {
+                    "url": "file:///Users/quantum/Desktop/atlas_output/nano_banana/GATE_010_FINAL.jpg",
+                    "description": "Moody lighting: fireplace glow, shadows, film noir atmosphere, blue-tinted moonlight through windows",
+                    "slot_priority": 9
+                }
+            }
+        }
+    },
+    "quality_anchors": {
+        "CYBERPUNK_NOIR": {
+            "url": "file:///Users/quantum/Desktop/atlas_output/nano_banana/GATE_014_FINAL.jpg",
+            "description": "Gothic Victorian noir aesthetic: high contrast shadows, moody atmospheric lighting, film noir composition, Blackwood mansion gates aesthetic",
+            "slot_priority": 14
+        }
+    },
+    "shots": [
+        {
+            "shot_id": "BLACKWOOD_LIB_000_MASTER",
+            "shot_number": 0,
+            "shot_type": "MASTER_WIDE",
+            "is_master_shot": true,
+            "characters": [
+                "ELEANOR",
+                "MARCUS"
+            ],
+            "location": "BLACKWOOD_MANSION_LIBRARY",
+            "location_depth_mode": "full",
+            "assets": {
+                "ELEANOR": [
+                    "face",
+                    "outfit",
+                    "visor"
+                ],
+                "MARCUS": [
+                    "face",
+                    "outfit"
+                ]
+            },
+            "use_previous_shot": false,
+            "quality_anchor": "CYBERPUNK_NOIR",
+            "semantic_prompt": "Wide establishing shot of an ornate library in Blackwood Mansion. Eleanor, a young woman with short black hair wearing a striking red leather tactical coat and futuristic visor, stands confidently near the fireplace. Marcus, a middle-aged man in a dark tailored suit, sits in a leather chair across the room. The library features floor-to-ceiling bookshelves, dark wood paneling, and moody lighting from the fireplace and blue-tinted moonlight through tall windows. Cyberpunk noir aesthetic with high contrast shadows and cinematic composition. Shot on 28mm wide lens with deep focus.",
+            "camera_notes": "28mm wide, deep focus, rule of thirds composition",
+            "lighting_notes": "Fireplace key light, moonlight fill, high contrast",
+            "resolution": "4K"
+        },
+        {
+            "shot_id": "BLACKWOOD_LIB_001_CU_ELEANOR",
+            "shot_number": 1,
+            "shot_type": "CLOSE_UP",
+            "simple_directive": "Close-up of Eleanor",
+            "characters": [
+                "ELEANOR"
+            ],
+            "assets": {
+                "ELEANOR": [
+                    "face",
+                    "visor"
+                ]
+            },
+            "use_previous_shot": true,
+            "master_shot_reference": "BLACKWOOD_LIB_000_MASTER",
+            "quality_anchor": "CYBERPUNK_NOIR",
+            "semantic_prompt": "Close-up of Eleanor matching the master shot reference. Her intense eyes are visible through the futuristic visor which reflects the firelight. Same moody library atmosphere and lighting. She looks skeptical and calculating.",
+            "camera_notes": "85mm portrait lens, shallow depth of field",
+            "action": "Eleanor reacts to Marcus's proposal with skepticism",
+            "resolution": "4K"
+        },
+        {
+            "shot_id": "BLACKWOOD_LIB_002_CU_MARCUS",
+            "shot_number": 2,
+            "shot_type": "CLOSE_UP",
+            "simple_directive": "Close-up of Marcus",
+            "characters": [
+                "MARCUS"
+            ],
+            "assets": {
+                "MARCUS": [
+                    "face"
+                ]
+            },
+            "use_previous_shot": true,
+            "master_shot_reference": "BLACKWOOD_LIB_000_MASTER",
+            "quality_anchor": "CYBERPUNK_NOIR",
+            "semantic_prompt": "Close-up of Marcus matching the master shot reference. His sharp features are lit by the fireplace glow. Same library atmosphere. He maintains a calculating expression.",
+            "camera_notes": "85mm portrait lens, shallow depth of field",
+            "action": "Marcus makes his pitch, confident and manipulative",
+            "resolution": "4K"
+        },
+        {
+            "shot_id": "BLACKWOOD_LIB_003_OTS_E_TO_M",
+            "shot_number": 3,
+            "shot_type": "OVER_SHOULDER",
+            "simple_directive": "Over-the-shoulder, Eleanor to Marcus",
+            "characters": [
+                "ELEANOR",
+                "MARCUS"
+            ],
+            "assets": {
+                "ELEANOR": [
+                    "outfit"
+                ],
+                "MARCUS": [
+                    "face"
+                ]
+            },
+            "use_previous_shot": true,
+            "master_shot_reference": "BLACKWOOD_LIB_000_MASTER",
+            "quality_anchor": "CYBERPUNK_NOIR",
+            "semantic_prompt": "Over-the-shoulder shot from Eleanor's perspective looking at Marcus, matching the master shot reference. Eleanor's red coat and visor are visible in foreground, Marcus in focus in background sitting in the leather chair. Same library setting and moody lighting.",
+            "camera_notes": "50mm lens, medium depth of field",
+            "action": "Eleanor listens to Marcus's explanation",
+            "resolution": "4K"
+        },
+        {
+            "shot_id": "BLACKWOOD_LIB_004_OTS_M_TO_E",
+            "shot_number": 4,
+            "shot_type": "OVER_SHOULDER",
+            "simple_directive": "Over-the-shoulder, Marcus to Eleanor",
+            "characters": [
+                "MARCUS",
+                "ELEANOR"
+            ],
+            "assets": {
+                "MARCUS": [
+                    "outfit"
+                ],
+                "ELEANOR": [
+                    "face",
+                    "visor",
+                    "outfit"
+                ]
+            },
+            "use_previous_shot": true,
+            "master_shot_reference": "BLACKWOOD_LIB_000_MASTER",
+            "quality_anchor": "CYBERPUNK_NOIR",
+            "semantic_prompt": "Over-the-shoulder shot from Marcus's perspective looking at Eleanor, matching the master shot reference. Marcus's dark suit visible in foreground, Eleanor in her red coat and visor in focus. Same library atmosphere and lighting.",
+            "camera_notes": "50mm lens, medium depth of field",
+            "action": "Eleanor responds with a counter-offer",
+            "resolution": "4K"
+        },
+        {
+            "shot_id": "BLACKWOOD_LIB_005_MEDIUM_TWO",
+            "shot_number": 5,
+            "shot_type": "MEDIUM_TWO_SHOT",
+            "simple_directive": "Medium two-shot",
+            "characters": [
+                "ELEANOR",
+                "MARCUS"
+            ],
+            "assets": {
+                "ELEANOR": [
+                    "face",
+                    "outfit",
+                    "visor"
+                ],
+                "MARCUS": [
+                    "face",
+                    "outfit"
+                ]
+            },
+            "use_previous_shot": true,
+            "master_shot_reference": "BLACKWOOD_LIB_000_MASTER",
+            "quality_anchor": "CYBERPUNK_NOIR",
+            "semantic_prompt": "Medium two-shot matching the master shot reference. Both Eleanor and Marcus are visible, tension between them. Eleanor stands near the fireplace, Marcus remains seated. Same library setting, moody lighting, cyberpunk noir aesthetic.",
+            "camera_notes": "35mm lens, medium depth of field",
+            "action": "Tension escalates as they reach an impasse",
+            "resolution": "4K"
+        },
+        {
+            "shot_id": "BLACKWOOD_LIB_006_WIDE_EXIT",
+            "shot_number": 6,
+            "shot_type": "WIDE",
+            "simple_directive": "Wide shot from across the room",
+            "characters": [
+                "ELEANOR",
+                "MARCUS"
+            ],
+            "location": "BLACKWOOD_MANSION_LIBRARY",
+            "assets": {
+                "ELEANOR": [
+                    "outfit",
+                    "visor"
+                ],
+                "MARCUS": [
+                    "outfit"
+                ]
+            },
+            "use_previous_shot": true,
+            "master_shot_reference": "BLACKWOOD_LIB_000_MASTER",
+            "quality_anchor": "CYBERPUNK_NOIR",
+            "semantic_prompt": "Wide shot from across the room matching the master shot reference. Eleanor turns and walks toward the library door, her red coat flowing. Marcus remains seated, watching her leave. Same ornate library setting, fireplace and moonlight creating dramatic shadows. Cyberpunk noir atmosphere.",
+            "camera_notes": "28mm wide lens, deep focus",
+            "action": "Eleanor walks out, ending the negotiation",
+            "resolution": "4K"
+        }
+    ],
+    "scene_notes": {
+        "workflow": "Master shot + simple directives",
+        "master_shot": "BLACKWOOD_LIB_000_MASTER",
+        "coverage_shots": [
+            "BLACKWOOD_LIB_001_CU_ELEANOR",
+            "BLACKWOOD_LIB_002_CU_MARCUS",
+            "BLACKWOOD_LIB_003_OTS_E_TO_M",
+            "BLACKWOOD_LIB_004_OTS_M_TO_E",
+            "BLACKWOOD_LIB_005_MEDIUM_TWO",
+            "BLACKWOOD_LIB_006_WIDE_EXIT"
+        ],
+        "total_shots": 7,
+        "reference_strategy": "All coverage shots use master as Slot 12 reference for automatic continuity"
+    }
+}

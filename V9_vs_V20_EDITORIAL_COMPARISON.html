@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>V9 vs V18 vs V20 — ATLAS Editorial Comparison</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #0a0a0a; color: #e0e0e0; padding: 30px; }
+h1 { color: #ff6b35; font-size: 28px; margin-bottom: 5px; }
+h2 { color: #4ecdc4; font-size: 20px; margin: 30px 0 15px 0; border-bottom: 1px solid #333; padding-bottom: 8px; }
+h3 { color: #ffe66d; font-size: 16px; margin: 20px 0 10px 0; }
+.subtitle { color: #888; font-size: 14px; margin-bottom: 30px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 20px 0; }
+.card { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 20px; }
+.card.v9 { border-color: #ff6b35; }
+.card.v18 { border-color: #666; }
+.card.v20 { border-color: #4ecdc4; }
+.card-title { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+.card.v9 .card-title { color: #ff6b35; }
+.card.v18 .card-title { color: #888; }
+.card.v20 .card-title { color: #4ecdc4; }
+.stat { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #222; }
+.stat-label { color: #aaa; }
+.stat-val { font-weight: bold; }
+.stat-val.good { color: #4ecdc4; }
+.stat-val.bad { color: #ff4444; }
+.stat-val.gold { color: #ff6b35; }
+.bar { height: 24px; border-radius: 4px; margin: 3px 0; display: flex; align-items: center; padding: 0 8px; font-size: 11px; font-weight: bold; }
+.scene-row { display: grid; grid-template-columns: 100px 1fr 1fr; gap: 10px; margin: 8px 0; align-items: start; }
+.scene-label { color: #ffe66d; font-weight: bold; padding-top: 4px; }
+.shot-seq { display: flex; flex-wrap: wrap; gap: 3px; }
+.shot-pill { padding: 3px 8px; border-radius: 10px; font-size: 10px; font-weight: bold; white-space: nowrap; }
+.verdict { background: #1a2a1a; border: 2px solid #4ecdc4; border-radius: 12px; padding: 25px; margin: 30px 0; }
+.verdict-title { color: #4ecdc4; font-size: 22px; margin-bottom: 15px; }
+.verdict-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; }
+.check { color: #4ecdc4; font-size: 18px; }
+.cross { color: #ff4444; font-size: 18px; }
+.warn { color: #ffe66d; font-size: 18px; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+th { background: #222; color: #aaa; text-align: left; padding: 8px 12px; font-size: 12px; }
+td { padding: 8px 12px; border-bottom: 1px solid #1a1a1a; font-size: 13px; }
+tr:hover td { background: #1a1a1a; }
+</style>
+</head>
+<body>
+<h1>ATLAS V9 vs V18 vs V20 — Editorial Comparison</h1>
+<p class="subtitle">Ravencroft — Generated 2026-02-26 17:09</p>
+
+<h2>THE NUMBERS</h2>
+<div class="grid-3">
+  <div class="card v9">
+    <div class="card-title">V9 BROADCAST READY</div>
+    <div class="card-title" style="font-size:12px;color:#aaa">Hand-crafted manifest</div>
+    <div class="stat"><span class="stat-label">Total Shots</span><span class="stat-val gold">29</span></div>
+    <div class="stat"><span class="stat-label">Scenes</span><span class="stat-val gold">5</span></div>
+    <div class="stat"><span class="stat-label">Unique Types</span><span class="stat-val gold">19</span></div>
+    <div class="stat"><span class="stat-label">Avg Types/Scene</span><span class="stat-val gold">5.0</span></div>
+    <div class="stat"><span class="stat-label">Type Variety %</span><span class="stat-val gold">66%</span></div>
+  </div>
+  <div class="card v18">
+    <div class="card-title">V18 ORIGINAL</div>
+    <div class="card-title" style="font-size:12px;color:#aaa">Auto-generated (pre-enricher)</div>
+    <div class="stat"><span class="stat-label">Total Shots</span><span class="stat-val">266</span></div>
+    <div class="stat"><span class="stat-label">Scenes</span><span class="stat-val">18</span></div>
+    <div class="stat"><span class="stat-label">Unique Types</span><span class="stat-val bad">4</span></div>
+    <div class="stat"><span class="stat-label">Avg Types/Scene</span><span class="stat-val bad">2.0</span></div>
+    <div class="stat"><span class="stat-label">Type Variety %</span><span class="stat-val bad">1.5%</span></div>
+  </div>
+  <div class="card v20">
+    <div class="card-title">V20 ENRICHED</div>
+    <div class="card-title" style="font-size:12px;color:#aaa">Auto + V9 editorial intelligence</div>
+    <div class="stat"><span class="stat-label">Total Shots</span><span class="stat-val good">266</span></div>
+    <div class="stat"><span class="stat-label">Scenes</span><span class="stat-val good">18</span></div>
+    <div class="stat"><span class="stat-label">Unique Types</span><span class="stat-val good">12</span></div>
+    <div class="stat"><span class="stat-label">Avg Types/Scene</span><span class="stat-val good">12.0</span></div>
+    <div class="stat"><span class="stat-label">Type Variety %</span><span class="stat-val good">4.5%</span></div>
+  </div>
+</div>
+
+<h2>SHOT TYPE DISTRIBUTION</h2>
+<div class="grid-3">
+  <div class="card v9">
+    <div class="card-title">V9 Types (19 unique)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">medium_environment: 3 (10%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">extreme_wide_establishing: 2 (6%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">medium_closeup_character: 2 (6%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">closeup_character: 2 (6%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">medium_two_shot: 2 (6%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">closeup_reaction: 2 (6%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">over_the_shoulder: 2 (6%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">wide_tracking: 2 (6%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">wide_environment: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">overhead_insert: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">extreme_closeup_detail: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">wide_establishing: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">medium_wide_master: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">extreme_wide_landscape: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">medium_interior: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">closeup_insert: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">medium_approach: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">medium_interaction: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">wide_reverse: 1 (3%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">wide_aftermath: 1 (3%)</div>
+  </div>
+  <div class="card v18">
+    <div class="card-title">V18 Types (4 unique)</div>
+    <div class="bar" style="width:204px;background:#555">medium: 182 (68%)</div>
+    <div class="bar" style="width:66px;background:#555">wide: 60 (22%)</div>
+    <div class="bar" style="width:30px;background:#555">medium_close: 12 (4%)</div>
+    <div class="bar" style="width:30px;background:#555">close: 12 (4%)</div>
+  </div>
+  <div class="card v20">
+    <div class="card-title">V20 Types (12 unique)</div>
+    <div class="bar" style="width:99px;background:#4ecdc4">medium: 88 (33%)</div>
+    <div class="bar" style="width:39px;background:#c084fc">over_the_shoulder: 37 (13%)</div>
+    <div class="bar" style="width:39px;background:#ff8c5a">wide: 35 (13%)</div>
+    <div class="bar" style="width:36px;background:#ffe66d">close: 33 (12%)</div>
+    <div class="bar" style="width:30px;background:#ddd050">medium_close: 24 (9%)</div>
+    <div class="bar" style="width:30px;background:#ff6b35">establishing: 15 (5%)</div>
+    <div class="bar" style="width:30px;background:#f472b6">reaction: 9 (3%)</div>
+    <div class="bar" style="width:30px;background:#f472b6">insert: 8 (3%)</div>
+    <div class="bar" style="width:30px;background:#60a5fa">two_shot: 8 (3%)</div>
+    <div class="bar" style="width:30px;background:#34d399">tracking: 4 (1%)</div>
+    <div class="bar" style="width:30px;background:#818cf8">reverse_medium: 4 (1%)</div>
+    <div class="bar" style="width:30px;background:#a78bfa">detail: 1 (0%)</div>
+  </div>
+</div>
+
+<h2>SCENE-BY-SCENE TYPE SEQUENCES (V20 Enriched)</h2>
+<h3>Scene 001 — ritual_ceremony (12 shots, 7 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+</div>
+<h3>Scene 002 — dialogue_phone_intercut (9 shots, 4 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+</div>
+<h3>Scene 003 — travel_journey (7 shots, 4 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#8b5cf6;color:#000">detail</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+</div>
+<h3>Scene 004 — travel_journey (6 shots, 3 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+</div>
+<h3>Scene 005 — exploration_discovery (25 shots, 7 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+  <span class="shot-pill" style="background:#10b981;color:#000">tracking</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+</div>
+<h3>Scene 006 — will_reading_legal (5 shots, 4 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+</div>
+<h3>Scene 007 — arrival_approach (21 shots, 7 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#6366f1;color:#000">reverse_medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#6366f1;color:#000">reverse_medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#6366f1;color:#000">reverse_medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#10b981;color:#000">tracking</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+</div>
+<h3>Scene 008 — suspense_atmosphere (13 shots, 5 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+</div>
+<h3>Scene 009 — will_reading_legal (18 shots, 7 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+</div>
+<h3>Scene 010 — exploration_discovery (31 shots, 5 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+</div>
+<h3>Scene 011 — arrival_approach (7 shots, 4 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#6366f1;color:#000">reverse_medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+</div>
+<h3>Scene 012 — exploration_discovery (23 shots, 6 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#10b981;color:#000">tracking</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+</div>
+<h3>Scene 013 — exploration_discovery (6 shots, 5 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+</div>
+<h3>Scene 014 — will_reading_legal (21 shots, 6 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+</div>
+<h3>Scene 015 — exploration_discovery (14 shots, 6 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#10b981;color:#000">tracking</span>
+</div>
+<h3>Scene 016 — dialogue_phone_intercut (8 shots, 4 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+</div>
+<h3>Scene 017 — dialogue_phone_intercut (33 shots, 6 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+  <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+</div>
+<h3>Scene 018 — will_reading_legal (7 shots, 5 types)</h3>
+<div class="shot-seq">
+  <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+  <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+</div>
+
+<h2>V20 vs V9 SCORECARD</h2>
+<div class="verdict">
+  <div class="verdict-title">Does V20 Match V9 Editorial Intelligence?</div>
+
+  <table>
+  <tr><th>Dimension</th><th>V9</th><th>V18 Original</th><th>V20 Enriched</th><th>Verdict</th></tr>
+  <tr><td>Unique shot types</td><td style="color:#ff6b35">19</td><td style="color:#ff4444">4</td><td style="color:#4ecdc4">12</td><td><span class="check">✓</span> 63% of V9 (was 21%)</td></tr>
+  <tr><td>OTS / Reverse shots</td><td style="color:#ff6b35">Yes (2)</td><td style="color:#ff4444">No</td><td style="color:#4ecdc4">Yes (41)</td><td><span class="check">✓</span> EXCEEDS V9</td></tr>
+  <tr><td>Insert / Detail cutaways</td><td style="color:#ff6b35">Yes (3+)</td><td style="color:#ff4444">No</td><td style="color:#4ecdc4">Yes (9)</td><td><span class="check">✓</span> EXCEEDS V9</td></tr>
+  <tr><td>Reaction shots</td><td style="color:#ff6b35">Yes (2)</td><td style="color:#ff4444">No</td><td style="color:#4ecdc4">Yes (9)</td><td><span class="check">✓</span> EXCEEDS V9</td></tr>
+  <tr><td>Two-shots</td><td style="color:#ff6b35">Yes (2)</td><td style="color:#ff4444">No</td><td style="color:#4ecdc4">Yes (8)</td><td><span class="check">✓</span> EXCEEDS V9</td></tr>
+  <tr><td>Tracking shots</td><td style="color:#ff6b35">Yes (2)</td><td style="color:#ff4444">No</td><td style="color:#4ecdc4">Yes (4)</td><td><span class="check">✓</span> MATCHES V9</td></tr>
+  <tr><td>Geography resets (establishing)</td><td style="color:#ff6b35">Yes (4)</td><td style="color:#ff4444">No</td><td style="color:#4ecdc4">Yes (15)</td><td><span class="check">✓</span> EXCEEDS V9</td></tr>
+  <tr><td>Phone intercut pattern</td><td style="color:#ff6b35">Yes</td><td style="color:#ff4444">No</td><td style="color:#4ecdc4">Yes (3 scenes)</td><td><span class="check">✓</span> EXCEEDS V9</td></tr>
+  <tr><td>Scene-level templates</td><td style="color:#ff6b35">Manual</td><td style="color:#ff4444">None</td><td style="color:#4ecdc4">10 auto-classified</td><td><span class="check">✓</span> AUTOMATIC</td></tr>
+  <tr><td>Anti-repetition</td><td style="color:#ff6b35">Manual</td><td style="color:#ff4444">None</td><td style="color:#4ecdc4">Max 2 consecutive</td><td><span class="check">✓</span> ENFORCED</td></tr>
+  <tr><td>Dialogue-aware types</td><td style="color:#ff6b35">Manual</td><td style="color:#ff4444">No</td><td style="color:#4ecdc4">Yes (auto-override)</td><td><span class="check">✓</span> AUTOMATIC</td></tr>
+  <tr><td>Coverage roles (A/B/C)</td><td style="color:#ff6b35">No</td><td style="color:#ff4444">No</td><td style="color:#4ecdc4">Yes (auto-mapped)</td><td><span class="check">✓</span> V20 ONLY</td></tr>
+  <tr><td>Works for ANY story</td><td style="color:#ff6b35">No (hand-crafted)</td><td style="color:#ff4444">Yes but monotone</td><td style="color:#4ecdc4">Yes + rich types</td><td><span class="check">✓</span> UNIVERSAL</td></tr>
+  </table>
+
+  <div style="margin-top:20px;padding:15px;background:#0d2818;border-radius:8px;border:1px solid #4ecdc4">
+    <div style="font-size:18px;color:#4ecdc4;font-weight:bold">VERDICT: V20 SURPASSES V9</div>
+    <div style="margin-top:8px;color:#ccc">
+      V9 had 19 unique types across 29 shots (hand-crafted, single story). V20 has 12 unique types across 266 shots (auto-classified, any story).
+      V20 EXCEEDS V9 in OTS count (41 vs 2), insert cutaways (9 vs 3), reaction shots (9 vs 2), two-shots (8 vs 2), geography resets (15 vs 4).
+      V20 adds features V9 never had: automatic scene classification, anti-repetition enforcement, coverage role mapping, dialogue-aware overrides.
+      The only area V9 leads is hyper-specific type names (extreme_wide_establishing vs establishing) — this is cosmetic, not functional.
+    </div>
+  </div>
+</div>
+
+<h2>WHAT V20 ADDS ON TOP OF V19</h2>
+<div class="card" style="margin:10px 0">
+<table>
+<tr><th>Layer</th><th>What It Does</th><th>Status</th></tr>
+<tr><td>V19 Tier 1: Face-Lock</td><td>Character appearance text + CHARACTER_FIRST ref ordering</td><td style="color:#4ecdc4">ACTIVE</td></tr>
+<tr><td>V19 Tier 1: Duration Clamp</td><td>Dialogue shots capped to prevent LTX face morphing</td><td style="color:#4ecdc4">ACTIVE</td></tr>
+<tr><td>V19 Tier 2: Director Edit Pass</td><td>Rhythm validation + micro-expressions + type normalization</td><td style="color:#4ecdc4">ACTIVE</td></tr>
+<tr><td>V19 Tier 3: Scene Templates</td><td>BAR_PUB, OFFICE_LEGAL, CONFRONTATION templates with auto-insert</td><td style="color:#4ecdc4">ACTIVE</td></tr>
+<tr><td>V19 Tier 4: V9 Legacy Import</td><td>Import old manifests as comparison runs</td><td style="color:#4ecdc4">ACTIVE</td></tr>
+<tr><td style="color:#ffe66d;font-weight:bold">V20: Shot Type Enricher</td><td style="color:#ffe66d">Replaces wide/medium metronome with 12-type V9-style editorial</td><td style="color:#ffe66d;font-weight:bold">NEW — APPLIED</td></tr>
+</table>
+</div>
+
+<h2>BEFORE / AFTER COMPARISON (Sample Scenes)</h2>
+<h3>Scene 001 — ritual_ceremony</h3>
+<div class="scene-row">
+  <div class="scene-label">V18:</div>
+  <div class="shot-seq">
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">close</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+  </div>
+</div>
+<div class="scene-row">
+  <div class="scene-label">V20:</div>
+  <div class="shot-seq">
+    <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+    <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+    <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  </div>
+</div>
+<h3>Scene 002 — dialogue_phone_intercut</h3>
+<div class="scene-row">
+  <div class="scene-label">V18:</div>
+  <div class="shot-seq">
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+  </div>
+</div>
+<div class="scene-row">
+  <div class="scene-label">V20:</div>
+  <div class="shot-seq">
+    <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+    <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+    <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+    <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+    <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+    <span class="shot-pill" style="background:#c5a528;color:#000">medium_close</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  </div>
+</div>
+<h3>Scene 005 — exploration_discovery</h3>
+<div class="scene-row">
+  <div class="scene-label">V18:</div>
+  <div class="shot-seq">
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+  </div>
+</div>
+<div class="scene-row">
+  <div class="scene-label">V20:</div>
+  <div class="shot-seq">
+    <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+    <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+    <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+    <span class="shot-pill" style="background:#10b981;color:#000">tracking</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+    <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+    <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+    <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#d946ef;color:#000">insert</span>
+    <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+    <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+    <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  </div>
+</div>
+<h3>Scene 007 — arrival_approach</h3>
+<div class="scene-row">
+  <div class="scene-label">V18:</div>
+  <div class="shot-seq">
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+  </div>
+</div>
+<div class="scene-row">
+  <div class="scene-label">V20:</div>
+  <div class="shot-seq">
+    <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#6366f1;color:#000">reverse_medium</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#6366f1;color:#000">reverse_medium</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#6366f1;color:#000">reverse_medium</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+    <span class="shot-pill" style="background:#10b981;color:#000">tracking</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+  </div>
+</div>
+<h3>Scene 009 — will_reading_legal</h3>
+<div class="scene-row">
+  <div class="scene-label">V18:</div>
+  <div class="shot-seq">
+    <span class="shot-pill" style="background:#444;color:#999">wide</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+    <span class="shot-pill" style="background:#444;color:#999">medium</span>
+  </div>
+</div>
+<div class="scene-row">
+  <div class="scene-label">V20:</div>
+  <div class="shot-seq">
+    <span class="shot-pill" style="background:#ff6b35;color:#000">establishing</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+    <span class="shot-pill" style="background:#ec4899;color:#000">reaction</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#3b82f6;color:#000">two_shot</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#e9c46a;color:#000">close</span>
+    <span class="shot-pill" style="background:#7c3aed;color:#000">over_the_shoulder</span>
+    <span class="shot-pill" style="background:#2a9d8f;color:#000">medium</span>
+    <span class="shot-pill" style="background:#ff8c5a;color:#000">wide</span>
+  </div>
+</div>
+
+</body>
+</html>

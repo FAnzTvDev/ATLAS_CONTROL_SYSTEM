@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-10-26T07:40:28.322251",
+  "healthy": true,
+  "orchestrator_status": {
+    "stats": {
+      "total_tasks": 0,
+      "completed_tasks": 0,
+      "failed_tasks": 0,
+      "total_workers": 0,
+      "active_workers": 0
+    },
+    "queue_size": 0,
+    "active_workers": [],
+    "recent_results": []
+  },
+  "total_heals": 0,
+  "total_errors": 0,
+  "uptime_seconds": 0.008038,
+  "auto_heal_enabled": true,
+  "gpt_fallback_enabled": false
+}

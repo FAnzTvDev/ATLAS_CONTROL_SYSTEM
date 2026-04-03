@@ -1,0 +1,11 @@
+{
+  "columns": [
+    "concept_name",
+    "status",
+    "scenes",
+    "quality_avg",
+    "render_time",
+    "cost_estimate"
+  ],
+  "rows": []
+}

@@ -1,0 +1,235 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "atlas-v17-schema",
+  "title": "ATLAS V17 Shot Plan Schema",
+  "description": "JSON Schema for ATLAS V17 shot_plan.json validation",
+  "version": "17.0.0",
+  "type": "object",
+  "required": ["shots"],
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "Project identifier"
+    },
+    "version": {
+      "type": "string",
+      "description": "Schema version"
+    },
+    "shots": {
+      "type": "array",
+      "description": "Array of shot definitions",
+      "items": {
+        "$ref": "#/definitions/shot"
+      },
+      "minItems": 1
+    },
+    "metadata": {
+      "$ref": "#/definitions/metadata"
+    },
+    "_ui_enforced": {
+      "type": "boolean",
+      "description": "Whether UI enforcement has been applied"
+    },
+    "_ui_enforced_version": {
+      "type": "string",
+      "description": "Version of UI enforcement"
+    }
+  },
+  "definitions": {
+    "shot": {
+      "type": "object",
+      "required": ["shot_id", "duration", "nano_prompt"],
+      "properties": {
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[0-9]{3}_[0-9]{3}[A-Z]?$",
+          "description": "Shot identifier (e.g., 001_001A)"
+        },
+        "scene_id": {
+          "type": "string",
+          "pattern": "^[0-9]{3}$",
+          "description": "Scene identifier (e.g., 001)"
+        },
+        "duration": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 300,
+          "description": "Shot duration in seconds"
+        },
+        "duration_seconds": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 300,
+          "description": "Alternate duration field (deprecated)"
+        },
+        "nano_prompt": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Image generation prompt"
+        },
+        "ltx_motion_prompt": {
+          "type": "string",
+          "description": "Video motion prompt"
+        },
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Characters in this shot"
+        },
+        "location": {
+          "type": "string",
+          "description": "Location identifier"
+        },
+        "dialogue": {
+          "type": "string",
+          "description": "Spoken dialogue for this shot"
+        },
+        "shot_type": {
+          "type": "string",
+          "enum": ["wide", "medium", "close-up", "extreme_close_up", "over_shoulder", "two_shot", "establishing"],
+          "description": "Camera shot type"
+        },
+        "camera_motion": {
+          "type": "string",
+          "enum": ["static", "slow_dolly", "push_in", "pull_out", "pan_left", "pan_right", "tilt_up", "tilt_down", "crane", "handheld"],
+          "description": "Camera movement"
+        },
+        "emotional_tone": {
+          "type": "string",
+          "description": "Emotional tone of the shot"
+        },
+        "beat": {
+          "type": "string",
+          "description": "Narrative beat (Save the Cat structure)"
+        },
+        "approved": {
+          "type": "boolean",
+          "description": "Whether shot is approved for rendering"
+        },
+        "first_frame_path": {
+          "type": "string",
+          "description": "Path to generated first frame"
+        },
+        "video_path": {
+          "type": "string",
+          "description": "Path to generated video"
+        },
+        "segments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/segment"
+          },
+          "description": "Segments for extended shots (>20s)"
+        },
+        "render_plan": {
+          "$ref": "#/definitions/render_plan"
+        },
+        "face_stability": {
+          "$ref": "#/definitions/face_stability"
+        },
+        "negative_prompt": {
+          "type": "string",
+          "description": "Negative prompt for image generation"
+        }
+      }
+    },
+    "segment": {
+      "type": "object",
+      "required": ["segment_index", "duration"],
+      "properties": {
+        "segment_index": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Zero-indexed segment number"
+        },
+        "segment_id": {
+          "type": "string",
+          "description": "Segment identifier (e.g., 001_001A_S1)"
+        },
+        "duration": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Segment duration (max 20s)"
+        },
+        "continuation_prompt": {
+          "type": "string",
+          "description": "Continuation prompt for this segment"
+        },
+        "first_frame_path": {
+          "type": "string"
+        },
+        "video_path": {
+          "type": "string"
+        }
+      }
+    },
+    "render_plan": {
+      "type": "object",
+      "properties": {
+        "segments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/segment"
+          }
+        },
+        "total_segments": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "stitch_order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "face_stability": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "strength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reference_frame": {
+          "type": "string"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_script": {
+          "type": "string"
+        },
+        "target_runtime": {
+          "type": "number"
+        },
+        "genre": {
+          "type": "string"
+        },
+        "director_style": {
+          "type": "string"
+        },
+        "total_duration": {
+          "type": "number"
+        },
+        "scene_count": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

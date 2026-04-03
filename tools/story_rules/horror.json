@@ -1,0 +1,114 @@
+{
+  "genre": "horror",
+  "required_narrative_fields": [
+    "threat_escalation",
+    "isolation_factor",
+    "protagonist_vulnerability",
+    "reveal_vs_conceal_balance",
+    "scare_economy"
+  ],
+  "narrative_rules": {
+    "threat_escalation": "Must progress from atmospheric → physical → existential",
+    "isolation_factor": "Characters must be cut off from help (spatial, temporal, or social)",
+    "protagonist_vulnerability": "Hero must have exploitable weakness",
+    "reveal_vs_conceal_balance": "Show less than hide - imagination is scarier",
+    "scare_economy": "Maximum 2 jump scares per episode, rest is dread"
+  },
+  "motifs": [
+    "confined_spaces",
+    "darkness_vs_light",
+    "rational_world_breaking",
+    "body_violation",
+    "home_as_trap",
+    "mirrors_reflections",
+    "doors_that_lock",
+    "things_that_shouldnt_move"
+  ],
+  "pace_expectations": {
+    "act_1": {
+      "pacing": "slow_dread_build",
+      "shot_duration": "15-30 seconds",
+      "editing_rhythm": "patient_establishment"
+    },
+    "act_2": {
+      "pacing": "escalating_encounters",
+      "shot_duration": "10-20 seconds",
+      "editing_rhythm": "tension_ramp"
+    },
+    "act_3": {
+      "pacing": "relentless_assault",
+      "shot_duration": "5-15 seconds",
+      "editing_rhythm": "rapid_survival"
+    }
+  },
+  "default_lens_choices": {
+    "establishing": {
+      "lens_mm": 24,
+      "why": "Wide angle shows environment threat, makes spaces feel larger/more threatening"
+    },
+    "stalking": {
+      "lens_mm": 35,
+      "why": "Character in space, see pursuer relationship"
+    },
+    "fear_reaction": {
+      "lens_mm": 50,
+      "why": "Subjective intensity without distortion"
+    },
+    "violation": {
+      "lens_mm": 85,
+      "why": "Tight closeup shows terror in eyes"
+    }
+  },
+  "default_camera_moves": {
+    "dread": "slow_dolly_forward",
+    "pursuit": "handheld_chase",
+    "reveal": "crane_descending",
+    "trapped": "locked_static",
+    "investigation": "slow_pan_follow",
+    "shock": "crash_zoom or whip_pan"
+  },
+  "default_lighting": {
+    "style": "motivated_practical_only",
+    "color_temp": "tungsten_warm_vs_moonlight_cool",
+    "ratios": "4:1 to 8:1 high contrast",
+    "atmosphere": "volumetric_fog_low",
+    "avoid": ["flat_lighting", "bright_key", "saturated_color"]
+  },
+  "sound_requirements": [
+    "silence_as_primary_tool",
+    "diegetic_ambience_only",
+    "sudden_stings_maximum_2_per_episode",
+    "breathing_and_heartbeat_emphasis",
+    "offscreen_sounds_more_frightening_than_visual"
+  ],
+  "subgenres": {
+    "gothic": {
+      "modifiers": "Period settings, candlelight, decay, family curses",
+      "reference": "The Innocents (1961)"
+    },
+    "slasher": {
+      "modifiers": "Visible killer, final girl, weapon fetishization",
+      "reference": "Halloween (1978)"
+    },
+    "psychological": {
+      "modifiers": "Reality questioning, unreliable narrator, slow burn",
+      "reference": "The Shining (1980)"
+    },
+    "supernatural": {
+      "modifiers": "Ghost rules, exorcism, religious iconography",
+      "reference": "The Exorcist (1973)"
+    },
+    "body_horror": {
+      "modifiers": "Transformation, visceral physicality, medical imagery",
+      "reference": "The Fly (1986)"
+    }
+  },
+  "forbidden_elements": [
+    "comedy_relief_characters",
+    "bright_daylight_horror_without_justification",
+    "explaining_everything",
+    "happy_ending_without_cost",
+    "invincible_protagonists"
+  ],
+  "citation": "blackwood_story_bible.json lines 376-385, horror_rules section"
+}

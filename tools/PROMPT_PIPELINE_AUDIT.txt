@@ -1,0 +1,386 @@
+================================================================================
+ATLAS PROMPT PIPELINE AUDIT — COMPREHENSIVE MUTATION TRACE
+================================================================================
+Generated: 2026-03-17
+Scope: Every code path that modifies nano_prompt or ltx_motion_prompt between
+       loading from shot_plan.json and sending to FAL API
+Status: CRITICAL — Found 12 mutation points, 2 DANGEROUS overwrites,
+        1 active REFRAME system
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+The prompt pipeline contains a complex web of mutations that span three files:
+- orchestrator_server.py (8 active mutation points)
+- atlas_v26_controller.py (3 active mutation points)
+- tools/ots_enforcer.py (1 active enforcement point)
+- tools/film_engine.py (tested but not currently called from controller)
+
+CRITICAL FINDINGS:
+
+1. TWO DANGEROUS OVERWRITES found that can destroy shot_plan.json baked prompts:
+   - orchestrator_server.py, line 21650: Appends DNA + lighting to nano_prompt (OVERWRITES)
+   - orchestrator_server.py, line 21695: Reads back from shot after enforcement (OVERWRITES)
+
+2. REFRAMING SYSTEM STILL ACTIVE in orchestrator_server.py (lines 8720-8840)
+   - Generates 3 angle variants per shot via nano-banana-pro/edit
+   - Builds fresh "REFRAME ONLY" prompts at line 8759
+   - User indicated they want this DISABLED
+
+3. DIALOGUE ENFORCEMENT INJECTS PROMPTS at orchestrator_server.py line 21693
+   - OTSEnforcer.prepare_dialogue_shot() may REWRITE nano_prompt
+   - Result read back at line 21695 (DANGEROUS second mutation)
+
+4. CONTINUITY DELTA INJECTION at orchestrator_server.py line 8226
+   - Prepends spatial memory to nano_prompt (SAFE — prepend, not overwrite)
+   - Only fires for chained shots with dialogue (safe context)
+
+5. SCENE VISUAL DNA + LIGHTING RIG INJECTION at orchestrator_server.py line 21650
+   - Appends room DNA + lighting rig to nano_prompt
+   - Runs at ORIGIN during generate-first-frames
+   - V27.1.5 law: "Every shot in a scene gets identical DNA block"
+
+================================================================================
+EXECUTION ORDER & MUTATION POINTS
+================================================================================
+
+PHASE 1: Shot Plan Load (orchestrator_server.py, lines 8180-8250)
+──────────────────────────────────────────────────────────────────
+
+[POINT 1] LINE 8198: Read baked nano_prompt from shot_plan.json
+Location:    orchestrator_server.py:8198
+Code:        nano_prompt = shot.get("nano_prompt_v24") or shot.get("nano_prompt", "")
+Type:        SAFE — Read only, no mutation yet
+Description: Extracts the original prompt from the loaded shot data
+Dangerous:   NO — this is just reading
+
+[POINT 2] LINE 8226: PREPEND Continuity Delta (SAFE)
+Location:    orchestrator_server.py:8226
+Code:        nano_prompt = _ba_delta + "\n\n" + nano_prompt
+Condition:   Only fires if: shot is chained, has dialogue, continuity memory available
+Type:        SAFE — Prepend, preserves existing content
+Description: Adds spatial memory context BEFORE the shot's original prompt
+Notes:       - Non-blocking: if continuity fails, proceeds with original prompt
+             - Only for dialogue cuts (safe context)
+             - Respects existing nano_prompt structure
+
+[POINT 3] LINE 8242: STRIP Environment (CONDITIONAL)
+Location:    orchestrator_server.py:8242
+Code:        nano_prompt = _stripped
+Condition:   Only if atlas_continuity_tightener.strip_env_from_prompt() returns text
+Type:        DANGEROUS — OVERWRITES if _stripped truthy
+Description: Removes environment description from prompt for chained shots
+Condition:   Only fires if: prompt passes strip check, _stripped is non-empty
+Notes:       - Non-blocking: wrapped in try/except
+             - Heuristic: if chained shot, strip environment (might be wrong context)
+
+PHASE 2: First Frames Generation (orchestrator_server.py, lines 21600-21700)
+─────────────────────────────────────────────────────────────────────────────
+
+[POINT 4] LINE 21631: Load nano_prompt for DNA injection
+Location:    orchestrator_server.py:21631
+Code:        nano_prompt = shot.get("nano_prompt_final") or shot.get("nano_prompt", "")
+Type:        SAFE — Read only
+Description: Loads prompt for V27.1.5 scene DNA + lighting injection
+
+[POINT 5] LINE 21650: APPEND Scene Visual DNA + Lighting (DANGEROUS)
+Location:    orchestrator_server.py:21650
+Code:        nano_prompt = f"{nano_prompt.rstrip('. ')}. {_dna_block} {_lighting_block}"
+             shot["nano_prompt"] = nano_prompt
+             if shot.get("nano_prompt_final"):
+                 shot["nano_prompt_final"] = nano_prompt
+Condition:   Fires if: _dna_story_scene found from story bible
+Type:        DANGEROUS — OVERWRITES both nano_prompt AND nano_prompt_final
+Description: Appends DNA + lighting rig to every shot (V27.1.5 requirement)
+Notes:       - Law requirement: "Every shot in a scene gets identical DNA block"
+             - Mutates BOTH shot["nano_prompt"] AND shot["nano_prompt_final"]
+             - No length check on result (concatenation could exceed 4096)
+             - Persists back to shot_plan.json on save
+
+[POINT 6] LINE 21658: APPEND Focal Length Enforcement (DANGEROUS)
+Location:    orchestrator_server.py:21658
+Code:        nano_prompt = f"{nano_prompt.rstrip('. ')}. [{_focal}]"
+             shot["nano_prompt"] = nano_prompt
+             if shot.get("nano_prompt_final"):
+                 shot["nano_prompt_final"] = nano_prompt
+Condition:   Fires if: _focal text not already in nano_prompt
+Type:        DANGEROUS — OVERWRITES (happens AFTER Point 5, so accumulates)
+Description: Appends focal length enforcement block to nano_prompt
+Notes:       - V27.1.5 law: "Describe VISUAL EFFECT, not numeric focal length"
+             - Concatenates to already-modified prompt from Point 5
+             - Potential for length explosion if multiple appends stack
+
+[POINT 7] LINE 21693: Call OTSEnforcer.prepare_dialogue_shot()
+Location:    orchestrator_server.py:21693
+Code:        _ots_result = _ots_enforcer.prepare_dialogue_shot(shot, prev_shots=_prev_shots)
+Type:        DANGEROUS — May REWRITE nano_prompt inside shot object
+Description: OTS enforcer modifies dialogue shot prompts (V27.1.4c enforcement)
+Notes:       - prepare_dialogue_shot() mutates shot["nano_prompt"] internally
+             - Result is NOT returned — mutation happens in-place
+             - Enforcer adds screen direction + eye-line + dialogue markers
+
+[POINT 8] LINE 21695: READ BACK after enforcement (DOUBLE MUTATION)
+Location:    orchestrator_server.py:21695
+Code:        nano_prompt = shot.get("nano_prompt", nano_prompt)
+Condition:   Always runs (reads back after enforcement)
+Type:        DANGEROUS — OVERWRITES local nano_prompt variable with potentially modified version
+Description: Reads the (possibly modified) nano_prompt from the shot object
+Notes:       - This is the SECOND read of nano_prompt after Point 5/6 mutations
+             - If OTS enforcer modified it, this overwrites the local variable
+             - Cascading overwrites: original → DNA → focal → OTS → local var read
+
+[POINT 9] LINE 22241: Creative Director Injection (DANGEROUS)
+Location:    orchestrator_server.py:22241
+Code:        nano_prompt = shot.get("nano_prompt", nano_prompt)
+Condition:   Only if shot has _cd_nano_injection or _cd_ltx_injection
+Type:        DANGEROUS — OVERWRITES if creative directives applied
+Description: Apply creative directives (props/blocking/emotion) to shot
+Notes:       - Non-blocking: wrapped in try/except
+             - Calls apply_creative_directives(shot) which mutates in-place
+             - Reads result back into local variable
+
+PHASE 3: Atlas V26 Controller (atlas_v26_controller.py, lines 550-1500)
+────────────────────────────────────────────────────────────────────────
+
+[POINT 10] LINE 691: CPC Decontamination (OVERWRITES)
+Location:   atlas_v26_controller.py:691
+Code:        decision.nano_prompt = decontaminate_prompt(decision.nano_prompt, _char_name, _emotion)
+Type:        DANGEROUS — OVERWRITES decision.nano_prompt
+Description: Film Engine creative prompt compiler removes generic patterns
+Notes:       - Checks if prompt is generic via is_prompt_generic()
+             - If TRUE: replaces with emotion-driven physical direction
+             - Part of Film Engine compile flow (Phase E1)
+
+[POINT 11] LINE 1393: Film Engine Compile Result (OVERWRITES)
+Location:   atlas_v26_controller.py:1393
+Code:        decision.nano_prompt = new_nano
+Condition:   Fires if: Film Engine compile_shot_for_model() returns new_nano
+Type:        DANGEROUS — OVERWRITES compiled result from Film Engine
+Description: Controller accepts Film Engine's compiled nano_prompt
+Notes:       - Happens at end of Phase E (Enrichment)
+             - Film Engine is PROMPT AUTHORITY — should be last mutation
+             - But can be overwritten again by Points 10 or 1395 (ltx_prompt)
+
+[POINT 12] LINE 1493: OTS Enforcer Rewrite (OVERWRITES)
+Location:   atlas_v26_controller.py:1493
+Code:        decision.nano_prompt = new_nano
+Condition:   Fires if: shot was marked _prompt_rewritten_by_ots_enforcer
+Type:        DANGEROUS — OVERWRITES after Film Engine compilation
+Description: Reads back rewritten prompt from OTS enforcer
+Notes:       - This is POST-Film Engine compilation
+             - OTS enforcer runs in Phase E2 (after Film Engine Phase E1)
+             - Overwrites Film Engine's output with OTS-enforced version
+             - May happen multiple times if shot processed multiple times
+
+================================================================================
+REFRAMING SYSTEM (STILL ACTIVE)
+================================================================================
+
+[REFRAME-1] LINES 8718-8840: End-Frame Reframing via nano-banana-pro/edit
+Location:    orchestrator_server.py:8718-8840
+Type:        ACTIVE_REFRAME — Building fresh prompts for angle variants
+Description: Generates 3 camera angle variants per shot via image-to-image reframing
+
+The reframing flow:
+
+1. LINE 8723: Get end frame from previous shot's video
+   _end_frame_b64 = _upload_frame_for_api(last_frame_path)
+
+2. LINE 8759: BUILD FRESH "REFRAME ONLY" PROMPT
+   _reframe_prompt = (
+       "REFRAME ONLY. Use the provided image as the single source of truth. "
+       "Do NOT change environment, room, props, objects, lighting, shadows, or color grade. "
+       ...
+       f"{angle_data['prefix']} "
+       "Maintain identical scene composition except camera distance and framing."
+   )
+   [This prompt is COMPLETELY CUSTOM — NOT from shot_plan.json]
+
+3. LINE 8777: Reframe refs = ONLY end frame
+   _reframe_refs = [end_frame_b64_url]
+
+4. LINE 8780: Call FAL nano-banana-pro/edit
+   fal_result = _fal_run_with_retry(NANO_MODEL_REF, {
+       "prompt": _reframe_prompt,
+       "image_urls": _reframe_refs,
+       ...
+   })
+
+5. LINES 8811-8814: Parallel execution of 3 angle variants
+   for angle in NANO_ANGLES:
+       future = _angle_pool.submit(_reframe_end_frame, angle, ...)
+
+RISK ASSESSMENT:
+- Three variants generated per chained shot (triples generation cost)
+- Each variant gets custom reframe-only prompt (overrides shot_plan.json)
+- Runs BEFORE final FAL calls (lines 22900+)
+- User indicated they want this DISABLED
+
+================================================================================
+MUTATION CLASSIFICATION SUMMARY
+================================================================================
+
+SAFE MUTATIONS (Preserve Content):
+─────────────────────────────────
+✓ Point 1: Initial read from shot_plan.json
+✓ Point 2: Prepend continuity delta (non-blocking)
+✓ Point 4: Read for DNA injection
+✓ Point 9: Read back after creative director (non-blocking try/except)
+
+DANGEROUS OVERWRITES (Replace Content):
+───────────────────────────────────────
+✗ Point 3: Strip environment (conditional, but risky)
+✗ Point 5: Append DNA + lighting (MUTATES shot_plan.json fields)
+✗ Point 6: Append focal length (ACCUMULATES on Point 5)
+✗ Point 7: OTS enforcer prepare (REWRITES in-place)
+✗ Point 8: Read back after OTS (CASCADING mutation)
+✗ Point 10: CPC decontamination (REPLACES if generic)
+✗ Point 11: Film Engine compile result (AUTHORITY — expected to overwrite)
+✗ Point 12: OTS enforcer result (POST-Film Engine overwrite)
+
+ACTIVE REFRAMING:
+─────────────────
+⚠ REFRAME-1: 3-angle variants via nano-banana-pro/edit (CUSTOM prompts)
+
+================================================================================
+CASCADING MUTATION CHAINS
+================================================================================
+
+CHAIN 1: DNA → Focal → OTS → Local Var (Lines 21650-21695)
+──────────────────────────────────────────────────────────
+1. Load nano_prompt from shot_plan (21631) → variable: nano_prompt
+2. Append DNA + lighting (21650) → OVERWRITES shot["nano_prompt"] AND variable
+3. Append focal length (21658) → ACCUMULATES (2nd append)
+4. Call OTS enforcer (21693) → may REWRITE shot["nano_prompt"]
+5. Read back (21695) → OVERWRITES variable with possibly-modified version
+
+Result: Original baked prompt is completely reconstructed with 3+ injections.
+        If any step fails, the chain breaks.
+
+CHAIN 2: Film Engine → CPC → Film Engine (Lines 690-1395)
+──────────────────────────────────────────────────────────
+1. Check if prompt generic (690)
+2. If generic: decontaminate (691) → OVERWRITES decision.nano_prompt
+3. Film Engine compile (line ~1300) → sets new_nano
+4. If new_nano: accept (1393) → OVERWRITES decision.nano_prompt AGAIN
+
+Result: Prompt may be completely replaced twice (once by CPC, once by Film Engine).
+
+CHAIN 3: OTS Enforcement Timeline (Lines 1490-1495)
+───────────────────────────────────────────────────
+1. OTS enforcer marked as applied (1490)
+2. If marked: read new_nano from shot (1493)
+3. Accept new_nano (1493) → OVERWRITES decision.nano_prompt
+
+Result: Post-Film Engine, the prompt is REWRITTEN by OTS enforcer.
+
+================================================================================
+SHOT_PLAN.JSON PERSISTENCE PROBLEM
+================================================================================
+
+Points 5 and 6 MUTATE the shot_plan.json fields directly:
+
+    shot["nano_prompt"] = nano_prompt
+    if shot.get("nano_prompt_final"):
+        shot["nano_prompt_final"] = nano_prompt
+
+This means:
+- Original baked prompt is LOST (overwritten in memory)
+- If the scene is rendered again, the DNA+focal blocks are DOUBLE-INJECTED
+- No way to recover the original prompt once DNA is appended
+
+Example scenario:
+1. First render: nano_prompt = "wide shot, characters enter" + DNA + focal
+2. Save to shot_plan.json: nano_prompt now includes DNA+focal
+3. Second render: Load "nano_prompt with DNA+focal", append DNA+focal AGAIN
+   → Result: "wide shot, characters enter [DNA] [FOCAL] [DNA] [FOCAL]"
+
+This is the REPETITION GUARD trigger detected in V27.1.2 law (CPC-9):
+"If any 30-character substring appears 3+ times → prompt is CORRUPTED"
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+IMMEDIATE ACTIONS:
+──────────────────
+
+1. DISABLE REFRAMING SYSTEM (Points 8718-8840)
+   Location: orchestrator_server.py
+   Code block: if not _do_reframe: block and entire _reframe_end_frame function
+   Impact: Saves 2x generation cost (no angle variants per chained shot)
+
+2. MAKE DNA/FOCAL INJECTION IDEMPOTENT (Points 5-6)
+   Current: Appends DNA+focal regardless of whether already present
+   Fix: Check if "[ROOM DNA:" or "[TIGHT FRAMING:" already in nano_prompt
+        Only append if NOT already present
+        This prevents double-injection on re-renders
+
+3. SEPARATE CONTROL & AUTHORITY (Points 10-12)
+   Current: Controller overwrites decision.nano_prompt 3 times
+   Fix: Film Engine is PROMPT AUTHORITY — its output should NOT be overwritten
+        If OTS enforcer needs to rewrite, it should happen INSIDE Film Engine compile
+        Not as a post-compile step in the controller
+
+4. PROTECT SHOT_PLAN.JSON (Points 5, 6, 7)
+   Current: Mutations persist to shot_plan.json after render
+   Fix: Only persist final accepted prompt if marked _user_locked=true
+        Otherwise, keep original baked prompt in shot_plan.json
+        Track all mutations in separate metadata field (_prompt_mutations=[...])
+
+LONG-TERM ARCHITECTURE:
+────────────────────────
+
+Replace the 3-layer mutation system with a 2-layer system:
+
+LAYER 1 (At Render Time): COMPILATION
+  - Load baked nano_prompt from shot_plan.json
+  - Film Engine compile_shot_for_model() modifies for model (not captured)
+  - Result: compiled_prompt (temporary, not stored)
+
+LAYER 2 (At Generation Time): ENFORCEMENT
+  - Pass compiled_prompt to FAL
+  - FAL generates frame
+  - Never store prompt mutations back to shot_plan.json
+
+Result: Shot_plan.json stays pristine. Mutations are runtime-only.
+
+================================================================================
+TESTING CHECKLIST
+================================================================================
+
+To verify the audit is accurate:
+
+□ Run generate-first-frames on a single shot
+  Check shot["nano_prompt"] before and after
+  Verify DNA block was appended (Point 5 fires)
+
+□ Enable debug logging for all mutation points
+  Watch the cascade: DNA → focal → OTS → local var read
+
+□ Re-render the same scene twice
+  Check if prompts have double DNA blocks (repetition guard)
+
+□ Disable reframing (lines 8724-8840)
+  Verify no /edit calls are made
+  Check generation time drops 50%
+
+□ Render with OTS dialogue shot
+  Verify OTS enforcer mutates nano_prompt (Point 7)
+  Check if Film Engine mutation (Point 11) is overwritten (Point 12)
+
+================================================================================
+END OF AUDIT
+================================================================================
+
+Total mutation points found:    12
+Safe reads:                     4
+Dangerous overwrites:           8
+Active reframing systems:       1
+Cascading chains:               3
+Risk level:                     MEDIUM (DNA injection required by law, but mutation
+                                logic is brittle and prone to double-injection)
+
+Recommendation: Keep Points 1, 2, 4, 5, 6. Disable REFRAME-1. Make 5-6 idempotent.
+                Refactor 7-8 and 10-12 to use Film Engine as sole authority.

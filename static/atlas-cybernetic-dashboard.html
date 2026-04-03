@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATLAS V36 — Cybernetic Production Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ── BASE ─────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #040810;
+  --bg2:      #080e1a;
+  --bg3:      #0c1424;
+  --panel:    #0a1020;
+  --border:   #1a2840;
+  --gold:     #c8a84b;
+  --gold2:    #e8c46a;
+  --gold-dim: #7a6428;
+  --cyan:     #00d4ff;
+  --green:    #00ff88;
+  --yellow:   #ffcc00;
+  --orange:   #ff8c00;
+  --red:      #ff3366;
+  --red-dim:  #8b1a35;
+  --text:     #b8cfe8;
+  --text-dim: #4a6080;
+  --scan-clr: rgba(0, 212, 255, 0.015);
+}
+
+html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text); font-family: 'Share Tech Mono', monospace; font-size: 12px; }
+
+/* Scanline overlay */
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  background: repeating-linear-gradient(0deg, var(--scan-clr) 0px, var(--scan-clr) 1px, transparent 1px, transparent 2px);
+  animation: scanPan 8s linear infinite;
+}
+@keyframes scanPan { 0%{background-position:0 0} 100%{background-position:0 100px} }
+
+/* ── LAYOUT ───────────────────────────────────────────────────────────── */
+.shell {
+  display: grid;
+  grid-template-rows: 56px 1fr;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  gap: 0;
+}
+
+.topbar {
+  grid-row: 1;
+  background: linear-gradient(90deg, #050d1a 0%, #060f20 40%, #050d1a 100%);
+  border-bottom: 1px solid var(--gold-dim);
+  display: flex; align-items: center; gap: 20px; padding: 0 20px;
+  position: relative; overflow: hidden;
+}
+.topbar::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.logo-block { display: flex; align-items: baseline; gap: 10px; }
+.logo-atlas { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 22px; color: var(--gold); letter-spacing: 4px; }
+.logo-ver   { font-family: 'Orbitron', sans-serif; font-size: 11px; color: var(--gold-dim); letter-spacing: 2px; }
+.logo-title { font-family: 'Cinzel', serif; font-size: 13px; color: var(--text-dim); letter-spacing: 2px; margin-left: 8px; }
+
+.topbar-divider { width: 1px; height: 30px; background: var(--border); }
+
+.readiness-block { display: flex; align-items: center; gap: 12px; }
+.readiness-label { font-family: 'Orbitron', sans-serif; font-size: 10px; color: var(--text-dim); letter-spacing: 2px; }
+.readiness-gauge {
+  position: relative; width: 180px; height: 10px;
+  background: #0d1a2e; border: 1px solid var(--border); border-radius: 5px; overflow: hidden;
+}
+.readiness-fill {
+  height: 100%; width: 51%; border-radius: 4px;
+  background: linear-gradient(90deg, #ff3366 0%, #ff8c00 60%, #ffcc00 100%);
+  box-shadow: 0 0 8px rgba(255,51,102,0.5);
+}
+.readiness-pct { font-family: 'Orbitron', sans-serif; font-size: 14px; font-weight: 700; color: var(--orange); }
+
+.topbar-stats { margin-left: auto; display: flex; gap: 16px; align-items: center; }
+.tstat { text-align: center; }
+.tstat-val { font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: 700; }
+.tstat-lbl { font-size: 9px; color: var(--text-dim); letter-spacing: 1px; }
+.tstat.approve .tstat-val { color: var(--green); }
+.tstat.flag    .tstat-val { color: var(--yellow); }
+.tstat.regen   .tstat-val { color: var(--red); }
+.tstat.total   .tstat-val { color: var(--cyan); }
+
+.topbar-time { font-family: 'Share Tech Mono'; font-size: 11px; color: var(--gold-dim); letter-spacing: 1px; }
+
+/* ── 3-PANEL BODY ─────────────────────────────────────────────────────── */
+.body-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr 280px;
+  gap: 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* ── LEFT PANEL: ORGANS ───────────────────────────────────────────────── */
+.panel-left {
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  overflow-y: auto; overflow-x: hidden;
+  padding: 12px 10px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.panel-left::-webkit-scrollbar { width: 4px; }
+.panel-left::-webkit-scrollbar-track { background: var(--bg2); }
+.panel-left::-webkit-scrollbar-thumb { background: var(--border); }
+
+.panel-section-title {
+  font-family: 'Orbitron', sans-serif; font-size: 9px; font-weight: 700;
+  color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase;
+  border-bottom: 1px solid var(--border); padding-bottom: 5px; margin-bottom: 4px;
+}
+
+.organ-card {
+  background: var(--bg3); border: 1px solid var(--border); border-radius: 4px;
+  padding: 8px 10px; cursor: pointer; transition: all 0.15s ease;
+  position: relative; overflow: hidden;
+}
+.organ-card:hover { border-color: var(--gold-dim); background: #0e1828; }
+.organ-card.active { border-color: var(--gold); background: #12202e; }
+
+.organ-card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+}
+.organ-card.green::before  { background: var(--green); }
+.organ-card.yellow::before { background: var(--yellow); }
+.organ-card.red::before    { background: var(--red); animation: pulse-left 1.5s ease-in-out infinite; }
+.organ-card.orange::before { background: var(--orange); }
+
+@keyframes pulse-left { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.organ-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.organ-name { font-family: 'Orbitron', sans-serif; font-size: 10px; font-weight: 600; color: var(--text); letter-spacing: 1px; }
+.organ-pill {
+  font-size: 8px; font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 1px;
+  padding: 2px 6px; border-radius: 2px; text-transform: uppercase;
+}
+.pill-green  { background: rgba(0,255,136,0.15); color: var(--green);  border: 1px solid rgba(0,255,136,0.3); }
+.pill-yellow { background: rgba(255,204,0,0.15);  color: var(--yellow); border: 1px solid rgba(255,204,0,0.3); }
+.pill-red    { background: rgba(255,51,102,0.15);  color: var(--red);   border: 1px solid rgba(255,51,102,0.3); }
+.pill-orange { background: rgba(255,140,0,0.15);  color: var(--orange); border: 1px solid rgba(255,140,0,0.3); }
+
+.organ-detail { font-size: 10px; color: var(--text-dim); line-height: 1.5; }
+.organ-bar-wrap { margin-top: 5px; background: #0d1a2e; border-radius: 2px; height: 3px; overflow: hidden; }
+.organ-bar { height: 100%; border-radius: 2px; }
+
+/* Scene health bars */
+.scene-health-row {
+  display: flex; align-items: center; gap: 6px; margin-bottom: 3px; cursor: pointer;
+  padding: 3px 5px; border-radius: 3px; transition: background 0.1s;
+}
+.scene-health-row:hover { background: #0e1828; }
+.scene-id-lbl { font-family: 'Orbitron', sans-serif; font-size: 9px; color: var(--gold-dim); width: 30px; flex-shrink: 0; }
+.scene-bar-outer { flex: 1; height: 6px; background: #0d1a2e; border-radius: 3px; overflow: hidden; display: flex; }
+.scene-bar-a { background: var(--green); height: 100%; }
+.scene-bar-f { background: var(--yellow); height: 100%; }
+.scene-bar-r { background: var(--red); height: 100%; }
+.scene-pct { font-size: 9px; color: var(--text-dim); width: 28px; text-align: right; flex-shrink: 0; }
+
+/* ── CENTER: HEATMAP ──────────────────────────────────────────────────── */
+.panel-center {
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  padding: 12px;
+}
+
+.heatmap-header {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 10px;
+}
+.heatmap-title { font-family: 'Orbitron', sans-serif; font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 2px; }
+.heatmap-subtitle { font-size: 10px; color: var(--text-dim); }
+
+.legend { display: flex; gap: 12px; margin-left: auto; align-items: center; }
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--text-dim); }
+.legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+.leg-approve { background: rgba(0,255,136,0.7); }
+.leg-flag    { background: rgba(255,204,0,0.7); }
+.leg-regen   { background: rgba(255,51,102,0.8); }
+.leg-none    { background: rgba(60,80,120,0.5); border: 1px solid var(--border); }
+
+.heatmap-grid-wrap { flex: 1; overflow: auto; }
+.heatmap-grid-wrap::-webkit-scrollbar { width: 4px; height: 4px; }
+.heatmap-grid-wrap::-webkit-scrollbar-track { background: var(--bg2); }
+.heatmap-grid-wrap::-webkit-scrollbar-thumb { background: var(--border); }
+
+.heatmap-table { border-collapse: collapse; width: 100%; }
+.heatmap-table th {
+  font-family: 'Share Tech Mono'; font-size: 9px; color: var(--text-dim);
+  padding: 3px 5px; text-align: center; position: sticky; top: 0; background: var(--bg); z-index: 2;
+  border-bottom: 1px solid var(--border);
+}
+.heatmap-table th.scene-col { text-align: left; }
+.heatmap-table td { padding: 3px; text-align: center; }
+
+.scene-label {
+  font-family: 'Orbitron', sans-serif; font-size: 10px; color: var(--gold-dim);
+  padding: 3px 8px 3px 3px; white-space: nowrap; text-align: left;
+}
+
+.shot-cell {
+  width: 36px; height: 28px; border-radius: 3px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8px; font-family: 'Share Tech Mono'; font-weight: 600;
+  position: relative; transition: all 0.12s ease; border: 1px solid transparent;
+  overflow: hidden;
+}
+.shot-cell:hover { transform: scale(1.12); z-index: 10; border-color: var(--gold); }
+.shot-cell.selected { border: 2px solid var(--gold); box-shadow: 0 0 8px rgba(200,168,75,0.5); }
+
+.cell-approve { background: rgba(0,255,136,0.2); color: var(--green); border-color: rgba(0,255,136,0.15); }
+.cell-approve:hover { background: rgba(0,255,136,0.35); }
+.cell-flag    { background: rgba(255,204,0,0.2);  color: var(--yellow); border-color: rgba(255,204,0,0.15); }
+.cell-flag:hover { background: rgba(255,204,0,0.35); }
+.cell-regen   { background: rgba(255,51,102,0.25); color: var(--red); border-color: rgba(255,51,102,0.2); animation: blink-cell 2s ease-in-out infinite; }
+.cell-regen:hover { background: rgba(255,51,102,0.4); }
+.cell-na      { background: rgba(30,45,70,0.4); color: var(--text-dim); border-color: transparent; }
+
+@keyframes blink-cell { 0%,100%{box-shadow:none} 50%{box-shadow:0 0 6px rgba(255,51,102,0.5)} }
+
+.scene-summary-row td { border-top: 1px solid var(--border); }
+.scene-meta { display: flex; gap: 8px; align-items: center; padding: 2px 8px; }
+.sm-badge { font-size: 9px; padding: 1px 5px; border-radius: 2px; font-family: 'Share Tech Mono'; }
+.sm-a { background: rgba(0,255,136,0.1); color: var(--green); }
+.sm-f { background: rgba(255,204,0,0.1);  color: var(--yellow); }
+.sm-r { background: rgba(255,51,102,0.1); color: var(--red); }
+
+/* Issue icons */
+.issue-icon { font-size: 8px; position: absolute; top: 2px; right: 2px; line-height: 1; }
+
+/* Tooltip */
+.tooltip {
+  position: fixed; background: #0c1830; border: 1px solid var(--gold-dim);
+  border-radius: 4px; padding: 8px 10px; font-size: 10px; max-width: 240px;
+  z-index: 9000; pointer-events: none; display: none; box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+.tooltip.visible { display: block; }
+.tt-shot { font-family: 'Orbitron', sans-serif; font-size: 11px; color: var(--gold); margin-bottom: 4px; }
+.tt-verdict { margin-bottom: 4px; }
+.tt-issue { color: var(--orange); font-size: 9px; }
+.tt-notes { color: var(--text-dim); font-size: 9px; line-height: 1.4; margin-top: 4px; border-top: 1px solid var(--border); padding-top: 4px; }
+
+/* ── RIGHT PANEL: CANON LADDER + DETAIL ──────────────────────────────── */
+.panel-right {
+  background: var(--panel);
+  border-left: 1px solid var(--border);
+  overflow-y: auto; overflow-x: hidden;
+  display: flex; flex-direction: column;
+}
+.panel-right::-webkit-scrollbar { width: 4px; }
+.panel-right::-webkit-scrollbar-track { background: var(--bg2); }
+.panel-right::-webkit-scrollbar-thumb { background: var(--gold-dim); }
+
+/* Canon Ladder */
+.canon-ladder {
+  padding: 12px;
+  background: linear-gradient(180deg, #0a1020 0%, #070e1c 100%);
+  border-bottom: 1px solid var(--gold-dim);
+}
+.canon-title {
+  font-family: 'Cinzel', serif; font-size: 12px; color: var(--gold);
+  letter-spacing: 3px; text-transform: uppercase; text-align: center;
+  margin-bottom: 12px; padding-bottom: 8px;
+  border-bottom: 1px solid rgba(200,168,75,0.2);
+}
+
+.ladder-rung {
+  display: flex; align-items: stretch; gap: 0; margin-bottom: 3px;
+  position: relative;
+}
+.rung-number {
+  font-family: 'Orbitron', sans-serif; font-size: 9px; color: var(--gold-dim);
+  width: 18px; flex-shrink: 0; text-align: center; padding-top: 8px;
+}
+.rung-connector {
+  width: 2px; background: linear-gradient(180deg, var(--gold-dim), rgba(122,100,40,0.1));
+  flex-shrink: 0; margin-right: 8px;
+}
+.ladder-rung:last-child .rung-connector { background: transparent; }
+
+.rung-card {
+  flex: 1; background: rgba(200,168,75,0.04); border: 1px solid rgba(200,168,75,0.12);
+  border-left: 2px solid var(--gold-dim); border-radius: 0 4px 4px 0;
+  padding: 7px 10px; cursor: default; transition: all 0.15s;
+}
+.rung-card:hover { background: rgba(200,168,75,0.08); border-color: var(--gold-dim); }
+.rung-card.active-rung { border-left-color: var(--gold); background: rgba(200,168,75,0.1); }
+
+.rung-name  { font-family: 'Cinzel', serif; font-size: 11px; color: var(--gold); margin-bottom: 3px; }
+.rung-desc  { font-size: 9px; color: var(--text-dim); line-height: 1.4; }
+.rung-badge {
+  display: inline-block; font-size: 8px; font-family: 'Orbitron', sans-serif;
+  padding: 1px 5px; border-radius: 2px; margin-top: 4px;
+  background: rgba(200,168,75,0.1); color: var(--gold-dim); border: 1px solid rgba(200,168,75,0.2);
+}
+
+/* Shot detail panel */
+.detail-panel {
+  padding: 12px; flex: 1;
+}
+.detail-empty {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 100%; color: var(--text-dim); text-align: center; gap: 8px; padding: 20px;
+}
+.detail-empty-icon { font-size: 32px; opacity: 0.3; }
+.detail-empty-text { font-size: 10px; line-height: 1.5; }
+
+.detail-header { margin-bottom: 10px; }
+.detail-shot-id { font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: 700; color: var(--gold); letter-spacing: 2px; margin-bottom: 5px; }
+.detail-verdict-row { display: flex; align-items: center; gap: 8px; }
+.detail-verdict {
+  font-family: 'Orbitron', sans-serif; font-size: 10px; font-weight: 700;
+  padding: 3px 10px; border-radius: 3px; letter-spacing: 2px;
+}
+.dv-approve { background: rgba(0,255,136,0.15); color: var(--green); border: 1px solid rgba(0,255,136,0.3); }
+.dv-flag    { background: rgba(255,204,0,0.15);  color: var(--yellow); border: 1px solid rgba(255,204,0,0.3); }
+.dv-regen   { background: rgba(255,51,102,0.15); color: var(--red);   border: 1px solid rgba(255,51,102,0.3); }
+.dv-na      { background: rgba(30,45,70,0.3);    color: var(--text-dim); border: 1px solid var(--border); }
+
+.detail-issue { font-family: 'Share Tech Mono'; font-size: 11px; color: var(--orange); }
+.detail-divider { height: 1px; background: var(--border); margin: 10px 0; }
+.detail-notes-title { font-family: 'Orbitron', sans-serif; font-size: 9px; color: var(--gold-dim); letter-spacing: 2px; margin-bottom: 6px; }
+.detail-notes { font-size: 10px; color: var(--text); line-height: 1.6; white-space: pre-wrap; word-break: break-word; }
+
+/* Organ detail popup */
+.organ-popup {
+  position: fixed; inset: 0; background: rgba(4,8,16,0.85); z-index: 5000;
+  display: flex; align-items: center; justify-content: center; display: none;
+}
+.organ-popup.visible { display: flex; }
+.organ-popup-card {
+  background: #0a1428; border: 1px solid var(--gold-dim); border-radius: 6px;
+  padding: 24px; max-width: 480px; width: 90%; max-height: 70vh; overflow-y: auto;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+}
+.op-title { font-family: 'Orbitron', sans-serif; font-size: 16px; color: var(--gold); margin-bottom: 6px; }
+.op-subtitle { font-size: 10px; color: var(--text-dim); margin-bottom: 16px; }
+.op-item { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; padding: 6px 10px; background: var(--bg3); border-radius: 3px; }
+.op-item-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.op-item-text { font-size: 11px; color: var(--text); }
+.op-close {
+  margin-top: 16px; width: 100%; padding: 8px; background: transparent;
+  border: 1px solid var(--gold-dim); color: var(--gold); font-family: 'Orbitron', sans-serif;
+  font-size: 10px; letter-spacing: 2px; cursor: pointer; border-radius: 3px;
+  transition: all 0.15s;
+}
+.op-close:hover { background: rgba(200,168,75,0.1); }
+
+/* Scrollbar for center */
+.heatmap-grid-wrap::-webkit-scrollbar { width: 4px; height: 4px; }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="logo-block">
+      <span class="logo-atlas">ATLAS</span>
+      <span class="logo-ver">V36.0</span>
+      <span class="logo-title">Cybernetic Production Dashboard</span>
+    </div>
+    <div class="topbar-divider"></div>
+    <div class="readiness-block">
+      <span class="readiness-label">Production Readiness</span>
+      <div class="readiness-gauge"><div class="readiness-fill"></div></div>
+      <span class="readiness-pct">51%</span>
+      <span class="pill-red organ-pill" style="font-size:9px">RED</span>
+    </div>
+    <div class="topbar-divider"></div>
+    <div class="topbar-stats">
+      <div class="tstat total"><div class="tstat-val">93</div><div class="tstat-lbl">TOTAL</div></div>
+      <div class="tstat approve"><div class="tstat-val">47</div><div class="tstat-lbl">APPROVE</div></div>
+      <div class="tstat flag"><div class="tstat-val">39</div><div class="tstat-lbl">FLAG</div></div>
+      <div class="tstat regen"><div class="tstat-val">7</div><div class="tstat-lbl">REGEN</div></div>
+    </div>
+    <div class="topbar-divider"></div>
+    <span class="topbar-time" id="clockDisplay">--:--:--</span>
+  </header>
+
+  <!-- 3-PANEL BODY -->
+  <div class="body-grid">
+
+    <!-- LEFT: ORGANS -->
+    <aside class="panel-left">
+      <div class="panel-section-title">System Organs</div>
+
+      <div class="organ-card green" onclick="showOrganDetail('runner')">
+        <div class="organ-header">
+          <span class="organ-name">RUNNER</span>
+          <span class="organ-pill pill-green">GREEN</span>
+        </div>
+        <div class="organ-detail">atlas_universal_runner.py</div>
+        <div class="organ-detail">9/9 features verified</div>
+        <div class="organ-bar-wrap"><div class="organ-bar" style="width:100%;background:var(--green)"></div></div>
+      </div>
+
+      <div class="organ-card green" onclick="showOrganDetail('preflight')">
+        <div class="organ-header">
+          <span class="organ-name">PREFLIGHT</span>
+          <span class="organ-pill pill-green">GREEN</span>
+        </div>
+        <div class="organ-detail">session_enforcer.py</div>
+        <div class="organ-detail">47/47 checks pass</div>
+        <div class="organ-bar-wrap"><div class="organ-bar" style="width:100%;background:var(--green)"></div></div>
+      </div>
+
+      <div class="organ-card green" onclick="showOrganDetail('ui')">
+        <div class="organ-header">
+          <span class="organ-name">UI</span>
+          <span class="organ-pill pill-green">GREEN</span>
+        </div>
+        <div class="organ-detail">auto_studio_tab.html</div>
+        <div class="organ-detail">19/21 features wired</div>
+        <div class="organ-bar-wrap"><div class="organ-bar" style="width:90%;background:var(--green)"></div></div>
+      </div>
+
+      <div class="organ-card green" onclick="showOrganDetail('ecc')">
+        <div class="organ-header">
+          <span class="organ-name">ECC</span>
+          <span class="organ-pill pill-green">GREEN</span>
+        </div>
+        <div class="organ-detail">4 scheduled tasks active</div>
+        <div class="organ-detail">Hourly / 4h / Daily</div>
+        <div class="organ-bar-wrap"><div class="organ-bar" style="width:100%;background:var(--green)"></div></div>
+      </div>
+
+      <div class="organ-card green" onclick="showOrganDetail('eye')">
+        <div class="organ-header">
+          <span class="organ-name">FILMMAKER'S EYE</span>
+          <span class="organ-pill pill-green">GREEN</span>
+        </div>
+        <div class="organ-detail">FILMMAKERS_EYE_FULL_AUDIT</div>
+        <div class="organ-detail">93 shots audited ✓</div>
+        <div class="organ-bar-wrap"><div class="organ-bar" style="width:100%;background:var(--green)"></div></div>
+      </div>
+
+      <div class="organ-card yellow" onclick="showOrganDetail('vision')">
+        <div class="organ-header">
+          <span class="organ-name">VISION</span>
+          <span class="organ-pill pill-yellow">YELLOW</span>
+        </div>
+        <div class="organ-detail">vision_judge.py + Gemini</div>
+        <div class="organ-detail">Configured, unproven live</div>
+        <div class="organ-bar-wrap"><div class="organ-bar" style="width:60%;background:var(--yellow)"></div></div>
+      </div>
+
+      <div class="organ-card yellow" onclick="showOrganDetail('gallery')">
+        <div class="organ-header">
+          <span class="organ-name">GALLERY</span>
+          <span class="organ-pill pill-yellow">YELLOW</span>
+        </div>
+        <div class="organ-detail">GCS uploads functional</div>
+        <div class="organ-detail">Videos incomplete</div>
+        <div class="organ-bar-wrap"><div class="organ-bar" style="width:55%;background:var(--yellow)"></div></div>
+      </div>
+
+      <div class="organ-card yellow" onclick="showOrganDetail('canon')">
+        <div class="organ-header">
+          <span class="organ-name">STORY CANON</span>
+          <span class="organ-pill pill-yellow">YELLOW</span>
+        </div>
+        <div class="organ-detail">story_state_canon.py built</div>
+        <div class="organ-detail">Not wired to gates</div>
+        <div class="organ-bar-wrap"><div class="organ-bar" style="width:40%;background:var(--yellow)"></div></div>
+      </div>
+
+      <div class="organ-card yellow" onclick="showOrganDetail('stage5')">
+        <div class="organ-header">
+          <span class="organ-name">STAGE 5 (PFC)</span>
+          <span class="organ-pill pill-yellow">YELLOW</span>
+        </div>
+        <div class="organ-detail">story_judge + vision_analyst</div>
+        <div class="organ-detail">Imported, advisory only</div>
+        <div class="organ-bar-wrap"><div class="organ-bar" style="width:50%;background:var(--yellow)"></div></div>
+      </div>
+
+      <div class="organ-card green" onclick="showOrganDetail('heatmap')">
+        <div class="organ-header">
+          <span class="organ-name">HEATMAP</span>
+          <span class="organ-pill pill-green">GREEN</span>
+        </div>
+        <div class="organ-detail">failure_heatmap.py</div>
+        <div class="organ-detail">Module + data active</div>
+        <div class="organ-bar-wrap"><div class="organ-bar" style="width:100%;background:var(--green)"></div></div>
+      </div>
+
+      <div class="panel-section-title" style="margin-top:8px">Scene Health</div>
+      <div id="sceneHealthBars"></div>
+    </aside>
+
+    <!-- CENTER: HEATMAP -->
+    <main class="panel-center">
+      <div class="heatmap-header">
+        <span class="heatmap-title">PRODUCTION HEATMAP</span>
+        <span class="heatmap-subtitle">Victorian Shadows EP1 — 13 scenes × 93 shots</span>
+        <div class="legend">
+          <div class="legend-item"><div class="legend-dot leg-approve"></div>APPROVE</div>
+          <div class="legend-item"><div class="legend-dot leg-flag"></div>FLAG</div>
+          <div class="legend-item"><div class="legend-dot leg-regen"></div>REGEN</div>
+          <div class="legend-item"><div class="legend-dot leg-none"></div>N/A</div>
+        </div>
+      </div>
+      <div class="heatmap-grid-wrap">
+        <table class="heatmap-table" id="heatmapTable">
+          <thead id="heatmapHead"></thead>
+          <tbody id="heatmapBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- RIGHT: CANON LADDER + DETAIL -->
+    <aside class="panel-right">
+      <div class="canon-ladder">
+        <div class="canon-title">Authority Hierarchy</div>
+
+        <div class="ladder-rung">
+          <div class="rung-number">I</div>
+          <div class="rung-connector"></div>
+          <div class="rung-card active-rung">
+            <div class="rung-name">Story Bible</div>
+            <div class="rung-desc">Narrative truth — who is here, what phase, what changed, what must be true. Supreme authority over all visual decisions.</div>
+            <span class="rung-badge">story_bible.json</span>
+          </div>
+        </div>
+
+        <div class="ladder-rung">
+          <div class="rung-number">II</div>
+          <div class="rung-connector"></div>
+          <div class="rung-card">
+            <div class="rung-name">Scene Contract</div>
+            <div class="rung-desc">What this scene requires visually and emotionally. Objective, arc, present characters, forbidden mistakes.</div>
+            <span class="rung-badge">scene_contracts/</span>
+          </div>
+        </div>
+
+        <div class="ladder-rung">
+          <div class="rung-number">III</div>
+          <div class="rung-connector"></div>
+          <div class="rung-card">
+            <div class="rung-name">Shot Contract</div>
+            <div class="rung-desc">Beat ref, eye-line target, body direction, cut motivation. What this specific shot must show.</div>
+            <span class="rung-badge">_truth_hash locked</span>
+          </div>
+        </div>
+
+        <div class="ladder-rung">
+          <div class="rung-number">IV</div>
+          <div class="rung-connector"></div>
+          <div class="rung-card">
+            <div class="rung-name">Timecode</div>
+            <div class="rung-desc">Supporting coordinate for pacing. Not ruler of truth — subordinate to all three authorities above.</div>
+            <span class="rung-badge">spatial_timecode.py</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-panel" id="detailPanel">
+        <div class="detail-empty" id="detailEmpty">
+          <div class="detail-empty-icon">⬡</div>
+          <div class="detail-empty-text">Select any shot cell in the heatmap<br>to view full Filmmaker's Eye analysis</div>
+        </div>
+        <div id="detailContent" style="display:none">
+          <div class="detail-header">
+            <div class="detail-shot-id" id="dShotId">---</div>
+            <div class="detail-verdict-row">
+              <span class="detail-verdict" id="dVerdict">---</span>
+              <span class="detail-issue" id="dIssue"></span>
+            </div>
+          </div>
+          <div class="detail-divider"></div>
+          <div class="detail-notes-title">Filmmaker's Eye Analysis</div>
+          <div class="detail-notes" id="dNotes"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- Tooltip -->
+<div class="tooltip" id="tooltip">
+  <div class="tt-shot" id="ttShot"></div>
+  <div class="tt-verdict" id="ttVerdict"></div>
+  <div class="tt-issue" id="ttIssue"></div>
+  <div class="tt-notes" id="ttNotes"></div>
+</div>
+
+<!-- Organ Detail Popup -->
+<div class="organ-popup" id="organPopup" onclick="closeOrganDetail(event)">
+  <div class="organ-popup-card" id="organPopupCard">
+    <div class="op-title" id="opTitle"></div>
+    <div class="op-subtitle" id="opSubtitle"></div>
+    <div id="opItems"></div>
+    <button class="op-close" onclick="document.getElementById('organPopup').classList.remove('visible')">CLOSE</button>
+  </div>
+</div>
+
+<script>
+// ── DATA ────────────────────────────────────────────────────────────────
+const SHOTS = [{"id":"001_E01","v":"F","issue":"LOCATION_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: LOCATION_DRIFT\n\nThis image shows two locations: an exterior gate and mansion (left) and an interior grand foyer (right). The prompt description asks for an interior GRAND FOYER wide establishing shot, not this composite. The dual-location composition breaks the scene's spatial contract."},{"id":"001_E02","v":"H","issue":"WRONG_ANGLE","notes":"VERDICT: HARD_REGEN\nPRIMARY_ISSUE: WRONG_ANGLE\n\nWhile it features an ornate staircase, this is a close-up detail shot of a banister — not a wide shot of a grand foyer from the entrance. Wrong framing entirely. Cannot be corrected with minor adjustments."},{"id":"001_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nThe ornate door frame and aged brass hardware strongly suggest a grand estate entrance. Correct establishing tone for HARGROVE ESTATE - GRAND FOYER. Approved."},{"id":"001_M01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly captures the HARGROVE ESTATE - GRAND FOYER with imposing architecture, grand staircase, and traditional Victorian grandeur. Character framing correct."},{"id":"001_M02","v":"F","issue":"WRONG_ANGLE","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: WRONG_ANGLE\n\nHas the grand feel of a Victorian foyer but staircase is light marble instead of dark mahogany, and floor pattern differs from shot_plan DNA spec. Architectural inconsistency."},{"id":"001_M03","v":"F","issue":"IDENTITY_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: IDENTITY_DRIFT\n\nGrand interior with arches and large windows resembles the estate but character identity is ambiguous. Cannot confirm Eleanor vs Thomas — face not matching cast_map appearance."},{"id":"001_M04","v":"F","issue":"WRONG_ANGLE","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: WRONG_ANGLE\n\nWhile generally conveying a grand foyer, prompt specified checkerboard marble floor and dark mahogany staircase — both absent. Room DNA not enforced."},{"id":"001_M05","v":"A","issue":"IDENTITY_DRIFT","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: IDENTITY_DRIFT (minor)\n\nOpulent architecture with double staircase and high ceilings — clearly HARGROVE ESTATE. Minor identity question but approved for location fidelity."},{"id":"002_E01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nConvincingly looks like a Victorian Gothic mansion with prominent arched windows and warm light strongly suggesting a library wing. Approved establishing."},{"id":"002_E02","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly embodies a grand Victorian library within an estate, with extensive bookshelves, tall windows, and warm lamplight. Approved."},{"id":"002_M01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nGrand Victorian private library with floor-to-ceiling bookshelves. Nadia's presence and posture consistent with discovery beat. Approved."},{"id":"002_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nAged books on wooden shelf consistent with HARGROVE ESTATE - LIBRARY. Good insert. Approved."},{"id":"002_M02","v":"F","issue":"MISSING_CHARACTER","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: MISSING_CHARACTER\n\nVictorian private library with mahogany bookshelves and large windows — location correct. But Nadia is absent from frame. Character was required."},{"id":"002_M03","v":"F","issue":"LOCATION_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: LOCATION_DRIFT\n\nBackground too blurry to definitively confirm Victorian private library. Cannot validate mahogany bookshelves or floor-to-ceiling shelving as specified."},{"id":"002_M04","v":"F","issue":"CONTINUITY_BREAK","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: CONTINUITY_BREAK\n\nPerfectly captures library architecture but screen position and eyeline break continuity with preceding shots. 180-degree rule violated."},{"id":"003_E01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nBay window and architecture strongly suggest a drawing room within a large Victorian estate. Good establishing shot."},{"id":"003_E02","v":"H","issue":"WRONG_ANGLE","notes":"VERDICT: HARD_REGEN\nPRIMARY_ISSUE: WRONG_ANGLE\n\nFireplace with ornate carved mantel CENTER is entirely missing — the central architectural element of the drawing room. Cannot be used."},{"id":"003_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nBlurred background showing large covered furniture effectively suggests a grand but disused Victorian drawing room. Approved."},{"id":"003_M01","v":"A","issue":"SCRIPT_FIDELITY","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: SCRIPT_FIDELITY (minor)\n\nHigh windows, ornate fireplace, draped furniture — approved for location. Minor script fidelity note: dust sheets should be more prominent per beat."},{"id":"003_M02","v":"F","issue":"WRONG_ANGLE","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: WRONG_ANGLE\n\nRoom with grand windows, fireplace, period paintings captures atmosphere but camera angle is wrong for the specified beat framing."},{"id":"003_M03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nWindows and covered furniture suggest disused Victorian drawing room. Character blocking correct. Approved."},{"id":"003_M03b","v":"N","issue":"NONE","notes":"Frame file not found in frames directory."},{"id":"003_M04","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nGrand drawing room with large fireplace, wood paneling, sheeted furniture — perfectly matches scene contract. Approved."},{"id":"003_M05","v":"F","issue":"SCRIPT_FIDELITY","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: SCRIPT_FIDELITY\n\nLocation is correct — grand faded drawing room. But required prop (specific item per beat) is missing from frame."},{"id":"004_E01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly captures HARGROVE ESTATE - GARDEN with imposing Victorian Gothic mansion and overgrown garden in foreground. Approved."},{"id":"004_E02","v":"F","issue":"WRONG_ANGLE","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: WRONG_ANGLE\n\nRusted iron, moss, and stone evoke neglected Victorian estate garden but angle is wrong — the framing doesn't match the specified wide shot."},{"id":"004_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nMoss-covered stone balustrade and wild thorny branches strongly evoke a neglected Victorian estate garden. Approved insert."},{"id":"004_M01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nStrongly evokes grand, overgrown and melancholic Victorian estate garden. Thomas's posture matches contemplation beat. Approved."},{"id":"004_M02","v":"F","issue":"IDENTITY_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: IDENTITY_DRIFT\n\nLocation convincing — stone, ivy, overgrown feel match GARDEN. But Thomas's face shows identity drift from cast_map reference."},{"id":"004_M03","v":"F","issue":"SCRIPT_FIDELITY","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: SCRIPT_FIDELITY\n\nFitting Hargrove estate garden but required prop (velvet box with ring) is not visible in frame per beat specification."},{"id":"004_M04","v":"F","issue":"STALE_POSE","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: STALE_POSE\n\nGrand overgrown garden of historic estate — correct location. But character pose is static/frozen — no weight shift or contemplative motion."},{"id":"005_E01","v":"H","issue":"LOCATION_DRIFT","notes":"VERDICT: HARD_REGEN\nPRIMARY_ISSUE: LOCATION_DRIFT\n\nUndoubtedly a master bedroom in Victorian style, but prompt explicitly requested an exterior shot of the estate. Wrong INT/EXT classification."},{"id":"005_E02","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly captures HARGROVE ESTATE - MASTER BEDROOM with ornate decor, heavy furnishings, and dimmed Victorian atmosphere. Approved."},{"id":"005_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nDark wooden furniture, mirror, heavy curtains, wall paneling strongly suggest master bedroom in Victorian estate. Approved."},{"id":"005_M01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nGrand old master bedroom within Victorian estate with heavy drapes and wooden paneling. Nadia's presence and posture match discovery beat. Approved."},{"id":"005_M02","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nOrnate four-poster bed, tapestry, large mullioned windows strongly evoke master bedroom. Character framing correct. Approved."},{"id":"005_M03","v":"F","issue":"AI_ARTIFACTS","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: AI_ARTIFACTS\n\nGrand antique furnishings and architectural details correct, but visible AI generation artifacts in frame — distorted texture near character edge."},{"id":"005_M03b","v":"N","issue":"NONE","notes":"Frame file not found in frames directory."},{"id":"005_M04","v":"F","issue":"MISSING_CHARACTER","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: MISSING_CHARACTER\n\nMaster bedroom in grand Victorian estate — location correct. But Nadia is absent. Character required per beat specification."},{"id":"006_E01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly depicts a Victorian mansion's service entrance leading to kitchen. Approved establishing shot."},{"id":"006_E02","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nConvincingly looks like a grand period-appropriate kitchen within a historic estate. Copper pots and stone walls present. Approved."},{"id":"006_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nStone walls, rustic metal rack, and copper pot style strongly suggest historical Victorian-era kitchen. Approved insert."},{"id":"006_M01","v":"H","issue":"CONTINUITY_BREAK","notes":"VERDICT: HARD_REGEN\nPRIMARY_ISSUE: CONTINUITY_BREAK\n\nStone walls, large windows, wooden table, hanging copper pots — location is correct. But Eleanor and Nadia's screen positions break the 180-degree rule established in scene 001. Hard regen required."},{"id":"006_M02","v":"A","issue":"STALE_POSE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: STALE_POSE (minor)\n\nGrand old-fashioned kitchen with fireplace and period elements. Approved despite minor pose stiffness — location and character identity strong."},{"id":"006_M03","v":"A","issue":"MISSING_PROPS","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: MISSING_PROPS (minor)\n\nKitchen with copper pots and vintage elements. Journal prop not clearly visible but approved — location and character relationship correct."},{"id":"006_M04","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nStone walls, large hearth, rustic wooden furniture, period windows — all evoke grand traditional kitchen. Character blocking and phone-call beat match. Approved."},{"id":"007_E01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly captures HARGROVE ESTATE - MASTER BEDROOM with stately yet slightly dimmed atmosphere. Approved establishing."},{"id":"007_E02","v":"F","issue":"SCRIPT_FIDELITY","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: SCRIPT_FIDELITY\n\nVictorian master bedroom ambiance with heavy drapes correct, but antique furniture arrangement doesn't match the scene-specific blocking required for this beat."},{"id":"007_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nOrnate wooden dresser, dark rich wall, and traditional window frame strongly suggest an older estate room. Approved insert detail."},{"id":"007_M01","v":"F","issue":"CONTINUITY_BREAK","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: CONTINUITY_BREAK\n\nConvincingly looks like master bedroom with appropriate architecture, but continuity break from scene 005 — room layout has shifted."},{"id":"007_M02","v":"F","issue":"IDENTITY_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: IDENTITY_DRIFT\n\nDark wood paneling, tapestry, and large window evoke grand Victorian estate. But character identity drift — face shows different bone structure than reference."},{"id":"007_M03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nAntique tapestries, ornate bed (blurred), tall window strongly evoke master bedroom. Character posture matches beat. Approved."},{"id":"007_M04","v":"F","issue":"IDENTITY_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: IDENTITY_DRIFT\n\nRoom with grand bed, tapestries, fireplace, bookshelves, large windows — perfectly evokes master bedroom. But identity drift on character's face."},{"id":"008_E01","v":"F","issue":"LOCATION_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: LOCATION_DRIFT\n\nPrompt specifically requested an exterior establishing shot of the mansion's main elevation, not an interior staircase. Wrong INT/EXT."},{"id":"008_E02","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly captures the grandeur and specific architectural elements of a Victorian grand staircase. Approved."},{"id":"008_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nNewel post consistent with grand staircase in Victorian estate. Soft background elements don't contradict location. Approved insert."},{"id":"008_M01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly captures HARGROVE ESTATE - GRAND STAIRCASE with ornate railings and grand architecture. Character blocking correct. Approved."},{"id":"008_M02","v":"F","issue":"MISSING_ITEM","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: MISSING_ITEM\n\nGrandeur and ornate detail of GRAND STAIRCASE correct. But required item (specific prop per beat) not visible in frame."},{"id":"008_M03","v":"A","issue":"IDENTITY_DRIFT","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: IDENTITY_DRIFT (minor)\n\nGrand staircase with opulent details — location correct. Minor identity question approved given strong location fidelity."},{"id":"008_M03b","v":"N","issue":"NONE","notes":"Frame file not found in frames directory."},{"id":"008_M04","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nGrand staircase within Hargrove Estate with opulent but slightly worn details. Character and location both approved."},{"id":"009_E01","v":"F","issue":"SCRIPT_FIDELITY","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: SCRIPT_FIDELITY\n\nShot depicts front drive of grand estate but HARGROVE ESTATE sign is visible — location proper name should not appear as text per T2-FE-28."},{"id":"009_E02","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly captures HARGROVE ESTATE - FRONT DRIVE with stately Victorian mansion, gravel drive, and period gatework. Approved."},{"id":"009_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nBlurred background clearly depicts grand ivy-clad stone building with pale gravel consistent with estate front drive. Approved."},{"id":"009_M01","v":"F","issue":"LOCATION_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: LOCATION_DRIFT\n\nEstate building could fit but presence of modern van and crew in background destroys period authenticity. AI contamination visible."},{"id":"009_M02","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nGrand house, imposing gates, and gravel drive strongly evoke classic estate front drive. Character arrival beat matches. Approved."},{"id":"009_M03","v":"F","issue":"IDENTITY_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: IDENTITY_DRIFT\n\nGrand entrance with ornate gates, stone pillars, and winding gravel drive — location correct. Character identity drift from reference."},{"id":"009_M03b","v":"N","issue":"NONE","notes":"Frame file not found in frames directory."},{"id":"009_M04","v":"F","issue":"STALE_POSE","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: STALE_POSE\n\nHargrove Estate front drive — location accurate. But character pose is frozen, no arrival motion or weight shift."},{"id":"010_E01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly captures HARGROVE ESTATE - DRAWING ROOM, showcasing grand Victorian Gothic mansion as seen through drawing room perspective. Approved."},{"id":"010_E02","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nGrand drawing room in Victorian estate with elaborate wood paneling, ornate ceiling, and period furniture. Approved."},{"id":"010_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nFireplace setting, stone mantelpiece, and ornate brass poker consistent with grand Victorian drawing room. Approved insert."},{"id":"010_M01","v":"F","issue":"MISSING_CHARACTER_PROP","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: MISSING_CHARACTER_PROP\n\nGrand drawing room with period architecture and furniture — location correct. But both character AND required prop are missing from frame."},{"id":"010_M02","v":"F","issue":"CONTINUITY_BREAK","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: CONTINUITY_BREAK\n\nOrnate fireplace, large window, grand architecture — drawing room location correct. Screen position of characters breaks 180-degree continuity."},{"id":"010_M03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nOpulent fireplace, tall mullioned windows, wood paneling, tapestries — strongly suggest grand drawing room. Character blocking and beat match. Approved."},{"id":"010_M04","v":"A","issue":"LOCATION_DRIFT","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: LOCATION_DRIFT (minor)\n\nWood paneling, grand fireplace, arched windows evoke drawing room. Minor location drift note but approved given overall fidelity."},{"id":"011_E01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nImposing stone mansion with Gothic elements, ivy, and prominently lit arched windows strongly suggest Victorian estate library wing. Approved."},{"id":"011_E02","v":"F","issue":"PHANTOM_PERSON","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: PHANTOM_PERSON\n\nVictorian library interior correct but an unspecified phantom figure appears in background. No character was specified for this establishing shot."},{"id":"011_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nHeavy leather-bound books, warm lighting, and implied wooden setting perfectly evoke HARGROVE ESTATE - LIBRARY. Approved insert."},{"id":"011_M01","v":"F","issue":"MISSING_CHARACTER","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: MISSING_CHARACTER\n\nGrandeur and architectural style of HARGROVE ESTATE - LIBRARY correct. Required character (Nadia) is absent from frame."},{"id":"011_M02","v":"F","issue":"IDENTITY_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: IDENTITY_DRIFT\n\nGrand old library — location convincing. Character identity drift — face in frame doesn't match Nadia's cast_map reference."},{"id":"011_M02b","v":"N","issue":"NONE","notes":"Frame file not found in frames directory."},{"id":"011_M03","v":"F","issue":"SCRIPT_FIDELITY","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: SCRIPT_FIDELITY\n\nGrand window, wooden paneling, wall of antique books — library confirmed. Beat-required action (specific discovery moment) not depicted."},{"id":"011_M04","v":"F","issue":"MISSING_CHARACTER","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: MISSING_CHARACTER\n\nGrand architecture, tall windows, wooden bookshelves, prominent fireplace — library confirmed. Character absent from frame."},{"id":"011_M04b","v":"N","issue":"NONE","notes":"Frame file not found in frames directory."},{"id":"011_M05","v":"F","issue":"IDENTITY_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: IDENTITY_DRIFT\n\nGrand old library for Hargrove Estate confirmed. Character identity drift — face doesn't match Nadia reference."},{"id":"012_E01","v":"H","issue":"LOCATION_DRIFT","notes":"VERDICT: HARD_REGEN\nPRIMARY_ISSUE: LOCATION_DRIFT\n\nGrand foyer of estate — general aesthetic present. But specific architectural DNA (checkerboard floor, dark mahogany staircase) incorrect. Hard regen required."},{"id":"012_E02","v":"H","issue":"LOCATION_DRIFT","notes":"VERDICT: HARD_REGEN\nPRIMARY_ISSUE: LOCATION_DRIFT\n\nGrand foyer aesthetic present but fails on architectural DNA specifics. Second consecutive E-shot failure for this scene — systematic location drift."},{"id":"012_E03","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nSoftly blurred background clearly shows grand staircase, patterned wallpaper, and ambient lighting consistent with GRAND FOYER. Approved."},{"id":"012_M01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nGrand staircase, elaborate lighting, classic architecture — HARGROVE ESTATE - GRAND FOYER confirmed. Character blocking correct. Approved."},{"id":"012_M02","v":"F","issue":"SCRIPT_FIDELITY","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: SCRIPT_FIDELITY\n\nGrand foyer with ornate staircase and chandelier — location correct. Beat-required dialogue action not depicted in character performance."},{"id":"012_M03","v":"F","issue":"CONTINUITY_BREAK","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: CONTINUITY_BREAK\n\nStained-glass windows, grand chandelier, dust-covered furniture — location plausible. But screen positions break continuity from earlier foyer shots (scene 001)."},{"id":"012_M04","v":"F","issue":"CONTINUITY_BREAK","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: CONTINUITY_BREAK\n\nGrand foyer with prominent staircase and classical architecture — location confirmed. Second continuity break in this scene."},{"id":"012_M05","v":"F","issue":"MISSING_CHARACTER","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: MISSING_CHARACTER\n\nOpulent wood paneling, grand staircase, stained glass, large portrait — foyer confirmed. Required character absent."},{"id":"012_M05b","v":"N","issue":"NONE","notes":"Frame file not found in frames directory."},{"id":"012_M06","v":"H","issue":"MISSING_CHARACTER","notes":"VERDICT: HARD_REGEN\nPRIMARY_ISSUE: MISSING_CHARACTER\n\nGrand imposing foyer of historic estate — location correct. Character completely absent. Scene requires both characters. Hard regen."},{"id":"013_E01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nPerfectly captures Victorian Gothic mansion viewed from iron front gates with overgrown grounds. Approved finale establishing."},{"id":"013_E02","v":"F","issue":"LOCATION_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: LOCATION_DRIFT\n\nDespite prompt text including INTERIOR WIDE SHOT, formal LOCATION specified is HARGROVE ESTATE EXTERIOR — interior shown is wrong."},{"id":"013_M01","v":"A","issue":"NONE","notes":"VERDICT: APPROVE\nPRIMARY_ISSUE: NONE\n\nGrey limestone Victorian mansion covered in ivy — perfectly fits Hargrove Estate exterior for finale. Approved."},{"id":"013_M02","v":"F","issue":"LOCATION_DRIFT","notes":"VERDICT: FLAG\nPRIMARY_ISSUE: LOCATION_DRIFT\n\nMansion and setting resemble Hargrove Estate exterior but shot depicts night or deep twilight — incorrect time of day for this beat."}];
+
+const SCENE_DATA = {
+  "001": {name:"GRAND FOYER",     a:3, f:4, r:1},
+  "002": {name:"LIBRARY",          a:4, f:3, r:0},
+  "003": {name:"DRAWING ROOM",     a:5, f:2, r:1},
+  "004": {name:"GARDEN",           a:3, f:4, r:0},
+  "005": {name:"MASTER BEDROOM",   a:4, f:2, r:1},
+  "006": {name:"KITCHEN",          a:6, f:0, r:1},
+  "007": {name:"BEDROOM (NIGHT)",  a:3, f:4, r:0},
+  "008": {name:"GRAND STAIRCASE",  a:5, f:2, r:0},
+  "009": {name:"FRONT DRIVE",      a:3, f:4, r:0},
+  "010": {name:"DRAWING ROOM II",  a:4, f:2, r:0},  // updated: 5 shots, a:4,f:2 but also 010_M01..4
+  "011": {name:"LIBRARY (NIGHT)",  a:2, f:6, r:0},
+  "012": {name:"FOYER (FINALE)",   a:2, f:4, r:3},
+  "013": {name:"EXTERIOR (CLOSE)", a:2, f:2, r:0},
+};
+
+const ORGAN_DETAILS = {
+  runner: {
+    title: "ATLAS UNIVERSAL RUNNER",
+    subtitle: "atlas_universal_runner.py — PRIMARY generation path",
+    status: "green",
+    items: [
+      {color:"#00ff88", text:"Kling v3/pro multi-prompt video wired (PRIMARY)"},
+      {color:"#00ff88", text:"End-frame chaining: shot N → shot N+1"},
+      {color:"#00ff88", text:"Beat enrichment → truth contracts → generation gate"},
+      {color:"#00ff88", text:"--frames-only / --videos-only modes operational"},
+      {color:"#00ff88", text:"Wire A budget cap (2 regens/scene) enforced"},
+      {color:"#00ff88", text:"E-shot isolation (skip Wire A for back-to-camera)"},
+      {color:"#00ff88", text:"Seedance RETIRED — all branches return kling"},
+      {color:"#00ff88", text:"LTX RETIRED — _LTXRetiredGuard raises RuntimeError"},
+      {color:"#00ff88", text:"ENV loaded before vision_judge import"},
+    ]
+  },
+  preflight: {
+    title: "SESSION ENFORCER / PREFLIGHT",
+    subtitle: "tools/session_enforcer.py — 47 checks, 0 blocks",
+    status: "green",
+    items: [
+      {color:"#00ff88", text:"47/47 invariant checks passing"},
+      {color:"#00ff88", text:"Model lock verified (Kling only, Seedance/LTX rejected)"},
+      {color:"#00ff88", text:"Vision backends checked before generation"},
+      {color:"#00ff88", text:"ENV variables validated at session start"},
+      {color:"#00ff88", text:"Wire probes use substring match (not fragile regex)"},
+    ]
+  },
+  vision: {
+    title: "VISION JUDGE",
+    subtitle: "tools/vision_judge.py — Gemini 2.5-flash + fallback chain",
+    status: "yellow",
+    items: [
+      {color:"#ffcc00", text:"Gemini 2.5-flash configured with GOOGLE_API_KEY"},
+      {color:"#ffcc00", text:"I-score normalization: 0-5 scale → 0-1 (V35 fix)"},
+      {color:"#00ff88", text:"Circuit breaker: 3 zeros → trip → fall to haiku"},
+      {color:"#00ff88", text:"Florence-2 / OpenRouter fallback chain intact"},
+      {color:"#ff8c00", text:"Real production scores unproven in current run"},
+      {color:"#ff8c00", text:"0.75 heuristic risk if ENV not loaded before import"},
+    ]
+  },
+  ui: {
+    title: "ATLAS AUTO STUDIO UI",
+    subtitle: "auto_studio_tab.html — 19/21 protected features wired",
+    status: "green",
+    items: [
+      {color:"#00ff88", text:"Thumbs Up / Thumbs Down approval system"},
+      {color:"#00ff88", text:"Shot Gallery grid layout (CSS grid, not flex)"},
+      {color:"#00ff88", text:"Auto-refresh / live hydration (atlas-ui.js)"},
+      {color:"#00ff88", text:"Image lightbox (atlasLightbox)"},
+      {color:"#00ff88", text:"Diagnostic regen 2-step flow (diagnose → regen)"},
+      {color:"#00ff88", text:"Inline video player in screening room"},
+      {color:"#00ff88", text:"Generation monitor overlay with progress"},
+      {color:"#ffcc00", text:"2 minor features partially wired"},
+    ]
+  },
+  ecc: {
+    title: "ERROR CORRECTION & CONTINUITY",
+    subtitle: "Scheduled tasks — 4 active cycles",
+    status: "green",
+    items: [
+      {color:"#00ff88", text:"Hourly: keep-up checks (session_enforcer, reward signal)"},
+      {color:"#00ff88", text:"Every 4h: proof-gate runs (generation tests, I-scoring)"},
+      {color:"#00ff88", text:"Daily: full regression suite (376+ tests)"},
+      {color:"#00ff88", text:"Learning log: check_regression() — 0 regressions"},
+    ]
+  },
+  gallery: {
+    title: "ASSET GALLERY / CLOUD STORAGE",
+    subtitle: "Google Cloud Storage — gs://temporalmovie/",
+    status: "yellow",
+    items: [
+      {color:"#00ff88", text:"GCS authenticated (cpcomm10@gmail.com)"},
+      {color:"#00ff88", text:"Image uploads functional via gsutil"},
+      {color:"#ffcc00", text:"Videos not fully pushed to GCS"},
+      {color:"#ffcc00", text:"pipeline_outputs/ partially synced"},
+    ]
+  },
+  canon: {
+    title: "STORY STATE CANON",
+    subtitle: "tools/story_state_canon.py — QA/validation layer",
+    status: "yellow",
+    items: [
+      {color:"#00ff88", text:"Module built: get_canon_state(), validate_against_canon()"},
+      {color:"#00ff88", text:"6 canon scenes defined (001-006)"},
+      {color:"#00ff88", text:"Three change types: hard_lock, canon_progression, controlled_variance"},
+      {color:"#ff8c00", text:"NOT wired to generation gate — advisory only"},
+      {color:"#ff8c00", text:"Controller not yet calling validate_scene() pre-regen"},
+    ]
+  },
+  stage5: {
+    title: "STAGE 5 — PREFRONTAL CORTEX",
+    subtitle: "story_judge.py (670 lines) + vision_analyst.py (911 lines)",
+    status: "yellow",
+    items: [
+      {color:"#00ff88", text:"story_judge: beat coverage, pacing, arc coherence"},
+      {color:"#00ff88", text:"vision_analyst: 8-dimensional visual scoring"},
+      {color:"#ffcc00", text:"Both imported as advisory — non-blocking"},
+      {color:"#ff8c00", text:"Not called at scene-close or stitch-time yet"},
+      {color:"#ff8c00", text:"Loop-back into shot regen decisions not wired"},
+    ]
+  },
+  heatmap: {
+    title: "FAILURE HEATMAP",
+    subtitle: "tools/failure_heatmap.py — V36 cybernetic control",
+    status: "green",
+    items: [
+      {color:"#00ff88", text:"Three control loops: inner/middle/outer"},
+      {color:"#00ff88", text:"Creative failures: OTS_FAIL, IDENTITY_DRIFT, LOCATION_DRIFT etc."},
+      {color:"#00ff88", text:"Operational failures: VIDEO_URL_MISSING, RUNNER_DEAD etc."},
+      {color:"#00ff88", text:"Three views: director / systems / executive"},
+      {color:"#00ff88", text:"GREEN/YELLOW/RED production readiness assessment"},
+      {color:"#00ff88", text:"OBSERVE ONLY — cannot trigger regen (Section 0)"},
+    ]
+  },
+  eye: {
+    title: "FILMMAKER'S EYE AUDIT",
+    subtitle: "FILMMAKERS_EYE_FULL_AUDIT.json — 93 shots scored",
+    status: "green",
+    items: [
+      {color:"#00ff88", text:"93 shots audited across 13 scenes"},
+      {color:"#00ff88", text:"47 APPROVE (51%) | 39 FLAG (42%) | 7 HARD_REGEN (7%)"},
+      {color:"#ff8c00", text:"Production readiness: RED at 51%"},
+      {color:"#ffcc00", text:"Top issues: IDENTITY_DRIFT, LOCATION_DRIFT, MISSING_CHARACTER"},
+      {color:"#ffcc00", text:"Scene 011 worst: 2A / 6F / 0R (29% pass)"},
+      {color:"#00ff88", text:"Scene 006 best: 6A / 0F / 1R (86% pass)"},
+    ]
+  }
+};
+
+// ── BUILD SCENE HEALTH BARS ─────────────────────────────────────────────
+function buildSceneHealthBars() {
+  const el = document.getElementById('sceneHealthBars');
+  Object.entries(SCENE_DATA).forEach(([sc, d]) => {
+    const total = d.a + d.f + d.r;
+    if (!total) return;
+    const pa = (d.a/total*100).toFixed(0);
+    const pf = (d.f/total*100).toFixed(0);
+    const pr = (d.r/total*100).toFixed(0);
+    const pct = parseInt(pa);
+    const row = document.createElement('div');
+    row.className = 'scene-health-row';
+    row.onclick = () => filterByScene(sc);
+    row.innerHTML = `
+      <span class="scene-id-lbl">${sc}</span>
+      <div class="scene-bar-outer">
+        <div class="scene-bar-a" style="width:${pa}%"></div>
+        <div class="scene-bar-f" style="width:${pf}%"></div>
+        <div class="scene-bar-r" style="width:${pr}%"></div>
+      </div>
+      <span class="scene-pct">${pct}%</span>
+    `;
+    el.appendChild(row);
+  });
+}
+
+// ── BUILD HEATMAP ───────────────────────────────────────────────────────
+let selectedCell = null;
+
+function buildHeatmap() {
+  // Group shots by scene
+  const byScene = {};
+  SHOTS.forEach(s => {
+    const sc = s.id.slice(0, 3);
+    if (!byScene[sc]) byScene[sc] = [];
+    byScene[sc].push(s);
+  });
+
+  const maxCols = Math.max(...Object.values(byScene).map(arr => arr.length));
+  const thead = document.getElementById('heatmapHead');
+  const tbody = document.getElementById('heatmapBody');
+
+  // Header
+  let hdr = '<tr><th class="scene-col">SCENE</th>';
+  for (let i = 1; i <= maxCols; i++) hdr += `<th>${i}</th>`;
+  hdr += '<th>LOCATION</th><th>✓</th><th>⚠</th><th>⛔</th></tr>';
+  thead.innerHTML = hdr;
+
+  // Rows
+  Object.entries(byScene).forEach(([sc, shots]) => {
+    const info = SCENE_DATA[sc] || {name:'', a:0, f:0, r:0};
+    let row = `<tr>`;
+    row += `<td class="scene-label">${sc}</td>`;
+    shots.forEach(shot => {
+      const cls = shot.v === 'A' ? 'cell-approve' :
+                  shot.v === 'F' ? 'cell-flag' :
+                  shot.v === 'H' ? 'cell-regen' : 'cell-na';
+      const label = shot.v === 'H' ? '⛔' : shot.v === 'N' ? '–' : shot.v;
+      const issue = shot.issue !== 'NONE' ? `<span class="issue-icon" title="${shot.issue}">!</span>` : '';
+      row += `<td>
+        <div class="shot-cell ${cls}" id="cell_${shot.id}"
+             onclick="selectShot('${shot.id}')"
+             onmouseenter="showTip(event,'${shot.id}')"
+             onmouseleave="hideTip()">
+          ${label}${issue}
+        </div>
+      </td>`;
+    });
+    // Pad empty cols
+    for (let i = shots.length; i < maxCols; i++) row += `<td></td>`;
+    row += `<td style="font-size:9px;color:var(--text-dim);white-space:nowrap;padding-left:8px">${info.name}</td>`;
+    row += `<td style="color:var(--green);font-family:'Orbitron';font-size:9px">${info.a}</td>`;
+    row += `<td style="color:var(--yellow);font-family:'Orbitron';font-size:9px">${info.f}</td>`;
+    row += `<td style="color:var(--red);font-family:'Orbitron';font-size:9px">${info.r}</td>`;
+    row += '</tr>';
+    tbody.innerHTML += row;
+  });
+}
+
+// ── SHOT SELECTION ──────────────────────────────────────────────────────
+function selectShot(id) {
+  if (selectedCell) {
+    const prev = document.getElementById('cell_' + selectedCell);
+    if (prev) prev.classList.remove('selected');
+  }
+  selectedCell = id;
+  const cell = document.getElementById('cell_' + id);
+  if (cell) cell.classList.add('selected');
+
+  const shot = SHOTS.find(s => s.id === id);
+  if (!shot) return;
+
+  document.getElementById('detailEmpty').style.display = 'none';
+  document.getElementById('detailContent').style.display = 'block';
+  document.getElementById('dShotId').textContent = shot.id;
+
+  const vDict = {A:'APPROVE', F:'FLAG', H:'HARD REGEN', N:'NOT FOUND'};
+  const vClass = {A:'dv-approve', F:'dv-flag', H:'dv-regen', N:'dv-na'};
+  const dv = document.getElementById('dVerdict');
+  dv.textContent = vDict[shot.v] || shot.v;
+  dv.className = 'detail-verdict ' + (vClass[shot.v] || 'dv-na');
+  document.getElementById('dIssue').textContent = shot.issue !== 'NONE' ? '• ' + shot.issue.replace(/_/g,' ') : '';
+  document.getElementById('dNotes').textContent = shot.notes;
+}
+
+// ── TOOLTIP ─────────────────────────────────────────────────────────────
+const tt = document.getElementById('tooltip');
+function showTip(e, id) {
+  const shot = SHOTS.find(s => s.id === id);
+  if (!shot) return;
+  const vDict = {A:'✅ APPROVE', F:'⚠ FLAG', H:'⛔ HARD REGEN', N:'– NOT FOUND'};
+  document.getElementById('ttShot').textContent = shot.id;
+  document.getElementById('ttVerdict').textContent = vDict[shot.v] || shot.v;
+  document.getElementById('ttIssue').textContent = shot.issue !== 'NONE' ? shot.issue.replace(/_/g,' ') : '';
+  document.getElementById('ttNotes').textContent = shot.notes.slice(0, 120) + (shot.notes.length > 120 ? '…' : '');
+  tt.style.left = (e.clientX + 12) + 'px';
+  tt.style.top = (e.clientY - 10) + 'px';
+  tt.classList.add('visible');
+}
+function hideTip() { tt.classList.remove('visible'); }
+document.addEventListener('mousemove', e => {
+  if (tt.classList.contains('visible')) {
+    tt.style.left = (e.clientX + 12) + 'px';
+    tt.style.top = (e.clientY - 10) + 'px';
+  }
+});
+
+// ── ORGAN DETAIL ─────────────────────────────────────────────────────────
+function showOrganDetail(key) {
+  const d = ORGAN_DETAILS[key];
+  if (!d) return;
+  document.getElementById('opTitle').textContent = d.title;
+  document.getElementById('opSubtitle').textContent = d.subtitle;
+  const container = document.getElementById('opItems');
+  container.innerHTML = d.items.map(item =>
+    `<div class="op-item">
+      <div class="op-item-dot" style="background:${item.color}"></div>
+      <div class="op-item-text">${item.text}</div>
+    </div>`
+  ).join('');
+  document.getElementById('organPopup').classList.add('visible');
+}
+function closeOrganDetail(e) {
+  if (e.target === document.getElementById('organPopup')) {
+    document.getElementById('organPopup').classList.remove('visible');
+  }
+}
+
+// ── FILTER BY SCENE (click health bar) ──────────────────────────────────
+function filterByScene(sc) {
+  // Scroll to scene row in heatmap
+  const cells = document.querySelectorAll(`[id^="cell_${sc}_"]`);
+  if (cells.length > 0) {
+    cells[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+    // Flash the row
+    cells.forEach(c => {
+      c.style.outline = '2px solid var(--gold)';
+      setTimeout(() => c.style.outline = '', 1200);
+    });
+  }
+}
+
+// ── CLOCK ───────────────────────────────────────────────────────────────
+function updateClock() {
+  const now = new Date();
+  document.getElementById('clockDisplay').textContent =
+    now.toLocaleTimeString('en-US', {hour12: false}) + ' LOCAL';
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// ── INIT ─────────────────────────────────────────────────────────────────
+buildSceneHealthBars();
+buildHeatmap();
+</script>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS Director - Phase 8.7</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-left: 15px;
+        }
+
+        .status-badge.connected {
+            background: #10b981;
+            color: white;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checkbox-item:hover {
+            border-color: #667eea;
+            background: #f9fafb;
+        }
+
+        .checkbox-item input {
+            margin-right: 10px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .movie-list {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .movie-card {
+            background: #f9fafb;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+
+        .movie-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .movie-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .movie-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .movie-status {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-generating {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .status-completed {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .movie-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .movie-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .movie-actions .btn {
+            width: auto;
+            padding: 8px 16px;
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-width: 400px;
+            z-index: 1000;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .notification.success {
+            border-left: 4px solid #10b981;
+        }
+
+        .notification.error {
+            border-left: 4px solid #ef4444;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f4f6;
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h1>🎬 ATLAS Director</h1>
+                    <p class="subtitle">Phase 8.7 Production-Ready Loop • AI Movie Generation</p>
+                </div>
+                <span id="connectionStatus" class="status-badge">Connecting...</span>
+            </div>
+        </div>
+
+        <div class="grid">
+            <!-- Left Column: Create Movie -->
+            <div class="card">
+                <h2>Create New Movie</h2>
+                <form id="createMovieForm">
+                    <div class="form-group">
+                        <label for="title">Movie Title</label>
+                        <input type="text" id="title" name="title" placeholder="Enter movie title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="concept">Script Concept</label>
+                        <textarea id="concept" name="concept" placeholder="Describe your movie idea, key scenes, and dialogue..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="characters">Characters</label>
+                        <textarea id="characters" name="characters" placeholder="Describe your characters (e.g., 'Captain Elena Torres - Hispanic woman, 40s, NASA flight suit; Dr. James Park - Korean man, 50s, scientist')" required></textarea>
+                        <small style="color: #666; font-size: 12px;">✨ Describe ANY characters you want! System is fully flexible - no limitations.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genre">Genre</label>
+                        <select id="genre" name="genre" required>
+                            {% for key, desc in genre_suggestions.items() %}
+                            <option value="{{ key }}">{{ key.replace('-', ' ').title() }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numScenes">Number of Scenes</label>
+                        <input type="number" id="numScenes" name="numScenes" min="1" max="10" value="3">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <span id="createBtnText">Create Movie</span>
+                        <span id="createBtnLoading" class="loading" style="display: none;"></span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Column: Active Movies -->
+            <div class="card">
+                <h2>Your Movies</h2>
+                <div id="movieList" class="movie-list">
+                    <p style="text-align: center; color: #999;">No movies yet. Create your first one!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Socket.IO connection
+        const socket = io();
+
+        socket.on('connect', () => {
+            document.getElementById('connectionStatus').textContent = 'Connected';
+            document.getElementById('connectionStatus').className = 'status-badge connected';
+            loadMovies();
+        });
+
+        socket.on('disconnect', () => {
+            document.getElementById('connectionStatus').textContent = 'Disconnected';
+            document.getElementById('connectionStatus').className = 'status-badge';
+        });
+
+        // Real-time updates
+        socket.on('movie_created', (data) => {
+            showNotification(`Movie "${data.title}" created!`, 'success');
+            loadMovies();
+        });
+
+        socket.on('image_generation_started', (data) => {
+            showNotification('Image generation started', 'success');
+            loadMovies();
+        });
+
+        socket.on('video_generation_started', (data) => {
+            showNotification('Video generation started', 'success');
+            loadMovies();
+        });
+
+        socket.on('movie_completed', (data) => {
+            showNotification(`Movie completed! ${data.cut_type} cut ready`, 'success');
+            loadMovies();
+        });
+
+        // Create movie form
+        document.getElementById('createMovieForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            // Get character descriptions (now a text field)
+            const charactersText = formData.get('characters').trim();
+
+            if (!charactersText) {
+                showNotification('Please describe at least one character', 'error');
+                return;
+            }
+
+            // Split by semicolon or comma to create character list
+            const characters = charactersText.split(/[;,]/).map(c => c.trim()).filter(c => c);
+
+            const data = {
+                title: formData.get('title'),
+                concept: formData.get('concept'),
+                characters: characters,
+                genre: formData.get('genre'),
+                num_scenes: parseInt(formData.get('numScenes'))
+            };
+
+            // Show loading
+            document.getElementById('createBtnText').style.display = 'none';
+            document.getElementById('createBtnLoading').style.display = 'inline-block';
+            form.querySelector('button').disabled = true;
+
+            try {
+                const response = await fetch('/api/create-movie', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showNotification('Movie creation started!', 'success');
+                    form.reset();
+                    loadMovies();
+                } else {
+                    showNotification('Error: ' + result.error, 'error');
+                }
+            } catch (error) {
+                showNotification('Network error: ' + error.message, 'error');
+            } finally {
+                // Hide loading
+                document.getElementById('createBtnText').style.display = 'inline';
+                document.getElementById('createBtnLoading').style.display = 'none';
+                form.querySelector('button').disabled = false;
+            }
+        });
+
+        // Load movies list
+        async function loadMovies() {
+            try {
+                const response = await fetch('/api/movies');
+                const data = await response.json();
+
+                const movieList = document.getElementById('movieList');
+
+                if (data.movies.length === 0) {
+                    movieList.innerHTML = '<p style="text-align: center; color: #999;">No movies yet. Create your first one!</p>';
+                    return;
+                }
+
+                movieList.innerHTML = data.movies.map(movie => `
+                    <div class="movie-card">
+                        <div class="movie-header">
+                            <div class="movie-title">${movie.title}</div>
+                            <div class="movie-status status-${movie.status.split('_')[0]}">${movie.status.replace('_', ' ')}</div>
+                        </div>
+                        <div class="movie-meta">
+                            <span>🎬 ${movie.num_scenes} scenes</span>
+                            <span>📅 ${new Date(movie.created_at).toLocaleString()}</span>
+                        </div>
+                        <div class="movie-actions">
+                            ${movie.status === 'manifest_generation' ? '<button class="btn btn-secondary" onclick="generateImages(\'' + movie.movie_id + '\')">Generate Images</button>' : ''}
+                            ${movie.status === 'generating_images' ? '<button class="btn btn-secondary" disabled><span class="loading"></span> Generating...</button>' : ''}
+                            ${movie.status === 'images_complete' ? '<button class="btn btn-secondary" onclick="generateVideos(\'' + movie.movie_id + '\')">Generate Videos</button>' : ''}
+                            ${movie.status === 'generating_videos' ? '<button class="btn btn-secondary" disabled><span class="loading"></span> Generating Videos...</button>' : ''}
+                            ${movie.status === 'videos_complete' ? '<button class="btn btn-primary" onclick="stitchMovie(\'' + movie.movie_id + '\')">Stitch Final Cut</button>' : ''}
+                            ${movie.final_video ? '<button class="btn btn-primary" onclick="downloadMovie(\'' + movie.movie_id + '\', \'' + movie.final_video + '\')">Download</button>' : ''}
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading movies:', error);
+            }
+        }
+
+        // Action buttons
+        async function generateImages(movieId) {
+            try {
+                const response = await fetch(`/api/movie/${movieId}/generate-images`, {
+                    method: 'POST'
+                });
+                const result = await response.json();
+                if (result.success) {
+                    showNotification('Image generation started', 'success');
+                    loadMovies();
+                }
+            } catch (error) {
+                showNotification('Error: ' + error.message, 'error');
+            }
+        }
+
+        async function generateVideos(movieId) {
+            const budget = prompt('Enter budget per scene (USD):', '16');
+            if (!budget) return;
+
+            try {
+                const response = await fetch(`/api/movie/${movieId}/generate-videos`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({budget_usd: parseFloat(budget)})
+                });
+                const result = await response.json();
+                if (result.success) {
+                    showNotification('Video generation started', 'success');
+                    loadMovies();
+                }
+            } catch (error) {
+                showNotification('Error: ' + error.message, 'error');
+            }
+        }
+
+        async function stitchMovie(movieId) {
+            const cutType = prompt('Cut type (master/highlight/directors_cut):', 'master');
+            if (!cutType) return;
+
+            try {
+                const response = await fetch(`/api/movie/${movieId}/stitch`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({cut_type: cutType})
+                });
+                const result = await response.json();
+                if (result.success) {
+                    showNotification('Movie stitched successfully!', 'success');
+                    loadMovies();
+                }
+            } catch (error) {
+                showNotification('Error: ' + error.message, 'error');
+            }
+        }
+
+        function downloadMovie(movieId, filename) {
+            window.location.href = `/api/movie/${movieId}/download/${filename}`;
+        }
+
+        // Notification system
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 5000);
+        }
+
+        // Auto-refresh movies every 5 seconds
+        setInterval(loadMovies, 5000);
+    </script>
+</body>
+</html>

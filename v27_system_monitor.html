@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>ATLAS V27.1 System Monitor</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a1a;color:#e0e0e0;font-family:'Segoe UI',system-ui,sans-serif;padding:20px}
+.header{text-align:center;padding:20px 0;border-bottom:1px solid #1a1a3e;margin-bottom:20px}
+.header h1{color:#00ff88;font-size:28px;letter-spacing:2px}
+.header .sub{color:#888;font-size:13px;margin-top:5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:24px}
+.card{background:#111128;border:1px solid #1a1a3e;border-radius:8px;padding:16px}
+.card h3{color:#4488ff;font-size:14px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
+.stat{text-align:center}
+.stat .val{font-size:36px;font-weight:700;color:#00ff88}
+.stat .label{font-size:12px;color:#888;margin-top:4px}
+.stat.warn .val{color:#ffaa00}
+.stat.fail .val{color:#ff4444}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:#4488ff;padding:8px;border-bottom:1px solid #1a1a3e;font-size:11px;text-transform:uppercase}
+td{padding:8px;border-bottom:1px solid #0d0d20}
+.section{margin-bottom:24px}
+.section h2{color:#fff;font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #1a1a3e}
+.badge{display:inline-block;padding:2px 10px;border-radius:3px;font-size:11px;font-weight:600}
+.badge-green{background:#00ff8833;color:#00ff88}
+.badge-yellow{background:#ffaa0033;color:#ffaa00}
+.badge-red{background:#ff444433;color:#ff4444}
+.model-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #0d0d20}
+.model-row .name{color:#e0e0e0}.model-row .id{color:#888;font-size:12px}
+</style></head>
+<body>
+<div class="header">
+    <h1>ATLAS V27.1 SYSTEM MONITOR</h1>
+    <div class="sub">Victorian Shadows EP1 | Generated 2026-03-16 10:00:52 | Model Lock V27.1</div>
+</div>
+
+<!-- Top Stats -->
+<div class="grid">
+    <div class="card stat"><div class="val">148</div><div class="label">Total Shots</div></div>
+    <div class="card stat"><div class="val">13</div><div class="label">Scenes</div></div>
+    <div class="card stat"><div class="val">8</div><div class="label">Characters</div></div>
+    <div class="card stat"><div class="val">21</div><div class="label">Character Refs</div></div>
+    <div class="card stat"><div class="val">31</div><div class="label">Location Masters</div></div>
+    <div class="card stat"><div class="val">151</div><div class="label">First Frames</div></div>
+    <div class="card stat"><div class="val">15</div><div class="label">Videos</div></div>
+    <div class="card stat"><div class="val">ON</div><div class="label">Vision Stack</div></div>
+</div>
+
+<!-- Model Lock -->
+<div class="section">
+    <h2>Model Lock Status</h2>
+    <div class="card">
+        <div class="model-row"><span class="name">First Frame</span><span class="id badge badge-green">fal-ai/nano-banana-pro</span></div>
+        <div class="model-row"><span class="name">Character Edit</span><span class="id badge badge-green">fal-ai/nano-banana-pro/edit</span></div>
+        <div class="model-row"><span class="name">Video (Primary)</span><span class="id badge badge-green">fal-ai/ltx-2.3/image-to-video/fast</span></div>
+        <div class="model-row"><span class="name">Video (Alt - Kling 3.0)</span><span class="id badge badge-yellow">fal-ai/kling-video/v3/pro/image-to-video</span></div>
+        <div class="model-row"><span class="name">Stitch</span><span class="id badge badge-green">ffmpeg</span></div>
+    </div>
+</div>
+
+<!-- Audit Status -->
+<div class="section">
+    <h2>Last Audit</h2>
+    <div class="grid">
+        <div class="card stat"><div class="val">0</div><div class="label">Critical Issues</div></div>
+        <div class="card stat warn"><div class="val">36</div><div class="label">Warnings</div></div>
+        <div class="card stat"><div class="val">1312</div><div class="label">Doctrine Entries</div></div>
+    </div>
+</div>
+
+<!-- Scene 001 Render Plan -->
+<div class="section">
+    <h2>Scene 001 Render Strategy</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Probe Shot</h3>
+            <div style="font-size:20px;color:#00ff88;margin-bottom:8px">001_005B</div>
+            <div style="font-size:12px;color:#888">over_the_shoulder | THOMAS BLACKWOOD, ELEANOR VOSS</div>
+            <div style="font-size:12px;color:#ffaa00;margin-top:4px">Dialogue: Yes</div>
+        </div>
+        <div class="card">
+            <h3>Cost Estimate</h3>
+            <div style="font-size:14px;margin-bottom:4px">First Frames: <span style="color:#00ff88">$2.70</span></div>
+            <div style="font-size:14px;margin-bottom:4px">Video Gen: <span style="color:#00ff88">$1.92</span></div>
+            <div style="font-size:14px;margin-bottom:4px">Probe Only: <span style="color:#ffaa00">$0.45</span></div>
+            <div style="font-size:16px;margin-top:8px;color:#fff">Scene Total: <span style="color:#00ff88">$4.62</span></div>
+        </div>
+        <div class="card">
+            <h3>Enrichment</h3>
+            <div style="font-size:20px;color:#00ff88">12/12</div>
+            <div style="font-size:12px;color:#888">shots with DP ref packs</div>
+            <div style="font-size:14px;color:#00ff88;margin-top:8px">READY</div>
+        </div>
+    </div>
+</div>
+
+<!-- Character Refs -->
+<div class="section">
+    <h2>Character Reference Status</h2>
+    <div class="card">
+        <table><tr><th>Character</th><th>Status</th><th>Generation Prompt</th></tr>
+<tr><td>NADIA COLE</td><td><span style='color:#00ff88'>VALIDATED</span></td><td style='font-size:11px;opacity:0.7'>Cinematic portrait photograph. young woman, 28, da...</td></tr>
+<tr><td>THOMAS BLACKWOOD</td><td><span style='color:#00ff88'>VALIDATED</span></td><td style='font-size:11px;opacity:0.7'>Cinematic portrait photograph. man, 62, distinguis...</td></tr>
+<tr><td>RAYMOND CROSS</td><td><span style='color:#00ff88'>VALIDATED</span></td><td style='font-size:11px;opacity:0.7'>Cinematic portrait photograph. man, 45, stocky bui...</td></tr>
+<tr><td>HARRIET HARGROVE</td><td><span style='color:#00ff88'>VALIDATED</span></td><td style='font-size:11px;opacity:0.7'>Cinematic portrait photograph. stern woman in Vict...</td></tr>
+<tr><td>ELEANOR VOSS</td><td><span style='color:#00ff88'>VALIDATED</span></td><td style='font-size:11px;opacity:0.7'>Cinematic portrait photograph. woman, 34, sharp fe...</td></tr>
+
+        </table>
+    </div>
+</div>
+
+<!-- Scene Overview -->
+<div class="section">
+    <h2>All Scenes Overview</h2>
+    <div class="card">
+        <table><tr><th>Scene</th><th>Shots</th><th>Dialogue</th><th>Characters</th><th>Enrichment</th></tr>
+<tr><td>001</td><td>12</td><td>7</td><td>2</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>002</td><td>8</td><td>4</td><td>1</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>003</td><td>13</td><td>8</td><td>2</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>004</td><td>9</td><td>2</td><td>2</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>005</td><td>8</td><td>2</td><td>2</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>006</td><td>13</td><td>9</td><td>3</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>007</td><td>11</td><td>6</td><td>2</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>008</td><td>10</td><td>4</td><td>2</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>009</td><td>12</td><td>8</td><td>2</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>010</td><td>14</td><td>10</td><td>2</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>011</td><td>15</td><td>11</td><td>2</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>012</td><td>18</td><td>14</td><td>3</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+<tr><td>013</td><td>5</td><td>0</td><td>0</td><td><div style='background:#1a1a2e;border-radius:4px;overflow:hidden'><div style='width:100%;background:#00ff88;height:18px;text-align:center;font-size:11px;line-height:18px'>100%</div></div></td></tr>
+
+        </table>
+    </div>
+</div>
+
+<!-- Chain Classifications (Scene 001) -->
+<div class="section">
+    <h2>Scene 001 Chain Classifications</h2>
+    <div class="card">
+        <table><tr><th>Shot</th><th>Classification</th><th>Source</th><th>Reason</th></tr>
+<tr><td>001_001A</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>anchor</span></td><td style='font-size:11px'>fresh</td><td style='font-size:11px;opacity:0.7'>First shot in scene — anchor</td></tr>
+<tr><td>001_002B</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>location_master</td><td style='font-size:11px;opacity:0.7'>B-roll independent render</td></tr>
+<tr><td>001_003B</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>approved_endframe</td><td style='font-size:11px;opacity:0.7'>B-roll montage continuation (independent render, end-frame a</td></tr>
+<tr><td>001_004B</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>canonical_pack</td><td style='font-size:11px;opacity:0.7'>V27.1 parallel: self-contained (ref pack + enriched prompt, </td></tr>
+<tr><td>001_005B</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>canonical_pack</td><td style='font-size:11px;opacity:0.7'>V27.1 parallel: self-contained (ref pack + enriched prompt, </td></tr>
+<tr><td>001_006B</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>canonical_pack</td><td style='font-size:11px;opacity:0.7'>V27.1 parallel: self-contained (ref pack + enriched prompt, </td></tr>
+<tr><td>001_007B</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>canonical_pack</td><td style='font-size:11px;opacity:0.7'>V27.1 parallel: self-contained (ref pack + enriched prompt, </td></tr>
+<tr><td>001_008B</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>canonical_pack</td><td style='font-size:11px;opacity:0.7'>V27.1 parallel: self-contained (ref pack + enriched prompt, </td></tr>
+<tr><td>001_009B</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>canonical_pack</td><td style='font-size:11px;opacity:0.7'>V27.1 parallel: self-contained (ref pack + enriched prompt, </td></tr>
+<tr><td>001_010B</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>canonical_pack</td><td style='font-size:11px;opacity:0.7'>V27.1 parallel: self-contained (ref pack + enriched prompt, </td></tr>
+<tr><td>001_011C</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>canonical_pack</td><td style='font-size:11px;opacity:0.7'>V27.1 parallel: self-contained (ref pack + enriched prompt, </td></tr>
+<tr><td>001_012A</td><td><span style='background:#ff4444;color:#000;padding:2px 8px;border-radius:3px;font-size:11px'>independent_parallel</span></td><td style='font-size:11px'>canonical_pack</td><td style='font-size:11px;opacity:0.7'>V27.1 parallel: self-contained (ref pack + enriched prompt, </td></tr>
+
+        </table>
+    </div>
+</div>
+
+<!-- System Health -->
+<div class="section">
+    <h2>System Health Checklist</h2>
+    <div class="card">
+        <table>
+        <tr><td>Model Lock</td><td><span class='badge badge-green'>ENFORCED</span></td></tr>
+        <tr><td>Cast Map</td><td><span class='badge badge-green'>5/5 VALIDATED</span></td></tr>
+        <tr><td>Character Refs</td><td><span class='badge badge-green'>21 ON DISK</span></td></tr>
+        <tr><td>Location Masters</td><td><span class='badge badge-green'>31 ON DISK</span></td></tr>
+        <tr><td>Scene 001 Enrichment</td><td><span class='badge badge-green'>12/12</span></td></tr>
+        <tr><td>Scenes 002-013</td><td><span class='badge badge-red'>0 UNENRICHED</span></td></tr>
+        <tr><td>Vision Stack (torch)</td><td><span class='badge badge-green'>INSTALLED</span></td></tr>
+        <tr><td>Audit (Critical)</td><td><span class='badge badge-green'>0 CRITICAL</span></td></tr>
+        <tr><td>Doctrine Ledger</td><td><span class='badge badge-green'>1312 ENTRIES</span></td></tr>
+        </table>
+    </div>
+</div>
+
+<div style='text-align:center;padding:20px;color:#444;font-size:11px'>
+    ATLAS V27.1 | Dual Authority: Orchestrator (EXECUTION) + Film Engine (PROMPT) | Doctrine governs all 4 hooks
+</div>
+</body></html>

@@ -1,0 +1,48 @@
+================================================================================
+MARCUS REFERENCE ANALYSIS - DINOv3
+================================================================================
+
+Best Marcus Reference: 002_marcus_understanding.jpg
+Combined Score: 81.27%
+Quality: 82.53%
+Consistency: 80.00%
+Face Sharpness: 100.00%
+
+Full Ranking:
+--------------------------------------------------------------------------------
+1. 002_marcus_understanding.jpg
+   Score: 81.27% | Quality: 82.53% | Consistency: 80.00%
+   Face Sharpness: 100.00% | Blurred: False
+
+2. 004_marcus_post_power.jpg
+   Score: 75.31% | Quality: 70.62% | Consistency: 80.00%
+   Face Sharpness: 100.00% | Blurred: False
+
+3. 005_marcus_tests_field.jpg
+   Score: 74.02% | Quality: 68.04% | Consistency: 80.00%
+   Face Sharpness: 47.36% | Blurred: True
+
+4. 005_marcus_reaction.jpg
+   Score: 69.52% | Quality: 59.04% | Consistency: 80.00%
+   Face Sharpness: 62.36% | Blurred: False
+
+5. 002_L_marcus_stands.jpg
+   Score: 64.72% | Quality: 49.43% | Consistency: 80.00%
+   Face Sharpness: 10.03% | Blurred: True
+
+6. 002_H_marcus_sits_up.jpg
+   Score: 64.66% | Quality: 49.33% | Consistency: 80.00%
+   Face Sharpness: 28.58% | Blurred: True
+
+7. 002_E_marcus_sleeping.jpg
+   Score: 61.42% | Quality: 42.84% | Consistency: 80.00%
+   Face Sharpness: 29.93% | Blurred: True
+
+8. 002_G_marcus_eyes_open.jpg
+   Score: 61.40% | Quality: 42.79% | Consistency: 80.00%
+   Face Sharpness: 4.05% | Blurred: True
+
+9. 002_J_marcus_realization.jpg
+   Score: 57.74% | Quality: 35.48% | Consistency: 80.00%
+   Face Sharpness: 21.81% | Blurred: True
+

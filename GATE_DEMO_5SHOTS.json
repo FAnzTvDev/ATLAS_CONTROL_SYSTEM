@@ -1,0 +1,74 @@
+{
+    "episode_title": "Gatekeeper Demo - Enhanced Continuity Test",
+    "episode_number": 1,
+    "episode_theme": "Testing enhanced continuity system",
+    "story_bible_reference": "blackwood_story_bible.json",
+    "scenes": [
+        {
+            "scene_number": 1,
+            "scene_id": "GATE_DEMO",
+            "scene_title": "CONTINUITY TEST - 5 SHOTS",
+            "location": "Exterior - Front Gates - Dusk",
+            "time": "Dusk",
+            "characters_present": [
+                "Eleanor Vance"
+            ],
+            "runtime_seconds": 40,
+            "beats": [
+                {
+                    "beat_number": 1,
+                    "beat": "Eleanor arrives",
+                    "description": "Eleanor approaches gates",
+                    "duration_seconds": 40
+                }
+            ],
+            "shots": [
+                {
+                    "shot_id": "DEMO_001",
+                    "type": "wide",
+                    "duration": 8,
+                    "camera": "14mm ultra-wide",
+                    "description": "[MASTER SHOT] Extreme wide: dark blue sedan approaches towering Victorian iron gates (20ft tall, rusty black, raven motifs). Gates foreground, Blackwood Manor silhouette in fog background. Dusk blue hour 5600K, fog density 0.9, exposure -0.5 stops. Car stops 20 feet from gates.",
+                    "image_prompt": "[MASTER SHOT] Extreme wide: dark blue sedan approaches towering Victorian iron gates (20ft tall, rusty black, raven motifs). Gates foreground, Blackwood Manor silhouette in fog background. Dusk blue hour 5600K, fog density 0.9, exposure -0.5 stops. Car stops 20 feet from gates.",
+                    "reference_needed": null
+                },
+                {
+                    "shot_id": "DEMO_002",
+                    "type": "medium",
+                    "duration": 6,
+                    "camera": "50mm medium",
+                    "description": "[CONTINUITY: Car position EXACTLY matches DEMO_001] Medium through windshield: Eleanor (pale skin, auburn hair in bun, wire-frame glasses, long dark coat) gripping steering wheel. Dashboard glow 3200K uplights face. Rain droplets on windshield. Dusk blue 5600K outside. Same car position as DEMO_001.",
+                    "image_prompt": "[CONTINUITY: Car position EXACTLY matches DEMO_001] Medium through windshield: Eleanor (pale skin, auburn hair in bun, wire-frame glasses, long dark coat) gripping steering wheel. Dashboard glow 3200K uplights face. Rain droplets on windshield. Dusk blue 5600K outside. Same car position as DEMO_001.",
+                    "reference_needed": "Eleanor Vance"
+                },
+                {
+                    "shot_id": "DEMO_003",
+                    "type": "closeup",
+                    "duration": 5,
+                    "camera": "85mm portrait",
+                    "description": "[CONTINUITY: Same dashboard lighting as DEMO_002] Close-up Eleanor's face: eyes wide behind glasses, hope shifting to unease. Dashboard glow 3200K from below. Shallow f/1.8. Wire-frame glasses catching light. Same lighting as DEMO_002.",
+                    "image_prompt": "[CONTINUITY: Same dashboard lighting as DEMO_002] Close-up Eleanor's face: eyes wide behind glasses, hope shifting to unease. Dashboard glow 3200K from below. Shallow f/1.8. Wire-frame glasses catching light. Same lighting as DEMO_002.",
+                    "reference_needed": "Eleanor Vance"
+                },
+                {
+                    "shot_id": "DEMO_004",
+                    "type": "wide",
+                    "duration": 7,
+                    "camera": "24mm wide",
+                    "description": "[CONTINUITY: Car screen left, gates screen right - EXACT DEMO_001 geography] Wide: Eleanor exits car (driver side), stands beside open door. Dark blue sedan screen left. Victorian gates screen right. Fog swirls at feet. Long dark coat, cream envelope. Dusk blue 5600K, fog 0.9. Matches DEMO_001 spatial layout.",
+                    "image_prompt": "[CONTINUITY: Car screen left, gates screen right - EXACT DEMO_001 geography] Wide: Eleanor exits car (driver side), stands beside open door. Dark blue sedan screen left. Victorian gates screen right. Fog swirls at feet. Long dark coat, cream envelope. Dusk blue 5600K, fog 0.9. Matches DEMO_001 spatial layout.",
+                    "reference_needed": "Eleanor Vance"
+                },
+                {
+                    "shot_id": "DEMO_005",
+                    "type": "medium",
+                    "duration": 6,
+                    "camera": "50mm medium dolly",
+                    "description": "[CONTINUITY: Eleanor walks from DEMO_004 position, same coat/envelope/lighting] Medium: Eleanor walks toward gates, coat billowing. Camera dollies with her center frame. Gates loom larger. Hand reaches toward intercom button (screen right). Same dark coat, envelope in left hand. Dusk blue 5600K, fog 0.9. Continues from DEMO_004.",
+                    "image_prompt": "[CONTINUITY: Eleanor walks from DEMO_004 position, same coat/envelope/lighting] Medium: Eleanor walks toward gates, coat billowing. Camera dollies with her center frame. Gates loom larger. Hand reaches toward intercom button (screen right). Same dark coat, envelope in left hand. Dusk blue 5600K, fog 0.9. Continues from DEMO_004.",
+                    "reference_needed": "Eleanor Vance"
+                }
+            ]
+        }
+    ]
+}

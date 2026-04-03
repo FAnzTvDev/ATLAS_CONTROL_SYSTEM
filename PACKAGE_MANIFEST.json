@@ -1,0 +1,100 @@
+{
+  "name": "atlas-control-system",
+  "version": "13.3.0",
+  "description": "Autonomous AI-powered movie/TV production pipeline",
+  "release_date": "2026-01-20",
+  
+  "completion_status": {
+    "overall": "85%",
+    "backend": "95%",
+    "validation": "90%",
+    "ui_integration": "70%",
+    "testing": "60%",
+    "documentation": "80%"
+  },
+
+  "core_files": {
+    "server": "orchestrator_server.py",
+    "parser": "UNIVERSAL_SCRIPT_PARSER.py",
+    "validation_context": "SIMULATION_CONTEXT.py",
+    "validation_gates": "SIMULATION_GATES.py",
+    "llm_integration": "LOCAL_LLM_INTEGRATION.py",
+    "renderer": "nano_banana_executor.py"
+  },
+
+  "data_files": {
+    "ai_actors": "ai_actors_library.json",
+    "directors": "directors_library.json",
+    "writers": "writers_library.json"
+  },
+
+  "documentation": {
+    "ai_instructions": "CLAUDE.md",
+    "expert_assessment": "EXPERT_ASSESSMENT_PACKAGE.md",
+    "quick_start": "QUICK_START_GUIDE.md",
+    "changelog": "CHANGELOG_V13.md",
+    "testing": "HOW_TO_TEST.md"
+  },
+
+  "tests": {
+    "unit_tests": "tests/test_story_bible_parser.py",
+    "validation_tests": "TEST_PARSER_VALIDATION.py",
+    "test_count": 13,
+    "test_status": "PASSING"
+  },
+
+  "dependencies": {
+    "python": ">=3.11",
+    "fastapi": ">=0.100.0",
+    "fal_client": "required",
+    "ollama": "optional (for LLM features)"
+  },
+
+  "api_keys_required": [
+    "FAL_KEY"
+  ],
+
+  "api_keys_optional": [
+    "ANTHROPIC_API_KEY",
+    "OPENAI_API_KEY"
+  ],
+
+  "known_issues": [
+    {
+      "id": "UI-001",
+      "severity": "high",
+      "description": "UI does not enforce gate blocking",
+      "status": "documented",
+      "workaround": "Manual validation via API"
+    },
+    {
+      "id": "LLM-001",
+      "severity": "medium",
+      "description": "LLM features require manual Ollama start",
+      "status": "documented",
+      "workaround": "Run 'ollama serve' before starting"
+    },
+    {
+      "id": "TEMP-001",
+      "severity": "medium",
+      "description": "TemporalGate often reports NO_DURATION",
+      "status": "investigating",
+      "workaround": "Manual duration review"
+    }
+  ],
+
+  "todo_for_completion": [
+    "Wire UI to respect /health/artifact staleness",
+    "Wire UI to check /health/gates before enable",
+    "Block render button on CRITICAL validation issues",
+    "Add integration test suite",
+    "Add production monitoring",
+    "Add rate limiting for FAL API",
+    "Add authentication/authorization"
+  ],
+
+  "contact": {
+    "assessment_docs": "EXPERT_ASSESSMENT_PACKAGE.md",
+    "quick_reference": "CLAUDE.md"
+  }
+}

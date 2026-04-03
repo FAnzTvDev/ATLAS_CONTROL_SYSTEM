@@ -1,0 +1,798 @@
+{
+  "version": "1.0",
+  "source": "ATLAS V5 Writer Profiles - Based on Actor Template Structure",
+  "total_writers": 10,
+  "template_source": "AI Actors Master Document structure",
+  
+  "writers": [
+    {
+      "id": "W001",
+      "name": "Thomas Ashworth",
+      "specialty": ["Gothic Horror", "Psychological Drama", "Literary Adaptation"],
+      "genres": ["gothic_horror", "psychological", "period_drama", "thriller"],
+      
+      "voice_characteristics": {
+        "dialogue_style": {
+          "naturalism_level": 0.75,
+          "interruption_frequency": "rare",
+          "subtext_density": 0.95,
+          "wit_level": 0.4,
+          "profanity": "period_appropriate_only"
+        },
+        "monologue_tendency": "rare_but_devastating",
+        "silence_usage": "frequent_and_meaningful",
+        "stage_direction_keywords": ["beat", "silence", "long pause", "quiet", "holds"]
+      },
+      
+      "page_aesthetic": {
+        "formatting": "Sparse stage directions. Dialogue carries weight.",
+        "description_style": "Literary but economical. Every word earns its place.",
+        "action_lines": "Short. Fragmentary. Like breaths between panic."
+      },
+      
+      "narrative_rhythm": {
+        "default_pacing": "slow_burn_to_explosion",
+        "scene_structure": "Extended dialogue, minimal action, eruption at climax",
+        "act_preference": "Non-linear. Memory bleeds into present."
+      },
+      
+      "signature_color": "#1A2530",
+      
+      "sample_scripts": {
+        "villain_monologue": {
+          "context": "Antagonist reveals justification",
+          "lines": [
+            "You think I'm the monster?",
+            "(beat)",
+            "I was trying to save us. All of us.",
+            "(long pause)",
+            "You would have done the same. You just lack the courage to admit it."
+          ]
+        },
+        "revelation_scene": {
+          "context": "Protagonist discovers truth",
+          "lines": [
+            "ELEANOR stares at the photograph. Her hands shake.",
+            "ELEANOR: That's... that's mother.",
+            "BUTLER: (quiet) Yes.",
+            "ELEANOR: But she's standing in the ritual chamber.",
+            "BUTLER: Yes.",
+            "(Eleanor drops the photograph. It falls in slow motion.)"
+          ]
+        },
+        "tension_dialogue": {
+          "context": "Two characters circle around unspoken tension",
+          "lines": [
+            "MARCUS: You came back.",
+            "ELEANOR: You knew I would.",
+            "MARCUS: I hoped.",
+            "(Silence. The fire crackles.)",
+            "ELEANOR: The house hasn't changed.",
+            "MARCUS: The house never changes. We do."
+          ]
+        }
+      },
+      
+      "skills": ["Subtext-heavy dialogue", "Non-linear structure", "Literary adaptation", "Villain psychology", "Atmospheric scene-setting"],
+      
+      "structural_preferences": {
+        "act_structure": "three_act_classical",
+        "timeline": "non_linear_with_anchors",
+        "subplot_density": "moderate_focused",
+        "opening_style": "In medias res, then flashback",
+        "ending_preference": "Ambiguous moral resolution"
+      },
+      
+      "actor_writing_profiles": {
+        "Charlotte Beaumont": {
+          "affinity": 0.98,
+          "voice_notes": "She speaks in questions that are statements. Every line hides a wound.",
+          "dialogue_style": "formal Victorian register, questions as statements, emotional subtext"
+        },
+        "Jackson Wright": {
+          "affinity": 0.92,
+          "voice_notes": "Long pauses. Heavy silence. Single devastating lines.",
+          "dialogue_style": "sparse, weighted pauses, gravel undertone"
+        },
+        "Dimitri Volkov": {
+          "affinity": 0.88,
+          "voice_notes": "Villain monologues. Justified evil. Soft menace.",
+          "dialogue_style": "soft menace, philosophical justification, never raised voice"
+        },
+        "Marcus Stone": {
+          "affinity": 0.90,
+          "voice_notes": "Shakespearean weight. Measured poetry. Mentor wisdom.",
+          "dialogue_style": "measured, poetic cadence, theatrical weight"
+        }
+      },
+      
+      "director_collaborations": {
+        "Evelyn Ravencroft": 0.98,
+        "Isabella Romano": 0.85
+      },
+      
+      "creative_philosophy": {
+        "origin": "Oxford literature PhD, abandoned academia for 'living stories'",
+        "core_belief": "What characters don't say reveals more than what they say.",
+        "methodology": "Extensive character biographies before first draft. Knows their breakfast preferences.",
+        "signature_technique": "The 'Ashworth Beat' - parenthetical (beat) that actors know means 'the weight of history'"
+      },
+      
+      "influenced_by": ["Harold Pinter", "Sarah Kane", "Henry James", "Shirley Jackson"],
+      
+      "fanz_tv_channel": "AMERICAN HORROR CLASSICS"
+    },
+    
+    {
+      "id": "W002",
+      "name": "Maya Sterling",
+      "specialty": ["Action", "Martial Arts", "Thriller"],
+      "genres": ["action", "martial_arts", "thriller", "spy"],
+      
+      "voice_characteristics": {
+        "dialogue_style": {
+          "naturalism_level": 0.85,
+          "interruption_frequency": "frequent",
+          "subtext_density": 0.6,
+          "wit_level": 0.7,
+          "profanity": "character_appropriate"
+        },
+        "monologue_tendency": "pre_fight_philosophy",
+        "silence_usage": "tension_before_action"
+      },
+      
+      "page_aesthetic": {
+        "formatting": "Action lines punch. Short sentences. Impact.",
+        "description_style": "Choreography-focused. Every move has weight.",
+        "action_lines": "Brutal. Efficient. No wasted movement."
+      },
+      
+      "narrative_rhythm": {
+        "default_pacing": "escalating_intensity",
+        "scene_structure": "Quiet tension, explosive action, aftermath reflection",
+        "act_preference": "Linear with strategic flashbacks"
+      },
+      
+      "signature_color": "#B71C1C",
+      
+      "sample_scripts": {
+        "pre_fight": {
+          "context": "Moment before combat",
+          "lines": [
+            "MAYA circles. Eyes never leave her opponent.",
+            "OPPONENT: You know you can't win.",
+            "MAYA: (quiet) I'm not trying to win.",
+            "She drops into stance.",
+            "MAYA: I'm trying to survive."
+          ]
+        },
+        "post_fight": {
+          "context": "Aftermath of violence",
+          "lines": [
+            "Maya breathes. Blood on her hands. Not all of it hers.",
+            "MAYA: (to herself) My grandmother used to say...",
+            "She can't remember. The adrenaline won't let her.",
+            "She sits. The world is very quiet now."
+          ]
+        }
+      },
+      
+      "actor_writing_profiles": {
+        "Maya Chen": {
+          "affinity": 0.98,
+          "voice_notes": "Direct. Economical. Every word a choice.",
+          "dialogue_style": "sparse action dialogue, controlled intensity"
+        },
+        "Kai Wong": {
+          "affinity": 0.94,
+          "voice_notes": "Traditional philosophy meets modern pragmatism.",
+          "dialogue_style": "martial arts wisdom, honorable fighter"
+        },
+        "Elena Kozlov": {
+          "affinity": 0.92,
+          "voice_notes": "Cold efficiency. The weapon speaks.",
+          "dialogue_style": "minimal words, maximum threat"
+        }
+      },
+      
+      "director_collaborations": {
+        "Marcus Chen": 0.98
+      },
+      
+      "fanz_tv_channel": "RUMBLE TV"
+    },
+    
+    {
+      "id": "W003",
+      "name": "Elena Volkov",
+      "specialty": ["Spy", "Villain Perspective", "Political Thriller"],
+      "genres": ["spy", "thriller", "political", "crime_drama"],
+      
+      "voice_characteristics": {
+        "dialogue_style": {
+          "naturalism_level": 0.7,
+          "interruption_frequency": "calculated",
+          "subtext_density": 0.9,
+          "wit_level": 0.8,
+          "profanity": "strategic_only"
+        },
+        "monologue_tendency": "villain_justification",
+        "silence_usage": "power_move"
+      },
+      
+      "page_aesthetic": {
+        "formatting": "Every word a chess move. Dialogue as warfare.",
+        "description_style": "Cold observation. Clinical detail.",
+        "action_lines": "Precise. Professional. Lethal."
+      },
+      
+      "narrative_rhythm": {
+        "default_pacing": "slow_build_to_revelation",
+        "scene_structure": "Information exchange masked as conversation",
+        "act_preference": "Multiple perspective timelines"
+      },
+      
+      "signature_color": "#263238",
+      
+      "sample_scripts": {
+        "villain_reveal": {
+          "context": "Antagonist shows true colors",
+          "lines": [
+            "VOLKOV doesn't blink. He never blinks.",
+            "VOLKOV: You mistake my calm for weakness.",
+            "He sets down the wine glass. Exactly centered.",
+            "VOLKOV: This is... unfortunate. For you.",
+            "(The temperature in the room drops. Or seems to.)"
+          ]
+        },
+        "spy_exchange": {
+          "context": "Intelligence trade",
+          "lines": [
+            "They speak in code. But we understand.",
+            "AGENT: The weather in Prague.",
+            "CONTACT: Unseasonable.",
+            "AGENT: Like Moscow in spring.",
+            "CONTACT: (pause) You're asking the wrong question.",
+            "She slides the envelope. He doesn't touch it. Yet."
+          ]
+        }
+      },
+      
+      "actor_writing_profiles": {
+        "Dimitri Volkov": {
+          "affinity": 0.98,
+          "voice_notes": "Every word measured. Silence is a weapon.",
+          "dialogue_style": "soft menace, accented precision, controlled power"
+        },
+        "Natasha Petrova": {
+          "affinity": 0.96,
+          "voice_notes": "Double-speak master. Truth hidden in lies.",
+          "dialogue_style": "spy craft, layered meaning, cold beauty"
+        },
+        "Elena Kozlov": {
+          "affinity": 0.94,
+          "voice_notes": "Ballet discipline in voice. Lethal grace.",
+          "dialogue_style": "Russian formality, dancer precision"
+        }
+      },
+      
+      "director_collaborations": {
+        "Marcus Chen": 0.92,
+        "Sofia Lindström": 0.88
+      },
+      
+      "fanz_tv_channel": "WHO DONE IT TV"
+    },
+    
+    {
+      "id": "W004",
+      "name": "James Baldwin III",
+      "specialty": ["Political Drama", "Civil Rights", "Biopic"],
+      "genres": ["political", "biopic", "legal_drama", "drama"],
+      
+      "voice_characteristics": {
+        "dialogue_style": {
+          "naturalism_level": 0.8,
+          "interruption_frequency": "congressional",
+          "subtext_density": 0.85,
+          "wit_level": 0.6,
+          "profanity": "weight_of_history"
+        },
+        "monologue_tendency": "oratory_excellence",
+        "silence_usage": "before_the_verdict"
+      },
+      
+      "page_aesthetic": {
+        "formatting": "Speeches that build. Dialogue that challenges.",
+        "description_style": "The weight of institutions in every scene.",
+        "action_lines": "Deliberate. Historical weight."
+      },
+      
+      "signature_color": "#1B365D",
+      
+      "sample_scripts": {
+        "courtroom_climax": {
+          "context": "Final argument",
+          "lines": [
+            "OKONKWO rises. The courtroom holds its breath.",
+            "OKONKWO: My client doesn't need my words.",
+            "He walks to the jury. Eye contact with each.",
+            "OKONKWO: She needs yours.",
+            "(beat)",
+            "OKONKWO: The question isn't whether she's guilty. The question is whether justice is still possible in this room."
+          ]
+        }
+      },
+      
+      "actor_writing_profiles": {
+        "James Okonkwo": {
+          "affinity": 0.98,
+          "voice_notes": "Attorney precision. Moral authority. Historical weight.",
+          "dialogue_style": "legal eloquence, civil rights gravitas"
+        },
+        "Samuel Cross": {
+          "affinity": 0.96,
+          "voice_notes": "Elder wisdom. Lived experience. Quiet authority.",
+          "dialogue_style": "measured wisdom, generational perspective"
+        },
+        "Victoria Sterling": {
+          "affinity": 0.90,
+          "voice_notes": "Corporate power. Controlled ambition.",
+          "dialogue_style": "boardroom precision, power play"
+        }
+      },
+      
+      "director_collaborations": {
+        "James Washington": 0.98
+      },
+      
+      "fanz_tv_channel": "WHO DONE IT TV"
+    },
+    
+    {
+      "id": "W005",
+      "name": "Ingrid Bergman",
+      "specialty": ["Nordic Noir", "Psychological Thriller", "Mystery"],
+      "genres": ["nordic_noir", "thriller", "mystery", "psychological"],
+      
+      "voice_characteristics": {
+        "dialogue_style": {
+          "naturalism_level": 0.9,
+          "interruption_frequency": "rare",
+          "subtext_density": 0.85,
+          "wit_level": 0.3,
+          "profanity": "realistic_sparingly"
+        },
+        "monologue_tendency": "internal_only",
+        "silence_usage": "nordic_standard"
+      },
+      
+      "page_aesthetic": {
+        "formatting": "Minimal. The landscape speaks louder than characters.",
+        "description_style": "Cold observation. Weather as character.",
+        "action_lines": "Procedural. Methodical. Isolation."
+      },
+      
+      "signature_color": "#607D8B",
+      
+      "sample_scripts": {
+        "investigation_scene": {
+          "context": "Crime scene analysis",
+          "lines": [
+            "The body is frozen. So is Aurora.",
+            "AURORA: How long?",
+            "FORENSICS: (checking) Twelve hours. Maybe fourteen.",
+            "She doesn't respond. The wind answers instead.",
+            "AURORA: (to herself) She saw it coming.",
+            "She walks to the window. The lake reflects nothing."
+          ]
+        }
+      },
+      
+      "actor_writing_profiles": {
+        "Aurora Lindberg": {
+          "affinity": 0.98,
+          "voice_notes": "Contained pain. Analytical distance. Nordic reserve.",
+          "dialogue_style": "minimal expression, internal investigation"
+        },
+        "Jackson Wright": {
+          "affinity": 0.90,
+          "voice_notes": "American intensity meets Nordic restraint.",
+          "dialogue_style": "method depth, contained suffering"
+        }
+      },
+      
+      "director_collaborations": {
+        "Sofia Lindström": 0.98
+      },
+      
+      "fanz_tv_channel": "WHO DONE IT TV"
+    },
+    
+    {
+      "id": "W006",
+      "name": "Sofia Vega",
+      "specialty": ["Comedy", "Rom-Com", "Sitcom"],
+      "genres": ["comedy", "romantic_comedy", "sitcom"],
+      
+      "voice_characteristics": {
+        "dialogue_style": {
+          "naturalism_level": 0.85,
+          "interruption_frequency": "high_for_timing",
+          "subtext_density": 0.5,
+          "wit_level": 0.95,
+          "profanity": "pg13_creative"
+        },
+        "monologue_tendency": "rant_spiral",
+        "silence_usage": "comedic_beat"
+      },
+      
+      "page_aesthetic": {
+        "formatting": "Fast dialogue. Overlapping. Chaos controlled.",
+        "description_style": "Physical comedy written as dance.",
+        "action_lines": "Pratfall poetry."
+      },
+      
+      "signature_color": "#FFC107",
+      
+      "sample_scripts": {
+        "meet_cute": {
+          "context": "First encounter disaster",
+          "lines": [
+            "SOFIA crashes into OMAR. Coffee everywhere.",
+            "SOFIA: Oh my god oh my god oh my-",
+            "OMAR: It's fine, it's-",
+            "SOFIA: Your shirt! Your beautiful shirt!",
+            "OMAR: It's a Hanes three-pack-",
+            "SOFIA: I'M GOING TO DRY IT WITH MY MOUTH",
+            "(She realizes what she said. Horror.)",
+            "SOFIA: (quietly) I meant napkin."
+          ]
+        }
+      },
+      
+      "actor_writing_profiles": {
+        "Sofia Andersson": {
+          "affinity": 0.98,
+          "voice_notes": "Rapid-fire. Tangential. Heart underneath chaos.",
+          "dialogue_style": "improv energy, musical timing, unexpected vulnerability"
+        },
+        "Omar Hassan": {
+          "affinity": 0.96,
+          "voice_notes": "Physical comedy master. Straight man who breaks.",
+          "dialogue_style": "grounded reactions, slow burn to chaos"
+        },
+        "Chloe Martin": {
+          "affinity": 0.94,
+          "voice_notes": "Millennial wit. Self-aware comedy.",
+          "dialogue_style": "meta humor, internet fluent"
+        }
+      },
+      
+      "director_collaborations": {
+        "Omar Rashid": 0.98,
+        "Tyler Sterling": 0.85
+      },
+      
+      "fanz_tv_channel": "JOKEBOX TV"
+    },
+    
+    {
+      "id": "W007",
+      "name": "Amara Okafor",
+      "specialty": ["Sci-Fi", "Afrofuturism", "Social Sci-Fi"],
+      "genres": ["scifi_thriller", "sci_fi", "afrofuturism", "drama"],
+      
+      "voice_characteristics": {
+        "dialogue_style": {
+          "naturalism_level": 0.8,
+          "interruption_frequency": "moderate",
+          "subtext_density": 0.75,
+          "wit_level": 0.6,
+          "profanity": "future_appropriate"
+        },
+        "monologue_tendency": "philosophical_questioning",
+        "silence_usage": "space_is_vast"
+      },
+      
+      "page_aesthetic": {
+        "formatting": "Tech feels real. Future is lived in.",
+        "description_style": "Afrofuturist aesthetic. Heritage meets horizon.",
+        "action_lines": "Zero-G has weight. Space has silence."
+      },
+      
+      "signature_color": "#00BCD4",
+      
+      "sample_scripts": {
+        "discovery_scene": {
+          "context": "Finding proof of life",
+          "lines": [
+            "The signal resolves. AMARA's hands tremble.",
+            "AMARA: That's not interference.",
+            "JIN-HO: Could be echo from-",
+            "AMARA: That's a pattern. Mathematical pattern.",
+            "(The crew gathers. The screen pulses.)",
+            "AMARA: (whisper) Someone's saying hello."
+          ]
+        }
+      },
+      
+      "actor_writing_profiles": {
+        "Amara Johnson": {
+          "affinity": 0.98,
+          "voice_notes": "Tech naturalism. Wonder preserved. Heritage grounding.",
+          "dialogue_style": "Afrofuturist voice, science fluent, emotional core"
+        },
+        "Luna Rodriguez": {
+          "affinity": 0.94,
+          "voice_notes": "Youthful wonder. Quick learning. Adaptable.",
+          "dialogue_style": "modern meets future, audience surrogate"
+        },
+        "Sakura Yamamoto": {
+          "affinity": 0.90,
+          "voice_notes": "Anime influence. Emotional range.",
+          "dialogue_style": "expressive sci-fi, genre fluent"
+        }
+      },
+      
+      "director_collaborations": {
+        "Luna Yamamoto": 0.98
+      },
+      
+      "fanz_tv_channel": "SCI-FI CLASSICS"
+    },
+    
+    {
+      "id": "W008",
+      "name": "Javier Moreno",
+      "specialty": ["Crime Drama", "Cartel", "Undercover"],
+      "genres": ["crime_drama", "thriller", "noir"],
+      
+      "voice_characteristics": {
+        "dialogue_style": {
+          "naturalism_level": 0.9,
+          "interruption_frequency": "street_realistic",
+          "subtext_density": 0.8,
+          "wit_level": 0.5,
+          "profanity": "street_authentic"
+        },
+        "monologue_tendency": "internal_conflict",
+        "silence_usage": "loyalty_test"
+      },
+      
+      "page_aesthetic": {
+        "formatting": "Street authentic. Code within code.",
+        "description_style": "Violence has consequence. Every choice costs.",
+        "action_lines": "Cartel efficiency. Family weight."
+      },
+      
+      "signature_color": "#3E2723",
+      
+      "sample_scripts": {
+        "loyalty_test": {
+          "context": "Undercover agent tested",
+          "lines": [
+            "The gun is in JAVIER's hand. The target kneels.",
+            "CARTEL BOSS: You hesitate.",
+            "JAVIER: I'm thinking.",
+            "CARTEL BOSS: What is there to think about?",
+            "JAVIER: (quiet) Whether I want to be the kind of man who doesn't hesitate.",
+            "(The boss smiles. This was the right answer. Or the wrong one.)"
+          ]
+        }
+      },
+      
+      "actor_writing_profiles": {
+        "Javier Morales": {
+          "affinity": 0.98,
+          "voice_notes": "Method authenticity. Street fluent. Moral weight.",
+          "dialogue_style": "code-switching, undercover tension, family loyalty"
+        },
+        "Daniel Reeves": {
+          "affinity": 0.90,
+          "voice_notes": "Detective pursuit. Obsessive. Cost of justice.",
+          "dialogue_style": "investigator voice, weary wisdom"
+        },
+        "Alessandro Romano": {
+          "affinity": 0.88,
+          "voice_notes": "Old school crime. Honor among thieves.",
+          "dialogue_style": "Italian crime tradition, generational wisdom"
+        }
+      },
+      
+      "director_collaborations": {
+        "Carlos Vargas": 0.98
+      },
+      
+      "fanz_tv_channel": "WHO DONE IT TV"
+    },
+    
+    {
+      "id": "W009",
+      "name": "Chloe Martinez",
+      "specialty": ["Romance", "Drama", "Coming-of-Age"],
+      "genres": ["romance", "drama", "romantic_comedy", "coming_of_age"],
+      
+      "voice_characteristics": {
+        "dialogue_style": {
+          "naturalism_level": 0.95,
+          "interruption_frequency": "authentic",
+          "subtext_density": 0.7,
+          "wit_level": 0.75,
+          "profanity": "emotionally_motivated"
+        },
+        "monologue_tendency": "heart_confession",
+        "silence_usage": "before_the_kiss"
+      },
+      
+      "page_aesthetic": {
+        "formatting": "Emotion drives every line. Heart on the page.",
+        "description_style": "The space between touches.",
+        "action_lines": "Romance is in the details."
+      },
+      
+      "signature_color": "#E91E63",
+      
+      "sample_scripts": {
+        "confession_scene": {
+          "context": "Finally saying it",
+          "lines": [
+            "Rain falls. TYLER under an awning. CHARLOTTE arrives.",
+            "CHARLOTTE: You're still here.",
+            "TYLER: I was waiting.",
+            "CHARLOTTE: For the rain to stop?",
+            "TYLER: (beat) For you to come back.",
+            "(She doesn't have an umbrella. Neither does he.)",
+            "TYLER: I've been terrible at this. At... saying things.",
+            "CHARLOTTE: (soft) Then don't say anything."
+          ]
+        }
+      },
+      
+      "actor_writing_profiles": {
+        "Tyler Brooks": {
+          "affinity": 0.96,
+          "voice_notes": "Natural charm. Genuine vulnerability. Reluctant romantic.",
+          "dialogue_style": "warm baritone energy, thoughtful pauses"
+        },
+        "Sofia Andersson": {
+          "affinity": 0.92,
+          "voice_notes": "Comedy and heart. Vulnerability under energy.",
+          "dialogue_style": "rapid exterior, soft interior"
+        },
+        "Valentina Rossi": {
+          "affinity": 0.94,
+          "voice_notes": "Italian passion. European romance tradition.",
+          "dialogue_style": "passionate, expressive, Mediterranean warmth"
+        }
+      },
+      
+      "director_collaborations": {
+        "Tyler Sterling": 0.98
+      },
+      
+      "fanz_tv_channel": "JOKEBOX TV"
+    },
+    
+    {
+      "id": "W010",
+      "name": "Jean-Pierre Dubois",
+      "specialty": ["Art House", "Philosophical", "Experimental"],
+      "genres": ["art_house", "experimental", "drama", "lgbtq"],
+      
+      "voice_characteristics": {
+        "dialogue_style": {
+          "naturalism_level": 0.6,
+          "interruption_frequency": "rare_deliberate",
+          "subtext_density": 0.95,
+          "wit_level": 0.7,
+          "profanity": "artistic_choice"
+        },
+        "monologue_tendency": "philosophical_musing",
+        "silence_usage": "the_work_itself"
+      },
+      
+      "page_aesthetic": {
+        "formatting": "The page is a canvas. Rules are suggestions.",
+        "description_style": "Poetry in motion. Image over explanation.",
+        "action_lines": "Abstract made physical."
+      },
+      
+      "signature_color": "#9C27B0",
+      
+      "sample_scripts": {
+        "philosophical_exchange": {
+          "context": "Two artists discuss meaning",
+          "lines": [
+            "ANTOINE smokes. PHOENIX paints.",
+            "ANTOINE: Is it finished?",
+            "PHOENIX: Art is never finished. Only abandoned.",
+            "ANTOINE: (considering) Then why continue?",
+            "PHOENIX: Because the abandonment is the art.",
+            "(Long silence. The painting remains incomplete.)",
+            "PHOENIX: You understand.",
+            "ANTOINE: I understand nothing. That's why I write."
+          ]
+        }
+      },
+      
+      "actor_writing_profiles": {
+        "Antoine Dubois": {
+          "affinity": 0.98,
+          "voice_notes": "French intellectual tradition. Cigarettes and philosophy.",
+          "dialogue_style": "existential musings, continental wit"
+        },
+        "Phoenix Rise": {
+          "affinity": 0.96,
+          "voice_notes": "Boundary-breaking. Identity as art.",
+          "dialogue_style": "non-binary perspective, artistic truth"
+        },
+        "Noah Campbell": {
+          "affinity": 0.88,
+          "voice_notes": "Indie authenticity. Film school depth.",
+          "dialogue_style": "naturalistic art house, young artist voice"
+        }
+      },
+      
+      "director_collaborations": {
+        "Phoenix Arturo": 0.98
+      },
+      
+      "fanz_tv_channel": "SCI-FI CLASSICS"
+    }
+  ],
+  
+  "genre_to_writer_mapping": {
+    "gothic_horror": "W001",
+    "action": "W002",
+    "martial_arts": "W002",
+    "spy": "W003",
+    "political": "W004",
+    "legal_drama": "W004",
+    "nordic_noir": "W005",
+    "thriller": "W005",
+    "mystery_thriller": "W005",
+    "comedy": "W006",
+    "romantic_comedy": "W006",
+    "scifi_thriller": "W007",
+    "sci_fi": "W007",
+    "crime_drama": "W008",
+    "romance": "W009",
+    "art_house": "W010",
+    "fantasy": "W002",
+    "epic_fantasy": "W001",
+    "dark_fantasy": "W001",
+    "adventure": "W002",
+    "war": "W003",
+    "drama": "W004",
+    "noir": "W008",
+    "mystery": "W005",
+    "supernatural": "W001",
+    "western": "W008",
+    "musical": "W006",
+    "documentary": "W010",
+    "animation": "W007"
+  },
+  
+  "fanz_tv_channel_mapping": {
+    "RUMBLE TV": "W002",
+    "AMERICAN HORROR CLASSICS": "W001",
+    "SCI-FI CLASSICS": "W007",
+    "JOKEBOX TV": "W006",
+    "MARTIAN TV": "W007",
+    "WHO DONE IT TV": "W008"
+  },
+  
+  "writer_director_chemistry": {
+    "W001-D001": 0.98,
+    "W002-D002": 0.98,
+    "W003-D002": 0.92,
+    "W004-D004": 0.98,
+    "W005-D005": 0.98,
+    "W006-D006": 0.98,
+    "W007-D007": 0.98,
+    "W008-D008": 0.98,
+    "W009-D009": 0.98,
+    "W010-D010": 0.98
+  }
+}

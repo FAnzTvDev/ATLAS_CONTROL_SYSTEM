@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Red Key Adventures — Higgsfield Expanded Prompts</title>
+<style>
+:root{
+  --bg:#080810;--card:#10101a;--border:#222232;--text:#d0d0ee;--sub:#666;
+  --gold:#e8c46a;--red:#cc4444;--green:#5ec98e;--blue:#7888e8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Courier New',monospace;font-size:12px;line-height:1.5;padding:20px}
+h1{color:var(--red);font-size:18px;letter-spacing:3px;margin-bottom:4px}
+.sub{color:var(--sub);font-size:11px;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--border);overflow:hidden}
+.card-hdr{background:#160810;display:flex;justify-content:space-between;align-items:center;padding:8px 14px;border-bottom:1px solid var(--border)}
+.card-id{color:var(--gold);font-weight:bold;font-size:12px;letter-spacing:2px}
+.copy-btn{background:transparent;border:1px solid var(--border);color:var(--sub);padding:3px 10px;font-size:10px;cursor:pointer;font-family:inherit;letter-spacing:1px}
+.copy-btn:hover{border-color:var(--green);color:var(--green)}
+.copy-btn.copied{border-color:var(--green);color:var(--green)}
+.caption{padding:10px 14px;color:#c8b870;font-style:italic;font-size:12px;border-bottom:1px solid var(--border)}
+.fields{padding:10px 14px;display:flex;flex-direction:column;gap:5px}
+.field{display:grid;grid-template-columns:140px 1fr;gap:8px;align-items:start}
+.fk{color:var(--sub);font-size:9px;text-transform:uppercase;letter-spacing:1px;padding-top:2px}
+.fv{color:var(--text);font-size:11px}
+.json-block{border-top:1px solid var(--border);padding:10px 14px}
+.json-block pre{color:#7080a8;font-size:10px;white-space:pre-wrap;word-break:break-word;max-height:200px;overflow-y:auto;line-height:1.4}
+.show-json{color:var(--sub);font-size:10px;cursor:pointer;margin-bottom:6px;display:block}
+.show-json:hover{color:var(--blue)}
+</style>
+</head>
+<body>
+<h1>RED KEY ADVENTURES</h1>
+<div class="sub">EP01 — THE GLITCH — HIGGSFIELD EXPANDED PROMPTS — 13 SHOTS</div>
+<div class="cards">
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">CHAR REF — NAOMI LAWSON</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;Naomi Lawson -- she lands every flip perfectly, then hides her genius in a notebook no one knows about.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action cinematic&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Warm naturalistic school lighting. Vibrant, kinetic energy&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;medium close-up&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Medium-close. Subject fills frame. Gym background soft focus.&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Black girl. Beautiful, athletic. Natural hair with thin silver ribbon. Blue and white cheerleader uniform. Bright searching eyes behind a performance smile.&quot;,
+    &quot;Setting&quot;: &quot;Contemporary middle school gymnasium. Blue and white banners. Hardwood floor. High clerestory windows.&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Bright institutional fluorescent plus warm window light. High-key. No shadows. The world has no idea yet.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, bright&quot;,
+    &quot;Overall Color Tone&quot;: &quot;bright and clean&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Natural field of view, no distortion, close to human eye perspective&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"Naomi Lawson -- she lands every flip perfectly, then hides her genius in a notebook no one knows about."</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Contemporary live-action cinematic</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Warm naturalistic school lighting. Vibrant, kinetic energy</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">medium close-up · eye-level POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Medium-close. Subject fills frame. Gym background soft focus.</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">eye-level view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">12-year-old Black girl. Beautiful, athletic. Natural hair with thin silver ribbon. Blue and white cheerleader uniform. Bright searching eyes behind a performance smile.</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">Contemporary middle school gymnasium. Blue and white banners. Hardwood floor. High clerestory windows.</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">Bright institutional fluorescent plus warm window light. High-key. No shadows. The world has no idea yet.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">warm, bright</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">bright and clean</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Natural field of view, no distortion, close to human eye perspective</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.0 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Light digital noise consistent with contemporary cinema camera</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Period/contemporary clothing with authentic fabric textures; natural skin and hair</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Natural human movement and body language; environmental elements respond to motion</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action performance with practical lighting; photorealistic execution</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;Naomi Lawson -- she lands every flip perfectly, then hides her genius in a notebook no one knows about.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action cinematic&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Warm naturalistic school lighting. Vibrant, kinetic energy&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;medium close-up&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Medium-close. Subject fills frame. Gym background soft focus.&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Black girl. Beautiful, athletic. Natural hair with thin silver ribbon. Blue and white cheerleader uniform. Bright searching eyes behind a performance smile.&quot;,
+    &quot;Setting&quot;: &quot;Contemporary middle school gymnasium. Blue and white banners. Hardwood floor. High clerestory windows.&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Bright institutional fluorescent plus warm window light. High-key. No shadows. The world has no idea yet.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, bright&quot;,
+    &quot;Overall Color Tone&quot;: &quot;bright and clean&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Natural field of view, no distortion, close to human eye perspective&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">CHAR REF — LIAM WALLACE</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;Liam Wallace -- he once started a car engine with a gum wrapper, a rubber band, and a potato.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action cinematic&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Slightly cool focused light. The world of schematics&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;medium close-up&quot;,
+      &quot;slightly above eyeline POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Medium close. Subject hunched over something he is building. Tools scattered around him.&quot;,
+    &quot;Perspective&quot;: &quot;slightly above eyeline view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old White boy. Slight build. Sandy messy brown hair. Rectangular glasses. Cargo pants with stuffed pockets. Engineering reference t-shirt. Hands faintly marked from building.&quot;,
+    &quot;Setting&quot;: &quot;School workshop or science classroom. Cluttered desk, components everywhere.&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Practical classroom light -- slightly cool-green. Focused on hands and face.&quot;,
+    &quot;Color Palette&quot;: &quot;cool, green&quot;,
+    &quot;Overall Color Tone&quot;: &quot;cool and distant&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Natural field of view, no distortion, close to human eye perspective&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.2 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"Liam Wallace -- he once started a car engine with a gum wrapper, a rubber band, and a potato."</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Contemporary live-action cinematic</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Slightly cool focused light. The world of schematics</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">medium close-up · slightly above eyeline POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Medium close. Subject hunched over something he is building. Tools scattered around him.</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">slightly above eyeline view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">12-year-old White boy. Slight build. Sandy messy brown hair. Rectangular glasses. Cargo pants with stuffed pockets. Engineering reference t-shirt. Hands faintly marked from building.</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">School workshop or science classroom. Cluttered desk, components everywhere.</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">Practical classroom light -- slightly cool-green. Focused on hands and face.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">cool, green</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">cool and distant</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Natural field of view, no distortion, close to human eye perspective</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.2 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Light digital noise consistent with contemporary cinema camera</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Period/contemporary clothing with authentic fabric textures; natural skin and hair</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Natural human movement and body language; environmental elements respond to motion</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action performance with practical lighting; photorealistic execution</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;Liam Wallace -- he once started a car engine with a gum wrapper, a rubber band, and a potato.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action cinematic&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Slightly cool focused light. The world of schematics&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;medium close-up&quot;,
+      &quot;slightly above eyeline POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Medium close. Subject hunched over something he is building. Tools scattered around him.&quot;,
+    &quot;Perspective&quot;: &quot;slightly above eyeline view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old White boy. Slight build. Sandy messy brown hair. Rectangular glasses. Cargo pants with stuffed pockets. Engineering reference t-shirt. Hands faintly marked from building.&quot;,
+    &quot;Setting&quot;: &quot;School workshop or science classroom. Cluttered desk, components everywhere.&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Practical classroom light -- slightly cool-green. Focused on hands and face.&quot;,
+    &quot;Color Palette&quot;: &quot;cool, green&quot;,
+    &quot;Overall Color Tone&quot;: &quot;cool and distant&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Natural field of view, no distortion, close to human eye perspective&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.2 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">CHAR REF — GEMMA ARNOLD</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;Gemma Arnold -- at 4 years old she demanded to see the manager at Six Flags. She has not stopped since.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action cinematic&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Warm earthy tones. Energetic handheld-feeling framing&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;medium shot&quot;,
+      &quot;slight handheld energy POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Medium. Subject mid-gesture, hands moving, body animated. Motion implied even in stillness.&quot;,
+    &quot;Perspective&quot;: &quot;slight handheld energy view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;11-year-old Latina girl. Expressive warm face. Big dark eyes. Thick dark hair in two messy buns. Layered thrift-shop clothing in earthy colors. Canvas bag covered in cause pins. Sneakers with hand-drawn designs.&quot;,
+    &quot;Setting&quot;: &quot;School hallway between classes. Lockers, students passing. Gemma is the still center of her own storm.&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Natural hallway light, warm. She brings warmth into every frame.&quot;,
+    &quot;Color Palette&quot;: &quot;warm&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Slight motion-integrated grain from handheld kinetics&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"Gemma Arnold -- at 4 years old she demanded to see the manager at Six Flags. She has not stopped since."</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Contemporary live-action cinematic</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Warm earthy tones. Energetic handheld-feeling framing</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">medium shot · slight handheld energy POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Medium. Subject mid-gesture, hands moving, body animated. Motion implied even in stillness.</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">slight handheld energy view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">11-year-old Latina girl. Expressive warm face. Big dark eyes. Thick dark hair in two messy buns. Layered thrift-shop clothing in earthy colors. Canvas bag covered in cause pins. Sneakers with hand-drawn designs.</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">School hallway between classes. Lockers, students passing. Gemma is the still center of her own storm.</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">Natural hallway light, warm. She brings warmth into every frame.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">warm</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">warm and inviting</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.0 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Slight motion-integrated grain from handheld kinetics</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Period/contemporary clothing with authentic fabric textures; natural skin and hair</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Natural human movement and body language; environmental elements respond to motion</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action performance with practical lighting; photorealistic execution</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;Gemma Arnold -- at 4 years old she demanded to see the manager at Six Flags. She has not stopped since.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action cinematic&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Warm earthy tones. Energetic handheld-feeling framing&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;medium shot&quot;,
+      &quot;slight handheld energy POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Medium. Subject mid-gesture, hands moving, body animated. Motion implied even in stillness.&quot;,
+    &quot;Perspective&quot;: &quot;slight handheld energy view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;11-year-old Latina girl. Expressive warm face. Big dark eyes. Thick dark hair in two messy buns. Layered thrift-shop clothing in earthy colors. Canvas bag covered in cause pins. Sneakers with hand-drawn designs.&quot;,
+    &quot;Setting&quot;: &quot;School hallway between classes. Lockers, students passing. Gemma is the still center of her own storm.&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Natural hallway light, warm. She brings warmth into every frame.&quot;,
+    &quot;Color Palette&quot;: &quot;warm&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Slight motion-integrated grain from handheld kinetics&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">CHAR REF — REN TAKEDA</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;Ren Takeda -- the cutest boy at Belmont Creek whose true passion is making the perfect carbonara.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action cinematic&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Clean, uncluttered framing. Athletic ease&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;medium shot&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Medium. Subject relaxed, confident. The space belongs to him naturally.&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Japanese-American boy. Conventionally handsome, clean easy smile. Neat black hair. Athletic medium-tall build. Fitted casual joggers and clean sneakers. Grounded, confident posture.&quot;,
+    &quot;Setting&quot;: &quot;School hallway or gym area. Clean, bright, contemporary.&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Clean natural light. No drama yet -- this is before the adventure.&quot;,
+    &quot;Color Palette&quot;: &quot;neutral cinematic palette&quot;,
+    &quot;Overall Color Tone&quot;: &quot;naturalistic and clean&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Natural field of view, no distortion, close to human eye perspective&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"Ren Takeda -- the cutest boy at Belmont Creek whose true passion is making the perfect carbonara."</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Contemporary live-action cinematic</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Clean, uncluttered framing. Athletic ease</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">medium shot · eye-level POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Medium. Subject relaxed, confident. The space belongs to him naturally.</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">eye-level view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">12-year-old Japanese-American boy. Conventionally handsome, clean easy smile. Neat black hair. Athletic medium-tall build. Fitted casual joggers and clean sneakers. Grounded, confident posture.</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">School hallway or gym area. Clean, bright, contemporary.</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">Clean natural light. No drama yet -- this is before the adventure.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">neutral cinematic palette</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">naturalistic and clean</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Natural field of view, no distortion, close to human eye perspective</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.0 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Light digital noise consistent with contemporary cinema camera</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Period/contemporary clothing with authentic fabric textures; natural skin and hair</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Natural human movement and body language; environmental elements respond to motion</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action performance with practical lighting; photorealistic execution</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;Ren Takeda -- the cutest boy at Belmont Creek whose true passion is making the perfect carbonara.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action cinematic&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Clean, uncluttered framing. Athletic ease&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;medium shot&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Medium. Subject relaxed, confident. The space belongs to him naturally.&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Japanese-American boy. Conventionally handsome, clean easy smile. Neat black hair. Athletic medium-tall build. Fitted casual joggers and clean sneakers. Grounded, confident posture.&quot;,
+    &quot;Setting&quot;: &quot;School hallway or gym area. Clean, bright, contemporary.&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Clean natural light. No drama yet -- this is before the adventure.&quot;,
+    &quot;Color Palette&quot;: &quot;neutral cinematic palette&quot;,
+    &quot;Overall Color Tone&quot;: &quot;naturalistic and clean&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Natural field of view, no distortion, close to human eye perspective&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">CHAR REF — MR. OSCAR</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;Mr. Oscar -- the clocks in his shop all tell different times, and all of them are correct.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Warm, amber-lit, slightly timeless&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;The antique shop exists between eras&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;medium shot&quot;,
+      &quot;slightly below eyeline -- he is always looking down with gentle wisdom POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Medium. Subject surrounded by the accumulated weight of history. Objects frame him.&quot;,
+    &quot;Perspective&quot;: &quot;slightly below eyeline -- he is always looking down with gentle wisdom view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;Man in his 60s. Brown skin. Deep-set knowing eyes. Neat silver-gray hair. Trim gray beard. Elegant vintage vest over collared shirt. Antique pocket watch chain. Reading glasses. Unhurried dignified posture.&quot;,
+    &quot;Setting&quot;: &quot;The Antique Shop -- outside time and space. Floor-to-ceiling shelves. Amber lamp light. Clocks everywhere. Objects with stored history. Dust motes in light beams.&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Warm amber practical lighting from antique lamps. Deep rich shadows. The light of things preserved.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, amber&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Natural portrait compression, smooth background bokeh, no distortion&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"Mr. Oscar -- the clocks in his shop all tell different times, and all of them are correct."</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Warm, amber-lit, slightly timeless</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">The antique shop exists between eras</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">medium shot · slightly below eyeline -- he is always looking down with gentle wisdom POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Medium. Subject surrounded by the accumulated weight of history. Objects frame him.</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">slightly below eyeline -- he is always looking down with gentle wisdom view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">Man in his 60s. Brown skin. Deep-set knowing eyes. Neat silver-gray hair. Trim gray beard. Elegant vintage vest over collared shirt. Antique pocket watch chain. Reading glasses. Unhurried dignified posture.</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">The Antique Shop -- outside time and space. Floor-to-ceiling shelves. Amber lamp light. Clocks everywhere. Objects with stored history. Dust motes in light beams.</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">Warm amber practical lighting from antique lamps. Deep rich shadows. The light of things preserved.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">warm, amber</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">warm and inviting</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Natural portrait compression, smooth background bokeh, no distortion</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.0 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Light digital noise consistent with contemporary cinema camera</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Period/contemporary clothing with authentic fabric textures; natural skin and hair</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Natural human movement and body language; environmental elements respond to motion</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action performance with practical lighting; photorealistic execution</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;Mr. Oscar -- the clocks in his shop all tell different times, and all of them are correct.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Warm, amber-lit, slightly timeless&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;The antique shop exists between eras&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;medium shot&quot;,
+      &quot;slightly below eyeline -- he is always looking down with gentle wisdom POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Medium. Subject surrounded by the accumulated weight of history. Objects frame him.&quot;,
+    &quot;Perspective&quot;: &quot;slightly below eyeline -- he is always looking down with gentle wisdom view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;Man in his 60s. Brown skin. Deep-set knowing eyes. Neat silver-gray hair. Trim gray beard. Elegant vintage vest over collared shirt. Antique pocket watch chain. Reading glasses. Unhurried dignified posture.&quot;,
+    &quot;Setting&quot;: &quot;The Antique Shop -- outside time and space. Floor-to-ceiling shelves. Amber lamp light. Clocks everywhere. Objects with stored history. Dust motes in light beams.&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Warm amber practical lighting from antique lamps. Deep rich shadows. The light of things preserved.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, amber&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Natural portrait compression, smooth background bokeh, no distortion&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">001_E01 — ESTABLISHING</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;Enslaved people flee through dense marshland night, terror driving every step&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Period drama, 1850s American South&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Dark, atmospheric, cinematic. Handheld urgency. Desaturated with warm lantern accent&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;wide establishing shot&quot;,
+      &quot;handheld POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Wide establishing, deep depth of field, full environmental geography&quot;,
+    &quot;Perspective&quot;: &quot;handheld view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;Empty environment -- no figures&quot;,
+    &quot;Setting&quot;: &quot;EXT. 1850s marshland woods, night. Wide. Dense tangled trees, mud, Spanish moss. A desperate group of enslaved people push through the undergrowth. A MOTHER clutches her CHILD. Ter&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Moonlight through canopy — cool blue-silver shafts cutting through total darkness. Occasional flicker of a distant lantern (the pursuers). No warm light for the fleeing people — they run in darkness.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, cool, blue, silver&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.8 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Slight motion-integrated grain from handheld kinetics&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Natural environmental textures — organic surfaces, period-accurate materials&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Atmospheric environment only — no human physics&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action location or studio set with practical lighting and atmosphere&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"Enslaved people flee through dense marshland night, terror driving every step"</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Period drama, 1850s American South</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Dark, atmospheric, cinematic. Handheld urgency. Desaturated with warm lantern accent</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">wide establishing shot · handheld POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Wide establishing, deep depth of field, full environmental geography</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">handheld view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">Empty environment -- no figures</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">EXT. 1850s marshland woods, night. Wide. Dense tangled trees, mud, Spanish moss. A desperate group of enslaved people push through the undergrowth. A MOTHER clutches her CHILD. Ter</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">Moonlight through canopy — cool blue-silver shafts cutting through total darkness. Occasional flicker of a distant lantern (the pursuers). No warm light for the fleeing people — they run in darkness.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">warm, cool, blue, silver</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">warm and inviting</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.8 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Slight motion-integrated grain from handheld kinetics</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Natural environmental textures — organic surfaces, period-accurate materials</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Atmospheric environment only — no human physics</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action location or studio set with practical lighting and atmosphere</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;Enslaved people flee through dense marshland night, terror driving every step&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Period drama, 1850s American South&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Dark, atmospheric, cinematic. Handheld urgency. Desaturated with warm lantern accent&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;wide establishing shot&quot;,
+      &quot;handheld POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Wide establishing, deep depth of field, full environmental geography&quot;,
+    &quot;Perspective&quot;: &quot;handheld view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;Empty environment -- no figures&quot;,
+    &quot;Setting&quot;: &quot;EXT. 1850s marshland woods, night. Wide. Dense tangled trees, mud, Spanish moss. A desperate group of enslaved people push through the undergrowth. A MOTHER clutches her CHILD. Ter&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Moonlight through canopy — cool blue-silver shafts cutting through total darkness. Occasional flicker of a distant lantern (the pursuers). No warm light for the fleeing people — they run in darkness.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, cool, blue, silver&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.8 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Slight motion-integrated grain from handheld kinetics&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Natural environmental textures — organic surfaces, period-accurate materials&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Atmospheric environment only — no human physics&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action location or studio set with practical lighting and atmosphere&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">001_M01 — MEDIUM</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;Slave masters crest the ridge with raised lanterns and straining dogs — a gunshot blast&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Period drama, 1850s American South&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Dark, atmospheric, cinematic. Handheld urgency. Desaturated with warm lantern accent&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;full-body to waist-up&quot;,
+      &quot;handheld POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Waist-up to full body, moderate DOF, character in environmental context&quot;,
+    &quot;Perspective&quot;: &quot;handheld view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;Empty environment -- no figures&quot;,
+    &quot;Setting&quot;: &quot;EXT. ridge overlooking marshland. SLAVE MASTERS crest the ridge — lanterns raised, fury in their eyes. DOGS strain at leashes, desperate to run. One master raises his arm. GUNSHOT &quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Warm orange lantern light on the pursuers. Blue-black darkness below. High contrast — light versus dark is moral, not just visual.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, orange, blue, dark&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.8 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Slight motion-integrated grain from handheld kinetics&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Natural environmental textures — organic surfaces, period-accurate materials&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Atmospheric environment only — no human physics&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action location or studio set with practical lighting and atmosphere&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"Slave masters crest the ridge with raised lanterns and straining dogs — a gunshot blast"</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Period drama, 1850s American South</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Dark, atmospheric, cinematic. Handheld urgency. Desaturated with warm lantern accent</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">full-body to waist-up · handheld POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Waist-up to full body, moderate DOF, character in environmental context</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">handheld view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">Empty environment -- no figures</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">EXT. ridge overlooking marshland. SLAVE MASTERS crest the ridge — lanterns raised, fury in their eyes. DOGS strain at leashes, desperate to run. One master raises his arm. GUNSHOT </span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">Warm orange lantern light on the pursuers. Blue-black darkness below. High contrast — light versus dark is moral, not just visual.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">warm, orange, blue, dark</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">warm and inviting</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.8 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Slight motion-integrated grain from handheld kinetics</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Natural environmental textures — organic surfaces, period-accurate materials</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Atmospheric environment only — no human physics</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action location or studio set with practical lighting and atmosphere</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;Slave masters crest the ridge with raised lanterns and straining dogs — a gunshot blast&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Period drama, 1850s American South&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Dark, atmospheric, cinematic. Handheld urgency. Desaturated with warm lantern accent&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;full-body to waist-up&quot;,
+      &quot;handheld POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Waist-up to full body, moderate DOF, character in environmental context&quot;,
+    &quot;Perspective&quot;: &quot;handheld view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;Empty environment -- no figures&quot;,
+    &quot;Setting&quot;: &quot;EXT. ridge overlooking marshland. SLAVE MASTERS crest the ridge — lanterns raised, fury in their eyes. DOGS strain at leashes, desperate to run. One master raises his arm. GUNSHOT &quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Warm orange lantern light on the pursuers. Blue-black darkness below. High contrast — light versus dark is moral, not just visual.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, orange, blue, dark&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.8 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Slight motion-integrated grain from handheld kinetics&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Natural environmental textures — organic surfaces, period-accurate materials&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Atmospheric environment only — no human physics&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action location or studio set with practical lighting and atmosphere&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">001_M02 — CLOSING</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;The hope-lantern flickers out. Pitch black. Dogs close. A single chime. SMASH CUT TO BLACK.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Period drama, 1850s American South&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Dark, atmospheric, cinematic. Handheld urgency. Desaturated with warm lantern accent&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;wide establishing shot&quot;,
+      &quot;medium shot&quot;,
+      &quot;handheld POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Wide or medium, subject small against space, weight of the moment&quot;,
+    &quot;Perspective&quot;: &quot;handheld view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;Empty environment -- no figures&quot;,
+    &quot;Setting&quot;: &quot;EXT. Clearing edge. The faint lantern glow ahead — the escape route — flickers once, twice. Then extinguishes. PITCH BLACK. The DOGS grow louder. The people freeze. Then — a single&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;A single lantern glow in the far distance — warm amber. Everything else: total darkness. This is the last light. When it goes, there is nothing.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, amber, dark&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.8 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Slight motion-integrated grain from handheld kinetics&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Natural environmental textures — organic surfaces, period-accurate materials&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Atmospheric environment only — no human physics&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action location or studio set with practical lighting and atmosphere&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"The hope-lantern flickers out. Pitch black. Dogs close. A single chime. SMASH CUT TO BLACK."</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Period drama, 1850s American South</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Dark, atmospheric, cinematic. Handheld urgency. Desaturated with warm lantern accent</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">wide establishing shot · medium shot · handheld POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Wide or medium, subject small against space, weight of the moment</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">handheld view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">Empty environment -- no figures</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">EXT. Clearing edge. The faint lantern glow ahead — the escape route — flickers once, twice. Then extinguishes. PITCH BLACK. The DOGS grow louder. The people freeze. Then — a single</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">A single lantern glow in the far distance — warm amber. Everything else: total darkness. This is the last light. When it goes, there is nothing.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">warm, amber, dark</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">warm and inviting</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.8 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Slight motion-integrated grain from handheld kinetics</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Natural environmental textures — organic surfaces, period-accurate materials</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Atmospheric environment only — no human physics</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action location or studio set with practical lighting and atmosphere</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;The hope-lantern flickers out. Pitch black. Dogs close. A single chime. SMASH CUT TO BLACK.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Period drama, 1850s American South&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Dark, atmospheric, cinematic. Handheld urgency. Desaturated with warm lantern accent&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;wide establishing shot&quot;,
+      &quot;medium shot&quot;,
+      &quot;handheld POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Wide or medium, subject small against space, weight of the moment&quot;,
+    &quot;Perspective&quot;: &quot;handheld view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;Empty environment -- no figures&quot;,
+    &quot;Setting&quot;: &quot;EXT. Clearing edge. The faint lantern glow ahead — the escape route — flickers once, twice. Then extinguishes. PITCH BLACK. The DOGS grow louder. The people freeze. Then — a single&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;A single lantern glow in the far distance — warm amber. Everything else: total darkness. This is the last light. When it goes, there is nothing.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, amber, dark&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass. Subtle handheld micro-movement adds organic energy&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.8 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Slight motion-integrated grain from handheld kinetics&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Natural environmental textures — organic surfaces, period-accurate materials&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Atmospheric environment only — no human physics&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action location or studio set with practical lighting and atmosphere&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">002_E01 — ESTABLISHING</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;The modern world crashes in — bright, loud, alive. 270 years away from the cold open.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action sci-fi adventure for young audiences&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Bright, kinetic, warm. Hint of the impossible&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;wide establishing shot&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Wide establishing, deep depth of field, full environmental geography&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;Empty environment -- no figures&quot;,
+    &quot;Setting&quot;: &quot;INT. Belmont Creek Middle School gym, day. WIDE. Bright gymnasium — bleachers, blue and white banners, scoreboard on the far wall showing 12:17. CHEER MUSIC blasts. A team of cheer&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Bright institutional fluorescent overhead plus warm natural light from high windows. Even, high-key lighting — the visual opposite of Scene 001. No shadows. Everything visible.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, bright&quot;,
+    &quot;Overall Color Tone&quot;: &quot;bright and clean&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Natural environmental textures — organic surfaces, period-accurate materials&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Atmospheric environment only — no human physics&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action location or studio set with practical lighting and atmosphere&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"The modern world crashes in — bright, loud, alive. 270 years away from the cold open."</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Contemporary live-action sci-fi adventure for young audiences</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Bright, kinetic, warm. Hint of the impossible</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">wide establishing shot · eye-level POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Wide establishing, deep depth of field, full environmental geography</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">eye-level view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">Empty environment -- no figures</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">INT. Belmont Creek Middle School gym, day. WIDE. Bright gymnasium — bleachers, blue and white banners, scoreboard on the far wall showing 12:17. CHEER MUSIC blasts. A team of cheer</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">Bright institutional fluorescent overhead plus warm natural light from high windows. Even, high-key lighting — the visual opposite of Scene 001. No shadows. Everything visible.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">warm, bright</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">bright and clean</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Slight wide-angle compression, minimal distortion, clean glass</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.0 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Light digital noise consistent with contemporary cinema camera</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Natural environmental textures — organic surfaces, period-accurate materials</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Atmospheric environment only — no human physics</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action location or studio set with practical lighting and atmosphere</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;The modern world crashes in — bright, loud, alive. 270 years away from the cold open.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action sci-fi adventure for young audiences&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Bright, kinetic, warm. Hint of the impossible&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;wide establishing shot&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Wide establishing, deep depth of field, full environmental geography&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;Empty environment -- no figures&quot;,
+    &quot;Setting&quot;: &quot;INT. Belmont Creek Middle School gym, day. WIDE. Bright gymnasium — bleachers, blue and white banners, scoreboard on the far wall showing 12:17. CHEER MUSIC blasts. A team of cheer&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Bright institutional fluorescent overhead plus warm natural light from high windows. Even, high-key lighting — the visual opposite of Scene 001. No shadows. Everything visible.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, bright&quot;,
+    &quot;Overall Color Tone&quot;: &quot;bright and clean&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Natural environmental textures — organic surfaces, period-accurate materials&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Atmospheric environment only — no human physics&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action location or studio set with practical lighting and atmosphere&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">002_M01 — MEDIUM</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;Naomi lands her flip flawlessly, grins for the squad — then immediately retreats to her secret notebook&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action sci-fi adventure for young audiences&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Bright, kinetic, warm. Hint of the impossible&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;full-body to waist-up&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Waist-up to full body, moderate DOF, character in environmental context&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes&quot;,
+    &quot;Setting&quot;: &quot;NAOMI LAWSON, 12, Black, beautiful, in her blue and white cheerleader uniform — flips through the air with total precision. She LANDS perfectly. The other cheerleaders erupt. Naomi&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Bright institutional fluorescent overhead plus warm natural light from high windows. Naomi: well-lit, sharp. Her notebook: in the relative shadow of her body and the water bottle shield.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, bright&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"Naomi lands her flip flawlessly, grins for the squad — then immediately retreats to her secret notebook"</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Contemporary live-action sci-fi adventure for young audiences</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Bright, kinetic, warm. Hint of the impossible</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">full-body to waist-up · eye-level POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Waist-up to full body, moderate DOF, character in environmental context</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">eye-level view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">NAOMI LAWSON, 12, Black, beautiful, in her blue and white cheerleader uniform — flips through the air with total precision. She LANDS perfectly. The other cheerleaders erupt. Naomi</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">Bright institutional fluorescent overhead plus warm natural light from high windows. Naomi: well-lit, sharp. Her notebook: in the relative shadow of her body and the water bottle shield.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">warm, bright</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">warm and inviting</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Slight wide-angle compression, minimal distortion, clean glass</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.0 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Light digital noise consistent with contemporary cinema camera</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Period/contemporary clothing with authentic fabric textures; natural skin and hair</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Natural human movement and body language; environmental elements respond to motion</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action performance with practical lighting; photorealistic execution</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;Naomi lands her flip flawlessly, grins for the squad — then immediately retreats to her secret notebook&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action sci-fi adventure for young audiences&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Bright, kinetic, warm. Hint of the impossible&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;full-body to waist-up&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Waist-up to full body, moderate DOF, character in environmental context&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes&quot;,
+    &quot;Setting&quot;: &quot;NAOMI LAWSON, 12, Black, beautiful, in her blue and white cheerleader uniform — flips through the air with total precision. She LANDS perfectly. The other cheerleaders erupt. Naomi&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Bright institutional fluorescent overhead plus warm natural light from high windows. Naomi: well-lit, sharp. Her notebook: in the relative shadow of her body and the water bottle shield.&quot;,
+    &quot;Color Palette&quot;: &quot;warm, bright&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">002_M02 — MEDIUM CLOSE</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;The scoreboard clock glitches — 12:17 to 12:20 and back. Naomi is the only one who notices.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action sci-fi adventure for young audiences&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Bright, kinetic, warm. Hint of the impossible&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;extreme close-up&quot;,
+      &quot;close-up&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Extreme close-up, shallow DOF, detail isolation, subject fills frame&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes&quot;,
+    &quot;Setting&quot;: &quot;MCU — Naomi on the bench, notebook in her lap. She glances up at the SCOREBOARD CLOCK. The clock reads 12:17 — then FLICKERS: 12:20. Then snaps back: 12:17. She blinks. Looks aroun&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;The fluorescent lights have barely — almost imperceptibly — shifted. Slightly cooler. The shadow under Naomi&#x27;s brow slightly deeper.&quot;,
+    &quot;Color Palette&quot;: &quot;cool&quot;,
+    &quot;Overall Color Tone&quot;: &quot;cool and distant&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"The scoreboard clock glitches — 12:17 to 12:20 and back. Naomi is the only one who notices."</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Contemporary live-action sci-fi adventure for young audiences</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Bright, kinetic, warm. Hint of the impossible</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">extreme close-up · close-up · eye-level POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Extreme close-up, shallow DOF, detail isolation, subject fills frame</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">eye-level view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">MCU — Naomi on the bench, notebook in her lap. She glances up at the SCOREBOARD CLOCK. The clock reads 12:17 — then FLICKERS: 12:20. Then snaps back: 12:17. She blinks. Looks aroun</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">The fluorescent lights have barely — almost imperceptibly — shifted. Slightly cooler. The shadow under Naomi's brow slightly deeper.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">cool</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">cool and distant</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Slight wide-angle compression, minimal distortion, clean glass</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.0 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Light digital noise consistent with contemporary cinema camera</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Period/contemporary clothing with authentic fabric textures; natural skin and hair</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Natural human movement and body language; environmental elements respond to motion</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action performance with practical lighting; photorealistic execution</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;The scoreboard clock glitches — 12:17 to 12:20 and back. Naomi is the only one who notices.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action sci-fi adventure for young audiences&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Bright, kinetic, warm. Hint of the impossible&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;extreme close-up&quot;,
+      &quot;close-up&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Extreme close-up, shallow DOF, detail isolation, subject fills frame&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes&quot;,
+    &quot;Setting&quot;: &quot;MCU — Naomi on the bench, notebook in her lap. She glances up at the SCOREBOARD CLOCK. The clock reads 12:17 — then FLICKERS: 12:20. Then snaps back: 12:17. She blinks. Looks aroun&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;The fluorescent lights have barely — almost imperceptibly — shifted. Slightly cooler. The shadow under Naomi&#x27;s brow slightly deeper.&quot;,
+    &quot;Color Palette&quot;: &quot;cool&quot;,
+    &quot;Overall Color Tone&quot;: &quot;cool and distant&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">002_M03 — CLOSE UP</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;The red shimmer — the air itself rippling. Naomi frozen mid-cheer as reality bends again.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action sci-fi adventure for young audiences&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Bright, kinetic, warm. Hint of the impossible&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;extreme close-up&quot;,
+      &quot;close-up&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Extreme close-up, shallow DOF, detail isolation, subject fills frame&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes&quot;,
+    &quot;Setting&quot;: &quot;The gym lights flicker. For just a second the air ripples faintly RED near the ceiling. Naomi notices — no one else does. She rejoins the squad mid-cheer. The scoreboard JUMPS FORW&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;The fluorescent lights flickering — half a second of strobed instability. A FAINT RED SHIMMER near the ceiling, barely perceptible. The quality of light has become unreliable.&quot;,
+    &quot;Color Palette&quot;: &quot;red&quot;,
+    &quot;Overall Color Tone&quot;: &quot;neutral&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"The red shimmer — the air itself rippling. Naomi frozen mid-cheer as reality bends again."</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Contemporary live-action sci-fi adventure for young audiences</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Bright, kinetic, warm. Hint of the impossible</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">extreme close-up · close-up · eye-level POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Extreme close-up, shallow DOF, detail isolation, subject fills frame</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">eye-level view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">The gym lights flicker. For just a second the air ripples faintly RED near the ceiling. Naomi notices — no one else does. She rejoins the squad mid-cheer. The scoreboard JUMPS FORW</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">The fluorescent lights flickering — half a second of strobed instability. A FAINT RED SHIMMER near the ceiling, barely perceptible. The quality of light has become unreliable.</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">red</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">neutral</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Slight wide-angle compression, minimal distortion, clean glass</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.0 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Light digital noise consistent with contemporary cinema camera</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Period/contemporary clothing with authentic fabric textures; natural skin and hair</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Natural human movement and body language; environmental elements respond to motion</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action performance with practical lighting; photorealistic execution</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;The red shimmer — the air itself rippling. Naomi frozen mid-cheer as reality bends again.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action sci-fi adventure for young audiences&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Bright, kinetic, warm. Hint of the impossible&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;extreme close-up&quot;,
+      &quot;close-up&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Extreme close-up, shallow DOF, detail isolation, subject fills frame&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes&quot;,
+    &quot;Setting&quot;: &quot;The gym lights flicker. For just a second the air ripples faintly RED near the ceiling. Naomi notices — no one else does. She rejoins the squad mid-cheer. The scoreboard JUMPS FORW&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;The fluorescent lights flickering — half a second of strobed instability. A FAINT RED SHIMMER near the ceiling, barely perceptible. The quality of light has become unreliable.&quot;,
+    &quot;Color Palette&quot;: &quot;red&quot;,
+    &quot;Overall Color Tone&quot;: &quot;neutral&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr">
+    <span class="card-id">002_M04 — CLOSING</span>
+    <button class="copy-btn" onclick="copyCard(this)" data-text="{
+  &quot;Caption&quot;: &quot;The notebook ink glows red — the same chime as the cold open closes the loop. TITLE CARD.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action sci-fi adventure for young audiences&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Bright, kinetic, warm. Hint of the impossible&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;wide establishing shot&quot;,
+      &quot;medium shot&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Wide or medium, subject small against space, weight of the moment&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes&quot;,
+    &quot;Setting&quot;: &quot;CLOSE ON: Naomi&#x27;s notebook inside her bag. The words &#x27;Time Glitch #1?&#x27; on the open page. The INK BEGINS TO GLOW RED — slowly, unmistakably, impossibly. A soft CHIME echoes. The sam&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Dim — we&#x27;re looking into a bag. The ONLY light source is the red glow of the ink itself. Warm, pulsing red light on Naomi&#x27;s face from below — like the notebook is a lantern. Like the one that went out&quot;,
+    &quot;Color Palette&quot;: &quot;warm, red&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}">COPY JSON</button>
+  </div>
+  <div class="caption">"The notebook ink glows red — the same chime as the cold open closes the loop. TITLE CARD."</div>
+  <div class="fields">
+<div class="field"><span class="fk">ARTISTIC MEDIUM</span><span class="fv">Contemporary live-action sci-fi adventure for young audiences</span></div>
+<div class="field"><span class="fk">GENRE / MOVEMENT</span><span class="fv">Bright, kinetic, warm. Hint of the impossible</span></div>
+<div class="field"><span class="fk">FRAMING</span><span class="fv">wide establishing shot · medium shot · eye-level POV</span></div>
+<div class="field"><span class="fk">LAYOUT</span><span class="fv">Wide or medium, subject small against space, weight of the moment</span></div>
+<div class="field"><span class="fk">PERSPECTIVE</span><span class="fv">eye-level view</span></div>
+<div class="field"><span class="fk">SUBJECT</span><span class="fv">12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes</span></div>
+<div class="field"><span class="fk">SETTING</span><span class="fv">CLOSE ON: Naomi's notebook inside her bag. The words 'Time Glitch #1?' on the open page. The INK BEGINS TO GLOW RED — slowly, unmistakably, impossibly. A soft CHIME echoes. The sam</span></div>
+<div class="field"><span class="fk">LIGHTING</span><span class="fv">Dim — we're looking into a bag. The ONLY light source is the red glow of the ink itself. Warm, pulsing red light on Naomi's face from below — like the notebook is a lantern. Like the one that went out</span></div>
+<div class="field"><span class="fk">COLOR PALETTE</span><span class="fv">warm, red</span></div>
+<div class="field"><span class="fk">TONE</span><span class="fv">warm and inviting</span></div>
+<div class="field"><span class="fk">CAMERA</span><span class="fv">Digital cinema camera, 2020s</span></div>
+<div class="field"><span class="fk">LENS FX</span><span class="fv">Slight wide-angle compression, minimal distortion, clean glass</span></div>
+<div class="field"><span class="fk">DEPTH OF FIELD</span><span class="fv">Shallow depth of field at f/2.0 — subject sharp, background softens</span></div>
+<div class="field"><span class="fk">GRAIN / NOISE</span><span class="fv">Light digital noise consistent with contemporary cinema camera</span></div>
+<div class="field"><span class="fk">MATERIAL & TEXTURE</span><span class="fv">Period/contemporary clothing with authentic fabric textures; natural skin and hair</span></div>
+<div class="field"><span class="fk">PHYSICS & EFFECTS</span><span class="fv">Natural human movement and body language; environmental elements respond to motion</span></div>
+<div class="field"><span class="fk">EXECUTION STYLE</span><span class="fv">Live-action performance with practical lighting; photorealistic execution</span></div>
+  </div>
+  <div class="json-block">
+    <pre>{
+  &quot;Caption&quot;: &quot;The notebook ink glows red — the same chime as the cold open closes the loop. TITLE CARD.&quot;,
+  &quot;STYLE&quot;: {
+    &quot;Artistic Medium&quot;: &quot;Contemporary live-action sci-fi adventure for young audiences&quot;,
+    &quot;Aesthetic Movement / Genre&quot;: &quot;Bright, kinetic, warm. Hint of the impossible&quot;
+  },
+  &quot;COMPOSITION&quot;: {
+    &quot;Framing&quot;: [
+      &quot;wide establishing shot&quot;,
+      &quot;medium shot&quot;,
+      &quot;eye-level POV&quot;
+    ],
+    &quot;Layout&quot;: &quot;Wide or medium, subject small against space, weight of the moment&quot;,
+    &quot;Perspective&quot;: &quot;eye-level view&quot;,
+    &quot;Composition Imperfections&quot;: &quot;Natural organic framing — no artificial perfection&quot;
+  },
+  &quot;SCENE&quot;: {
+    &quot;Subject Characteristics&quot;: &quot;12-year-old Black girl (NAOMI), beautiful, natural hair with silver ribbon, blue and white cheerleader uniform, bright intelligent eyes&quot;,
+    &quot;Setting&quot;: &quot;CLOSE ON: Naomi&#x27;s notebook inside her bag. The words &#x27;Time Glitch #1?&#x27; on the open page. The INK BEGINS TO GLOW RED — slowly, unmistakably, impossibly. A soft CHIME echoes. The sam&quot;
+  },
+  &quot;CINEMATOGRAPHY_AND_LIGHTING&quot;: {
+    &quot;Lighting Style&quot;: &quot;Dim — we&#x27;re looking into a bag. The ONLY light source is the red glow of the ink itself. Warm, pulsing red light on Naomi&#x27;s face from below — like the notebook is a lantern. Like the one that went out&quot;,
+    &quot;Color Palette&quot;: &quot;warm, red&quot;,
+    &quot;Overall Color Tone&quot;: &quot;warm and inviting&quot;,
+    &quot;Tone &amp; Mood&quot;: &quot;authentic, character-driven, emotionally grounded&quot;
+  },
+  &quot;CAMERA_AND_LENS&quot;: {
+    &quot;Camera Type and Era&quot;: &quot;Digital cinema camera, 2020s&quot;,
+    &quot;Lens Effects&quot;: &quot;Slight wide-angle compression, minimal distortion, clean glass&quot;,
+    &quot;Depth of Field&quot;: &quot;Shallow depth of field at f/2.0 — subject sharp, background softens&quot;,
+    &quot;Film Grain / Noise&quot;: &quot;Light digital noise consistent with contemporary cinema camera&quot;
+  },
+  &quot;PHYSICAL_ATTRIBUTES&quot;: {
+    &quot;Material &amp; Texture&quot;: &quot;Period/contemporary clothing with authentic fabric textures; natural skin and hair&quot;,
+    &quot;Physics &amp; Effects&quot;: &quot;Natural human movement and body language; environmental elements respond to motion&quot;,
+    &quot;Execution Style&quot;: &quot;Live-action performance with practical lighting; photorealistic execution&quot;
+  }
+}</pre>
+  </div>
+</div>
+
+</div>
+<script>
+function copyCard(btn) {
+  const text = btn.getAttribute('data-text');
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'COPIED ✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'COPY JSON'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
+</body>
+</html>

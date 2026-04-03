@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V9 vs V18 Editorial Flow Comparison</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0a0a0f; color: #e0e0e0; padding: 20px; }
+h1 { text-align: center; font-size: 28px; margin-bottom: 8px; color: #fff; }
+.subtitle { text-align: center; color: #888; margin-bottom: 30px; font-size: 14px; }
+
+.grid-header { display: grid; grid-template-columns: 200px 1fr 1fr; gap: 2px; margin-bottom: 2px; }
+.grid-header div { padding: 12px 16px; font-weight: 700; font-size: 15px; text-align: center; }
+.col-label { background: #1a1a2e; color: #fff; border-radius: 6px 6px 0 0; }
+.col-v9 { background: #0d3320; color: #4ade80; }
+.col-v18 { background: #331a0d; color: #fb923c; }
+
+.comparison-row { display: grid; grid-template-columns: 200px 1fr 1fr; gap: 2px; margin-bottom: 2px; }
+.metric-label { background: #12121f; padding: 14px 16px; font-weight: 600; font-size: 13px; display: flex; align-items: center; }
+.v9-cell { background: #0a1f15; padding: 14px 16px; font-size: 13px; line-height: 1.6; }
+.v18-cell { background: #1f150a; padding: 14px 16px; font-size: 13px; line-height: 1.6; }
+
+.verdict { padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; display: inline-block; margin-top: 6px; }
+.better { background: #166534; color: #4ade80; }
+.worse { background: #7c2d12; color: #fb923c; }
+.equal { background: #1e3a5f; color: #7dd3fc; }
+.new { background: #4a1d96; color: #c4b5fd; }
+
+.scene-compare { margin: 40px 0; border: 1px solid #222; border-radius: 8px; overflow: hidden; }
+.scene-title { background: #1a1a2e; padding: 12px 20px; font-size: 16px; font-weight: 700; border-bottom: 1px solid #333; }
+.scene-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.scene-v9, .scene-v18 { padding: 16px 20px; }
+.scene-v9 { background: #0a1f15; border-right: 1px solid #222; }
+.scene-v18 { background: #1f150a; }
+.scene-v9 h3 { color: #4ade80; margin-bottom: 10px; font-size: 13px; }
+.scene-v18 h3 { color: #fb923c; margin-bottom: 10px; font-size: 13px; }
+
+.shot-sequence { font-family: 'Fira Code', 'Courier New', monospace; font-size: 12px; line-height: 1.8; }
+.shot-sequence .type-establishing { color: #60a5fa; }
+.shot-sequence .type-wide { color: #60a5fa; }
+.shot-sequence .type-medium { color: #fbbf24; }
+.shot-sequence .type-close { color: #f87171; }
+.shot-sequence .type-insert { color: #a78bfa; }
+.shot-sequence .type-ots { color: #34d399; }
+.shot-sequence .type-tracking { color: #f472b6; }
+.shot-sequence .type-reaction { color: #fb923c; }
+.shot-sequence .type-two { color: #22d3ee; }
+.shot-sequence .type-special { color: #e879f9; }
+.shot-sequence .arrow { color: #555; }
+.dlg-marker { color: #fbbf24; font-size: 10px; }
+
+.big-number { font-size: 36px; font-weight: 800; }
+.big-number.green { color: #4ade80; }
+.big-number.orange { color: #fb923c; }
+
+.section-title { font-size: 22px; font-weight: 700; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #333; color: #fff; }
+
+.takeaway { background: #1a1a2e; border-left: 4px solid #818cf8; padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0; }
+.takeaway h3 { color: #818cf8; margin-bottom: 8px; }
+.takeaway p { line-height: 1.7; color: #ccc; }
+
+.prediction { background: #0f2e1f; border: 1px solid #166534; padding: 24px; margin: 30px 0; border-radius: 8px; }
+.prediction h3 { color: #4ade80; margin-bottom: 12px; font-size: 18px; }
+.prediction .item { margin: 10px 0; padding-left: 20px; position: relative; }
+.prediction .item::before { content: ''; position: absolute; left: 0; top: 8px; width: 10px; height: 10px; border-radius: 50%; }
+.prediction .item.up::before { background: #4ade80; }
+.prediction .item.down::before { background: #f87171; }
+.prediction .item.same::before { background: #fbbf24; }
+</style>
+</head>
+<body>
+
+<h1>V9 vs V18/V19 — Editorial Flow Comparison</h1>
+<p class="subtitle">How the same story is told through camera coverage, pacing, and editorial decisions</p>
+
+<div class="section-title">THE NUMBERS</div>
+
+<div class="grid-header">
+  <div class="col-label">Metric</div>
+  <div class="col-v9">V9 (Hand-Crafted)</div>
+  <div class="col-v18">V18/V19 (Chain Pipeline)</div>
+</div>
+
+<div class="comparison-row">
+  <div class="metric-label">Total Shots</div>
+  <div class="v9-cell"><span class="big-number green">29</span><br>5 scenes (Broadcast Ready)</div>
+  <div class="v18-cell"><span class="big-number orange">266</span><br>18 scenes (full script)</div>
+</div>
+
+<div class="comparison-row">
+  <div class="metric-label">Unique Shot Types</div>
+  <div class="v9-cell"><span class="big-number green">19</span><br>exterior_establishing, interior_wide, character_detail, character_closeup, insert_cutaway, master_establishing, medium_closeup, tracking, two_shot_tight, reaction_medium, over_shoulder_dirty, reverse_medium, over_shoulder_alternating, master_interior, insert_detail, exterior_detail, medium, character_medium, climax_wide<br><span class="verdict better">RICH VISUAL VOCABULARY</span></div>
+  <div class="v18-cell"><span class="big-number orange">4</span><br>wide, medium, close, establishing<br><br><span class="verdict worse">MONOTONE — 96% IS JUST WIDE/MEDIUM</span></div>
+</div>
+
+<div class="comparison-row">
+  <div class="metric-label">Shots per Scene (avg)</div>
+  <div class="v9-cell"><span class="big-number green">5.8</span><br>Range: 4–9 per scene<br><span class="verdict better">TIGHT, EFFICIENT</span></div>
+  <div class="v18-cell"><span class="big-number orange">14.8</span><br>Range: 5–31 per scene<br><span class="verdict worse">BLOATED DIALOGUE SCENES</span></div>
+</div>
+
+<div class="comparison-row">
+  <div class="metric-label">Avg Duration per Shot</div>
+  <div class="v9-cell">14.0 seconds<br><span class="verdict better">LONGER HOLDS = MORE CINEMATIC</span></div>
+  <div class="v18-cell">13.5 seconds<br><span class="verdict equal">SIMILAR (V19 clamp helps)</span></div>
+</div>
+
+<div class="comparison-row">
+  <div class="metric-label">OTS / Reaction / Insert Shots</div>
+  <div class="v9-cell">6 out of 29 (21%)<br>over_shoulder_dirty, over_shoulder_alternating, reaction_medium, insert_cutaway ×3, insert_detail<br><span class="verdict better">REAL COVERAGE</span></div>
+  <div class="v18-cell">0 out of 266 (0%)<br>Zero OTS. Zero reactions. Zero inserts. Zero two-shots.<br><span class="verdict worse">NO COVERAGE VARIETY</span></div>
+</div>
+
+<div class="comparison-row">
+  <div class="metric-label">Intercut / Cross-Location</div>
+  <div class="v9-cell">Scene 2: Apartment ↔ Law Office intercutting during phone call. Two establishing shots for two locations interleaved.<br><span class="verdict better">REAL INTERCUTTING</span></div>
+  <div class="v18-cell">Scene 002: All shots in one location. Lawyer is V.O. only. No intercut. Wide/medium ping-pong.<br><span class="verdict worse">FLAT SINGLE-LOCATION</span></div>
+</div>
+
+<div class="comparison-row">
+  <div class="metric-label">Character Introduction</div>
+  <div class="v9-cell">Evelyn: full-body in apartment → medium CU on phone → hold. Arthur: master_interior reveal → reverse_medium → OTS. Clara: two_shot_tight with Evelyn → OTS dirty.<br><span class="verdict better">STAGED REVEALS</span></div>
+  <div class="v18-cell">Every character enters via "medium" shot. No staging difference between protagonist, antagonist, or background characters.<br><span class="verdict worse">ALL CHARACTERS EQUAL WEIGHT</span></div>
+</div>
+
+<div class="comparison-row">
+  <div class="metric-label">Scene Transitions</div>
+  <div class="v9-cell">Ritual climax_wide → hard cut → City apartment establishing (time jump). Bus insert_detail → exterior_detail sign (arrival marker). Pub OTS → Manor exterior_establishing (location shift).<br><span class="verdict better">MOTIVATED CUTS</span></div>
+  <div class="v18-cell">Scene ends with 3-4 trailing "medium" shots (no resolution beat). Next scene starts with "wide". Every transition is the same: ...medium, medium, medium → wide.<br><span class="verdict worse">NO EDITORIAL SHAPE</span></div>
+</div>
+
+<div class="comparison-row">
+  <div class="metric-label">V19 Fixes Active</div>
+  <div class="v9-cell">N/A — hand-crafted, these were already built in by the human director</div>
+  <div class="v18-cell">Face-lock text ✓ | Char-first refs ✓ | Duration clamp ✓ | Micro-expressions ✓ | Scene templates ✓<br><span class="verdict new">NEW — PARTIALLY ADDRESSES THE GAP</span></div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<div class="section-title">SCENE-BY-SCENE: SAME STORY, DIFFERENT EDIT</div>
+
+<!-- SCENE 1: RITUAL -->
+<div class="scene-compare">
+  <div class="scene-title">SCENE 1 — RITUAL CHAMBER (Opening)</div>
+  <div class="scene-grid">
+    <div class="scene-v9">
+      <h3>V9: 9 shots, 7 types, 126s</h3>
+      <div class="shot-sequence">
+        1. <span class="type-establishing">exterior_establishing</span> 20s<br>
+        <span class="arrow">↓ (outside → inside)</span><br>
+        2. <span class="type-wide">interior_wide</span> 14s<br>
+        <span class="arrow">↓ (room → character)</span><br>
+        3. <span class="type-close">character_detail</span> 12s <em>hands on altar</em><br>
+        <span class="arrow">↓ (detail → face)</span><br>
+        4. <span class="type-close">character_closeup</span> 14s <em>Margaret's face</em><br>
+        <span class="arrow">↓ (face → texture)</span><br>
+        5. <span class="type-insert">insert_cutaway</span> 10s <em>candle flame</em><br>
+        6. <span class="type-insert">insert_cutaway</span> 12s <em>chalk sigils glowing</em><br>
+        7. <span class="type-insert">insert_cutaway</span> 10s <em>shadows coalescing</em><br>
+        <span class="arrow">↓ (texture → payoff)</span><br>
+        8. <span class="type-medium">character_medium</span> 16s <em>ritual performance</em><br>
+        <span class="arrow">↓ (performance → climax)</span><br>
+        9. <span class="type-special">climax_wide</span> 18s <em>supernatural climax</em><br>
+      </div>
+      <p style="margin-top: 12px; color: #4ade80; font-size: 12px;"><strong>TECHNIQUE:</strong> Geography → Subject → Texture (3 inserts) → Payoff. Every shot does ONE job. The 3 inserts BREATHE between closeup and climax.</p>
+    </div>
+    <div class="scene-v18">
+      <h3>V18: Scene 001 — NOT IN SHOT PLAN</h3>
+      <div class="shot-sequence" style="color: #666;">
+        Scene 001 (Ritual) is not present in the V18 shot plan.<br><br>
+        The V18 script starts at Scene 002 (City Apartment).<br><br>
+        The ritual opening — the single most atmospheric sequence in V9 — has no equivalent in the automated pipeline output.
+      </div>
+      <p style="margin-top: 12px; color: #fb923c; font-size: 12px;"><strong>IMPACT:</strong> The entire gothic horror tone-setter is missing. V9 opens with 126 seconds of pure atmosphere before any dialogue.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SCENE 2: CITY APARTMENT (Phone Call) -->
+<div class="scene-compare">
+  <div class="scene-title">SCENE 2 — CITY APARTMENT / PHONE CALL</div>
+  <div class="scene-grid">
+    <div class="scene-v9">
+      <h3>V9: 6 shots, 3 types, 80s — INTERCUT</h3>
+      <div class="shot-sequence">
+        1. <span class="type-establishing">master_establishing</span> 14s <em>messy apartment</em><br>
+        <span class="arrow">↓ (apartment → face)</span><br>
+        2. <span class="type-close">medium_closeup</span> 12s <em>Evelyn on phone</em><br>
+        <span class="arrow">↓ (apartment → law office!)</span><br>
+        3. <span class="type-establishing">master_establishing</span> 12s <em>law office interior</em><br>
+        <span class="arrow">↓ (law office → back to Evelyn)</span><br>
+        4. <span class="type-close">medium_closeup</span> 14s <em>Evelyn reacting</em><br>
+        <span class="arrow">↓</span><br>
+        5. <span class="type-medium">medium</span> 16s <em>Evelyn looking at bills</em><br>
+        6. <span class="type-close">medium_closeup</span> 12s <em>Evelyn decision face</em><br>
+      </div>
+      <p style="margin-top: 12px; color: #4ade80; font-size: 12px;"><strong>TECHNIQUE:</strong> Classic intercut — we SEE both sides of the phone call. Apartment → face → law office → face. Then holds on Evelyn for the decision beat.</p>
+    </div>
+    <div class="scene-v18">
+      <h3>V18: 9 shots, 2 types, 114s — NO INTERCUT</h3>
+      <div class="shot-sequence">
+        1. <span class="type-wide">wide</span> 16s<br>
+        2. <span class="type-medium">medium</span> 10s <span class="dlg-marker">[DLG]</span><br>
+        3. <span class="type-wide">wide</span> 18s<br>
+        4. <span class="type-wide">wide</span> 8s <span class="dlg-marker">[DLG]</span><br>
+        5. <span class="type-medium">medium</span> 14s <span class="dlg-marker">[DLG]</span><br>
+        6. <span class="type-medium">medium</span> 12s<br>
+        7. <span class="type-wide">wide</span> 8s <span class="dlg-marker">[DLG]</span><br>
+        8. <span class="type-medium">medium</span> 14s <span class="dlg-marker">[DLG]</span><br>
+        9. <span class="type-medium">medium</span> 14s <span class="dlg-marker">[DLG]</span><br>
+      </div>
+      <p style="margin-top: 12px; color: #fb923c; font-size: 12px;"><strong>PROBLEM:</strong> No intercut. Lawyer is V.O. only. We never leave the apartment. 9 shots of wide/medium ping-pong when V9 told the same story in 6 shots with intercutting.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SCENE: PUB -->
+<div class="scene-compare">
+  <div class="scene-title">PUB SCENE — Where V18's Pattern is Most Visible</div>
+  <div class="scene-grid">
+    <div class="scene-v9">
+      <h3>V9: 4 shots, 4 types, 60s</h3>
+      <div class="shot-sequence">
+        1. <span class="type-establishing">master_establishing</span> 14s <em>cozy pub interior</em><br>
+        <span class="arrow">↓ (room → conversation)</span><br>
+        2. <span class="type-two">two_shot_tight</span> 16s <em>Clara + Evelyn at bar</em><br>
+        <span class="arrow">↓ (conversation → reaction)</span><br>
+        3. <span class="type-reaction">reaction_medium</span> 12s <em>locals react to "Ravencroft"</em><br>
+        <span class="arrow">↓ (room → intimate)</span><br>
+        4. <span class="type-ots">over_shoulder_dirty</span> 18s <em>Clara leans in</em><br>
+      </div>
+      <p style="margin-top: 12px; color: #4ade80; font-size: 12px;"><strong>TECHNIQUE:</strong> 4 shots. 4 different setups. Establish → two-shot → reaction → OTS. We feel the room, see both characters together, see the room react, then get intimate. Every shot ESCALATES.</p>
+    </div>
+    <div class="scene-v18">
+      <h3>V18: 25 shots, 2 types, 362s (6x longer!)</h3>
+      <div class="shot-sequence">
+        1. <span class="type-wide">wide</span> → 2. <span class="type-medium">medium</span> <span class="dlg-marker">[DLG]</span> → 3. <span class="type-wide">wide</span> → 4. <span class="type-medium">medium</span> <span class="dlg-marker">[DLG]</span> → 5. <span class="type-wide">wide</span> → 6. <span class="type-wide">wide</span> → 7. <span class="type-medium">medium</span> <span class="dlg-marker">[DLG]</span> → 8. <span class="type-wide">wide</span> → 9. <span class="type-medium">medium</span> <span class="dlg-marker">[DLG]</span> → 10. <span class="type-wide">wide</span> → 11. <span class="type-medium">medium</span> <span class="dlg-marker">[DLG]</span> → 12. <span class="type-wide">wide</span> → 13. <span class="type-wide">wide</span> → 14. <span class="type-medium">medium</span> <span class="dlg-marker">[DLG]</span> → 15. <span class="type-wide">wide</span> → 16. <span class="type-medium">medium</span> <span class="dlg-marker">[DLG]</span> → 17. <span class="type-wide">wide</span> → 18. <span class="type-medium">medium</span> <span class="dlg-marker">[DLG]</span> → 19. <span class="type-wide">wide</span> → 20. <span class="type-medium">medium</span> <span class="dlg-marker">[DLG]</span> → 21. <span class="type-wide">wide</span> → 22–25. <span class="type-medium">medium</span> ×4
+      </div>
+      <p style="margin-top: 12px; color: #fb923c; font-size: 12px;"><strong>PROBLEM:</strong> 25 shots. ZERO two-shots. ZERO OTS. ZERO reaction shots. ZERO inserts. Just wide/medium metronome for 6 minutes. This is what the shot expander does — it turns every dialogue beat into a wide + medium pair without any editorial intelligence.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SCENE: MANOR ARRIVAL -->
+<div class="scene-compare">
+  <div class="scene-title">MANOR ARRIVAL — The Big Reveal</div>
+  <div class="scene-grid">
+    <div class="scene-v9">
+      <h3>V9: 6 shots, 6 types, 92s</h3>
+      <div class="shot-sequence">
+        1. <span class="type-establishing">exterior_establishing</span> 18s <em>iron gates at dusk</em><br>
+        <span class="arrow">↓ (gates → walking)</span><br>
+        2. <span class="type-tracking">tracking</span> 14s <em>Evelyn walking gravel drive</em><br>
+        <span class="arrow">↓ (approach → arrive)</span><br>
+        3. <span class="type-medium">medium</span> 12s <em>Evelyn at front door</em><br>
+        <span class="arrow">↓ (outside → inside!)</span><br>
+        4. <span class="type-establishing">master_interior</span> 16s <em>foyer reveal + Arthur waiting</em><br>
+        <span class="arrow">↓ (Arthur POV → Evelyn POV)</span><br>
+        5. <span class="type-special">reverse_medium</span> 14s <em>Evelyn stepping inside</em><br>
+        <span class="arrow">↓ (both visible → dialogue)</span><br>
+        6. <span class="type-ots">over_shoulder_alternating</span> 18s <em>first conversation</em><br>
+      </div>
+      <p style="margin-top: 12px; color: #4ade80; font-size: 12px;"><strong>TECHNIQUE:</strong> 6 shots, 6 different camera setups. Each one MOVES the story forward: see the manor → walk toward it → arrive → enter → meet Arthur → talk. Motivated movement through space.</p>
+    </div>
+    <div class="scene-v18">
+      <h3>V18: Split across 3 scenes (006+007+008), 39 shots, 2 types</h3>
+      <div class="shot-sequence">
+        Scene 006 (Gates): wide → medium → medium → medium → medium (5 shots)<br>
+        Scene 007 (Front Door): wide → medium → wide → medium → wide → medium... (21 shots!)<br>
+        Scene 008 (Hallway): wide → medium → wide → medium... (13 shots)<br><br>
+        Total: 39 shots to cover what V9 did in 6.<br>
+        No tracking shot. No reverse. No OTS. No interior reveal.<br>
+        Just wide/medium alternating across 3 separate scenes.
+      </div>
+      <p style="margin-top: 12px; color: #fb923c; font-size: 12px;"><strong>PROBLEM:</strong> The arrival — one of the most cinematic moments — becomes 39 shots of wide/medium. No tracking movement, no reverse angle reveal, no motivated camera work. The moment is atomized instead of choreographed.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<div class="section-title">THE DIAGNOSIS</div>
+
+<div class="takeaway">
+  <h3>Why V9 Works</h3>
+  <p>V9 was hand-crafted by someone who thinks like a director. Every shot has a <strong>specific camera setup</strong> chosen for a reason. The ritual uses inserts to build texture. The phone call uses intercutting to show both sides. The pub uses OTS and reaction shots for intimacy. The arrival uses tracking and reverse shots for spatial movement. 19 different shot types across 29 shots means almost every shot does something different.</p>
+</div>
+
+<div class="takeaway">
+  <h3>Why V18 Doesn't</h3>
+  <p>V18's shot expander takes dialogue and converts it to a mechanical pattern: <strong>wide (geography) → medium (speaker) → wide → medium</strong>. It does this for EVERY dialogue scene regardless of content. A pub confrontation, a phone call, a will reading, and a bedroom conversation all get the exact same wide/medium treatment. 4 unique types across 266 shots means 98% of shots are visually interchangeable. The chain pipeline then tries to make these identical shots look connected — but the problem isn't continuity, it's that there's nothing interesting to be continuous WITH.</p>
+</div>
+
+<div class="takeaway">
+  <h3>What V19 Fixes (and What It Can't)</h3>
+  <p><strong>V19 DOES fix:</strong> Face identity (face-lock text + char-first refs), LTX face morphing (dialogue clamp), behavioral direction (micro-expressions), and scene structure hints (template enforcer can insert OTS/reaction/geography shots where missing).</p>
+  <p style="margin-top: 8px;"><strong>V19 CANNOT fix:</strong> The shot expander itself. The wide/medium metronome is baked into the shot_plan.json BEFORE V19 runs. V19's Scene Template Enforcer can INSERT missing shots (and it does — 10 insertions for Ravencroft), but it can't REPLACE the existing 266-shot wide/medium pattern. That would require rewriting the shot expander to use V9-style shot type vocabulary.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<div class="section-title">PREDICTION: WILL THE NEXT RUN BE BETTER?</div>
+
+<div class="prediction">
+  <h3>Honest Assessment</h3>
+
+  <div class="item up"><strong>FACE CONSISTENCY — MUCH BETTER.</strong> Face-lock text + character-first refs + duration clamp directly attack the #1 V18 problem. V9 had hand-tuned face descriptions per shot. V19 now auto-injects them.</div>
+
+  <div class="item up"><strong>ACTING DIRECTION — BETTER.</strong> V19 micro-expressions give characters behavioral specificity instead of generic "subtle eye movement." This was completely absent in V18.</div>
+
+  <div class="item up"><strong>DURATION PACING — BETTER.</strong> V19 clamps prevent the 18-20s close-ups that caused face morphing. Keeps dialogue shots in the safe zone.</div>
+
+  <div class="item up"><strong>SCENE STRUCTURE — SOMEWHAT BETTER.</strong> Template enforcer inserts missing OTS, reaction, and geography shots. But these are additions to an existing pattern, not a rewrite of it.</div>
+
+  <div class="item same"><strong>ENVIRONMENT CONTINUITY — SAME (already good).</strong> V18.3's end-frame reframe + ENV drift guard already handles this well. Rooms don't change between shots.</div>
+
+  <div class="item down"><strong>SHOT TYPE VARIETY — STILL THE CORE WEAKNESS.</strong> The 266-shot plan is still 96% wide/medium. V19 inserts a few OTS and reaction shots via templates (~10), but the base pattern is unchanged. To match V9's 19-type vocabulary, the shot expander itself needs a rewrite.</div>
+
+  <div class="item down"><strong>EDITORIAL SHAPE — STILL WEAK.</strong> V9 scenes have dramatic arcs: establish → escalate → breathe → resolve. V18 scenes are flat metronomes. V19's Director Edit Pass flags violations but can't restructure the sequence.</div>
+
+  <div class="item down"><strong>INTERCUTTING — STILL ABSENT.</strong> Phone calls, V.O. scenes, and cross-location conversations still render as single-location wide/medium. V9's intercut technique requires the shot expander to generate shots in two locations for one scene.</div>
+</div>
+
+<div class="prediction" style="background: #1a1a2e; border-color: #818cf8;">
+  <h3 style="color: #818cf8;">Bottom Line</h3>
+  <p style="color: #ccc; line-height: 1.8;">The next V19 render will look <strong>noticeably better than V18</strong> in face consistency, acting specificity, and duration pacing — the things that made V18 feel "AI-generated." But it won't match V9's <strong>editorial intelligence</strong> until the shot expander is rewritten to produce diverse shot types (OTS, two-shot, tracking, insert, reaction, reverse) instead of the wide/medium metronome. That's the V20 task: <strong>make the shot expander think like a director.</strong></p>
+</div>
+
+<div style="text-align: center; color: #555; padding: 40px 0 20px; font-size: 12px;">
+  ATLAS V9 vs V18/V19 Editorial Comparison — Generated 2026-02-26
+</div>
+
+</body>
+</html>

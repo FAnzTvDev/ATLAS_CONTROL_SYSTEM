@@ -1,0 +1,610 @@
+{
+  "status": "completed",
+  "verdicts": {
+    "test_scene_001_000_00A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "test_scene_001_001_00A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "integration_test_000_00A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "integration_test_001_00A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC01_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC01_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC01_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC02_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC02_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC03_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC04_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC04_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC04_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC05_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC05_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC06_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC06_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC07_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC07_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC07_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC08_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC08_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC08_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC09_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC09_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC09_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC09_003A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC10_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC10_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC10_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC10_003A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC11_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC11_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC11_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC11_003A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC12_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC12_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC12_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC13_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC13_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC13_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC13_003A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC13_004A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC14_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC14_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC14_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC14_003A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC14_004A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC15_000A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC15_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC15_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC15_003A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC03_001A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    },
+    "SC05_002A": {
+      "status": "fail",
+      "issues": [
+        "Hybrid score 0.00 below threshold",
+        "Face sharpness 0.00 below threshold"
+      ],
+      "metrics": {
+        "hybrid_score": 0,
+        "face_sharpness": 0
+      }
+    }
+  },
+  "phase_c_results": {
+    "bfp_safety": {
+      "status": "pass",
+      "type": "adversarial_swarm_10hz"
+    },
+    "splat_validation": {
+      "status": "pass",
+      "issues": [],
+      "determinism_verified": true
+    }
+  }
+}

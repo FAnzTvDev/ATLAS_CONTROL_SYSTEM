@@ -1,0 +1,23 @@
+{
+  "CANDLELIGHT": {
+    "url": "https://i.ibb.co/1GDVtS4N/quality-anchor-candlelight-drama-20251125-162200-jpg.png",
+    "description": "Candlelit Gothic drama aesthetic - warm amber lighting, dramatic shadows",
+    "style_keywords": [
+      "candlelit",
+      "Gothic",
+      "Victorian",
+      "atmospheric",
+      "dramatic lighting"
+    ],
+    "color_palette": "Warm amber, deep shadows, muted browns",
+    "mood": "Ominous, supernatural, intimate"
+  },
+  "CANDLELIGHT_DRAMA": {
+    "url": "https://i.ibb.co/1GDVtS4N/quality-anchor-candlelight-drama-20251125-162200-jpg.png",
+    "description": "Candlelight Gothic drama"
+  },
+  "TONE_ANCHOR": {
+    "url": "/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ravencroft_manor/asset_cache/quality_anchor_brass_leather_flashlight_78bf76.jpg",
+    "description": "TONE_ANCHOR reference"
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "episode_title": "Parallel Test \u2013 Arrival to Confrontation",
+  "episode_number": 0,
+  "episode_theme": "Eleanor enters Blackwood Estate under Mrs. Cross' scrutiny",
+  "production_stats": {
+    "total_shots": 19
+  },
+  "scenes": [
+    {
+      "scene_number": 3,
+      "scene_id": "BW_EP1_003",
+      "scene_title": "Mrs. Cross Appears",
+      "scene_purpose": "Introduce Mrs. Cross as antagonist and force Eleanor to assert control.",
+      "location": "Interior \u2013 Side Hallway \u2013 Night",
+      "time": "Friday 11:55 PM",
+      "characters_present": [
+        "Eleanor Vance",
+        "Mrs. Cross"
+      ],
+      "runtime_seconds": 44,
+      "beats": [
+        {
+          "beat_number": 1,
+          "description": "Mrs. Cross materializes silently, forcing Eleanor to confront the house rules.",
+          "goal": "Eleanor needs cooperation from the staff.",
+          "conflict": "Mrs. Cross exerts authority and hostility.",
+          "turn": "Eleanor realizes she must assert herself.",
+          "emotional_state": "Surprise/Tension",
+          "visual": "Chiaroscuro hallway where Mrs. Cross emerges from black void as Eleanor spins in shock.",
+          "beat": "BW_EP1_003_BEAT_1",
+          "duration_seconds": 12,
+          "emotion_curve": "Surprise/Tension",
+          "audio_perspective": "startle_close",
+          "character_action": "Eleanor pivots to confront Mrs. Cross and refuses to yield ground.",
+          "revelation": "Mrs. Cross is both gatekeeper and antagonist."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "BW_EP1_003_001A",
+          "type": "medium",
+          "duration": 8,
+          "emotion_curve": "Surprise/Tension",
+          "nano_prompt": "Medium shot as the governess spins to face the housekeeper emerging silently from a side hall, both carved by a slash of light.",
+          "ltx_motion_prompt": "Snap zoom retract reveals the reprimand \"You were not invited to wander\" freezing the governess mid-step.",
+          "dialogue": "Mrs. Cross: \"You were not invited to wander.\"",
+          "dialogue_subtext": "She asserts total control over the space without raising her voice.",
+          "camera_motivation": "domestic_intrusion",
+          "lighting_split": {
+            "exterior_cool": 0.35,
+            "interior_warm": 0.65
+          },
+          "atmospheric_density": 0.7,
+          "audio_perspective": "startle_close",
+          "human_first_frame": true,
+          "camera": "35mm snap zoom retract",
+          "lens_specs": "medium perspective with zoom whip",
+          "lighting": "Hard chiaroscuro slash across Mrs. Cross",
+          "character_blocking": "Eleanor foreground, Mrs. Cross emerging from hallway",
+          "reference_needed": "Eleanor Vance, Mrs. Cross",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 35mm medium as housekeeper emerges from side hall, governess spinning foreground. REF: Eleanor Vance, Mrs. Cross. LIGHT: hard chiaroscuro slash isolating both faces. BLOCK: Eleanor foreground profile, Mrs. Cross materializing from void.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center_left_third",
+            "secondary_subject": "Mrs. Cross",
+            "secondary_anchor": "center_right_third",
+            "camera_height": "chest_height",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": null,
+          "continuity_next": "BW_EP1_003_002B",
+          "continuity_note": "Match framing from scene BW_EP1_003 cold open and hand off cleanly to BW_EP1_003_002B.",
+          "timeline_role": "establishing_plate",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 35mm snap zoom retract at action start, honoring Eleanor foreground grounding.",
+            "end_pose": "Conclude with Eleanor foreground, Mrs. Cross emerging from hallway locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          }
+        },
+        {
+          "shot_id": "BW_EP1_003_002B",
+          "type": "closeup",
+          "duration": 8,
+          "emotion_curve": "Calculated Resolve",
+          "nano_prompt": "Close-up on the governess regaining composure, eyes locked while the housekeeper blurs in the background.",
+          "ltx_motion_prompt": "Static duel as she replies \"Then provide me a lamp and I will keep to my work\" using impeccable diction to reclaim control.",
+          "dialogue": "Eleanor: \"Then provide me a lamp and I will keep to my work.\"",
+          "dialogue_subtext": "She counters authority with politeness weaponized as control.",
+          "camera_motivation": "duel_of_wills",
+          "lighting_split": {
+            "exterior_cool": 0.4,
+            "interior_warm": 0.6
+          },
+          "atmospheric_density": 0.55,
+          "audio_perspective": "intimate_dialogue",
+          "human_first_frame": true,
+          "camera": "65mm locked duel close-up",
+          "lens_specs": "shallow DOF isolating Eleanor",
+          "lighting": "Sharp key only on Eleanor, darkness behind Mrs. Cross",
+          "character_blocking": "Eleanor in focus, Mrs. Cross blurred behind",
+          "reference_needed": "Eleanor Vance",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: locked 65mm close-up on governess reclaiming composure while housekeeper blurs behind. REF: Eleanor Vance. LIGHT: sharp key on Eleanor, darkness enveloping background. BLOCK: Eleanor center frame, Mrs. Cross defocused over shoulder.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center",
+            "secondary_subject": null,
+            "secondary_anchor": null,
+            "camera_height": "eye_level",
+            "depth_intent": "shallow_depth"
+          },
+          "continuity_prev": "BW_EP1_003_001A",
+          "continuity_next": "BW_EP1_003_003C",
+          "continuity_note": "Match framing from BW_EP1_003_001A and hand off cleanly to BW_EP1_003_003C.",
+          "timeline_role": "detail_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 65mm locked duel close-up at action start, honoring Eleanor in focus grounding.",
+            "end_pose": "Conclude with Eleanor in focus, Mrs. Cross blurred behind locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          }
+        },
+        {
+          "shot_id": "BW_EP1_003_003C",
+          "type": "insert",
+          "duration": 8,
+          "emotion_curve": "Power Struggle",
+          "nano_prompt": "Macro insert on the housekeeper's gloved hands gripping the brass lamp key with the governess reflected in the polished surface.",
+          "ltx_motion_prompt": "Macro hold while the whispered threat binds her to silence before the key is reluctantly offered.",
+          "camera_motivation": "ominous_symbol",
+          "lighting_split": {
+            "exterior_cool": 0.3,
+            "interior_warm": 0.7
+          },
+          "atmospheric_density": 0.6,
+          "audio_perspective": "intimate_dialogue",
+          "human_first_frame": false,
+          "camera": "90mm macro locked off",
+          "lens_specs": "extreme shallow DOF on key and reflection",
+          "lighting": "Single slit of light across key, surrounding darkness",
+          "character_blocking": "Hands and reflection sharing frame diagonals",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 90mm macro insert on housekeeper gloves gripping brass lamp key with governess reflection. REF: Mrs. Cross, Eleanor Vance. LIGHT: single slit across key, surrounding darkness. BLOCK: diagonal composition with hands and reflection.",
+          "reference_needed": "Mrs. Cross, Eleanor Vance",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Mrs. Cross",
+            "primary_anchor": "center",
+            "secondary_subject": "Eleanor Vance",
+            "secondary_anchor": "right_third",
+            "camera_height": "object_plane",
+            "depth_intent": "macro_plane"
+          },
+          "continuity_prev": "BW_EP1_003_002B",
+          "continuity_next": "BW_EP1_003_004D",
+          "continuity_note": "Match framing from BW_EP1_003_002B and hand off cleanly to BW_EP1_003_004D.",
+          "timeline_role": "dialogue_call",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 90mm macro locked off at action start, honoring Hands and reflection sharing frame diagonals grounding.",
+            "end_pose": "Conclude with Hands and reflection sharing frame diagonals locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          }
+        },
+        {
+          "shot_id": "BW_EP1_003_004D",
+          "type": "over_shoulder",
+          "duration": 8,
+          "emotion_curve": "Dominance",
+          "nano_prompt": "Over-shoulder from the housekeeper towering over the governess as the hallway stretches into darkness.",
+          "ltx_motion_prompt": "Slow push from the housekeeper's POV while she cites Mr. Blackwood's rules, forcing the governess to retreat.",
+          "dialogue": "Mrs. Cross: \"Mr. Blackwood's rules are not open to negotiation.\"",
+          "dialogue_subtext": "She weaponizes the master's name to keep Eleanor submissive.",
+          "camera_motivation": "authority_pressure",
+          "lighting_split": {
+            "exterior_cool": 0.35,
+            "interior_warm": 0.65
+          },
+          "atmospheric_density": 0.65,
+          "audio_perspective": "intimate_dialogue",
+          "human_first_frame": true,
+          "camera": "55mm slow push over Mrs. Cross's shoulder",
+          "lens_specs": "medium depth keeping both figures readable",
+          "lighting": "Key on Eleanor, rim on Mrs. Cross",
+          "character_blocking": "Mrs. Cross foreground silhouette, Eleanor retreating",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: 55mm over-shoulder from housekeeper towering over governess, hallway stretching into darkness. REF: Eleanor Vance, Mrs. Cross. LIGHT: key on Eleanor, rim on housekeeper silhouette. BLOCK: Mrs. Cross foreground silhouette, Eleanor retreating down hall.",
+          "reference_needed": "Eleanor Vance, Mrs. Cross",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "near_right",
+            "secondary_subject": "Mrs. Cross",
+            "secondary_anchor": "far_left",
+            "camera_height": "eye_level",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": "BW_EP1_003_003C",
+          "continuity_next": "BW_EP1_003_005E",
+          "continuity_note": "Match framing from BW_EP1_003_003C and hand off cleanly to BW_EP1_003_005E.",
+          "timeline_role": "dialogue_response",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 55mm slow push over Mrs. Cross's shoulder at action start, honoring Mrs. Cross foreground silhouette grounding.",
+            "end_pose": "Conclude with Mrs. Cross foreground silhouette, Eleanor retreating locked before cutting.",
+            "tempo": "8s beat per Marcus 004 cadence"
+          }
+        },
+        {
+          "shot_id": "BW_EP1_003_005E",
+          "type": "wide",
+          "duration": 6,
+          "emotion_curve": "Aftermath",
+          "nano_prompt": "Wide two-shot with the governess and housekeeper separated by negative space amid foyer shadows.",
+          "ltx_motion_prompt": "Locked wide lingers as the governess lifts her bag and the housekeeper turns away, footsteps echoing to compel obedience.",
+          "camera_motivation": "emotional_distance",
+          "lighting_split": {
+            "exterior_cool": 0.4,
+            "interior_warm": 0.6
+          },
+          "atmospheric_density": 0.6,
+          "audio_perspective": "ambient_hall",
+          "human_first_frame": true,
+          "camera": "32mm locked wide",
+          "lens_specs": "deep focus keeping both figures sharp",
+          "lighting": "Gaslamp pools separated by darkness",
+          "character_blocking": "Eleanor frame left, Mrs. Cross frame right exiting",
+          "reference_needed": "Eleanor Vance, Mrs. Cross",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "description": "CAM: locked 32mm wide two-shot in foyer negative space. REF: Eleanor Vance, Mrs. Cross. LIGHT: separated gaslamp pools. BLOCK: Eleanor frame left lifting bag, Mrs. Cross frame right turning away into corridor.",
+          "character_visible": true,
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "left_third",
+            "secondary_subject": "Mrs. Cross",
+            "secondary_anchor": "right_third",
+            "camera_height": "waist_height",
+            "depth_intent": "deep_focus"
+          },
+          "continuity_prev": "BW_EP1_003_004D",
+          "continuity_next": "BW_EP1_003_006F",
+          "continuity_note": "Match framing from BW_EP1_003_004D and hand off cleanly to BW_EP1_003_006F.",
+          "timeline_role": "symbol_insert",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 32mm locked wide at action start, honoring Eleanor frame left grounding.",
+            "end_pose": "Conclude with Eleanor frame left, Mrs. Cross frame right exiting locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          }
+        },
+        {
+          "shot_id": "BW_EP1_003_006F",
+          "type": "medium",
+          "duration": 6,
+          "emotion_curve": "Reluctant Obedience",
+          "nano_prompt": "Medium rear shot of the governess hesitating while Mrs. Cross glides away with the lamp key raised.",
+          "ltx_motion_prompt": "Handheld follow as she steadies herself and steps forward, keeping the housekeeper centered while footsteps echo down the hall.",
+          "camera_motivation": "command_follow",
+          "lighting_split": {
+            "exterior_cool": 0.4,
+            "interior_warm": 0.6
+          },
+          "atmospheric_density": 0.6,
+          "audio_perspective": "ambient_hall",
+          "human_first_frame": true,
+          "camera": "45mm handheld follow",
+          "lens_specs": "medium depth keeping both figures readable",
+          "lighting": "Gaslamp glow trailing into darkness",
+          "character_blocking": "Housekeeper centered ahead, governess foreground back toward camera",
+          "reference_needed": "Eleanor Vance, Mrs. Cross",
+          "beat_number": 1,
+          "ltx_compliant": true,
+          "camera_breath_frames": 2,
+          "camera_breath_interval": 6,
+          "character_visible": true,
+          "description": "CAM: handheld 45mm follow from behind governess as housekeeper glides away with lamp key raised. REF: Eleanor Vance, Mrs. Cross. LIGHT: trailing gaslamp glow fading into darkness. BLOCK: housekeeper centered ahead, governess back toward camera hesitates then steps forward.",
+          "framing_matrix": {
+            "primary_subject": "Eleanor Vance",
+            "primary_anchor": "center_left_third",
+            "secondary_subject": "Mrs. Cross",
+            "secondary_anchor": "center_right_third",
+            "camera_height": "chest_height",
+            "depth_intent": "controlled_depth"
+          },
+          "continuity_prev": "BW_EP1_003_005E",
+          "continuity_next": null,
+          "continuity_note": "Match framing from BW_EP1_003_005E and hand off cleanly to scene BW_EP1_003 outro.",
+          "timeline_role": "exit_marker",
+          "ltx_motion_metadata": {
+            "start_pose": "Camera 45mm handheld follow at action start, honoring Housekeeper centered ahead grounding.",
+            "end_pose": "Conclude with Housekeeper centered ahead, governess foreground back toward camera locked before cutting.",
+            "tempo": "6s beat per Marcus 004 cadence"
+          }
+        }
+      ],
+      "scene_guide": "SCENE GUIDE: Narrow side hallway; camera aligned along corridor depth with housekeeper emerging from doorway, gaslamp pools and deep negative space."
+    }
+  ]
+}

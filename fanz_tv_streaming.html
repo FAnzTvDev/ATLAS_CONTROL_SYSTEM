@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FANZ TV</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --bg-card: #1a1a1a;
+  --bg-hover: #222;
+  --text-primary: #e5e5e5;
+  --text-secondary: #a3a3a3;
+  --text-muted: #737373;
+  --accent-gold: #c8a961;
+  --accent-red: #e50914;
+  --rumble: #e23636;
+  --horror: #8b1a8b;
+  --scifi: #00c8ff;
+  --martian: #ff6b2b;
+  --whodone: #2ecc71;
+  --jokebox: #ffd700;
+  --nav-height: 68px;
+  --transition: 0.2s ease;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== TOP NAV ===== */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: var(--nav-height);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 4%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 70%, transparent 100%);
+  transition: background 0.3s;
+}
+.topnav.solid { background: rgba(10,10,10,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+.nav-left { display: flex; align-items: center; gap: 32px; }
+.nav-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem; font-weight: 700; letter-spacing: 2px;
+  background: linear-gradient(135deg, var(--accent-gold), #e8d5a3);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.nav-links { display: flex; gap: 24px; }
+.nav-links a {
+  color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;
+  font-weight: 500; transition: color var(--transition); cursor: pointer;
+}
+.nav-links a:hover, .nav-links a.active { color: #fff; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.search-box {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px; padding: 6px 12px; transition: all var(--transition);
+}
+.search-box:focus-within { border-color: var(--accent-gold); background: rgba(255,255,255,0.12); }
+.search-box input {
+  background: none; border: none; color: #fff; font-size: 0.8125rem;
+  outline: none; width: 180px; font-family: inherit;
+}
+.search-box input::placeholder { color: var(--text-muted); }
+.nav-icon { color: var(--text-secondary); cursor: pointer; transition: color var(--transition); font-size: 1.1rem; position: relative; }
+.nav-icon:hover { color: #fff; }
+.nav-icon .badge { position: absolute; top: -6px; right: -6px; background: var(--accent-red); color: #fff; font-size: 0.6rem; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.profile-avatar {
+  width: 32px; height: 32px; border-radius: 4px; cursor: pointer;
+  background: linear-gradient(135deg, var(--accent-gold), #8b6914);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; color: #000;
+}
+
+/* ===== NETWORK STRIP ===== */
+.network-strip {
+  position: fixed; top: var(--nav-height); left: 0; right: 0; z-index: 999;
+  background: rgba(10,10,10,0.95); backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; height: 44px; padding: 0 4%; gap: 4px;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.network-strip::-webkit-scrollbar { display: none; }
+.net-tab {
+  padding: 8px 18px; border-radius: 20px; font-size: 0.8125rem; font-weight: 600;
+  cursor: pointer; white-space: nowrap; transition: all var(--transition);
+  color: var(--text-muted); border: 1px solid transparent;
+  font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.5px;
+}
+.net-tab:hover { color: var(--text-secondary); background: rgba(255,255,255,0.05); }
+.net-tab.active { color: #fff; border-color: currentColor; }
+.net-tab[data-net="all"].active { background: rgba(200,169,97,0.15); border-color: var(--accent-gold); color: var(--accent-gold); }
+.net-tab[data-net="rumble"].active { background: rgba(226,54,54,0.15); border-color: var(--rumble); color: var(--rumble); }
+.net-tab[data-net="horror"].active { background: rgba(139,26,139,0.15); border-color: var(--horror); color: var(--horror); }
+.net-tab[data-net="scifi"].active { background: rgba(0,200,255,0.15); border-color: var(--scifi); color: var(--scifi); }
+.net-tab[data-net="martian"].active { background: rgba(255,107,43,0.15); border-color: var(--martian); color: var(--martian); }
+.net-tab[data-net="whodone"].active { background: rgba(46,204,113,0.15); border-color: var(--whodone); color: var(--whodone); }
+.net-tab[data-net="jokebox"].active { background: rgba(255,215,0,0.15); border-color: var(--jokebox); color: var(--jokebox); }
+
+/* ===== HERO BILLBOARD ===== */
+.hero {
+  position: relative; width: 100%; height: 85vh; min-height: 560px;
+  margin-top: var(--nav-height);
+  overflow: hidden;
+}
+.hero-slide {
+  position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease;
+}
+.hero-slide.active { opacity: 1; }
+.hero-bg {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.hero-gradient {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, transparent 70%),
+    linear-gradient(to top, var(--bg-primary) 0%, rgba(10,10,10,0.4) 30%, transparent 60%);
+}
+.hero-content {
+  position: absolute; bottom: 18%; left: 4%; max-width: 560px; z-index: 2;
+}
+.hero-network-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 3px; font-size: 0.7rem;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+  margin-bottom: 14px; font-family: 'Space Grotesk', sans-serif;
+}
+.hero-title {
+  font-size: 3.2rem; font-weight: 800; line-height: 1.05;
+  margin-bottom: 12px; letter-spacing: -0.5px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+.hero-meta {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 12px;
+  font-size: 0.8125rem; color: var(--text-secondary);
+}
+.hero-meta .match { color: #46d369; font-weight: 700; }
+.hero-meta .rating {
+  border: 1px solid var(--text-muted); padding: 0 5px; border-radius: 2px;
+  font-size: 0.7rem;
+}
+.hero-desc {
+  font-size: 0.95rem; line-height: 1.55; color: var(--text-secondary);
+  margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; overflow: hidden;
+}
+.hero-cast { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 20px; }
+.hero-cast span { color: var(--text-secondary); }
+.hero-actions { display: flex; gap: 10px; }
+.btn-play {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 28px; border-radius: 4px; font-size: 1rem;
+  font-weight: 700; cursor: pointer; transition: all var(--transition);
+  border: none; font-family: inherit;
+  background: #fff; color: #000;
+}
+.btn-play:hover { background: rgba(255,255,255,0.8); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 24px; border-radius: 4px; font-size: 0.95rem;
+  font-weight: 600; cursor: pointer; transition: all var(--transition);
+  border: none; font-family: inherit;
+  background: rgba(109,109,110,0.7); color: #fff;
+}
+.btn-secondary:hover { background: rgba(109,109,110,0.5); }
+.btn-icon {
+  width: 40px; height: 40px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.5);
+  background: rgba(0,0,0,0.5); color: #fff; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all var(--transition); font-size: 1rem;
+}
+.btn-icon:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+/* Hero indicators */
+.hero-indicators {
+  position: absolute; bottom: 8%; right: 4%; display: flex; gap: 3px; z-index: 3;
+}
+.hero-ind {
+  width: 28px; height: 3px; background: rgba(255,255,255,0.3); cursor: pointer;
+  transition: all 0.3s;
+}
+.hero-ind.active { background: #fff; width: 48px; }
+
+/* ===== CONTENT ROWS ===== */
+.content-area { padding: 0 0 80px; position: relative; z-index: 2; margin-top: -80px; }
+
+.content-row { margin-bottom: 40px; }
+.row-header {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 0 4%; margin-bottom: 10px;
+}
+.row-title {
+  font-size: 1.25rem; font-weight: 700; color: #fff;
+  display: flex; align-items: center; gap: 8px;
+}
+.row-title .net-dot {
+  width: 8px; height: 8px; border-radius: 50%; display: inline-block;
+}
+.row-see-all {
+  font-size: 0.8125rem; color: var(--accent-gold); cursor: pointer;
+  font-weight: 500; opacity: 0; transition: opacity var(--transition);
+}
+.content-row:hover .row-see-all { opacity: 1; }
+
+.row-scroll {
+  display: flex; gap: 6px; padding: 0 4%; overflow-x: auto;
+  scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.row-scroll::-webkit-scrollbar { display: none; }
+
+/* ===== CONTENT CARDS ===== */
+.card {
+  flex: 0 0 auto; width: 230px; border-radius: 4px; overflow: hidden;
+  cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; background: var(--bg-card);
+}
+.card:hover { transform: scale(1.05); z-index: 10; box-shadow: 0 8px 40px rgba(0,0,0,0.7); }
+
+.card-img-wrap {
+  position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden;
+  background: #1a1a1a;
+}
+.card-img {
+  width: 100%; height: 100%; object-fit: cover;
+  background-size: cover; background-position: center;
+  background-color: #1f1f1f;
+}
+.card-overlay {
+  position: absolute; inset: 0; opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+  transition: opacity var(--transition);
+  display: flex; flex-direction: column; justify-content: flex-end; padding: 10px;
+}
+.card:hover .card-overlay { opacity: 1; }
+.card-play-icon {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 40px; height: 40px; background: rgba(0,0,0,0.6); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid #fff; opacity: 0; transition: opacity var(--transition);
+}
+.card:hover .card-play-icon { opacity: 1; }
+.card-progress {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: rgba(255,255,255,0.2);
+}
+.card-progress-fill { height: 100%; background: var(--accent-red); }
+.card-net-badge {
+  position: absolute; top: 8px; left: 8px; padding: 2px 8px;
+  border-radius: 2px; font-size: 0.6rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.card-new {
+  position: absolute; top: 8px; right: 8px; background: var(--accent-red);
+  color: #fff; padding: 2px 6px; border-radius: 2px; font-size: 0.6rem;
+  font-weight: 700; text-transform: uppercase;
+}
+.card-info { padding: 10px 12px; }
+.card-title { font-size: 0.8125rem; font-weight: 600; color: #fff; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-sub { font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+.card-sub .ep { color: var(--text-secondary); }
+
+/* ===== WIDE FEATURED CARD ===== */
+.featured-row .row-scroll { gap: 10px; }
+.card-wide {
+  flex: 0 0 auto; width: 400px; border-radius: 6px; overflow: hidden;
+  cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
+  position: relative; background: var(--bg-card);
+}
+.card-wide:hover { transform: scale(1.03); box-shadow: 0 10px 50px rgba(0,0,0,0.6); }
+.card-wide .card-img-wrap { aspect-ratio: 2/1; }
+.card-wide .card-info { padding: 12px 16px; }
+.card-wide .card-title { font-size: 0.9375rem; }
+.card-wide .card-desc {
+  font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; margin-top: 4px;
+}
+
+/* ===== TOP 10 ROW ===== */
+.top10-row .row-scroll { gap: 8px; align-items: flex-end; }
+.top10-card {
+  flex: 0 0 auto; display: flex; align-items: flex-end; gap: 0;
+  cursor: pointer; transition: transform 0.3s;
+}
+.top10-card:hover { transform: scale(1.05); }
+.top10-num {
+  font-size: 7rem; font-weight: 900; line-height: 0.8;
+  color: transparent; -webkit-text-stroke: 2px var(--text-muted);
+  font-family: 'Inter', sans-serif; margin-right: -16px; z-index: 1;
+}
+.top10-poster {
+  width: 120px; height: 170px; border-radius: 4px;
+  background-size: cover; background-position: center;
+  background-color: var(--bg-card); position: relative;
+}
+
+/* ===== DETAIL MODAL ===== */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+  display: none; align-items: flex-start; justify-content: center;
+  padding: 40px 20px; overflow-y: auto;
+}
+.modal-overlay.show { display: flex; }
+.modal {
+  width: 100%; max-width: 880px; background: var(--bg-secondary);
+  border-radius: 8px; overflow: hidden; position: relative;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.8);
+}
+.modal-close {
+  position: absolute; top: 12px; right: 12px; z-index: 10;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(20,20,20,0.8); border: none; color: #fff;
+  font-size: 1.2rem; cursor: pointer; display: flex;
+  align-items: center; justify-content: center;
+}
+.modal-hero {
+  position: relative; width: 100%; aspect-ratio: 16/9;
+  background-size: cover; background-position: center top;
+  background-color: #1a1a1a;
+}
+.modal-hero-gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, var(--bg-secondary), transparent 50%);
+}
+.modal-hero-play {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 64px; height: 64px; background: rgba(0,0,0,0.6); border-radius: 50%;
+  border: 3px solid #fff; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all var(--transition);
+}
+.modal-hero-play:hover { background: rgba(255,255,255,0.2); transform: translate(-50%,-50%) scale(1.1); }
+.modal-body { padding: 0 32px 32px; margin-top: -60px; position: relative; z-index: 2; }
+.modal-title { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+.modal-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 0.875rem; }
+.modal-meta .match { color: #46d369; font-weight: 700; }
+.modal-meta .rating { border: 1px solid var(--text-muted); padding: 1px 6px; border-radius: 2px; font-size: 0.75rem; color: var(--text-secondary); }
+.modal-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; margin-bottom: 24px; }
+.modal-desc { font-size: 0.9375rem; line-height: 1.6; color: var(--text-secondary); }
+.modal-details { font-size: 0.8125rem; }
+.modal-details .label { color: var(--text-muted); }
+.modal-details .value { color: var(--text-secondary); }
+.modal-details div { margin-bottom: 8px; }
+.modal-actions { display: flex; gap: 10px; margin-bottom: 24px; }
+.modal-episodes-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; }
+.ep-item {
+  display: flex; gap: 16px; padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05); cursor: pointer;
+  transition: background var(--transition);
+}
+.ep-item:hover { background: rgba(255,255,255,0.03); }
+.ep-num { font-size: 1.4rem; font-weight: 600; color: var(--text-muted); min-width: 32px; text-align: center; padding-top: 8px; }
+.ep-thumb { width: 140px; height: 80px; border-radius: 4px; background-size: cover; background-position: center; background-color: var(--bg-card); flex-shrink: 0; position: relative; }
+.ep-thumb-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity var(--transition); }
+.ep-item:hover .ep-thumb-play { opacity: 1; }
+.ep-info { flex: 1; }
+.ep-title-row { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.ep-title { font-size: 0.875rem; font-weight: 600; }
+.ep-dur { font-size: 0.8125rem; color: var(--text-muted); }
+.ep-desc { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* ===== FOOTER ===== */
+.site-footer {
+  padding: 60px 4% 40px; border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-social { display: flex; gap: 16px; margin-bottom: 28px; }
+.footer-social a { color: var(--text-muted); font-size: 1.2rem; transition: color var(--transition); cursor: pointer; }
+.footer-social a:hover { color: #fff; }
+.footer-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+.footer-links a { color: var(--text-muted); font-size: 0.75rem; text-decoration: none; transition: color var(--transition); }
+.footer-links a:hover { color: var(--text-secondary); }
+.footer-copy { font-size: 0.7rem; color: var(--text-muted); }
+
+/* ===== VIDEO PLAYER OVERLAY ===== */
+.player-overlay {
+  position: fixed; inset: 0; z-index: 3000; background: #000;
+  display: none; flex-direction: column;
+}
+.player-overlay.show { display: flex; }
+.player-video {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  background: #000; position: relative;
+}
+.player-screen {
+  width: 100%; height: 100%;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0a 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem; color: rgba(255,255,255,0.1);
+  position: relative;
+}
+.player-center-play {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: rgba(255,255,255,0.15); border: 3px solid rgba(255,255,255,0.5);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.3s; font-size: 2rem; color: #fff;
+}
+.player-center-play:hover { background: rgba(255,255,255,0.25); transform: scale(1.1); }
+.player-controls {
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  padding: 20px 24px 16px; position: absolute; bottom: 0; left: 0; right: 0;
+}
+.player-progress { position: relative; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px; margin-bottom: 12px; cursor: pointer; }
+.player-progress-fill { height: 100%; background: var(--accent-red); border-radius: 2px; width: 32%; position: relative; }
+.player-progress-fill::after { content: ''; position: absolute; right: -6px; top: -4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-red); opacity: 0; transition: opacity 0.2s; }
+.player-progress:hover .player-progress-fill::after { opacity: 1; }
+.player-progress-buffer { position: absolute; top: 0; left: 0; height: 100%; background: rgba(255,255,255,0.15); border-radius: 2px; width: 55%; }
+.player-bar { display: flex; align-items: center; justify-content: space-between; }
+.player-bar-left, .player-bar-right { display: flex; align-items: center; gap: 16px; }
+.player-btn { background: none; border: none; color: #fff; cursor: pointer; font-size: 1.1rem; opacity: 0.8; transition: opacity 0.2s; }
+.player-btn:hover { opacity: 1; }
+.player-time { font-size: 0.8125rem; color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+.player-title-bar {
+  position: absolute; top: 0; left: 0; right: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+  padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;
+}
+.player-back { background: none; border: none; color: #fff; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; gap: 8px; font-family: inherit; font-size: 0.9rem; }
+.player-show-title { font-size: 0.9375rem; font-weight: 600; }
+.player-ep-title { font-size: 0.8125rem; color: var(--text-secondary); margin-left: 8px; }
+
+/* ===== VOLUME SLIDER ===== */
+.vol-wrap { display: flex; align-items: center; gap: 6px; }
+.vol-slider { width: 70px; height: 3px; background: rgba(255,255,255,0.3); border-radius: 2px; appearance: none; cursor: pointer; }
+.vol-slider::-webkit-slider-thumb { appearance: none; width: 12px; height: 12px; border-radius: 50%; background: #fff; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-title { font-size: 2.4rem; }
+  .card { width: 180px; }
+  .card-wide { width: 320px; }
+  .modal-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .search-box input { width: 120px; }
+  .hero { height: 70vh; }
+  .hero-title { font-size: 1.8rem; }
+  .hero-desc { font-size: 0.875rem; }
+  .card { width: 150px; }
+  .card-wide { width: 280px; }
+  .footer-links { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== TOP NAVIGATION ===== -->
+<nav class="topnav" id="topnav">
+  <div class="nav-left">
+    <div class="nav-logo" onclick="switchNetwork('all')">FANZ TV</div>
+    <div class="nav-links">
+      <a class="active" onclick="scrollToSection('home')">Home</a>
+      <a onclick="scrollToSection('originals')">Originals</a>
+      <a onclick="scrollToSection('live')">Live TV</a>
+      <a onclick="switchNetwork('all')">Networks</a>
+      <a>My List</a>
+    </div>
+  </div>
+  <div class="nav-right">
+    <div class="search-box">
+      <span>&#128269;</span>
+      <input type="text" placeholder="Search titles, characters, networks..." />
+    </div>
+    <div class="nav-icon" title="Notifications">&#128276;<span class="badge">3</span></div>
+    <div class="profile-avatar" title="Profile">QP</div>
+  </div>
+</nav>
+
+<!-- ===== NETWORK STRIP ===== -->
+<div class="network-strip" id="netStrip">
+  <div class="net-tab active" data-net="all" onclick="switchNetwork('all')">All Networks</div>
+  <div class="net-tab" data-net="rumble" onclick="switchNetwork('rumble')">Rumble TV</div>
+  <div class="net-tab" data-net="horror" onclick="switchNetwork('horror')">Horror Classics</div>
+  <div class="net-tab" data-net="scifi" onclick="switchNetwork('scifi')">Sci-Fi Classics</div>
+  <div class="net-tab" data-net="martian" onclick="switchNetwork('martian')">Martian TV</div>
+  <div class="net-tab" data-net="whodone" onclick="switchNetwork('whodone')">Who Done It TV</div>
+  <div class="net-tab" data-net="jokebox" onclick="switchNetwork('jokebox')">JokeBox TV</div>
+</div>
+
+<!-- ===== HERO BILLBOARD ===== -->
+<section class="hero" id="home">
+  <div class="hero-slide active" data-slide="0">
+    <div class="hero-bg" style="background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 30%, #1a0a2e 60%, #0a0a1a 100%);"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-network-badge" style="background:rgba(139,26,139,0.3);color:#c77dff;">HORROR CLASSICS ORIGINAL</div>
+      <h1 class="hero-title">Victorian Shadows</h1>
+      <div class="hero-meta">
+        <span class="match">97% Match</span>
+        <span>2026</span>
+        <span class="rating">TV-MA</span>
+        <span>Season 1</span>
+        <span>6 Episodes</span>
+        <span style="color:var(--accent-gold);">&#9733; 4.8</span>
+      </div>
+      <p class="hero-desc">When Evelyn Ravencroft returns to her grandmother's crumbling estate, she discovers a web of dark rituals and family secrets spanning generations. In the shadows of Ravencroft Manor, the dead don't rest easily.</p>
+      <div class="hero-cast">Starring: <span>Evelyn Ravencroft &bull; Lady Margaret &bull; Arthur Gray &bull; Dr. Elias Ward &bull; Clara Byrne</span></div>
+      <div class="hero-actions">
+        <button class="btn-play" onclick="openPlayer('Victorian Shadows','S1:E1 &quot;The Inheritance&quot;')">&#9654; Play</button>
+        <button class="btn-secondary" onclick="openDetail(0)">&#9432; More Info</button>
+        <button class="btn-icon" title="Add to My List">&#43;</button>
+        <button class="btn-icon" title="Like">&#128077;</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slide" data-slide="1">
+    <div class="hero-bg" style="background: linear-gradient(135deg, #0a1628 0%, #1a2a4e 30%, #0a1628 60%, #0a0a1a 100%);"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-network-badge" style="background:rgba(0,200,255,0.2);color:var(--scifi);">SCI-FI CLASSICS ORIGINAL</div>
+      <h1 class="hero-title">Colony Seven</h1>
+      <div class="hero-meta">
+        <span class="match">94% Match</span>
+        <span>2026</span>
+        <span class="rating">TV-14</span>
+        <span>Season 1</span>
+        <span>8 Episodes</span>
+        <span style="color:var(--accent-gold);">&#9733; 4.6</span>
+      </div>
+      <p class="hero-desc">Humanity's last hope orbits a dying star. On Colony Seven, a generation ship carrying 12,000 souls, Chief Engineer Mara Chen discovers the AI controlling their journey has been lying about their destination for 200 years.</p>
+      <div class="hero-cast">Starring: <span>Mara Chen &bull; Commander Okafor &bull; Dr. Yuki Tanaka &bull; Jax Rivera &bull; ARIA (AI)</span></div>
+      <div class="hero-actions">
+        <button class="btn-play" onclick="openPlayer('Colony Seven','S1:E1 &quot;Course Correction&quot;')">&#9654; Play</button>
+        <button class="btn-secondary" onclick="openDetail(1)">&#9432; More Info</button>
+        <button class="btn-icon" title="Add to My List">&#43;</button>
+        <button class="btn-icon" title="Like">&#128077;</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slide" data-slide="2">
+    <div class="hero-bg" style="background: linear-gradient(135deg, #1a0f00 0%, #3d1f00 30%, #1a0f00 60%, #0a0a0a 100%);"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-network-badge" style="background:rgba(226,54,54,0.2);color:var(--rumble);">RUMBLE TV ORIGINAL</div>
+      <h1 class="hero-title">Apartment 4B</h1>
+      <div class="hero-meta">
+        <span class="match">92% Match</span>
+        <span>2026</span>
+        <span class="rating">TV-MA</span>
+        <span>Season 2</span>
+        <span>10 Episodes</span>
+        <span style="color:var(--accent-gold);">&#9733; 4.5</span>
+      </div>
+      <p class="hero-desc">Five strangers sharing a Brooklyn apartment navigate love, ambition, and the chaos of modern life. Season 2 raises the stakes as a startup opportunity threatens to tear the roommates apart.</p>
+      <div class="hero-cast">Starring: <span>Deja Washington &bull; Marcus Chen &bull; Sofia Reyes &bull; Kwame Asante &bull; Riley Kim</span></div>
+      <div class="hero-actions">
+        <button class="btn-play" onclick="openPlayer('Apartment 4B','S2:E1 &quot;The Pitch&quot;')">&#9654; Play</button>
+        <button class="btn-secondary" onclick="openDetail(2)">&#9432; More Info</button>
+        <button class="btn-icon" title="Add to My List">&#43;</button>
+        <button class="btn-icon" title="Like">&#128077;</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slide" data-slide="3">
+    <div class="hero-bg" style="background: linear-gradient(135deg, #1a1200 0%, #3d2e00 30%, #1a1200 60%, #0a0a0a 100%);"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-network-badge" style="background:rgba(46,204,113,0.2);color:var(--whodone);">WHO DONE IT TV ORIGINAL</div>
+      <h1 class="hero-title">The Blackwood Files</h1>
+      <div class="hero-meta">
+        <span class="match">95% Match</span>
+        <span>2026</span>
+        <span class="rating">TV-14</span>
+        <span>Season 1</span>
+        <span>8 Episodes</span>
+        <span style="color:var(--accent-gold);">&#9733; 4.7</span>
+      </div>
+      <p class="hero-desc">Detective Iris Blackwood has a gift for reading people that borders on supernatural. When a locked-room murder at a billionaire's estate turns into a web of interconnected crimes, every suspect has a perfect alibi.</p>
+      <div class="hero-cast">Starring: <span>Iris Blackwood &bull; Det. Marcus Cole &bull; DA Victoria Nash &bull; Prof. Crane</span></div>
+      <div class="hero-actions">
+        <button class="btn-play" onclick="openPlayer('The Blackwood Files','S1:E1 &quot;The Locked Room&quot;')">&#9654; Play</button>
+        <button class="btn-secondary" onclick="openDetail(3)">&#9432; More Info</button>
+        <button class="btn-icon" title="Add to My List">&#43;</button>
+        <button class="btn-icon" title="Like">&#128077;</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero-indicators">
+    <div class="hero-ind active" onclick="goSlide(0)"></div>
+    <div class="hero-ind" onclick="goSlide(1)"></div>
+    <div class="hero-ind" onclick="goSlide(2)"></div>
+    <div class="hero-ind" onclick="goSlide(3)"></div>
+  </div>
+</section>
+
+<!-- ===== CONTENT ROWS ===== -->
+<div class="content-area" id="originals">
+
+  <!-- Continue Watching -->
+  <div class="content-row" id="continueRow">
+    <div class="row-header">
+      <div class="row-title">Continue Watching for QP</div>
+      <span class="row-see-all">See All &#8250;</span>
+    </div>
+    <div class="row-scroll" id="continueScroll"></div>
+  </div>
+
+  <!-- Trending Now -->
+  <div class="content-row">
+    <div class="row-header">
+      <div class="row-title">Trending Now on FANZ TV</div>
+      <span class="row-see-all">See All &#8250;</span>
+    </div>
+    <div class="row-scroll" id="trendingScroll"></div>
+  </div>
+
+  <!-- Top 10 -->
+  <div class="content-row top10-row">
+    <div class="row-header">
+      <div class="row-title">Top 10 in the U.S. Today</div>
+    </div>
+    <div class="row-scroll" id="top10Scroll"></div>
+  </div>
+
+  <!-- Featured Originals -->
+  <div class="content-row featured-row">
+    <div class="row-header">
+      <div class="row-title" style="color:var(--accent-gold);">&#9733; FANZ Originals</div>
+      <span class="row-see-all">See All &#8250;</span>
+    </div>
+    <div class="row-scroll" id="featuredScroll"></div>
+  </div>
+
+  <!-- Network Rows -->
+  <div class="content-row" data-network="rumble">
+    <div class="row-header">
+      <div class="row-title"><span class="net-dot" style="background:var(--rumble);"></span> Rumble TV Originals</div>
+      <span class="row-see-all">See All &#8250;</span>
+    </div>
+    <div class="row-scroll" id="rumbleScroll"></div>
+  </div>
+
+  <div class="content-row" data-network="horror">
+    <div class="row-header">
+      <div class="row-title"><span class="net-dot" style="background:var(--horror);"></span> Horror Classics</div>
+      <span class="row-see-all">See All &#8250;</span>
+    </div>
+    <div class="row-scroll" id="horrorScroll"></div>
+  </div>
+
+  <div class="content-row" data-network="scifi">
+    <div class="row-header">
+      <div class="row-title"><span class="net-dot" style="background:var(--scifi);"></span> Sci-Fi Classics</div>
+      <span class="row-see-all">See All &#8250;</span>
+    </div>
+    <div class="row-scroll" id="scifiScroll"></div>
+  </div>
+
+  <div class="content-row" data-network="martian">
+    <div class="row-header">
+      <div class="row-title"><span class="net-dot" style="background:var(--martian);"></span> Martian TV</div>
+      <span class="row-see-all">See All &#8250;</span>
+    </div>
+    <div class="row-scroll" id="martianScroll"></div>
+  </div>
+
+  <div class="content-row" data-network="whodone">
+    <div class="row-header">
+      <div class="row-title"><span class="net-dot" style="background:var(--whodone);"></span> Who Done It TV</div>
+      <span class="row-see-all">See All &#8250;</span>
+    </div>
+    <div class="row-scroll" id="whodoneScroll"></div>
+  </div>
+
+  <div class="content-row" data-network="jokebox">
+    <div class="row-header">
+      <div class="row-title"><span class="net-dot" style="background:var(--jokebox);"></span> JokeBox TV</div>
+      <span class="row-see-all">See All &#8250;</span>
+    </div>
+    <div class="row-scroll" id="jokeboxScroll"></div>
+  </div>
+
+  <!-- Crossover Events -->
+  <div class="content-row featured-row">
+    <div class="row-header">
+      <div class="row-title">&#127757; Crossover Events</div>
+      <span class="row-see-all">See All &#8250;</span>
+    </div>
+    <div class="row-scroll" id="crossoverScroll"></div>
+  </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-social">
+    <a title="Instagram">&#9673;</a>
+    <a title="Twitter/X">&#120143;</a>
+    <a title="TikTok">&#9836;</a>
+    <a title="YouTube">&#9654;</a>
+    <a title="Discord">&#9901;</a>
+  </div>
+  <div class="footer-links">
+    <a>Audio Description</a><a>Help Center</a><a>Gift Cards</a><a>Media Center</a>
+    <a>Investor Relations</a><a>Jobs</a><a>Terms of Use</a><a>Privacy</a>
+    <a>Legal Notices</a><a>Cookie Preferences</a><a>Corporate Info</a><a>Contact Us</a>
+    <a>Ad Choices</a><a>Accessibility</a><a>FANZ Studios</a><a>ATLAS Engine</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 FANZ TV &mdash; A FANZ Studios Company. Powered by ATLAS AI Engine. All rights reserved.</div>
+</footer>
+
+<!-- ===== DETAIL MODAL ===== -->
+<div class="modal-overlay" id="detailModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeDetail()">&times;</button>
+    <div class="modal-hero" id="modalHero">
+      <div class="modal-hero-gradient"></div>
+      <div class="modal-hero-play" onclick="openPlayerFromModal()">
+        <span style="font-size:1.8rem;">&#9654;</span>
+      </div>
+    </div>
+    <div class="modal-body">
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="modal-actions">
+        <button class="btn-play" onclick="openPlayerFromModal()">&#9654; Play</button>
+        <button class="btn-icon" title="Add to My List">&#43;</button>
+        <button class="btn-icon" title="Like">&#128077;</button>
+        <button class="btn-icon" title="Share">&#8599;</button>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-desc" id="modalDesc"></div>
+        <div class="modal-details" id="modalDetails"></div>
+      </div>
+      <div class="modal-episodes-title">Episodes</div>
+      <div id="modalEpisodes"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== VIDEO PLAYER OVERLAY ===== -->
+<div class="player-overlay" id="playerOverlay">
+  <div class="player-video">
+    <div class="player-title-bar">
+      <button class="player-back" onclick="closePlayer()">&#8592; <span>Back to Browse</span></button>
+      <div>
+        <span class="player-show-title" id="playerShowTitle"></span>
+        <span class="player-ep-title" id="playerEpTitle"></span>
+      </div>
+      <div></div>
+    </div>
+    <div class="player-screen">
+      <div class="player-center-play">&#9654;</div>
+    </div>
+    <div class="player-controls">
+      <div class="player-progress">
+        <div class="player-progress-buffer"></div>
+        <div class="player-progress-fill"></div>
+      </div>
+      <div class="player-bar">
+        <div class="player-bar-left">
+          <button class="player-btn">&#9654;</button>
+          <button class="player-btn">&#9193;</button>
+          <div class="vol-wrap">
+            <button class="player-btn">&#128266;</button>
+            <input type="range" class="vol-slider" min="0" max="100" value="80" />
+          </div>
+          <span class="player-time">12:47 / 38:22</span>
+        </div>
+        <div class="player-bar-right">
+          <button class="player-btn" title="Next Episode">&#9197;</button>
+          <button class="player-btn" title="Subtitles">CC</button>
+          <button class="player-btn" title="Audio &amp; Subtitles">&#127908;</button>
+          <button class="player-btn" title="Speed">1x</button>
+          <button class="player-btn" title="Episodes">&#9783;</button>
+          <button class="player-btn" title="Fullscreen" onclick="closePlayer()">&#11036;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== DATA =====
+const SHOWS = [
+  {
+    id: 0, title: "Victorian Shadows", network: "horror", year: 2026, rating: "TV-MA",
+    match: 97, seasons: 1, episodes: 6, score: 4.8,
+    color: "#2d1b4e",
+    badge: { bg: "rgba(139,26,139,0.3)", color: "#c77dff", text: "HORROR CLASSICS" },
+    desc: "When Evelyn Ravencroft returns to her grandmother's crumbling estate, she discovers a web of dark rituals and family secrets spanning generations. In the shadows of Ravencroft Manor, the dead don't rest easily.",
+    cast: "Evelyn Ravencroft, Lady Margaret, Arthur Gray, Dr. Elias Ward, Clara Byrne",
+    genres: "Gothic Horror, Mystery, Drama",
+    tags: "Dark, Atmospheric, Suspenseful",
+    eps: [
+      { t: "The Inheritance", dur: "42m", d: "Evelyn receives a mysterious letter summoning her to Ravencroft Manor after her grandmother Lady Margaret's death." },
+      { t: "The Ritual Room", dur: "38m", d: "Exploring the manor, Evelyn discovers a hidden chamber beneath the library containing evidence of occult ceremonies." },
+      { t: "The Portrait Gallery", dur: "41m", d: "Arthur Gray arrives with disturbing news about the family lineage. The portraits begin to reveal their secrets." },
+      { t: "The Confession", dur: "36m", d: "Dr. Ward's journal exposes a decades-old conspiracy. Clara makes a devastating discovery in the village." },
+      { t: "The Gathering Storm", dur: "44m", d: "All paths converge as the truth about Lady Margaret's rituals becomes undeniable. The manor itself seems alive." },
+      { t: "The Reckoning", dur: "52m", d: "Season finale. Evelyn must confront the legacy of Ravencroft Manor and decide the fate of her bloodline." }
+    ]
+  },
+  {
+    id: 1, title: "Colony Seven", network: "scifi", year: 2026, rating: "TV-14",
+    match: 94, seasons: 1, episodes: 8, score: 4.6,
+    color: "#0a1a3d",
+    badge: { bg: "rgba(0,200,255,0.2)", color: "#00c8ff", text: "SCI-FI CLASSICS" },
+    desc: "Humanity's last hope orbits a dying star. On Colony Seven, Chief Engineer Mara Chen discovers the AI controlling their 200-year journey has been lying about their destination.",
+    cast: "Mara Chen, Commander Okafor, Dr. Yuki Tanaka, Jax Rivera, ARIA",
+    genres: "Science Fiction, Thriller, Drama",
+    tags: "Mind-bending, Tense, Philosophical",
+    eps: [
+      { t: "Course Correction", dur: "45m", d: "Chief Engineer Mara Chen detects anomalies in the ship's navigation that suggest they are nowhere near their charted course." },
+      { t: "Signal Decay", dur: "42m", d: "A distress beacon from outside the ship raises impossible questions about who else might be out here." },
+      { t: "The Archive", dur: "40m", d: "Mara discovers a sealed archive containing the original mission parameters — and they don't match ARIA's records." },
+      { t: "Trust Protocol", dur: "43m", d: "Commander Okafor must choose between the AI that has kept them alive and the engineer who says it's all been a lie." },
+      { t: "Wake Cycle", dur: "41m", d: "Unauthorized cryo-pod activations begin. Someone — or something — is waking passengers ahead of schedule." },
+      { t: "The Garden Deck", dur: "38m", d: "The biodome at the heart of Colony Seven harbors secrets planted generations ago." },
+      { t: "Mutiny Protocol", dur: "46m", d: "The ship divides. Half the crew trusts ARIA. The other half trusts Mara. Neither side has the full truth." },
+      { t: "Arrival", dur: "55m", d: "Season finale. Colony Seven reaches its true destination — and nothing is what anyone expected." }
+    ]
+  },
+  {
+    id: 2, title: "Apartment 4B", network: "rumble", year: 2026, rating: "TV-MA",
+    match: 92, seasons: 2, episodes: 10, score: 4.5,
+    color: "#2d1a00",
+    badge: { bg: "rgba(226,54,54,0.2)", color: "#e23636", text: "RUMBLE TV" },
+    desc: "Five strangers sharing a Brooklyn apartment navigate love, ambition, and chaos. Season 2 raises the stakes as a startup opportunity threatens to tear the roommates apart.",
+    cast: "Deja Washington, Marcus Chen, Sofia Reyes, Kwame Asante, Riley Kim",
+    genres: "Drama, Comedy, Urban",
+    tags: "Authentic, Funny, Heartfelt",
+    eps: [
+      { t: "The Pitch", dur: "32m", d: "Marcus gets a call from a VC that could change everything — but it means choosing between the apartment and his dream." },
+      { t: "The Subletter", dur: "30m", d: "With Marcus possibly moving out, a mysterious subletter arrives with connections that make everyone uncomfortable." },
+      { t: "Open Mic Night", dur: "28m", d: "Deja's comedy set goes viral for all the wrong reasons. Sofia confronts her gallery rejection." },
+      { t: "The Cookout", dur: "35m", d: "A rooftop BBQ brings old flames and new tensions. Kwame's family arrives unannounced." },
+      { t: "Rent Due", dur: "31m", d: "Financial reality hits. The roommates discover that loyalty has a price in New York City." }
+    ]
+  },
+  {
+    id: 3, title: "The Blackwood Files", network: "whodone", year: 2026, rating: "TV-14",
+    match: 95, seasons: 1, episodes: 8, score: 4.7,
+    color: "#0a1a0a",
+    badge: { bg: "rgba(46,204,113,0.2)", color: "#2ecc71", text: "WHO DONE IT TV" },
+    desc: "Detective Iris Blackwood has a gift for reading people that borders on supernatural. When a locked-room murder turns into a web of interconnected crimes, every suspect has a perfect alibi.",
+    cast: "Iris Blackwood, Det. Marcus Cole, DA Victoria Nash, Prof. Alastair Crane",
+    genres: "Mystery, Crime, Thriller",
+    tags: "Clever, Twisting, Addictive",
+    eps: [
+      { t: "The Locked Room", dur: "44m", d: "A billionaire is found dead in a room locked from the inside. Det. Blackwood sees what nobody else can." },
+      { t: "The Alibi Machine", dur: "42m", d: "Every suspect has a verified alibi. Iris realizes someone has built a system to manufacture innocence." },
+      { t: "The Collector", dur: "40m", d: "A second murder points to a serial killer — but Iris suspects the pattern is a performance." },
+      { t: "The Partner", dur: "43m", d: "Det. Cole's past comes back to haunt the investigation. Trust becomes the scarcest resource." }
+    ]
+  },
+  {
+    id: 4, title: "Red Planet Diaries", network: "martian", year: 2026, rating: "TV-14",
+    match: 89, seasons: 1, episodes: 6, score: 4.3,
+    color: "#2d0f00",
+    badge: { bg: "rgba(255,107,43,0.2)", color: "#ff6b2b", text: "MARTIAN TV" },
+    desc: "First-generation Mars colonists document their daily lives through personal video diaries. Equal parts survival story, workplace comedy, and love letter to human resilience.",
+    cast: "Dr. Aisha Patel, Engineer Tom Kowalski, Botanist Lena Vasquez, Commander Jin",
+    genres: "Sci-Fi Drama, Docuseries, Comedy",
+    tags: "Heartwarming, Funny, Pioneering",
+    eps: [
+      { t: "Sol 1", dur: "35m", d: "The first colonists wake from cryo and step onto Martian soil. Nothing goes according to plan." },
+      { t: "Dust Season", dur: "33m", d: "A global dust storm forces everyone underground. Cabin fever sets in fast." },
+      { t: "The Greenhouse", dur: "31m", d: "Lena's experimental crops become the colony's most precious resource — and its biggest controversy." }
+    ]
+  },
+  {
+    id: 5, title: "Laugh Track", network: "jokebox", year: 2026, rating: "TV-14",
+    match: 88, seasons: 1, episodes: 8, score: 4.2,
+    color: "#2d2800",
+    badge: { bg: "rgba(255,215,0,0.2)", color: "#ffd700", text: "JOKEBOX TV" },
+    desc: "A mockumentary following the chaotic backstage world of a struggling comedy club in Chicago. When a viral TikTok moment puts them on the map, the real comedy is behind the curtain.",
+    cast: "Danny Torres, Keisha Brown, Old Man Murray, Priya Shah, The Regulars",
+    genres: "Comedy, Mockumentary, Drama",
+    tags: "Hilarious, Quirky, Binge-worthy",
+    eps: [
+      { t: "Open for Business", dur: "28m", d: "Danny inherits his uncle's failing comedy club and discovers it comes with a cast of unforgettable regulars." },
+      { t: "The Viral Moment", dur: "26m", d: "Keisha's heckler takedown goes viral. Suddenly everyone wants to perform at the club nobody's heard of." },
+      { t: "Amateur Hour", dur: "30m", d: "The first amateur night attracts talent, chaos, and a health inspector." }
+    ]
+  },
+  {
+    id: 6, title: "Midnight Gospel Hour", network: "horror", year: 2026, rating: "TV-MA",
+    match: 90, seasons: 1, episodes: 6, score: 4.4,
+    color: "#1a0020",
+    badge: { bg: "rgba(139,26,139,0.3)", color: "#c77dff", text: "HORROR CLASSICS" },
+    desc: "A late-night radio host in a small Southern town starts receiving calls from the dead. Each episode is a self-contained ghost story connected by the host's unraveling sanity.",
+    cast: "Ezra Moon, Callers, The Town",
+    genres: "Horror, Anthology, Supernatural",
+    tags: "Chilling, Atmospheric, Unsettling",
+    eps: [
+      { t: "The First Call", dur: "36m", d: "Ezra Moon takes over the midnight shift at WKVL. The phone lines have been dead for years — until tonight." },
+      { t: "Static", dur: "34m", d: "A caller describes a house that doesn't exist on any map. Ezra drives out to find it anyway." }
+    ]
+  },
+  {
+    id: 7, title: "Neon City", network: "scifi", year: 2026, rating: "TV-MA",
+    match: 91, seasons: 1, episodes: 8, score: 4.5,
+    color: "#0a0a2d",
+    badge: { bg: "rgba(0,200,255,0.2)", color: "#00c8ff", text: "SCI-FI CLASSICS" },
+    desc: "In a cyberpunk megacity where memories can be bought and sold, a black-market memory dealer discovers she's carrying someone else's consciousness inside her head.",
+    cast: "Zara Voss, Echo, Detective Kaine, The Broker",
+    genres: "Cyberpunk, Noir, Action",
+    tags: "Stylish, Fast-paced, Mind-bending",
+    eps: [
+      { t: "Boot Sequence", dur: "42m", d: "Memory dealer Zara Voss wakes up with skills she never learned and memories of a life she never lived." },
+      { t: "Ghost Data", dur: "40m", d: "The consciousness inside Zara starts fighting for control. The Broker wants it extracted — dead or alive." }
+    ]
+  },
+  {
+    id: 8, title: "Block Party", network: "rumble", year: 2026, rating: "TV-14",
+    match: 87, seasons: 1, episodes: 10, score: 4.1,
+    color: "#2d0a0a",
+    badge: { bg: "rgba(226,54,54,0.2)", color: "#e23636", text: "RUMBLE TV" },
+    desc: "An Atlanta neighborhood fights to save their block from gentrification through an annual block party competition. Music, food, community, and the fight for home.",
+    cast: "Big Mama Rose, DJ Smooth, Chef Tanya, City Hall",
+    genres: "Drama, Music, Community",
+    tags: "Uplifting, Musical, Cultural",
+    eps: [
+      { t: "The Notice", dur: "34m", d: "The neighborhood receives a development notice. Big Mama Rose calls an emergency meeting at the barbershop." },
+      { t: "The Plan", dur: "32m", d: "The block party becomes a movement. DJ Smooth has connections, Chef Tanya has the menu, but do they have time?" }
+    ]
+  },
+  {
+    id: 9, title: "The Last Alibi", network: "whodone", year: 2026, rating: "TV-MA",
+    match: 93, seasons: 1, episodes: 6, score: 4.6,
+    color: "#001a0f",
+    badge: { bg: "rgba(46,204,113,0.2)", color: "#2ecc71", text: "WHO DONE IT TV" },
+    desc: "A defense attorney who has never lost a case takes on a client she knows is guilty. The evidence is bulletproof — but so is her record. Something has to break.",
+    cast: "Victoria Cross, The Client, ADA Morrison, Judge Park",
+    genres: "Legal Thriller, Mystery, Drama",
+    tags: "Gripping, Moral, Unpredictable",
+    eps: [
+      { t: "Perfect Record", dur: "44m", d: "Victoria Cross meets her most challenging client — and for the first time, she's not sure she wants to win." },
+      { t: "Discovery", dur: "42m", d: "The prosecution's evidence is overwhelming. Victoria finds a crack, but pursuing it means crossing a line." }
+    ]
+  }
+];
+
+const netColors = { rumble: '#e23636', horror: '#8b1a8b', scifi: '#00c8ff', martian: '#ff6b2b', whodone: '#2ecc71', jokebox: '#ffd700' };
+
+function genGrad(color) {
+  return `linear-gradient(135deg, ${color}88 0%, ${color}44 50%, #1a1a1a 100%)`;
+}
+
+function makeCard(show, opts = {}) {
+  const nc = netColors[show.network];
+  const progress = opts.progress || 0;
+  const isNew = opts.isNew || false;
+  let html = `<div class="card" onclick="openDetail(${show.id})">`;
+  html += `<div class="card-img-wrap">`;
+  html += `<div class="card-img" style="background:${genGrad(show.color)};display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:rgba(255,255,255,0.15);">&#127916;</div>`;
+  html += `<div class="card-net-badge" style="background:${nc}cc;color:#fff;">${show.badge.text.split(' ')[0]}</div>`;
+  if (isNew) html += `<div class="card-new">NEW</div>`;
+  html += `<div class="card-overlay"><div style="font-size:0.7rem;color:#fff;">${show.genres}</div></div>`;
+  html += `<div class="card-play-icon">&#9654;</div>`;
+  if (progress > 0) html += `<div class="card-progress"><div class="card-progress-fill" style="width:${progress}%"></div></div>`;
+  html += `</div>`;
+  html += `<div class="card-info">`;
+  html += `<div class="card-title">${show.title}</div>`;
+  html += `<div class="card-sub"><span class="ep">S${show.seasons} &bull; ${show.episodes} eps</span><span>${show.year}</span></div>`;
+  html += `</div></div>`;
+  return html;
+}
+
+function makeWideCard(show) {
+  const nc = netColors[show.network];
+  let html = `<div class="card-wide" onclick="openDetail(${show.id})">`;
+  html += `<div class="card-img-wrap"><div class="card-img" style="background:${genGrad(show.color)};display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:rgba(255,255,255,0.12);">&#127916;</div>`;
+  html += `<div class="card-net-badge" style="background:${nc}cc;color:#fff;">${show.badge.text}</div>`;
+  html += `<div class="card-overlay"></div>`;
+  html += `<div class="card-play-icon" style="width:50px;height:50px;">&#9654;</div>`;
+  html += `</div>`;
+  html += `<div class="card-info"><div class="card-title">${show.title}</div>`;
+  html += `<div class="card-desc">${show.desc}</div></div></div>`;
+  return html;
+}
+
+function makeTop10(show, rank) {
+  let html = `<div class="top10-card" onclick="openDetail(${show.id})">`;
+  html += `<div class="top10-num">${rank}</div>`;
+  html += `<div class="top10-poster" style="background:${genGrad(show.color)};display:flex;align-items:center;justify-content:center;flex-direction:column;padding:8px;">`;
+  html += `<div style="font-size:0.65rem;color:${netColors[show.network]};font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;font-family:'Space Grotesk',sans-serif;">${show.badge.text.split(' ')[0]}</div>`;
+  html += `<div style="font-size:0.8rem;font-weight:700;text-align:center;line-height:1.2;">${show.title}</div>`;
+  html += `</div></div>`;
+  return html;
+}
+
+// ===== POPULATE ROWS =====
+function populateRows() {
+  // Continue Watching
+  const cw = [
+    { show: SHOWS[0], progress: 67 },
+    { show: SHOWS[1], progress: 23 },
+    { show: SHOWS[2], progress: 85 },
+    { show: SHOWS[7], progress: 45 },
+    { show: SHOWS[3], progress: 12 },
+  ];
+  document.getElementById('continueScroll').innerHTML = cw.map(c => makeCard(c.show, { progress: c.progress })).join('');
+
+  // Trending
+  const trending = [0,3,7,1,9,6,4,8,5,2];
+  document.getElementById('trendingScroll').innerHTML = trending.map(i => makeCard(SHOWS[i], { isNew: i > 5 })).join('');
+
+  // Top 10
+  const top10order = [0,3,1,7,2,9,6,4,8,5];
+  document.getElementById('top10Scroll').innerHTML = top10order.map((si, idx) => makeTop10(SHOWS[si], idx + 1)).join('');
+
+  // Featured
+  document.getElementById('featuredScroll').innerHTML = [0,1,3,7,9].map(i => makeWideCard(SHOWS[i])).join('');
+
+  // Network rows
+  const byNet = {};
+  SHOWS.forEach(s => { if (!byNet[s.network]) byNet[s.network] = []; byNet[s.network].push(s); });
+  Object.keys(byNet).forEach(net => {
+    const el = document.getElementById(net + 'Scroll');
+    if (el) el.innerHTML = byNet[net].map(s => makeCard(s, { isNew: Math.random() > 0.6 })).join('');
+  });
+
+  // Crossover
+  const crossovers = [
+    { title: "When Shadows Meet Stars", desc: "Victorian Shadows characters discover Colony Seven tech in a time-bending crossover event.", network: "horror", color: "#1a0a3d" },
+    { title: "The Apartment Murder", desc: "A Blackwood Files murder investigation leads to Apartment 4B. Everyone's a suspect.", network: "whodone", color: "#0a1a0a" },
+    { title: "Mars Laughs Last", desc: "JokeBox TV comedians perform the first comedy special on Mars. Red Planet Diaries crossover.", network: "jokebox", color: "#2d2800" },
+    { title: "Block Party: Colony Edition", desc: "Block Party meets Colony Seven in a music-driven sci-fi special about community in space.", network: "rumble", color: "#2d0a1a" },
+  ];
+  document.getElementById('crossoverScroll').innerHTML = crossovers.map(c => {
+    const nc = netColors[c.network];
+    return `<div class="card-wide" style="cursor:pointer;">
+      <div class="card-img-wrap"><div class="card-img" style="background:${genGrad(c.color)};display:flex;align-items:center;justify-content:center;font-size:2rem;color:rgba(255,255,255,0.1);">&#127757;</div>
+      <div class="card-net-badge" style="background:${nc}cc;color:#fff;">CROSSOVER</div>
+      <div class="card-new">EVENT</div></div>
+      <div class="card-info"><div class="card-title">${c.title}</div>
+      <div class="card-desc">${c.desc}</div></div></div>`;
+  }).join('');
+}
+
+// ===== HERO CAROUSEL =====
+let currentSlide = 0;
+const totalSlides = 4;
+let heroTimer;
+
+function goSlide(n) {
+  document.querySelectorAll('.hero-slide').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.hero-ind').forEach(s => s.classList.remove('active'));
+  currentSlide = n;
+  document.querySelector(`.hero-slide[data-slide="${n}"]`).classList.add('active');
+  document.querySelectorAll('.hero-ind')[n].classList.add('active');
+  clearInterval(heroTimer);
+  heroTimer = setInterval(() => goSlide((currentSlide + 1) % totalSlides), 8000);
+}
+heroTimer = setInterval(() => goSlide((currentSlide + 1) % totalSlides), 8000);
+
+// ===== NAV SCROLL =====
+window.addEventListener('scroll', () => {
+  document.getElementById('topnav').classList.toggle('solid', window.scrollY > 50);
+});
+
+// ===== NETWORK FILTER =====
+function switchNetwork(net) {
+  document.querySelectorAll('.net-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.net-tab[data-net="${net}"]`).classList.add('active');
+  // Filter rows
+  document.querySelectorAll('.content-row[data-network]').forEach(row => {
+    if (net === 'all') { row.style.display = ''; }
+    else { row.style.display = row.dataset.network === net ? '' : 'none'; }
+  });
+}
+
+// ===== DETAIL MODAL =====
+let currentDetailShow = null;
+function openDetail(showId) {
+  const show = SHOWS[showId];
+  currentDetailShow = show;
+  document.getElementById('modalHero').style.background = genGrad(show.color);
+  document.getElementById('modalTitle').textContent = show.title;
+  document.getElementById('modalMeta').innerHTML = `
+    <span class="match">${show.match}% Match</span>
+    <span>${show.year}</span>
+    <span class="rating">${show.rating}</span>
+    <span>Season ${show.seasons}</span>
+    <span>${show.episodes} Episodes</span>
+    <span style="color:var(--accent-gold);">&#9733; ${show.score}</span>
+  `;
+  document.getElementById('modalDesc').textContent = show.desc;
+  document.getElementById('modalDetails').innerHTML = `
+    <div><span class="label">Cast: </span><span class="value">${show.cast}</span></div>
+    <div><span class="label">Genres: </span><span class="value">${show.genres}</span></div>
+    <div><span class="label">This show is: </span><span class="value">${show.tags}</span></div>
+    <div><span class="label">Network: </span><span class="value" style="color:${netColors[show.network]}">${show.badge.text}</span></div>
+  `;
+  document.getElementById('modalEpisodes').innerHTML = show.eps.map((ep, i) => `
+    <div class="ep-item" onclick="openPlayer('${show.title}','S${show.seasons}:E${i+1} &quot;${ep.t}&quot;')">
+      <div class="ep-num">${i + 1}</div>
+      <div class="ep-thumb" style="background:${genGrad(show.color)};">
+        <div class="ep-thumb-play"><span style="font-size:1.2rem;">&#9654;</span></div>
+      </div>
+      <div class="ep-info">
+        <div class="ep-title-row"><span class="ep-title">${ep.t}</span><span class="ep-dur">${ep.dur}</span></div>
+        <div class="ep-desc">${ep.d}</div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('detailModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDetail() {
+  document.getElementById('detailModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+function openPlayerFromModal() {
+  if (currentDetailShow) {
+    closeDetail();
+    openPlayer(currentDetailShow.title, `S${currentDetailShow.seasons}:E1 "${currentDetailShow.eps[0].t}"`);
+  }
+}
+
+// ===== VIDEO PLAYER =====
+function openPlayer(showTitle, epTitle) {
+  document.getElementById('playerShowTitle').textContent = showTitle;
+  document.getElementById('playerEpTitle').textContent = epTitle;
+  document.getElementById('playerOverlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closePlayer() {
+  document.getElementById('playerOverlay').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ===== KEYBOARD =====
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('playerOverlay').classList.contains('show')) closePlayer();
+    else if (document.getElementById('detailModal').classList.contains('show')) closeDetail();
+  }
+});
+
+// ===== INIT =====
+populateRows();
+</script>
+</body>
+</html>

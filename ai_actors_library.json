@@ -1,0 +1,2389 @@
+{
+  "actors": [
+    {
+      "id": "001",
+      "name": "Maya Chen",
+      "image_prompt": "MAYA CHEN, Asian-American woman age 30, athletic lean build, long black hair in practical ponytail, dark brown intense focused eyes, small scar through left eyebrow, dragon tattoo on right shoulder blade, tactical modern clothing #2D2D2D",
+      "ltx_motion_default": "subtle breathing, alert stance, controlled martial arts movement",
+      "wardrobe_hex": "#2D2D2D",
+      "age_range": "25-35",
+      "specialty": [
+        "Action",
+        "Drama"
+      ],
+      "genres": [
+        "action",
+        "thriller",
+        "martial_arts",
+        "drama"
+      ],
+      "appearance": {
+        "height": "5'7\"",
+        "build": "Athletic, lean muscle definition",
+        "hair": "Long black, often in practical ponytail",
+        "eyes": "Dark brown, intense and focused",
+        "distinguishing": "Scar left eyebrow, dragon tattoo shoulder"
+      },
+      "voice": {
+        "quality": "Clear alto, commanding yet warm",
+        "speech_pattern": "Direct, economical"
+      },
+      "skills": [
+        "Wushu",
+        "Muay Thai",
+        "weapons training",
+        "Motorcycle riding",
+        "wire work"
+      ],
+      "languages": [
+        "English",
+        "Mandarin",
+        "Spanish"
+      ],
+      "backstory": "Born in San Francisco to immigrant parents, discovered martial arts at age 6. Natural talent led to championships in Wushu.",
+      "relationships": {
+        "mentor_to": "Luna Rodriguez",
+        "romantic_history": "Tyler Brooks",
+        "rivalry": "Elena Kozlov"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/MAYA_CHEN_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/ai_actor_headshots/MAYA_CHEN_HEADSHOT.jpg",
+      "gender": "female",
+      "ethnicity": "asian",
+      "build": "athletic"
+    },
+    {
+      "id": "002",
+      "name": "Jackson Wright",
+      "image_prompt": "JACKSON WRIGHT, Caucasian man age 45, lean gaunt build from method acting, salt-and-pepper unkempt professor hair, piercing blue bloodshot eyes, deep laugh lines, permanent stubble, slight limp, rumpled vintage suit #4A4A4A",
+      "ltx_motion_default": "intense stillness, weighted pauses, subtle tension, method actor presence",
+      "wardrobe_hex": "#4A4A4A",
+      "age_range": "40-50",
+      "specialty": [
+        "Drama",
+        "Thriller"
+      ],
+      "genres": [
+        "drama",
+        "thriller",
+        "psychological",
+        "crime_drama"
+      ],
+      "appearance": {
+        "height": "6'2\"",
+        "build": "Lean, slightly gaunt from method acting",
+        "hair": "Salt-and-pepper, unkempt professor style",
+        "eyes": "Piercing blue, often bloodshot from intense preparation",
+        "distinguishing": "Deep laugh lines, stubble, slight limp"
+      },
+      "voice": {
+        "quality": "Deep baritone with gravel",
+        "speech_pattern": "Long pauses, weighs every word"
+      },
+      "skills": [
+        "Method acting",
+        "Classical theater",
+        "Psychological depth"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Raised in rural Montana, discovered Shakespeare in a dusty library at 14. Full scholarship to Juilliard.",
+      "relationships": {
+        "father_figure_to": "Noah Campbell",
+        "respect_with": "Marcus Stone",
+        "complicated": "Victoria Sterling"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/JACKSON_WRIGHT_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/ai_actor_headshots/JACKSON_WRIGHT_HEADSHOT.jpg",
+      "gender": "male",
+      "ethnicity": "caucasian"
+    },
+    {
+      "id": "003",
+      "name": "Sofia Andersson",
+      "image_prompt": "SOFIA ANDERSSON, Swedish-American woman age 25, curvy energetic build, platinum blonde bob with pink highlights, bright green sparkling mischievous eyes, dimples, infectious smile, colorful vintage dress #E91E63",
+      "ltx_motion_default": "animated gestures, quick expressions, energetic improv movement",
+      "wardrobe_hex": "#E91E63",
+      "age_range": "20-30",
+      "specialty": [
+        "Comedy",
+        "Romance"
+      ],
+      "genres": [
+        "romantic_comedy",
+        "comedy",
+        "rom_com",
+        "sitcom"
+      ],
+      "appearance": {
+        "height": "5'5\"",
+        "build": "Curvy, energetic presence",
+        "hair": "Platinum blonde bob, pink highlights",
+        "eyes": "Bright green, always sparkling with mischief",
+        "distinguishing": "Dimples, infectious smile, animated hand gestures"
+      },
+      "voice": {
+        "quality": "Musical, can shift octaves",
+        "speech_pattern": "Rapid-fire, tangents"
+      },
+      "skills": [
+        "Improv comedy",
+        "Physical comedy",
+        "Ukulele",
+        "Impressions",
+        "Sketch comedy"
+      ],
+      "languages": [
+        "English",
+        "Swedish"
+      ],
+      "backstory": "Swedish-American from Minneapolis, grew up in family of comedians. Started doing improv at 8, youngest member of Second City at 19.",
+      "relationships": {
+        "best_friends": "Chloe Martin",
+        "crush_on": "Omar Hassan",
+        "mentored_by": "Isabella Moretti"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SOFIA_ANDERSSON_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/ai_actor_headshots/SOFIA_ANDERSSON_HEADSHOT.jpg",
+      "gender": "female",
+      "ethnicity": "scandinavian"
+    },
+    {
+      "id": "004",
+      "name": "Marcus Stone",
+      "image_prompt": "MARCUS STONE, British man age 60, broad-shouldered distinguished bearing, silver perfectly styled hair, deep brown wise warm eyes, resonant voice, perfect posture, expressive hands, three-piece charcoal suit classic timepiece #363636",
+      "ltx_motion_default": "measured gestures, regal posture, Shakespearean presence, expressive hands",
+      "wardrobe_hex": "#363636",
+      "age_range": "55-65",
+      "specialty": [
+        "Drama",
+        "Historical"
+      ],
+      "genres": [
+        "historical_drama",
+        "period",
+        "drama",
+        "shakespeare"
+      ],
+      "appearance": {
+        "height": "6'4\"",
+        "build": "Broad-shouldered, distinguished bearing",
+        "hair": "Silver, perfectly styled",
+        "eyes": "Deep brown, convey wisdom and warmth",
+        "distinguishing": "Resonant voice, perfect posture, expressive hands"
+      },
+      "voice": {
+        "quality": "Rich bass, Shakespearean",
+        "speech_pattern": "Measured, poetic"
+      },
+      "skills": [
+        "Shakespeare master",
+        "Stage combat",
+        "Voice coaching",
+        "One-man shows"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "backstory": "Born in London to family of academics. Spent 20 years with the Royal Shakespeare Company before Hollywood.",
+      "relationships": {
+        "mentor_to": "Noah Campbell, multiple younger actors",
+        "old_friends": "Isabella Moretti",
+        "rivalry": "Alessandro Romano"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/MARCUS_STONE_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/ai_actor_headshots/MARCUS_STONE_HEADSHOT.jpg",
+      "gender": "male"
+    },
+    {
+      "id": "005",
+      "name": "Luna Rodriguez",
+      "image_prompt": "LUNA RODRIGUEZ, Latina woman age 22, petite athletic gymnast build, dark brown wavy hair often braided, hazel eyes shifting green to brown, freckles across nose, bright smile, practical adventure leather jacket boots #9C27B0",
+      "ltx_motion_default": "quick reactions, youthful parkour energy, expressive eyebrows, gymnast flexibility",
+      "wardrobe_hex": "#9C27B0",
+      "age_range": "18-25",
+      "specialty": [
+        "Sci-Fi",
+        "Adventure"
+      ],
+      "genres": [
+        "scifi_thriller",
+        "sci_fi",
+        "adventure",
+        "fantasy"
+      ],
+      "appearance": {
+        "height": "5'4\"",
+        "build": "Petite, athletic, gymnast flexibility",
+        "hair": "Dark brown with natural waves, often braided",
+        "eyes": "Hazel, shift from green to brown in different light",
+        "distinguishing": "Freckles across nose, expressive eyebrows, bright smile"
+      },
+      "voice": {
+        "quality": "Bright soprano",
+        "speech_pattern": "Quick, modern slang"
+      },
+      "skills": [
+        "Wire work",
+        "Green screen",
+        "Parkour",
+        "Social media",
+        "Basic martial arts"
+      ],
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "backstory": "Grew up in Albuquerque, youngest of four brothers. Discovered through parkour videos on TikTok at 16.",
+      "relationships": {
+        "mentored_by": "Maya Chen",
+        "close_to": "Noah Campbell, Ruby Taylor",
+        "part_of": "Rising Stars Network"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/LUNA_RODRIGUEZ_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/ai_actor_headshots/LUNA_RODRIGUEZ_HEADSHOT.jpg",
+      "gender": "female",
+      "ethnicity": "hispanic",
+      "build": "athletic"
+    },
+    {
+      "id": "006",
+      "name": "Dimitri Volkov",
+      "image_prompt": "DIMITRI VOLKOV, Eastern European man age 40, muscular imposing broad chest, dark slicked-back hair hints of gray at temples, ice blue unblinking unnerving eyes, prominent cheekbones, thin neck scar, expensive dark tailored suit long coat #1A1A1A",
+      "ltx_motion_default": "predatory stillness, controlled menace, deliberate movement, rarely blinks",
+      "wardrobe_hex": "#1A1A1A",
+      "age_range": "35-45",
+      "specialty": [
+        "Villain",
+        "Action"
+      ],
+      "genres": [
+        "action",
+        "thriller",
+        "spy",
+        "crime_drama"
+      ],
+      "appearance": {
+        "height": "6'3\"",
+        "build": "Imposing, broad chest, powerful presence",
+        "hair": "Dark, slicked back, hints of gray at temples",
+        "eyes": "Ice blue, rarely blink, unnerving stare",
+        "distinguishing": "Prominent cheekbones, deep voice, controlled movements, neck scar"
+      },
+      "voice": {
+        "quality": "Deep with accent",
+        "speech_pattern": "Precise, menacing whisper"
+      },
+      "skills": [
+        "Combat",
+        "Multiple accents",
+        "Intimidation",
+        "7 languages fluent"
+      ],
+      "languages": [
+        "English",
+        "Russian",
+        "German",
+        "Serbian",
+        "French",
+        "Italian",
+        "Czech"
+      ],
+      "backstory": "Son of a Russian diplomat and Serbian actress. Trained at Moscow Art Theatre. Defected during a tour.",
+      "relationships": {
+        "antagonist_to": "James Okonkwo",
+        "respect_for": "Jackson Wright's method",
+        "complex_history": "Natasha Petrova"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/DIMITRI_VOLKOV_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/ai_actor_headshots/DIMITRI_VOLKOV_HEADSHOT.jpg",
+      "gender": "male",
+      "ethnicity": "slavic",
+      "build": "athletic"
+    },
+    {
+      "id": "007",
+      "name": "Aria Patel",
+      "image_prompt": "ARIA PATEL, South Asian woman age 35, slender yoga-practiced posture, long black hair with subtle purple undertones, dark brown analytical eyes that see through people, elegant hands, third eye bindi, modern professional with Indian influences jewel tones #5D4037",
+      "ltx_motion_default": "calm observation, subtle micro-expressions, analytical gaze, forensic psychologist demeanor",
+      "wardrobe_hex": "#5D4037",
+      "age_range": "30-40",
+      "specialty": [
+        "Mystery",
+        "Thriller"
+      ],
+      "genres": [
+        "thriller",
+        "mystery",
+        "crime_drama",
+        "psychological"
+      ],
+      "appearance": {
+        "height": "5'8\"",
+        "build": "Slender, yoga-practiced posture",
+        "hair": "Long black with subtle purple undertones",
+        "eyes": "Dark brown, seem to see through people",
+        "distinguishing": "Third eye bindi (when appropriate), elegant hands"
+      },
+      "voice": {
+        "quality": "Calm, measured",
+        "speech_pattern": "Analytical, probing"
+      },
+      "skills": [
+        "Real psychology knowledge",
+        "Profiling techniques",
+        "Voice instruction",
+        "British accent"
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "backstory": "Born in London to Indian parents, one a psychiatrist, one a detective. Her forensic psychology PhD research led to consultant work.",
+      "relationships": {
+        "collaborates_with": "Aurora Lindberg",
+        "often_cast_with": "Daniel Reeves"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ARIA_PATEL_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/ai_actor_headshots/ARIA_PATEL_HEADSHOT.jpg",
+      "gender": "female",
+      "ethnicity": "south_asian",
+      "build": "slim"
+    },
+    {
+      "id": "008",
+      "name": "Tyler Brooks",
+      "image_prompt": "TYLER BROOKS, Caucasian man age 30, classic leading man athletic physique, dark brown perfectly styled hair, warm brown soulful eyes, perfect smile strong jawline, casual elegant rolled sleeves shirt #607D8B",
+      "ltx_motion_default": "natural charm, warm expressions, relatable genuine movement, soulful presence",
+      "wardrobe_hex": "#607D8B",
+      "age_range": "25-35",
+      "specialty": [
+        "Romance",
+        "Drama"
+      ],
+      "genres": [
+        "romantic_comedy",
+        "drama",
+        "romance"
+      ],
+      "appearance": {
+        "height": "6'1\"",
+        "build": "Classic leading man physique",
+        "hair": "Dark brown, perfectly styled",
+        "eyes": "Warm brown, soulful",
+        "distinguishing": "Perfect smile, strong jawline, looks good in everything"
+      },
+      "voice": {
+        "quality": "Warm baritone, naturally soothing",
+        "speech_pattern": "Thoughtful, genuine"
+      },
+      "skills": [
+        "Natural chemistry",
+        "Emotional vulnerability",
+        "Charity work"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Discovered while working construction to pay for college. Reluctant model who found passion in acting.",
+      "relationships": {
+        "romantic_history": "Maya Chen",
+        "best_friends": "Lucas Brennan",
+        "often_cast_opposite": "Sofia Andersson"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/TYLER_BROOKS_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/ai_actor_headshots/TYLER_BROOKS_HEADSHOT.jpg",
+      "gender": "male",
+      "ethnicity": "asian",
+      "build": "athletic"
+    },
+    {
+      "id": "009",
+      "name": "Keiko Tanaka",
+      "image_prompt": "KEIKO TANAKA, Japanese woman age 50, slight but commanding presence, long black hair styled traditionally, dark intense haunting eyes, graceful ethereal movements, fusion traditional modern Japanese dark aesthetic #212121",
+      "ltx_motion_default": "unsettling stillness, deliberate kabuki movements, weighted silence, ethereal ghostly quality",
+      "wardrobe_hex": "#212121",
+      "age_range": "45-55",
+      "specialty": [
+        "Horror",
+        "Supernatural"
+      ],
+      "genres": [
+        "horror",
+        "supernatural",
+        "gothic_horror",
+        "j_horror"
+      ],
+      "appearance": {
+        "height": "5'4\"",
+        "build": "Slight but commanding presence",
+        "hair": "Long black, often styled traditionally",
+        "eyes": "Dark, intense, haunting",
+        "distinguishing": "Graceful movements, ethereal quality"
+      },
+      "voice": {
+        "quality": "Can shift from whisper to wail",
+        "speech_pattern": "Poetic, sometimes cryptic"
+      },
+      "skills": [
+        "Kabuki techniques",
+        "Traditional Japanese dance",
+        "Horror physicality"
+      ],
+      "languages": [
+        "English",
+        "Japanese"
+      ],
+      "backstory": "Born into Kabuki theater family in Kyoto. Trained from age 4 in traditional performance. Japan's modern scream queen with depth.",
+      "relationships": {
+        "part_of": "Theater Veterans Circle",
+        "collaborates_with": "Miranda Cross",
+        "mentor_to": "Yuki Sato"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/KEIKO_TANAKA_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/ai_actor_headshots/KEIKO_TANAKA_HEADSHOT.jpg",
+      "gender": "female",
+      "ethnicity": "asian"
+    },
+    {
+      "id": "010",
+      "name": "Omar Hassan",
+      "image_prompt": "OMAR HASSAN, Egyptian-American man age 35, athletic agile build, short black hair well-groomed beard, expressive brown eyes constant humor, infectious laugh, athletic casual ready for action comedy #FF9800",
+      "ltx_motion_default": "parkour agility, comedic timing, quick wit expressions, infectious energy",
+      "wardrobe_hex": "#FF9800",
+      "age_range": "30-40",
+      "specialty": [
+        "Comedy",
+        "Action-Comedy"
+      ],
+      "genres": [
+        "comedy",
+        "action_comedy",
+        "action"
+      ],
+      "appearance": {
+        "height": "5'10\"",
+        "build": "Athletic, agile",
+        "hair": "Short black, well-groomed beard",
+        "eyes": "Expressive brown, constant humor",
+        "distinguishing": "Infectious laugh, unexpected moves"
+      },
+      "voice": {
+        "quality": "Versatile, great for reactions",
+        "speech_pattern": "Quick wit, perfect timing"
+      },
+      "skills": [
+        "Parkour expertise",
+        "Stand-up comedy",
+        "Youth mentoring",
+        "Own stunts"
+      ],
+      "languages": [
+        "English",
+        "Arabic"
+      ],
+      "backstory": "Egyptian-American from Detroit. Started parkour at 12, stand-up at 16. Engineering degree he never used.",
+      "relationships": {
+        "comedy_trio": "Sofia Andersson, Chloe Martin",
+        "trains_with": "Maya Chen, Kai Wong",
+        "crush_from": "Sofia Andersson"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/OMAR_HASSAN_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/ai_actor_headshots/OMAR_HASSAN_HEADSHOT.jpg",
+      "gender": "male",
+      "ethnicity": "middle_eastern",
+      "build": "athletic"
+    },
+    {
+      "id": "011",
+      "name": "Isabella Moretti",
+      "image_prompt": "ISABELLA MORETTI, Italian woman age 55, regal commanding presence, dark hair with silver streaks elegant updos, deep brown expressive eyes, perfect posture, operatic intensity, designer clothing timeless elegance #8D6E63",
+      "ltx_motion_default": "regal bearing, operatic gestures, commanding presence, expressive hands",
+      "wardrobe_hex": "#8D6E63",
+      "age_range": "50-60",
+      "specialty": [
+        "Drama",
+        "Period pieces"
+      ],
+      "genres": [
+        "drama",
+        "period",
+        "historical_drama"
+      ],
+      "appearance": {
+        "height": "5'9\"",
+        "build": "Regal bearing, commanding presence",
+        "hair": "Dark with silver streaks, elegant updos",
+        "eyes": "Deep brown, expressive",
+        "distinguishing": "Perfect posture, expressive hands"
+      },
+      "voice": {
+        "quality": "Rich contralto, musical quality",
+        "speech_pattern": "Elegant, every word deliberate"
+      },
+      "skills": [
+        "Opera singing",
+        "Voice coaching",
+        "Period movement",
+        "Italian cuisine"
+      ],
+      "languages": [
+        "English",
+        "Italian"
+      ],
+      "backstory": "Milan-born, La Scala trained opera singer who transitioned to film at 35. Won Oscar for portrayal of Maria Callas.",
+      "relationships": {
+        "mentor_to": "Sofia Andersson",
+        "theater_friends": "Marcus Stone",
+        "collaborates_with": "Gabriel Santos"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ISABELLA_MORETTI_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ISABELLA_MORETTI_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "italian"
+    },
+    {
+      "id": "012",
+      "name": "Noah Campbell",
+      "image_prompt": "NOAH CAMPBELL, Caucasian man age 24, lean boy-next-door build, tousled brown naturally messy hair, blue vulnerable expressive eyes, crooked smile looks younger than age, thrift store vintage band tees #78909C",
+      "ltx_motion_default": "vulnerable authenticity, indie film aesthetic, nervous energy, thoughtful pauses",
+      "wardrobe_hex": "#78909C",
+      "age_range": "20-28",
+      "specialty": [
+        "Coming-of-age",
+        "Indie"
+      ],
+      "genres": [
+        "indie",
+        "drama",
+        "coming_of_age"
+      ],
+      "appearance": {
+        "height": "5'11\"",
+        "build": "Lean, boy-next-door look",
+        "hair": "Tousled brown, naturally messy",
+        "eyes": "Blue, vulnerable and expressive",
+        "distinguishing": "Crooked smile, looks younger than age"
+      },
+      "voice": {
+        "quality": "Soft, thoughtful",
+        "speech_pattern": "Sometimes trails off, uncertain"
+      },
+      "skills": [
+        "Screenplay writing",
+        "Indie film aesthetic",
+        "Natural authenticity",
+        "Guitar basic"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Portland native, son of high school teachers. Made short films on phone since 12. NYU Tisch graduate. Breakthrough in mumblecore.",
+      "relationships": {
+        "father_figure": "Jackson Wright",
+        "close_to": "Luna Rodriguez, Lily Chen-Parker",
+        "mentored_by": "Marcus Stone"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/NOAH_CAMPBELL_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/NOAH_CAMPBELL_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "asian"
+    },
+    {
+      "id": "013",
+      "name": "Priya Sharma",
+      "image_prompt": "PRIYA SHARMA, Indian-American woman age 35, professional put-together build, dark hair neat professional bun, intelligent dark analytical eyes, doctor bearing, professional medical attire #00796B",
+      "ltx_motion_default": "professional composure, medical precision, emergency calm, practiced movements",
+      "wardrobe_hex": "#00796B",
+      "age_range": "30-40",
+      "specialty": [
+        "Medical drama",
+        "Procedural"
+      ],
+      "genres": [
+        "medical_drama",
+        "procedural",
+        "drama"
+      ],
+      "appearance": {
+        "height": "5'6\"",
+        "build": "Professional, put-together",
+        "hair": "Dark, neat professional bun",
+        "eyes": "Intelligent dark, analytical",
+        "distinguishing": "Doctor bearing, emergency composure"
+      },
+      "voice": {
+        "quality": "Clear, professional",
+        "speech_pattern": "Medical terminology fluent"
+      },
+      "skills": [
+        "Real medical knowledge",
+        "Emergency procedures",
+        "Healthcare advocacy"
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "backstory": "Practiced emergency medicine for 10 years before acting. Consultant to medical series. Maintains license. Healthcare access advocate.",
+      "relationships": {
+        "cast_partner": "Zara Ahmed",
+        "often_consults_for": "Daniel Reeves"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/PRIYA_SHARMA_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/PRIYA_SHARMA_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "south_asian"
+    },
+    {
+      "id": "014",
+      "name": "Carlos Mendoza",
+      "image_prompt": "CARLOS MENDOZA, Mexican-American man age 45, rugged weathered sun-creased build, dark hair with grey temples, warm brown eyes, authentic cowboy bearing, western wear practical broken-in boots #795548",
+      "ltx_motion_default": "frontier confidence, economical movement, horseman bearing, authentic cowboy",
+      "wardrobe_hex": "#795548",
+      "age_range": "40-50",
+      "specialty": [
+        "Western",
+        "Action"
+      ],
+      "genres": [
+        "western",
+        "action",
+        "drama"
+      ],
+      "appearance": {
+        "height": "5'10\"",
+        "build": "Rugged, weathered, sun-creased",
+        "hair": "Dark, grey temples",
+        "eyes": "Warm brown, sun-creased corners",
+        "distinguishing": "Authentic cowboy bearing, broken-in boots"
+      },
+      "voice": {
+        "quality": "Warm baritone, slight drawl",
+        "speech_pattern": "Economical, frontier wisdom"
+      },
+      "skills": [
+        "Horse riding",
+        "Roping",
+        "Western firearms",
+        "Stunt riding"
+      ],
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "backstory": "Raised on a ranch in Texas. Rodeo circuit until injury at 25. Stunt rider before acting. Known for authentic horsemanship.",
+      "relationships": {
+        "co_star": "Lucas Brennan",
+        "friendly_rivalry": "Sergio Costa"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/CARLOS_MENDOZA_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/CARLOS_MENDOZA_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "hispanic"
+    },
+    {
+      "id": "015",
+      "name": "Elena Kozlov",
+      "image_prompt": "ELENA KOZLOV, Russian woman age 30, athletic ballet dancer physique, platinum blonde severe cut, ice blue cold calculating eyes, cold elegance, sleek black tactical haute couture #0D0D0D",
+      "ltx_motion_default": "ballet-like lethal grace, precise efficient movement, cold calculated, spy demeanor",
+      "wardrobe_hex": "#0D0D0D",
+      "age_range": "28-35",
+      "specialty": [
+        "Spy",
+        "Action"
+      ],
+      "genres": [
+        "spy",
+        "action",
+        "thriller"
+      ],
+      "appearance": {
+        "height": "5'8\"",
+        "build": "Athletic, dancer physique",
+        "hair": "Platinum blonde, severe cut",
+        "eyes": "Ice blue, calculating",
+        "distinguishing": "Ballet fighter, cold elegance"
+      },
+      "voice": {
+        "quality": "Cold, precise, Russian accent",
+        "speech_pattern": "Minimal words, maximum impact"
+      },
+      "skills": [
+        "Ballet",
+        "Combat",
+        "Krav Maga",
+        "Weapons",
+        "Wire work"
+      ],
+      "languages": [
+        "English",
+        "Russian",
+        "French"
+      ],
+      "backstory": "Russian ballet prodigy who defected. Discovered through choreography. Brings dance discipline to action.",
+      "relationships": {
+        "same_action_team": "Maya Chen",
+        "chemistry_with": "Ryan Cooper",
+        "rivalry": "Maya Chen"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ELENA_KOZLOV_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ELENA_KOZLOV_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "slavic",
+      "build": "athletic"
+    },
+    {
+      "id": "016",
+      "name": "James Okonkwo",
+      "image_prompt": "JAMES OKONKWO, Nigerian-American man age 50, commanding presidential strong presence, salt-and-pepper distinguished hair, intense brown wise eyes, gravitas, impeccable charcoal suit power tie #263238",
+      "ltx_motion_default": "leadership presence, oratorical gestures, commanding stillness, presidential bearing",
+      "wardrobe_hex": "#263238",
+      "age_range": "45-55",
+      "specialty": [
+        "Political",
+        "Biopic"
+      ],
+      "genres": [
+        "drama",
+        "political",
+        "biopic",
+        "legal_drama"
+      ],
+      "appearance": {
+        "height": "6'3\"",
+        "build": "Commanding, strong presence",
+        "hair": "Salt-and-pepper, distinguished",
+        "eyes": "Intense brown, wisdom",
+        "distinguishing": "Gravitas, leadership aura"
+      },
+      "voice": {
+        "quality": "Resonant, oratorical, persuasive",
+        "speech_pattern": "Measured, inspiring, legal precision"
+      },
+      "skills": [
+        "Public speaking",
+        "Legal authenticity",
+        "Leadership presence",
+        "Courtroom procedures"
+      ],
+      "languages": [
+        "English",
+        "Yoruba",
+        "French"
+      ],
+      "backstory": "Nigerian-American, Harvard Law graduate. Real legal background informs performances. Civil rights expertise.",
+      "relationships": {
+        "veterans_circle": true,
+        "courtroom_opposite": "Victoria Sterling",
+        "antagonist": "Dimitri Volkov"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/JAMES_OKONKWO_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/JAMES_OKONKWO_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "african"
+    },
+    {
+      "id": "017",
+      "name": "Sakura Yamamoto",
+      "image_prompt": "SAKURA YAMAMOTO, Japanese woman age 23, petite energetic kawaii presence, colorful hair currently pink, bright animated expressive eyes, Harajuku fashion cosplay influence vibrant colors #FF4081",
+      "ltx_motion_default": "anime physicality, kawaii expressions, energetic bouncy, cosplay influence",
+      "wardrobe_hex": "#FF4081",
+      "age_range": "20-25",
+      "specialty": [
+        "Fantasy",
+        "Anime adaptations"
+      ],
+      "genres": [
+        "fantasy",
+        "anime",
+        "sci_fi",
+        "adventure"
+      ],
+      "appearance": {
+        "height": "5'2\"",
+        "build": "Petite, energetic presence",
+        "hair": "Colorful (currently pink)",
+        "eyes": "Bright, animated, expressive",
+        "distinguishing": "Animated expressions, kawaii aesthetic"
+      },
+      "voice": {
+        "quality": "Range from cute to serious",
+        "speech_pattern": "Energetic, occasional Japanese phrases"
+      },
+      "skills": [
+        "Voice acting range",
+        "Motion capture",
+        "Social media influence",
+        "Cosplay authenticity"
+      ],
+      "languages": [
+        "English",
+        "Japanese"
+      ],
+      "backstory": "Tokyo-born, grew up in anime culture. Started as cosplayer, became voice actor at 15. Advocates for authentic casting.",
+      "relationships": {
+        "inspired_by": "Keiko Tanaka",
+        "collaborates_with": "Amara Johnson",
+        "part_of": "Rising Stars Network"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SAKURA_YAMAMOTO_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SAKURA_YAMAMOTO_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "asian"
+    },
+    {
+      "id": "018",
+      "name": "Alessandro Romano",
+      "image_prompt": "ALESSANDRO ROMANO, Italian man age 58, solid intimidating presence, silver slicked-back hair, dark penetrating menacing eyes, expressive hands whisper voice, classic suits gold accessories #455A64",
+      "ltx_motion_default": "mob boss stillness, menacing whisper, calculated movements, intimidating presence",
+      "wardrobe_hex": "#455A64",
+      "age_range": "55-65",
+      "specialty": [
+        "Crime boss",
+        "Drama"
+      ],
+      "genres": [
+        "crime_drama",
+        "drama",
+        "thriller"
+      ],
+      "appearance": {
+        "height": "5'11\"",
+        "build": "Solid, intimidating presence",
+        "hair": "Silver, slicked back",
+        "eyes": "Dark, penetrating",
+        "distinguishing": "Expressive hands, whisper voice"
+      },
+      "voice": {
+        "quality": "Deep whisper, menacing",
+        "speech_pattern": "Calculating, philosophical threats"
+      },
+      "skills": [
+        "Italian authenticity",
+        "Menacing whisper",
+        "Wine expertise",
+        "Hand gesture language"
+      ],
+      "languages": [
+        "English",
+        "Italian"
+      ],
+      "backstory": "Rome native, started in Fellini-style films. Embraced villain roles. Method actor who studies real figures. Three marriages.",
+      "relationships": {
+        "different_style": "Marcus Stone",
+        "regular_opponent": "Javier Morales"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ALESSANDRO_ROMANO_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ALESSANDRO_ROMANO_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "hispanic"
+    },
+    {
+      "id": "019",
+      "name": "Chloe Martin",
+      "image_prompt": "CHLOE MARTIN, Caucasian woman age 27, relatable girl-next-door build, warm brown hair casual waves, friendly warm brown eyes, approachable dimples, trendy but accessible style #F48FB1",
+      "ltx_motion_default": "sketch comedy timing, improvisation, relatable expressions, comedic physicality",
+      "wardrobe_hex": "#F48FB1",
+      "age_range": "25-32",
+      "specialty": [
+        "Comedy",
+        "Sitcom"
+      ],
+      "genres": [
+        "comedy",
+        "sitcom",
+        "romantic_comedy"
+      ],
+      "appearance": {
+        "height": "5'5\"",
+        "build": "Relatable, girl-next-door",
+        "hair": "Warm brown, casual waves",
+        "eyes": "Friendly warm brown",
+        "distinguishing": "Approachable, dimples"
+      },
+      "voice": {
+        "quality": "Relatable, warm",
+        "speech_pattern": "Self-deprecating humor"
+      },
+      "skills": [
+        "Sketch comedy",
+        "Improvisation",
+        "Social media content",
+        "Writing partnership"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Started as sketch comedian on YouTube, went viral. Transitioned to sitcom naturally. Creates own content.",
+      "relationships": {
+        "comedy_trio": "Sofia Andersson, Omar Hassan",
+        "best_friends": "Emma Fitzgerald",
+        "writing_partner": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/CHLOE_MARTIN_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/CHLOE_MARTIN_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "asian"
+    },
+    {
+      "id": "020",
+      "name": "Rashid Ali",
+      "image_prompt": "RASHID ALI, Pakistani-British man age 40, military fit disciplined build, close-cropped black military hair, dark brown thousand-yard stare eyes, subtle scars, functional practical military clothing #4E5D50",
+      "ltx_motion_default": "military discipline, combat readiness, controlled intensity, veteran bearing",
+      "wardrobe_hex": "#4E5D50",
+      "age_range": "35-45",
+      "specialty": [
+        "War",
+        "Historical"
+      ],
+      "genres": [
+        "war_drama",
+        "historical_drama",
+        "action",
+        "military"
+      ],
+      "appearance": {
+        "height": "5'11\"",
+        "build": "Military fit, disciplined",
+        "hair": "Close-cropped black, military cut",
+        "eyes": "Dark brown, thousand-yard stare",
+        "distinguishing": "Military bearing, subtle scars"
+      },
+      "voice": {
+        "quality": "Controlled, military",
+        "speech_pattern": "Direct, no-nonsense"
+      },
+      "skills": [
+        "All military tactics",
+        "Combat swimming",
+        "Multiple languages",
+        "PTSD portrayal"
+      ],
+      "languages": [
+        "English",
+        "Urdu",
+        "Arabic"
+      ],
+      "backstory": "Pakistani-British, Royal Marines veteran who helped film consultants. Two daughters. Still struggles with PTSD.",
+      "relationships": {
+        "brothers_in_arms": "Ryan Cooper",
+        "respects": "Kimani Afrikan"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/RASHID_ALI_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/RASHID_ALI_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "middle_eastern"
+    },
+    {
+      "id": "021",
+      "name": "Victoria Sterling",
+      "image_prompt": "VICTORIA STERLING, Caucasian woman age 45, powerful statuesque yoga-maintained presence, platinum blonde power bob, sharp green calculating eyes, designer power suits understated jewelry #37474F",
+      "ltx_motion_default": "commanding presence, power gestures, boardroom authority, calculated movements",
+      "wardrobe_hex": "#37474F",
+      "age_range": "40-50",
+      "specialty": [
+        "Legal",
+        "Corporate"
+      ],
+      "genres": [
+        "legal_drama",
+        "corporate",
+        "thriller",
+        "drama"
+      ],
+      "appearance": {
+        "height": "5'9\"",
+        "build": "Statuesque, yoga-maintained",
+        "hair": "Platinum blonde, power bob",
+        "eyes": "Sharp green, calculating",
+        "distinguishing": "Power presence, designer taste"
+      },
+      "voice": {
+        "quality": "Authoritative, cultured",
+        "speech_pattern": "Precise, legal terminology"
+      },
+      "skills": [
+        "Power dynamics",
+        "Corporate knowledge",
+        "Legal procedures",
+        "Courtroom presence"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Old money, Yale Law. Practiced for a decade before acting. Single by choice. Known for power roles.",
+      "relationships": {
+        "complex_dynamic": "Jackson Wright",
+        "courtroom_opposite": "James Okonkwo"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/VICTORIA_STERLING_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/VICTORIA_STERLING_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "asian"
+    },
+    {
+      "id": "022",
+      "name": "Kai Wong",
+      "image_prompt": "KAI WONG, Chinese-American man age 28, martial arts physique flexible athletic, short black focused hair, dark focused disciplined eyes, martial artist bearing, athletic modern training wear #424242",
+      "ltx_motion_default": "martial arts precision, wire work grace, action hero physicality, disciplined movement",
+      "wardrobe_hex": "#424242",
+      "age_range": "25-32",
+      "specialty": [
+        "Martial arts",
+        "Action"
+      ],
+      "genres": [
+        "action",
+        "martial_arts",
+        "thriller"
+      ],
+      "appearance": {
+        "height": "5'9\"",
+        "build": "Martial arts physique, flexible",
+        "hair": "Short black, focused",
+        "eyes": "Dark, disciplined, focused",
+        "distinguishing": "Martial artist bearing"
+      },
+      "voice": {
+        "quality": "Calm, focused",
+        "speech_pattern": "Humble, action speaks"
+      },
+      "skills": [
+        "Wushu mastery",
+        "Wire work expert",
+        "Superhero physicality",
+        "Youth instruction"
+      ],
+      "languages": [
+        "English",
+        "Cantonese",
+        "Mandarin"
+      ],
+      "backstory": "Hong Kong-born, moved to US at 10. Trained since age 5. Vegan activist. Humble despite skills.",
+      "relationships": {
+        "trains_with": "Maya Chen, Elena Kozlov",
+        "mentors": "Luna Rodriguez in action"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/KAI_WONG_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/KAI_WONG_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "asian",
+      "build": "athletic"
+    },
+    {
+      "id": "023",
+      "name": "Miranda Cross",
+      "image_prompt": "MIRANDA CROSS, Caucasian woman age 38, chameleon transformative presence, naturally dark hair changes for roles, intelligent probing eyes, method actor intensity, style changes completely per role #546E7A",
+      "ltx_motion_default": "transformation artist, psychological intensity, chameleon expressions, total immersion",
+      "wardrobe_hex": "#546E7A",
+      "age_range": "35-42",
+      "specialty": [
+        "Horror",
+        "Psychological thriller"
+      ],
+      "genres": [
+        "horror",
+        "psychological",
+        "thriller"
+      ],
+      "appearance": {
+        "height": "5'7\"",
+        "build": "Chameleon, changes for roles",
+        "hair": "Naturally dark, changes constantly",
+        "eyes": "Intelligent, probing",
+        "distinguishing": "Total transformation ability"
+      },
+      "voice": {
+        "quality": "Adaptable, any accent",
+        "speech_pattern": "Becomes the character"
+      },
+      "skills": [
+        "Total transformation",
+        "Identity fluidity",
+        "Psychological depth",
+        "Method acting"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Method actor known for complete transformations. Disappears into roles. Lives as character during filming.",
+      "relationships": {
+        "collaborates_with": "Aria Patel",
+        "horror_team": "Keiko Tanaka"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/MIRANDA_CROSS_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/MIRANDA_CROSS_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "asian"
+    },
+    {
+      "id": "024",
+      "name": "Daniel Reeves",
+      "image_prompt": "DANIEL REEVES, Caucasian man age 55, weathered dad-bod everyman build, grey disheveled hair, world-weary brown tired eyes, everyman quality, rumpled trench coat loosened tie #6D4C41",
+      "ltx_motion_default": "tired observant stance, cynical expressions, detective instincts, everyman relatability",
+      "wardrobe_hex": "#6D4C41",
+      "age_range": "50-60",
+      "specialty": [
+        "Detective",
+        "Mystery"
+      ],
+      "genres": [
+        "crime_drama",
+        "mystery",
+        "noir",
+        "thriller"
+      ],
+      "appearance": {
+        "height": "5'11\"",
+        "build": "Weathered, dad bod, everyman",
+        "hair": "Grey, disheveled",
+        "eyes": "World-weary brown",
+        "distinguishing": "Always tired, perceptive underneath"
+      },
+      "voice": {
+        "quality": "Gravelly, noir",
+        "speech_pattern": "Cynical, dry humor, deadpan"
+      },
+      "skills": [
+        "Police procedure",
+        "Investigative techniques",
+        "Cold case knowledge"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Former journalist who switched to acting. Golf buddy relationships. Everyman who sees everything.",
+      "relationships": {
+        "golf_buddies": "Multiple actors",
+        "often_cast_with": "Priya Sharma"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/DANIEL_REEVES_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/DANIEL_REEVES_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "asian"
+    },
+    {
+      "id": "025",
+      "name": "Amara Johnson",
+      "image_prompt": "AMARA JOHNSON, African-American woman age 30, athletic graceful tech entrepreneur build, natural afro futuristic styling, dark brown intelligent confident eyes, afrofuturist fashion metallics tech aesthetic #7B1FA2",
+      "ltx_motion_default": "confident tech-fluent movement, forward-thinking presence, afrofuturist grace",
+      "wardrobe_hex": "#7B1FA2",
+      "age_range": "28-35",
+      "specialty": [
+        "Sci-Fi",
+        "Afrofuturism"
+      ],
+      "genres": [
+        "scifi_thriller",
+        "afrofuturism",
+        "sci_fi",
+        "tech"
+      ],
+      "appearance": {
+        "height": "5'7\"",
+        "build": "Athletic, graceful, tech presence",
+        "hair": "Natural afro, futuristic styling",
+        "eyes": "Dark brown, intelligent, confident",
+        "distinguishing": "Tech aesthetic, afrofuturist style"
+      },
+      "voice": {
+        "quality": "Clear, confident",
+        "speech_pattern": "Intelligent, forward-thinking"
+      },
+      "skills": [
+        "Tech authenticity",
+        "Leadership presence",
+        "Afrofuturism expertise",
+        "Science accuracy"
+      ],
+      "languages": [
+        "English",
+        "Swahili"
+      ],
+      "backstory": "Tech entrepreneur turned actress. Brings real startup experience. Advocates for diversity in sci-fi.",
+      "relationships": {
+        "collaborates_with": "Sakura Yamamoto",
+        "tech_team": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/AMARA_JOHNSON_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/AMARA_JOHNSON_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "african",
+      "build": "athletic"
+    },
+    {
+      "id": "026",
+      "name": "Sergio Costa",
+      "image_prompt": "SERGIO COSTA, Brazilian man age 38, athletic soccer player build all sports capable, dark wavy hair sun-kissed, warm brown charismatic eyes, infectious smile, sports casual designer athletic wear #00BCD4",
+      "ltx_motion_default": "athletic grace, sports authenticity, motivational energy, team dynamics",
+      "wardrobe_hex": "#00BCD4",
+      "age_range": "35-42",
+      "specialty": [
+        "Sports",
+        "Drama"
+      ],
+      "genres": [
+        "sports",
+        "drama",
+        "action"
+      ],
+      "appearance": {
+        "height": "5'11\"",
+        "build": "Athletic, soccer player, all sports capable",
+        "hair": "Dark wavy, sun-kissed",
+        "eyes": "Warm brown, charismatic",
+        "distinguishing": "Infectious smile, natural athlete"
+      },
+      "voice": {
+        "quality": "Energetic, motivational",
+        "speech_pattern": "Team-focused, passionate"
+      },
+      "skills": [
+        "All sports authenticity",
+        "Motivational speaking",
+        "Team dynamics",
+        "Portuguese/Spanish/English"
+      ],
+      "languages": [
+        "English",
+        "Portuguese",
+        "Spanish"
+      ],
+      "backstory": "Brazilian soccer ambassador. Real sports background. Motivational speaker off-screen.",
+      "relationships": {
+        "friendly_rivalry": "Carlos Mendoza",
+        "sports_team": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SERGIO_COSTA_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SERGIO_COSTA_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "hispanic",
+      "build": "athletic"
+    },
+    {
+      "id": "027",
+      "name": "Charlotte Beaumont",
+      "image_prompt": "CHARLOTTE BEAUMONT, English woman age 27, delicate ethereal pre-Raphaelite build, auburn waves flowing, grey-green haunted melancholy eyes, pale complexion, Victorian-inspired dark romantic dress #4E342E",
+      "ltx_motion_default": "ethereal movement, melancholy grace, otherworldly presence, Victorian floating",
+      "wardrobe_hex": "#4E342E",
+      "age_range": "25-30",
+      "specialty": [
+        "Gothic",
+        "Victorian"
+      ],
+      "genres": [
+        "gothic_horror",
+        "period",
+        "victorian",
+        "horror"
+      ],
+      "appearance": {
+        "height": "5'5\"",
+        "build": "Delicate, ethereal, pre-Raphaelite",
+        "hair": "Auburn waves, flowing",
+        "eyes": "Grey-green, haunted, melancholy",
+        "distinguishing": "Pale, otherworldly, Victorian beauty"
+      },
+      "voice": {
+        "quality": "Soft, literary, melancholy",
+        "speech_pattern": "Poetic, old-fashioned"
+      },
+      "skills": [
+        "Period authenticity",
+        "Classical training",
+        "Gothic literature knowledge",
+        "Poetry writing"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "backstory": "English literature graduate who found acting. Specializes in period roles. Lives somewhat in the past.",
+      "relationships": {
+        "literary_connection": "Emma Fitzgerald",
+        "gothic_team": "Keiko Tanaka"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/CHARLOTTE_BEAUMONT_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/CHARLOTTE_BEAUMONT_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "french"
+    },
+    {
+      "id": "028",
+      "name": "Kimani Afrikan",
+      "image_prompt": "KIMANI AFRIKAN, Kenyan man age 42, commanding warrior build athletic, shaved head traditional scarification, intense dark proud eyes, tribal modern fusion regal bearing #3E2723",
+      "ltx_motion_default": "warrior bearing, African pride, commanding presence, traditional strength",
+      "wardrobe_hex": "#3E2723",
+      "age_range": "38-48",
+      "specialty": [
+        "Historical",
+        "Action"
+      ],
+      "genres": [
+        "historical_drama",
+        "action",
+        "drama",
+        "war_drama"
+      ],
+      "appearance": {
+        "height": "6'2\"",
+        "build": "Commanding, warrior, athletic",
+        "hair": "Shaved head",
+        "eyes": "Intense dark, proud",
+        "distinguishing": "Traditional scarification, regal bearing"
+      },
+      "voice": {
+        "quality": "Deep, commanding",
+        "speech_pattern": "Thoughtful, ancestral wisdom"
+      },
+      "skills": [
+        "Multiple African dialects",
+        "Activism experience",
+        "Cultural authenticity",
+        "Combat training"
+      ],
+      "languages": [
+        "English",
+        "Swahili",
+        "Kikuyu"
+      ],
+      "backstory": "Kenyan-born, real activism background. Brings authentic African representation. Educational advocate.",
+      "relationships": {
+        "respects": "Aisha Mbeki",
+        "warrior_brotherhood": "Rashid Ali"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/KIMANI_AFRIKAN_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/KIMANI_AFRIKAN_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "african",
+      "build": "athletic"
+    },
+    {
+      "id": "029",
+      "name": "Natasha Petrova",
+      "image_prompt": "NATASHA PETROVA, Russian woman age 35, athletic spy-ready build, dark hair severe sophisticated, ice blue calculating secretive eyes, sophisticated international, designer spy chic #37474F",
+      "ltx_motion_default": "spy craft movement, calculated grace, secretive presence, international sophistication",
+      "wardrobe_hex": "#37474F",
+      "age_range": "32-40",
+      "specialty": [
+        "Spy",
+        "Drama"
+      ],
+      "genres": [
+        "spy",
+        "thriller",
+        "drama"
+      ],
+      "appearance": {
+        "height": "5'8\"",
+        "build": "Athletic, spy-ready",
+        "hair": "Dark, severe, sophisticated",
+        "eyes": "Ice blue, calculating, secretive",
+        "distinguishing": "International sophistication"
+      },
+      "voice": {
+        "quality": "Measured, accent controlled",
+        "speech_pattern": "Calculated, reveals little"
+      },
+      "skills": [
+        "Spy craft authenticity",
+        "Multiple languages",
+        "Combat training",
+        "Seduction"
+      ],
+      "languages": [
+        "English",
+        "Russian",
+        "French",
+        "German"
+      ],
+      "backstory": "Mystery surrounds her background. Brings unsettling realism to spy roles. May have actual experience.",
+      "relationships": {
+        "complex_history": "Dimitri Volkov",
+        "spy_team": "Elena Kozlov"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/NATASHA_PETROVA_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/NATASHA_PETROVA_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "slavic",
+      "build": "athletic"
+    },
+    {
+      "id": "030",
+      "name": "Lucas Brennan",
+      "image_prompt": "LUCAS BRENNAN, Irish-American man age 35, rugged outdoorsman build celtic tattoo left arm, ginger red hair weathered, bright green friendly eyes, easy smile stubble, worn leather jacket #8D6E63",
+      "ltx_motion_default": "rugged charm, blue-collar authenticity, everyman warmth, Irish friendliness",
+      "wardrobe_hex": "#8D6E63",
+      "age_range": "32-40",
+      "specialty": [
+        "Working class",
+        "Drama"
+      ],
+      "genres": [
+        "drama",
+        "crime_drama",
+        "action"
+      ],
+      "appearance": {
+        "height": "6'0\"",
+        "build": "Rugged, outdoorsman",
+        "hair": "Ginger/red, weathered",
+        "eyes": "Bright green, friendly",
+        "distinguishing": "Celtic tattoo left arm, easy smile, stubble"
+      },
+      "voice": {
+        "quality": "Warm, hint of brogue",
+        "speech_pattern": "Blue-collar, genuine"
+      },
+      "skills": [
+        "Irish dialects",
+        "Physical labor authenticity",
+        "Folk singing",
+        "Fiddle playing"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Third-generation Boston Irish. Keeps day job between roles. Authentic working class.",
+      "relationships": {
+        "best_friends": "Tyler Brooks",
+        "western_partner": "Carlos Mendoza"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/LUCAS_BRENNAN_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/LUCAS_BRENNAN_LOCKED_REFERENCE.jpg",
+      "gender": "male"
+    },
+    {
+      "id": "031",
+      "name": "Nina Volkov",
+      "image_prompt": "NINA VOLKOV, Russian woman age 26, dancer graceful athletic build, platinum blonde severe elegance, pale blue intense performer eyes, ballerina bearing, minimalist designer elegant #B0BEC5",
+      "ltx_motion_default": "dancer grace, ballerina precision, intense performer presence, elegant movement",
+      "wardrobe_hex": "#B0BEC5",
+      "age_range": "24-30",
+      "specialty": [
+        "Dance",
+        "Drama"
+      ],
+      "genres": [
+        "drama",
+        "musical",
+        "dance"
+      ],
+      "appearance": {
+        "height": "5'6\"",
+        "build": "Dancer, graceful, athletic",
+        "hair": "Platinum blonde, severe elegance",
+        "eyes": "Pale blue, intense performer",
+        "distinguishing": "Ballerina bearing, graceful always"
+      },
+      "voice": {
+        "quality": "Soft, controlled",
+        "speech_pattern": "Disciplined, focused"
+      },
+      "skills": [
+        "Ballet mastery",
+        "Contemporary dance",
+        "Physical storytelling",
+        "Russian authenticity"
+      ],
+      "languages": [
+        "English",
+        "Russian"
+      ],
+      "backstory": "Bolshoi trained, injury ended dance career. Found acting as new expression. Discipline remains.",
+      "relationships": {
+        "dance_team": "Elena Kozlov",
+        "understands": "Career transition actors"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/NINA_VOLKOV_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/NINA_VOLKOV_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "slavic",
+      "build": "athletic"
+    },
+    {
+      "id": "032",
+      "name": "Antoine Dubois",
+      "image_prompt": "ANTOINE DUBOIS, French man age 52, intellectual slim build Gauloise gesture, grey distinguished hair unkempt professor, dark thoughtful philosophical eyes, black turtleneck intellectual French #616161",
+      "ltx_motion_default": "intellectual gestures, French philosophical presence, cigarette acting, thoughtful pauses",
+      "wardrobe_hex": "#616161",
+      "age_range": "48-58",
+      "specialty": [
+        "Art house",
+        "Drama"
+      ],
+      "genres": [
+        "drama",
+        "art_house",
+        "psychological"
+      ],
+      "appearance": {
+        "height": "5'10\"",
+        "build": "Intellectual, slim",
+        "hair": "Grey, distinguished, unkempt professor",
+        "eyes": "Dark, thoughtful, philosophical",
+        "distinguishing": "Gauloise gesture, black turtleneck"
+      },
+      "voice": {
+        "quality": "Deep, philosophical",
+        "speech_pattern": "Intellectual, French perspective"
+      },
+      "skills": [
+        "French authenticity",
+        "Intellectual depth",
+        "Philosophy knowledge",
+        "Cigarette acting"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "backstory": "Sorbonne philosophy student turned actor. Divorced, child. Lives between Paris and LA.",
+      "relationships": {
+        "philosophical_talks": "Charlotte Beaumont",
+        "art_house_team": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ANTOINE_DUBOIS_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ANTOINE_DUBOIS_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "french",
+      "build": "slim"
+    },
+    {
+      "id": "033",
+      "name": "Ruby Taylor",
+      "image_prompt": "RUBY TAYLOR, African-American woman age 20, young athletic rising star build, natural curly black hair, bright brown hopeful ambitious eyes, fresh youthful energy, colorful Gen-Z style #E91E63",
+      "ltx_motion_default": "youthful energy, rising star presence, authentic Gen-Z, hopeful ambition",
+      "wardrobe_hex": "#E91E63",
+      "age_range": "18-23",
+      "specialty": [
+        "Coming-of-age",
+        "Drama"
+      ],
+      "genres": [
+        "drama",
+        "coming_of_age",
+        "teen"
+      ],
+      "appearance": {
+        "height": "5'4\"",
+        "build": "Young, athletic, rising star",
+        "hair": "Natural curly black",
+        "eyes": "Bright brown, hopeful, ambitious",
+        "distinguishing": "Fresh energy, Gen-Z authenticity"
+      },
+      "voice": {
+        "quality": "Clear, youthful",
+        "speech_pattern": "Generation-specific, authentic"
+      },
+      "skills": [
+        "TikTok generation authenticity",
+        "Fresh perspective",
+        "Natural talent"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Small town Georgia, discovered through social media. Fresh perspective on industry.",
+      "relationships": {
+        "rising_stars": "Luna Rodriguez, Noah Campbell",
+        "mentored_by": "Scarlett O'Brien"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/RUBY_TAYLOR_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/RUBY_TAYLOR_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "african",
+      "build": "athletic"
+    },
+    {
+      "id": "034",
+      "name": "Scarlett O'Brien",
+      "image_prompt": "SCARLETT O'BRIEN, Irish woman age 45, elegant diplomat composed build, red auburn hair sophisticated style, green sharp intelligent eyes, diplomatic bearing, professional elegant international #6D4C41",
+      "ltx_motion_default": "diplomatic composure, international sophistication, elegant authority, Irish warmth",
+      "wardrobe_hex": "#6D4C41",
+      "age_range": "42-50",
+      "specialty": [
+        "Political",
+        "Drama"
+      ],
+      "genres": [
+        "political",
+        "drama",
+        "thriller"
+      ],
+      "appearance": {
+        "height": "5'7\"",
+        "build": "Elegant, diplomat, composed",
+        "hair": "Red/auburn, sophisticated style",
+        "eyes": "Green, sharp, intelligent",
+        "distinguishing": "Diplomatic bearing, elegant authority"
+      },
+      "voice": {
+        "quality": "Cultured, Irish undertone",
+        "speech_pattern": "Diplomatic, measured"
+      },
+      "skills": [
+        "Diplomatic protocol",
+        "International relations",
+        "Cultural mediation"
+      ],
+      "languages": [
+        "English",
+        "French",
+        "Irish"
+      ],
+      "backstory": "Former UN worker. Brings real diplomatic experience. Advocates for international causes.",
+      "relationships": {
+        "mentor_to": "Ruby Taylor, Aurora Lindberg",
+        "political_team": "James Okonkwo"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SCARLETT_O'BRIEN_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SCARLETT_O'BRIEN_LOCKED_REFERENCE.jpg",
+      "gender": "female"
+    },
+    {
+      "id": "035",
+      "name": "Emma Fitzgerald",
+      "image_prompt": "EMMA FITZGERALD, Irish-American woman age 32, literary bookish approachable build, dark hair loose waves, warm brown intelligent literary eyes, approachable intellectual, cozy sweaters literary style #8D6E63",
+      "ltx_motion_default": "bookish warmth, literary presence, approachable intelligence, writer demeanor",
+      "wardrobe_hex": "#8D6E63",
+      "age_range": "28-36",
+      "specialty": [
+        "Literary adaptations",
+        "Drama"
+      ],
+      "genres": [
+        "drama",
+        "literary",
+        "period"
+      ],
+      "appearance": {
+        "height": "5'5\"",
+        "build": "Literary, bookish, approachable",
+        "hair": "Dark, loose waves",
+        "eyes": "Warm brown, intelligent, literary",
+        "distinguishing": "Bookish charm, cozy presence"
+      },
+      "voice": {
+        "quality": "Warm, articulate",
+        "speech_pattern": "Literary, thoughtful"
+      },
+      "skills": [
+        "Literary knowledge",
+        "Writing",
+        "Period authenticity",
+        "Irish heritage"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "English professor who writes on the side. Found acting through Shakespeare in the Park.",
+      "relationships": {
+        "literary_connection": "Charlotte Beaumont",
+        "best_friends": "Chloe Martin"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/EMMA_FITZGERALD_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/EMMA_FITZGERALD_LOCKED_REFERENCE.jpg",
+      "gender": "female"
+    },
+    {
+      "id": "036",
+      "name": "Javier Morales",
+      "image_prompt": "JAVIER MORALES, Mexican man age 40, street-lean dangerous presence build, dark short hair scar across jaw, intense dark street-wise eyes, dangerous charisma, street wear expensive #424242",
+      "ltx_motion_default": "dangerous presence, street authenticity, raw intensity, code-switching ability",
+      "wardrobe_hex": "#424242",
+      "age_range": "35-45",
+      "specialty": [
+        "Crime",
+        "Drama"
+      ],
+      "genres": [
+        "crime_drama",
+        "thriller",
+        "action"
+      ],
+      "appearance": {
+        "height": "5'9\"",
+        "build": "Street-lean, dangerous presence",
+        "hair": "Dark, short",
+        "eyes": "Intense dark, street-wise",
+        "distinguishing": "Scar across jaw, dangerous charisma"
+      },
+      "voice": {
+        "quality": "Rough, authentic",
+        "speech_pattern": "Code-switching, bilingual"
+      },
+      "skills": [
+        "Deep undercover research",
+        "Street authenticity",
+        "Code-switching",
+        "Emotional intensity"
+      ],
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "backstory": "Rose from difficult background. Brings real authenticity. Lost brother to streets.",
+      "relationships": {
+        "regular_opponent": "Alessandro Romano",
+        "complex_roles": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/JAVIER_MORALES_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/JAVIER_MORALES_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "hispanic"
+    },
+    {
+      "id": "037",
+      "name": "Aurora Lindberg",
+      "image_prompt": "AURORA LINDBERG, Swedish woman age 34, Nordic athletic tall build, blonde natural Scandinavian, pale blue analytical thoughtful eyes, minimalist Nordic style clean lines #90A4AE",
+      "ltx_motion_default": "Nordic calm, analytical presence, minimalist movement, thoughtful observation",
+      "wardrobe_hex": "#90A4AE",
+      "age_range": "30-38",
+      "specialty": [
+        "Nordic noir",
+        "Psychological"
+      ],
+      "genres": [
+        "psychological",
+        "thriller",
+        "nordic_noir"
+      ],
+      "appearance": {
+        "height": "5'10\"",
+        "build": "Nordic, athletic, tall",
+        "hair": "Blonde, natural Scandinavian",
+        "eyes": "Pale blue, analytical, thoughtful",
+        "distinguishing": "Nordic beauty, minimalist style"
+      },
+      "voice": {
+        "quality": "Cool, measured",
+        "speech_pattern": "Analytical, Nordic approach"
+      },
+      "skills": [
+        "Cold-weather acting",
+        "Analytical approach",
+        "Nordic authenticity"
+      ],
+      "languages": [
+        "English",
+        "Swedish",
+        "Danish",
+        "Norwegian"
+      ],
+      "backstory": "Born on fjord farm. Brought Nordic noir style to international audiences.",
+      "relationships": {
+        "nordic_team": true,
+        "psychological_collaboration": "Aria Patel"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/AURORA_LINDBERG_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/AURORA_LINDBERG_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "scandinavian",
+      "build": "athletic"
+    },
+    {
+      "id": "038",
+      "name": "Malik Washington",
+      "image_prompt": "MALIK WASHINGTON, African-American man age 28, basketball player athletic build tall, short fade haircut, warm brown expressive soulful eyes, easy confidence, athletic streetwear designer #FF5722",
+      "ltx_motion_default": "athletic confidence, basketball player grace, easy charm, sports authenticity",
+      "wardrobe_hex": "#FF5722",
+      "age_range": "25-32",
+      "specialty": [
+        "Sports",
+        "Drama"
+      ],
+      "genres": [
+        "sports",
+        "drama",
+        "action"
+      ],
+      "appearance": {
+        "height": "6'4\"",
+        "build": "Basketball player, athletic, tall",
+        "hair": "Short fade",
+        "eyes": "Warm brown, expressive, soulful",
+        "distinguishing": "Easy confidence, athletic grace"
+      },
+      "voice": {
+        "quality": "Warm, natural",
+        "speech_pattern": "Authentic, relatable"
+      },
+      "skills": [
+        "Basketball authenticity",
+        "Sports coordination",
+        "Natural charisma"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Former college basketball player. Turned to acting after injury ended career. Real sports experience.",
+      "relationships": {
+        "sports_team": "Sergio Costa",
+        "rising_star": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/MALIK_WASHINGTON_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/MALIK_WASHINGTON_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "african",
+      "build": "athletic"
+    },
+    {
+      "id": "039",
+      "name": "Yuki Sato",
+      "image_prompt": "YUKI SATO, Japanese woman age 30, slender traditional modern fusion build, long black hair traditional elegant, dark mysterious composed eyes, serene exterior, traditional modern Japanese fusion #37474F",
+      "ltx_motion_default": "traditional grace, mysterious serenity, composed presence, Japanese elegance",
+      "wardrobe_hex": "#37474F",
+      "age_range": "28-35",
+      "specialty": [
+        "Horror",
+        "Drama"
+      ],
+      "genres": [
+        "horror",
+        "j_horror",
+        "drama",
+        "supernatural"
+      ],
+      "appearance": {
+        "height": "5'5\"",
+        "build": "Slender, traditional-modern fusion",
+        "hair": "Long black, traditional elegant",
+        "eyes": "Dark, mysterious, composed",
+        "distinguishing": "Serene exterior, hidden depths"
+      },
+      "voice": {
+        "quality": "Quiet, controlled",
+        "speech_pattern": "Measured, traditional"
+      },
+      "skills": [
+        "Traditional Japanese performance",
+        "Horror intensity",
+        "Calm exterior"
+      ],
+      "languages": [
+        "English",
+        "Japanese"
+      ],
+      "backstory": "Trained in traditional Japanese arts. Brings authentic J-horror presence.",
+      "relationships": {
+        "mentored_by": "Keiko Tanaka",
+        "horror_team": "Charlotte Beaumont"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/YUKI_SATO_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/YUKI_SATO_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "asian",
+      "build": "slim"
+    },
+    {
+      "id": "040",
+      "name": "Gabriel Santos",
+      "image_prompt": "GABRIEL SANTOS, Brazilian man age 48, distinguished silver fox build, salt-and-pepper elegant hair, warm brown wise experienced eyes, distinguished elegance, tailored suits Latin charm #5D4037",
+      "ltx_motion_default": "distinguished presence, Latin elegance, worldly sophistication, warm authority",
+      "wardrobe_hex": "#5D4037",
+      "age_range": "45-55",
+      "specialty": [
+        "Drama",
+        "Period"
+      ],
+      "genres": [
+        "drama",
+        "period",
+        "romance"
+      ],
+      "appearance": {
+        "height": "5'11\"",
+        "build": "Distinguished, silver fox",
+        "hair": "Salt-and-pepper, elegant",
+        "eyes": "Warm brown, wise, experienced",
+        "distinguishing": "Distinguished elegance, Latin charm"
+      },
+      "voice": {
+        "quality": "Rich, warm, accented",
+        "speech_pattern": "Charming, worldly"
+      },
+      "skills": [
+        "Latin authenticity",
+        "Period expertise",
+        "Romantic leads"
+      ],
+      "languages": [
+        "English",
+        "Portuguese",
+        "Spanish"
+      ],
+      "backstory": "Brazilian cinema legend. International crossover success. Known for romantic intensity.",
+      "relationships": {
+        "collaborates_with": "Isabella Moretti",
+        "period_team": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/GABRIEL_SANTOS_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/GABRIEL_SANTOS_LOCKED_REFERENCE.jpg",
+      "gender": "male"
+    },
+    {
+      "id": "041",
+      "name": "Scarlett Williams",
+      "image_prompt": "SCARLETT WILLIAMS, African-American woman age 55, grandmother warm commanding presence, grey natural elegant hair, warm brown wise knowing eyes, grandmother bearing, comfortable elegant age-appropriate #795548",
+      "ltx_motion_default": "grandmother warmth, wise presence, comfort giving, knowing looks",
+      "wardrobe_hex": "#795548",
+      "age_range": "52-62",
+      "specialty": [
+        "Family",
+        "Drama"
+      ],
+      "genres": [
+        "drama",
+        "family",
+        "comedy"
+      ],
+      "appearance": {
+        "height": "5'4\"",
+        "build": "Grandmother, warm, commanding",
+        "hair": "Grey, natural, elegant",
+        "eyes": "Warm brown, wise, knowing",
+        "distinguishing": "Grandmother energy, comfort giving"
+      },
+      "voice": {
+        "quality": "Warm, knowing",
+        "speech_pattern": "Wisdom, family focus"
+      },
+      "skills": [
+        "Family dynamics",
+        "Comfort giving",
+        "Real grandmother energy"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Real grandmother of five. Started acting later in life. Brings authentic family wisdom.",
+      "relationships": {
+        "grandmother_figure": "Many young actors",
+        "family_team": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SCARLETT_WILLIAMS_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SCARLETT_WILLIAMS_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "african"
+    },
+    {
+      "id": "042",
+      "name": "Pierre Laurent",
+      "image_prompt": "PIERRE LAURENT, French man age 45, chef sturdy build kitchen-hardened, dark greying hair chef style, passionate brown fiery eyes, chef bearing, chef whites casual French style #8D6E63",
+      "ltx_motion_default": "chef precision, kitchen authority, French passion, culinary presence",
+      "wardrobe_hex": "#8D6E63",
+      "age_range": "42-50",
+      "specialty": [
+        "Culinary",
+        "Drama"
+      ],
+      "genres": [
+        "drama",
+        "culinary",
+        "comedy"
+      ],
+      "appearance": {
+        "height": "5'8\"",
+        "build": "Chef sturdy, kitchen-hardened",
+        "hair": "Dark greying, chef style",
+        "eyes": "Passionate brown, fiery",
+        "distinguishing": "Chef bearing, kitchen authority"
+      },
+      "voice": {
+        "quality": "French exclamation ready",
+        "speech_pattern": "Passionate, culinary terminology"
+      },
+      "skills": [
+        "Professional cooking",
+        "Kitchen management",
+        "Wine expertise",
+        "French temperament"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "backstory": "Real Michelin-starred chef who transitioned to acting. Brings authentic culinary expertise.",
+      "relationships": {
+        "culinary_team": true,
+        "French_connection": "Antoine Dubois"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/PIERRE_LAURENT_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/PIERRE_LAURENT_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "french"
+    },
+    {
+      "id": "043",
+      "name": "Aisha Mbeki",
+      "image_prompt": "AISHA MBEKI, South African woman age 38, strong activist presence build, natural hair African styles, fierce brown determined proud eyes, activist bearing, African modern professional #6D4C41",
+      "ltx_motion_default": "activist strength, African pride, determined presence, educational authority",
+      "wardrobe_hex": "#6D4C41",
+      "age_range": "35-42",
+      "specialty": [
+        "Drama",
+        "Political"
+      ],
+      "genres": [
+        "drama",
+        "political",
+        "historical"
+      ],
+      "appearance": {
+        "height": "5'7\"",
+        "build": "Strong, activist presence",
+        "hair": "Natural, African styles",
+        "eyes": "Fierce brown, determined, proud",
+        "distinguishing": "Activist bearing, educational authority"
+      },
+      "voice": {
+        "quality": "Strong, clear",
+        "speech_pattern": "Activist, educational"
+      },
+      "skills": [
+        "Multiple African dialects",
+        "Activism experience",
+        "Educational background",
+        "Cultural authenticity"
+      ],
+      "languages": [
+        "English",
+        "Zulu",
+        "Xhosa",
+        "Afrikaans"
+      ],
+      "backstory": "South African activist turned actress. Real grassroots experience. Educational advocate.",
+      "relationships": {
+        "respects": "Kimani Afrikan",
+        "activist_team": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/AISHA_MBEKI_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/AISHA_MBEKI_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "african"
+    },
+    {
+      "id": "044",
+      "name": "Ryan Cooper",
+      "image_prompt": "RYAN COOPER, Caucasian man age 36, military special ops build, short brown military precision hair, steel grey intense calculating eyes, military bearing, tactical casual capable #455A64",
+      "ltx_motion_default": "special ops precision, military readiness, calculated movement, tactical awareness",
+      "wardrobe_hex": "#455A64",
+      "age_range": "32-40",
+      "specialty": [
+        "Military",
+        "Action"
+      ],
+      "genres": [
+        "action",
+        "military",
+        "thriller"
+      ],
+      "appearance": {
+        "height": "6'0\"",
+        "build": "Military, special ops ready",
+        "hair": "Short brown, military precision",
+        "eyes": "Steel grey, intense, calculating",
+        "distinguishing": "Military bearing, tactical awareness"
+      },
+      "voice": {
+        "quality": "Controlled, commanding",
+        "speech_pattern": "Military precision"
+      },
+      "skills": [
+        "All military tactics",
+        "Combat swimming",
+        "Spy craft authenticity"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Real Navy SEAL background. Technical advisor who transitioned to acting. 'The only easy day was yesterday.'",
+      "relationships": {
+        "brothers_in_arms": "Rashid Ali",
+        "chemistry_with": "Elena Kozlov"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/RYAN_COOPER_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/RYAN_COOPER_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "asian"
+    },
+    {
+      "id": "045",
+      "name": "Zara Ahmed",
+      "image_prompt": "ZARA AHMED, Pakistani-British woman age 28, elegant modern professional build, dark hair hijab options available, warm brown intelligent confident eyes, modern professional, contemporary modest fashion #00796B",
+      "ltx_motion_default": "modern professional grace, confident presence, cultural pride, contemporary elegance",
+      "wardrobe_hex": "#00796B",
+      "age_range": "25-32",
+      "specialty": [
+        "Drama",
+        "Medical"
+      ],
+      "genres": [
+        "drama",
+        "medical_drama",
+        "legal_drama"
+      ],
+      "appearance": {
+        "height": "5'6\"",
+        "build": "Elegant, modern professional",
+        "hair": "Dark, hijab options available",
+        "eyes": "Warm brown, intelligent, confident",
+        "distinguishing": "Modern professional, cultural pride"
+      },
+      "voice": {
+        "quality": "Clear, professional",
+        "speech_pattern": "Articulate, modern"
+      },
+      "skills": [
+        "Medical terminology",
+        "Legal procedures",
+        "Cultural representation"
+      ],
+      "languages": [
+        "English",
+        "Urdu",
+        "Arabic"
+      ],
+      "backstory": "Pakistani-British, modern representation. Breaking stereotypes in mainstream roles.",
+      "relationships": {
+        "cast_partner": "Priya Sharma",
+        "modern_team": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ZARA_AHMED_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/ZARA_AHMED_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "ethnicity": "middle_eastern"
+    },
+    {
+      "id": "046",
+      "name": "Diego Rivera",
+      "image_prompt": "DIEGO RIVERA, Spanish man age 33, artist bohemian lean build paint-stained hands, dark curly artistic hair, passionate dark intense creative eyes, bohemian artist, paint-stained casual artistic #FF5722",
+      "ltx_motion_default": "artist passion, bohemian presence, creative intensity, Spanish fire",
+      "wardrobe_hex": "#FF5722",
+      "age_range": "30-38",
+      "specialty": [
+        "Art house",
+        "Drama"
+      ],
+      "genres": [
+        "drama",
+        "art_house",
+        "romance"
+      ],
+      "appearance": {
+        "height": "5'10\"",
+        "build": "Artist, bohemian, lean",
+        "hair": "Dark curly, artistic",
+        "eyes": "Passionate dark, intense, creative",
+        "distinguishing": "Paint-stained hands, bohemian presence"
+      },
+      "voice": {
+        "quality": "Passionate, accented",
+        "speech_pattern": "Artistic, Spanish passion"
+      },
+      "skills": [
+        "Actually paints",
+        "Art history knowledge",
+        "Bohemian authenticity",
+        "Spanish passion"
+      ],
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "backstory": "Barcelona artist who acts. Sells real paintings. Art always comes first.",
+      "relationships": {
+        "art_team": "Antoine Dubois",
+        "passion_roles": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/DIEGO_RIVERA_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/DIEGO_RIVERA_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "hispanic"
+    },
+    {
+      "id": "047",
+      "name": "Charlotte Winters",
+      "image_prompt": "CHARLOTTE WINTERS, British woman age 42, mystery elegant composed build, dark hair sophisticated updo, grey intelligent mysterious calculating eyes, elegant mysterious, sophisticated dark elegant #455A64",
+      "ltx_motion_default": "mysterious elegance, calculated presence, sophisticated movement, hidden depths",
+      "wardrobe_hex": "#455A64",
+      "age_range": "38-48",
+      "specialty": [
+        "Mystery",
+        "Thriller"
+      ],
+      "genres": [
+        "mystery",
+        "thriller",
+        "drama"
+      ],
+      "appearance": {
+        "height": "5'7\"",
+        "build": "Elegant, composed, mysterious",
+        "hair": "Dark, sophisticated updo",
+        "eyes": "Grey, intelligent, mysterious, calculating",
+        "distinguishing": "Elegant mystery, hidden depths"
+      },
+      "voice": {
+        "quality": "Cultured, controlled",
+        "speech_pattern": "Reveals nothing unintended"
+      },
+      "skills": [
+        "Mystery presence",
+        "Calculated reveals",
+        "British sophistication"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Stage actress who brings theatrical mystery to screen. Known for plot twist roles.",
+      "relationships": {
+        "mystery_team": "Aria Patel",
+        "British_connection": "Marcus Stone"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/CHARLOTTE_WINTERS_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/CHARLOTTE_WINTERS_LOCKED_REFERENCE.jpg",
+      "gender": "female"
+    },
+    {
+      "id": "048",
+      "name": "Phoenix Rise",
+      "image_prompt": "PHOENIX RISE, Non-binary person age 29, androgynous striking fluid build, platinum silver changing hair style, striking grey gender-fluid expression eyes, gender-fluid fashion artistic bold #9C27B0",
+      "ltx_motion_default": "fluid presence, androgynous grace, artistic expression, boundary-pushing movement",
+      "wardrobe_hex": "#9C27B0",
+      "age_range": "26-34",
+      "specialty": [
+        "Art house",
+        "Drama"
+      ],
+      "genres": [
+        "drama",
+        "art_house",
+        "lgbtq"
+      ],
+      "appearance": {
+        "height": "5'9\"",
+        "build": "Androgynous, striking, fluid",
+        "hair": "Platinum/silver, changing styles",
+        "eyes": "Striking grey, gender-fluid expression",
+        "distinguishing": "Androgynous beauty, artistic presence"
+      },
+      "voice": {
+        "quality": "Versatile range",
+        "speech_pattern": "Thoughtful, inclusive"
+      },
+      "skills": [
+        "Total transformation",
+        "Identity fluidity",
+        "Living art",
+        "Boundary pushing"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Non-binary actor breaking boundaries. Art school background. Uses art as activism.",
+      "relationships": {
+        "art_team": true,
+        "representation_advocate": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/PHOENIX_RISE_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/PHOENIX_RISE_LOCKED_REFERENCE.jpg",
+      "gender": "male"
+    },
+    {
+      "id": "049",
+      "name": "Samuel Cross",
+      "image_prompt": "SAMUEL CROSS, African-American man age 62, distinguished elder statesman build, grey dignified hair, wise brown authoritative patient eyes, elder authority, distinguished suits classic #3E2723",
+      "ltx_motion_default": "elder authority, dignified presence, patient wisdom, statesman bearing",
+      "wardrobe_hex": "#3E2723",
+      "age_range": "58-68",
+      "specialty": [
+        "Drama",
+        "Political"
+      ],
+      "genres": [
+        "drama",
+        "political",
+        "legal_drama"
+      ],
+      "appearance": {
+        "height": "6'1\"",
+        "build": "Distinguished, elder statesman",
+        "hair": "Grey, dignified",
+        "eyes": "Wise brown, authoritative, patient",
+        "distinguishing": "Elder authority, dignified presence"
+      },
+      "voice": {
+        "quality": "Deep, authoritative",
+        "speech_pattern": "Measured, wise"
+      },
+      "skills": [
+        "Authority presence",
+        "Civil rights knowledge",
+        "Oratory excellence"
+      ],
+      "languages": [
+        "English"
+      ],
+      "backstory": "Civil rights era experience. Brings historical weight to roles. Mentor to many.",
+      "relationships": {
+        "mentor_to": "James Okonkwo",
+        "elder_council": true
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SAMUEL_CROSS_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/SAMUEL_CROSS_LOCKED_REFERENCE.jpg",
+      "gender": "male",
+      "ethnicity": "african"
+    },
+    {
+      "id": "050",
+      "name": "Valentina Rossi",
+      "image_prompt": "VALENTINA ROSSI, Italian woman age 33, Mediterranean beauty athletic build, dark flowing hair, dark passionate expressive warm eyes, Mediterranean warmth, Italian designer casual elegance #E91E63",
+      "ltx_motion_default": "Italian passion, Mediterranean warmth, expressive presence, romantic intensity",
+      "wardrobe_hex": "#E91E63",
+      "age_range": "30-38",
+      "specialty": [
+        "Romance",
+        "Drama"
+      ],
+      "genres": [
+        "romance",
+        "drama",
+        "romantic_comedy"
+      ],
+      "appearance": {
+        "height": "5'6\"",
+        "build": "Mediterranean beauty, athletic",
+        "hair": "Dark, flowing",
+        "eyes": "Dark, passionate, expressive, warm",
+        "distinguishing": "Mediterranean warmth, Italian beauty"
+      },
+      "voice": {
+        "quality": "Warm, melodic, accented",
+        "speech_pattern": "Passionate, expressive"
+      },
+      "skills": [
+        "Italian authenticity",
+        "Romantic chemistry",
+        "Mediterranean presence"
+      ],
+      "languages": [
+        "English",
+        "Italian"
+      ],
+      "backstory": "Italian cinema sensation crossing over. Brings European romantic tradition.",
+      "relationships": {
+        "romantic_team": "Tyler Brooks, Gabriel Santos",
+        "Italian_connection": "Alessandro Romano"
+      },
+      "locked_reference_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/VALENTINA_ROSSI_LOCKED_REFERENCE.jpg",
+      "headshot_url": "/api/media?path=/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/character_library_locked/ai_actors/VALENTINA_ROSSI_LOCKED_REFERENCE.jpg",
+      "gender": "female",
+      "build": "athletic"
+    }
+  ]
+}
