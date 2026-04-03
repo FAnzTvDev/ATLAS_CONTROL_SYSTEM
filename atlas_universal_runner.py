@@ -198,7 +198,7 @@ if _dotenv_path.exists():
         _k, _, _v = _line.partition("=")
         os.environ.setdefault(_k.strip(), _v.strip())
 # Hardcoded fallback only if .env is absent or key missing (mirrors FAL_KEY pattern above)
-os.environ.setdefault("GOOGLE_API_KEY", "AIzaSyBCpblH-v1sWvnLMufntWQuRkF13yb9ASM")
+os.environ.setdefault("GOOGLE_API_KEY", os.environ.get("GOOGLE_API_KEY", ""))
 
 # Vision judge — NON-BLOCKING import (T2-CPC-7 pattern) — import AFTER FAL_KEY is set
 try:

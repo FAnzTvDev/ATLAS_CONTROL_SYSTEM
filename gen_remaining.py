@@ -1,12 +1,12 @@
 import os, json, base64, subprocess, urllib.request
 
-os.environ['FAL_KEY'] = '6c394797-d2ed-4238-a303-7b1179a0aaf5:ccce2ccede50e31794c205aad4439ccc'
+os.environ['FAL_KEY'] = 'os.environ.get('FAL_KEY', '')'
 import fal_client
 
 PROJECT = '/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/pipeline_outputs/victorian_shadows_ep1'
 SHOTS = [('001_010B', 10), ('001_011C', 10), ('001_012A', 18)]
 POOL_KEYS = [
-    '6c394797-d2ed-4238-a303-7b1179a0aaf5:ccce2ccede50e31794c205aad4439ccc',
+    'os.environ.get('FAL_KEY', '')',
     '5fe81578-ca41-418e-aa1a-1d62ada97f0e:4894e489d4230008f1c2ad482882a29f',
     'd6d674e6-a090-403e-b6e8-24334394290f:d4e68a53c7881707e3815eb75bb76dc2',
 ]

@@ -1,6 +1,6 @@
 import os, json, base64, subprocess, urllib.request
 
-os.environ['FAL_KEY'] = '12cd8bf8-d2ed-4238-a303-7b1179a0aaf5:ccce2ccede50e31794c205aad4439ccc'
+os.environ['FAL_KEY'] = 'os.environ.get('FAL_KEY', '')'
 import fal_client
 
 PROJECT = '/Users/quantum/Desktop/ATLAS_CONTROL_SYSTEM/pipeline_outputs/victorian_shadows_ep1'

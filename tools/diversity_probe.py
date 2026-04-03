@@ -67,7 +67,7 @@ def load_fal_keys():
                     k, v = line.split("=", 1)
                     os.environ[k.strip()] = v.strip()
     if not os.environ.get("FAL_KEY"):
-        os.environ["FAL_KEY"] = "6c394797-d2ed-4238-a303-7b1179a0aaf5:ccce2ccede50e31794c205aad4439ccc"
+        os.environ["FAL_KEY"] = "os.environ.get('FAL_KEY', '')"
 
 
 def generate_first_frames_via_api(shot_ids):

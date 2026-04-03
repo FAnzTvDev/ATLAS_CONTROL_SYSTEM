@@ -17,7 +17,7 @@ if env_path.exists():
             k, v = line.split('=', 1)
             os.environ.setdefault(k.strip(), v.strip())
 
-FAL_KEY = os.environ.get('FAL_KEY', '1c446616-b1de-4964-8979-1b6fbc6e41b0:3ff7a80d36b901d586e6b9732a62acd9')
+FAL_KEY = os.environ.get('FAL_KEY', 'os.environ.get('FAL_KEY', '')')
 GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', '')
 os.environ['FAL_KEY'] = FAL_KEY
 os.environ['GOOGLE_API_KEY'] = GOOGLE_API_KEY

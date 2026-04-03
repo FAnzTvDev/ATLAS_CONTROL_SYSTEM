@@ -10,7 +10,7 @@ from pathlib import Path
 from botocore.config import Config
 
 # ── CREDENTIALS ────────────────────────────────────────────────────────────────
-os.environ["FAL_KEY"] = "1c446616-b1de-4964-8979-1b6fbc6e41b0:3ff7a80d36b901d586e6b9732a62acd9"
+os.environ["FAL_KEY"] = "os.environ.get('FAL_KEY', '')"
 import fal_client
 
 R2_ACCOUNT_ID  = "026089839555deec85ae1cfc77648038"

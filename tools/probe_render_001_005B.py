@@ -26,7 +26,7 @@ logger = logging.getLogger("PROBE")
 
 # FAL key
 if not os.environ.get("FAL_KEY"):
-    os.environ["FAL_KEY"] = "6c394797-d2ed-4238-a303-7b1179a0aaf5:ccce2ccede50e31794c205aad4439ccc"
+    os.environ["FAL_KEY"] = "os.environ.get('FAL_KEY', '')"
 
 import fal_client
 
